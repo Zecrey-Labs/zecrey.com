@@ -3,10 +3,7 @@
  */
 
 import React from 'react'
-import { TipStyle, StyledLayout } from '@/style/home'
-import { Carousel } from 'antd'
-import { META, PLATFORM } from '@/constant'
 
 export default function Home() {
-  return <StyledLayout>hello</StyledLayout>
+  return <div>hello</div>
 }

@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components'
 import 'nprogress/nprogress.css'
 import 'react-typist/dist/Typist.css'
 import 'aos/dist/aos.css'
-import { Layout } from '@/components/Layout'
 import theme from '@/themes'
 import { useEffect } from 'react'
 import Aos from 'aos'
@@ -15,7 +14,6 @@ import Router from 'next/router'
 import 'antd/dist/antd.css'
 import '@/global.css'
 import { observer } from 'mobx-react-lite'
-import { buryPoint } from '@/utils'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -46,11 +44,6 @@ const App = observer(function App({ Component, pageProps }: Props) {
     Aos.init({
       mirror: true
     })
-    // @ts-ignore
-
-    try {
-      buryPoint({ category: '首页', action: '加载', label: '' })
-    } catch (e) {}
   }, [])
 
   if (statusCode) {
@@ -59,13 +52,9 @@ const App = observer(function App({ Component, pageProps }: Props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 })
 
-export default function AppWithStore({ Component, pageProps }) {
-  return <App Component={Component} pageProps={pageProps} />
-}
+export default App

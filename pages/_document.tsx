@@ -4,7 +4,6 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { META } from '@/constant'
-import { PLATFORM } from '@/constant'
 const YSHead = () => (
   <Head>
     <meta name='charset' content='utf-8' />
@@ -15,14 +14,7 @@ const YSHead = () => (
     <meta name='copyright' content='LambdaCal, Inc' />
     <meta name='author' content={META.companyFullName} />
     <meta name='Robots' content='all' />
-    <link
-      rel='shortcut icon'
-      href={
-        PLATFORM == 'intelligent'
-          ? '/intelligent/logo.svg'
-          : '/images/favicon.ico'
-      }
-    />
+    <link rel='shortcut icon' href={'/intelligent/logo.svg'} />
     <title>{META.title}</title>
     <script
       type='text/javascript'
