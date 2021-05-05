@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43">
+  <g id="组_396" data-name="组 396" transform="translate(-342.012 -905.89)">
+    <g id="组_390" data-name="组 390">
+      <g id="组_389" data-name="组 389">
+        <path id="路径_4082" data-name="路径 4082" d="M363.512,948.39a21,21,0,1,1,15.78-34.842,20.724,20.724,0,0,1,5.22,13.842A21.024,21.024,0,0,1,363.512,948.39Z" fill="none" stroke="#333" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="组_391" data-name="组 391">
+      <rect id="矩形_259" data-name="矩形 259" width="21.354" height="8" transform="matrix(0.5, -0.866, 0.866, 0.5, 354.709, 934.636)" fill="#1e48f2"/>
+    </g>
+    <g id="组_393" data-name="组 393">
+      <path id="路径_4083" data-name="路径 4083" d="M370.007,931.14l6.5,3.75-6.5,3.75-6.5,3.75-6.5-3.75-6.5-3.75v-6.559" fill="none" stroke="#323333" stroke-linejoin="round" stroke-width="1"/>
+      <g id="组_392" data-name="组 392">
+        <rect id="矩形_260" data-name="矩形 260" width="1.98" height="1.98" transform="translate(349.531 927.39)" fill="#323333"/>
+      </g>
+    </g>
+    <g id="组_395" data-name="组 395">
+      <path id="路径_4084" data-name="路径 4084" d="M357.017,923.64l-6.5-3.75,6.5-3.75,6.5-3.75,6.5,3.75,6.5,3.75v6.559" fill="none" stroke="#323333" stroke-linejoin="round" stroke-width="1"/>
+      <g id="组_394" data-name="组 394">
+        <rect id="矩形_261" data-name="矩形 261" width="1.98" height="1.98" transform="translate(375.512 925.41)" fill="#323333"/>
+      </g>
+    </g>
+    <line id="直线_1" data-name="直线 1" x1="8.51" y2="14.74" transform="translate(359.257 920.02)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

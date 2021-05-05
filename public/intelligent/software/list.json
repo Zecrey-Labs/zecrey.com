@@ -1,0 +1,320 @@
+[
+  {
+    "index": 1,
+    "name": "Mechanical Enterprise",
+    "logo": "ANSYS_Mechanical_Enterprise",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "ANSYS Mechanical软件是一种综合全面的有限元分析（FEA）工具，适用于包括线性、非线性、动力学、流体动力学和显式研究在内的结构分析。它可为多种类型的机械设计问题提供一系列完整的单元行为、材料模型和方程式求解器。",
+    "detail": [
+      "分析",
+      "几何非线性",
+      "几何结构与网格生成",
+      "HPC并行计算",
+      "强大的求解器功能",
+      "多物理场"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "FLUENT",
+    "logo": "ANSYS_FLUENT",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "Fluent是目前可用的、功能最强大的计算流体动力学（CFD）软件工具，能够让您更深入更快速地优化自己的产品性能。Fluent内含经充分验证过的物理建模功能，能为广泛的CFD和多物理场应用提供快速、精确的结果。",
+    "detail": [
+      "效灵活的工作流",
+      "为多物理场构建",
+      "信心百倍地求解复杂模型",
+      "借助高性能计算（HPC）加快求解速度",
+      "热传导与辐射",
+      "自动优化设计"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "CFX",
+    "logo": "ANSYS_CFX",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "ANSYS CFX是一款高性能计算流体动力学（CFD）软件工具，可快速稳健地为各种CFD和多物理场应用提供可靠精确的解决方案。CFX一直因其出色的精确度、稳健性和高速度而被业界认可，可满足泵、风扇、压缩机、燃气涡轮和水力涡轮等旋转机械应用的需求。",
+    "detail": [
+      "效灵活的工作流",
+      "为多物理场构建",
+      "借助高性能计算（HPC）加快求解速度",
+      "旋转机械专用的附加模块",
+      "推进CFX求解器技术",
+      "流固耦合"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "ICEM CFD",
+    "logo": "ICEM_CFD",
+    "type": "前后处理",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "LS-DYNA HPC-128",
+    "logo": "ANSYS_LS_DYNA_HPC_128",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research Mechanical",
+    "logo": "ANSYS_Academic_Research_Mechanical",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research CFD",
+    "logo": "ANSYS_Academic_Research_CFD",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research HF",
+    "logo": "ANSYS_Academic_Research_HF",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research EM",
+    "logo": "ANSYS_Academic_Research_EM",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Teaching Mechanical",
+    "logo": "ANSYS_Academic_Teaching_Mechanical",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Teaching CFD",
+    "logo": "ANSYS_Academic_Teaching_CFD",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Teaching HF",
+    "logo": "ANSYS_Academic_Teaching_HF",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Teaching EM",
+    "logo": "ANSYS_Academic_Teaching_EM",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research Electronics HPC",
+    "logo": "ANSYS_Academic_Research_Electronics_HPC",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Academic Research HPC(per core)",
+    "logo": "ANSYS_Academic_Research_HPC",
+    "type": "",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "LS-DYNA",
+    "logo": "LS_DYNA",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "LS-DYNA程序（现在最新版本17.2版）是功能齐全的几何非线性（大位移、大转动和大应变）、材料非线性（140多种材料动态模型）和接触非线性（50多种）程序。",
+    "detail": [
+      "大的分析能力，丰富的材料库",
+      "单元库、多接触方式、汽车行业的专门功能",
+      "自适应网格剖分功能",
+      "多功能控制，隐式求解",
+      "初始条件和约束功能，边界元法"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "HyperMesh",
+    "logo": "HyperMesh",
+    "type": "前后处理",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "RADIOSS",
+    "logo": "RADIOSS",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "在瞬态和非线性分析领域有优势，在汽车安全性能仿真及其他碰撞分析领域有比较悠久的历史"
+  },
+  {
+    "index": 1,
+    "name": "OptiStruct",
+    "logo": "OptiStruct",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "OptiStruct 是用于概念设计和改进设计、基于有限元的结构分析及优化软件。OptiStruct应用拓扑、外形和形状优化技术，具有强大的功能，帮助设计优化出基于各种约束条件下的具有最小重量和最大性能的结构。"
+  },
+  {
+    "index": 1,
+    "name": "AcuSolve",
+    "logo": "AcuSolve",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "FEKO",
+    "logo": "FEKO",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "STAR-CCM+",
+    "logo": "STAR_CCM",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "Siemens",
+    "description": "STAR-CCM+是Siemens公司采用最先进的连续介质力学数值技术（computational continuum mechanics algorithms）开发的新一代CFD求解器。",
+    "detail": [
+      "处理、求解和后处理流传",
+      "擅长复杂几何",
+      "多面体网格技术，精度高",
+      "参数功能、支持服务器并联、上亿网格",
+      "简单易学"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "CONVERGE",
+    "logo": "CONVERGE",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "CSI",
+    "description": "无"
+  },
+  {
+    "index": 1,
+    "name": "Abaqus/CAE",
+    "logo": "Abaqus_CAE",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Dassault Systèmes",
+    "description": "ABAQUS 是一套功能强大的工程模拟的有限元软件，其解决问题的范围从相对简单的线性分析到许多复杂的非线性问题。",
+    "detail": [
+      "可视化视窗系统，良好的人际交互",
+      "优良的非线性分析",
+      "参数化建模方法",
+      "强大的模型管理和载荷管理",
+      "多单元种类和材料模型"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "Abaqus/Standard",
+    "logo": "Abaqus_Standard",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Dassault Systèmes",
+    "description": "ABAQUS 是一套功能强大的工程模拟的有限元软件，其解决问题的范围从相对简单的线性分析到许多复杂的非线性问题。",
+    "detail": [
+      "可视化视窗系统，良好的人际交互",
+      "优良的非线性分析",
+      "参数化建模方法",
+      "强大的模型管理和载荷管理",
+      "单元种类和材料模型"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "Abaqus/Explicit",
+    "logo": "Abaqus_Explicit",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Dassault Systèmes",
+    "description": "ABAQUS 是一套功能强大的工程模拟的有限元软件，其解决问题的范围从相对简单的线性分析到许多复杂的非线性问题。",
+    "detail": [
+      "可视化视窗系统，良好的人际交互",
+      "优良的非线性分析",
+      "参数化建模方法",
+      "强大的模型管理和载荷管理",
+      "单元种类和材料模型"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "MSC.NASTRAN",
+    "logo": "MSC_NASTRAN",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "MSC.Software",
+    "description": "nastran是1966年美国国家航空航天局(NASA)为了满足当时航空航天工业对结构分析的迫切需求主持开发大型应用有限元程序。",
+    "detail": [
+      "可靠性和优秀的软件品质",
+      "工业标准的输入/输出",
+      "多单元类型、分析功能",
+      "先进的用户界面和数据管理手段",
+      "高度灵活的开放式结构"
+    ]
+  },
+  {
+    "index": 1,
+    "name": "MSC.PATRAN",
+    "logo": "MSC_PATRAN",
+    "type": "前后处理",
+    "published": true,
+    "manufacture": "MSC.Software",
+    "description": "无"
+  }
+]

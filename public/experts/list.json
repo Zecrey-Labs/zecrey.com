@@ -1,0 +1,74 @@
+[
+  {
+    "name": "戴昆",
+    "avatar": "Kun_Dai.png",
+    "description": ["哈尔滨工业大学副教授", "美国康涅狄格州立大学博士"],
+    "skills": ["APU包容性仿真", "航空发动机多物理场仿真"]
+  },
+  {
+    "name": "Nicolas VINCEN",
+    "avatar": "Nicolas_VINCEN.png",
+    "description": "法国里昂中央理工大学机械工程师",
+    "skills": ["机械疲劳仿真", "振动及声学仿真"]
+  },
+  {
+    "name": "闵皆昇",
+    "avatar": "BS_Min.png",
+    "description": ["法国鲁昂国立应用科学学院博士", "EDF法电中国核电研发总监"],
+    "skills": ["流体力学仿真", "结构力学仿真", "能源行业工程咨询"]
+  },
+  {
+    "name": "苏康",
+    "avatar": "Kan_Su.png",
+    "description": ["清华大学机械工程博士", "电力勘测设计研究院博士后"],
+    "skills": ["机械设计", "有限元仿真", "第一性原理计算"]
+  },
+  {
+    "name": "苏珊",
+    "avatar": "Shan_Su.png",
+    "description": "北京工业大学机械工程博士",
+    "skills": ["电磁脉冲焊接", "气化冲击焊接"]
+  },
+  {
+    "name": "Pascal BOUVET",
+    "avatar": "Pascal_BOUVET.png",
+    "description": "UTC 机械工程学博士",
+    "skills": ["NVH性能正向开发", "噪声诊断与控制分析"]
+  },
+  {
+    "name": "李奇",
+    "avatar": "Qi_Li.png",
+    "description": "同济大学声学博士",
+    "skills": ["风噪分析", "阻尼片优化"]
+  },
+  {
+    "name": "王锐",
+    "avatar": "Rui_Wang.png",
+    "description": "韩国全北大学机械设计工程博士",
+    "skills": ["CAD/CAM和3D打印技术", "特种加工", "超精密加工"]
+  },
+  {
+    "name": "刘闯",
+    "avatar": "Chuang_Liu.png",
+    "description": "东北大学机械设计及原理博士",
+    "skills": ["骨科器械仿生力学设计", "巡检机器人视觉系统", "机械结构CAE分析"]
+  },
+  {
+    "name": "杨龙",
+    "avatar": "Long_Yang.png",
+    "description": "燕山大学机械设计及理论博士",
+    "skills": ["并联机构的构型综合", "运动学分析及仿真"]
+  },
+  {
+    "name": "周璐",
+    "avatar": "Lu_Zhou.png",
+    "description": "法国里昂中央理工大学博士",
+    "skills": ["流体力学"]
+  },
+  {
+    "name": "何觅",
+    "avatar": "Mi_He.png",
+    "description": "法国国立巴黎高等矿业学院博士",
+    "skills": ["结构力学仿真", "建筑安全分析"]
+  }
+]

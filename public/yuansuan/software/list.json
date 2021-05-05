@@ -1,0 +1,510 @@
+[
+  {
+    "index": 1,
+    "name": "FLUENT",
+    "logo": "FLUENT",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "Fluent是目前可用的、功能最强大的计算流体动力学（CFD）软件工具，能够让您更深入更快速地优化自己的产品性能。Fluent内含经充分验证过的物理建模功能，能为广泛的CFD和多物理场应用提供快速、精确的结果。",
+    "detail": [
+      "高效灵活的工作流",
+      "为多物理场构建",
+      "信心百倍地求解复杂模型",
+      "借助高性能计算（HPC）加快求解速度",
+      "热传导与辐射",
+      "自动优化设计"
+    ]
+  },
+  {
+    "index": 2,
+    "name": "CFX",
+    "logo": "CFX",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "ANSYS CFX是一款高性能计算流体动力学（CFD）软件工具，可快速稳健地为各种CFD和多物理场应用提供可靠精确的解决方案。CFX一直因其出色的精确度、稳健性和高速度而被业界认可，可满足泵、风扇、压缩机、燃气涡轮和水力涡轮等旋转机械应用的需求。",
+    "detail": [
+      "高效灵活的工作流",
+      "为多物理场构建",
+      "借助高性能计算（HPC）加快求解速度",
+      "旋转机械专用的附加模块",
+      "推进CFX求解器技术",
+      "流固耦合"
+    ]
+  },
+  {
+    "index": 3,
+    "name": "Mechanical",
+    "logo": "Mechanical",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "ANSYS Mechanical软件是一种综合全面的有限元分析（FEA）工具，适用于包括线性、非线性、动力学、流体动力学和显式研究在内的结构力学。它可为多种类型的机械设计问题提供一系列完整的单元行为、材料模型和方程式求解器。",
+    "detail": [
+      "强度分析",
+      "几何非线性",
+      "几何结构与网格生成",
+      "HPC并行计算",
+      "强大的求解器功能",
+      "多物理场"
+    ]
+  },
+  {
+    "index": 4,
+    "name": "LS-DYNA",
+    "logo": "LS_DYNA",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "LS-DYNA程序（现在最新版本17.2版）是功能齐全的几何非线性（大位移、大转动和大应变）、材料非线性（140多种材料动态模型）和接触非线性（50多种）程序。",
+    "detail": [
+      "强大的分析能力，丰富的材料库",
+      "单元库、多接触方式、汽车行业的专门功能",
+      "自适应网格剖分功能",
+      "多功能控制，隐式求解",
+      "初始条件和约束功能，边界元法"
+    ]
+  },
+  {
+    "index": 5,
+    "name": "Maxwell",
+    "logo": "Maxwell",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "ANSYS Maxwell作为业界最顶级的电磁场仿真分析软件，可以帮助工程师完成电磁设备与机电设备的三维/二维有限元仿真分析，例如，电机、作动器、变压器、传感器与线圈等设备的性能分析。Maxwell使用有限元算法，可以完成静态、频域以及时域磁场与电场仿真分析。\n 产品概览：\n Maxwell最大的优势就在于其自动化的分析流程，工程师在实际应用时，只需要指定模型的几何形状，材料属性，以及关键的输出参数，然后，Maxwell可以自动生成高质量的自适应网格。上述自适应网格可以把工程师从繁琐的网格划分流程中解脱出来，直面整个分析流程，使整个仿真分析流程简单化。 Maxwell可以生成基于有限元算法的高保真，降阶模型，上述模型可用于ANSYS Simplorer系统仿真分析。Simplorer是ANSYS的多物理域系统集成软件，它可以将复杂的电路分析与Maxwell精确有限元仿真分析集成在一起，最终实现高性能的电磁、机电以及电力电子系统仿真分析。",
+    "detail": [
+      "自动自适应网格生成,",
+      "Maxwell有限元求解器",
+      "ANSYS Simplorer的动态链路",
+      "多物理场",
+      "高性能计算",
+      "分布式求解",
+      "磁性矢量磁滞建模",
+      "随温度变化的永磁体"
+    ]
+  },
+  {
+    "index": 6,
+    "name": "HFSS",
+    "logo": "HFSS",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "Ansys HFSS 是一款 3D 电磁 (EM) 仿真软件，可用于设计天线、天线阵列、RF 或微波组件、高速互连装置、过滤器、连接器、IC 封装和印刷电路板等高频电子产品，并对此类产品进行仿真。全球工程师均使用 Ansys HFSS 设计通信系统、雷达系统、高级驾驶辅助系统 (ADAS)、卫星、物联网 (IoT) 产品及其他高速 RF 和数字设备中使用的高频、高速电子产品。",
+    "detail": ["高频电磁求解器", "可靠性和自适应网格自动划分", "3D组件"]
+  },
+  {
+    "index": 7,
+    "name": "workbench",
+    "logo": "workbench",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 8,
+    "name": "ICEM CFD",
+    "logo": "ICEM_CFD",
+    "type": "前后处理",
+    "published": false,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 9,
+    "name": "CFD-post",
+    "logo": "CFD_post",
+    "type": "前后处理",
+    "published": false,
+    "manufacture": "ANSYS",
+    "description": "无"
+  },
+  {
+    "index": 10,
+    "name": "Actran",
+    "logo": "Actran",
+    "type": "声学",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "Actran是业内著名的声学仿真软件，覆盖声学、振动声学、气动声学等多方面仿真功能。Actran可以处理的问题包括：声的辐射、散射问题，声波通过简单或复合结构的声透射问题，封闭空腔中的声场问题，在管道中的声传播问题，吸声材料、多孔材料及高阻尼材料对能量的耗散问题，气动噪声问题，对流中的声传播问题，高马赫流场中的声传播问题等。"
+  },
+  {
+    "index": 11,
+    "name": "Apex",
+    "logo": "Apex",
+    "type": "前后处理",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "MSC Apex Modeler是CAE特定的直接建模和网格划分解决方案，可简化CAD清理，简化和网格划分工作流程。该解决方案具有易于使用和易于学习的复杂且交互式的工具。",
+    "detail": ["直接建模", "直接建模和网格划分", "易于使用，易于学习"]
+  },
+  {
+    "index": 12,
+    "name": "Adams",
+    "logo": "Adams",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "Adams软件由于其领先的“虚拟样机”理念和技术，迅速发展成为CAE领域中使用范围最广、应用行业最多的机械系统动力学仿真工具，占据了全球该CAE分析领域53％的市场份额（数据来自于Daratech），被广泛应用于航天、航空、汽车、铁道、兵器、船舶、电子、工程设备及重型机械等行业，众多国际化大型公司、企业均采用Adams软件作为其产品设计研发过程中机械系统动力学性能仿真的平台。"
+  },
+  {
+    "index": 13,
+    "name": "Marc",
+    "logo": "Marc",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "Marc 是一款功能强大、用途广泛的非线性有限元分析解决方案，可准确地仿真您的产品在静态、动态及多物理场加载场景下的响应。通过使用 Marc，您可以在单一建模环境中用一个解算器来解决制造和产品开发问题。"
+  },
+  {
+    "index": 14,
+    "name": "Dytran",
+    "logo": "Dytran",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "DYTRAN 用于研究碰撞、冲击及流体—结构相互作用的显式瞬态动力学解决方案，可提高产品安全性并降低维修成本。DYTRAN 是一个显式有限元分析（FEA）解决方案，用于仿真冲击、碰撞之类的瞬时事件，并可分析在此类事件期间结构的复杂非线性行为。Dytran 能够让您研究设计的结构完整性，以确保最终产品在满足客户的安全性、可靠性及管理机构的要求方面处于更有利的位置。",
+    "detail": [
+      "面向行业精确、强大的分析,",
+      "独特的仿真技术的组合",
+      "可最大限度提升效率的Dytran",
+      "瞬态结构力学（碰撞/冲击）",
+      "流固耦合",
+      "高性能计算"
+    ]
+  },
+  {
+    "index": 15,
+    "name": "Fatigue",
+    "logo": "Fatigue",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "MSC Fatigue 是一个基于有限元的耐久性和损伤容限解算器，针对时域、频域的静力和动力问题，可以全面进行断裂分析和疲劳寿命预测。",
+    "detail": [
+      "支持交互式的产品疲劳寿命优化,",
+      "在 CAE 环境中，将疲劳计算与动力学系统紧密联系在一起，使工作富有成效",
+      "大量功能，在各个版本不断增强和导入",
+      "在各阶段，轻松地监控、开始、终止及审计疲劳计算任务",
+      "支持多个频变的动力载荷输入",
+      "通过 MSC Fatigue 的多种焊接技术，预测焊接寿命",
+      "采用 MSC Fatigue 和 Ncode 的最新功能",
+      "增加应力梯度法，增强疲劳求解引擎",
+      "支持静力、动力学和热事件的疲劳性能预测"
+    ]
+  },
+  {
+    "index": 16,
+    "name": "Simufact",
+    "logo": "Simufact",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "Simufact，是基于MSC.Software的MSC.Maufacturing（原MSC.superform和MSC.superforge）软件开发出来的先进的材料加工及热处理工艺仿真优化软件。",
+    "detail": [
+      "Windows和Marc交互界面",
+      "CAD和铸造软件接口功能",
+      "集成二维和三维模拟",
+      "网络自适应技术"
+    ]
+  },
+  {
+    "index": 17,
+    "name": "Romax Spin",
+    "logo": "Romax_Spin",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "MSC Software",
+    "description": "Romax Spin可帮助工程师为概念设计选择合适的轴承型号、为某个特定的设计开发定制化轴承、为轴承失效分析根本原因等。Romax公司成立之初就致力于轴承技术，Romax Spin嵌入了我们最新的、世界领先的轴承技术。"
+  },
+  {
+    "index": 18,
+    "name": "Code_Saturne",
+    "logo": "Code_Saturne",
+    "type": "流体分析",
+    "published": false,
+    "manufacture": "EDF",
+    "description": "计算流体力学开源软件，基于有限体积方法，适应任何类型与任何结构网格，求解纳维-斯托克斯方程，广泛运用于学术及工业领域数值模拟仿真。",
+    "detail": [
+      "源代码开放共享，便于用户二次开发",
+      "图形化界面易操作，支持多种网格（四面体、六面体、棱柱体、混合网格），直接读取现有多种网格格式包括MED, CGNS, Simail,  Star-CCM+, I-deas，universal, GAMBIT, Ensight, ICEM, Gmsh",
+      "并行计算效率高（目前最高接近十万CPU并行计算处理百万网格的案例），超性能计算能力强，并可实现多物理耦合计算，Code_Saturne/ Code_Aster,    Code_Saturne/Syrthes等",
+      "20年稳定更新完善，大量程序验证与结果验证测试（V&V），海量工业案例应用经验积累。"
+    ]
+  },
+  {
+    "index": 19,
+    "name": "Code_Aster",
+    "logo": "Code_Aster",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "EDF",
+    "description": "有限元计算软件，用来研究线性、非线性问题，作动、静态的热、力耦合结构力学。ISO9001国际质量认证，满足法国核安全局和英国核监督部门对软件的要求，得到一致的认可。",
+    "detail": [
+      "源代码开放和共享，赋予用户定制和二次开发需求",
+      "用户友好的图形界面（AsterStudy）集成了前处理、求解器、后处理，计算流程管理，享受SALOME-MECA一体化平台体验",
+      "超过160多个材料本构模型，400多种单元类型",
+      "强大的并行计算能力，适用于高性能计算机（HPC）上进行并行计算（2018年对外开放使用"
+    ]
+  },
+  {
+    "index": 20,
+    "name": "SALOME",
+    "logo": "SALOME",
+    "type": "仿真平台",
+    "published": false,
+    "manufacture": "EDF",
+    "description": "Salome是仿真前后处理图形化开放源代码的通用操作平台，基于由可重用组件组成的开放且灵活的体系结构，为仿真用户提供跨平台的解决方案，可用于数值计算的CAD建模以及网格划分等前处理工具，以及结果分析的后处理工具。",
+    "detail": [
+      "SALOME软件平台提供GEOM模块进行针对CAD模型的创建、编辑和修改工作，通过图形化用户界面或者文本用户界面进行设计操作，完备的库函数和多样化的操作方式提供给用户适应复杂多变几何构型的强大技术支持。使用SMESH完成网格生成、划区分组、质量检查和网格优化，提供NETGEN、GMSH等开源网格算法，同时提供MeshGems-CADSurf和MeshGems-Tetra等商用网格生成器，能够完全满足针对各种复杂几何模型和不同计算环境的结构性网格、非结构性网格和混合型网格的计算需求。",
+      "SALOME软件平台融合多种力学求解器，支持对多种物理系统数值仿真，流体力学仿真模块（Salome_CFD）、结构力学仿真模块（Salome_Meca）和水力学仿真模块（Salome_Hydro）等多种模块的融合集成提供给用户更为便捷强大的软件服务。",
+      "SALOME搭载ParaViS模块，能够实现模型可视化操作、数据分析等一系列完整后处理过程。",
+      "SALOME软件通过工作流控制不同仿真平台的协同过程，支持高性能计算，提供最完备的数值试验管理方案",
+      "集成多物理计算模块，可平台化调度和管理耦合计算。"
+    ]
+  },
+  {
+    "index": 20,
+    "name": "Solid Tron",
+    "logo": "Solid_Tron",
+    "type": "3D建模",
+    "published": true,
+    "manufacture": "",
+    "description": "创物3D 2020是一款拥有独立自主知识产权、自主品牌、安全可控、功能强大的国产3D CAD软件，集合了国际强大的主流内核，融合2D设计与3D设计与一体，满足多场景业务需求，帮助企业实现快速、准确、高效研发的高端CAD软件。",
+    "detail": [
+      "国产高端，安全可控",
+      "主流内核，数据复用",
+      "功能强大，易学易用",
+      "软件普惠，推动正版",
+      "本地服务，专业全面"
+    ]
+  },
+  {
+    "index": 21,
+    "name": "HyperMesh",
+    "logo": "HyperMesh",
+    "type": "前后处理",
+    "published": false,
+    "manufacture": "Altair",
+    "description": "无"
+  },
+  {
+    "index": 22,
+    "name": "HyperView",
+    "logo": "HyperView",
+    "type": "前后处理",
+    "published": false,
+    "manufacture": "Altair",
+    "description": "Altair HyperView是一个针对有限元分析、多体系统仿真、数字化视频和工程数据的完整的后处理和可视化环境。HyperView组合了先进的动画处理和数据绘图功能，同时支持窗口播放的同步处理以增强结果的可视化效果。HyperView还可以采用Altair特有的H3D压缩格式保存三维动画结果，从而使用户能够使用Altair HyperView Player在三维的网络环境中共享和浏览CAE结果。 HyperView以其极为快速的三维图像处理和无与伦比的功能带来了令人震惊的速度和集成性体验，为CAE结果的后处理树立了新的标准。附加以HyperView先进的流程自动化工具，更是将结果的可视化和报告生成推向了更高的层次。",
+    "detail": ["CAE 结果动画和曲线绘制", "结果可视化", "求解器接口"]
+  },
+  {
+    "index": 23,
+    "name": "RADIOSS",
+    "logo": "RADIOSS",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "Altair",
+    "description": "在瞬态和非线性分析领域有优势，在汽车安全性能仿真及其他碰撞分析领域有比较悠久的历史"
+  },
+  {
+    "index": 24,
+    "name": "OptiStruct",
+    "logo": "OptiStruct",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "OptiStruct 是用于概念设计和改进设计、基于有限元的结构力学及优化软件。OptiStruct应用拓扑、外形和形状优化技术，具有强大的功能，帮助设计优化出基于各种约束条件下的具有最小重量和最大性能的结构。"
+  },
+  {
+    "index": 25,
+    "name": "FEKO",
+    "logo": "FEKO",
+    "type": "电磁分析",
+    "published": true,
+    "manufacture": "Altair",
+    "description": "无"
+  },
+  {
+    "index": 26,
+    "name": "Abaqus",
+    "logo": "Abaqus",
+    "type": "结构分析",
+    "published": true,
+    "manufacture": "Dassault Systèmes",
+    "description": "ABAQUS 是一套功能强大的工程模拟的有限元软件，其解决问题的范围从相对简单的线性分析到许多复杂的非线性问题。",
+    "detail": [
+      "可视化视窗系统，良好的人际交互",
+      "优良的非线性分析",
+      "参数化建模方法",
+      "强大的模型管理和载荷管理",
+      "多单元种类和材料模型"
+    ]
+  },
+  {
+    "index": 27,
+    "name": "fesafe",
+    "logo": "fesafe",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "Dassault Systèmes",
+    "description": "Fe-Safe 是世界上最先进的高级疲劳耐久性分析软件，是基于有限元模型的疲劳分析软件包。由英国 Safe Technology 公司开发和维护。2013年被Dassault Systemes收购，作为达索Simulia品牌下的疲劳耐久性分析软件系统。",
+    "detail": [
+      "强大的分析能力，丰富的材料库",
+      "单元库、多接触方式、汽车行业的专门功能",
+      "自适应网格剖分功能",
+      "多功能控制",
+      "初始条件和约束功能"
+    ]
+  },
+  {
+    "index": 28,
+    "name": "ProCAST",
+    "logo": "ProCAST",
+    "type": "流体分析",
+    "published": false,
+    "manufacture": "ESI GROUP",
+    "description": "ProCAST 软件是铸造过程的模拟软件，采用基于有限元(FEM)的数值计算和综合求解的方法，对铸件充型、凝固和冷却过程等提供模拟，提供了很多模块和工程工具来满足铸造工业最富挑战的需求。基于强大的有限元分析，它能够预测严重畸变和残余应力，并能用于半固态成形，吹芯工艺，离心铸造，消失模铸造、连续铸造等特殊工艺。",
+    "detail": [
+      "好的几何描述能力",
+      "建模过程中如需局部网格细化，有限元网格无须像有限差分法那样把细化影响到整修模型，这样使FEM的单元和节点数明显少于FDM",
+      "以弹性、弹塑性、弹粘塑性模型进行应力和热的耦合分析时，只能采用有限元法。有限差分法由于网格不能变形而不能进行应力分析",
+      "在处理和充型方向相平行的曲面时，由于有限元法能够精确描述曲面边界，因而能准确模拟铸件充型的流场；而有限差分法在描述铸件曲面边界时，由于断面成锯齿状而造成较大的偏差",
+      "在精确处理辐射传热问题时，视角系数和阴影效果的计算，要求准确地描述外表面及相应方位。因此，FDM无法处理复杂的辐射问题"
+    ]
+  },
+  {
+    "index": 29,
+    "name": "SYSWELD",
+    "logo": "SYSWELD",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "ESI GROUP",
+    "description": "SYSWELD完全实现了机械、热传导和金属冶金的耦合计算，允许考虑晶相转变及同一时间晶相转变潜热和晶相组织对温度的影响。在具体计算中，分两步进行，首先实现温度和晶相组织的计算，然后进行机械力的计算。在机械力计算中，已经充分考虑了第一步计算的结果，如残余应力和应变的影响。SYSWELD的电磁模型允许模拟点焊和感应加热，并可实现能量损失和热源加载的计算模拟。SYSWELD扩散与析出模型可实现渗碳、渗氮、碳氮共渗模拟，先计算化学元素的扩散和沉积，然后再考虑对热和机械性能的影响。SYSWELD的氢扩散模型能计算模拟氢的浓度，预测冷裂纹的严重危害。"
+  },
+  {
+    "index": 30,
+    "name": "DYNAFORM",
+    "logo": "DYNAFORM",
+    "type": "结构分析",
+    "published": false,
+    "manufacture": "ETA",
+    "description": "Dynaform 软件基于有限元方法建立, 被用于模拟钣金成形工艺。Dynaform软件包含BSE、DFE、Formability三个大模块，几乎涵盖冲压模模面设计的所有要素，包括：定最佳冲压方向、坯料的设计、工艺补充面的设计、拉延筋的设计、凸凹模圆角设计、冲压速度的设置、压边力的设计、摩擦系数、切边线的求解、压力机吨位等。",
+    "detail": [
+      "集成操作环境，无需数据转换",
+      "完备的前后处理功能，实现无文本编辑操作，所有操作在同一界面下进行",
+      "采用业界著名、功能最强的LS-DYNA，是动态非线性显示分析技术的创始和领导者，解决最复杂的金属成形问题"
+    ]
+  },
+  {
+    "index": 31,
+    "name": "OpenFOAM",
+    "logo": "OpenFOAM",
+    "type": "流体分析",
+    "published": false,
+    "manufacture": "OpenCFD",
+    "description": "",
+    "detail": [
+      "包含大量求解器，研究人员也可以编写自己的求解器。简单介绍以下几个自带的标准求解器： icoFoam：用于求解层流下的单相牛顿流体流动。 simpleFoam：求解单相牛顿以及非牛顿湍流流动。 interFoam：牛顿和非牛顿流体的VOF模型求解。"
+    ]
+  },
+  {
+    "index": 32,
+    "name": "STAR-CCM+",
+    "logo": "STAR_CCM",
+    "type": "流体分析",
+    "published": true,
+    "manufacture": "Siemens",
+    "description": "Simcenter STAR-CCM+ 是一个完整的多物理场解决方案，可对真实条件下工作的产品和设计进行仿真。其独特之处在于，Simcenter STAR-CCM+ 给每位工程师的仿真工具包带来了自动化设计探索和优化，让其可以高效地探索整个设计空间，而不是将注意力集中在单点设计场景上。"
+  },
+  {
+    "index": 33,
+    "name": "BLASTN（开源）",
+    "logo": "blastn",
+    "type": "生物医药",
+    "published": true,
+    "description": "无"
+  },
+  {
+    "index": 34,
+    "name": "BLASTP（开源）",
+    "logo": "BLASTP",
+    "type": "生物医药",
+    "published": true,
+    "description": "无"
+  },
+  {
+    "index": 35,
+    "name": "BLASTX（开源）",
+    "logo": "blastx",
+    "type": "生物医药",
+    "published": true,
+    "description": "无"
+  },
+  {
+    "index": 36,
+    "name": "Sentieon",
+    "logo": "Sentieon",
+    "type": "生物医药",
+    "published": true,
+    "description": "无"
+  },
+  {
+    "index": 37,
+    "name": "COMSOL 5.5a",
+    "logo": "COMSOL",
+    "type": "结构分析",
+    "published": false,
+    "description": "COMSOL 5.5a是一款大型的高级数值仿真软件。广泛应用于各个领域的科学研究以及工程计算，被当今世界科学家称为“第一款真正的任意多物理场直接耦合分析软件”。模拟科学和工程领域的各种物理过程，COMSOL Multiphysics以高效的计算性能和杰出的多场双向直接耦合分析能力实现了高度精确的数值仿真。"
+  },
+  {
+    "index": 38,
+    "name": "ABC 3D",
+    "logo": "ABC_3D",
+    "type": "3D建模",
+    "published": false,
+    "description": "ABC3D最新版是一款非常优秀的三维设计和打印软件，ABC3D最新版是适用于中小学3D打印创客教育的三维设计和打印软件，且功能十分全面，拥有积木建模、 二维转三维、骨架球建模、曲面建模、文字建模、旋转建模、浮雕建模、精准建模等等功能。"
+  },
+  {
+    "index": 39,
+    "name": "ncode",
+    "logo": "ncode",
+    "type": "结构分析",
+    "published": false,
+    "description": "Ncode 工程一体化疲劳设计软件 nCode 提供复杂的工程软件及服务， 让用户能够在工程设计中有效地管理产品的耐久性。 nCode 采取了开放的方式并与世界领先的供应商建立了密切的合作关系 ，已满足用户的需要 。nCode 与MSC.Software,MTS,PTC,Altair Engineering,SDRC,ANSYS,HKS 等公司保持着积极的关系。 许多世界领先的 FEA产品 ，其疲劳寿命预报部分如MSC.Fatigue,Pro/ME-CHANICA.Fatigue Advisor,MTS RPC-Pro，均由 nCode 为其提供技术核心。"
+  },
+  {
+    "index": 40,
+    "name": "femfat",
+    "logo": "femfat",
+    "type": "结构分析",
+    "published": false,
+    "description": "FEMFAT是一套面向工程开发的疲劳强度分析和优化的软件,凝聚多年的工程开发实际经验,并经过全球用户的使用验证,其算法高效精确、结果可靠。软件考虑了各种各样的疲劳强度影响因素,最大程度的真实地反映实际构件的受力状态,提供可信的分析预测结果,便于工程师在产品设计的早期阶段预测评估,从而加速产品的开发过程,降低产品的开发成本,提高产品的开发质量。",
+    "detail": [
+      "面向工程开发的专项疲劳分析解决方案,全球1000多家用户的成功验证及工程实践;",
+      "FEMFAT软件与其它FE软件具有很好的集成性,操作简单,易学易用;",
+      "经过多年的项目合作与产品开发,在产品的结构强度分析方面,ECS积累了大量的数据和经验,能够根据用户需求建立结构强度分析、评价和优化的一整套系统化流程;",
+      "ECS是专业的汽车开发技术工程中心,有一支世界上一流的专业化产品研究开发应用的队伍与一流的基础结构强度实验室,FEMFAT软件功能正不断扩展和增强,快速响应用户新的不同需求。"
+    ]
+  },
+  {
+    "index": 41,
+    "name": "deform",
+    "logo": "deform",
+    "type": "结构分析",
+    "published": false,
+    "description": "DEFORM是一套基于有限元分析方法的专业工艺仿真系统，用于分析金属成形及其相关的各种成形工艺和热处理工艺。二十多年来的工业实践证明了基于有限元法的DEFORM有着卓越的准确性和稳定性，模拟引擎在大流动、行程载荷和产品缺陷预测等方面同实际生产相符，保持着令人叹为观止的精度，被国际成形模拟领域公认为处于同类型模拟软件的领先地位。",
+    "detail": [
+      "友好的图形界面",
+      "高度模块化、集成化的有限元模拟系统",
+      "有限元网格自动生成器以及网格重划分自动触发系统",
+      "集成金属合金材料",
+      "集成多种成形设备模型",
+      "用户自定义子程序",
+      "辅助成形工具"
+    ]
+  }
+]
