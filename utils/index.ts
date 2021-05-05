@@ -3,7 +3,6 @@
  */
 
 export * from './hooks'
-export { buryPoint } from './buryPoint'
 
 export function hex2Rgba(hex, alpha) {
   const r = parseInt(hex.substring(1, 3), 16)

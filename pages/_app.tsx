@@ -47,14 +47,8 @@ const App = observer(function App({ Component, pageProps }: Props) {
       mirror: true
     })
     // @ts-ignore
-    var _czc = _czc || []
-    _czc.push(['_setAccount', '1279347593'])
 
     try {
-      const queryString = window.location.search
-      const urlParams = new URLSearchParams(queryString)
-      const channel = urlParams.get('channel')
-      localStorage.setItem('source_channel', channel || '0')
       buryPoint({ category: '首页', action: '加载', label: '' })
     } catch (e) {}
   }, [])
