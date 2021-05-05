@@ -1,16 +1,12 @@
 {
-  "name": "yuansuan-cloud-portal",
+  "name": "zecrey-homepage",
   "version": "1.0.0",
-  "description": "远算云门户网站",
+  "description": "Zecrey Homepage",
   "main": "index.js",
   "scripts": {
     "preinstall": "node -e \"if (process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Use yarn for installing: https://yarnpkg.com/en/docs/install')\"",
     "dev": "node server.js",
-    "dev:zs": "PLATFORM=intelligent PORT=3001 npm run dev",
-    "dev:ys": "PLATFORM=yuansuan  npm run dev",
     "build": "next build",
-    "build:zs": "PLATFORM=intelligent npm run build",
-    "build:ys": "PLATFORM=yuansuan npm run build",
     "start": "next start"
   },
   "author": "",

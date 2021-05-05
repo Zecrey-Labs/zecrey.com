@@ -14,7 +14,6 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'antd/dist/antd.css'
 import '@/global.css'
-import { Provider } from '@/store'
 import { observer } from 'mobx-react-lite'
 import { buryPoint } from '@/utils'
 
@@ -45,7 +44,7 @@ const App = observer(function App({ Component, pageProps }: Props) {
 
   useEffect(() => {
     Aos.init({
-      mirror: true,
+      mirror: true
     })
     // @ts-ignore
     var _czc = _czc || []
@@ -74,9 +73,5 @@ const App = observer(function App({ Component, pageProps }: Props) {
 })
 
 export default function AppWithStore({ Component, pageProps }) {
-  return (
-    <Provider>
-      <App Component={Component} pageProps={pageProps} />
-    </Provider>
-  )
+  return <App Component={Component} pageProps={pageProps} />
 }
