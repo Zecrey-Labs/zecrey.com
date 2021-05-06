@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-const logo1 = require('@/public/logo1.svg')
+import logo1 from '@/public/logo1.svg'
 import cute from '@/public/section1/cute.svg'
+import circle from '@/public/section1/circle.svg'
 
 const InputEmail = styled.input`
   display: block;
@@ -47,13 +48,20 @@ const Style = styled.div`
   align-items: center;
   div.bee {
     margin-top: 128px;
-    padding: 12px 69px 6px 51px;
+    padding: 9px 69px 9px 51px;
     background: #2ad4d9 0% 0% no-repeat padding-box;
     border-radius: 5px;
     text-align: left;
     font: normal normal bold 32px/38px Lexend;
     letter-spacing: 0px;
     color: #222222;
+    position: relative;
+    img {
+      font-size: 10px;
+      position: absolute;
+      right: 23px;
+      top: -5px;
+    }
   }
   div.banner {
     margin-top: 25px;
@@ -125,7 +133,10 @@ export const Section1 = () => {
   const inputElement = React.useRef(null)
   return (
     <Style>
-      <div className='bee'>New Bee Product</div>
+      <div className='bee'>
+        New Bee Product
+        <img src={circle} />
+      </div>
       <div className='banner'>
         Brings privacy
         <br />
