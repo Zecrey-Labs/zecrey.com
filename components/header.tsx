@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { observer } from 'mobx-react-lite'
+import { useStore } from '@/store'
 const logo1 = require('@/public/logo1.svg')
 const logo2 = require('@/public/logo2.svg')
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -107,9 +109,11 @@ const Style = styled.div`
   }
 `
 
-export const Header = () => {
+export const Header = observer(() => {
+  const store = useStore()
+
   return (
-    <Style className='dark'>
+    <Style className={store.theme}>
       <div className='left'>
         <img className='dark' src={logo1} alt='logo' />
         <img className='light' src={logo2} alt='logo' />
@@ -129,4 +133,4 @@ export const Header = () => {
       </div>
     </Style>
   )
-}
+})

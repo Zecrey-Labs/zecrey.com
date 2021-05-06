@@ -8,6 +8,7 @@ import Router from 'next/router'
 import 'antd/dist/antd.css'
 import '@/global.css'
 import { observer } from 'mobx-react-lite'
+import { Provider } from '@/store'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -47,4 +48,12 @@ const App = observer(function App({ Component, pageProps }: Props) {
   return <Component {...pageProps} />
 })
 
-export default App
+const AppWithStore = ({ Component, pageProps }) => {
+  return (
+    <Provider>
+      <App Component={Component} pageProps={pageProps} />
+    </Provider>
+  )
+}
+
+export default AppWithStore
