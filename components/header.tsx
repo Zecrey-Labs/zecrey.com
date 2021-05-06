@@ -8,6 +8,10 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 
 const Style = styled.div`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   height: 110px;
   display: flex;
   flex-direction: row;
