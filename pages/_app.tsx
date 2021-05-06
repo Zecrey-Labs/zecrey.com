@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 import { ThemeProvider } from 'styled-components'
 import 'nprogress/nprogress.css'
 import 'react-typist/dist/Typist.css'

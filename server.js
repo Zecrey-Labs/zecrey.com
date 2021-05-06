@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 const express = require('express')
 const morgan = require('morgan')
 const next = require('next')

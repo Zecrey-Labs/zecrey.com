@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 import { useState, useEffect } from 'react'
 
 export function useBodySize() {
@@ -9,7 +5,7 @@ export function useBodySize() {
     width: 0,
     height: 0,
     innerWidth: 0,
-    innerHeight: 0,
+    innerHeight: 0
   })
 
   useEffect(() => {
@@ -18,7 +14,7 @@ export function useBodySize() {
         width: document.body.clientWidth,
         height: document.body.clientHeight,
         innerWidth: window.innerWidth,
-        innerHeight: window.innerHeight,
+        innerHeight: window.innerHeight
       })
     }
     onResize()

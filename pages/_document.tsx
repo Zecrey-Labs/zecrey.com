@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { META } from '@/constant'
 const YSHead = () => (

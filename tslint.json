@@ -26,7 +26,7 @@
         "match": "Copyright",
         "allow-single-line-comments": true,
         "enforce-trailing-newline": false,
-        "default": "Copyright (C) 2016-present, Yuansuan.cn"
+        "default": "Copyright (C) 2020-present, Zecrey-Labs"
       }
     ]
   },
@@ -68,7 +68,7 @@
         "match": "Copyright",
         "allow-single-line-comments": true,
         "enforce-trailing-newline": false,
-        "default": "Copyright (C) 2016-present, Yuansuan.cn"
+        "default": "Copyright (C) 2020-present, Zecrey-Labs"
       }
     ],
     "prettier": true,

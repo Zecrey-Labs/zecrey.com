@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 import { useState, useEffect } from 'react'
 
 export const useImage = (src: string | any[] | { default }) => {

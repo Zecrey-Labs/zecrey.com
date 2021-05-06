@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 const withPlugins = require('next-compose-plugins')
 const withCSS = require('@zeit/next-css')
 const optimizedImages = require('next-optimized-images')

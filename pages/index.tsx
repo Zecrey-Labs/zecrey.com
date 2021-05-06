@@ -1,9 +1,8 @@
-/*!
- * Copyright (C) 2016-present, Yuansuan.cn
- */
-
 import React from 'react'
+import styled from 'styled-components'
+
+const Header = () => {}
 
 export default function Home() {
-  return <div>hello</div>
+  return <div></div>
 }
