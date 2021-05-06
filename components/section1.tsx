@@ -20,8 +20,22 @@ const InputEmail = styled.input`
   }
 `
 
+const Button = styled.button`
+  background: #2ad4d9 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  text-align: left;
+  font: normal normal bold 24px/29px Lexend;
+  letter-spacing: 0px;
+  color: #222222;
+  width: 120px;
+  height: 52px;
+  text-align: center;
+  border: none;
+`
+
 const Style = styled.div`
-  width: 100vw;
+  width: 100%;
   min-height: calc(100vh - 110px);
   color: white;
   display: flex;
@@ -53,14 +67,22 @@ const Style = styled.div`
     align-items: center;
     input {
       transition: transform 0.2s ease-out;
+      z-index: 2;
     }
     img {
       position: absolute;
       bottom: 0;
       right: 5px;
       height: 26px;
-      z-index: -1;
-      transition: transform 0.2s;
+      z-index: 0;
+      transition: transform 0.2s ease-out;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transition: transform 0.2s ease-out;
+      z-index: 0;
     }
     &:hover {
       input {
@@ -70,13 +92,19 @@ const Style = styled.div`
       img {
         transform: translateX(19px);
       }
+      button {
+        transform: translateX(-20px);
+      }
     }
     &.active {
-      img {
-        display: none;
-      }
       input {
         transform: translateX(-20px);
+      }
+      img {
+        visibility: hidden;
+      }
+      button {
+        transform: translateX(100%);
       }
     }
   }
@@ -108,11 +136,14 @@ export const Section1 = () => {
           onFocus={() => {
             setInputFocus(true)
           }}
-          onBlur={() => {
-            setInputFocus(false)
-          }}
         />
         <img src={cute} />
+        <Button
+          onClick={() => {
+            setInputFocus(false)
+          }}>
+          Send
+        </Button>
       </div>
       <img src={logo1} alt='logo' />
     </Style>
