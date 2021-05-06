@@ -18,6 +18,10 @@ const InputEmail = styled.input`
   &:focus {
     outline: none;
   }
+  &::selection {
+    color: #222222;
+    background-color: #2ad4d9;
+  }
 `
 
 const Button = styled.button`
@@ -118,6 +122,7 @@ const Style = styled.div`
 export const Section1 = () => {
   const [email, setEmail] = React.useState('Send us your email address')
   const [inputFocus, setInputFocus] = React.useState(false)
+  const inputElement = React.useRef(null)
   return (
     <Style>
       <div className='bee'>New Bee Product</div>
@@ -128,6 +133,7 @@ export const Section1 = () => {
       </div>
       <div className={`email ${inputFocus ? 'active' : ''}`}>
         <InputEmail
+          ref={inputElement}
           type='email'
           value={email}
           onChange={e => {
@@ -135,6 +141,7 @@ export const Section1 = () => {
           }}
           onFocus={() => {
             setInputFocus(true)
+            inputElement.current.select()
           }}
         />
         <img src={cute} />
