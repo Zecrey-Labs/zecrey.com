@@ -2,18 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 const logo1 = require('@/public/logo1.svg')
 
-const InputEmailStyle = styled.div`
-  display: block;
+const InputEmail = styled.input`
   margin-top: 69px;
+  display: block;
+  width: 455px;
+  height: 52px;
+  background: #222222 0% 0% no-repeat padding-box;
+  border: 2px solid #2ad4d9;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: left;
+  font: normal normal normal 24px/32px IBM Plex Sans;
+  letter-spacing: 0px;
+  color: #e4e4e4;
+  &:focus {
+    outline: none;
+  }
 `
-
-const InputEmail = () => {
-  return (
-    <InputEmailStyle>
-      <input />
-    </InputEmailStyle>
-  )
-}
 
 const Style = styled.div`
   width: 100vw;
@@ -47,7 +52,9 @@ const Style = styled.div`
   }
 `
 
+// @TODO: 邮箱地址发送到服务器
 export const Section1 = () => {
+  const [email, setEmail] = React.useState('Send us your email address')
   return (
     <Style>
       <div className='bee'>New Bee Product</div>
@@ -56,7 +63,14 @@ export const Section1 = () => {
         <br />
         value for assets.
       </div>
-      <InputEmail />
+      <InputEmail
+        type='email'
+        value={email}
+        onChange={e => {
+          setEmail(e.target.value)
+        }}
+        onFocus={() => {}}
+      />
       <img src={logo1} alt='logo' />
     </Style>
   )

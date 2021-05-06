@@ -9,7 +9,6 @@ const YSHead = () => (
     <meta name='copyright' content='LambdaCal, Inc' />
     <meta name='author' content={META.companyFullName} />
     <meta name='Robots' content='all' />
-    <link rel='shortcut icon' href={'/intelligent/logo.svg'} />
     <title>{META.title}</title>
   </Head>
 )
