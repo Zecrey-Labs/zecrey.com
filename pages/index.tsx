@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const Header = () => {}
+import { Header } from '@/components/header'
 
 export default function Home() {
-  return <div></div>
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
