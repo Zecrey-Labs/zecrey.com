@@ -122,7 +122,7 @@ const Style = styled.div`
   }
   > img {
     height: 52px;
-    margin-top: 141px;
+    margin: 141px 0 246px 0;
   }
 `
 
