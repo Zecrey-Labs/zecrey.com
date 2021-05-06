@@ -134,7 +134,7 @@ export const Section1 = () => {
   return (
     <Style>
       <div className='bee'>
-        New Bee Product
+        Zecrey Protocol
         <img src={circle} />
       </div>
       <div className='banner'>
@@ -145,7 +145,6 @@ export const Section1 = () => {
       <div className={`email ${inputFocus ? 'active' : ''}`}>
         <InputEmail
           ref={inputElement}
-          type='email'
           value={email}
           onChange={e => {
             setEmail(e.target.value)

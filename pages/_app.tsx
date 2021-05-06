@@ -7,7 +7,6 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'antd/dist/antd.css'
 import '@/global.css'
-import GlobalFonts from '@/style/GlobalFonts'
 import { observer } from 'mobx-react-lite'
 
 Router.events.on('routeChangeStart', () => {

@@ -4,7 +4,7 @@ const blue = require('@/public/section1/blue.png')
 const pink = require('@/public/section1/pink.png')
 
 const Style = styled.div`
-  @keyframes an-bg-1 {
+  @keyframes background-routine {
     0% {
       transform: translate(0);
     }
@@ -16,28 +16,36 @@ const Style = styled.div`
     }
   }
 
-  background-color: black;
   z-index: -10;
   min-width: 100vw;
   min-height: 100vh;
   position: fixed;
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  div.black {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(34, 34, 34, 0.6);
+  }
   img {
+    z-index: -11;
     position: absolute;
-    animation: an-bg-1 3s linear infinite;
+    animation: background-routine 3s linear infinite;
   }
-  img::nth-child(1) {
-    left: -150px;
-    top: 0;
+  img:nth-of-type(1) {
+    top: 30px;
+    left: 7px;
   }
-  img:nth-child(2) {
-    top: -150px;
-    left: 0;
+  img:nth-of-type(2) {
+    top: -481px;
+    left: -158px;
   }
 `
 
 export const Background = () => {
   return (
     <Style>
+      <div className='black'></div>
       <img src={blue} alt='' />
       <img src={pink} alt='' />
     </Style>

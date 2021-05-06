@@ -36,10 +36,9 @@ const Style = styled.div`
         display: flex;
         flex-direction: row;
         li {
-          font-size: 26px;
+          font: 100 26px/31px Lexend;
           text-align: left;
           letter-spacing: 0px;
-          font-weight: 300;
           margin-right: 61px;
           cursor: pointer;
         }
