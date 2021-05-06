@@ -41,6 +41,7 @@ const Style = styled.div`
           letter-spacing: 0px;
           font-weight: 300;
           margin-right: 61px;
+          cursor: pointer;
         }
       }
     }
@@ -70,11 +71,15 @@ const Style = styled.div`
       nav ul li {
         color: #ffffff;
         text-shadow: 0px 3px 12px #00000040;
+        &:hover {
+          color: #2ad4d9;
+        }
       }
     }
     div.right {
       svg {
         color: #cdcdcd;
+        cursor: pointer;
       }
     }
   }
