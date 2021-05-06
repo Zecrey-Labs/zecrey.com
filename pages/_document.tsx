@@ -11,10 +11,6 @@ const YSHead = () => (
     <meta name='Robots' content='all' />
     <link rel='shortcut icon' href={'/intelligent/logo.svg'} />
     <title>{META.title}</title>
-    <script
-      type='text/javascript'
-      src='https://s9.cnzz.com/z_stat.php?id=1279347593&web_id=1279347593'
-    />
   </Head>
 )
 
