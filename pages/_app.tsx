@@ -1,14 +1,13 @@
-import { ThemeProvider } from 'styled-components'
 import 'nprogress/nprogress.css'
 import 'react-typist/dist/Typist.css'
 import 'aos/dist/aos.css'
-import theme from '@/themes'
 import { useEffect } from 'react'
 import Aos from 'aos'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'antd/dist/antd.css'
 import '@/global.css'
+import GlobalFonts from '@/style/GlobalFonts'
 import { observer } from 'mobx-react-lite'
 
 Router.events.on('routeChangeStart', () => {
@@ -46,11 +45,7 @@ const App = observer(function App({ Component, pageProps }: Props) {
     return <Component {...pageProps} />
   }
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
+  return <Component {...pageProps} />
 })
 
 export default App
