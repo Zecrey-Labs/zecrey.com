@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 const logo1 = require('@/public/logo1.svg')
+import cute from '@/public/section1/cute.svg'
 
 const InputEmail = styled.input`
-  margin-top: 69px;
   display: block;
   width: 455px;
   height: 52px;
@@ -46,6 +46,40 @@ const Style = styled.div`
     text-shadow: 0px 3px 12px #00000040;
     text-transform: uppercase;
   }
+  div.email {
+    margin-top: 69px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    input {
+      transition: transform 0.2s ease-out;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 5px;
+      height: 26px;
+      z-index: -1;
+      transition: transform 0.2s;
+    }
+    &:hover {
+      input {
+        transform: translateX(-20px);
+        cursor: pointer;
+      }
+      img {
+        transform: translateX(19px);
+      }
+    }
+    &.active {
+      img {
+        display: none;
+      }
+      input {
+        transform: translateX(-20px);
+      }
+    }
+  }
   > img {
     height: 52px;
     margin-top: 141px;
@@ -55,6 +89,7 @@ const Style = styled.div`
 // @TODO: 邮箱地址发送到服务器
 export const Section1 = () => {
   const [email, setEmail] = React.useState('Send us your email address')
+  const [inputFocus, setInputFocus] = React.useState(false)
   return (
     <Style>
       <div className='bee'>New Bee Product</div>
@@ -63,14 +98,22 @@ export const Section1 = () => {
         <br />
         value for assets.
       </div>
-      <InputEmail
-        type='email'
-        value={email}
-        onChange={e => {
-          setEmail(e.target.value)
-        }}
-        onFocus={() => {}}
-      />
+      <div className={`email ${inputFocus ? 'active' : ''}`}>
+        <InputEmail
+          type='email'
+          value={email}
+          onChange={e => {
+            setEmail(e.target.value)
+          }}
+          onFocus={() => {
+            setInputFocus(true)
+          }}
+          onBlur={() => {
+            setInputFocus(false)
+          }}
+        />
+        <img src={cute} />
+      </div>
       <img src={logo1} alt='logo' />
     </Style>
   )
