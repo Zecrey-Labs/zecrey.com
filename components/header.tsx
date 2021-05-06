@@ -18,6 +18,7 @@ const Style = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 10;
   div.left {
     display: flex;
     flex-direction: row;
@@ -33,12 +34,12 @@ const Style = styled.div`
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 50px 0 34px 0;
+      padding: 36px 0 34px 0;
       ul {
         display: flex;
         flex-direction: row;
         li {
-          font: 100 26px/31px Lexend;
+          font: 400 26px/31px Lexend;
           text-align: left;
           letter-spacing: 0px;
           margin-right: 61px;

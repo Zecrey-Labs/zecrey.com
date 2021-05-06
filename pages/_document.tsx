@@ -11,15 +11,7 @@ const ZecreyHead = () => (
     <meta name='Robots' content='all' />
     <link rel='preconnect' href='https://fonts.gstatic.com' />
     <link
-      href='https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap'
-      rel='stylesheet'
-    />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap'
-      rel='stylesheet'
-    />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap'
+      href='https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700&display=swap'
       rel='stylesheet'
     />
     <link
