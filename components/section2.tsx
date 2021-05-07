@@ -10,6 +10,9 @@ import badge3 from '@/public/section2/badge3.svg'
 import badge4 from '@/public/section2/badge4.svg'
 import badge5 from '@/public/section2/badge5.svg'
 
+import { observer } from 'mobx-react-lite'
+import { useStore } from '@/store'
+
 const Style = styled.div`
   height: 2000px;
   z-index: 9;
@@ -53,9 +56,11 @@ const Style = styled.div`
   }
 `
 
-export const Section2 = () => {
+export const Section2 = observer(() => {
+  const store = useStore()
+
   return (
-    <Style>
+    <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
       <div className='content'>
         <h2>
           Keep Privacy in a Smart Contract World
@@ -90,4 +95,4 @@ export const Section2 = () => {
       </div>
     </Style>
   )
-}
+})

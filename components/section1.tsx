@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import logo1 from '@/public/logo1.svg'
 import cute from '@/public/section1/cute.svg'
 import circle from '@/public/section1/circle.svg'
+import { observer } from 'mobx-react-lite'
+import { useStore } from '@/store'
 
 const InputEmail = styled.input`
   display: block;
@@ -127,12 +129,14 @@ const Style = styled.div`
 `
 
 // @TODO: 邮箱地址发送到服务器
-export const Section1 = () => {
+export const Section1 = observer(() => {
+  const store = useStore()
+
   const [email, setEmail] = React.useState('Send us your email address')
   const [inputFocus, setInputFocus] = React.useState(false)
   const inputElement = React.useRef(null)
   return (
-    <Style>
+    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='bee'>
         Zecrey Protocol
         <img src={circle} />
@@ -165,4 +169,4 @@ export const Section1 = () => {
       <img src={logo1} alt='logo' />
     </Style>
   )
-}
+})
