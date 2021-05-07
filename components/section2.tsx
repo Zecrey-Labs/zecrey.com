@@ -19,6 +19,9 @@ const Style = styled.div`
   position: relative;
   padding: 273px 289px 179px 281px;
   div.content {
+    position: relative;
+    width: 1350px;
+    height: 800px;
     h2 {
       width: 925px;
       height: 87px;
@@ -50,6 +53,43 @@ const Style = styled.div`
         }
         &:nth-of-type(2) {
           width: 525px;
+        }
+      }
+    }
+    ul.features {
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #e4e4e4 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        width: 300px;
+        height: 186px;
+        padding: 25px 0;
+        margin: 10px 0;
+        position: absolute;
+        img {
+          /* width: 97px; */
+          height: 88px;
+          margin-bottom: 25px;
+        }
+        span {
+          text-align: left;
+          font: normal normal bold 24px/29px Lexend;
+          letter-spacing: 0px;
+          color: #8a8a8a;
+        }
+        &:nth-of-type(1) {
+          right: 0;
+          bottom: 226px;
+        }
+        &:nth-of-type(2) {
+          right: 0;
+          bottom: 0;
+        }
+        &:nth-of-type(3) {
+          bottom: 0;
+          right: 340px;
         }
       }
     }
