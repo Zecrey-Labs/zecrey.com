@@ -10,11 +10,14 @@ const Style = styled.div`
     width: 1px;
     height: 1px;
     left: 0;
+    height: 5px;
+    width: 100vw;
+    background-color: red;
     &.anchor1 {
-      top: 800px;
+      top: 1000px;
     }
     &.anchor2 {
-      top: 1500px;
+      top: 2000px;
     }
   }
 `
@@ -23,6 +26,9 @@ const Home = observer(function Home() {
   const store = useStore()
   const anchor1 = React.useRef(null)
   const anchor2 = React.useRef(null)
+
+  const [anchor1Appear, setAnchor1Appear] = React.useState(false)
+  const [anchor2Appear, setAnchor2Appear] = React.useState(false)
   React.useEffect(() => {
     if (
       'IntersectionObserver' in window &&
@@ -30,26 +36,32 @@ const Home = observer(function Home() {
       'intersectionRatio' in window.IntersectionObserverEntry.prototype
     ) {
       let observer1 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y < window.innerHeight) {
-          store.setTheme('light')
-          console.log('trigger')
+        if (entries[0].boundingClientRect.y <= window.innerHeight) {
+          setAnchor1Appear(true)
         } else {
-          console.log('trigger')
-          store.setTheme('dark')
+          setAnchor1Appear(false)
         }
       })
       observer1.observe(anchor1.current)
 
       let observer2 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y < window.innerHeight) {
-          store.setTheme('dark')
+        if (entries[0].boundingClientRect.y <= window.innerHeight) {
+          setAnchor2Appear(true)
         } else {
-          store.setTheme('light')
+          setAnchor2Appear(false)
         }
       })
       observer2.observe(anchor2.current)
     }
   }, [])
+
+  React.useEffect(() => {
+    if (anchor1Appear === true && anchor2Appear === false) {
+      store.setTheme('light')
+    } else {
+      store.setTheme('dark')
+    }
+  }, [anchor1Appear, anchor2Appear])
 
   return (
     <Style>
