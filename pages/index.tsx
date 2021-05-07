@@ -13,6 +13,7 @@ const Style = styled.div`
     height: 5px;
     width: 100vw;
     background-color: red;
+    z-index: 10;
     &.anchor1 {
       top: 1000px;
     }

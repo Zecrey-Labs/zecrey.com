@@ -33,7 +33,7 @@ const Style = styled.div`
         background-color: rgba(34, 34, 34, 0.6);
       }
       img {
-        z-index: -11;
+        z-index: 1;
         position: absolute;
         animation: background-routine 3s linear infinite;
       }
@@ -56,7 +56,7 @@ const Style = styled.div`
     }
     div.light {
       display: normal;
-      z-index: -10;
+      z-index: 8;
       min-width: 100vw;
       min-height: 100vh;
       position: fixed;

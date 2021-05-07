@@ -11,6 +11,8 @@ import badge4 from '@/public/section2/badge4.svg'
 
 const Style = styled.div`
   height: 2000px;
+  z-index: 9;
+  position: relative;
   div.keep {
     position: relative;
     width: 925px;
