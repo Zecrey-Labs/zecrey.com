@@ -26,9 +26,16 @@ const Style = styled.div`
       border-radius: 5px;
       img {
         position: absolute;
-        left: -33px;
-        bottom: 0;
-        z-index: 0;
+        &.badge1 {
+          z-index: 0;
+          left: -33px;
+          bottom: 0;
+        }
+        &.badge2 {
+          z-index: -1;
+          left: -33px;
+          bottom: 0;
+        }
       }
     }
     div.text {
@@ -98,6 +105,7 @@ export const Section2 = observer(() => {
         <h2>
           <span>Keep Privacy in a Smart Contract World</span>
           <Img className='badge1' src={'/section2/badge1.svg'} alt='' />
+          <Img className='badge2' src={'/section2/badge2.svg'} alt='' />
         </h2>
         <div className='text'>
           <p>
