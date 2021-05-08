@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
-import logo1 from '@/public/logo1.svg'
-import logo2 from '@/public/logo2.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
+import Img from './img'
 
 const Style = styled.div`
   position: sticky;
@@ -116,8 +115,8 @@ export const Header = observer(() => {
   return (
     <Style className={store.theme}>
       <div className='left'>
-        <img className='dark' src={logo1} alt='logo' />
-        <img className='light' src={logo2} alt='logo' />
+        <Img className='dark' src={'/logo1.svg'} alt='logo' />
+        <Img className='light' src={'/logo2.svg'} alt='logo' />
         <nav>
           <ul>
             <li>Technology</li>

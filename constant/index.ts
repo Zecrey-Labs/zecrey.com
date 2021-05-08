@@ -3,5 +3,5 @@ export const META = {
   description: 'Zecrey',
   companyFullName: '数浪',
   title: 'Zecrey',
-  basePath: '/zecrey'
+  basePath: process.env.BASEPATH ? `/${process.env.BASEPATH}` : ''
 }

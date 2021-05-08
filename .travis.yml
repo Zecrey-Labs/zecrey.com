@@ -4,6 +4,9 @@ node_js:
 cache:
   directories:
     - node_modules # Cache the node_modules folder for quicker build times
+env:
+  global:
+    - BASEPATH: 'zecrey'
 script:
   - yarn build # Runs next build
   - yarn export # Runs next export and generates the out directory

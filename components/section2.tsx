@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import icon1 from '@/public/section2/icon1.svg'
-import icon2 from '@/public/section2/icon2.svg'
-import icon3 from '@/public/section2/icon3.svg'
-import badge5 from '@/public/section2/badge5.svg'
-
+import Img from './img'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 
@@ -99,7 +95,7 @@ export const Section2 = observer(() => {
       <div className='content'>
         <h2>
           Keep Privacy in a Smart Contract World
-          <img src={badge5} alt='' />
+          <Img src={'/section2/badge5.svg'} alt='' />
         </h2>
         <div className='text'>
           <p>
@@ -115,15 +111,15 @@ export const Section2 = observer(() => {
         </div>
         <ul className='features'>
           <li>
-            <img src={icon1} alt='' />
+            <Img src={'/section2/icon1.svg'} alt='' />
             <span>Public Scenes</span>
           </li>
           <li>
-            <img src={icon2} alt='' />
+            <Img src={'/section2/icon2.svg'} alt='' />
             <span>Inefficient</span>
           </li>
           <li>
-            <img src={icon3} alt='' />
+            <Img src={'/section2/icon3.svg'} alt='' />
             <span>High Cost</span>
           </li>
         </ul>

@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
-import cute from '@/public/section1/cute.svg'
-import circle from '@/public/section1/circle.svg'
-import logo1 from '@/public/logo1.svg'
+import Img from './img'
 
 const InputEmail = styled.input`
   display: block;
@@ -139,7 +137,7 @@ export const Section1 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='bee'>
         Zecrey Protocol
-        <img src={circle} />
+        <Img src={'/section1/circle.svg'} />
       </div>
       <div className='banner'>
         Brings privacy
@@ -158,7 +156,7 @@ export const Section1 = observer(() => {
             inputElement.current.select()
           }}
         />
-        <img src={cute} />
+        <Img src={'/section1/cute.svg'} />
         <Button
           onClick={() => {
             setInputFocus(false)
@@ -166,7 +164,7 @@ export const Section1 = observer(() => {
           Send
         </Button>
       </div>
-      <img src={logo1} alt='logo' />
+      <Img src={'/logo1.svg'} alt='logo' />
     </Style>
   )
 })
