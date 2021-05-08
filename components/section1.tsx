@@ -1,9 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-const logo1 = require('@/public/logo1.svg')
 
-const cute = require('@/public/section1/cute.svg')
-const circle = require('@/public/section1/circle.svg')
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 
@@ -140,7 +137,7 @@ export const Section1 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='bee'>
         Zecrey Protocol
-        <img src={circle} />
+        <img src={require('@/public/section1/circle.svg')} />
       </div>
       <div className='banner'>
         Brings privacy
@@ -159,7 +156,7 @@ export const Section1 = observer(() => {
             inputElement.current.select()
           }}
         />
-        <img src={cute} />
+        <img src={require('@/public/section1/cute.svg')} />
         <Button
           onClick={() => {
             setInputFocus(false)
@@ -167,7 +164,7 @@ export const Section1 = observer(() => {
           Send
         </Button>
       </div>
-      <img src={logo1} alt='logo' />
+      <img src={require('@/public/logo1.svg')} alt='logo' />
     </Style>
   )
 })
