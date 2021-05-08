@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
-const blue = require('@/public/section1/blue.png')
-const pink = require('@/public/section1/pink.png')
+import blue from '@/public/section1/blue.png'
+import pink from '@/public/section1/pink.png'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   z-index: -1;

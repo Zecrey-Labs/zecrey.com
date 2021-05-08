@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-const icon1 = require('@/public/section2/icon1.svg')
-const icon2 = require('@/public/section2/icon2.svg')
-const icon3 = require('@/public/section2/icon3.svg')
-const badge5 = require('@/public/section2/badge5.svg')
+import icon1 from '@/public/section2/icon1.svg'
+import icon2 from '@/public/section2/icon2.svg'
+import icon3 from '@/public/section2/icon3.svg'
+import badge5 from '@/public/section2/badge5.svg'
 
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'

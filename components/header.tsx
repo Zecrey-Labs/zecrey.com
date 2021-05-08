@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
-const logo1 = require('@/public/logo1.svg')
-const logo2 = require('@/public/logo2.svg')
+import logo1 from '@/public/logo1.svg'
+import logo2 from '@/public/logo2.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
