@@ -22,11 +22,13 @@ const Style = styled.div`
       color: #383838;
       padding: 23px 0 16px 0;
       position: relative;
+      background: #e4e4e4 0% 0% no-repeat padding-box;
+      border-radius: 5px;
       img {
         position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
+        left: -33px;
+        bottom: 0;
+        z-index: 0;
       }
     }
     div.text {
@@ -94,8 +96,8 @@ export const Section2 = observer(() => {
     <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
       <div className='content'>
         <h2>
-          Keep Privacy in a Smart Contract World
-          <Img src={'/section2/badge5.svg'} alt='' />
+          <span>Keep Privacy in a Smart Contract World</span>
+          <Img className='badge1' src={'/section2/badge1.svg'} alt='' />
         </h2>
         <div className='text'>
           <p>
