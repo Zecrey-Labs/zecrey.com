@@ -61,14 +61,6 @@ const Style = styled.div`
     background-color: rgba(47, 47, 47, 0.7);
     box-shadow: 0px 3px 12px #00000040;
     div.left {
-      img {
-        &.dark {
-          display: block;
-        }
-        &.light {
-          display: none;
-        }
-      }
       nav ul li {
         color: #ffffff;
         text-shadow: 0px 3px 12px #00000040;
@@ -88,14 +80,6 @@ const Style = styled.div`
     background-color: rgba(239, 239, 239, 0.7);
     box-shadow: 0px 3px 12px #00000040;
     div.left {
-      img {
-        &.dark {
-          display: none;
-        }
-        &.light {
-          display: block;
-        }
-      }
       nav ul li {
         color: #222222;
         text-shadow: 0px 3px 12px #00000040;
@@ -115,8 +99,11 @@ export const Header = observer(() => {
   return (
     <Style className={store.theme}>
       <div className='left'>
-        <Img className='dark' src={'/logo1.svg'} alt='logo' />
-        <Img className='light' src={'/logo2.svg'} alt='logo' />
+        {store.theme ? (
+          <Img className='dark' src={'/logo1.svg'} alt='logo' />
+        ) : (
+          <Img className='light' src={'/logo2.svg'} alt='logo' />
+        )}
         <nav>
           <ul>
             <li>Technology</li>
