@@ -14,7 +14,6 @@ module.exports = withPlugins(
   ],
   {
     basePath: '/zecrey',
-    assetPrefix: '/zecrey/',
-    env
+    assetPrefix: '/zecrey/'
   }
 )

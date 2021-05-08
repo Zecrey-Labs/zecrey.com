@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo1 from '@/public/logo1.svg'
-import cute from '@/public/section1/cute.svg'
-import circle from '@/public/section1/circle.svg'
+const logo1 = require('@/public/logo1.svg')
+
+const cute = require('@/public/section1/cute.svg')
+const circle = require('@/public/section1/circle.svg')
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 
