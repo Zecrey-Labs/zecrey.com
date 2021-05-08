@@ -77,17 +77,17 @@ const Style = styled.div`
           text-align: left;
           font: normal normal bold 24px/29px Lexend;
           letter-spacing: 0px;
-          color: #8a8a8a;
+          color: rgba(150, 150, 150);
         }
         &:nth-of-type(1) {
           right: 0;
           bottom: 226px;
         }
-        &:nth-of-type(2) {
+        &:nth-of-type(3) {
           right: 0;
           bottom: 0;
         }
-        &:nth-of-type(3) {
+        &:nth-of-type(2) {
           bottom: 0;
           right: 340px;
         }
