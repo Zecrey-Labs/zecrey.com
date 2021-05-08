@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
-import blue from '@/public/section1/blue.png'
-import pink from '@/public/section1/pink.png'
+import { META } from '@/constant'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   z-index: -1;
@@ -55,8 +54,8 @@ export const Background = observer(() => {
   return (
     <Style theme={store.theme}>
       <div className='dark'></div>
-      <img src={blue} alt='' />
-      <img src={pink} alt='' />
+      <img src={`${META.basePath}/section1/blue.png`} alt='' />
+      <img src={`${META.basePath}/section1/pink.png`} alt='' />
     </Style>
   )
 })

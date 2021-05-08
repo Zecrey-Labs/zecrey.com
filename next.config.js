@@ -9,23 +9,23 @@ module.exports = withPlugins([
     webpack(config, options) {
       return config
     }
-  })
-  // [
-  //   optimizedImages,
-  //   {
-  //     mozjpeg: {
-  //       quality: 80
-  //     },
-  //     pngquant: {
-  //       speed: 3,
-  //       strip: true,
-  //       verbose: true
-  //     },
-  //     imagesPublicPath: '/zecrey/_next/static/images/'
-  //   }
-  // ],
-  // {
-  //   basePath: '/zecrey',
-  //   assetPrefix: '/zecrey/'
-  // }
+  }),
+  [
+    optimizedImages,
+    {
+      mozjpeg: {
+        quality: 80
+      },
+      pngquant: {
+        speed: 3,
+        strip: true,
+        verbose: true
+      },
+      imagesPublicPath: '/zecrey/_next/static/images/'
+    }
+  ],
+  {
+    basePath: '/zecrey',
+    assetPrefix: '/zecrey/'
+  }
 ])
