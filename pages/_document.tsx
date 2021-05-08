@@ -19,7 +19,6 @@ const ZecreyHead = () => (
       href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap'
       rel='stylesheet'
     />
-    <title>{META.title}</title>
   </Head>
 )
 

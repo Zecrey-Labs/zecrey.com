@@ -9,6 +9,8 @@ import 'antd/dist/antd.css'
 import '@/global.css'
 import { observer } from 'mobx-react-lite'
 import { Provider } from '@/store'
+import Head from 'next/head'
+import { META } from '@/constant'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -51,6 +53,9 @@ const App = observer(function App({ Component, pageProps }: Props) {
 const AppWithStore = ({ Component, pageProps }) => {
   return (
     <Provider>
+      <Head>
+        <title>{META.title}</title>
+      </Head>
       <App Component={Component} pageProps={pageProps} />
     </Provider>
   )
