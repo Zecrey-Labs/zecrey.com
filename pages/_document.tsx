@@ -9,6 +9,7 @@ const ZecreyHead = () => (
     <meta name='copyright' content='LambdaCal, Inc' />
     <meta name='author' content={META.companyFullName} />
     <meta name='Robots' content='all' />
+    <link rel='shortcut icon' href='/favicon.svg'></link>
     <link rel='preconnect' href='https://fonts.gstatic.com' />
     <link
       href='https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700&display=swap'
