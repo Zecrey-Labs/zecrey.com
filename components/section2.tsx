@@ -46,6 +46,29 @@ const Style = styled.div`
           right: -18px;
           bottom: 0;
         }
+        &.circle1 {
+          z-index: -1;
+          top: 0;
+          transform: translateY(-50%);
+          right: 62px;
+        }
+        &.circle2 {
+          z-index: -1;
+          bottom: 0;
+          transform: translateY(50%);
+          left: 62px;
+        }
+        &.halfcircle1 {
+          z-index: 1;
+          top: 0;
+          right: 62px;
+        }
+        &.halfcircle2 {
+          z-index: 1;
+          bottom: 0;
+          left: 62px;
+          transform: rotateX(180deg);
+        }
       }
     }
     div.text {
@@ -118,6 +141,18 @@ export const Section2 = observer(() => {
           <Img className='badge2' src={'/section2/badge2.svg'} alt='' />
           <Img className='badge3' src={'/section2/badge3.svg'} alt='' />
           <Img className='badge4' src={'/section2/badge4.svg'} alt='' />
+          <Img className='circle1' src={'/section2/circle.svg'} alt='' />
+          <Img className='circle2' src={'/section2/circle.svg'} alt='' />
+          <Img
+            className='halfcircle1'
+            src={'/section2/halfcircle.svg'}
+            alt=''
+          />
+          <Img
+            className='halfcircle2'
+            src={'/section2/halfcircle.svg'}
+            alt=''
+          />
         </h2>
         <div className='text'>
           <p>
