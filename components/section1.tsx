@@ -126,7 +126,7 @@ const Style = styled.div`
   }
 `
 
-// @TODO: 邮箱地址发送到服务器
+// @TODO: 邮箱地址发送到服务器，对非法邮箱报错
 export const Section1 = observer(() => {
   const store = useStore()
 
