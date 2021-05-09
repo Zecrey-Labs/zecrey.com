@@ -1,7 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
-import { Header, Section1, Section2, Section3, Background } from '@/components'
+import {
+  Header,
+  Section1,
+  Section2,
+  Section3,
+  Section4,
+  Background
+} from '@/components'
 import { useStore } from '@/store'
 
 const Style = styled.div`
@@ -71,6 +78,7 @@ const Home = observer(function Home() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
       <div ref={anchor1} className='anchor anchor1' />
       <div ref={anchor2} className='anchor anchor2' />
     </Style>
