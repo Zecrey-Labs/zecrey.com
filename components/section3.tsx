@@ -7,7 +7,7 @@ import Img from './img'
 const Style = styled.div`
   width: 1288px;
   margin: 0 auto;
-  margin-top: 48px;
+  padding-bottom: 122px;
   h2 {
     margin-bottom: 162px;
     text-align: center;

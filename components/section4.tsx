@@ -5,38 +5,41 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding-top: 276px;
-  padding-bottom: 243px;
-  width: 1680px;
-  div.block {
-    width: 360px;
-    div.image {
-      height: 100px;
-      position: relative;
-      img {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+  background-color: rgb(34, 34, 34);
+  > div {
+    width: 1680px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 203px;
+    padding-bottom: 243px;
+    div.block {
+      width: 360px;
+      div.image {
+        height: 100px;
+        position: relative;
+        img {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
       }
-    }
-    h3 {
-      text-align: left;
-      font: normal normal bold 38px/80px Lexend;
-      letter-spacing: 0px;
-      color: #e4e4e4;
-      text-shadow: 0px 3px 12px #00000040;
-      opacity: 1;
-    }
-    p {
-      text-align: left;
-      font: normal normal normal 24px/32px IBM Plex Sans;
-      letter-spacing: 0px;
-      color: #e4e4e4;
-      opacity: 1;
+      h3 {
+        text-align: left;
+        font: normal normal bold 38px/80px Lexend;
+        letter-spacing: 0px;
+        color: #e4e4e4;
+        text-shadow: 0px 3px 12px #00000040;
+        opacity: 1;
+      }
+      p {
+        text-align: left;
+        font: normal normal normal 24px/32px IBM Plex Sans;
+        letter-spacing: 0px;
+        color: #e4e4e4;
+        opacity: 1;
+      }
     }
   }
 `
@@ -71,16 +74,18 @@ export const Section4 = observer(() => {
   const store = useStore()
 
   return (
-    <Style>
-      {blocks.map(block => (
-        <div className='block'>
-          <div className='image'>
-            <Img src={block.image} />
+    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+      <div>
+        {blocks.map(block => (
+          <div className='block'>
+            <div className='image'>
+              <Img src={block.image} />
+            </div>
+            <h3>{block.title}</h3>
+            <p>{block.text}</p>
           </div>
-          <h3>{block.title}</h3>
-          <p>{block.text}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </Style>
   )
 })
