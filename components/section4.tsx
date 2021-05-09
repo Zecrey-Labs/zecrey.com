@@ -26,7 +26,8 @@ const Style = styled.div`
       }
       h3 {
         text-align: left;
-        font: normal normal bold 38px/80px Lexend;
+        font: normal normal bold 38px/48px Lexend;
+        margin-bottom: 30px;
         letter-spacing: 0px;
         color: #e4e4e4;
         text-shadow: 0px 3px 12px #00000040;

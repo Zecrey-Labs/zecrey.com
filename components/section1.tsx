@@ -60,11 +60,12 @@ const Style = styled.div`
   }
   h2 {
     margin-top: 128px;
-    padding: 9px 69px 9px 51px;
     background: #2ad4d9 0% 0% no-repeat padding-box;
+    height: 50px;
+    width: 383px;
+    font: normal normal bold 32px/50px Lexend;
     border-radius: 5px;
-    text-align: left;
-    font: normal normal bold 32px/38px Lexend;
+    text-align: center;
     letter-spacing: 0px;
     color: #222222;
     position: relative;

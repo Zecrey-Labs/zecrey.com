@@ -11,7 +11,7 @@ const Style = styled.div`
   h2 {
     margin-bottom: 162px;
     text-align: center;
-    font: normal normal bold 80px/120px Lexend;
+    font: normal normal bold 80px/100px Lexend;
     letter-spacing: 0px;
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
@@ -25,7 +25,7 @@ const Style = styled.div`
       width: 443px;
       h3 {
         text-align: left;
-        font: normal normal bold 42px/80px Lexend;
+        font: normal normal bold 42px/53px Lexend;
         letter-spacing: 0px;
         color: #e4e4e4;
         text-shadow: 0px 3px 12px #00000040;
@@ -59,7 +59,7 @@ const Style = styled.div`
         height: 582px;
         background: rgba(56, 56, 56, 0.1);
         border-radius: 20px;
-        backdrop-filter: blur(2px) brightness(107%);
+        backdrop-filter: blur(3px) brightness(110%);
       }
       img.image1 {
         position: absolute;
@@ -84,7 +84,7 @@ const Style = styled.div`
         width: 248px;
         height: 279px;
         background: rgba(56, 56, 56, 0.1);
-        backdrop-filter: blur(2px) brightness(107%);
+        backdrop-filter: blur(3px) brightness(110%);
         border-radius: 20px;
         padding: 75px 68px;
       }
