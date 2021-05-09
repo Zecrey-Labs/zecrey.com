@@ -64,6 +64,7 @@ const Style = styled.div`
       nav ul li {
         color: #ffffff;
         text-shadow: 0px 3px 12px #00000040;
+        transition: color 0.3s ease-out;
         &:hover {
           color: #2ad4d9;
         }
@@ -88,6 +89,10 @@ const Style = styled.div`
     div.right {
       svg {
         color: #383838;
+        transition: color 0.3s ease-out;
+        &:hover {
+          color: #2ad4d9;
+        }
       }
     }
   }
