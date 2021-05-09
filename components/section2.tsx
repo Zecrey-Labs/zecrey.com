@@ -7,7 +7,7 @@ import { useStore } from '@/store'
 const Style = styled.div`
   z-index: 9;
   position: relative;
-  padding: 273px 289px 225px 281px;
+  padding: 0px 289px 225px 281px;
   div.content {
     position: relative;
     width: 1330px;

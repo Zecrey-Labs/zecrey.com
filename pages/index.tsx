@@ -15,7 +15,7 @@ const Style = styled.div`
     background-color: red;
     z-index: 10;
     &.anchor1 {
-      top: 1000px;
+      top: calc(100vh + 440px);
     }
     &.anchor2 {
       top: 2500px;
