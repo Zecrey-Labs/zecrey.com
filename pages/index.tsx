@@ -15,13 +15,9 @@ import { useStore } from '@/store'
 const Style = styled.div`
   div.anchor {
     position: absolute;
-    width: 1px;
     height: 1px;
     left: 0;
-    height: 5px;
     width: 100vw;
-    background-color: red;
-    z-index: 10;
     &.anchor1 {
       top: calc(100vh + 440px);
     }
