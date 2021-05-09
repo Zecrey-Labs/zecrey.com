@@ -5,11 +5,12 @@ import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 
 const Style = styled.div`
-  z-index: 9;
+  z-index: 1;
   position: relative;
-  padding: 0px 289px 225px 281px;
   div.content {
+    padding: 0px 289px 225px 281px;
     position: relative;
+    box-sizing: content-box;
     width: 1330px;
     height: 554px;
     h2 {
@@ -89,6 +90,9 @@ const Style = styled.div`
       }
     }
     ul.features {
+      position: absolute;
+      right: 289px;
+      bottom: 225px;
       li {
         display: flex;
         flex-direction: column;
@@ -124,6 +128,19 @@ const Style = styled.div`
           right: 340px;
         }
       }
+    }
+  }
+  img.big {
+    position: absolute;
+    &:nth-of-type(1) {
+      left: 50px;
+      bottom: 0;
+      width: 661px;
+    }
+    &:nth-of-type(2) {
+      top: -208px;
+      width: 296px;
+      right: 0;
     }
   }
 `
@@ -180,6 +197,8 @@ export const Section2 = observer(() => {
           </li>
         </ul>
       </div>
+      <Img className='big' src='/section2/bigimage1.svg' />
+      <Img className='big' src='/section2/bigimage2.svg' />
     </Style>
   )
 })
