@@ -102,6 +102,11 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 1330px) {
+    div.right {
+      display: none;
+    }
+  }
 `
 
 export const Header = observer(() => {

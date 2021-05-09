@@ -92,7 +92,6 @@ const Style = styled.div`
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
-      padding-left: 36px;
       div.block {
         position: relative;
       }
