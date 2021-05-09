@@ -83,10 +83,10 @@ const Style = styled.div`
         z-index: 2;
         width: 248px;
         height: 279px;
-        background: rgba(56, 56, 56, 0.5);
+        background: rgba(56, 56, 56, 0.1);
+        backdrop-filter: blur(2px) brightness(107%);
         border-radius: 20px;
         padding: 75px 68px;
-        backdrop-filter: blur(5px);
       }
     }
   }
