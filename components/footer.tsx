@@ -74,9 +74,9 @@ const Style = styled.div`
         }
       }
       div.column2 {
-        margin-top: 38px;
+        margin-top: 31px;
         text-align: right;
-        font: normal normal normal 20px/24px Lexend;
+        font: normal normal normal 20px/27px Leelawadee UI;
         letter-spacing: 0px;
         color: #e4e4e4;
       }

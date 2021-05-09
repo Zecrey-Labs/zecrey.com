@@ -197,3 +197,11 @@ body::-webkit-scrollbar-thumb {
 body > a:first-of-type {
   display: none;
 }
+
+@font-face {
+  font-family: 'Leelawadee UI';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Leelawadee UI'), url(/fonts/LeelawUI.ttf) format('truetype');
+}
