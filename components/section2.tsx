@@ -5,14 +5,13 @@ import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 
 const Style = styled.div`
-  height: 2000px;
   z-index: 9;
   position: relative;
-  padding: 273px 289px 179px 281px;
+  padding: 273px 289px 225px 281px;
   div.content {
     position: relative;
-    width: 1350px;
-    height: 800px;
+    width: 1330px;
+    height: 554px;
     h2 {
       width: 925px;
       height: 87px;
@@ -72,7 +71,7 @@ const Style = styled.div`
       }
     }
     div.text {
-      padding-left: 164px;
+      padding-left: 133px;
       padding-top: 34px;
       p {
         text-align: left;
