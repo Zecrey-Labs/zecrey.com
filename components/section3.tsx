@@ -5,7 +5,9 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  width: 1288px;
+  @media (min-width: 1225px) {
+    width: 1225px;
+  }
   margin: 0 auto;
   padding-bottom: 122px;
   h2 {
