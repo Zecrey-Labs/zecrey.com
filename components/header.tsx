@@ -18,6 +18,8 @@ const Style = styled.div`
   flex-direction: row;
   justify-content: space-between;
   z-index: 10;
+  backdrop-filter: blur(2px);
+  transition: background-color 0.3s ease-out;
   div.left {
     display: flex;
     flex-direction: row;
@@ -104,7 +106,7 @@ export const Header = observer(() => {
   return (
     <Style className={store.theme}>
       <div className='left'>
-        {store.theme ? (
+        {store.theme === 'dark' ? (
           <Img className='dark' src={'/logo1.svg'} alt='logo' />
         ) : (
           <Img className='light' src={'/logo2.svg'} alt='logo' />
