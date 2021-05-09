@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
+import { validateEmail } from '@/utils'
 
 const InputEmail = styled.input`
   display: block;
@@ -46,7 +47,18 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  div.bee {
+  div.message {
+    position: fixed;
+    width: 100%;
+    top: 110px;
+    z-index: 100;
+    font: bold 36px/70px Lexend;
+    text-align: center;
+    box-shadow: 0 0.3rem 1.2rem rgb(0 0 0 / 25%);
+    color: #383838;
+    background-color: #2ad4d9;
+  }
+  h2 {
     margin-top: 128px;
     padding: 9px 69px 9px 51px;
     background: #2ad4d9 0% 0% no-repeat padding-box;
@@ -131,20 +143,35 @@ export const Section1 = observer(() => {
   const store = useStore()
 
   const [email, setEmail] = React.useState('Send us your email address')
-  const [inputFocus, setInputFocus] = React.useState(false)
+  const [active, setActive] = React.useState(false)
+  const [message, setMessage] = React.useState(null)
+
+  React.useEffect(() => {
+    let timeoutID
+    if (message) {
+      timeoutID = setTimeout(() => {
+        setMessage(null)
+      }, 1000)
+    }
+    return () => {
+      timeoutID && clearTimeout(timeoutID)
+    }
+  }, [message])
+
   const inputElement = React.useRef(null)
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
-      <div className='bee'>
+      {message && <div className='message'>{message}</div>}
+      <h2>
         Zecrey Protocol
         <Img src={'/section1/circle.svg'} />
-      </div>
+      </h2>
       <div className='banner'>
         Brings privacy
         <br />
         value for assets.
       </div>
-      <div className={`email ${inputFocus ? 'active' : ''}`}>
+      <div className={`email ${active ? 'active' : ''}`}>
         <InputEmail
           ref={inputElement}
           value={email}
@@ -152,14 +179,19 @@ export const Section1 = observer(() => {
             setEmail(e.target.value)
           }}
           onFocus={() => {
-            setInputFocus(true)
+            setActive(true)
             inputElement.current.select()
           }}
         />
         <Img src={'/section1/cute.svg'} />
         <Button
           onClick={() => {
-            setInputFocus(false)
+            if (validateEmail(email)) {
+              setActive(false)
+              setMessage('Send Successfully')
+            } else {
+              setMessage('Invalid Email')
+            }
           }}>
           Send
         </Button>
