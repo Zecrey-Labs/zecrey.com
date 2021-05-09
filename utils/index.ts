@@ -1,4 +1,5 @@
 export * from './hooks'
+export { default as px2vw } from './px2vw'
 
 export function hex2Rgba(hex, alpha) {
   const r = parseInt(hex.substring(1, 3), 16)
