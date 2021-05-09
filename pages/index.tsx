@@ -18,7 +18,7 @@ const Style = styled.div`
       top: calc(100vh + 440px);
     }
     &.anchor2 {
-      top: 2500px;
+      top: 2468px;
     }
   }
 `
