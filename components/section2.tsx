@@ -7,12 +7,17 @@ import { useStore } from '@/store'
 const Style = styled.div`
   z-index: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 38px;
+  padding-right: 38px;
   div.content {
-    padding: 0px 289px 225px 281px;
+    padding-bottom: 225px;
     position: relative;
-    box-sizing: content-box;
     width: 1330px;
     height: 554px;
+    box-sizing: content-box;
     h2 {
       width: 925px;
       height: 87px;
@@ -91,8 +96,8 @@ const Style = styled.div`
     }
     ul.features {
       position: absolute;
-      right: 289px;
-      bottom: 225px;
+      right: 0;
+      bottom: 208px;
       li {
         display: flex;
         flex-direction: column;

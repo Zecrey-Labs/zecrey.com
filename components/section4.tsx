@@ -3,18 +3,21 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
+import { device } from '@/utils'
 
 const Style = styled.div`
   background-color: rgb(34, 34, 34);
   > div {
-    width: 1680px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
     padding-top: 203px;
     div.block {
       width: 360px;
+      box-sizing: content-box;
+      padding: 10px;
       div.image {
         height: 100px;
         position: relative;
