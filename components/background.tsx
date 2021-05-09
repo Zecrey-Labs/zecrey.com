@@ -13,15 +13,24 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   background-color: ${({ theme }) =>
     theme === 'dark' ? 'rgba(34, 34, 34, 0.6)' : 'rgb(241, 241, 241)'};
 
-  @keyframes background-routine {
+  @keyframes bg1 {
     0% {
-      transform: translate(0);
+      width: 109.6vw;
+      height: 128vh;
+      top: -8vh;
+      left: -2.2vw;
     }
     50% {
-      transform: translateY(5px);
+      width: 100vw;
+      height: 117vh;
+      top: -36vh;
+      left: 0;
     }
     to {
-      transform: translate(0);
+      width: 109.6vw;
+      height: 128vh;
+      top: -8vh;
+      left: -2.2vw;
     }
   }
 
@@ -35,7 +44,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   img {
     z-index: -1;
     position: absolute;
-    animation: background-routine 3s linear infinite;
+    animation: bg1 20s cubic-bezier(0.55, 1.375, 0.46, -0.48) infinite;
     display: ${({ theme }) => (theme === 'dark' ? 'normal' : 'none')};
   }
   img:nth-of-type(1) {
