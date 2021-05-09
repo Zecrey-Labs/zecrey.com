@@ -36,6 +36,16 @@ const Style = styled.div`
           left: -33px;
           bottom: 0;
         }
+        &.badge3 {
+          z-index: -1;
+          right: -18px;
+          bottom: 0;
+        }
+        &.badge4 {
+          z-index: 1;
+          right: -18px;
+          bottom: 0;
+        }
       }
     }
     div.text {
@@ -106,6 +116,8 @@ export const Section2 = observer(() => {
           <span>Keep Privacy in a Smart Contract World</span>
           <Img className='badge1' src={'/section2/badge1.svg'} alt='' />
           <Img className='badge2' src={'/section2/badge2.svg'} alt='' />
+          <Img className='badge3' src={'/section2/badge3.svg'} alt='' />
+          <Img className='badge4' src={'/section2/badge4.svg'} alt='' />
         </h2>
         <div className='text'>
           <p>
