@@ -20,6 +20,7 @@ const Style = styled.div`
   z-index: 10;
   backdrop-filter: blur(2px);
   transition: background-color 0.3s ease-out;
+  box-shadow: 0px 3px 12px #00000040;
   div.left {
     display: flex;
     flex-direction: row;
@@ -45,6 +46,8 @@ const Style = styled.div`
           letter-spacing: 0px;
           margin-right: 61px;
           cursor: pointer;
+          transition: color 0.3s ease-out;
+          text-shadow: 0px 3px 12px #00000040;
         }
       }
     }
@@ -57,16 +60,15 @@ const Style = styled.div`
     margin-right: 25px;
     svg {
       margin-right: 25px;
+      transition: color 0.3s ease-out;
+      cursor: pointer;
     }
   }
   &.dark {
     background-color: rgba(47, 47, 47, 0.7);
-    box-shadow: 0px 3px 12px #00000040;
     div.left {
       nav ul li {
         color: #ffffff;
-        text-shadow: 0px 3px 12px #00000040;
-        transition: color 0.3s ease-out;
         &:hover {
           color: #2ad4d9;
         }
@@ -75,25 +77,27 @@ const Style = styled.div`
     div.right {
       svg {
         color: #cdcdcd;
-        cursor: pointer;
+        &:hover {
+          color: rgb(37, 206, 212);
+        }
       }
     }
   }
   &.light {
     background-color: rgba(239, 239, 239, 0.7);
-    box-shadow: 0px 3px 12px #00000040;
     div.left {
       nav ul li {
         color: #222222;
-        text-shadow: 0px 3px 12px #00000040;
+        &:hover {
+          color: #00acb1;
+        }
       }
     }
     div.right {
       svg {
         color: #383838;
-        transition: color 0.3s ease-out;
         &:hover {
-          color: #2ad4d9;
+          color: rgb(0, 162, 168);
         }
       }
     }
