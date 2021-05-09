@@ -7,7 +7,8 @@ import {
   Section2,
   Section3,
   Section4,
-  Background
+  Background,
+  Footer
 } from '@/components'
 import { useStore } from '@/store'
 
@@ -79,6 +80,7 @@ const Home = observer(function Home() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Footer />
       <div ref={anchor1} className='anchor anchor1' />
       <div ref={anchor2} className='anchor anchor2' />
     </Style>
