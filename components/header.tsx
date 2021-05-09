@@ -9,8 +9,8 @@ library.add(fab)
 import Img from './img'
 
 const Style = styled.div`
+  width: 100vw;
   position: sticky;
-  width: 100%;
   top: 0;
   left: 0;
   height: 110px;

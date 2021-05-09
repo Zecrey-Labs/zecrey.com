@@ -10,7 +10,7 @@ library.add(fab)
 
 const Style = styled.div`
   position: relative;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   overflow: hidden;
   > div.back {

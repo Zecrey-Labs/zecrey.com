@@ -7,13 +7,23 @@ import { device } from '@/utils'
 
 const Style = styled.div`
   background-color: rgb(34, 34, 34);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 42px;
   > div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding-top: 203px;
+    justify-content: center;
+    padding: 203px 20px 0 20px;
+
+    @media (min-width: 1260px) and (max-width: 1650px) {
+      width: 760px;
+      box-sizing: content-box;
+    }
+
     div.block {
       width: 360px;
       box-sizing: content-box;
