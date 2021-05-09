@@ -77,7 +77,7 @@ export const Section4 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div>
         {blocks.map(block => (
-          <div className='block'>
+          <div className='block' key={block.title}>
             <div className='image'>
               <Img src={block.image} />
             </div>
