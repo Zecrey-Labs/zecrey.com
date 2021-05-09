@@ -27,7 +27,8 @@ const Style = styled.div`
     top: 203px;
   }
   > div {
-    width: 1519px;
+    max-width: 1519px;
+    padding: 0 10px;
     margin: 0 auto;
     padding-top: 334px;
     div.row1 {
