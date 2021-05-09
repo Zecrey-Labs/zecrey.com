@@ -5,10 +5,8 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  @media (min-width: 1225px) {
-    width: 1225px;
-  }
   margin: 0 auto;
+  padding: 0 30px;
   padding-bottom: 122px;
   h2 {
     margin-bottom: 162px;
@@ -20,36 +18,32 @@ const Style = styled.div`
     opacity: 1;
   }
   div.content {
-    display: flex;
-    flex-direction: column;
     position: relative;
-    div.text {
-      width: 443px;
-      h3 {
-        text-align: left;
-        font: normal normal bold 42px/53px Lexend;
-        letter-spacing: 0px;
-        color: #e4e4e4;
-        text-shadow: 0px 3px 12px #00000040;
-        opacity: 1;
-        margin-bottom: 30px;
-      }
-      p {
-        text-align: left;
-        font: normal normal normal 24px/32px IBM Plex Sans;
-        letter-spacing: 0px;
-        color: #e4e4e4;
-        opacity: 1;
-      }
-      &:nth-of-type(2) {
-        align-self: flex-end;
+    div.textList {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      div.text {
+        width: 443px;
+        h3 {
+          text-align: left;
+          font: normal normal bold 42px/53px Lexend;
+          letter-spacing: 0px;
+          color: #e4e4e4;
+          text-shadow: 0px 3px 12px #00000040;
+          opacity: 1;
+          margin-bottom: 30px;
+        }
+        p {
+          text-align: left;
+          font: normal normal normal 24px/32px IBM Plex Sans;
+          letter-spacing: 0px;
+          color: #e4e4e4;
+          opacity: 1;
+        }
       }
     }
     div.block {
-      position: absolute;
-      left: calc(50% - 130px);
-      top: 0;
-      z-index: 1;
       display: flex;
       flex-direction: column;
       width: 226px;
@@ -92,6 +86,42 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 1347px) {
+    div.content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 36px;
+      div.block {
+        position: relative;
+      }
+      div.textList {
+        div.text {
+          margin: 20px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1348px) {
+    width: 1288px;
+    box-sizing: content-box;
+    div.content {
+      div.block {
+        position: absolute;
+        left: calc(50% - 130px);
+        top: 0;
+        z-index: 1;
+      }
+      div.textList {
+        div.text {
+          &:nth-of-type(2) {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
 `
 
 export const Section3 = observer(() => {
@@ -101,32 +131,34 @@ export const Section3 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <h2>What Zecrey special</h2>
       <div className='content'>
-        <div className='text'>
-          <h3>Confidential Assets</h3>
-          <p>
-            Make account balance and transaction amount confidential. Nobody
-            will know your balance have except yourself.
-          </p>
-        </div>
-        <div className='text'>
-          <h3>Anonymous Identity</h3>
-          <p>
-            Conceal the relationship between sender and receiver and make
-            yourself anonymous in the blockchain network.
-          </p>
-        </div>
-        <div className='text'>
-          <h3>Privacy Bridges</h3>
-          <p>
-            Bridge different blockchains assets that can make them interact with
-            each other in a private way.
-          </p>
-        </div>
         <div className='block'>
           <Img className='image1' src={'/section3/image1.svg'} alt='' />
           <Img className='image2' src={'/section3/image2.svg'} alt='' />
           <div className='bg1'></div>
           <Img className='image3' src={'/section3/image3.svg'} alt='' />
+        </div>
+        <div className='textList'>
+          <div className='text'>
+            <h3>Confidential Assets</h3>
+            <p>
+              Make account balance and transaction amount confidential. Nobody
+              will know your balance have except yourself.
+            </p>
+          </div>
+          <div className='text'>
+            <h3>Anonymous Identity</h3>
+            <p>
+              Conceal the relationship between sender and receiver and make
+              yourself anonymous in the blockchain network.
+            </p>
+          </div>
+          <div className='text'>
+            <h3>Privacy Bridges</h3>
+            <p>
+              Bridge different blockchains assets that can make them interact
+              with each other in a private way.
+            </p>
+          </div>
         </div>
       </div>
     </Style>

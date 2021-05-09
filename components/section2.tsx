@@ -6,6 +6,7 @@ import { useStore } from '@/store'
 
 const Style = styled.div`
   z-index: 1;
+  width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
