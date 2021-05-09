@@ -13,7 +13,6 @@ const Style = styled.div`
     justify-content: space-between;
     margin: 0 auto;
     padding-top: 203px;
-    padding-bottom: 243px;
     div.block {
       width: 360px;
       div.image {

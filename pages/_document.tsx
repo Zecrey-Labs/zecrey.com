@@ -19,6 +19,10 @@ const ZecreyHead = () => (
       href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap'
       rel='stylesheet'
     />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'
+      rel='stylesheet'
+    />
   </Head>
 )
 
