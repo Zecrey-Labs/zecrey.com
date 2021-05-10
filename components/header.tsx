@@ -117,6 +117,22 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 706px) {
+    height: 90px;
+    div.left {
+      img {
+        padding: 0;
+        height: 56px;
+      }
+      nav {
+        padding: 0;
+        ul li {
+          font: 400 18px/26px Lexend;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 `
 
 export const Header = observer(() => {
