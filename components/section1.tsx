@@ -79,11 +79,16 @@ const Style = styled.div`
   div.banner {
     margin-top: 25px;
     text-align: center;
-    font: normal normal bold 100px/120px Lexend;
     letter-spacing: 0px;
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
     text-transform: uppercase;
+    @media (min-width: 500px) {
+      font: normal normal bold 100px/120px Lexend;
+    }
+    @media (max-width: 499px) {
+      font: normal normal bold 80px/100px Lexend;
+    }
   }
   div.email {
     margin-top: 69px;

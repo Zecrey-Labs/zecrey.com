@@ -117,6 +117,11 @@ const Style = styled.div`
         }
       }
     }
+    @media (max-width: 817px) {
+      h2 {
+        height: auto;
+      }
+    }
     @media (max-width: 976px) {
       div.content h2 {
         width: 100%;
