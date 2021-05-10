@@ -5,9 +5,10 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  margin: 0 auto;
   padding: 0 30px;
   padding-bottom: 122px;
+  width: 100vw;
+
   h2 {
     margin-bottom: 162px;
     text-align: center;
@@ -15,7 +16,7 @@ const Style = styled.div`
     letter-spacing: 0px;
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
-    opacity: 1;
+    white-space: normal;
   }
   div.content {
     position: relative;
@@ -45,6 +46,7 @@ const Style = styled.div`
     }
     div.block {
       display: flex;
+      position: relative;
       flex-direction: column;
       width: 226px;
       height: 582px;
@@ -86,12 +88,19 @@ const Style = styled.div`
       }
     }
   }
-  @media (max-width: 1347px) {
+  @media (max-width: 749px) {
+    div.content div.block {
+      display: none;
+    }
+  }
+  @media (min-width: 750px) and (max-width: 1347px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     div.content {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      justify-content: center;
       div.block {
         position: relative;
       }
@@ -102,8 +111,10 @@ const Style = styled.div`
       }
     }
   }
+
   @media (min-width: 1348px) {
     width: 1288px;
+    margin: 0 auto;
     box-sizing: content-box;
     div.content {
       div.block {
