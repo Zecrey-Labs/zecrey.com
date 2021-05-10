@@ -10,10 +10,11 @@ import Img from './img'
 
 const Style = styled.div`
   width: 100vw;
+  height: 1.1rem;
+  min-height: 64px;
   position: sticky;
   top: 0;
   left: 0;
-  height: 110px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,49 +22,7 @@ const Style = styled.div`
   backdrop-filter: blur(2px);
   transition: background-color 0.3s ease-out;
   box-shadow: 0px 3px 12px #00000040;
-  div.left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    img {
-      box-sizing: content-box;
-      height: 66px;
-      padding: 26px 0 18px 0;
-      margin: 0 120px 0 200px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 36px 0 34px 0;
-      ul {
-        display: flex;
-        flex-direction: row;
-        li {
-          font: 400 26px/31px Lexend;
-          text-align: left;
-          letter-spacing: 0px;
-          margin-right: 61px;
-          cursor: pointer;
-          transition: color 0.3s ease-out;
-          text-shadow: 0px 3px 12px #00000040;
-        }
-      }
-    }
-  }
-  div.right {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    margin-right: 25px;
-    svg {
-      margin-right: 25px;
-      transition: color 0.3s ease-out;
-      cursor: pointer;
-    }
-  }
+
   &.dark {
     background-color: rgba(47, 47, 47, 0.7);
     div.left {
@@ -102,45 +61,94 @@ const Style = styled.div`
       }
     }
   }
-  @media (max-width: 1330px) {
-    div.right {
-      display: none;
+  div.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    > img {
+      box-sizing: content-box;
     }
-  }
-  @media (max-width: 1040px) {
-    div.left {
-      flex: 1;
+    nav {
       display: flex;
-      justify-content: space-around;
-      img {
-        margin: 0 10px;
-      }
-    }
-  }
-  @media (max-width: 706px) {
-    height: 90px;
-    div.left {
-      img {
-        padding: 0;
-        height: 56px;
-      }
-      nav {
-        padding: 0;
-        ul li {
-          font: 400 18px/26px Lexend;
-          margin-right: 10px;
+      justify-content: center;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          text-align: left;
+          letter-spacing: 0px;
+          cursor: pointer;
+          transition: color 0.3s ease-out;
+          text-shadow: 0px 0.03rem 0.12rem #00000040;
         }
       }
     }
   }
-  @media (max-width: 447px) {
-    height: 64px;
+  div.right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 25px;
+      transition: color 0.3s ease-out;
+      cursor: pointer;
+    }
+  }
+
+  div.left {
+    > img {
+      margin-right: 1.2rem;
+      margin-left: 2rem;
+      height: 0.66rem;
+      min-height: 40px;
+    }
+    nav ul li {
+      font: 400 0.26rem/0.31rem Lexend;
+      margin-right: 0.61rem;
+    }
+  }
+  div.right {
+    font-size: 0.3rem;
+    margin-right: 0.25rem;
+  }
+  @media (max-width: 1279px) {
     div.left {
-      img {
-        height: 40px;
-      }
       nav ul li {
-        font: 400 18px/26px Lexend;
+        font: 400 17px/20px Lexend;
+        margin-right: 40px;
+      }
+    }
+    div.right {
+      font-size: 20px;
+      margin-right: 25px;
+    }
+  }
+  @media (max-width: 760px) {
+    div.left {
+      flex: 1;
+    }
+    div.right {
+      display: none;
+    }
+  }
+  @media (max-width: 560px) {
+    div.left {
+      justify-content: space-evenly;
+      > img {
+        flex: 1;
+        margin: 0;
+        margin-left: 10px;
+      }
+      nav {
+        flex: 3;
+        ul {
+          flex: 1;
+          justify-content: space-around;
+          li {
+            margin: 0;
+          }
+        }
       }
     }
   }
