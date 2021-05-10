@@ -62,10 +62,11 @@ const Style = styled.div`
     background-color: #2ad4d9;
   }
   h2 {
-    margin-top: 128px;
+    margin-top: 1.28rem;
     background: #2ad4d9 0% 0% no-repeat padding-box;
     height: 50px;
-    width: 383px;
+    width: calc(100% - 20px);
+    max-width: 383px;
     font: normal normal bold 32px/50px Lexend;
     border-radius: 5px;
     text-align: center;
@@ -86,11 +87,11 @@ const Style = styled.div`
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
     text-transform: uppercase;
-    @media (min-width: 500px) {
-      font: normal normal bold 100px/120px Lexend;
+    @media (max-width: 999px) {
+      font: normal normal bold 60px/80px Lexend;
     }
-    @media (max-width: 499px) {
-      font: normal normal bold 80px/100px Lexend;
+    @media (min-width: 1000px) {
+      font: normal normal bold 1rem/1.2rem Lexend;
     }
   }
   div.email {
