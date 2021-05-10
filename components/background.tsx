@@ -10,7 +10,6 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   height: 100vh;
   overflow: hidden;
   position: fixed;
-  display: flex;
   background-color: ${({ theme }) =>
     theme === 'dark' ? 'rgb(34, 34, 34)' : 'rgb(241, 241, 241)'};
 
@@ -36,6 +35,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   }
 
   div.dark {
+    height: 100%;
     z-index: 1;
     flex: 1;
     background-color: rgba(34, 34, 34, 0.6);
