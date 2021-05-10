@@ -188,7 +188,7 @@ const Style = styled.div`
       width: 661px;
     }
     &:nth-of-type(2) {
-      top: -208px;
+      top: -17px;
       width: 296px;
       right: 0;
     }
