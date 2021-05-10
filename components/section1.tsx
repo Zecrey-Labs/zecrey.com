@@ -8,6 +8,9 @@ import { validateEmail } from '@/utils'
 const InputEmail = styled.input`
   display: block;
   width: 455px;
+  @media (max-width: 455px) {
+    width: 100%;
+  }
   height: 52px;
   background: #222222 0% 0% no-repeat padding-box;
   border: 2px solid #2ad4d9;
@@ -42,6 +45,7 @@ const Button = styled.button`
 
 const Style = styled.div`
   width: 100vw;
+  overflow: hidden;
   min-height: calc(100vh - 110px);
   color: white;
   display: flex;

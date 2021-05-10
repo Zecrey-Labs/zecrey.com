@@ -133,6 +133,17 @@ const Style = styled.div`
       }
     }
   }
+  @media (max-width: 447px) {
+    height: 64px;
+    div.left {
+      img {
+        height: 40px;
+      }
+      nav ul li {
+        font: 400 18px/26px Lexend;
+      }
+    }
+  }
 `
 
 export const Header = observer(() => {

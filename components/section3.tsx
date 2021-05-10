@@ -26,6 +26,9 @@ const Style = styled.div`
       position: relative;
       div.text {
         width: 443px;
+        @media (max-width: 443px) {
+          width: 100%;
+        }
         h3 {
           text-align: left;
           letter-spacing: 0px;

@@ -29,7 +29,12 @@ const Style = styled.div`
       div.text {
         h3 {
           text-align: left;
-          font: normal normal bold 38px/48px Lexend;
+          @media (min-width: 455px) {
+            font: normal normal bold 38px/48px Lexend;
+          }
+          @media (max-width: 454px) {
+            font: normal normal bold 28px/32px Lexend;
+          }
           margin-bottom: 30px;
           letter-spacing: 0px;
           color: #e4e4e4;
