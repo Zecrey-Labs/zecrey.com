@@ -120,6 +120,8 @@ const Style = styled.div`
       align-items: flex-start;
       div.block {
         position: relative;
+        z-index: 1;
+        margin-right: 35px;
       }
       div.textList {
         div.text {
