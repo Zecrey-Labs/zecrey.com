@@ -173,6 +173,39 @@ const Style = styled.div`
       margin-top: 94px;
     }
   }
+  @media (max-width: 560px) {
+    div.email {
+      width: calc(100% - 20px);
+      justify-content: center;
+      input {
+        flex: 1;
+        max-width: 300px;
+      }
+      img {
+        display: none;
+      }
+      button {
+        position: static;
+        margin-left: 10px;
+      }
+      &:hover {
+        input {
+          transform: none;
+        }
+        button {
+          transform: none;
+        }
+      }
+      &.active {
+        input {
+          transform: none;
+        }
+        button {
+          transform: none;
+        }
+      }
+    }
+  }
 `
 
 // @TODO: 邮箱地址发送到服务器，对非法邮箱报错
