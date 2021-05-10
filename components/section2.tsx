@@ -16,6 +16,7 @@ const Style = styled.div`
   padding-right: 38px;
   div.content {
     padding-bottom: 225px;
+    padding-top: 200px;
     position: relative;
     height: 554px;
     box-sizing: content-box;
@@ -121,7 +122,7 @@ const Style = styled.div`
         width: 100%;
       }
     }
-    @media (min-with: 977px) {
+    @media (min-width: 977px) {
       h2 {
         width: 925px;
       }
@@ -190,6 +191,14 @@ const Style = styled.div`
       top: -208px;
       width: 296px;
       right: 0;
+    }
+  }
+  @media (max-width: 1224px) {
+    div.content {
+      padding-top: 10px;
+    }
+    img.big {
+      display: none;
     }
   }
 `
