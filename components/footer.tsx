@@ -42,6 +42,9 @@ const Style = styled.div`
         margin-right: 130px;
         position: relative;
         top: -32px;
+        @media (max-width: 770px) {
+          display: none;
+        }
       }
       > div.column {
         margin-right: 103px;
