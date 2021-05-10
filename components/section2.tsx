@@ -167,7 +167,7 @@ const Style = styled.div`
       ul.features {
         position: absolute;
         right: 0;
-        bottom: 208px;
+        bottom: 38px;
         li {
           position: absolute;
           &:nth-of-type(1) {
