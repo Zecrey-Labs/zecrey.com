@@ -11,7 +11,12 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 42px;
+  @media (min-width: 633px) {
+    padding: 0 42px;
+  }
+  @media (max-width: 632px) {
+    padding: 0 10px;
+  }
   > div {
     display: flex;
     flex-direction: row;

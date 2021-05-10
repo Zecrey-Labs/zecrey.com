@@ -28,12 +28,17 @@ const Style = styled.div`
         width: 443px;
         h3 {
           text-align: left;
-          font: normal normal bold 42px/53px Lexend;
           letter-spacing: 0px;
           color: #e4e4e4;
           text-shadow: 0px 3px 12px #00000040;
           opacity: 1;
           margin-bottom: 30px;
+          @media (min-width: 481px) {
+            font: normal normal bold 42px/53px Lexend;
+          }
+          @media (max-width: 480px) {
+            font: normal normal bold 28px/42px Lexend;
+          }
         }
         p {
           text-align: left;
@@ -88,6 +93,7 @@ const Style = styled.div`
       }
     }
   }
+
   @media (max-width: 749px) {
     div.content {
       div.block {
