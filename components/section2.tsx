@@ -18,7 +18,6 @@ const Style = styled.div`
     padding-bottom: 225px;
     padding-top: 200px;
     position: relative;
-    height: 554px;
     box-sizing: content-box;
     ul.features {
       li {
@@ -148,12 +147,14 @@ const Style = styled.div`
     @media (max-width: 1224px) {
       div.text {
         margin: 0 auto;
+        max-width: 725px;
+        margin-bottom: 60px;
       }
       ul.features {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
       }
     }
 
