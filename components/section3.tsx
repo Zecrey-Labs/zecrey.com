@@ -89,8 +89,16 @@ const Style = styled.div`
     }
   }
   @media (max-width: 749px) {
-    div.content div.block {
-      display: none;
+    div.content {
+      div.block {
+        display: none;
+      }
+      div.textList {
+        align-items: center;
+        div.text {
+          margin: 20px;
+        }
+      }
     }
   }
   @media (min-width: 750px) and (max-width: 1347px) {
