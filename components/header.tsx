@@ -107,6 +107,16 @@ const Style = styled.div`
       display: none;
     }
   }
+  @media (max-width: 1040px) {
+    div.left {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      img {
+        margin: 0 10px;
+      }
+    }
+  }
 `
 
 export const Header = observer(() => {
