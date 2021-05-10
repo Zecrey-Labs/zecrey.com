@@ -8,6 +8,7 @@ const Style = styled.div`
   padding: 0 30px;
   padding-bottom: 122px;
   width: 100vw;
+  position: relative;
 
   h2 {
     margin-bottom: 162px;
@@ -151,11 +152,38 @@ const Style = styled.div`
       }
     }
   }
+  div.anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    height: 5px;
+    width: 100vw;
+    background-color: red;
+    z-index: 10;
+    top: 520px;
+  }
 `
 
 export const Section3 = observer(() => {
   const store = useStore()
-
+  const anchor2 = React.useRef(null)
+  React.useEffect(() => {
+    if (
+      'IntersectionObserver' in window &&
+      'IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    ) {
+      let observer1 = new IntersectionObserver(entries => {
+        if (entries[0].boundingClientRect.y <= window.innerHeight) {
+          store.setAnchor2Appear(true)
+        } else {
+          store.setAnchor2Appear(false)
+        }
+      })
+      observer1.observe(anchor2.current)
+    }
+  }, [])
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <h2>What Zecrey special</h2>
@@ -190,6 +218,7 @@ export const Section3 = observer(() => {
           </div>
         </div>
       </div>
+      <div ref={anchor2} className='anchor' />
     </Style>
   )
 })

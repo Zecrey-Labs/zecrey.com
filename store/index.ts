@@ -6,6 +6,14 @@ export function useModel() {
     theme: 'dark',
     setTheme(value: 'dark' | 'light') {
       this.theme = value
+    },
+    anchor1Appear: false,
+    setAnchor1Appear(value: boolean) {
+      this.anchor1Appear = value
+    },
+    anchor2Appear: false,
+    setAnchor2Appear(value: boolean) {
+      this.anchor2Appear = value
     }
   }))
 }

@@ -12,61 +12,18 @@ import {
 } from '@/components'
 import { useStore } from '@/store'
 
-const Style = styled.div`
-  div.anchor {
-    position: absolute;
-    height: 1px;
-    left: 0;
-    width: 100vw;
-    &.anchor1 {
-      top: calc(100vh + 440px);
-    }
-    &.anchor2 {
-      top: 2420px;
-    }
-  }
-`
+const Style = styled.div``
 
 const Home = observer(function Home() {
   const store = useStore()
-  const anchor1 = React.useRef(null)
-  const anchor2 = React.useRef(null)
-
-  const [anchor1Appear, setAnchor1Appear] = React.useState(false)
-  const [anchor2Appear, setAnchor2Appear] = React.useState(false)
-  React.useEffect(() => {
-    if (
-      'IntersectionObserver' in window &&
-      'IntersectionObserverEntry' in window &&
-      'intersectionRatio' in window.IntersectionObserverEntry.prototype
-    ) {
-      let observer1 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y <= window.innerHeight) {
-          setAnchor1Appear(true)
-        } else {
-          setAnchor1Appear(false)
-        }
-      })
-      observer1.observe(anchor1.current)
-
-      let observer2 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y <= window.innerHeight) {
-          setAnchor2Appear(true)
-        } else {
-          setAnchor2Appear(false)
-        }
-      })
-      observer2.observe(anchor2.current)
-    }
-  }, [])
 
   React.useEffect(() => {
-    if (anchor1Appear === true && anchor2Appear === false) {
+    if (store.anchor1Appear === true && store.anchor2Appear === false) {
       store.setTheme('light')
     } else {
       store.setTheme('dark')
     }
-  }, [anchor1Appear, anchor2Appear])
+  }, [store.anchor1Appear, store.anchor2Appear])
 
   return (
     <Style>
@@ -77,8 +34,6 @@ const Home = observer(function Home() {
       <Section3 />
       <Section4 />
       <Footer />
-      <div ref={anchor1} className='anchor anchor1' />
-      <div ref={anchor2} className='anchor anchor2' />
     </Style>
   )
 })

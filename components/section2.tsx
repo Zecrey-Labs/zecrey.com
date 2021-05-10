@@ -207,10 +207,38 @@ const Style = styled.div`
       display: none;
     }
   }
+  div.anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    height: 5px;
+    width: 100vw;
+    background-color: red;
+    z-index: 10;
+    top: 588px;
+  }
 `
 
 export const Section2 = observer(() => {
   const store = useStore()
+  const anchor1 = React.useRef(null)
+  React.useEffect(() => {
+    if (
+      'IntersectionObserver' in window &&
+      'IntersectionObserverEntry' in window &&
+      'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    ) {
+      let observer1 = new IntersectionObserver(entries => {
+        if (entries[0].boundingClientRect.y <= window.innerHeight) {
+          store.setAnchor1Appear(true)
+        } else {
+          store.setAnchor1Appear(false)
+        }
+      })
+      observer1.observe(anchor1.current)
+    }
+  }, [])
 
   return (
     <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
@@ -263,6 +291,7 @@ export const Section2 = observer(() => {
       </div>
       <Img className='big' src='/section2/bigimage1.svg' />
       <Img className='big' src='/section2/bigimage2.svg' />
+      <div ref={anchor1} className='anchor' />
     </Style>
   )
 })
