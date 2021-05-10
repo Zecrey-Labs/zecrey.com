@@ -13,7 +13,12 @@ const Style = styled.div`
   h2 {
     margin-bottom: 162px;
     text-align: center;
-    font: normal normal bold 80px/100px Lexend;
+    @media (max-width: 1199px) {
+      font: normal normal bold 60px/80px Lexend;
+    }
+    @media (min-width: 1200px) {
+      font: normal normal bold 0.8rem/1rem Lexend;
+    }
     letter-spacing: 0px;
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
