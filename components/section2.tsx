@@ -209,13 +209,6 @@ const Style = styled.div`
   }
   div.anchor {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    left: 0;
-    height: 5px;
-    width: 100vw;
-    background-color: red;
-    z-index: 10;
     top: 588px;
   }
 `
