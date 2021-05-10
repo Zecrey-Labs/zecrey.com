@@ -7,6 +7,7 @@ import { useStore } from '@/store'
 const Style = styled.div`
   z-index: 1;
   width: 100vw;
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -18,45 +19,6 @@ const Style = styled.div`
     position: relative;
     height: 554px;
     box-sizing: content-box;
-    @media (min-width: 225px) and (max-width: 1224px) {
-      div.text {
-        width: 728px;
-        margin: 0 auto;
-      }
-      ul.features {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    }
-    @media (min-width: 1225px) {
-      width: calc(100vw - 70px);
-      max-width: 1330px;
-      div.text {
-        padding-left: 133px;
-      }
-      ul.features {
-        position: absolute;
-        right: 0;
-        bottom: 208px;
-        li {
-          position: absolute;
-          &:nth-of-type(1) {
-            right: 0;
-            bottom: 226px;
-          }
-          &:nth-of-type(3) {
-            right: 0;
-            bottom: 0;
-          }
-          &:nth-of-type(2) {
-            bottom: 0;
-            right: 340px;
-          }
-        }
-      }
-    }
     ul.features {
       li {
         display: flex;
@@ -67,7 +29,7 @@ const Style = styled.div`
         width: 300px;
         height: 186px;
         padding: 25px 0;
-        margin: 10px 0;
+        margin: 10px;
         img {
           height: 88px;
           margin-bottom: 25px;
@@ -81,7 +43,6 @@ const Style = styled.div`
       }
     }
     h2 {
-      width: 925px;
       height: 87px;
       text-align: center;
       font: normal normal bold 36px/36px Lexend;
@@ -152,6 +113,68 @@ const Style = styled.div`
         }
         &:nth-of-type(2) {
           width: 525px;
+        }
+      }
+    }
+    @media (max-width: 976px) {
+      div.content h2 {
+        width: 100%;
+      }
+    }
+    @media (min-with: 977px) {
+      h2 {
+        width: 925px;
+      }
+    }
+    @media (max-width: 752px) {
+      div.text {
+        width: 100%;
+        p {
+          &:nth-of-type(1) {
+            width: 100%;
+          }
+          &:nth-of-type(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @media (max-width: 1224px) {
+      div.text {
+        margin: 0 auto;
+      }
+      ul.features {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    @media (min-width: 1225px) {
+      width: calc(100vw - 70px);
+      max-width: 1330px;
+      div.text {
+        padding-left: 133px;
+      }
+      ul.features {
+        position: absolute;
+        right: 0;
+        bottom: 208px;
+        li {
+          position: absolute;
+          &:nth-of-type(1) {
+            right: 0;
+            bottom: 226px;
+          }
+          &:nth-of-type(3) {
+            right: 0;
+            bottom: 0;
+          }
+          &:nth-of-type(2) {
+            bottom: 0;
+            right: 340px;
+          }
         }
       }
     }
