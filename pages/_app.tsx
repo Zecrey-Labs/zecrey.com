@@ -55,6 +55,7 @@ const AppWithStore = ({ Component, pageProps }) => {
     <Provider>
       <Head>
         <title>{META.title}</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <App Component={Component} pageProps={pageProps} />
     </Provider>
