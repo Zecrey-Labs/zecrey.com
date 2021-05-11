@@ -23,7 +23,6 @@ const Style = styled.div`
   }
   > div.content {
     max-width: 15.19rem;
-    padding: 0 0.1rem;
     margin: 0 auto;
     padding-top: 3.34rem;
     position: relative;
@@ -64,22 +63,20 @@ const Style = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       background-color: rgb(34, 34, 34);
+      padding: 0.3rem 0;
       div.column1 {
         display: flex;
         align-items: center;
         font-size: 0.3rem;
-        margin-left: 0.28rem;
-        margin-top: 0.33rem;
         svg {
           font-size: 0.38rem;
           color: #00acb1;
-          margin-right: 0.35rem;
+          margin: 0 0.17rem;
         }
       }
       div.column2 {
-        margin-top: 0.31rem;
-        margin-bottom: 0.62rem;
         text-align: right;
         font: normal normal normal 0.2rem/0.27rem Leelawadee UI;
         color: #e4e4e4;
@@ -92,6 +89,7 @@ const Style = styled.div`
         flex-direction: column;
         div.column1 {
           justify-content: center;
+          margin-bottom: 0.3rem;
         }
         div.column2 {
           text-align: center;
