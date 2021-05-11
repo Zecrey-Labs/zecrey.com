@@ -38,7 +38,6 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   div.message {
     position: fixed;
     width: 100%;
@@ -51,7 +50,7 @@ const Style = styled.div`
     background-color: #2ad4d9;
   }
   h2 {
-    margin-top: 1.28rem;
+    margin-top: 128px;
     background: #2ad4d9 0% 0% no-repeat padding-box;
     height: 0.5rem;
     width: 3.83rem;
@@ -176,6 +175,9 @@ const Style = styled.div`
     }
   }
   @media (max-width: 560px) {
+    h2 {
+      margin-top: 1.28rem;
+    }
     div.email {
       width: calc(100% - 20px);
       justify-content: center;
