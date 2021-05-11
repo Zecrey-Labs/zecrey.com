@@ -86,7 +86,7 @@ const Style = styled.div`
     text-shadow: 0px 0.03rem 0.12rem #00000040;
     text-transform: uppercase;
     font: normal normal bold 1rem/1.2rem Lexend;
-    @media (max-width: 750px) {
+    @media (max-width: 999px) {
       font: normal normal bold 52px/63px Lexend;
     }
   }
