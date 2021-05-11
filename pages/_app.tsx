@@ -1,8 +1,5 @@
 import 'nprogress/nprogress.css'
-import 'react-typist/dist/Typist.css'
-import 'aos/dist/aos.css'
 import { useEffect } from 'react'
-import Aos from 'aos'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'antd/dist/antd.css'
@@ -35,12 +32,6 @@ const App = observer(function App({ Component, pageProps }: Props) {
     onResize()
 
     return () => window.removeEventListener('resize', onResize)
-  }, [])
-
-  useEffect(() => {
-    Aos.init({
-      mirror: true
-    })
   }, [])
 
   if (statusCode) {
