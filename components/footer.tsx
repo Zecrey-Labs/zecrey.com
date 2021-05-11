@@ -13,49 +13,49 @@ const Style = styled.div`
   width: 100vw;
   z-index: 1;
   overflow: hidden;
-  > div.back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-color: rgb(34, 34, 34);
-  }
+  background-color: rgb(34, 34, 34);
   > img.wave {
+    width: calc(100% + 2.24rem);
     z-index: -1;
     position: absolute;
-    left: -94px;
-    top: 203px;
+    left: -0.94rem;
+    top: 2.03rem;
   }
-  > div {
-    max-width: 1519px;
-    padding: 0 10px;
+  > div.content {
+    max-width: 15.19rem;
+    padding: 0 0.1rem;
     margin: 0 auto;
-    padding-top: 334px;
+    padding-top: 3.34rem;
+    position: relative;
+    div.black {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(34, 34, 34);
+    }
     div.row1 {
+      z-index: 1;
       border-bottom: 1px solid rgb(228, 228, 228);
       display: flex;
       flex-direction: row;
       img {
-        width: 267px;
-        height: 109px;
-        margin-left: 16px;
-        margin-right: 130px;
+        width: 2.67rem;
+        height: 1.09rem;
+        margin-left: 0.16rem;
+        margin-right: 1.3rem;
         position: relative;
-        top: -32px;
-        @media (max-width: 770px) {
-          display: none;
-        }
+        top: -0.32rem;
       }
       > div.column {
-        margin-right: 103px;
+        margin-right: 1.03rem;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10px;
+        padding-bottom: 0.1rem;
         span {
-          margin-bottom: 20px;
+          margin-bottom: 0.2rem;
           text-align: left;
-          font: normal normal bold 28px/37px Roboto;
-          letter-spacing: 0px;
+          font: normal normal bold 0.28rem/0.37rem Roboto;
           color: #e4e4e4;
         }
       }
@@ -64,25 +64,39 @@ const Style = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding-bottom: 62px;
+      background-color: rgb(34, 34, 34);
       div.column1 {
         display: flex;
         align-items: center;
-        font-size: 30px;
-        margin-left: 28px;
-        margin-top: 33px;
+        font-size: 0.3rem;
+        margin-left: 0.28rem;
+        margin-top: 0.33rem;
         svg {
-          font-size: 38px;
+          font-size: 0.38rem;
           color: #00acb1;
-          margin-right: 35px;
+          margin-right: 0.35rem;
         }
       }
       div.column2 {
-        margin-top: 31px;
+        margin-top: 0.31rem;
+        margin-bottom: 0.62rem;
         text-align: right;
-        font: normal normal normal 20px/27px Leelawadee UI;
-        letter-spacing: 0px;
+        font: normal normal normal 0.2rem/0.27rem Leelawadee UI;
         color: #e4e4e4;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    div.content {
+      div.row2 {
+        flex-direction: column;
+        div.column1 {
+          justify-content: center;
+        }
+        div.column2 {
+          text-align: center;
+          font: normal normal normal 14px/16px Leelawadee UI;
+        }
       }
     }
   }
@@ -93,9 +107,8 @@ export const Footer = observer(() => {
 
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
-      <div className='back'></div>
       <Img className='wave' src='/footer/wave.svg' />
-      <div>
+      <div className='content'>
         <div className='row1'>
           <Img className='icon' src={'/logo1.svg'} alt='' />
           <div className='column'>
