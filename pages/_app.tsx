@@ -1,19 +1,9 @@
-import 'nprogress/nprogress.css'
 import { useEffect } from 'react'
-import NProgress from 'nprogress'
-import Router from 'next/router'
-import 'antd/dist/antd.css'
 import '@/global.css'
 import { observer } from 'mobx-react-lite'
 import { Provider } from '@/store'
 import Head from 'next/head'
 import { META } from '@/constant'
-
-Router.events.on('routeChangeStart', () => {
-  NProgress.start()
-})
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
 
 type Props = {
   Component: any

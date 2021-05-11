@@ -16,13 +16,6 @@
         "displayName": true,
         "preprocess": false
       }
-    ],
-    [
-      "import",
-      {
-        "libraryName": "antd"
-        //"style":"css"   wenpack语法报错 引入css
-      }
     ]
   ]
 }
