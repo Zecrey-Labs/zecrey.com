@@ -25,7 +25,7 @@ const Style = styled.div`
     padding-top: 2rem;
 
     div.block {
-      padding: 0.1rem;
+      padding: 0.4rem;
       box-sizing: content-box;
       width: 3.6rem;
       div.image {
@@ -60,11 +60,25 @@ const Style = styled.div`
         }
       }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 1000px) {
+      div.block {
+        width: auto;
+        div.image {
+        }
+        div.text {
+          width: 42em;
+          h3 {
+            font: normal normal bold 26px/26px Lexend;
+          }
+          p {
+            font: normal normal normal 22px/25px IBM Plex Sans;
+          }
+        }
+      }
+    }
+    @media (max-width: 700px) {
       flex-direction: column;
       div.block {
-        display: flex;
-        flex-direction: row;
         width: auto;
         padding: 11px;
         div.image {
@@ -81,10 +95,10 @@ const Style = styled.div`
         div.text {
           width: 42em;
           h3 {
-            font: normal normal bold 20px/25px Lexend;
+            font: normal normal bold 26px/26px Lexend;
           }
           p {
-            font: normal normal normal 18px/20px IBM Plex Sans;
+            font: normal normal normal 22px/25px IBM Plex Sans;
           }
         }
       }
