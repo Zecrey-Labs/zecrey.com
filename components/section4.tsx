@@ -60,11 +60,34 @@ const Style = styled.div`
         }
       }
     }
-
-    /* 两列 */
-    @media (min-width: 860px) and (max-width: 1650px) {
-      /* width: 760px; */
-      /* box-sizing: content-box; */
+    @media (max-width: 500px) {
+      flex-direction: column;
+      div.block {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 11px;
+        div.image {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          img {
+            right: 0;
+            top: 0;
+            left: auto;
+            bottom: auto;
+          }
+        }
+        div.text {
+          width: 42em;
+          h3 {
+            font: normal normal bold 20px/25px Lexend;
+          }
+          p {
+            font: normal normal normal 18px/20px IBM Plex Sans;
+          }
+        }
+      }
     }
   }
 `

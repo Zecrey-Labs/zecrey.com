@@ -38,6 +38,7 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   div.message {
     position: fixed;
     width: 100%;
