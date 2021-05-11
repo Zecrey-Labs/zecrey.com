@@ -6,7 +6,7 @@ import Img from './img'
 
 const Style = styled.div`
   padding: 0 0.3rem;
-  padding-bottom: 1.22rem;
+  padding-bottom: 3rem;
   width: 100vw;
   width: 12.88rem;
   margin: 0 auto;
@@ -104,7 +104,7 @@ const Style = styled.div`
     flex-direction: column;
     align-items: center;
     width: auto;
-    padding: 0 30px;
+    padding: 20px 30px;
     h2 {
       font: normal normal bold 42px/42px Lexend;
     }
@@ -150,7 +150,7 @@ const Style = styled.div`
     }
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 685px) {
     h2 {
       font: normal normal bold 40px/40px Lexend;
     }
