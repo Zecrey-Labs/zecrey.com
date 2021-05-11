@@ -13,18 +13,26 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   background-color: ${({ theme }) =>
     theme === 'dark' ? 'rgb(34, 34, 34)' : 'rgb(241, 241, 241)'};
 
-  @keyframes bg1 {
+  @keyframes background-routine1 {
     0% {
-      top: -8vh;
-      left: -2.2vw;
+      transform: translate(0, 0);
     }
     50% {
-      top: -36vh;
-      left: 0;
+      transform: translate(0, 3rem);
     }
     to {
-      top: -8vh;
-      left: -2.2vw;
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes background-routine2 {
+    0% {
+      transform: translate(0, 2rem);
+    }
+    50% {
+      transform: translate(0, -3rem);
+    }
+    to {
+      transform: translate(0, 2rem);
     }
   }
 
@@ -38,17 +46,18 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   img {
     z-index: -1;
     position: absolute;
-    animation: bg1 20s cubic-bezier(0.55, 1.375, 0.46, -0.48) infinite;
+    right: 0;
+    top: 0;
     height: 100vh;
     width: auto;
   }
   img:nth-of-type(1) {
-    top: 30px;
-    left: 7px;
+    animation: background-routine1 20s cubic-bezier(0.55, 1.375, 0.46, -0.48)
+      infinite;
   }
   img:nth-of-type(2) {
-    top: -481px;
-    left: -158px;
+    animation: background-routine2 20s cubic-bezier(0.55, 1.375, 0.46, -0.48)
+      infinite;
   }
 `
 
