@@ -32,6 +32,7 @@ const Button = styled.button`
 
 const Style = styled.div`
   width: 100vw;
+  min-height: calc(100vh - 5.88rem);
   overflow: hidden;
   color: white;
   display: flex;
