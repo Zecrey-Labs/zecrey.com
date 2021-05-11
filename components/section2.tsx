@@ -241,6 +241,10 @@ const Style = styled.div`
     img.big {
       display: none;
     }
+    div.anchor {
+      position: absolute;
+      top: 10rem;
+    }
   }
 `
 

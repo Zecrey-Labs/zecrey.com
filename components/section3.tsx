@@ -99,6 +99,11 @@ const Style = styled.div`
     }
   }
 
+  div.anchor {
+    position: absolute;
+    top: 5.2rem;
+  }
+
   @media (max-width: 1000px) {
     display: flex;
     flex-direction: column;
@@ -174,11 +179,14 @@ const Style = styled.div`
       width: 100%;
       max-width: 62em;
     }
+    div.anchor {
+      top: 8rem;
+    }
   }
-
-  div.anchor {
-    position: absolute;
-    top: 5.2rem;
+  @media (max-width: 800px) and (min-height: 1000px) {
+    div.anchor {
+      top: 10rem;
+    }
   }
 `
 
