@@ -22,28 +22,38 @@ const Style = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 203px;
+    padding-top: 2rem;
 
     div.block {
-      padding: 10px;
+      padding: 0.1rem;
+      box-sizing: content-box;
+      width: 3.6rem;
+      div.image {
+        height: 0.9rem;
+        width: 0.9rem;
+        position: relative;
+        margin-bottom: 0.3rem;
+        img {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
       div.text {
         h3 {
           text-align: left;
-          @media (min-width: 455px) {
-            font: normal normal bold 38px/48px Lexend;
-          }
-          @media (max-width: 454px) {
-            font: normal normal bold 28px/32px Lexend;
-          }
-          margin-bottom: 30px;
+          font: normal normal bold 0.38rem/0.48rem Lexend;
+          margin-bottom: 0.3rem;
           letter-spacing: 0px;
           color: #e4e4e4;
-          text-shadow: 0px 3px 12px #00000040;
+          text-shadow: 0px 0.03rem 0.12rem #00000040;
           opacity: 1;
         }
         p {
           text-align: left;
-          font: normal normal normal 24px/32px IBM Plex Sans;
+          font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
           letter-spacing: 0px;
           color: #e4e4e4;
           opacity: 1;
@@ -51,36 +61,10 @@ const Style = styled.div`
       }
     }
 
-    @media (max-width: 860px) {
-      div.block {
-        display: flex;
-        flex-direction: row;
-        padding: 30px;
-        div.image {
-          flex: 0 0 130px;
-        }
-      }
-    }
     /* 两列 */
     @media (min-width: 860px) and (max-width: 1650px) {
-      width: 760px;
-      box-sizing: content-box;
-    }
-    /* 两列、四列 */
-    @media (min-width: 860px) {
-      div.block {
-        box-sizing: content-box;
-        width: 360px;
-        div.image {
-          height: 100px;
-          position: relative;
-          img {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-          }
-        }
-      }
+      /* width: 760px; */
+      /* box-sizing: content-box; */
     }
   }
 `
