@@ -1,11 +1,12 @@
 import { META } from '@/constant'
 import React from 'react'
 
-const Img = props => (
+const Img = ({ src, alt, className, ...props }) => (
   <img
-    src={`${META.basePath}${props.src}`}
-    alt={props.alt}
-    className={props.className}
+    src={`${META.basePath}${src}`}
+    alt={alt}
+    className={className}
+    {...props}
   />
 )
 

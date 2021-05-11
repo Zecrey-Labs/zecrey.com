@@ -26,6 +26,12 @@ const Style = styled.div`
   &.dark {
     background-color: rgba(47, 47, 47, 0.7);
     div.left {
+      img.dark {
+        display: normal;
+      }
+      img.light {
+        display: none;
+      }
       nav ul li {
         color: #ffffff;
         &:hover {
@@ -44,6 +50,12 @@ const Style = styled.div`
   }
   &.light {
     background-color: rgba(239, 239, 239, 0.7);
+    img.dark {
+      display: none;
+    }
+    img.light {
+      display: normal;
+    }
     div.left {
       nav ul li {
         color: #222222;
@@ -160,11 +172,8 @@ export const Header = observer(() => {
   return (
     <Style className={store.theme}>
       <div className='left'>
-        {store.theme === 'dark' ? (
-          <Img className='dark' src={'/logo1.svg'} alt='logo' />
-        ) : (
-          <Img className='light' src={'/logo2.svg'} alt='logo' />
-        )}
+        <Img className='dark' src={'/logo1.svg'} alt='logo' />
+        <Img className='light' src={'/logo2.svg'} alt='logo' />
         <nav>
           <ul>
             <li>Technology</li>
