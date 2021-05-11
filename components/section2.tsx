@@ -164,8 +164,12 @@ const Style = styled.div`
       box-sizing: border-box;
       padding-left: 30px;
       padding-right: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       h2 {
         width: 100%;
+        max-width: 25em;
         font-size: 20px;
         line-height: 25px;
         height: auto;
