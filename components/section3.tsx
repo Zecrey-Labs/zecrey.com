@@ -5,24 +5,22 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  padding: 0 30px;
-  padding-bottom: 122px;
+  padding: 0 0.3rem;
+  padding-bottom: 1.22rem;
   width: 100vw;
+  width: 12.88rem;
+  margin: 0 auto;
+  box-sizing: content-box;
   position: relative;
 
   h2 {
-    margin-bottom: 162px;
+    margin-bottom: 1.62rem;
     text-align: center;
-    @media (max-width: 1199px) {
-      font: normal normal bold 60px/80px Lexend;
-    }
-    @media (min-width: 1200px) {
-      font: normal normal bold 0.8rem/1rem Lexend;
-    }
     letter-spacing: 0px;
     color: #e4e4e4;
     text-shadow: 0px 3px 12px #00000040;
     white-space: normal;
+    font: normal normal bold 0.8rem/1rem Lexend;
   }
   div.content {
     position: relative;
@@ -31,27 +29,25 @@ const Style = styled.div`
       flex-direction: column;
       position: relative;
       div.text {
-        width: 443px;
-        @media (max-width: 443px) {
-          width: 100%;
+        width: 4.43rem;
+        &:nth-of-type(2) {
+          align-self: flex-end;
         }
         h3 {
           text-align: left;
           letter-spacing: 0px;
           color: #e4e4e4;
-          text-shadow: 0px 3px 12px #00000040;
+          text-shadow: 0px 0.03rem 0.12rem #00000040;
           opacity: 1;
-          margin-bottom: 30px;
-          @media (min-width: 481px) {
-            font: normal normal bold 42px/53px Lexend;
-          }
+          margin-bottom: 0.3rem;
+          font: normal normal bold 0.42rem/0.53rem Lexend;
           @media (max-width: 480px) {
             font: normal normal bold 28px/42px Lexend;
           }
         }
         p {
           text-align: left;
-          font: normal normal normal 24px/32px IBM Plex Sans;
+          font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
           letter-spacing: 0px;
           color: #e4e4e4;
           opacity: 1;
@@ -60,106 +56,129 @@ const Style = styled.div`
     }
     div.block {
       display: flex;
-      position: relative;
       flex-direction: column;
-      width: 226px;
-      height: 582px;
+      width: 2.26rem;
+      height: 5.82rem;
+      position: absolute;
+      left: calc(50% - 1.3rem);
+      top: 0;
+      z-index: 1;
       div.bg1 {
         position: absolute;
         z-index: -1;
-        width: 226px;
-        height: 582px;
+        width: 100%;
+        height: 100%;
         background: rgba(56, 56, 56, 0.1);
-        border-radius: 20px;
+        border-radius: 0.2rem;
         backdrop-filter: blur(3px) brightness(110%);
       }
       img.image1 {
         position: absolute;
-        top: 42px;
-        left: -20px;
-        width: 143px;
-        height: 136px;
+        top: 0.42rem;
+        left: -0.2rem;
+        width: 1.43rem;
       }
       img.image2 {
         position: absolute;
-        top: 241px;
-        right: -67px;
+        top: 2.41rem;
+        right: -0.67rem;
         z-index: -2;
-        width: 169px;
-        height: 124px;
+        width: 1.69rem;
       }
       img.image3 {
         position: absolute;
-        bottom: -140px;
-        left: -57px;
+        bottom: -1.4rem;
+        left: -0.57rem;
         z-index: 2;
-        width: 248px;
-        height: 279px;
+        width: 2.48rem;
         background: rgba(56, 56, 56, 0.1);
-        backdrop-filter: blur(3px) brightness(110%);
-        border-radius: 20px;
-        padding: 75px 68px;
+        backdrop-filter: blur(0.03rem) brightness(110%);
+        border-radius: 0.2rem;
+        padding: 0.75rem 0.68rem;
       }
     }
   }
 
-  @media (max-width: 749px) {
-    div.content {
-      div.block {
-        display: none;
-      }
-      div.textList {
-        align-items: center;
-        div.text {
-          margin: 20px;
-        }
-      }
-    }
-  }
-  @media (min-width: 750px) and (max-width: 1347px) {
+  @media (max-width: 1000px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: auto;
+    padding: 0 30px;
+    h2 {
+      font: normal normal bold 42px/42px Lexend;
+    }
     div.content {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: flex;
+      width: 100%;
+      justify-content: center;
       div.block {
+        width: 120px;
+        height: 300px;
         position: relative;
+        left: 0;
         z-index: 1;
-        margin-right: 35px;
-      }
-      div.textList {
-        div.text {
-          margin: 20px;
+        margin-right: 50px;
+        img.image1 {
+          width: 72px;
+          top: 40px;
+          left: -14px;
+        }
+        img.image2 {
+          top: 130px;
+          right: -34px;
+          width: 78px;
         }
       }
-    }
-  }
-
-  @media (min-width: 1348px) {
-    width: 1288px;
-    margin: 0 auto;
-    box-sizing: content-box;
-    div.content {
-      div.block {
-        position: absolute;
-        left: calc(50% - 130px);
-        top: 0;
-        z-index: 1;
-      }
       div.textList {
+        flex: 1;
+        max-width: 62em;
         div.text {
-          &:nth-of-type(2) {
-            align-self: flex-end;
+          width: auto;
+          margin-bottom: 40px;
+          h3 {
+            font: normal normal bold 28px/28px Lexend;
+          }
+          p {
+            font-size: 22px;
+            line-height: 25px;
           }
         }
       }
     }
   }
+
+  @media (max-width: 560px) {
+    h2 {
+      font: normal normal bold 40px/40px Lexend;
+    }
+    div.content {
+      div.block {
+        display: none;
+      }
+      div.textList {
+        div.text {
+          margin: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 443px) {
+    h2 {
+      font: normal normal bold 36px/39px Lexend;
+    }
+    div.text {
+      width: 100%;
+      max-width: 62em;
+    }
+  }
+
   div.anchor {
     position: absolute;
-    top: 520px;
+    top: 5.2rem;
   }
 `
 
