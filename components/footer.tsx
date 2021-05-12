@@ -24,7 +24,7 @@ const Style = styled.div`
   > div.content {
     max-width: 15.19rem;
     margin: 0 auto;
-    padding-top: 3.34rem;
+    padding-top: 3rem;
     position: relative;
     div.black {
       position: absolute;
