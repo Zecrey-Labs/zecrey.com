@@ -127,7 +127,6 @@ const Style = styled.div`
     &:hover {
       input {
         transform: translateX(-0.2rem);
-        cursor: pointer;
       }
       img {
         transform: translateX(0.19rem);
@@ -255,6 +254,9 @@ export const Section1 = observer(() => {
           onFocus={() => {
             setActive(true)
             inputElement.current.select()
+          }}
+          onBlur={() => {
+            setActive(false)
           }}
         />
         <Img src={'/section1/cute.svg'} />
