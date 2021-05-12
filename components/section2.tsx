@@ -128,7 +128,7 @@ const Style = styled.div`
         }
         &:nth-of-type(1) {
           right: 0;
-          bottom: 2.26rem;
+          bottom: 2.7rem;
         }
         &:nth-of-type(3) {
           right: 0;
