@@ -6,7 +6,6 @@ import Img from './img'
 import { device } from '@/utils'
 
 const Style = styled.div`
-  background-color: rgb(34, 34, 34);
   width: 100vw;
   display: flex;
   flex-direction: column;
