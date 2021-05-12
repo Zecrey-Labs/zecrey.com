@@ -91,6 +91,7 @@ const Style = styled.div`
         left: -0.57rem;
         z-index: 2;
         width: 2.48rem;
+        box-sizing: border-box;
         background: rgba(56, 56, 56, 0.1);
         backdrop-filter: blur(0.03rem) brightness(110%);
         border-radius: 0.2rem;
