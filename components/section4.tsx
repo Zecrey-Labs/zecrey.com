@@ -5,7 +5,6 @@ import { useStore } from '@/store'
 import Img from './img'
 
 const Style = styled.div`
-  background-color: rgb(34, 34, 34);
   width: 100vw;
   display: flex;
   flex-direction: column;

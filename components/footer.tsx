@@ -13,7 +13,6 @@ const Style = styled.div`
   width: 100vw;
   z-index: 1;
   overflow: hidden;
-  background-color: rgb(34, 34, 34);
   > img.wave {
     width: calc(100% + 2.24rem);
     z-index: -1;
@@ -26,13 +25,6 @@ const Style = styled.div`
     margin: 0 auto;
     padding-top: 2.96rem;
     position: relative;
-    div.black {
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(34, 34, 34);
-    }
     div.row1 {
       z-index: 1;
       border-bottom: 1px solid rgb(228, 228, 228);
@@ -64,7 +56,6 @@ const Style = styled.div`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background-color: rgb(34, 34, 34);
       padding: 0.3rem 0;
       div.column1 {
         display: flex;
