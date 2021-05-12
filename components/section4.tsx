@@ -6,6 +6,7 @@ import Img from './img'
 
 const Style = styled.div`
   width: 100vw;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
