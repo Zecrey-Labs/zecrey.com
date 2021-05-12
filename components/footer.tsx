@@ -19,12 +19,12 @@ const Style = styled.div`
     z-index: -1;
     position: absolute;
     left: -0.94rem;
-    top: 2.03rem;
+    top: 1.63rem;
   }
   > div.content {
     max-width: 15.19rem;
     margin: 0 auto;
-    padding-top: 3rem;
+    padding-top: 2.96rem;
     position: relative;
     div.black {
       position: absolute;
