@@ -1,0 +1,8 @@
+<svg id="Component_17_1" data-name="Component 17 – 1" xmlns="http://www.w3.org/2000/svg" width="38.359" height="10" viewBox="0 0 38.359 10">
+  <circle id="Ellipse_39" data-name="Ellipse 39" cx="5" cy="5" r="5" transform="translate(14.18)" fill="#2ad4d9"/>
+  <circle id="Ellipse_40" data-name="Ellipse 40" cx="5" cy="5" r="5" transform="translate(28.359)" fill="#2ad4d9"/>
+  <circle id="Ellipse_41" data-name="Ellipse 41" cx="5" cy="5" r="5" transform="translate(0.001)" fill="#2ad4d9"/>
+  <path id="Intersection_14" data-name="Intersection 14" d="M0,0H10A5,5,0,0,1,5,5,5,5,0,0,1,0,0Z" transform="translate(14.179 5)" fill="#222" opacity="0.5"/>
+  <path id="Intersection_15" data-name="Intersection 15" d="M0,0H10A5,5,0,0,1,5,5,5,5,0,0,1,0,0Z" transform="translate(28.358 5)" fill="#222" opacity="0.5"/>
+  <path id="Intersection_16" data-name="Intersection 16" d="M0,0H10A5,5,0,0,1,5,5,5,5,0,0,1,0,0Z" transform="translate(0 5)" fill="#222" opacity="0.5"/>
+</svg>

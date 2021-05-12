@@ -1,0 +1,43 @@
+<svg id="Component_19_1" data-name="Component 19 – 1" xmlns="http://www.w3.org/2000/svg" width="976.146" height="87.001" viewBox="0 0 976.146 87.001">
+  <g id="Component_18_1" data-name="Component 18 – 1" transform="translate(98.88 75.001)">
+    <circle id="Ellipse_82" data-name="Ellipse 82" cx="6" cy="6" r="6" transform="translate(52 12) rotate(180)" fill="#00acb1"/>
+    <circle id="Ellipse_83" data-name="Ellipse 83" cx="6" cy="6" r="6" transform="translate(32 12) rotate(180)" fill="#00acb1"/>
+    <circle id="Ellipse_84" data-name="Ellipse 84" cx="6" cy="6" r="6" transform="translate(12 12) rotate(180)" fill="#00acb1"/>
+  </g>
+  <g id="Component_17_1" data-name="Component 17 – 1" transform="translate(840.88)">
+    <circle id="Ellipse_64" data-name="Ellipse 64" cx="6" cy="6" r="6" fill="#00acb1"/>
+    <circle id="Ellipse_78" data-name="Ellipse 78" cx="6" cy="6" r="6" transform="translate(20)" fill="#00acb1"/>
+    <circle id="Ellipse_80" data-name="Ellipse 80" cx="6" cy="6" r="6" transform="translate(40)" fill="#00acb1"/>
+  </g>
+  <g id="Group_64" data-name="Group 64" transform="translate(0 43.5)">
+    <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="4.048" cy="4.048" rx="4.048" ry="4.048" transform="translate(28.11 13.886)" fill="#00acb1"/>
+    <path id="Path_156" data-name="Path 156" d="M458.149,631.033q1.015.1,2.013.242c0-.021.007-.041.009-.062a2.04,2.04,0,0,0-4.062-.382c0,.021,0,.042,0,.063Q457.123,630.938,458.149,631.033Z" transform="translate(-416.861 -626.729)" fill="#00acb1"/>
+    <path id="Path_157" data-name="Path 157" d="M471.707,633.562c.006-.041.014-.082.018-.124a2.039,2.039,0,0,0-3.995-.735A39.108,39.108,0,0,1,471.707,633.562Z" transform="translate(-423.803 -628.058)" fill="#00acb1"/>
+    <path id="Path_158" data-name="Path 158" d="M482.947,636.863a2.039,2.039,0,0,0-3.851-1.335A38.7,38.7,0,0,1,482.947,636.863Z" transform="translate(-430.592 -629.854)" fill="#00acb1"/>
+    <path id="Path_159" data-name="Path 159" d="M493.771,641.534a2.038,2.038,0,0,0-3.66-1.794A38.771,38.771,0,0,1,493.771,641.534Z" transform="translate(-437.171 -632.509)" fill="#00acb1"/>
+    <path id="Path_160" data-name="Path 160" d="M503.961,647.6a2.038,2.038,0,0,0-3.411-2.22A38.9,38.9,0,0,1,503.961,647.6Z" transform="translate(-443.405 -636.053)" fill="#00acb1"/>
+    <path id="Path_161" data-name="Path 161" d="M513.395,654.6a2.039,2.039,0,0,0-3.126-2.619A39.2,39.2,0,0,1,513.395,654.6Z" transform="translate(-449.21 -640.079)" fill="#00acb1"/>
+    <path id="Path_162" data-name="Path 162" d="M521.961,662.849a2.039,2.039,0,0,0-2.787-2.973A39.245,39.245,0,0,1,521.961,662.849Z" transform="translate(-454.529 -644.927)" fill="#00acb1"/>
+    <path id="Path_163" data-name="Path 163" d="M433.523,660.886a37.61,37.61,0,0,0-37.24-32.023v-5.477a37.561,37.561,0,0,0-37.623,37.5h74.863Zm-56.1-17.276a10.242,10.242,0,1,1,10.242,10.209A10.226,10.226,0,0,1,377.419,643.61Z" transform="translate(-358.66 -623.387)" fill="#00acb1"/>
+  </g>
+  <path id="Path_226" data-name="Path 226" d="M25.111,8.932c0,.116.006.231.006.348A13.4,13.4,0,0,1,11.762,22.723a8.281,8.281,0,0,1-8.309-8.256,5.115,5.115,0,0,1,5.1-5.132,3.116,3.116,0,0,1,.9.127,4.577,4.577,0,1,0,8.841,1.65c0-.044,0-.087,0-.133a7,7,0,0,0-7.019-6.84A11.31,11.31,0,0,0,0,15.485,18.306,18.306,0,0,0,18.365,33.732,29.616,29.616,0,0,0,47.886,4.021,30.048,30.048,0,0,0,47.6,0L17.991.1A9.457,9.457,0,0,1,25.111,8.932Z" transform="translate(942.414 78.062) rotate(-90)" fill="#00acb1"/>
+  <rect id="Rectangle_75" data-name="Rectangle 75" width="925" height="75" rx="5" transform="translate(32.88 6)" fill="#e4e4e4"/>
+  <path id="Intersection_25" data-name="Intersection 25" d="M0,10.832A7,7,0,0,1,6.84,3.812h.133a4.577,4.577,0,1,1-1.65,8.841,3.132,3.132,0,0,0-.128.9,5.115,5.115,0,0,0,5.132,5.1,8.281,8.281,0,0,0,8.257-8.309A13.368,13.368,0,0,0,13.65,0h15.7a29.925,29.925,0,0,1,.246,3.74A18.307,18.307,0,0,1,11.346,22.1H11.31A11.312,11.312,0,0,1,0,10.832Z" transform="translate(946.552 55.958)" fill="#00acb1" opacity="0.5"/>
+  <path id="Intersection_29" data-name="Intersection 29" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(729.88 2.5)" fill="#00acb1" opacity="0.5"/>
+  <path id="Intersection_36" data-name="Intersection 36" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(749.88 2.5)" fill="#00acb1" opacity="0.5"/>
+  <path id="Intersection_37" data-name="Intersection 37" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(769.88 2.5)" fill="#00acb1" opacity="0.5"/>
+  <g id="Group_69" data-name="Group 69" transform="translate(0 43.5)" opacity="0.5">
+    <ellipse id="Ellipse_17-2" data-name="Ellipse 17" cx="4.048" cy="4.048" rx="4.048" ry="4.048" transform="translate(28.11 13.886)" fill="#00acb1"/>
+    <path id="Path_156-2" data-name="Path 156" d="M458.149,631.033q1.015.1,2.013.242c0-.021.007-.041.009-.062a2.04,2.04,0,0,0-4.062-.382c0,.021,0,.042,0,.063Q457.123,630.938,458.149,631.033Z" transform="translate(-416.861 -626.729)" fill="#00acb1"/>
+    <path id="Path_157-2" data-name="Path 157" d="M471.707,633.562c.006-.041.014-.082.018-.124a2.039,2.039,0,0,0-3.995-.735A39.108,39.108,0,0,1,471.707,633.562Z" transform="translate(-423.803 -628.058)" fill="#00acb1"/>
+    <path id="Path_158-2" data-name="Path 158" d="M482.947,636.863a2.039,2.039,0,0,0-3.851-1.335A38.7,38.7,0,0,1,482.947,636.863Z" transform="translate(-430.592 -629.854)" fill="#00acb1"/>
+    <path id="Path_159-2" data-name="Path 159" d="M493.771,641.534a2.038,2.038,0,0,0-3.66-1.794A38.771,38.771,0,0,1,493.771,641.534Z" transform="translate(-437.171 -632.509)" fill="#00acb1"/>
+    <path id="Path_160-2" data-name="Path 160" d="M503.961,647.6a2.038,2.038,0,0,0-3.411-2.22A38.9,38.9,0,0,1,503.961,647.6Z" transform="translate(-443.405 -636.053)" fill="#00acb1"/>
+    <path id="Path_161-2" data-name="Path 161" d="M513.395,654.6a2.039,2.039,0,0,0-3.126-2.619A39.2,39.2,0,0,1,513.395,654.6Z" transform="translate(-449.21 -640.079)" fill="#00acb1"/>
+    <path id="Path_162-2" data-name="Path 162" d="M521.961,662.849a2.039,2.039,0,0,0-2.787-2.973A39.245,39.245,0,0,1,521.961,662.849Z" transform="translate(-454.529 -644.927)" fill="#00acb1"/>
+    <path id="Path_163-2" data-name="Path 163" d="M433.523,660.886a37.61,37.61,0,0,0-37.24-32.023v-5.477a37.561,37.561,0,0,0-37.623,37.5h74.863Zm-56.1-17.276a10.242,10.242,0,1,1,10.242,10.209A10.226,10.226,0,0,1,377.419,643.61Z" transform="translate(-358.66 -623.387)" fill="#00acb1"/>
+  </g>
+  <path id="Intersection_38" data-name="Intersection 38" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(261.88 84.5) rotate(180)" fill="#00acb1" opacity="0.5"/>
+  <path id="Intersection_39" data-name="Intersection 39" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(241.88 84.5) rotate(180)" fill="#00acb1" opacity="0.5"/>
+  <path id="Intersection_40" data-name="Intersection 40" d="M111,3.5h12a6,6,0,1,1-12,0Z" transform="translate(221.88 84.5) rotate(180)" fill="#00acb1" opacity="0.5"/>
+</svg>
