@@ -15,24 +15,42 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
 
   @keyframes blue-routine {
     0% {
-      transform: translate(0, 0);
+      width: 100vw;
+      height: 127vh;
+      top: -24.7vh;
+      left: 0;
     }
     50% {
-      transform: translate(0, 3rem);
+      width: 108.8vw;
+      height: 137vh;
+      top: 10.6vh;
+      left: -8.8vw;
     }
     to {
-      transform: translate(0, 0);
+      width: 100vw;
+      height: 127vh;
+      top: -24.7vh;
+      left: 0;
     }
   }
   @keyframes pink-routine {
     0% {
-      transform: translate(0, 2rem);
+      width: 109.6vw;
+      height: 128vh;
+      top: -8vh;
+      left: -2.2vw;
     }
     50% {
-      transform: translate(0, -3rem);
+      width: 100vw;
+      height: 117vh;
+      top: -36vh;
+      left: 0;
     }
     to {
-      transform: translate(0, 2rem);
+      width: 109.6vw;
+      height: 128vh;
+      top: -8vh;
+      left: -2.2vw;
     }
   }
 
@@ -40,27 +58,21 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     height: 100%;
     z-index: 1;
     flex: 1;
-    background-color: rgba(34, 34, 34, 0.4);
+    background-color: rgba(34, 34, 34, 0.6);
     transition: opacity 0.6s ease-out;
   }
   img {
     z-index: -1;
     position: absolute;
-    height: auto;
-    height: 100%;
     object-fit: cover;
   }
   img.blue {
     width: calc(100vw + 1.7rem);
-    right: 0;
-    top: 0;
-    animation: blue-routine 20s infinite;
+    animation: blue-routine 20s cubic-bezier(0.55, 1.375, 0.46, -0.48) infinite;
   }
   img.pink {
     width: 100vw;
-    left: -1rem;
-    top: 2rem;
-    animation: pink-routine 20s infinite;
+    animation: pink-routine 20s cubic-bezier(0.55, 1.375, 0.46, -0.48) infinite;
   }
 `
 
