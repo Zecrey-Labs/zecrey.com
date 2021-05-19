@@ -212,7 +212,7 @@ export const Section3 = observer(() => {
   }, [])
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
-      <h2>What Zecrey special</h2>
+      <h2>Why Zecrey special</h2>
       <div className='content'>
         <div className='block'>
           <Img className='image1' src={'/section3/image1.svg'} alt='' />

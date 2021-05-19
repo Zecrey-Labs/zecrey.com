@@ -113,9 +113,9 @@ const blocks = [
   },
   {
     image: '/section4/image2.svg',
-    title: 'Fast Transactions',
+    title: 'Low-Latency Transactions',
     text:
-      'Private transactions are computed in seconds on all devices, and our rollup service saves gas and settles in minutes.'
+      'Private transactions are completed in seconds on Layer 2 and will be settled in minutes on Layer 1.'
   },
   {
     image: '/section4/image3.svg',
