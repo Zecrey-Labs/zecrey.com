@@ -27,7 +27,7 @@ jobs:
           node-version: '14.x'
 
       - name: Installing my packages
-        run: yarn
+        run: yarn install --prefer-offline --frozen-lockfile
 
       - name: Build my App
         run: yarn build && yarn export && touch ./out/.nojekyll
