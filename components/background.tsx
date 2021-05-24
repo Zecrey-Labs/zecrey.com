@@ -74,6 +74,11 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     width: 100vw;
     animation: pink-routine 20s cubic-bezier(0.55, 1.375, 0.46, -0.48) infinite;
   }
+
+  @media (max-width: 760px) {
+    background-color: ${({ theme }) =>
+      theme === 'dark' ? 'rgb(34, 34, 34)' : 'white'};
+  }
 `
 
 export const Background = observer(() => {

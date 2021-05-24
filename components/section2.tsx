@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from './img'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
+import { px2vw } from '@/utils'
 
 const Style = styled.div`
   z-index: 1;
@@ -158,92 +159,104 @@ const Style = styled.div`
     position: absolute;
     top: 5.88rem;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 760px) {
+    width: 100%;
+    height: calc(100vh - 40px);
+    box-sizing: border-box;
+    height: calc(100vh - 40px);
+    padding: 40px 33px 0 33px;
+    padding: ${px2vw(40, 320)} ${px2vw(33, 320)} 0 ${px2vw(33, 320)};
     div.content {
       width: 100%;
-      box-sizing: border-box;
-      padding-left: 30px;
-      padding-right: 30px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
       h2 {
         width: 100%;
-        max-width: 25em;
-        font-size: 20px;
-        line-height: 25px;
         height: auto;
-        padding: 10px;
+        margin: 0;
+        margin-bottom: ${px2vw(33, 320)};
+        font-family: Lexend;
+        font-style: normal;
+        font-weight: bold;
+        font-size: ${px2vw(26, 320)};
+        line-height: ${px2vw(32, 320)};
+        text-align: center;
+        color: #171717;
+        background: none;
         img {
-          &.badge1,
-          &.badge2 {
-            left: -16px;
-            height: 30px;
-          }
-          &.badge3,
-          &.badge4 {
-            right: -12px;
-          }
-          &.badge3 {
-            height: 30px;
-          }
-          &.badge4 {
-            height: 14px;
-          }
-          &.circle1,
-          &.halfcircle1,
-          &.circle2,
-          &.halfcircle2 {
-            width: 45px;
-          }
-          &.circle1,
-          &.halfcircle1 {
-            right: 24px;
-          }
-          &.circle2,
-          &.halfcircle2 {
-            left: 62px;
-          }
+          display: none;
         }
       }
       div.text {
-        padding: 20px;
-        p:nth-of-type(1),
-        p:nth-of-type(2) {
-          width: 100%;
-          font-size: 16px;
-          line-height: 20px;
+        padding: 0;
+        p {
+          font-size: ${px2vw(10, 320)};
+          line-height: ${px2vw(16, 320)};
+          color: #000000;
+          border-left: 5px solid #cceeef;
+          padding-left: ${px2vw(11, 320)};
+          margin-bottom: ${px2vw(31, 320)};
+          width: auto !important;
         }
       }
       ul.features {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: block;
+        position: relative;
+        height: ${px2vw(262, 320)};
         li {
-          position: static;
-          box-sizing: content-box;
-          width: 200px;
-          height: 90px;
-          padding: 16px 0;
+          position: absolute;
+          width: ${px2vw(115, 320)};
+          height: ${px2vw(126, 320)};
+          background: #f4f4f4;
+          border: 1px solid #d7d7d7;
+          border-radius: ${px2vw(5, 320)};
+          box-sizing: border-box;
+          padding: 0;
           img {
-            height: 58px;
-            margin-bottom: 16px;
+            height: ${px2vw(70, 320)};
+            width: auto;
+            margin-top: ${px2vw(16, 320)};
+            margin-bottom: ${px2vw(15, 320)};
           }
           span {
-            font-size: 16px;
-            line-height: 19px;
+            font-family: Lexend;
+            font-style: normal;
+            font-weight: bold;
+            font-size: ${px2vw(12, 320)};
+            line-height: ${px2vw(15, 320)};
+            color: #949494;
+          }
+          &:nth-of-type(1) {
+            top: ${px2vw(20, 320)};
+            right: unset;
+            left: 0;
+            bottom: unset;
+            z-index: 1;
+          }
+          &:nth-of-type(2) {
+            top: 0;
+            right: 0;
+            left: unset;
+            bottom: unset;
+          }
+          &:nth-of-type(3) {
+            top: unset;
+            right: ${px2vw(35, 320)};
+            left: unset;
+            bottom: 0;
           }
         }
       }
     }
     img.big {
-      display: none;
-    }
-    div.anchor {
-      position: absolute;
-      top: 10rem;
+      &:nth-of-type(1) {
+        width: ${px2vw(160, 320)};
+        height: auto;
+        left: -${px2vw(10, 320)};
+      }
+      &:nth-of-type(2) {
+        width: auto;
+        height: ${px2vw(127, 320)};
+        top: ${px2vw(66, 320)};
+      }
     }
   }
 `

@@ -179,6 +179,7 @@ const Style = styled.div<{ active: boolean }>`
   @media (max-width: 760px) {
     padding-top: 102px;
     height: calc(100vh - 40px);
+    box-sizing: border-box;
     min-height: auto;
     h2,
     div.banner,

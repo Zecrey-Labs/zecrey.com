@@ -149,18 +149,27 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   @media (max-width: 760px) {
     height: 40px;
     min-height: auto;
+    box-shadow: none;
+    &.light {
+      background-color: white;
+      border-bottom: 1px solid #eaeaea;
+    }
+    &.dark {
+      background-color: #2c2c2c;
+    }
     div.hamburger {
       display: block;
       cursor: pointer;
       position: absolute;
-      top: 15px;
-      right: 20px;
-      padding: 4px;
+      top: 7.5px;
+      right: 15px;
+      padding: 5px;
       transition: background-color 0.2s ease-in-out;
       .barList {
         transition: transform 0.3s ease-in-out;
         .bar {
-          background: #d8d8d8;
+          background-color: ${({ theme }) =>
+            theme === 'dark' ? '#D8D8D8' : '#222222'};
           display: block;
           width: 15px;
           height: 2px;
@@ -172,8 +181,9 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
         }
       }
       &.active {
-        background-color: #444;
-        border-radius: 3px;
+        background: ${({ theme }) =>
+          theme === 'dark' ? 'rgb(75,75,75)' : 'rgb(226,226,226)'};
+        border-radius: 5px;
         .barList {
           transform: rotate(-180deg);
         }
@@ -206,6 +216,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
           display: block;
           padding: 54px 29px 11px 35px;
           li {
+            text-shadow: none;
             box-sizing: border-box;
             height: 33px;
             line-height: 15px;
@@ -215,9 +226,12 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
             font-weight: 500;
             font-size: 12px;
             display: block;
+            color: ${({ theme }) => (theme === 'dark' ? 'white' : 'black')};
             border-bottom: 1px solid
               ${({ theme }) =>
-                theme === 'dark' ? 'rgba(255,255,255,0.5)' : '#0A0A0A'};
+                theme === 'dark'
+                  ? 'rgba(255,255,255,0.5)'
+                  : 'rgba(10,10,10,0.5)'};
             &:last-of-type {
               border-bottom: none;
             }
