@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
+import { px2vw } from '@/utils'
 
 const Style = styled.div`
   padding: 0 0.3rem;
@@ -156,37 +157,84 @@ const Style = styled.div`
     }
   }
 
-  @media (max-width: 685px) {
+  @media (max-width: 760px) {
+    padding: 0 ${px2vw(20, 320)} 0 ${px2vw(32, 320)};
     h2 {
-      font: normal normal bold 40px/40px Lexend;
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: bold;
+      font-size: ${px2vw(26, 320)};
+      line-height: ${px2vw(32, 320)};
+      text-align: center;
+      color: #ffffff;
+      margin-top: ${px2vw(40, 320)};
+      margin-bottom: ${px2vw(30, 320)};
+      width: ${px2vw(166, 320)};
     }
     div.content {
       div.block {
-        display: none;
-      }
-      div.textList {
-        div.text {
-          margin: 20px;
+        width: ${px2vw(62, 320)};
+        height: ${px2vw(360, 320)};
+        margin-right: ${px2vw(35, 320)};
+        img.image1 {
+          height: ${px2vw(72, 320)};
+          width: auto;
+          left: 2 ${px2vw(2.5, 320)};
+          top: ${px2vw(7, 320)};
+          transform: rotateY(180deg);
+        }
+        img.image2 {
+          width: ${px2vw(84, 320)};
+          height: auto;
+          top: ${px2vw(142, 320)};
+          right: ${px2vw(-31, 320)};
+        }
+        img.image3 {
+          width: ${px2vw(48, 320)};
+          height: auto;
+          left: ${px2vw(5, 320)};
+          bottom: ${px2vw(48, 320)};
+          padding: ${px2vw(18, 320)} ${px2vw(14, 320)};
+          box-sizing: content-box;
+          background: #424242;
+          mix-blend-mode: normal;
+          opacity: 0.79;
+          backdrop-filter: blur(3px) brightness(110%);
+          border-radius: ${px2vw(5, 320)};
+        }
+        div.bg1 {
+          width: ${px2vw(62, 320)};
+          height: ${px2vw(360, 320)};
+          background: rgba(56, 56, 56, 0.1);
+          backdrop-filter: blur(3px) brightness(110%);
+          border-radius: ${px2vw(2, 320)};
         }
       }
-    }
-  }
-
-  @media (max-width: 443px) {
-    h2 {
-      font: normal normal bold 36px/39px Lexend;
-    }
-    div.text {
-      width: 100%;
-      max-width: 62em;
-    }
-    div.anchor {
-      top: 8rem;
-    }
-  }
-  @media (max-width: 800px) and (min-height: 1000px) {
-    div.anchor {
-      top: 10rem;
+      div.textList {
+        padding-top: ${px2vw(12, 320)};
+        div.text {
+          margin-bottom: ${px2vw(29, 320)};
+          h3 {
+            font-family: Lexend;
+            font-style: normal;
+            font-weight: 800;
+            font-size: ${px2vw(16, 320)};
+            line-height: ${px2vw(20, 320)};
+            color: #2ad4d9;
+            width: ${px2vw(110, 320)};
+            padding-left: ${px2vw(11, 320)};
+          }
+          p {
+            font-size: ${px2vw(10, 320)};
+            line-height: ${px2vw(12, 320)};
+            color: #ffffff;
+            mix-blend-mode: normal;
+            opacity: 0.6;
+            border-left: 1px solid rgba(166, 166, 166, 0.3);
+            padding-left: ${px2vw(11, 320)};
+          }
+        }
+      }
     }
   }
 `
