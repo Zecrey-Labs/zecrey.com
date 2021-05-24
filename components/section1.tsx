@@ -177,7 +177,8 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
   @media (max-width: 760px) {
-    padding-top: ${px2vw(162, 320)};
+    padding-top: ${px2vw(102, 320)};
+    position: relative;
     height: calc(100vh - 40px);
     min-height: 600px;
     box-sizing: border-box;
