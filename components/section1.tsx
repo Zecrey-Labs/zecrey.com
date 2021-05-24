@@ -30,7 +30,7 @@ const Button = styled.button`
   border: none;
 `
 
-const Style = styled.div`
+const Style = styled.div<{ active: boolean }>`
   width: 100vw;
   min-height: calc(100vh - 2rem);
   overflow: hidden;
@@ -173,23 +173,64 @@ const Style = styled.div`
       margin-top: 94px;
     }
   }
-  @media (max-width: 560px) {
+  @media (max-width: 760px) {
+    padding-top: 102px;
+    height: calc(100vh - 40px);
+    min-height: auto;
+    transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
+    transition: transform 0.2s ease-in-out;
     h2 {
-      margin-top: 1.28rem;
+      width: 181px;
+      height: 23px;
+      box-sizing: border-box;
+      padding-top: 3px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    div.banner {
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: #ffffff;
+      margin-top: 11px;
     }
     div.email {
-      width: calc(100% - 20px);
-      justify-content: center;
+      display: block;
+      margin-top: 11px;
       input {
-        flex: 1;
-        max-width: 300px;
+        width: 181px;
+        height: 24px;
+        border: 1px solid #2ad4d9;
+        padding: 2px 15px 5px 14px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #e4e4e4;
+        transform: none;
       }
       img {
         display: none;
       }
       button {
-        position: static;
-        margin-left: 10px;
+        width: auto;
+        height: 20px;
+        display: block;
+        transition: opacity 0.2s ease;
+        opacity: ${({ active }) => (active ? '1' : '0')};
+        transform: none;
+        display: block;
+        position: relative;
+        margin: 11px auto 0;
+        background: #2ad4d9;
+        border-radius: 5px;
+        font-family: Lexend;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
       }
       &:hover {
         input {
@@ -207,6 +248,9 @@ const Style = styled.div`
           transform: none;
         }
       }
+    }
+    > img {
+      display: none;
     }
   }
 `
@@ -233,7 +277,7 @@ export const Section1 = observer(() => {
 
   const inputElement = React.useRef(null)
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }} active={active}>
       {message && <div className='message'>{message}</div>}
       <h2>
         Zecrey Protocol
