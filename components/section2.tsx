@@ -161,13 +161,13 @@ const Style = styled.div`
   }
   @media (max-width: 760px) {
     width: 100%;
-    height: calc(100vh - 40px);
     box-sizing: border-box;
-    height: calc(100vh - 40px);
-    padding: 40px 33px 0 33px;
-    padding: ${px2vw(40, 320)} ${px2vw(33, 320)} 0 ${px2vw(33, 320)};
+    min-height: calc(100vh - 40px);
+    padding: ${px2vw(80, 320)} ${px2vw(33, 320)} ${px2vw(97, 320)}
+      ${px2vw(33, 320)};
     div.content {
       width: 100%;
+      padding-bottom: 0;
       h2 {
         width: 100%;
         height: auto;
@@ -210,6 +210,7 @@ const Style = styled.div`
           border-radius: ${px2vw(5, 320)};
           box-sizing: border-box;
           padding: 0;
+          margin: 0;
           img {
             height: ${px2vw(70, 320)};
             width: auto;
@@ -250,7 +251,7 @@ const Style = styled.div`
       &:nth-of-type(1) {
         width: ${px2vw(160, 320)};
         height: auto;
-        left: -${px2vw(10, 320)};
+        left: -${px2vw(26, 320)};
       }
       &:nth-of-type(2) {
         width: auto;

@@ -177,7 +177,7 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
   @media (max-width: 760px) {
-    padding-top: ${px2vw(102, 320)};
+    padding-top: ${px2vw(162, 320)};
     height: calc(100vh - 40px);
     box-sizing: border-box;
     min-height: auto;
@@ -189,6 +189,7 @@ const Style = styled.div<{ active: boolean }>`
     }
     transition: transform 0.2s ease-in-out;
     h2 {
+      margin-top: 0;
       width: ${px2vw(181, 320)};
       height: ${px2vw(23, 320)};
       box-sizing: border-box;
