@@ -10,11 +10,10 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 633px) {
-    padding: 0 42px;
-  }
-  @media (max-width: 632px) {
-    padding: 0 10px;
+  padding: 0 42px;
+  @media (max-width: 760px) {
+    padding: 0 37px;
+    margin-top: 40px;
   }
   > div {
     display: flex;
@@ -59,45 +58,109 @@ const Style = styled.div`
         }
       }
     }
-    @media (max-width: 1000px) {
-      div.block {
-        width: auto;
-        div.image {
-        }
-        div.text {
-          width: 42em;
-          h3 {
-            font: normal normal bold 26px/26px Lexend;
-          }
-          p {
-            font: normal normal normal 22px/25px IBM Plex Sans;
-          }
-        }
-      }
-    }
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       flex-direction: column;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0;
       div.block {
-        width: auto;
-        padding: 11px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding: 0;
+        margin-bottom: 30px;
+        &.image1 {
+          padding-top: 6px;
+          div.image {
+            img {
+              height: 42px;
+              width: auto;
+              left: 12px;
+            }
+          }
+        }
+        &.image2 {
+          padding-top: 20px;
+          div.image {
+            img {
+              height: 85px;
+              width: auto;
+              left: 20px;
+            }
+          }
+        }
+        &.image3 {
+          padding-top: 3px;
+          div.image {
+            img {
+              height: 49px;
+              width: auto;
+              left: 16px;
+            }
+          }
+        }
+        &.image4 {
+          padding-top: 10px;
+          div.image {
+            img {
+              left: 12px;
+              height: 62px;
+              width: auto;
+            }
+          }
+        }
+
         div.image {
-          width: 40px;
-          height: 40px;
-          margin-right: 10px;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          margin: 0;
           img {
-            right: 0;
+            position: absolute;
             top: 0;
+            max-width: none;
+            max-height: none;
             left: auto;
             bottom: auto;
           }
         }
         div.text {
-          width: 42em;
+          width: 100%;
           h3 {
-            font: normal normal bold 26px/26px Lexend;
+            margin-left: auto;
+            margin-bottom: 0;
+            margin-right: 24px;
+            font-family: Lexend;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: right;
+            color: #2ad4d9;
+            width: 123px;
           }
           p {
-            font: normal normal normal 22px/25px IBM Plex Sans;
+            margin-top: -10px;
+            padding: 17px 10px 17px 12px;
+            font-size: 10px;
+            line-height: 12px;
+            color: #ffffff;
+            background: #2d2d2d;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            z-index: -1;
+            &::before {
+              content: ' ';
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 0;
+              box-shadow: 0px 0px 35px 33px rgb(0, 162, 168);
+            }
           }
         }
       }
@@ -109,25 +172,29 @@ const blocks = [
   {
     image: '/section4/image1.svg',
     title: 'Zecrey Protocol',
-    text: 'Bring anonymity and privacy for account-based transactions.'
+    text: 'Bring anonymity and privacy for account-based transactions.',
+    class: 'image1'
   },
   {
     image: '/section4/image2.svg',
     title: 'Low-Latency Transactions',
     text:
-      'Private transactions are completed in seconds on Layer 2 and will be settled in minutes on Layer 1.'
+      'Private transactions are completed in seconds on Layer 2 and will be settled in minutes on Layer 1.',
+    class: 'image2'
   },
   {
     image: '/section4/image3.svg',
     title: 'Privacy Bridges',
     text:
-      'Use customize Sigma protocol for users to make it easy and safe to swap assets between different blockchains with privacy.'
+      'Use customize Sigma protocol for users to make it easy and safe to swap assets between different blockchains with privacy.',
+    class: 'image3'
   },
   {
     image: '/section4/image4.svg',
     title: 'Privacy Plug-in',
     text:
-      'Providing Zecrey extensions for Layer1 Dapp to provide privacy for transactions.'
+      'Providing Zecrey extensions for Layer1 Dapp to provide privacy for transactions.',
+    class: 'image4'
   }
 ]
 
@@ -138,9 +205,9 @@ export const Section4 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div>
         {blocks.map(block => (
-          <div className='block' key={block.title}>
+          <div className={`block ${block.class}`} key={block.title}>
             <div className='image'>
-              <Img src={block.image} />
+              <Img src={block.image} className={block.class} />
             </div>
             <div className='text'>
               <h3>{block.title}</h3>
