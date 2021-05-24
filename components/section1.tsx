@@ -347,7 +347,9 @@ export const Section1 = observer(() => {
             inputElement.current.select()
           }}
           onBlur={() => {
-            setActive(false)
+            setTimeout(() => {
+              setActive(false)
+            }, 1)
           }}
         />
         <Img src={'/section1/cute.svg'} />
