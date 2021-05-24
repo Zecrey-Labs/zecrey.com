@@ -151,6 +151,9 @@ const Style = styled.div<{ active: boolean }>`
     height: 0.52rem;
     margin-top: 1.41rem;
   }
+  div.nextSectionGuide {
+    display: none;
+  }
   @media (max-width: 1279px) {
     div.email {
       input {
@@ -177,7 +180,12 @@ const Style = styled.div<{ active: boolean }>`
     padding-top: 102px;
     height: calc(100vh - 40px);
     min-height: auto;
-    transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
+    h2,
+    div.banner,
+    div.email,
+    > img {
+      transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
+    }
     transition: transform 0.2s ease-in-out;
     h2 {
       width: 181px;
@@ -252,6 +260,41 @@ const Style = styled.div<{ active: boolean }>`
     > img {
       display: none;
     }
+    div.nextSectionGuide {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 40px;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-family: Lexend;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      @keyframes slideshow {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(5px);
+        }
+      }
+      div.triangle {
+        display: block;
+        &::before {
+          content: '';
+          display: block;
+          margin-top: 10px;
+          width: 0;
+          height: 0;
+          border: 8px solid transparent;
+          border-top-color: #ddd;
+          animation: slideshow 0.5s ease-in-out alternate infinite;
+        }
+      }
+    }
   }
 `
 
@@ -317,6 +360,10 @@ export const Section1 = observer(() => {
         </Button>
       </div>
       <Img src={'/logo1.svg'} alt='logo' />
+      <div className='nextSectionGuide'>
+        <p>Slide to View More</p>
+        <div className='triangle'></div>
+      </div>
     </Style>
   )
 })
