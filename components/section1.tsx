@@ -181,7 +181,6 @@ const Style = styled.div<{ active: boolean }>`
     height: calc(100vh - 40px);
     min-height: 600px;
     box-sizing: border-box;
-    min-height: auto;
     h2,
     div.banner,
     div.email,
