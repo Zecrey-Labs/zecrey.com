@@ -172,6 +172,8 @@ const Style = styled.div`
               position: absolute;
               left: 0;
               top: 0;
+              width: 1px;
+              height: 1px;
               box-shadow: 0 0 ${px2vw(35, 320)} ${px2vw(33, 320)}
                 rgb(0, 162, 168);
             }
