@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
+import { px2vw } from '@/utils'
 
 const Style = styled.div`
   position: relative;
@@ -89,31 +90,31 @@ const Style = styled.div`
       div.row1 {
         background-color: rgb(34, 34, 34);
         > div {
-          margin: 0 36px;
+          margin: 0 ${px2vw(36, 320)};
           display: flex;
           flex-direction: row;
           align-items: flex-end;
           justify-content: space-between;
-          padding-bottom: 12px;
+          padding-bottom: ${px2vw(12, 320)};
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           div.left {
-            width: 97px;
+            width: ${px2vw(97, 320)};
             img {
               width: 100%;
               height: auto;
-              margin-bottom: 16px;
+              margin-bottom: ${px2vw(16, 320)};
             }
             ul.nav {
               li {
                 font-family: Lexend;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 12px;
-                line-height: 15px;
+                font-size: ${px2vw(12, 320)};
+                line-height: ${px2vw(15, 320)};
                 color: #00adb1;
-                margin-bottom: 10px;
+                margin-bottom: ${px2vw(10, 320)};
                 &:last-of-type {
-                  margin-bottom: 2px;
+                  margin-bottom: ${px2vw(2, 320)};
                 }
               }
             }
@@ -121,11 +122,11 @@ const Style = styled.div`
           div.right {
             display: flex;
             flex-direction: row;
-            font-size: 16px;
+            font-size: ${px2vw(16, 320)};
             svg {
               font-size: 0.38rem;
               color: #00acb1;
-              margin-left: 20px;
+              margin-left: ${px2vw(20, 320)};
             }
           }
         }
@@ -133,10 +134,11 @@ const Style = styled.div`
       div.row2 {
         font-family: Lexend;
         text-align: center;
-        font-size: 9px;
-        line-height: 11px;
+        font-size: ${px2vw(9, 320)};
+        line-height: ${px2vw(11, 320)};
         color: rgba(255, 255, 255, 0.6);
-        padding: 9px 36px 40px 36px;
+        padding: ${px2vw(9, 320)} ${px2vw(36, 320)} ${px2vw(40, 320)}
+          ${px2vw(36, 320)};
         background-color: rgb(34, 34, 34);
       }
     }
