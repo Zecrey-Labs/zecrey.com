@@ -188,6 +188,9 @@ const Style = styled.div<{ active: boolean }>`
     > img {
       transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
     }
+    div.message {
+      top: 40px;
+    }
     transition: transform 0.2s ease-in-out;
     h2 {
       margin-top: 0;
