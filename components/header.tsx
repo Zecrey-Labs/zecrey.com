@@ -8,7 +8,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 import Img from './img'
 
-const Style = styled.div`
+const Style = styled.div<{ theme: 'dark' | 'light' }>`
   width: 100vw;
   height: 1.1rem;
   min-height: 64px;
@@ -22,6 +22,10 @@ const Style = styled.div`
   backdrop-filter: blur(2px);
   transition: background-color 0.3s ease-out;
   box-shadow: 0px 3px 12px #00000040;
+
+  div.hamburger {
+    display: none;
+  }
 
   &.dark {
     background-color: rgba(47, 47, 47, 0.7);
@@ -136,30 +140,92 @@ const Style = styled.div`
       margin-right: 25px;
     }
   }
-  @media (max-width: 760px) {
-    div.left {
-      flex: 1;
-    }
+
+  @media (max-width: 870px) {
     div.right {
       display: none;
     }
   }
-  @media (max-width: 560px) {
+  @media (max-width: 760px) {
+    height: 40px;
+    min-height: auto;
+    div.hamburger {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 4px;
+      transition: background-color 0.2s ease-in-out;
+      .barList {
+        transition: transform 0.3s ease-in-out;
+        .bar {
+          background: #d8d8d8;
+          display: block;
+          width: 15px;
+          height: 2px;
+          margin-bottom: 2px;
+          transition: all 0.2s ease-in-out;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &.active {
+        background-color: #444;
+        border-radius: 3px;
+        .barList {
+          transform: rotate(-180deg);
+        }
+      }
+    }
     div.left {
-      justify-content: space-evenly;
-      > img {
-        flex: 1;
-        margin: 0;
-        margin-left: 10px;
+      height: 40px;
+      flex: 1;
+      display: block;
+      img {
+        display: block;
+        height: 24px;
+        display: block;
+        min-height: auto;
+        margin: 8px 0 8px 20px;
       }
       nav {
-        flex: 3;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease-in-out;
+        z-index: -1;
+        width: 100%;
+        background: ${({ theme }) => (theme === 'dark' ? '#2C2C2C' : 'white')};
+        display: block;
         ul {
-          flex: 1;
-          justify-content: space-around;
+          top: 0;
+          display: block;
+          padding: 54px 29px 11px 35px;
           li {
+            box-sizing: border-box;
+            height: 33px;
+            line-height: 15px;
+            padding: 7px 0 10px 0;
+            font-family: Lexend;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            display: block;
+            border-bottom: 1px solid
+              ${({ theme }) =>
+                theme === 'dark' ? 'rgba(255,255,255,0.5)' : '#0A0A0A'};
+            &:last-of-type {
+              border-bottom: none;
+            }
             margin: 0;
           }
+        }
+        &.active {
+          transform: translateY(0);
         }
       }
     }
@@ -168,19 +234,35 @@ const Style = styled.div`
 
 export const Header = observer(() => {
   const store = useStore()
+  const [active, setActive] = React.useState(false)
 
   return (
-    <Style className={store.theme}>
+    <Style theme={store.theme} className={store.theme}>
       <div className='left'>
         <Img className='dark' src={'/logo1.svg'} alt='logo' />
         <Img className='light' src={'/logo2.svg'} alt='logo' />
-        <nav>
-          <ul>
-            <li>Technology</li>
-            <li>Community</li>
-            <li>App</li>
+        <nav className={active ? 'active' : ''}>
+          <ul
+            onClick={() => {
+              setActive(false)
+            }}>
+            <li>White Paper</li>
+            <li>Team</li>
+            <li>Features</li>
+            <li>About</li>
           </ul>
         </nav>
+      </div>
+      <div
+        className={`hamburger ${active ? 'active' : ''}`}
+        onClick={() => {
+          setActive(!active)
+        }}>
+        <div className='barList'>
+          <span className='bar' key={1}></span>
+          <span className='bar' key={2}></span>
+          <span className='bar' key={3}></span>
+        </div>
       </div>
       <div className='right'>
         <FontAwesomeIcon icon={['fab', 'twitter']} />
