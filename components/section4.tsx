@@ -142,6 +142,17 @@ const Style = styled.div`
             text-align: right;
             color: #2ad4d9;
             width: ${px2vw(123, 320)};
+            position: relative;
+            &::before {
+              content: ' ';
+              width: 3px;
+              height: 10px;
+              background: #00adb1;
+              display: block;
+              position: absolute;
+              right: -11px;
+              bottom: 5px;
+            }
           }
           p {
             margin-top: -${px2vw(10, 320)};
