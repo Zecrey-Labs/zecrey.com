@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
+import { px2vw } from '@/utils'
 
 const Style = styled.div`
   width: 100vw;
@@ -68,43 +69,43 @@ const Style = styled.div`
         box-sizing: border-box;
         position: relative;
         padding: 0;
-        margin-bottom: 30px;
+        margin-bottom: ${px2vw(30, 320)};
         &.image1 {
-          padding-top: 6px;
+          padding-top: ${px2vw(6, 320)};
           div.image {
             img {
-              height: 42px;
+              height: ${px2vw(42, 320)};
               width: auto;
-              left: 12px;
+              left: ${px2vw(12, 320)};
             }
           }
         }
         &.image2 {
-          padding-top: 20px;
+          padding-top: ${px2vw(20, 320)};
           div.image {
             img {
-              height: 85px;
+              height: ${px2vw(85, 320)};
               width: auto;
-              left: 20px;
+              left: ${px2vw(20, 320)};
             }
           }
         }
         &.image3 {
-          padding-top: 3px;
+          padding-top: ${px2vw(3, 320)};
           div.image {
             img {
-              height: 49px;
+              height: ${px2vw(49, 320)};
               width: auto;
-              left: 16px;
+              left: ${px2vw(16, 320)};
             }
           }
         }
         &.image4 {
-          padding-top: 10px;
+          padding-top: ${px2vw(10, 320)};
           div.image {
             img {
-              left: 12px;
-              height: 62px;
+              left: ${px2vw(12, 320)};
+              height: ${px2vw(62, 320)};
               width: auto;
             }
           }
@@ -132,24 +133,25 @@ const Style = styled.div`
           h3 {
             margin-left: auto;
             margin-bottom: 0;
-            margin-right: 24px;
+            margin-right: ${px2vw(24, 320)};
             font-family: Lexend;
             font-style: normal;
             font-weight: 800;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: ${px2vw(18, 320)};
+            line-height: ${px2vw(22, 320)};
             text-align: right;
             color: #2ad4d9;
-            width: 123px;
+            width: ${px2vw(123, 320)};
           }
           p {
-            margin-top: -10px;
-            padding: 17px 10px 17px 12px;
-            font-size: 10px;
-            line-height: 12px;
+            margin-top: -${px2vw(10, 320)};
+            padding: ${px2vw(17, 320)} ${px2vw(10, 320)} ${px2vw(17, 320)}
+              ${px2vw(12, 320)};
+            font-size: ${px2vw(10, 320)};
+            line-height: ${px2vw(12, 320)};
             color: #ffffff;
             background: #2d2d2d;
-            border-radius: 4px;
+            border-radius: ${px2vw(4, 320)};
             position: relative;
             overflow: hidden;
             z-index: -1;
@@ -159,7 +161,8 @@ const Style = styled.div`
               position: absolute;
               left: 0;
               top: 0;
-              box-shadow: 0px 0px 35px 33px rgb(0, 162, 168);
+              box-shadow: 0 0 ${px2vw(35, 320)} ${px2vw(33, 320)}
+                rgb(0, 162, 168);
             }
           }
         }
