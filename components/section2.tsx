@@ -285,7 +285,7 @@ export const Section2 = observer(() => {
     <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
       <div className='content'>
         <h2>
-          <span>Keep Privacy in a Smart Contract World</span>
+          <span>Keep Privacy in Smart Contract World</span>
           <Img className='badge1' src={'/section2/badge1.svg'} alt='' />
           <Img className='badge2' src={'/section2/badge2.svg'} alt='' />
           <Img className='badge3' src={'/section2/badge3.svg'} alt='' />

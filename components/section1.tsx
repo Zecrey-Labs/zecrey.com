@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
-import { validateEmail } from '@/utils'
+import { validateEmail, px2vw } from '@/utils'
 
 const InputEmail = styled.input`
   display: block;
@@ -177,7 +177,7 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
   @media (max-width: 760px) {
-    padding-top: 102px;
+    padding-top: ${px2vw(102, 320)};
     height: calc(100vh - 40px);
     box-sizing: border-box;
     min-height: auto;
@@ -189,33 +189,34 @@ const Style = styled.div<{ active: boolean }>`
     }
     transition: transform 0.2s ease-in-out;
     h2 {
-      width: 181px;
-      height: 23px;
+      width: ${px2vw(181, 320)};
+      height: ${px2vw(23, 320)};
       box-sizing: border-box;
-      padding-top: 3px;
-      font-size: 16px;
-      line-height: 16px;
+      padding-top: ${px2vw(3, 320)};
+      font-size: ${px2vw(16, 320)};
+      line-height: ${px2vw(16, 320)};
     }
     div.banner {
       font-family: Lexend;
       font-style: normal;
       font-weight: bold;
-      font-size: 22px;
-      line-height: 27px;
+      font-size: ${px2vw(22, 320)};
+      line-height: ${px2vw(27, 320)};
       text-align: center;
       color: #ffffff;
-      margin-top: 11px;
+      margin-top: ${px2vw(11, 320)};
     }
     div.email {
       display: block;
-      margin-top: 11px;
+      margin-top: ${px2vw(11, 320)};
       input {
-        width: 181px;
-        height: 24px;
+        width: ${px2vw(181, 320)};
+        height: ${px2vw(24, 320)};
         border: 1px solid #2ad4d9;
-        padding: 2px 15px 5px 14px;
-        font-size: 12px;
-        line-height: 14px;
+        padding: ${px2vw(2, 320)} ${px2vw(15, 320)} ${px2vw(5, 320)}
+          ${px2vw(14, 320)};
+        font-size: ${px2vw(12, 320)};
+        line-height: ${px2vw(14, 320)};
         color: #e4e4e4;
         transform: none;
       }
@@ -224,21 +225,21 @@ const Style = styled.div<{ active: boolean }>`
       }
       button {
         width: auto;
-        height: 20px;
+        height: ${px2vw(20, 320)};
         display: block;
         transition: opacity 0.2s ease;
         opacity: ${({ active }) => (active ? '1' : '0')};
         transform: none;
         display: block;
         position: relative;
-        margin: 11px auto 0;
+        margin: ${px2vw(11, 320)} auto 0;
         background: #2ad4d9;
-        border-radius: 5px;
+        border-radius: ${px2vw(5, 320)};
         font-family: Lexend;
         font-style: normal;
         font-weight: 800;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: ${px2vw(12, 320)};
+        line-height: ${px2vw(15, 320)};
         text-transform: uppercase;
       }
       &:hover {
@@ -266,12 +267,12 @@ const Style = styled.div<{ active: boolean }>`
       display: flex;
       flex-direction: column;
       position: absolute;
-      bottom: 40px;
+      bottom: ${px2vw(40, 320)};
       align-items: center;
       justify-content: center;
       p {
         font-family: Lexend;
-        font-size: 12px;
+        font-size: ${px2vw(12, 320)};
         font-weight: bold;
       }
       @keyframes slideshow {
@@ -279,7 +280,7 @@ const Style = styled.div<{ active: boolean }>`
           transform: translateY(0);
         }
         100% {
-          transform: translateY(5px);
+          transform: translateY(${px2vw(5, 320)});
         }
       }
       div.triangle {
@@ -287,10 +288,10 @@ const Style = styled.div<{ active: boolean }>`
         &::before {
           content: '';
           display: block;
-          margin-top: 10px;
+          margin-top: ${px2vw(10, 320)};
           width: 0;
           height: 0;
-          border: 8px solid transparent;
+          border: ${px2vw(8, 320)} solid transparent;
           border-top-color: #ddd;
           animation: slideshow 0.5s ease-in-out alternate infinite;
         }
