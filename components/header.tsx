@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 import Img from './img'
+import { px2vw } from '@/utils'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   width: 100vw;
@@ -141,11 +142,6 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     }
   }
 
-  @media (max-width: 870px) {
-    div.right {
-      display: none;
-    }
-  }
   @media (max-width: 760px) {
     height: 40px;
     min-height: auto;
@@ -157,37 +153,9 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     &.dark {
       background-color: #2c2c2c;
     }
-    div.hamburger {
-      display: block;
-      cursor: pointer;
-      position: absolute;
-      top: 7.5px;
-      right: 15px;
-      padding: 5px;
-      transition: background-color 0.2s ease-in-out;
-      .barList {
-        transition: transform 0.3s ease-in-out;
-        .bar {
-          background-color: ${({ theme }) =>
-            theme === 'dark' ? '#D8D8D8' : '#222222'};
-          display: block;
-          width: 15px;
-          height: 2px;
-          margin-bottom: 2px;
-          transition: all 0.2s ease-in-out;
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
-      }
-      &.active {
-        background: ${({ theme }) =>
-          theme === 'dark' ? 'rgb(75,75,75)' : 'rgb(226,226,226)'};
-        border-radius: 5px;
-        .barList {
-          transform: rotate(-180deg);
-        }
-      }
+    div.right {
+      margin: 0;
+      font-size: ${px2vw(16, 320)};
     }
     div.left {
       height: 40px;
@@ -255,34 +223,20 @@ export const Header = observer(() => {
       <div className='left'>
         <Img className='dark' src={'/logo1.svg'} alt='logo' />
         <Img className='light' src={'/logo2.svg'} alt='logo' />
-        <nav className={active ? 'active' : ''}>
-          <ul
-            onClick={() => {
-              setActive(false)
-            }}>
-            <li>White Paper</li>
-            <li>Team</li>
-            <li>Features</li>
-            <li>About</li>
-          </ul>
-        </nav>
-      </div>
-      <div
-        className={`hamburger ${active ? 'active' : ''}`}
-        onClick={() => {
-          setActive(!active)
-        }}>
-        <div className='barList'>
-          <span className='bar' key={1}></span>
-          <span className='bar' key={2}></span>
-          <span className='bar' key={3}></span>
-        </div>
       </div>
       <div className='right'>
-        <FontAwesomeIcon icon={['fab', 'twitter']} />
-        <FontAwesomeIcon icon={['fab', 'instagram']} />
-        <FontAwesomeIcon icon={['fab', 'github']} />
-        <FontAwesomeIcon icon={['fab', 'discord']} />
+        <a href='https://twitter.com/zecreyprotocol' target='_blank'>
+          <FontAwesomeIcon icon={['fab', 'twitter']} />
+        </a>
+        <a href='https://medium.com/@zecrey' target='_blank'>
+          <FontAwesomeIcon icon={['fab', 'medium']} />
+        </a>
+        <a href='https://github.com/Zecrey-Labs' target='_blank'>
+          <FontAwesomeIcon icon={['fab', 'github']} />
+        </a>
+        <a href='https://t.me/zecrey' target='_blank'>
+          <FontAwesomeIcon icon={['fab', 'telegram']} />
+        </a>
       </div>
     </Style>
   )

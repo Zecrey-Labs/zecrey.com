@@ -47,11 +47,17 @@ const Style = styled.div`
         display: flex;
         flex-direction: column;
         padding-bottom: 0.1rem;
-        span {
+        > a,
+        > span {
           margin-bottom: 0.2rem;
           text-align: left;
           font: normal normal bold 0.28rem/0.37rem Roboto;
           color: #e4e4e4;
+          cursor: pointer;
+        }
+        > span {
+          color: gray;
+          cursor: not-allowed;
         }
       }
     }
@@ -104,8 +110,10 @@ const Style = styled.div`
               height: auto;
               margin-bottom: ${px2vw(16, 320)};
             }
-            ul.nav {
-              li {
+            div.nav {
+              > a,
+              > span {
+                display: block;
                 font-family: Lexend;
                 font-style: normal;
                 font-weight: 800;
@@ -116,6 +124,10 @@ const Style = styled.div`
                 &:last-of-type {
                   margin-bottom: ${px2vw(2, 320)};
                 }
+              }
+              > span {
+                cursor: not-allowed;
+                color: gray;
               }
             }
           }
@@ -155,20 +167,26 @@ export const Footer = observer(() => {
         <div className='section1'>
           <Img className='icon' src={'/logo1.svg'} alt='' />
           <div className='subsection'>
-            <span>White paper</span>
+            <a href='https://docsend.com/view/ntcsmt7meu84gcqk' target='_blank'>
+              White paper
+            </a>
             <span>App</span>
-          </div>
-          <div className='subsection'>
-            <span>Team</span>
-            <span>About</span>
           </div>
         </div>
         <div className='section2'>
           <div className='subsection1'>
-            <FontAwesomeIcon icon={['fab', 'twitter']} />
-            <FontAwesomeIcon icon={['fab', 'instagram']} />
-            <FontAwesomeIcon icon={['fab', 'github']} />
-            <FontAwesomeIcon icon={['fab', 'discord']} />
+            <a href='https://twitter.com/zecreyprotocol' target='_blank'>
+              <FontAwesomeIcon icon={['fab', 'twitter']} />
+            </a>
+            <a href='https://medium.com/@zecrey' target='_blank'>
+              <FontAwesomeIcon icon={['fab', 'medium']} />
+            </a>
+            <a href='https://github.com/Zecrey-Labs' target='_blank'>
+              <FontAwesomeIcon icon={['fab', 'github']} />
+            </a>
+            <a href='https://t.me/zecrey' target='_blank'>
+              <FontAwesomeIcon icon={['fab', 'telegram']} />
+            </a>
           </div>
           <div className='subsection2'>
             Copyright © 2021 Zecrey. All rights reserved.
@@ -180,18 +198,28 @@ export const Footer = observer(() => {
           <div>
             <div className='left'>
               <Img className='icon' src={'/logo1.svg'} alt='' />
-              <ul className='nav'>
-                <li>White paper</li>
-                <li>App</li>
-                <li>Team</li>
-                <li>About</li>
-              </ul>
+              <div className='nav'>
+                <a
+                  href='https://docsend.com/view/ntcsmt7meu84gcqk'
+                  target='_blank'>
+                  White paper
+                </a>
+                <span>App</span>
+              </div>
             </div>
             <div className='right'>
-              <FontAwesomeIcon icon={['fab', 'twitter']} />
-              <FontAwesomeIcon icon={['fab', 'instagram']} />
-              <FontAwesomeIcon icon={['fab', 'github']} />
-              <FontAwesomeIcon icon={['fab', 'discord']} />
+              <a href='https://twitter.com/zecreyprotocol' target='_blank'>
+                <FontAwesomeIcon icon={['fab', 'twitter']} />
+              </a>
+              <a href='https://medium.com/@zecrey' target='_blank'>
+                <FontAwesomeIcon icon={['fab', 'medium']} />
+              </a>
+              <a href='https://github.com/Zecrey-Labs' target='_blank'>
+                <FontAwesomeIcon icon={['fab', 'github']} />
+              </a>
+              <a href='https://t.me/zecrey' target='_blank'>
+                <FontAwesomeIcon icon={['fab', 'telegram']} />
+              </a>
             </div>
           </div>
         </div>

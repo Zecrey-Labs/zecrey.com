@@ -147,6 +147,11 @@ const Style = styled.div<{ active: boolean }>`
       }
     }
   }
+  > a {
+    font-size: 18px;
+    font-family: Lexend;
+    margin: 50px auto 10px auto;
+  }
   > img {
     height: 0.52rem;
     margin-top: 1.41rem;
@@ -173,7 +178,7 @@ const Style = styled.div<{ active: boolean }>`
     }
     > img {
       height: 35px;
-      margin-top: 94px;
+      margin-top: 34px;
     }
   }
   @media (max-width: 760px) {
@@ -309,7 +314,7 @@ const Style = styled.div<{ active: boolean }>`
 export const Section1 = observer(() => {
   const store = useStore()
 
-  const [email, setEmail] = React.useState('Send us your email address')
+  const [email, setEmail] = React.useState('')
   const [active, setActive] = React.useState(false)
   const [message, setMessage] = React.useState(null)
 
@@ -340,6 +345,7 @@ export const Section1 = observer(() => {
       </div>
       <div className={`email ${active ? 'active' : ''}`}>
         <InputEmail
+          placeholder='Send us your email address'
           ref={inputElement}
           value={email}
           onChange={e => {
@@ -368,6 +374,9 @@ export const Section1 = observer(() => {
           Send
         </Button>
       </div>
+      <a href='https://docsend.com/view/ntcsmt7meu84gcqk' target='_blank'>
+        White Paper
+      </a>
       <Img src={'/logo1.svg'} alt='logo' />
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>
