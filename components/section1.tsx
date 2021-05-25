@@ -181,11 +181,11 @@ const Style = styled.div<{ active: boolean }>`
       margin-top: 34px;
     }
   }
+
   @media (max-width: 760px) {
     padding-top: ${px2vw(102, 320)};
     position: relative;
     height: calc(100vh - 40px);
-    min-height: 600px;
     box-sizing: border-box;
     h2,
     div.banner,
@@ -311,6 +311,11 @@ const Style = styled.div<{ active: boolean }>`
           animation: slideshow 0.5s ease-in-out alternate infinite;
         }
       }
+    }
+  }
+  @media (max-height: 500px) {
+    div.nextSectionGuide {
+      display: none;
     }
   }
 `
