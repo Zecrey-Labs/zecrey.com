@@ -181,7 +181,7 @@ const Style = styled.div`
           width: auto;
           left: ${px2vw(2.5, 320)};
           top: ${px2vw(7, 320)};
-          transform: rotateY(180deg);
+          transform: translate3d(0, 0, 200px) rotateY(180deg);
         }
         img.image2 {
           width: ${px2vw(84, 320)};
