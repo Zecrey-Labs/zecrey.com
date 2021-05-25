@@ -7,6 +7,7 @@ import {
   Section2,
   Section3,
   Section4,
+  Section5,
   Background,
   Footer
 } from '@/components'
@@ -33,6 +34,7 @@ const Home = observer(function Home() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Section5 />
       <Footer />
     </Style>
   )
