@@ -47,9 +47,10 @@ const Style = styled.div`
   }
   div.icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: ${px2vw(74, 1437)} ${px2vw(91, 1437)};
     img {
-      width: ${px2vw(210, 1437)};
+      width: ${px2vw(200, 1437)};
       height: auto;
     }
   }
@@ -77,12 +78,11 @@ const Style = styled.div`
     }
     div.icons {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: ${px2vw(23, 320)} ${px2vw(24, 320)};
       img {
-        height: ${px2vw(30, 320)};
-        width: auto;
-        margin-bottom: ${px2vw(31, 320)};
-        margin-right: ${px2vw(38, 320)};
+        width: ${px2vw(50, 320)};
+        height: auto;
       }
     }
   }
