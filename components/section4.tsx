@@ -117,7 +117,7 @@ const Style = styled.div`
           position: absolute;
           top: 0;
           left: 0;
-          z-index: -1;
+          z-index: 1;
           margin: 0;
           img {
             position: absolute;
@@ -131,6 +131,7 @@ const Style = styled.div`
         div.text {
           width: 100%;
           h3 {
+            z-index: 2;
             margin-left: auto;
             margin-bottom: 0;
             margin-right: ${px2vw(24, 320)};
@@ -165,7 +166,7 @@ const Style = styled.div`
             border-radius: ${px2vw(4, 320)};
             position: relative;
             overflow: hidden;
-            z-index: -1;
+            z-index: 1;
             &::before {
               content: ' ';
               display: inline-block;
