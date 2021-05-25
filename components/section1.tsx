@@ -223,8 +223,7 @@ const Style = styled.div<{ active: boolean }>`
         width: ${px2vw(181, 320)};
         height: ${px2vw(24, 320)};
         border: 1px solid #2ad4d9;
-        padding: ${px2vw(2, 320)} ${px2vw(15, 320)} ${px2vw(5, 320)}
-          ${px2vw(14, 320)};
+        ${px2vw(14, 320)};
         font-size: ${px2vw(12, 320)};
         line-height: ${px2vw(14, 320)};
         color: #e4e4e4;
@@ -355,7 +354,7 @@ export const Section1 = observer(() => {
       </div>
       <div className={`email ${active ? 'active' : ''}`}>
         <InputEmail
-          placeholder='Send us your email address'
+          placeholder={active ? '' : 'Send us your email address'}
           ref={inputElement}
           value={email}
           onChange={e => {
