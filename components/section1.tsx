@@ -152,9 +152,26 @@ const Style = styled.div<{ active: boolean }>`
   }
 
   > a.whitepaper {
-    font-size: ${px2vw(28, 1920)};
+    text-decoration: none;
+    width: ${px2vw(124, 1437)};
+    height: ${px2vw(30, 1437)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+    border-radius: ${px2vw(5, 1437)};
     font-family: Lexend;
-    margin: ${px2vw(100, 1920)} auto ${px2vw(10, 1920)} auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: ${px2vw(16, 1437)};
+    line-height: ${px2vw(20, 1437)};
+    color: #ffffff;
+    margin: ${px2vw(64, 1437)} auto auto auto;
+    &:hover {
+      color: #0b0b0b;
+      background: #2ad4d9;
+      border: 1px solid #2ad4d9;
+    }
   }
   > img {
     height: 0.52rem;
