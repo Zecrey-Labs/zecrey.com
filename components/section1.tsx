@@ -150,7 +150,8 @@ const Style = styled.div<{ active: boolean }>`
       }
     }
   }
-  > a {
+
+  > a.whitepaper {
     font-size: ${px2vw(28, 1920)};
     font-family: Lexend;
     margin: ${px2vw(100, 1920)} auto ${px2vw(10, 1920)} auto;
@@ -271,10 +272,21 @@ const Style = styled.div<{ active: boolean }>`
         }
       }
     }
-    > a {
-      font-size: ${px2vw(12, 320)};
+    > a.whitepaper {
+      width: ${px2vw(75, 320)};
+      height: ${px2vw(25, 320)};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ffffff;
+      border-radius: ${px2vw(5, 320)};
       font-family: Lexend;
-      margin: ${px2vw(30, 320)} auto auto auto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: ${px2vw(10, 320)};
+      line-height: ${px2vw(12, 320)};
+      color: #ffffff;
+      margin: ${px2vw(64, 320)} auto auto auto;
     }
     > img {
       display: none;
@@ -386,7 +398,10 @@ export const Section1 = observer(() => {
           Send
         </Button>
       </div>
-      <a href='https://docsend.com/view/ntcsmt7meu84gcqk' target='_blank'>
+      <a
+        href='https://docsend.com/view/ntcsmt7meu84gcqk'
+        target='_blank'
+        className='whitepaper'>
         White Paper
       </a>
       <Img src={'/logo1.svg'} alt='logo' />
