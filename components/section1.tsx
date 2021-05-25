@@ -148,13 +148,13 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
   > a {
-    font-size: 18px;
+    font-size: ${px2vw(28, 1920)};
     font-family: Lexend;
-    margin: 50px auto 10px auto;
+    margin: ${px2vw(100, 1920)} auto ${px2vw(10, 1920)} auto;
   }
   > img {
     height: 0.52rem;
-    margin-top: 1.41rem;
+    margin-top: 0.6rem;
   }
   div.nextSectionGuide {
     display: none;
@@ -268,6 +268,11 @@ const Style = styled.div<{ active: boolean }>`
           transform: none;
         }
       }
+    }
+    > a {
+      font-size: ${px2vw(12, 320)};
+      font-family: Lexend;
+      margin: ${px2vw(30, 320)} auto auto auto;
     }
     > img {
       display: none;
