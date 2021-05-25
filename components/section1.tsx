@@ -18,6 +18,9 @@ const InputEmail = styled.input`
     color: #222222;
     background-color: #2ad4d9;
   }
+  &::placeholder {
+    text-align: center;
+  }
 `
 
 const Button = styled.button`
@@ -102,7 +105,7 @@ const Style = styled.div<{ active: boolean }>`
       height: 0.52rem;
       border: 0.02rem solid #2ad4d9;
       border-radius: 0.05rem;
-      padding-left: 0.2rem;
+      padding: 0 0.2rem;
       font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
     }
     img {
