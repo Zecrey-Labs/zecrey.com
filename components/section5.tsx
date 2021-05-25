@@ -53,6 +53,39 @@ const Style = styled.div`
       height: auto;
     }
   }
+  @media (max-width: 760px) {
+    padding: ${px2vw(10, 320)} ${px2vw(50, 320)} 0 ${px2vw(50, 320)};
+    h2 {
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: bold;
+      font-size: ${px2vw(26, 320)};
+      line-height: 32px;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: ${px2vw(10, 320)};
+    }
+    p {
+      font-family: Lexend;
+      font-size: ${px2vw(10, 320)};
+      line-height: ${px2vw(12, 320)};
+      text-align: center;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+      margin-bottom: ${px2vw(30, 320)};
+    }
+    div.icons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      img {
+        height: ${px2vw(30, 320)};
+        width: auto;
+        margin-bottom: ${px2vw(31, 320)};
+        margin-right: ${px2vw(38, 320)};
+      }
+    }
+  }
 `
 
 export const Section5 = observer(() => {
