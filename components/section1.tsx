@@ -166,7 +166,7 @@ const Style = styled.div<{ active: boolean }>`
     font-size: ${px2vw(16, 1437)};
     line-height: ${px2vw(20, 1437)};
     color: #ffffff;
-    margin: ${px2vw(64, 1437)} auto auto auto;
+    margin: ${px2vw(64, 1437)} auto;
     &:hover {
       color: #0b0b0b;
       background: #2ad4d9;
@@ -175,7 +175,6 @@ const Style = styled.div<{ active: boolean }>`
   }
   > img {
     height: 0.52rem;
-    margin-top: 0.6rem;
   }
   div.nextSectionGuide {
     display: none;
@@ -210,8 +209,7 @@ const Style = styled.div<{ active: boolean }>`
     box-sizing: border-box;
     h2,
     div.banner,
-    div.email,
-    > img {
+    div.email {
       transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
     }
     div.message {
@@ -421,7 +419,7 @@ export const Section1 = observer(() => {
         className='whitepaper'>
         White Paper
       </a>
-      <Img src={'/logo1.svg'} alt='logo' />
+      <Img src='/section1/appiscoming.png' alt='logo' />
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>
         <div className='triangle'></div>
