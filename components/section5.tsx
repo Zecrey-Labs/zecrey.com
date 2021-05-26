@@ -5,34 +5,41 @@ import { useStore } from '@/store'
 import Img from './img'
 import { px2vw } from '@/utils'
 
-const icons = [
+const investors = [
   {
     name: '1loopring',
-    image: '/section5/1loopring.png'
+    image: '/section5/1loopring.png',
+    link: 'https://loopring.org/#/'
   },
   {
     name: '7dorahacks',
-    image: '/section5/7dorahacks.png'
+    image: '/section5/7dorahacks.png',
+    link: 'https://dorahacks.com/'
   },
   {
     name: '4block0',
-    image: '/section5/4block0.png'
+    image: '/section5/4block0.png',
+    link: 'https://www.block0.ai/'
   },
   {
     name: '5cmccglobal',
-    image: '/section5/5cmccglobal.png'
+    image: '/section5/5cmccglobal.png',
+    link: 'https://www.cmcc.vc'
   },
   {
     name: '2bybit',
-    image: '/section5/2bybit.png'
+    image: '/section5/2bybit.png',
+    link: 'https://www.bybit.com/zh-CN/'
   },
   {
     name: '8crasolum',
-    image: '/section5/8crasolum.png'
+    image: '/section5/8crasolum.png',
+    link: 'https://crasolum.com/'
   },
   {
     name: '6stakecapital',
-    image: '/section5/6stakecapital.png'
+    image: '/section5/6stakecapital.png',
+    link: 'https://www.stake.capital/'
   }
 ]
 
@@ -61,13 +68,14 @@ const Style = styled.div`
     opacity: 0.5;
     margin-bottom: ${px2vw(90, 1437)};
   }
-  div.icons {
+  div.investors {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     img {
+      cursor: pointer;
       margin-bottom: ${px2vw(101, 1437)};
       margin-right: ${px2vw(50, 1437)};
       width: auto;
@@ -116,7 +124,7 @@ const Style = styled.div`
       opacity: 0.6;
       margin-bottom: ${px2vw(30, 320)};
     }
-    div.icons {
+    div.investors {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -157,9 +165,15 @@ export const Section5 = observer(() => {
     <Style>
       <h2>Partners</h2>
       <p>Cooperate with us and become the forethinkers in the privacy world.</p>
-      <div className='icons'>
-        {icons.map((icon, index) => (
-          <Img src={icon.image} key={icon.name} />
+      <div className='investors'>
+        {investors.map((investor, index) => (
+          <Img
+            src={investor.image}
+            key={investor.name}
+            onClick={() => {
+              window.open(investor.link, '_blank')
+            }}
+          />
         ))}
       </div>
     </Style>
