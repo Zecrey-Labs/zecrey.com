@@ -11,12 +11,8 @@ const icons = [
     image: '/section5/1loopring.png'
   },
   {
-    name: '2bybit',
-    image: '/section5/2bybit.png'
-  },
-  {
-    name: '3hackerfund',
-    image: '/section5/3hackerfund.png'
+    name: '7dorahacks',
+    image: '/section5/7dorahacks.png'
   },
   {
     name: '4block0',
@@ -27,16 +23,16 @@ const icons = [
     image: '/section5/5cmccglobal.png'
   },
   {
-    name: '6stakecapital',
-    image: '/section5/6stakecapital.png'
-  },
-  {
-    name: '7dorahacks',
-    image: '/section5/7dorahacks.png'
+    name: '2bybit',
+    image: '/section5/2bybit.png'
   },
   {
     name: '8crasolum',
     image: '/section5/8crasolum.png'
+  },
+  {
+    name: '6stakecapital',
+    image: '/section5/6stakecapital.png'
   }
 ]
 
@@ -70,37 +66,31 @@ const Style = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     img {
       margin-bottom: ${px2vw(101, 1437)};
+      margin-right: ${px2vw(50, 1437)};
       width: auto;
       &:nth-of-type(1) {
-        height: ${px2vw(56, 1437)};
-        margin-right: ${px2vw(79, 1437)};
+        height: ${px2vw(67, 1437)};
       }
       &:nth-of-type(2) {
         height: ${px2vw(70, 1437)};
-        margin-right: ${px2vw(79, 1437)};
       }
       &:nth-of-type(3) {
-        height: ${px2vw(63, 1437)};
-        margin-right: ${px2vw(79, 1437)};
-      }
-      &:nth-of-type(4) {
         height: ${px2vw(59, 1437)};
       }
-      &:nth-of-type(5) {
+      &:nth-of-type(4) {
         height: ${px2vw(38, 1437)};
-        margin-right: ${px2vw(96, 1437)};
       }
-      &:nth-of-type(6) {
-        height: ${px2vw(71, 1437)};
-        margin-right: ${px2vw(96, 1437)};
-      }
-      &:nth-of-type(7) {
+      &:nth-of-type(5) {
         height: ${px2vw(70, 1437)};
       }
-      &:nth-of-type(8) {
+      &:nth-of-type(6) {
         height: ${px2vw(43, 1437)};
+      }
+      &:nth-of-type(7) {
+        height: ${px2vw(71, 1437)};
       }
     }
   }
@@ -137,32 +127,24 @@ const Style = styled.div`
         width: auto;
         &:nth-of-type(1) {
           height: ${px2vw(18, 320)};
-          margin-right: ${px2vw(19, 320)};
         }
         &:nth-of-type(2) {
-          height: ${px2vw(18, 320)};
-          margin-right: ${px2vw(19, 320)};
+          height: ${px2vw(20, 320)};
         }
         &:nth-of-type(3) {
-          height: ${px2vw(18, 320)};
+          height: ${px2vw(16, 320)};
         }
         &:nth-of-type(4) {
-          height: ${px2vw(20, 320)};
-          margin-right: ${px2vw(20, 320)};
-        }
-        &:nth-of-type(5) {
           height: ${px2vw(13, 320)};
         }
+        &:nth-of-type(5) {
+          height: ${px2vw(19, 320)};
+        }
         &:nth-of-type(6) {
-          height: ${px2vw(16, 320)};
-          margin-right: ${px2vw(0, 320)};
+          height: ${px2vw(20, 320)};
         }
         &:nth-of-type(7) {
-          height: ${px2vw(16, 320)};
-          margin-right: ${px2vw(0, 320)};
-        }
-        &:nth-of-type(8) {
-          height: ${px2vw(16, 320)};
+          height: ${px2vw(20, 320)};
         }
       }
     }
