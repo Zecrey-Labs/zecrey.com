@@ -7,22 +7,42 @@ import { px2vw } from '@/utils'
 
 const icons = [
   {
-    name: 'loopring',
-    image: '/section5/loopring.png'
+    name: '1loopring',
+    image: '/section5/1loopring.png'
   },
   {
-    name: 'bybit',
-    image: '/section5/bybit.png'
+    name: '2bybit',
+    image: '/section5/2bybit.png'
   },
   {
-    name: 'hackerfund',
-    image: '/section5/hackerfund.png'
+    name: '3hackerfund',
+    image: '/section5/3hackerfund.png'
+  },
+  {
+    name: '4block0',
+    image: '/section5/4block0.png'
+  },
+  {
+    name: '5cmccglobal',
+    image: '/section5/5cmccglobal.png'
+  },
+  {
+    name: '6stakecapital',
+    image: '/section5/6stakecapital.png'
+  },
+  {
+    name: '7dorahacks',
+    image: '/section5/7dorahacks.png'
+  },
+  {
+    name: '8crasolum',
+    image: '/section5/8crasolum.png'
   }
 ]
 
 const Style = styled.div`
-  padding: ${px2vw(90, 1437)} ${px2vw(204, 1437)} ${px2vw(200, 1437)}
-    ${px2vw(204, 1437)};
+  padding: ${px2vw(90, 1437)} ${px2vw(201, 1437)} ${px2vw(200, 1437)}
+    ${px2vw(201, 1437)};
   h2 {
     font-family: Lexend;
     font-style: normal;
@@ -46,16 +66,46 @@ const Style = styled.div`
     margin-bottom: ${px2vw(90, 1437)};
   }
   div.icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: ${px2vw(74, 1437)} ${px2vw(91, 1437)};
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     img {
-      width: ${px2vw(200, 1437)};
-      height: auto;
+      margin-bottom: ${px2vw(101, 1437)};
+      width: auto;
+      &:nth-of-type(1) {
+        height: ${px2vw(56, 1437)};
+        margin-right: ${px2vw(79, 1437)};
+      }
+      &:nth-of-type(2) {
+        height: ${px2vw(70, 1437)};
+        margin-right: ${px2vw(79, 1437)};
+      }
+      &:nth-of-type(3) {
+        height: ${px2vw(63, 1437)};
+        margin-right: ${px2vw(79, 1437)};
+      }
+      &:nth-of-type(4) {
+        height: ${px2vw(59, 1437)};
+      }
+      &:nth-of-type(5) {
+        height: ${px2vw(38, 1437)};
+        margin-right: ${px2vw(96, 1437)};
+      }
+      &:nth-of-type(6) {
+        height: ${px2vw(71, 1437)};
+        margin-right: ${px2vw(96, 1437)};
+      }
+      &:nth-of-type(7) {
+        height: ${px2vw(70, 1437)};
+      }
+      &:nth-of-type(8) {
+        height: ${px2vw(43, 1437)};
+      }
     }
   }
   @media (max-width: 760px) {
-    padding: ${px2vw(10, 320)} ${px2vw(50, 320)} 0 ${px2vw(50, 320)};
+    padding: ${px2vw(10, 320)} ${px2vw(45, 320)} 0 ${px2vw(50, 320)};
     h2 {
       font-family: Lexend;
       font-style: normal;
@@ -77,12 +127,43 @@ const Style = styled.div`
       margin-bottom: ${px2vw(30, 320)};
     }
     div.icons {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: ${px2vw(23, 320)} ${px2vw(24, 320)};
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       img {
-        width: ${px2vw(50, 320)};
-        height: auto;
+        margin-bottom: ${px2vw(23, 320)};
+        width: auto;
+        &:nth-of-type(1) {
+          height: ${px2vw(18, 320)};
+          margin-right: ${px2vw(19, 320)};
+        }
+        &:nth-of-type(2) {
+          height: ${px2vw(18, 320)};
+          margin-right: ${px2vw(19, 320)};
+        }
+        &:nth-of-type(3) {
+          height: ${px2vw(18, 320)};
+        }
+        &:nth-of-type(4) {
+          height: ${px2vw(20, 320)};
+          margin-right: ${px2vw(20, 320)};
+        }
+        &:nth-of-type(5) {
+          height: ${px2vw(13, 320)};
+        }
+        &:nth-of-type(6) {
+          height: ${px2vw(16, 320)};
+          margin-right: ${px2vw(0, 320)};
+        }
+        &:nth-of-type(7) {
+          height: ${px2vw(16, 320)};
+          margin-right: ${px2vw(0, 320)};
+        }
+        &:nth-of-type(8) {
+          height: ${px2vw(16, 320)};
+        }
       }
     }
   }
@@ -92,10 +173,10 @@ export const Section5 = observer(() => {
   const store = useStore()
   return (
     <Style>
-      <h2>Investors</h2>
+      <h2>Partners</h2>
       <p>Cooperate with us and become the forethinkers in the privacy world.</p>
       <div className='icons'>
-        {icons.map(icon => (
+        {icons.map((icon, index) => (
           <Img src={icon.image} key={icon.name} />
         ))}
       </div>
