@@ -237,6 +237,9 @@ export const Header = observer(() => {
         <a href='https://t.me/zecrey' target='_blank'>
           <FontAwesomeIcon icon={['fab', 'telegram']} />
         </a>
+        <a href='https://discord.com/invite/U98ghQsJE5' target='_blank'>
+          <FontAwesomeIcon icon={['fab', 'discord']} />
+        </a>
       </div>
     </Style>
   )

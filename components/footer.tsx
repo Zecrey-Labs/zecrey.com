@@ -187,6 +187,9 @@ export const Footer = observer(() => {
             <a href='https://t.me/zecrey' target='_blank'>
               <FontAwesomeIcon icon={['fab', 'telegram']} />
             </a>
+            <a href='https://discord.com/invite/U98ghQsJE5' target='_blank'>
+              <FontAwesomeIcon icon={['fab', 'discord']} />
+            </a>
           </div>
           <div className='subsection2'>
             Copyright © 2021 Zecrey. All rights reserved.
@@ -219,6 +222,9 @@ export const Footer = observer(() => {
               </a>
               <a href='https://t.me/zecrey' target='_blank'>
                 <FontAwesomeIcon icon={['fab', 'telegram']} />
+              </a>
+              <a href='https://discord.com/invite/U98ghQsJE5' target='_blank'>
+                <FontAwesomeIcon icon={['fab', 'discord']} />
               </a>
             </div>
           </div>
