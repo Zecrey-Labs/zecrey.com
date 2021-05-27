@@ -189,7 +189,7 @@ const blocks = [
   {
     image: '/section4/image1.svg',
     title: 'Zecrey Protocol',
-    text: 'Bring anonymity and privacy for account-based transactions.',
+    text: 'Bringing anonymity and privacy to account-based transactions.',
     class: 'image1'
   },
   {
@@ -203,14 +203,14 @@ const blocks = [
     image: '/section4/image3.svg',
     title: 'Privacy Bridges',
     text:
-      'Use customize Sigma protocol for users to make it easy and safe to swap assets between different blockchains with privacy.',
+      'Use the customized Sigma protocol to make it easy and safe to swap assets between different blockchains with privacy.',
     class: 'image3'
   },
   {
     image: '/section4/image4.svg',
     title: 'Privacy Plug-in',
     text:
-      'Providing Zecrey extensions for Layer1 Dapp to provide privacy for transactions.',
+      'Zecrey extensions enable Layer1 Dapps to provide transaction privacy.',
     class: 'image4'
   }
 ]

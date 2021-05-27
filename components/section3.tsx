@@ -260,7 +260,7 @@ export const Section3 = observer(() => {
   }, [])
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
-      <h2>Why Zecrey SPECIAL</h2>
+      <h2>Why Zecrey?</h2>
       <div className='content'>
         <div className='block'>
           <Img className='image1' src={'/section3/image1.svg'} alt='' />
@@ -272,22 +272,22 @@ export const Section3 = observer(() => {
           <div className='text'>
             <h3>Confidential Assets</h3>
             <p>
-              Make account balance and transaction amount confidential. Nobody
-              will know your balance have except yourself.
+              Make account balances and transaction amounts confidential. Only
+              you know your own balances.
             </p>
           </div>
           <div className='text'>
             <h3>Anonymous Identity</h3>
             <p>
               Conceal the relationship between sender and receiver and make
-              yourself anonymous in the blockchain network.
+              yourself anonymous in blockchain networks.
             </p>
           </div>
           <div className='text'>
             <h3>Privacy Bridges</h3>
             <p>
-              Bridge different blockchains assets that can make them interact
-              with each other in a private way.
+              Bridging different blockchain platforms to enable direct
+              interactions between digital assets with complete privacy.
             </p>
           </div>
         </div>

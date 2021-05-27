@@ -123,7 +123,6 @@ const Style = styled.div<{ active: boolean }>`
       transition: transform 0.2s ease-out;
       z-index: 0;
       font: normal normal bold 0.24rem/0.29rem Lexend;
-      width: 1.2rem;
       height: 0.52rem;
       border-radius: 0.05rem;
     }
@@ -191,7 +190,6 @@ const Style = styled.div<{ active: boolean }>`
       }
       button {
         font: normal normal bold 16px/19px Lexend;
-        width: 80px;
         height: 34px;
         border-radius: 3px;
       }
@@ -378,13 +376,13 @@ export const Section1 = observer(() => {
         <Img src={'/section1/circle.svg'} />
       </h2>
       <div className='banner'>
-        Brings privacy
+        Bringing privacy
         <br />
-        value for assets.
+        to digital assets
       </div>
       <div className={`email ${active ? 'active' : ''}`}>
         <InputEmail
-          placeholder={active ? '' : 'Send us your email address'}
+          placeholder={active ? '' : 'Email me updates'}
           ref={inputElement}
           value={email}
           onChange={e => {

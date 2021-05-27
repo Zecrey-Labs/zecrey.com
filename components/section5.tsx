@@ -164,9 +164,9 @@ export const Section5 = observer(() => {
   return (
     <Style>
       <h2>Partners</h2>
-      <p>Cooperate with us and become the forethinkers in the privacy world.</p>
+      <p>Join us and help advance digital privacy together</p>
       <div className='investors'>
-        {investors.map((investor, index) => (
+        {investors.map(investor => (
           <Img
             src={investor.image}
             key={investor.name}

@@ -286,7 +286,7 @@ export const Section2 = observer(() => {
     <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
       <div className='content'>
         <h2>
-          <span>Keep Privacy in Smart Contract World</span>
+          <span>Privacy for a smart contract world</span>
           <Img className='badge1' src={'/section2/badge1.svg'} alt='' />
           <Img className='badge2' src={'/section2/badge2.svg'} alt='' />
           <Img className='badge3' src={'/section2/badge3.svg'} alt='' />
@@ -306,20 +306,20 @@ export const Section2 = observer(() => {
         </h2>
         <div className='text'>
           <p>
-            Problems of the privacy of blockchain right now are that used only
-            as privacy cash, in other words, it's non-programmable. In addition,
-            if the user wants to achieve asset privacy, it's not easy to use and
-            will cost a lot.
+            Blockchains today are not protecting user privacy. Privacy protocols
+            have enabled private cash transactions but these systems lack
+            programmability. It is difficult and expensive for users to achieve
+            complete digital asset privacy.
           </p>
           <p>
-            Zecrey is such a protocol that makes it easy to bring your assets
-            into a private world with high efficiency and low cost.
+            The Zecrey protocol makes it easy, efficient and cheap to move
+            digital assets into a private setting
           </p>
         </div>
         <ul className='features'>
           <li>
             <Img src={'/section2/icon1.svg'} alt='' />
-            <span>Public Scenes</span>
+            <span>Public transactions</span>
           </li>
           <li>
             <Img src={'/section2/icon2.svg'} alt='' />
