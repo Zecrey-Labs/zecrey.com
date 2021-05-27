@@ -172,8 +172,20 @@ const Style = styled.div<{ active: boolean }>`
       border: 1px solid #2ad4d9;
     }
   }
-  > img {
-    height: 0.52rem;
+  div.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      height: 0.52rem;
+      padding-right: ${px2vw(20, 1437)};
+    }
+    span {
+      font-family: Lexend;
+      font-size: ${px2vw(20, 1437)};
+      border-left: 1px solid white;
+      padding-left: ${px2vw(20, 1437)};
+    }
   }
   div.nextSectionGuide {
     display: none;
@@ -193,10 +205,6 @@ const Style = styled.div<{ active: boolean }>`
         height: 34px;
         border-radius: 3px;
       }
-    }
-    > img {
-      height: 35px;
-      margin-top: 34px;
     }
   }
 
@@ -299,10 +307,22 @@ const Style = styled.div<{ active: boolean }>`
       font-size: ${px2vw(10, 320)};
       line-height: ${px2vw(12, 320)};
       color: #ffffff;
-      margin: ${px2vw(64, 320)} auto auto auto;
+      margin: ${px2vw(50, 320)} auto ${px2vw(30, 320)} auto;
     }
-    > img {
-      display: none;
+    div.logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        height: ${px2vw(20, 320)};
+        padding-right: ${px2vw(10, 320)};
+      }
+      span {
+        font-family: Lexend;
+        font-size: ${px2vw(10, 320)};
+        border-left: 1px solid white;
+        padding-left: ${px2vw(10, 320)};
+      }
     }
     div.nextSectionGuide {
       width: 100%;
@@ -417,7 +437,10 @@ export const Section1 = observer(() => {
         className='whitepaper'>
         White Paper
       </a>
-      <Img src='/section1/appiscoming.png' alt='logo' />
+      <div className='logo'>
+        <Img src={'/logo1.svg'} alt='logo' />
+        <span>App coming soon</span>
+      </div>
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>
         <div className='triangle'></div>
