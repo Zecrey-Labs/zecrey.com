@@ -405,12 +405,12 @@ export const Section1 = observer(() => {
           onClick={() => {
             if (validateEmail(email)) {
               setActive(false)
-              setMessage('Send Successfully')
+              setMessage('Subscribe Successfully')
             } else {
               setMessage('Invalid Email')
             }
           }}>
-          Send
+          Subscribe
         </Button>
       </div>
       <a
