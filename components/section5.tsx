@@ -14,7 +14,7 @@ const investors = [
   {
     name: '7dorahacks',
     image: '/section5/7dorahacks.png',
-    link: 'https://dorahacks.com/'
+    link: 'http://hackerlink.io/en'
   },
   {
     name: '4block0',
