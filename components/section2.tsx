@@ -111,6 +111,7 @@ const Style = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
         background: #e4e4e4 0% 0% no-repeat padding-box;
         border-radius: 0.05rem;
         width: 3rem;
