@@ -83,7 +83,7 @@ const Style = styled.div`
         height: ${px2vw(67, 1437)};
       }
       &:nth-of-type(2) {
-        height: ${px2vw(70, 1437)};
+        height: ${px2vw(95, 1437)};
       }
       &:nth-of-type(3) {
         height: ${px2vw(59, 1437)};
@@ -137,7 +137,7 @@ const Style = styled.div`
           height: ${px2vw(18, 320)};
         }
         &:nth-of-type(2) {
-          height: ${px2vw(20, 320)};
+          height: ${px2vw(33, 320)};
         }
         &:nth-of-type(3) {
           height: ${px2vw(16, 320)};
@@ -146,7 +146,7 @@ const Style = styled.div`
           height: ${px2vw(13, 320)};
         }
         &:nth-of-type(5) {
-          height: ${px2vw(19, 320)};
+          height: ${px2vw(20, 320)};
         }
         &:nth-of-type(6) {
           height: ${px2vw(20, 320)};
