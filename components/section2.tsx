@@ -16,7 +16,7 @@ const Style = styled.div`
   padding-top: ${px2vw(273, 1920)};
   padding-bottom: ${px2vw(179, 1920)};
   div.content {
-    width: ${px2vw(133, 1920)};
+    width: ${px2vw(1330, 1920)};
     padding-bottom: ${px2vw(186, 1920)};
     position: relative;
     box-sizing: content-box;
