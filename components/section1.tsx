@@ -391,15 +391,26 @@ export const Section1 = observer(() => {
           onBlur={() => {
             setTimeout(() => {
               setActive(false)
-            }, 1)
+            }, 100)
           }}
         />
         <Img src={'/section1/cute.svg'} />
         <Button
-          onClick={() => {
+          onClick={async () => {
             if (validateEmail(email)) {
-              setActive(false)
-              setMessage('Subscribe Successfully')
+              try {
+                const response = await fetch('/api/subscribe?address=' + email)
+                const result = await response.json()
+                setMessage(
+                  result.message === 'subscribed'
+                    ? 'Subscribe Successfully'
+                    : result.error
+                )
+              } catch (error) {
+                setMessage('Failed to subscribe')
+              } finally {
+                setActive(false)
+              }
             } else {
               setMessage('Invalid Email')
             }
