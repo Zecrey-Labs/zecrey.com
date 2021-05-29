@@ -11,7 +11,7 @@ import { px2vw } from '@/utils'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   width: 100vw;
-  height: 1.1rem;
+  height: ${px2vw(110, 1920)};
   min-height: 64px;
   position: sticky;
   top: 0;
@@ -97,7 +97,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
           letter-spacing: 0px;
           cursor: pointer;
           transition: color 0.3s ease-out;
-          text-shadow: 0px 0.03rem 0.12rem #00000040;
+          text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
         }
       }
     }
@@ -115,19 +115,19 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
 
   div.left {
     > img {
-      margin-right: 1.2rem;
-      margin-left: 2rem;
-      height: 0.66rem;
+      margin-right: ${px2vw(120, 1920)};
+      margin-left: ${px2vw(200, 1920)};
+      height: ${px2vw(66, 1920)};
       min-height: 40px;
     }
     nav ul li {
-      font: 400 0.26rem/0.31rem Lexend;
-      margin-right: 0.61rem;
+      font: 400 ${px2vw(26, 1920)} / ${px2vw(31, 1920)} Lexend;
+      margin-right: ${px2vw(61, 1920)};
     }
   }
   div.right {
-    font-size: 0.3rem;
-    margin-right: 0.25rem;
+    font-size: ${px2vw(30, 1920)};
+    margin-right: ${px2vw(25, 1920)};
   }
   @media (max-width: 1279px) {
     div.left {

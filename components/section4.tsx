@@ -21,17 +21,17 @@ const Style = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: ${px2vw(200, 1920)};
 
     div.block {
-      padding: 0.4rem;
+      padding: ${px2vw(40, 1920)};
       box-sizing: content-box;
-      width: 3.6rem;
+      width: ${px2vw(360, 1920)};
       div.image {
-        height: 0.9rem;
-        width: 0.9rem;
+        height: ${px2vw(90, 1920)};
+        width: ${px2vw(90, 1920)};
         position: relative;
-        margin-bottom: 0.3rem;
+        margin-bottom: ${px2vw(30, 1920)};
         img {
           position: absolute;
           left: 0;
@@ -43,16 +43,18 @@ const Style = styled.div`
       div.text {
         h3 {
           text-align: left;
-          font: normal normal bold 0.38rem/0.48rem Lexend;
-          margin-bottom: 0.3rem;
+          font: normal normal bold ${px2vw(38, 1920)} / ${px2vw(48, 1920)}
+            Lexend;
+          margin-bottom: ${px2vw(30, 1920)};
           letter-spacing: 0px;
           color: #e4e4e4;
-          text-shadow: 0px 0.03rem 0.12rem #00000040;
+          text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
           opacity: 1;
         }
         p {
           text-align: left;
-          font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
+          font: normal normal normal ${px2vw(24, 1920)} / ${px2vw(32, 1920)} IBM
+            Plex Sans;
           letter-spacing: 0px;
           color: #e4e4e4;
           opacity: 1;

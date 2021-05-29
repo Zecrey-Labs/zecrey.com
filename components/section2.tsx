@@ -13,30 +13,30 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2.73rem;
-  padding-bottom: 1.79rem;
+  padding-top: ${px2vw(273, 1920)};
+  padding-bottom: ${px2vw(179, 1920)};
   div.content {
-    width: 13.3rem;
-    padding-bottom: 1.86rem;
+    width: ${px2vw(133, 1920)};
+    padding-bottom: ${px2vw(186, 1920)};
     position: relative;
     box-sizing: content-box;
     h2 {
-      width: 9.25rem;
-      height: 0.87rem;
+      width: ${px2vw(925, 1920)};
+      height: ${px2vw(87, 1920)};
       text-align: center;
-      font: normal normal bold 0.36rem/0.87rem Lexend;
+      font: normal normal bold ${px2vw(36, 1920)} / ${px2vw(87, 1920)} Lexend;
       letter-spacing: 0px;
       color: #383838;
       position: relative;
       background: #e4e4e4 0% 0% no-repeat padding-box;
-      border-radius: 0.05rem;
+      border-radius: ${px2vw(5, 1920)};
       img {
         position: absolute;
         &.badge1,
         &.badge2 {
-          left: -0.33rem;
+          left: -${px2vw(33, 1920)};
           bottom: 0;
-          height: 0.37rem;
+          height: ${px2vw(37, 1920)};
         }
         &.badge1 {
           z-index: 0;
@@ -46,22 +46,22 @@ const Style = styled.div`
         }
         &.badge3,
         &.badge4 {
-          right: -0.18rem;
+          right: -${px2vw(18, 1920)};
           bottom: 0;
         }
         &.badge3 {
           z-index: -1;
-          height: 0.47rem;
+          height: ${px2vw(47, 1920)};
         }
         &.badge4 {
           z-index: 1;
-          height: 0.22rem;
+          height: ${px2vw(22, 1920)};
         }
         &.circle1,
         &.halfcircle1 {
           top: 0;
-          right: 0.62rem;
-          width: 0.52rem;
+          right: ${px2vw(62, 1920)};
+          width: ${px2vw(52, 1920)};
         }
         &.circle1 {
           z-index: -1;
@@ -73,8 +73,8 @@ const Style = styled.div`
         &.circle2,
         &.halfcircle2 {
           bottom: 0;
-          left: 0.62rem;
-          width: 0.52rem;
+          left: ${px2vw(62, 1920)};
+          width: ${px2vw(52, 1920)};
         }
         &.circle2 {
           z-index: -1;
@@ -87,25 +87,26 @@ const Style = styled.div`
       }
     }
     div.text {
-      padding-top: 0.34rem;
-      padding-left: 1.33rem;
+      padding-top: ${px2vw(34, 1920)};
+      padding-left: ${px2vw(133, 1920)};
       p {
         text-align: left;
-        font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
+        font: normal normal normal ${px2vw(24, 1920)} / ${px2vw(32, 1920)} IBM
+          Plex Sans;
         color: #222222;
         &:nth-of-type(1) {
-          width: 7.28rem;
-          margin-bottom: 0.29rem;
+          width: ${px2vw(728, 1920)};
+          margin-bottom: ${px2vw(29, 1920)};
         }
         &:nth-of-type(2) {
-          width: 5.25rem;
+          width: ${px2vw(525, 1920)};
         }
       }
     }
     ul.features {
       position: absolute;
       right: 0;
-      bottom: 0.38rem;
+      bottom: ${px2vw(38, 1920)};
       li {
         position: absolute;
         display: flex;
@@ -113,24 +114,25 @@ const Style = styled.div`
         align-items: center;
         justify-content: space-evenly;
         background: #e4e4e4 0% 0% no-repeat padding-box;
-        border-radius: 0.05rem;
-        width: 3rem;
-        height: 1.86rem;
-        padding: 0.25rem 0;
-        margin: 0.1rem;
+        border-radius: ${px2vw(5, 1920)};
+        width: ${px2vw(300, 1920)};
+        height: ${px2vw(186, 1920)};
+        padding: ${px2vw(25, 1920)} 0;
+        margin: ${px2vw(10, 1920)};
         img {
-          height: 0.88rem;
-          margin-bottom: 0.25rem;
+          height: ${px2vw(88, 1920)};
+          margin-bottom: ${px2vw(25, 1920)};
         }
         span {
           text-align: left;
-          font: normal normal bold 0.24rem/0.29rem Lexend;
+          font: normal normal bold ${px2vw(24, 1920)} / ${px2vw(29, 1920)}
+            Lexend;
           letter-spacing: 0px;
           color: rgba(150, 150, 150);
         }
         &:nth-of-type(1) {
           right: 0;
-          bottom: 2.7rem;
+          bottom: ${px2vw(270, 1920)};
         }
         &:nth-of-type(3) {
           right: 0;
@@ -138,7 +140,7 @@ const Style = styled.div`
         }
         &:nth-of-type(2) {
           bottom: 0;
-          right: 3.4rem;
+          right: ${px2vw(340, 1920)};
         }
       }
     }
@@ -146,19 +148,19 @@ const Style = styled.div`
   img.big {
     position: absolute;
     &:nth-of-type(1) {
-      left: 0.5rem;
+      left: ${px2vw(50, 1920)};
       bottom: 0;
-      height: 3.31rem;
+      height: ${px2vw(331, 1920)};
     }
     &:nth-of-type(2) {
-      top: 0.65rem;
-      height: 4.2rem;
+      top: ${px2vw(65, 1920)};
+      height: ${px2vw(420, 1920)};
       right: 0;
     }
   }
   div.anchor {
     position: absolute;
-    top: 5.88rem;
+    top: ${px2vw(588, 1920)};
   }
   @media (max-width: 760px) {
     width: 100%;

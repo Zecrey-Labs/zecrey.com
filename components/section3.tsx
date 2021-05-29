@@ -6,22 +6,22 @@ import Img from './img'
 import { px2vw } from '@/utils'
 
 const Style = styled.div`
-  padding: 0 0.3rem;
-  padding-bottom: 3rem;
+  padding: 0 ${px2vw(30, 1920)};
+  padding-bottom: ${px2vw(300, 1920)};
   width: 100vw;
-  width: 12.88rem;
+  width: ${px2vw(1288, 1920)};
   margin: 0 auto;
   box-sizing: content-box;
   position: relative;
 
   h2 {
-    margin-bottom: 1.62rem;
+    margin-bottom: ${px2vw(162, 1920)};
     text-align: center;
     letter-spacing: 0px;
     color: #e4e4e4;
-    text-shadow: 0px 3px 12px #00000040;
+    text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
     white-space: normal;
-    font: normal normal bold 0.8rem/1rem Lexend;
+    font: normal normal bold ${px2vw(80, 1920)} / ${px2vw(100, 1920)} Lexend;
   }
   div.content {
     position: relative;
@@ -30,7 +30,7 @@ const Style = styled.div`
       flex-direction: column;
       position: relative;
       div.text {
-        width: 4.43rem;
+        width: ${px2vw(443, 1920)};
         &:nth-of-type(2) {
           align-self: flex-end;
         }
@@ -38,17 +38,16 @@ const Style = styled.div`
           text-align: left;
           letter-spacing: 0px;
           color: #e4e4e4;
-          text-shadow: 0px 0.03rem 0.12rem #00000040;
+          text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
           opacity: 1;
-          margin-bottom: 0.3rem;
-          font: normal normal bold 0.42rem/0.53rem Lexend;
-          @media (max-width: 480px) {
-            font: normal normal bold 28px/42px Lexend;
-          }
+          margin-bottom: ${px2vw(30, 1920)};
+          font: normal normal bold ${px2vw(42, 1920)} / ${px2vw(53, 1920)}
+            Lexend;
         }
         p {
           text-align: left;
-          font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
+          font: normal normal normal ${px2vw(24, 1920)} / ${px2vw(32, 1920)} IBM
+            Plex Sans;
           letter-spacing: 0px;
           color: #e4e4e4;
           opacity: 1;
@@ -58,10 +57,10 @@ const Style = styled.div`
     div.block {
       display: flex;
       flex-direction: column;
-      width: 2.26rem;
-      height: 5.82rem;
+      width: ${px2vw(226, 1920)};
+      height: ${px2vw(582, 1920)};
       position: absolute;
-      left: calc(50% - 1.3rem);
+      left: calc(50% - ${px2vw(130, 1920)});
       top: 0;
       z-index: 1;
       div.bg1 {
@@ -70,40 +69,40 @@ const Style = styled.div`
         width: 100%;
         height: 100%;
         background: rgba(56, 56, 56, 0.1);
-        border-radius: 0.2rem;
-        backdrop-filter: blur(3px) brightness(110%);
+        border-radius: ${px2vw(20, 1920)};
+        backdrop-filter: blur(${px2vw(3, 1920)}) brightness(110%);
       }
       img.image1 {
         position: absolute;
-        top: 0.42rem;
-        left: -0.2rem;
-        width: 1.43rem;
+        top: ${px2vw(42, 1920)};
+        left: -${px2vw(20, 1920)};
+        width: ${px2vw(143, 1920)};
       }
       img.image2 {
         position: absolute;
-        top: 2.41rem;
-        right: -0.67rem;
+        top: ${px2vw(241, 1920)};
+        right: -${px2vw(67, 1920)};
         z-index: -2;
-        width: 1.69rem;
+        width: ${px2vw(169, 1920)};
       }
       img.image3 {
         position: absolute;
-        bottom: -1.4rem;
-        left: -0.57rem;
+        bottom: -${px2vw(140, 1920)};
+        left: -${px2vw(57, 1920)};
         z-index: 2;
-        width: 2.48rem;
+        width: ${px2vw(248, 1920)};
         box-sizing: border-box;
         background: rgba(56, 56, 56, 0.1);
-        backdrop-filter: blur(0.03rem) brightness(110%);
-        border-radius: 0.2rem;
-        padding: 0.75rem 0.68rem;
+        backdrop-filter: blur(${px2vw(3, 1920)}) brightness(110%);
+        border-radius: ${px2vw(20, 1920)};
+        padding: ${px2vw(75, 1920)} ${px2vw(68, 1920)};
       }
     }
   }
 
   div.anchor {
     position: absolute;
-    top: 5.2rem;
+    top: ${px2vw(52, 1920)};
   }
 
   @media (max-width: 1000px) {

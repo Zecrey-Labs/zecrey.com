@@ -15,19 +15,19 @@ const Style = styled.div`
   z-index: 1;
   overflow: hidden;
   > img.wave {
-    width: calc(100% + 2.24rem);
+    width: calc(100% + ${px2vw(224, 1920)});
     z-index: -1;
     position: absolute;
-    left: -0.94rem;
-    top: 1.63rem;
+    left: -${px2vw(94, 1920)};
+    top: ${px2vw(163, 1920)};
   }
   > div.content {
     &.mobile {
       display: none;
     }
-    max-width: 15.19rem;
+    max-width: ${px2vw(1519, 1920)};
     margin: 0 auto;
-    padding-top: 2.96rem;
+    padding-top: ${px2vw(296, 1920)};
     position: relative;
     div.section1 {
       z-index: 1;
@@ -35,23 +35,24 @@ const Style = styled.div`
       display: flex;
       flex-direction: row;
       img {
-        width: 2.67rem;
-        height: 1.09rem;
-        margin-left: 0.16rem;
-        margin-right: 1.3rem;
+        width: ${px2vw(267, 1920)};
+        height: ${px2vw(109, 1920)};
+        margin-left: ${px2vw(16, 1920)};
+        margin-right: ${px2vw(130, 1920)};
         position: relative;
-        top: -0.32rem;
+        top: -${px2vw(32, 1920)};
       }
       > div.subsection {
-        margin-right: 1.03rem;
+        margin-right: ${px2vw(103, 1920)};
         display: flex;
         flex-direction: column;
-        padding-bottom: 0.1rem;
+        padding-bottom: ${px2vw(10, 1920)};
         > a,
         > span {
-          margin-bottom: 0.2rem;
+          margin-bottom: ${px2vw(20, 1920)};
           text-align: left;
-          font: normal normal bold 0.28rem/0.37rem Roboto;
+          font: normal normal bold ${px2vw(28, 1920)} / ${px2vw(37, 1920)}
+            Roboto;
           color: #e4e4e4;
           cursor: pointer;
         }
@@ -67,20 +68,21 @@ const Style = styled.div`
       justify-content: space-between;
       background-color: rgb(34, 34, 34);
       align-items: center;
-      padding: 0.3rem 0;
+      padding: ${px2vw(30, 1920)} 0;
       div.subsection1 {
         display: flex;
         align-items: center;
-        font-size: 0.3rem;
+        font-size: ${px2vw(30, 1920)};
         svg {
-          font-size: 0.38rem;
+          font-size: ${px2vw(38, 1920)};
           color: #00acb1;
-          margin: 0 0.17rem;
+          margin: 0 ${px2vw(17, 1920)};
         }
       }
       div.subsection2 {
         text-align: right;
-        font: normal normal normal 0.2rem/0.27rem Leelawadee UI;
+        font: normal normal normal ${px2vw(20, 1920)} / ${px2vw(27, 1920)}
+          Leelawadee UI;
         color: #e4e4e4;
       }
     }
@@ -136,7 +138,7 @@ const Style = styled.div`
             flex-direction: row;
             font-size: ${px2vw(16, 320)};
             svg {
-              font-size: 0.38rem;
+              font-size: ${px2vw(38, 1920)};
               color: #00acb1;
               margin-left: ${px2vw(20, 320)};
             }

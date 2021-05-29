@@ -35,7 +35,7 @@ const Button = styled.button`
 
 const Style = styled.div<{ active: boolean }>`
   width: 100vw;
-  min-height: calc(100vh - 2rem);
+  min-height: calc(100vh - ${px2vw(200, 1920)});
   overflow: hidden;
   color: white;
   display: flex;
@@ -44,56 +44,47 @@ const Style = styled.div<{ active: boolean }>`
   div.message {
     position: fixed;
     width: 100%;
-    top: max(1.1rem, 64px);
+    top: max(${px2vw(110, 1920)}, 64px);
     z-index: 100;
-    font: bold 0.36rem/0.7rem Lexend;
+    font: bold ${px2vw(36, 1920)} / ${px2vw(70, 1920)} Lexend;
     text-align: center;
-    box-shadow: 0 0.3rem 1.2rem rgb(0 0 0 / 25%);
+    box-shadow: 0 ${px2vw(30, 1920)} ${px2vw(120, 1920)} rgb(0 0 0 / 25%);
     color: #383838;
     background-color: #2ad4d9;
   }
   h2 {
-    margin-top: 128px;
+    margin-top: ${px2vw(128, 1920)};
     background: #2ad4d9 0% 0% no-repeat padding-box;
-    height: 0.5rem;
-    width: 3.83rem;
-    font: normal normal bold 0.32rem/0.5rem Lexend;
-    border-radius: 0.05rem;
+    height: ${px2vw(50, 1920)};
+    width: ${px2vw(383, 1920)};
+    font: normal normal bold ${px2vw(32, 1920)} / ${px2vw(50, 1920)} Lexend;
+    border-radius: ${px2vw(5, 1920)};
     text-align: center;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #222222;
     position: relative;
     img {
-      font-size: 0.1rem;
+      font-size: ${px2vw(10, 1920)};
       position: absolute;
-      right: 0.23rem;
+      right: ${px2vw(23, 1920)};
       top: 0;
       transform: translateY(-50%);
     }
-    @media (max-width: 1279px) {
-      height: 33px;
-      width: 255px;
-      font: normal normal bold 21px/33px Lexend;
-      border-radius: 3px;
-      img {
-        right: 15px;
-      }
-    }
   }
   div.banner {
-    margin-top: 0.25rem;
+    margin-top: ${px2vw(25, 1920)};
     text-align: center;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #e4e4e4;
-    text-shadow: 0px 0.03rem 0.12rem #00000040;
+    text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
     text-transform: uppercase;
-    font: normal normal bold 1rem/1.2rem Lexend;
+    font: normal normal bold ${px2vw(100, 1920)} / ${px2vw(120, 1920)} Lexend;
     @media (max-width: 999px) {
       font: normal normal bold 52px/63px Lexend;
     }
   }
   div.email {
-    margin-top: 0.69rem;
+    margin-top: ${px2vw(69, 1920)};
     position: relative;
     display: flex;
     align-items: center;
@@ -101,18 +92,19 @@ const Style = styled.div<{ active: boolean }>`
       transition: transform 0.2s ease-out;
       z-index: 1;
       box-sizing: border-box;
-      width: 4.55rem;
-      height: 0.52rem;
-      border: 0.02rem solid #2ad4d9;
-      border-radius: 0.05rem;
-      padding: 0 0.2rem;
-      font: normal normal normal 0.24rem/0.32rem IBM Plex Sans;
+      width: ${px2vw(455, 1920)};
+      height: ${px2vw(52, 1920)};
+      border: ${px2vw(2, 1920)} solid #2ad4d9;
+      border-radius: ${px2vw(5, 1920)};
+      padding: 0 ${px2vw(20, 1920)};
+      font: normal normal normal ${px2vw(24, 1920)} / ${px2vw(32, 1920)} IBM
+        Plex Sans;
     }
     img {
       position: absolute;
       bottom: 0;
-      right: 0.05rem;
-      height: 0.26rem;
+      right: ${px2vw(5, 1920)};
+      height: ${px2vw(26, 1920)};
       z-index: 0;
       transition: transform 0.2s ease-out;
     }
@@ -122,24 +114,24 @@ const Style = styled.div<{ active: boolean }>`
       right: 0;
       transition: transform 0.2s ease-out;
       z-index: 0;
-      font: normal normal bold 0.24rem/0.29rem Lexend;
-      height: 0.52rem;
-      border-radius: 0.05rem;
+      font: normal normal bold ${px2vw(24, 1920)} / ${px2vw(29, 1920)} Lexend;
+      height: ${px2vw(52, 1920)};
+      border-radius: ${px2vw(5, 1920)};
     }
     &:hover {
       input {
-        transform: translateX(-0.2rem);
+        transform: translateX(-${px2vw(20, 1920)});
       }
       img {
-        transform: translateX(0.19rem);
+        transform: translateX(${px2vw(19, 1920)});
       }
       button {
-        transform: translateX(-0.2rem);
+        transform: translateX(-${px2vw(20, 1920)});
       }
     }
     &.active {
       input {
-        transform: translateX(-0.2rem);
+        transform: translateX(-${px2vw(20, 1920)});
       }
       img {
         visibility: hidden;
@@ -173,27 +165,10 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
   > img {
-    height: 0.52rem;
+    height: ${px2vw(52, 1920)};
   }
   div.nextSectionGuide {
     display: none;
-  }
-  @media (max-width: 1279px) {
-    div.email {
-      input {
-        width: 303px;
-        height: 35px;
-        border: 1px solid #2ad4d9;
-        border-radius: 3px;
-        padding-left: 13.3px;
-        font: normal normal normal 16px/21px IBM Plex Sans;
-      }
-      button {
-        font: normal normal bold 16px/19px Lexend;
-        height: 34px;
-        border-radius: 3px;
-      }
-    }
   }
 
   @media (max-width: 760px) {
