@@ -102,7 +102,7 @@ const Style = styled.div`
 
   div.anchor {
     position: absolute;
-    top: ${px2vw(52, 1920)};
+    top: ${px2vw(520, 1920)};
   }
 
   @media (max-width: 1000px) {
