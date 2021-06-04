@@ -48,7 +48,7 @@ const investors = [
   },
   {
     name: 'SNZ',
-    image: '/section5/10snz.png',
+    image: '/section5/10snz.svg',
     link: 'https://snzholding.com/'
   }
 ]
@@ -114,7 +114,7 @@ const Style = styled.div`
         height: ${px2vw(60, 1437)};
       }
       &:nth-of-type(9) {
-        height: ${px2vw(50, 1437)};
+        height: ${px2vw(75, 1437)};
       }
     }
   }
