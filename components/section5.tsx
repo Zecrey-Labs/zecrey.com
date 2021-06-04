@@ -45,6 +45,11 @@ const investors = [
     name: 'sevenx',
     image: '/section5/9sevenx.png',
     link: 'http://www.7xvc.com/'
+  },
+  {
+    name: 'SNZ',
+    image: '/section5/10snz.png',
+    link: 'https://snzholding.com/'
   }
 ]
 
@@ -105,6 +110,12 @@ const Style = styled.div`
       &:nth-of-type(7) {
         height: ${px2vw(71, 1437)};
       }
+      &:nth-of-type(8) {
+        height: ${px2vw(60, 1437)};
+      }
+      &:nth-of-type(9) {
+        height: ${px2vw(50, 1437)};
+      }
     }
   }
   @media (max-width: 760px) {
@@ -157,6 +168,12 @@ const Style = styled.div`
           height: ${px2vw(20, 320)};
         }
         &:nth-of-type(7) {
+          height: ${px2vw(20, 320)};
+        }
+        &:nth-of-type(8) {
+          height: ${px2vw(20, 320)};
+        }
+        &:nth-of-type(9) {
           height: ${px2vw(20, 320)};
         }
       }
