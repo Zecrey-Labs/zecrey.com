@@ -48,7 +48,7 @@ const investors = [
   },
   {
     name: 'SNZ',
-    image: '/section5/10snz.svg',
+    image: '/section5/10snz.png',
     link: 'https://snzholding.com/'
   }
 ]
