@@ -40,6 +40,11 @@ const investors = [
     name: '6stakecapital',
     image: '/section5/6stakecapital.png',
     link: 'https://www.stake.capital/'
+  },
+  {
+    name: 'sevenx',
+    image: '/section5/9sevenx.png',
+    link: 'http://www.7xvc.com/'
   }
 ]
 
@@ -73,7 +78,7 @@ const Style = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     img {
       cursor: pointer;
       margin-bottom: ${px2vw(101, 1437)};
