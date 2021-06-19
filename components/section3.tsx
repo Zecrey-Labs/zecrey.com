@@ -62,7 +62,6 @@ const Style = styled.div`
   > h1 {
     margin-left: ${desktopPx2vw(28)};
     margin-bottom: ${desktopPx2vw(41)};
-    width: ${desktopPx2vw(557)};
     font-family: Lexend;
     font-style: normal;
     font-weight: 800;
@@ -79,7 +78,7 @@ const Style = styled.div`
     padding-left: ${desktopPx2vw(23)};
     margin-bottom: ${desktopPx2vw(50)};
     width: ${desktopPx2vw(616)};
-    height: ${desktopPx2vw(95)};
+    height: ${desktopPx2vw(70)};
     font-family: Lexend;
     font-style: normal;
     font-weight: normal;
@@ -97,19 +96,23 @@ const Style = styled.div`
       right: ${desktopPx2vw(1100)};
     }
     &.image2 {
-      z-index: 9;
+      z-index: 4;
       height: ${desktopPx2vw(822)};
       top: ${desktopPx2vw(550)};
       right: ${desktopPx2vw(239)};
+      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+      border-radius: ${desktopPx2vw(12)};
     }
     &.image3 {
-      z-index: 8;
+      z-index: 3;
       height: ${desktopPx2vw(822)};
       top: ${desktopPx2vw(1080)};
       right: ${desktopPx2vw(121)};
+      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+      border-radius: ${desktopPx2vw(12)};
     }
     &.image4 {
-      z-index: 8;
+      z-index: 2;
       height: ${desktopPx2vw(294)};
       top: ${desktopPx2vw(1487)};
       right: ${desktopPx2vw(812)};
@@ -122,12 +125,12 @@ const Style = styled.div`
     }
   }
   > video {
-    z-index: 10;
+    z-index: 5;
     position: absolute;
     height: ${desktopPx2vw(823)};
     top: ${desktopPx2vw(815)};
     right: ${desktopPx2vw(433)};
-    border-radius: ${desktopPx2vw(10)};
+    border-radius: ${desktopPx2vw(12)};
   }
 `
 
@@ -143,13 +146,12 @@ export const Section3 = observer(() => {
         <div className='right'>1.0</div>
       </div>
       <h1>
-        Privacy Enable. <br /> One Simple Click.
+        Fast and Stable. <br /> Cross-Chain, Private.
       </h1>
       <p>
-        Blockchains today are not protecting user privacy. Privacy protocols
-        have enabled private cash transactions, but these systems lack
-        programmability. It is difficult and expensive for users to achieve
-        complete digital asset privacy.
+        Bridge different blockchain platforms to enable direct interactions
+        between digital assets with complete privacy. Keep account balance and
+        transaction amount confidential.
       </p>
       <video autoPlay muted loop src={'/section3/video.mp4'} />
       <Img className='image1' src={'/section3/image1.svg'} />
