@@ -1,3 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 import { META } from '@/constant'
 import React from 'react'
 

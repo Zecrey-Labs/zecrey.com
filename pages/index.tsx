@@ -1,3 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
@@ -8,6 +12,8 @@ import {
   Section3,
   Section4,
   Section5,
+  Section6,
+  Section7,
   Background,
   Footer
 } from '@/components'
@@ -35,6 +41,8 @@ const Home = observer(function Home() {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
+      <Section7 />
       <Footer />
     </Style>
   )

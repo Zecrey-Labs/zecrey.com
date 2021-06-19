@@ -1,3 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 import { useEffect } from 'react'
 import '@/global.css'
 import { observer } from 'mobx-react-lite'

@@ -1,3 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import { META } from '@/constant'

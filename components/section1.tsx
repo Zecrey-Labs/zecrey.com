@@ -1,3 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 import React from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
@@ -318,7 +322,6 @@ const Style = styled.div<{ active: boolean }>`
   }
 `
 
-// @TODO: 邮箱地址发送到服务器，对非法邮箱报错
 export const Section1 = observer(() => {
   const store = useStore()
 
