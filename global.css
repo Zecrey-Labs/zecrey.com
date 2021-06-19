@@ -202,5 +202,5 @@ body > a:first-of-type {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Leelawadee UI'), url(/fonts/LeelawUI.ttf) format('truetype');
+  src: local('Leelawadee UI'), url('/fonts/LeelawUI.ttf') format('truetype');
 }
