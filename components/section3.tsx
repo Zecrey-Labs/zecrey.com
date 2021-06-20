@@ -36,7 +36,7 @@ const Style = styled.div`
       span {
         font-family: Lexend;
         font-style: normal;
-        font-weight: 600;
+        font-weight: normal;
         font-size: ${desktopPx2vw(10)};
         line-height: ${desktopPx2vw(13)};
         text-align: center;
@@ -53,10 +53,13 @@ const Style = styled.div`
       font-style: normal;
       font-weight: bold;
       font-size: ${desktopPx2vw(24)};
-      line-height: ${desktopPx2vw(30)};
+      height: ${desktopPx2vw(30)};
       padding: 0 ${desktopPx2vw(12)};
-      text-align: center;
+      box-sizing: content-box;
       color: #53f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   > h1 {
