@@ -11,7 +11,7 @@ import { observer } from 'mobx-react-lite'
 
 const Style = styled.div`
   position: relative;
-  padding-top: ${desktopPx2vw(1211)};
+  padding-top: ${desktopPx2vw(711)};
   padding-left: ${desktopPx2vw(198)};
   padding-bottom: ${desktopPx2vw(380)};
   > div.badge {
@@ -92,13 +92,13 @@ const Style = styled.div`
     &.image1 {
       z-index: -1;
       height: ${desktopPx2vw(488)};
-      top: ${desktopPx2vw(997)};
+      top: ${desktopPx2vw(497)};
       right: ${desktopPx2vw(1100)};
     }
     &.image2 {
       z-index: 4;
       height: ${desktopPx2vw(822)};
-      top: ${desktopPx2vw(550)};
+      top: ${desktopPx2vw(150)};
       right: ${desktopPx2vw(239)};
       box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
       border-radius: ${desktopPx2vw(12)};
@@ -106,7 +106,7 @@ const Style = styled.div`
     &.image3 {
       z-index: 3;
       height: ${desktopPx2vw(822)};
-      top: ${desktopPx2vw(1080)};
+      top: ${desktopPx2vw(580)};
       right: ${desktopPx2vw(121)};
       box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
       border-radius: ${desktopPx2vw(12)};
@@ -114,13 +114,13 @@ const Style = styled.div`
     &.image4 {
       z-index: 2;
       height: ${desktopPx2vw(294)};
-      top: ${desktopPx2vw(1487)};
+      top: ${desktopPx2vw(987)};
       right: ${desktopPx2vw(812)};
     }
     &.image5 {
       z-index: -1;
       height: ${desktopPx2vw(353)};
-      top: ${desktopPx2vw(1428)};
+      top: ${desktopPx2vw(928)};
       left: ${desktopPx2vw(104)};
     }
   }
@@ -128,9 +128,10 @@ const Style = styled.div`
     z-index: 5;
     position: absolute;
     height: ${desktopPx2vw(823)};
-    top: ${desktopPx2vw(815)};
+    top: ${desktopPx2vw(315)};
     right: ${desktopPx2vw(433)};
     border-radius: ${desktopPx2vw(12)};
+    box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
   }
 `
 
@@ -153,7 +154,7 @@ export const Section3 = observer(() => {
         between digital assets with complete privacy. Keep account balance and
         transaction amount confidential.
       </p>
-      <video autoPlay muted loop src={'/section3/video.mp4'} />
+      <video autoPlay muted loop src={'/section2/video.mp4'} />
       <Img className='image1' src={'/section3/image1.svg'} />
       <Img className='image2' src={'/section3/image2.png'} />
       <Img className='image3' src={'/section3/image3.png'} />

@@ -1,19 +1,14 @@
-<svg width="355" height="294" viewBox="0 0 355 294" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="355" height="294">
-        <rect width="355" height="294" fill="#C4C4C4"/>
-    </mask>
-    <g mask="url(#mask0)">
-        <g opacity="0.70417">
-            <circle cx="178.5" cy="179.5" r="151.5" stroke="url(#paint0_linear)" stroke-width="31.8947"/>
-            <path opacity="0.66002" d="M126 181.025L166.21 220L247 140" stroke="url(#paint1_linear)" stroke-width="31.8947" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
+<svg width="335" height="335" viewBox="0 0 335 335" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.70417">
+        <circle cx="167.5" cy="167.5" r="151.5" stroke="url(#paint0_linear)" stroke-width="31.8947"/>
+        <path opacity="0.66002" d="M115 169.025L155.21 208L236 128" stroke="url(#paint1_linear)" stroke-width="31.8947" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     <defs>
-        <linearGradient id="paint0_linear" x1="330" y1="28" x2="27" y2="28" gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint0_linear" x1="319" y1="16" x2="16" y2="16" gradientUnits="userSpaceOnUse">
             <stop stop-color="#6C6C6C" stop-opacity="0.0358118"/>
             <stop offset="1" stop-color="#3A3A3A"/>
         </linearGradient>
-        <linearGradient id="paint1_linear" x1="65.5" y1="180" x2="139.109" y2="291.333" gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint1_linear" x1="54.5" y1="168" x2="128.109" y2="279.333" gradientUnits="userSpaceOnUse">
             <stop stop-color="#53F8FF"/>
             <stop offset="1" stop-color="#00B6BA"/>
         </linearGradient>

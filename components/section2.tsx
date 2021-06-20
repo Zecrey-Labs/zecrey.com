@@ -25,11 +25,12 @@ const Style = styled.div`
       left: ${desktopPx2vw(246)};
       top: ${desktopPx2vw(150)};
       width: ${desktopPx2vw(470)};
+      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
     }
   }
   > div.right {
     flex: 1;
-    padding-top: ${desktopPx2vw(391)};
+    padding-top: ${desktopPx2vw(281)};
     padding-left: ${desktopPx2vw(201)};
     padding-right: ${desktopPx2vw(200)};
     > div.badge {
@@ -54,7 +55,7 @@ const Style = styled.div`
         span {
           font-family: Lexend;
           font-style: normal;
-          font-weight: 600;
+          font-weight: normal;
           font-size: ${desktopPx2vw(10)};
           line-height: ${desktopPx2vw(13)};
           text-align: center;
@@ -97,30 +98,30 @@ const Style = styled.div`
       padding-left: ${desktopPx2vw(23)};
       margin-bottom: ${desktopPx2vw(50)};
       width: ${desktopPx2vw(616)};
-      height: ${desktopPx2vw(95)};
       font-family: Lexend;
       font-style: normal;
       font-weight: normal;
       font-size: ${desktopPx2vw(18)};
-      line-height: ${desktopPx2vw(22)};
+      line-height: ${desktopPx2vw(24)};
       letter-spacing: 0.217059px;
       color: #dadada;
     }
     > img.toggle-button {
       height: ${desktopPx2vw(40)};
+      margin-left: ${desktopPx2vw(28)};
     }
     > div.image {
       > img.big-image {
         position: absolute;
         height: ${desktopPx2vw(255)};
         right: ${desktopPx2vw(155)};
-        bottom: 0;
+        bottom: ${desktopPx2vw(141)};
       }
       > img.small-image {
         position: absolute;
         height: ${desktopPx2vw(130)};
         right: ${desktopPx2vw(619)};
-        bottom: 0;
+        bottom: ${desktopPx2vw(141)};
       }
     }
   }
@@ -155,7 +156,7 @@ export const Section2 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='left'>
         <Img src={'/section2/image1.png'} />
-        <video autoPlay muted loop src={'/section2/video.mp4'} />
+        <video autoPlay muted loop src={'/section3/video.mp4'} />
       </div>
       <div className='right'>
         <div className='badge'>
