@@ -86,7 +86,7 @@ const Style = styled.div`
     font-style: normal;
     font-weight: normal;
     font-size: ${desktopPx2vw(18)};
-    line-height: ${desktopPx2vw(22)};
+    line-height: ${desktopPx2vw(24)};
     letter-spacing: 0.217059px;
     color: #dadada;
   }

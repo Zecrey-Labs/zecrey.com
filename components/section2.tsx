@@ -14,23 +14,23 @@ const Style = styled.div`
   margin-top: ${desktopPx2vw(267)};
   position: relative;
   flex-direction: row;
-  height: ${desktopPx2vw(1092)};
+  height: ${desktopPx2vw(1161)};
   > div.left {
     position: relative;
     > img {
-      width: ${desktopPx2vw(875)};
+      height: ${desktopPx2vw(1161)};
     }
     > video {
       position: absolute;
       left: ${desktopPx2vw(246)};
-      top: ${desktopPx2vw(150)};
-      width: ${desktopPx2vw(470)};
+      top: ${desktopPx2vw(160)};
+      height: ${desktopPx2vw(823)};
       box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
     }
   }
   > div.right {
     flex: 1;
-    padding-top: ${desktopPx2vw(281)};
+    padding-top: ${desktopPx2vw(302)};
     padding-left: ${desktopPx2vw(201)};
     padding-right: ${desktopPx2vw(200)};
     > div.badge {
@@ -110,21 +110,26 @@ const Style = styled.div`
       color: #dadada;
     }
     > img.toggle-button {
-      height: ${desktopPx2vw(40)};
+      width: ${desktopPx2vw(77)};
       margin-left: ${desktopPx2vw(28)};
     }
     > div.image {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: ${desktopPx2vw(137)};
       > img.big-image {
         position: absolute;
-        height: ${desktopPx2vw(255)};
-        right: ${desktopPx2vw(155)};
-        bottom: ${desktopPx2vw(141)};
+        height: ${desktopPx2vw(252)};
+        right: ${desktopPx2vw(98)};
+        bottom: 0;
       }
       > img.small-image {
         position: absolute;
-        height: ${desktopPx2vw(130)};
-        right: ${desktopPx2vw(619)};
-        bottom: ${desktopPx2vw(141)};
+        height: ${desktopPx2vw(146)};
+        right: ${desktopPx2vw(594)};
+        bottom: 0;
       }
     }
   }
@@ -135,7 +140,7 @@ const Style = styled.div`
     width: ${desktopPx2vw(1920 - 753 - 787)};
     height: ${desktopPx2vw(3969 - 554 - 3169)};
     left: ${desktopPx2vw(753)};
-    top: ${desktopPx2vw(444)};
+    top: ${desktopPx2vw(349)};
     > img {
       width: ${desktopPx2vw(258)};
       position: absolute;
@@ -181,7 +186,7 @@ export const Section2 = observer(() => {
         <Img className='toggle-button' src={'/section2/toggleButton.svg'} />
         <div className='image'>
           <Img className='big-image' src={'/section2/image5.svg'} />
-          <Img className='small-image' src={'/section2/image6.svg'} />
+          <Img className='small-image' src={'/section2/image6.png'} />
         </div>
       </div>
       <div className='arrow'>
