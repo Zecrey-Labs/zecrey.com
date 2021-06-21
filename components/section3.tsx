@@ -12,6 +12,7 @@ import { observer } from 'mobx-react-lite'
 const Style = styled.div`
   position: relative;
   padding-top: ${desktopPx2vw(711)};
+  margin-top: ${desktopPx2vw(61)};
   padding-left: ${desktopPx2vw(198)};
   padding-bottom: ${desktopPx2vw(380)};
   > div.badge {
@@ -37,7 +38,7 @@ const Style = styled.div`
         font-family: Lexend;
         font-style: normal;
         font-weight: normal;
-        font-size: ${desktopPx2vw(10)};
+        font-size: ${desktopPx2vw(10.5)};
         line-height: ${desktopPx2vw(13)};
         text-align: center;
         color: #ffffff;
@@ -154,7 +155,7 @@ export const Section3 = observer(() => {
       <div className='badge'>
         <div className='left'>
           <h3>Zecrey Protocol</h3>
-          <span>User Interface Verion 1.0</span>
+          <span>User Interface Version 1.0</span>
         </div>
         <div className='right'>1.0</div>
       </div>
