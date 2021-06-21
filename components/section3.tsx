@@ -54,7 +54,7 @@ const Style = styled.div`
       font-weight: bold;
       font-size: ${desktopPx2vw(24)};
       height: ${desktopPx2vw(30)};
-      padding: 0 ${desktopPx2vw(12)};
+      width: ${desktopPx2vw(59)};
       box-sizing: content-box;
       color: #53f8ff;
       display: flex;
@@ -81,7 +81,6 @@ const Style = styled.div`
     padding-left: ${desktopPx2vw(23)};
     margin-bottom: ${desktopPx2vw(50)};
     width: ${desktopPx2vw(616)};
-    height: ${desktopPx2vw(70)};
     font-family: Lexend;
     font-style: normal;
     font-weight: normal;
@@ -94,14 +93,15 @@ const Style = styled.div`
     position: absolute;
     &.image1 {
       z-index: -1;
-      height: ${desktopPx2vw(488)};
-      top: ${desktopPx2vw(497)};
-      right: ${desktopPx2vw(1100)};
+      height: ${desktopPx2vw(214)};
+      top: ${desktopPx2vw(596)};
+      right: ${desktopPx2vw(1094)};
+      opacity: 0.1;
     }
     &.image2 {
       z-index: 4;
       height: ${desktopPx2vw(822)};
-      top: ${desktopPx2vw(150)};
+      top: ${desktopPx2vw(52)};
       right: ${desktopPx2vw(239)};
       box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
       border-radius: ${desktopPx2vw(12)};
@@ -122,9 +122,18 @@ const Style = styled.div`
     }
     &.image5 {
       z-index: -1;
-      height: ${desktopPx2vw(353)};
-      top: ${desktopPx2vw(928)};
-      left: ${desktopPx2vw(104)};
+      height: ${desktopPx2vw(114)};
+      top: ${desktopPx2vw(620 + 372 + 174.5)};
+      left: ${desktopPx2vw(114 - 174.5)};
+      transform: rotateZ(90deg);
+      opacity: 0.06;
+    }
+    &.image6 {
+      height: ${desktopPx2vw(82)};
+      top: ${desktopPx2vw(280)};
+      right: ${desktopPx2vw(1256)};
+      transform: rotateZ(90deg);
+      opacity: 0.06;
     }
   }
   > video {
@@ -158,11 +167,12 @@ export const Section3 = observer(() => {
         transaction amount confidential.
       </p>
       <video autoPlay muted loop src={'/section2/video.mp4'} />
-      <Img className='image1' src={'/section3/image1.svg'} />
+      <Img className='image1' src={'/section3/image6.png'} />
       <Img className='image2' src={'/section3/image2.png'} />
       <Img className='image3' src={'/section3/image3.png'} />
       <Img className='image4' src={'/section3/image4.svg'} />
-      <Img className='image5' src={'/section3/image5.svg'} />
+      <Img className='image5' src={'/section3/image5.png'} />
+      <Img className='image6' src={'/section3/image6.png'} />
     </Style>
   )
 })

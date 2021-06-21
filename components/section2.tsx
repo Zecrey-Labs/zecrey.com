@@ -73,7 +73,7 @@ const Style = styled.div`
         font-weight: bold;
         font-size: ${desktopPx2vw(24)};
         height: ${desktopPx2vw(30)};
-        padding: 0 ${desktopPx2vw(12)};
+        width: ${desktopPx2vw(59)};
         box-sizing: content-box;
         color: #53f8ff;
         display: flex;
