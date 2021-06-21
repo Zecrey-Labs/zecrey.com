@@ -23,7 +23,7 @@ const Style = styled.div`
     }
     > video {
       position: absolute;
-      left: ${desktopPx2vw(246)};
+      left: ${desktopPx2vw(230)};
       top: ${desktopPx2vw(160)};
       height: ${desktopPx2vw(823)};
       box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
