@@ -12,6 +12,7 @@ import { observer } from 'mobx-react-lite'
 const Style = styled.div`
   display: flex;
   margin-top: ${desktopPx2vw(267)};
+  padding-bottom: ${desktopPx2vw(163)};
   position: relative;
   flex-direction: row;
   height: ${desktopPx2vw(1161)};
@@ -113,24 +114,11 @@ const Style = styled.div`
       width: ${desktopPx2vw(77)};
       margin-left: ${desktopPx2vw(28)};
     }
-    > div.image {
+    > img.big-image {
       position: absolute;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      bottom: ${desktopPx2vw(137)};
-      > img.big-image {
-        position: absolute;
-        height: ${desktopPx2vw(252)};
-        right: ${desktopPx2vw(98)};
-        bottom: 0;
-      }
-      > img.small-image {
-        position: absolute;
-        height: ${desktopPx2vw(146)};
-        right: ${desktopPx2vw(594)};
-        bottom: 0;
-      }
+      height: ${desktopPx2vw(523)};
+      right: ${desktopPx2vw(237)};
+      bottom: ${desktopPx2vw(24)};
     }
   }
   > div.arrow {
@@ -184,10 +172,7 @@ export const Section2 = observer(() => {
           complete digital asset privacy.
         </p>
         <Img className='toggle-button' src={'/section2/toggleButton.svg'} />
-        <div className='image'>
-          <Img className='big-image' src={'/section2/image5.svg'} />
-          <Img className='small-image' src={'/section2/image6.png'} />
-        </div>
+        <Img className='big-image' src={'/section2/image5.png'} />
       </div>
       <div className='arrow'>
         <Img className='arrow-left' src={'/section2/arrow.svg'} />

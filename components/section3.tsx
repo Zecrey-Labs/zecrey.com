@@ -12,7 +12,7 @@ import { observer } from 'mobx-react-lite'
 const Style = styled.div`
   position: relative;
   padding-top: ${desktopPx2vw(711)};
-  margin-top: ${desktopPx2vw(61)};
+  margin-top: ${desktopPx2vw(200)};
   padding-left: ${desktopPx2vw(198)};
   padding-bottom: ${desktopPx2vw(380)};
   > div.badge {
