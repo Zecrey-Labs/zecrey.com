@@ -4,10 +4,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import Img from './img'
 import { useStore } from '@/store'
 import { desktopPx2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
+import Image from 'next/image'
 
 const Style = styled.div`
   display: flex;
@@ -18,9 +18,6 @@ const Style = styled.div`
   height: ${desktopPx2vw(1161)};
   > div.left {
     position: relative;
-    > img {
-      height: ${desktopPx2vw(1161)};
-    }
     > video {
       position: absolute;
       left: ${desktopPx2vw(230)};
@@ -110,16 +107,6 @@ const Style = styled.div`
       letter-spacing: 0.217059px;
       color: #dadada;
     }
-    > img.toggle-button {
-      width: ${desktopPx2vw(77)};
-      margin-left: ${desktopPx2vw(28)};
-    }
-    > img.big-image {
-      position: absolute;
-      height: ${desktopPx2vw(523)};
-      right: ${desktopPx2vw(237)};
-      bottom: ${desktopPx2vw(24)};
-    }
   }
   > div.arrow {
     z-index: -1;
@@ -129,20 +116,45 @@ const Style = styled.div`
     height: ${desktopPx2vw(3969 - 554 - 3169)};
     left: ${desktopPx2vw(753)};
     top: ${desktopPx2vw(349)};
-    > img {
-      width: ${desktopPx2vw(258)};
-      position: absolute;
-      &.arrow-left {
-        left: 0;
-        top: 0;
-      }
-      &.arrow-right {
-        right: 0;
-        bottom: 0;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-      }
-    }
   }
+`
+
+const ToggleButton = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(77)};
+  height: ${desktopPx2vw(62)};
+  margin-left: ${desktopPx2vw(28)};
+`
+
+const Image1 = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(857)};
+  height: ${desktopPx2vw(1161)};
+`
+
+const BigImage = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(609)};
+  height: ${desktopPx2vw(477)};
+  right: ${desktopPx2vw(237)};
+  bottom: ${desktopPx2vw(24)};
+`
+
+const ArrowLeft = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  left: 0;
+  top: 0;
+`
+
+const ArrowRight = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  right: 0;
+  bottom: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 export const Section2 = observer(() => {
@@ -151,8 +163,15 @@ export const Section2 = observer(() => {
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='left'>
-        <Img src={'/section2/image1.png'} />
-        <video autoPlay muted loop src={'/section3/video.mp4'} />
+        <Image1>
+          <Image
+            src='/section2/image1.png'
+            className='image1'
+            alt='image1'
+            layout='fill'
+          />
+        </Image1>
+        <video autoPlay muted loop src={'/section2/video2.mp4'} />
       </div>
       <div className='right'>
         <div className='badge'>
@@ -171,12 +190,41 @@ export const Section2 = observer(() => {
           programmability. It is difficult and expensive for users to achieve
           complete digital asset privacy.
         </p>
-        <Img className='toggle-button' src={'/section2/toggleButton.svg'} />
-        <Img className='big-image' src={'/section2/image5.png'} />
+        <ToggleButton>
+          <Image
+            src='/section2/toggleButton.svg'
+            alt='toggle-button'
+            layout='fill'
+            objectFit='cover'
+            quality={100}
+          />
+        </ToggleButton>
+        <BigImage>
+          <Image
+            src='/section2/image5.png'
+            className='big-image'
+            alt='big-image'
+            layout='fill'
+          />
+        </BigImage>
       </div>
       <div className='arrow'>
-        <Img className='arrow-left' src={'/section2/arrow.svg'} />
-        <Img className='arrow-right' src={'/section2/arrow.svg'} />
+        <ArrowLeft>
+          <Image
+            src='/section2/arrow.svg'
+            className='arrow-left'
+            alt='arrow-left'
+            layout='fill'
+          />
+        </ArrowLeft>
+        <ArrowRight>
+          <Image
+            src='/section2/arrow.svg'
+            className='arrow-right'
+            alt='arrow-right'
+            layout='fill'
+          />
+        </ArrowRight>
       </div>
     </Style>
   )

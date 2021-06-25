@@ -4,10 +4,10 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import Img from './img'
 import { useStore } from '@/store'
 import { desktopPx2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
+import Image from 'next/image'
 
 const Style = styled.div`
   position: relative;
@@ -90,53 +90,6 @@ const Style = styled.div`
     letter-spacing: 0.217059px;
     color: #dadada;
   }
-  > img {
-    position: absolute;
-    &.image1 {
-      z-index: -1;
-      height: ${desktopPx2vw(214)};
-      top: ${desktopPx2vw(596)};
-      right: ${desktopPx2vw(1094)};
-      opacity: 0.1;
-    }
-    &.image2 {
-      z-index: 4;
-      height: ${desktopPx2vw(822)};
-      top: ${desktopPx2vw(52)};
-      right: ${desktopPx2vw(239)};
-      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-      border-radius: ${desktopPx2vw(12)};
-    }
-    &.image3 {
-      z-index: 3;
-      height: ${desktopPx2vw(822)};
-      top: ${desktopPx2vw(580)};
-      right: ${desktopPx2vw(121)};
-      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-      border-radius: ${desktopPx2vw(12)};
-    }
-    &.image4 {
-      z-index: 2;
-      height: ${desktopPx2vw(294)};
-      top: ${desktopPx2vw(987)};
-      right: ${desktopPx2vw(812)};
-    }
-    &.image5 {
-      z-index: -1;
-      height: ${desktopPx2vw(114)};
-      top: ${desktopPx2vw(620 + 372 + 174.5)};
-      left: ${desktopPx2vw(114 - 174.5)};
-      transform: rotateZ(90deg);
-      opacity: 0.06;
-    }
-    &.image6 {
-      height: ${desktopPx2vw(82)};
-      top: ${desktopPx2vw(280)};
-      right: ${desktopPx2vw(1256)};
-      transform: rotateZ(90deg);
-      opacity: 0.06;
-    }
-  }
   > video {
     z-index: 5;
     position: absolute;
@@ -146,6 +99,67 @@ const Style = styled.div`
     border-radius: ${desktopPx2vw(12)};
     box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
   }
+`
+
+const Image1 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: ${desktopPx2vw(871)};
+  height: ${desktopPx2vw(214)};
+  top: ${desktopPx2vw(596)};
+  right: ${desktopPx2vw(1094)};
+  opacity: 0.1;
+`
+const Image2 = styled.div`
+  position: absolute;
+  z-index: 4;
+  width: ${desktopPx2vw(493.75)};
+  height: ${desktopPx2vw(822)};
+  top: ${desktopPx2vw(52)};
+  right: ${desktopPx2vw(239)};
+  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+  border-radius: ${desktopPx2vw(12)};
+`
+
+const Image3 = styled.div`
+  position: absolute;
+  z-index: 3;
+  width: ${desktopPx2vw(493)};
+  height: ${desktopPx2vw(822)};
+  top: ${desktopPx2vw(580)};
+  right: ${desktopPx2vw(121)};
+  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+  border-radius: ${desktopPx2vw(12)};
+`
+
+const Image4 = styled.div`
+  position: absolute;
+  z-index: 2;
+  width: ${desktopPx2vw(294)};
+  height: ${desktopPx2vw(294)};
+  top: ${desktopPx2vw(987)};
+  right: ${desktopPx2vw(812)};
+`
+
+const Image5 = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: ${desktopPx2vw(463)};
+  height: ${desktopPx2vw(114)};
+  top: ${desktopPx2vw(620 + 372 + 174.5)};
+  left: ${desktopPx2vw(114 - 174.5)};
+  transform: rotateZ(90deg);
+  opacity: 0.06;
+`
+
+const Image6 = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(336)};
+  height: ${desktopPx2vw(82)};
+  top: ${desktopPx2vw(280)};
+  right: ${desktopPx2vw(1256)};
+  transform: rotateZ(90deg);
+  opacity: 0.06;
 `
 
 export const Section3 = observer(() => {
@@ -167,13 +181,67 @@ export const Section3 = observer(() => {
         between digital assets with complete privacy. Keep account balance and
         transaction amount confidential.
       </p>
-      <video autoPlay muted loop src={'/section2/video.mp4'} />
-      <Img className='image1' src={'/section3/image6.png'} />
-      <Img className='image2' src={'/section3/image2.png'} />
-      <Img className='image3' src={'/section3/image3.png'} />
-      <Img className='image4' src={'/section3/image4.svg'} />
-      <Img className='image5' src={'/section3/image5.png'} />
-      <Img className='image6' src={'/section3/image6.png'} />
+      <video autoPlay muted loop src={'/section3/video3.mp4'} />
+      <Image1>
+        <Image
+          src='/section3/image6.png'
+          className='image1'
+          alt='image1'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image1>
+      <Image2>
+        <Image
+          src='/section3/image2.png'
+          className='image2'
+          alt='image2'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image2>
+      <Image3>
+        <Image
+          src='/section3/image3.png'
+          className='image3'
+          alt='image3'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image3>
+      <Image4>
+        <Image
+          src='/section3/image4.svg'
+          className='image4'
+          alt='image4'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image4>
+      <Image5>
+        <Image
+          src='/section3/image5.png'
+          className='image5'
+          alt='image5'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image5>
+      <Image6>
+        <Image
+          src='/section3/image6.png'
+          className='image6'
+          alt='image6'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Image6>
     </Style>
   )
 })

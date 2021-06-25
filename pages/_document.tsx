@@ -15,7 +15,7 @@ const ZecreyHead = () => (
     <meta name='copyright' content='LambdaCal, Inc' />
     <meta name='author' content={META.companyFullName} />
     <meta name='Robots' content='all' />
-    <link rel='shortcut icon' href={`${META.basePath}/favicon.svg`}></link>
+    <link rel='shortcut icon' href='/favicon.svg' />
     <link rel='preconnect' href='https://fonts.gstatic.com' />
     <link
       href='https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700&display=swap'
@@ -29,12 +29,12 @@ const ZecreyHead = () => (
       href='https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'
       rel='stylesheet'
     />
+    <link rel='preload' href='/fonts/LeelawUI.ttf' as='font' crossOrigin='' />
   </Head>
 )
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 

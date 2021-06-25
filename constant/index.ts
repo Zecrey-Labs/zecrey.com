@@ -1,13 +1,10 @@
-import getConfig from 'next/config'
-
-const { publicRuntimeConfig } = getConfig()
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
 
 export const META = {
   content: 'Zecrey',
   description: 'Zecrey',
   companyFullName: '数浪',
-  title: 'Zecrey',
-  basePath: publicRuntimeConfig.env.BASEPATH
-    ? `/${publicRuntimeConfig.env.BASEPATH}`
-    : ''
+  title: 'Zecrey'
 }

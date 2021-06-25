@@ -2,8 +2,7 @@
  * Copyright (C) 2020-present, Zecrey-Labs
  */
 
-import { useEffect } from 'react'
-import '@/global.css'
+import '@/styles/global.css'
 import { observer } from 'mobx-react-lite'
 import { Provider } from '@/store'
 import Head from 'next/head'
@@ -15,23 +14,6 @@ type Props = {
 }
 
 const App = observer(function App({ Component, pageProps }: Props) {
-  const { statusCode } = pageProps
-  useEffect(() => {
-    const onResize = () => {
-      const screenWidth = window.innerWidth
-      document.documentElement.style.fontSize =
-        Math.max(screenWidth / 19.2, 40) + 'px'
-    }
-    window.addEventListener('resize', onResize)
-    onResize()
-
-    return () => window.removeEventListener('resize', onResize)
-  }, [])
-
-  if (statusCode) {
-    return <Component {...pageProps} />
-  }
-
   return <Component {...pageProps} />
 })
 

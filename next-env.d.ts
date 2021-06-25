@@ -1,10 +1,7 @@
+/*!
+ * Copyright (C) 2020-present, Zecrey-Labs
+ */
+
 /// <reference types="next" />
 /// <reference types="next/types/global" />
-declare module '*.svg' {
-  const content: any
-  export default content
-}
-declare module '*.png' {
-  const content: any
-  export default content
-}
+/// <reference types="next/image-types/global" />
