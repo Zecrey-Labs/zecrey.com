@@ -12,7 +12,7 @@ import Image from 'next/image'
 const Style = styled.div`
   position: relative;
   padding-top: ${desktopPx2vw(711)};
-  margin-top: ${desktopPx2vw(200)};
+  margin-top: ${desktopPx2vw(-50)};
   padding-left: ${desktopPx2vw(198)};
   padding-bottom: ${desktopPx2vw(380)};
   > div.badge {

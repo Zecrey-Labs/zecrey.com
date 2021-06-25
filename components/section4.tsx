@@ -4,343 +4,339 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import Img from './img'
 import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
-import { px2vw } from '@/utils'
+import { desktopPx2vw } from '@/utils'
+import Image from 'next/image'
+
+const BlockStyle = styled.div`
+  width: ${desktopPx2vw(222)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div.square {
+    width: ${desktopPx2vw(166)};
+    height: ${desktopPx2vw(167)};
+    background: #3a3a3a;
+    mix-blend-mode: normal;
+    border-radius: 20px;
+    margin-bottom: ${desktopPx2vw(11)};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  > div.text {
+    width: 100%;
+    height: ${desktopPx2vw(62)};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: 600;
+      font-size: ${desktopPx2vw(21)};
+      line-height: ${desktopPx2vw(26)};
+      text-align: center;
+      color: white;
+    }
+  }
+`
+
+const Block = ({ src, text, children: BlockImage }) => (
+  <BlockStyle>
+    <div className='square'>
+      <BlockImage>
+        <Image
+          src={src}
+          alt={text}
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </BlockImage>
+    </div>
+    <div className='text'>
+      <span>{text}</span>
+    </div>
+  </BlockStyle>
+)
 
 const Style = styled.div`
   z-index: 1;
   width: 100vw;
   overflow: hidden;
   position: relative;
+  align-items: center;
+  padding-top: ${desktopPx2vw(273)};
+  padding-bottom: ${desktopPx2vw(179)};
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: ${px2vw(273, 1920)};
-  padding-bottom: ${px2vw(179, 1920)};
-  div.content {
-    width: ${px2vw(1330, 1920)};
-    padding-bottom: ${px2vw(186, 1920)};
-    position: relative;
-    box-sizing: content-box;
-    h2 {
-      width: ${px2vw(925, 1920)};
-      height: ${px2vw(87, 1920)};
-      text-align: center;
-      font: normal normal bold ${px2vw(36, 1920)} / ${px2vw(87, 1920)} Lexend;
-      letter-spacing: 0px;
-      color: #383838;
+
+  > h2 {
+    font-family: Lexend;
+    font-style: normal;
+    font-weight: 800;
+    max-width: ${desktopPx2vw(869)};
+    font-size: ${desktopPx2vw(80)};
+    line-height: ${desktopPx2vw(100)};
+    text-align: center;
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  > p {
+    margin-top: ${desktopPx2vw(120)};
+    font-family: Lexend;
+    font-style: normal;
+    font-weight: normal;
+    font-size: ${desktopPx2vw(24)};
+    line-height: ${desktopPx2vw(30)};
+    text-align: center;
+    color: #dadada;
+    max-width: ${desktopPx2vw(1182)};
+  }
+  > div.feature {
+    margin-top: ${desktopPx2vw(200)};
+    width: ${desktopPx2vw(1300)};
+    height: ${desktopPx2vw(190)};
+    background: #4a4a4a;
+    mix-blend-mode: normal;
+    border-radius: ${desktopPx2vw(20)};
+    > ul {
+      top: -${desktopPx2vw(80)};
       position: relative;
-      background: #e4e4e4 0% 0% no-repeat padding-box;
-      border-radius: ${px2vw(5, 1920)};
-      img {
-        position: absolute;
-        &.badge1,
-        &.badge2 {
-          left: -${px2vw(33, 1920)};
-          bottom: 0;
-          height: ${px2vw(37, 1920)};
-        }
-        &.badge1 {
-          z-index: 0;
-        }
-        &.badge2 {
-          z-index: -1;
-        }
-        &.badge3,
-        &.badge4 {
-          right: -${px2vw(18, 1920)};
-          bottom: 0;
-        }
-        &.badge3 {
-          z-index: -1;
-          height: ${px2vw(47, 1920)};
-        }
-        &.badge4 {
-          z-index: 1;
-          height: ${px2vw(22, 1920)};
-        }
-        &.circle1,
-        &.halfcircle1 {
-          top: 0;
-          right: ${px2vw(62, 1920)};
-          width: ${px2vw(52, 1920)};
-        }
-        &.circle1 {
-          z-index: -1;
-          transform: translateY(-50%);
-        }
-        &.halfcircle1 {
-          z-index: 1;
-        }
-        &.circle2,
-        &.halfcircle2 {
-          bottom: 0;
-          left: ${px2vw(62, 1920)};
-          width: ${px2vw(52, 1920)};
-        }
-        &.circle2 {
-          z-index: -1;
-          transform: translateY(50%);
-        }
-        &.halfcircle2 {
-          z-index: 1;
-          transform: rotateX(180deg);
-        }
-      }
-    }
-    div.text {
-      padding-top: ${px2vw(34, 1920)};
-      padding-left: ${px2vw(133, 1920)};
-      p {
-        text-align: left;
-        font: normal normal normal ${px2vw(24, 1920)} / ${px2vw(32, 1920)} IBM
-          Plex Sans;
-        color: #222222;
-        &:nth-of-type(1) {
-          width: ${px2vw(728, 1920)};
-          margin-bottom: ${px2vw(29, 1920)};
-        }
-        &:nth-of-type(2) {
-          width: ${px2vw(525, 1920)};
-        }
-      }
-    }
-    ul.features {
-      position: absolute;
-      right: 0;
-      bottom: ${px2vw(38, 1920)};
-      li {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        background: #e4e4e4 0% 0% no-repeat padding-box;
-        border-radius: ${px2vw(5, 1920)};
-        width: ${px2vw(300, 1920)};
-        height: ${px2vw(186, 1920)};
-        padding: ${px2vw(25, 1920)} 0;
-        margin: ${px2vw(10, 1920)};
-        img {
-          height: ${px2vw(88, 1920)};
-          margin-bottom: ${px2vw(25, 1920)};
-        }
-        span {
-          text-align: left;
-          font: normal normal bold ${px2vw(24, 1920)} / ${px2vw(29, 1920)}
-            Lexend;
-          letter-spacing: 0px;
-          color: rgba(150, 150, 150);
-        }
-        &:nth-of-type(1) {
-          right: 0;
-          bottom: ${px2vw(270, 1920)};
-        }
-        &:nth-of-type(3) {
-          right: 0;
-          bottom: 0;
-        }
-        &:nth-of-type(2) {
-          bottom: 0;
-          right: ${px2vw(340, 1920)};
-        }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      li:nth-of-type(2) {
+        position: relative;
+        bottom: ${desktopPx2vw(40)};
       }
     }
   }
-  img.big {
-    position: absolute;
-    &:nth-of-type(1) {
-      left: ${px2vw(50, 1920)};
-      bottom: 0;
-      height: ${px2vw(331, 1920)};
-    }
-    &:nth-of-type(2) {
-      top: ${px2vw(65, 1920)};
-      height: ${px2vw(420, 1920)};
-      right: 0;
-    }
-  }
-  div.anchor {
-    position: absolute;
-    top: ${px2vw(588, 1920)};
-  }
-  @media (max-width: 760px) {
-    width: 100%;
-    box-sizing: border-box;
-    min-height: calc(100vh - 40px);
-    padding: ${px2vw(80, 320)} ${px2vw(33, 320)} ${px2vw(97, 320)}
-      ${px2vw(33, 320)};
-    div.content {
-      width: 100%;
-      padding-bottom: 0;
+
+  > div.row3 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: ${desktopPx2vw(159)};
+    > div.left {
       h2 {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        margin-bottom: ${px2vw(33, 320)};
+        margin-top: ${desktopPx2vw(60)};
         font-family: Lexend;
         font-style: normal;
-        font-weight: bold;
-        font-size: ${px2vw(26, 320)};
-        line-height: ${px2vw(32, 320)};
-        text-align: center;
-        color: #171717;
-        background: none;
-        img {
-          display: none;
-        }
+        font-weight: 800;
+        font-size: ${desktopPx2vw(36)};
+        line-height: ${desktopPx2vw(45)};
+        color: #ffffff;
+        padding-left: ${desktopPx2vw(28)};
+        border-left: ${desktopPx2vw(5)} solid rgba(255, 255, 255, 0.3);
+        max-width: ${desktopPx2vw(404)};
       }
-      div.text {
-        padding: 0;
-        p {
-          font-size: ${px2vw(10, 320)};
-          line-height: ${px2vw(16, 320)};
-          color: #000000;
-          border-left: 5px solid #cceeef;
-          padding-left: ${px2vw(11, 320)};
-          margin-bottom: ${px2vw(31, 320)};
-          width: auto !important;
-        }
+      p {
+        max-width: ${desktopPx2vw(445)};
+        margin-left: ${desktopPx2vw(33)};
+        margin-top: ${desktopPx2vw(33)};
+        font-family: Lexend;
+        font-style: normal;
+        font-weight: normal;
+        font-size: ${desktopPx2vw(24)};
+        line-height: ${desktopPx2vw(30)};
+        color: #dadada;
       }
-      ul.features {
-        display: block;
+      div.button {
+        margin-left: ${desktopPx2vw(33)};
+        margin-top: ${desktopPx2vw(33)};
+        width: ${desktopPx2vw(277)};
+        height: ${desktopPx2vw(48)};
+        border: ${desktopPx2vw(3)} solid #01abb2;
+        border-radius: ${desktopPx2vw(24)};
         position: relative;
-        height: ${px2vw(262, 320)};
-        li {
-          position: absolute;
-          width: ${px2vw(115, 320)};
-          height: ${px2vw(126, 320)};
-          background: #f4f4f4;
-          border: 1px solid #d7d7d7;
-          border-radius: ${px2vw(5, 320)};
-          box-sizing: border-box;
-          padding: 0;
-          margin: 0;
-          img {
-            height: ${px2vw(70, 320)};
-            width: auto;
-            margin-top: ${px2vw(16, 320)};
-            margin-bottom: ${px2vw(15, 320)};
-          }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        div.circle {
+          position: relative;
+          margin: 0 ${desktopPx2vw(15)};
+          display: inline-block;
+          width: ${desktopPx2vw(28)};
+          height: ${desktopPx2vw(28)};
+          display: flex;
+          justify-content: center;
+          align-items: center;
           span {
-            font-family: Lexend;
-            font-style: normal;
-            font-weight: bold;
-            font-size: ${px2vw(12, 320)};
-            line-height: ${px2vw(15, 320)};
-            color: #949494;
+            border-radius: 50%;
           }
-          &:nth-of-type(1) {
-            top: ${px2vw(20, 320)};
-            right: unset;
-            left: 0;
-            bottom: unset;
-            z-index: 1;
+          span.inner {
+            position: absolute;
+            display: inline-block;
+            width: ${desktopPx2vw(11)};
+            height: ${desktopPx2vw(11)};
+            background: #01abb2;
+            border: ${desktopPx2vw(5.5)} solid rgba(1, 171, 178, 0.199383);
           }
-          &:nth-of-type(2) {
-            top: 0;
-            right: 0;
-            left: unset;
-            bottom: unset;
+          span.outer {
+            display: inline-block;
+            width: ${desktopPx2vw(28)};
+            height: ${desktopPx2vw(28)};
+            background: #01abb2;
+            filter: blur(${desktopPx2vw(29)});
+            opacity: 0.5;
           }
-          &:nth-of-type(3) {
-            top: unset;
-            right: ${px2vw(35, 320)};
-            left: unset;
-            bottom: 0;
-          }
+        }
+        > span {
+          padding-left: ${desktopPx2vw(5)};
+          font-family: Lexend;
+          font-style: normal;
+          font-weight: 600;
+          font-size: ${desktopPx2vw(21)};
+          line-height: ${desktopPx2vw(26)};
+          color: #ffffff;
+        }
+        > img.triangle {
+          display: inline-block;
+          padding-left: ${desktopPx2vw(17)};
+          width: ${desktopPx2vw(11)};
+          height: ${desktopPx2vw(11)};
+          color: #ffffff;
+        }
+        > img.pointer {
+          position: absolute;
+          top: ${desktopPx2vw(38)};
+          right: ${desktopPx2vw(12)};
+          width: ${desktopPx2vw(24)};
         }
       }
     }
-    img.big {
-      &:nth-of-type(1) {
-        width: ${px2vw(160, 320)};
-        height: auto;
-        left: -${px2vw(26, 320)};
-      }
-      &:nth-of-type(2) {
-        width: auto;
-        height: ${px2vw(127, 320)};
-        top: ${px2vw(66, 320)};
-      }
+    > div.right {
     }
   }
 `
 
-export const Section4 = observer(() => {
-  const store = useStore()
-  const anchor1 = React.useRef(null)
-  React.useEffect(() => {
-    if (
-      'IntersectionObserver' in window &&
-      'IntersectionObserverEntry' in window &&
-      'intersectionRatio' in window.IntersectionObserverEntry.prototype
-    ) {
-      let observer1 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y <= window.innerHeight) {
-          store.setAnchor1Appear(true)
-        } else {
-          store.setAnchor1Appear(false)
-        }
-      })
-      observer1.observe(anchor1.current)
-    }
-  }, [])
+const ArrowStyle = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(133)};
+  height: ${desktopPx2vw(55)};
+`
 
+const ScreenshotStyle = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(500)};
+  height: ${desktopPx2vw(523)};
+`
+
+export const Section4 = observer(() => {
   return (
-    <Style style={{ opacity: store.theme === 'light' ? 1 : 0 }}>
-      <div className='content'>
-        <h2>
-          <span>Privacy for a smart contract world</span>
-          <Img className='badge1' src={'/section4/badge1.svg'} alt='' />
-          <Img className='badge2' src={'/section4/badge2.svg'} alt='' />
-          <Img className='badge3' src={'/section4/badge3.svg'} alt='' />
-          <Img className='badge4' src={'/section4/badge4.svg'} alt='' />
-          <Img className='circle1' src={'/section4/circle.svg'} alt='' />
-          <Img className='circle2' src={'/section4/circle.svg'} alt='' />
-          <Img
-            className='halfcircle1'
-            src={'/section4/halfcircle.svg'}
-            alt=''
-          />
-          <Img
-            className='halfcircle2'
-            src={'/section4/halfcircle.svg'}
-            alt=''
-          />
-        </h2>
-        <div className='text'>
-          <p>
-            Blockchains today are not protecting user privacy. Privacy protocols
-            have enabled private cash transactions but these systems lack
-            programmability. It is difficult and expensive for users to achieve
-            complete digital asset privacy.
-          </p>
-          <p>
-            The Zecrey protocol makes it easy, efficient and cheap to move
-            digital assets into a private setting
-          </p>
-        </div>
-        <ul className='features'>
+    <Style>
+      <h2>Privacy for a smart contract world</h2>
+      <p>
+        Blockchains today are not protecting user privacy. Privacy protocols
+        have enabled private cash transactions but these systems lack
+        programmability. It is difficult and expensive for users to achieve
+        complete digital asset privacy.
+      </p>
+      <div className='feature'>
+        <ul>
           <li>
-            <Img src={'/section4/icon1.svg'} alt='' />
-            <span>Public transactions</span>
+            <Block
+              src='/section4/image1.svg'
+              text='Most Privacy Protocols'
+              children={styled.div`
+                position: relative;
+                width: ${desktopPx2vw(80)};
+                height: ${desktopPx2vw(80)};
+              `}
+            />
           </li>
           <li>
-            <Img src={'/section4/icon2.svg'} alt='' />
-            <span>Inefficient</span>
+            <ArrowStyle>
+              <Image
+                src='/section4/arrow.svg'
+                alt='arrow'
+                layout='fill'
+                objectFit='cover'
+                quality={100}
+              />
+            </ArrowStyle>
           </li>
           <li>
-            <Img src={'/section4/icon3.svg'} alt='' />
-            <span>High Cost</span>
+            <Block
+              src='/section4/image2.svg'
+              text='Not Generalized'
+              children={styled.div`
+                position: relative;
+                width: ${desktopPx2vw(73)};
+                height: ${desktopPx2vw(98)};
+              `}
+            />
+          </li>
+          <li>
+            <Block
+              src='/section4/image3.svg'
+              text='High Cost'
+              children={styled.div`
+                position: relative;
+                width: ${desktopPx2vw(88)};
+                height: ${desktopPx2vw(88)};
+              `}
+            />
+          </li>
+          <li>
+            <Block
+              src='/section4/image4.svg'
+              text='Inefficient'
+              children={styled.div`
+                position: relative;
+                width: ${desktopPx2vw(108)};
+                height: ${desktopPx2vw(65)};
+              `}
+            />
           </li>
         </ul>
       </div>
-      <Img className='big' src={'/section4/bigimage1.svg'} />
-      <Img className='big' src={'/section4/bigimage2.svg'} />
-      <div ref={anchor1} className='anchor' />
+      <div className='row3'>
+        <div className='left'>
+          <h2>The Zecrey protocol makes it easy.</h2>
+          <p>
+            Efficient and cheap to move digital assets into a private setting.
+          </p>
+          <div className='button'>
+            <div className='circle'>
+              <span className='inner' />
+              <span className='outer' />
+            </div>
+            <span>Zecrey Mainnet</span>
+            <img
+              className='triangle'
+              src='/section4/triangle.svg'
+              alt='triangle'
+            />
+            <img
+              className='pointer'
+              src='/section4/pointer.svg'
+              alt='pointer'
+            />
+          </div>
+        </div>
+        <div className='right'>
+          <ScreenshotStyle>
+            <Image
+              src='/section4/screenshot.png'
+              alt='screenshot'
+              layout='fill'
+              objectFit='cover'
+              quality={100}
+            />
+          </ScreenshotStyle>
+        </div>
+      </div>
     </Style>
   )
 })
