@@ -171,24 +171,29 @@ const Style = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          span {
+          > span {
             border-radius: 50%;
-          }
-          span.inner {
-            position: absolute;
             display: inline-block;
-            width: ${desktopPx2vw(11)};
-            height: ${desktopPx2vw(11)};
             background: #01abb2;
-            border: ${desktopPx2vw(5.5)} solid rgba(1, 171, 178, 0.199383);
-          }
-          span.outer {
-            display: inline-block;
-            width: ${desktopPx2vw(28)};
-            height: ${desktopPx2vw(28)};
-            background: #01abb2;
-            filter: blur(${desktopPx2vw(29)});
-            opacity: 0.5;
+            &.inner {
+              z-index: 3;
+              position: absolute;
+              width: ${desktopPx2vw(11)};
+              height: ${desktopPx2vw(11)};
+            }
+            &.medium {
+              z-index: 2;
+              position: absolute;
+              width: ${desktopPx2vw(15)};
+              height: ${desktopPx2vw(15)};
+              background: rgba(1, 171, 178, 0.2);
+            }
+            &.outer {
+              z-index: 1;
+              width: ${desktopPx2vw(28)};
+              height: ${desktopPx2vw(28)};
+              filter: blur(${desktopPx2vw(7)});
+            }
           }
         }
         > span {
@@ -310,6 +315,7 @@ export const Section4 = observer(() => {
           <div className='button'>
             <div className='circle'>
               <span className='inner' />
+              <span className='medium' />
               <span className='outer' />
             </div>
             <span>Zecrey Mainnet</span>
