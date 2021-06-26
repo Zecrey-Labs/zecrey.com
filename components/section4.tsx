@@ -43,19 +43,9 @@ const BlockStyle = styled.div`
   }
 `
 
-const Block = ({ src, text, children: BlockImage }) => (
+const Block = ({ text, children }) => (
   <BlockStyle>
-    <div className='square'>
-      <BlockImage>
-        <Image
-          src={src}
-          alt={text}
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </BlockImage>
-    </div>
+    <div className='square'>{children}</div>
     <div className='text'>
       <span>{text}</span>
     </div>
@@ -237,6 +227,27 @@ const ScreenshotStyle = styled.div`
   height: ${desktopPx2vw(523)};
 `
 
+const Image1 = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(80)};
+  height: ${desktopPx2vw(80)};
+`
+const Image2 = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(73)};
+  height: ${desktopPx2vw(98)};
+`
+const Image3 = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(88)};
+  height: ${desktopPx2vw(88)};
+`
+const Image4 = styled.div`
+  position: relative;
+  width: ${desktopPx2vw(108)};
+  height: ${desktopPx2vw(65)};
+`
+
 export const Section4 = observer(() => {
   return (
     <Style>
@@ -250,15 +261,17 @@ export const Section4 = observer(() => {
       <div className='feature'>
         <ul>
           <li>
-            <Block
-              src='/section4/image1.svg'
-              text='Most Privacy Protocols'
-              children={styled.div`
-                position: relative;
-                width: ${desktopPx2vw(80)};
-                height: ${desktopPx2vw(80)};
-              `}
-            />
+            <Block text='Most Privacy Protocols'>
+              <Image1>
+                <Image
+                  src='/section4/image1.svg'
+                  alt='Most Privacy Protocols'
+                  layout='fill'
+                  objectFit='cover'
+                  quality={100}
+                />
+              </Image1>
+            </Block>
           </li>
           <li>
             <ArrowStyle>
@@ -272,37 +285,43 @@ export const Section4 = observer(() => {
             </ArrowStyle>
           </li>
           <li>
-            <Block
-              src='/section4/image2.svg'
-              text='Not Generalized'
-              children={styled.div`
-                position: relative;
-                width: ${desktopPx2vw(73)};
-                height: ${desktopPx2vw(98)};
-              `}
-            />
+            <Block text='Not Generalized'>
+              <Image2>
+                <Image
+                  src='/section4/image2.svg'
+                  alt='Not Generalized'
+                  layout='fill'
+                  objectFit='cover'
+                  quality={100}
+                />
+              </Image2>
+            </Block>
           </li>
           <li>
-            <Block
-              src='/section4/image3.svg'
-              text='High Cost'
-              children={styled.div`
-                position: relative;
-                width: ${desktopPx2vw(88)};
-                height: ${desktopPx2vw(88)};
-              `}
-            />
+            <Block text='High Cost'>
+              <Image3>
+                <Image
+                  src='/section4/image3.svg'
+                  alt='High Cost'
+                  layout='fill'
+                  objectFit='cover'
+                  quality={100}
+                />
+              </Image3>
+            </Block>
           </li>
           <li>
-            <Block
-              src='/section4/image4.svg'
-              text='Inefficient'
-              children={styled.div`
-                position: relative;
-                width: ${desktopPx2vw(108)};
-                height: ${desktopPx2vw(65)};
-              `}
-            />
+            <Block text='Inefficient'>
+              <Image4>
+                <Image
+                  src='/section4/image4.svg'
+                  alt='Inefficient'
+                  layout='fill'
+                  objectFit='cover'
+                  quality={100}
+                />
+              </Image4>
+            </Block>
           </li>
         </ul>
       </div>
