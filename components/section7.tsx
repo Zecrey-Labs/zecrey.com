@@ -54,6 +54,11 @@ const investors = [
     name: 'SNZ',
     image: '/section7/10snz.png',
     link: 'https://snzholding.com/'
+  },
+  {
+    name: 'Cypherpunk Guild',
+    image: '/section7/11cpg_horiz_rev.svg',
+    link: 'https://cypherpunkguild.org/'
   }
 ]
 
@@ -123,6 +128,9 @@ const Style = styled.div`
       }
       &:nth-of-type(9) {
         height: ${px2vw(75, 1437)};
+      }
+      &:nth-of-type(10) {
+        height: ${px2vw(85, 1437)};
       }
     }
   }
