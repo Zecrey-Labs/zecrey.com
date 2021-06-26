@@ -21,7 +21,6 @@ const Style = styled.div`
   h2 {
     margin-bottom: ${px2vw(162, 1920)};
     text-align: center;
-    text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
     white-space: normal;
     font: normal normal bold ${px2vw(80, 1920)} / ${px2vw(100, 1920)} Lexend;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
