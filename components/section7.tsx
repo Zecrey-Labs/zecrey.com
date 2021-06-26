@@ -67,8 +67,12 @@ const Style = styled.div`
     font-size: ${px2vw(48, 1437)};
     line-height: ${px2vw(60, 1437)};
     text-align: center;
-    color: #ffffff;
     margin-bottom: ${px2vw(30, 1437)};
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
   p {
     font-family: Lexend;
