@@ -176,7 +176,12 @@ export const Footer = observer(() => {
             <a href='https://docsend.com/view/ntcsmt7meu84gcqk' target='_blank'>
               White paper
             </a>
-            <span>App</span>
+            <a
+              href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632645645&Signature=0NE3duJyaqwOnqxsoyiS3uMY%2Boc%3D'
+              className='downloadapp'
+              download='zecrey'>
+              App
+            </a>
           </div>
         </div>
         <div className='section2'>
@@ -213,7 +218,12 @@ export const Footer = observer(() => {
                   target='_blank'>
                   White paper
                 </a>
-                <span>App</span>
+                <a
+                  href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632645645&Signature=0NE3duJyaqwOnqxsoyiS3uMY%2Boc%3D'
+                  className='downloadapp'
+                  download='zecrey'>
+                  App
+                </a>
               </div>
             </div>
             <div className='right'>
