@@ -417,11 +417,11 @@ export const Section1 = observer(() => {
           className='whitepaper'>
           White Paper
         </a>
-        {/* <a
+        <a
           href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com/build%281%29.zip?AccessKeyId=qCryGUwxbem6J73BdfEK&Expires=1630031569&response-content-disposition=attachment&Signature=5VHpXvK5g7doLMcyHq2hfhCPYTo%3D'
           className='downloadapp'
-          download
-        >Download App</a> */}
+          download='zecrey'
+        >Download App</a>
       </div>
       <Img src={'/section1/appcoming.png'} alt='logo' />
       <div className='nextSectionGuide'>
