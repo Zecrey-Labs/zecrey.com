@@ -166,7 +166,7 @@ const Style = styled.div<{ active: boolean }>`
     line-height: ${px2vw(20, 1437)};
     color: #ffffff;
     cursor: pointer;
-    margin-right:${px2vw(16, 1437)};
+    margin-right: ${px2vw(16, 1437)};
     &:hover {
       color: #0b0b0b;
       background: #2ad4d9;
@@ -424,10 +424,11 @@ export const Section1 = observer(() => {
           White Paper
         </a>
         <a
-          href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com/build%281%29.zip?AccessKeyId=qCryGUwxbem6J73BdfEK&Expires=1630031569&response-content-disposition=attachment&Signature=5VHpXvK5g7doLMcyHq2hfhCPYTo%3D'
+          href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632642297&Signature=spoOcGY3HP8EYLYE6jf24kWjZyk%3D'
           className='downloadapp'
-          download='zecrey'
-        >Download App</a>
+          download='zecrey'>
+          Download App
+        </a>
       </div>
       <Img src={'/section1/appcoming.png'} alt='logo' />
       <div className='nextSectionGuide'>
