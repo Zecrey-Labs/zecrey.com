@@ -182,6 +182,9 @@ export const Footer = observer(() => {
               download='zecrey'>
               App
             </a>
+            <a href='https://docs.zecrey.com/' target='_blank'>
+              Document
+            </a>
           </div>
         </div>
         <div className='section2'>
@@ -223,6 +226,9 @@ export const Footer = observer(() => {
                   className='downloadapp'
                   download='zecrey'>
                   App
+                </a>
+                <a href='https://docs.zecrey.com/' target='_blank'>
+                  Document
                 </a>
               </div>
             </div>
