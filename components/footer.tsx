@@ -177,7 +177,7 @@ export const Footer = observer(() => {
               White paper
             </a>
             <a
-              href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632645645&Signature=0NE3duJyaqwOnqxsoyiS3uMY%2Boc%3D'
+              href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632673207&Signature=xP%2BvTHtSvIv8SbIgA6udJ0y4zug%3D'
               className='downloadapp'
               download='zecrey'>
               App
@@ -222,7 +222,7 @@ export const Footer = observer(() => {
                   White paper
                 </a>
                 <a
-                  href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632645645&Signature=0NE3duJyaqwOnqxsoyiS3uMY%2Boc%3D'
+                  href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632673207&Signature=xP%2BvTHtSvIv8SbIgA6udJ0y4zug%3D'
                   className='downloadapp'
                   download='zecrey'>
                   App
