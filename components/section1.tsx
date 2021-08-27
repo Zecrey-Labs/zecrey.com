@@ -29,6 +29,7 @@ const InputEmail = styled.input`
 
 const Button = styled.button`
   background: #2ad4d9 0% 0% no-repeat padding-box;
+  width: auto;
   opacity: 1;
   text-align: left;
   letter-spacing: 0px;
@@ -146,9 +147,12 @@ const Style = styled.div<{ active: boolean }>`
     }
   }
 
-  > a.whitepaper {
+  > .links {
+    display: flex;
+    margin: ${px2vw(64, 1437)} auto;
+  }
+  > .links a {
     text-decoration: none;
-    width: ${px2vw(124, 1437)};
     height: ${px2vw(30, 1437)};
     display: flex;
     align-items: center;
@@ -161,12 +165,22 @@ const Style = styled.div<{ active: boolean }>`
     font-size: ${px2vw(16, 1437)};
     line-height: ${px2vw(20, 1437)};
     color: #ffffff;
-    margin: ${px2vw(64, 1437)} auto;
+    cursor: pointer;
+    margin-right:${px2vw(16, 1437)};
     &:hover {
       color: #0b0b0b;
       background: #2ad4d9;
       border: 1px solid #2ad4d9;
     }
+  }
+  > .links a:last-child {
+    margin: 0;
+  }
+  > .links a.whitepaper {
+    width: ${px2vw(124, 1437)};
+  }
+  > .links a.downloadapp {
+    width: ${px2vw(134, 1437)};
   }
   > img {
     height: ${px2vw(52, 1920)};
@@ -396,12 +410,19 @@ export const Section1 = observer(() => {
           Subscribe
         </Button>
       </div>
-      <a
-        href='https://docsend.com/view/ntcsmt7meu84gcqk'
-        target='_blank'
-        className='whitepaper'>
-        White Paper
-      </a>
+      <div className='links'>
+        <a
+          href='https://docsend.com/view/ntcsmt7meu84gcqk'
+          target='_blank'
+          className='whitepaper'>
+          White Paper
+        </a>
+        {/* <a
+          href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com/build%281%29.zip?AccessKeyId=qCryGUwxbem6J73BdfEK&Expires=1630031569&response-content-disposition=attachment&Signature=5VHpXvK5g7doLMcyHq2hfhCPYTo%3D'
+          className='downloadapp'
+          download
+        >Download App</a> */}
+      </div>
       <Img src={'/section1/appcoming.png'} alt='logo' />
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>
