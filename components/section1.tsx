@@ -274,8 +274,9 @@ const Style = styled.div<{ active: boolean }>`
         }
       }
     }
-    > a.whitepaper {
-      width: ${px2vw(75, 320)};
+    > .links {
+    }
+    > .links a {
       height: ${px2vw(25, 320)};
       display: flex;
       align-items: center;
@@ -288,7 +289,12 @@ const Style = styled.div<{ active: boolean }>`
       font-size: ${px2vw(10, 320)};
       line-height: ${px2vw(12, 320)};
       color: #ffffff;
-      margin: ${px2vw(50, 320)} auto ${px2vw(30, 320)} auto;
+    }
+    > .links a.whitepaper {
+      width: ${px2vw(75, 320)};
+    }
+    > .links a.downloadapp {
+      width: ${px2vw(85, 320)};
     }
     > img {
       height: ${px2vw(20, 320)};
