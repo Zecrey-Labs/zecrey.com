@@ -424,7 +424,7 @@ export const Section1 = observer(() => {
           White Paper
         </a>
         <a
-          href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632673207&Signature=xP%2BvTHtSvIv8SbIgA6udJ0y4zug%3D'
+          href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632705958&Signature=FM9Sf1Ed35QQ%2B9zmvqEXMWrz9GQ%3D'
           className='downloadapp'
           download='zecrey'>
           Download App
