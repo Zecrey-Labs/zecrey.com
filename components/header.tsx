@@ -11,7 +11,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 import Img from './img'
-import { px2vw } from '@/utils'
+import { desktopPx2vw, px2vw } from '@/utils'
+import { DOWNLOAD_URL } from '@/constant'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   width: 100vw;
@@ -88,6 +89,34 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     align-items: center;
     > img {
       box-sizing: content-box;
+      margin-right: ${px2vw(35, 1920)};
+      margin-left: ${px2vw(200, 1920)};
+      height: ${px2vw(66, 1920)};
+      min-height: 40px;
+    }
+    span.bar {
+      width: 1px;
+      height: 31px;
+      background: white;
+    }
+    a.download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+      border-radius: ${px2vw(35, 1920)};
+      width: ${desktopPx2vw(170)};
+      height: ${desktopPx2vw(47)};
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: bold;
+      font-size: ${px2vw(24, 1920)};
+      line-height: ${px2vw(30, 1920)};
+      text-align: center;
+      letter-spacing: 0.289412px;
+      color: #000000;
+      border: none;
+      margin-left: ${px2vw(35, 1920)};
     }
     nav {
       display: flex;
@@ -102,6 +131,8 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
           cursor: pointer;
           transition: color 0.3s ease-out;
           text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
+          font: 400 ${px2vw(26, 1920)} / ${px2vw(31, 1920)} Lexend;
+          margin-right: ${px2vw(61, 1920)};
         }
       }
     }
@@ -117,18 +148,6 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     }
   }
 
-  div.left {
-    > img {
-      margin-right: ${px2vw(120, 1920)};
-      margin-left: ${px2vw(200, 1920)};
-      height: ${px2vw(66, 1920)};
-      min-height: 40px;
-    }
-    nav ul li {
-      font: 400 ${px2vw(26, 1920)} / ${px2vw(31, 1920)} Lexend;
-      margin-right: ${px2vw(61, 1920)};
-    }
-  }
   div.right {
     font-size: ${px2vw(30, 1920)};
     margin-right: ${px2vw(25, 1920)};
@@ -171,6 +190,9 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
         display: block;
         min-height: auto;
         margin: 8px 0 8px 20px;
+      }
+      a.download {
+        display: none !important;
       }
       nav {
         display: block;
@@ -227,6 +249,10 @@ export const Header = observer(() => {
       <div className='left'>
         <Img className='dark' src={'/logo1.svg'} alt='logo' />
         <Img className='light' src={'/logo2.svg'} alt='logo' />
+        <span className='bar' />
+        <a className='download' href={DOWNLOAD_URL} rel='noreferrer'>
+          Download
+        </a>
       </div>
       <div className='right'>
         <a href='https://twitter.com/zecreyprotocol' target='_blank'>
