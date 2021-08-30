@@ -7,37 +7,8 @@ import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
 import Img from './img'
-import { validateEmail, px2vw } from '@/utils'
+import { px2vw } from '@/utils'
 import { DOWNLOAD_URL } from '@/constant'
-
-const InputEmail = styled.input`
-  display: block;
-  background: #222222 0% 0% no-repeat padding-box;
-  text-align: left;
-  letter-spacing: 0px;
-  color: #e4e4e4;
-  &:focus {
-    outline: none;
-  }
-  &::selection {
-    color: #222222;
-    background-color: #2ad4d9;
-  }
-  &::placeholder {
-    text-align: center;
-  }
-`
-
-const Button = styled.button`
-  background: #2ad4d9 0% 0% no-repeat padding-box;
-  width: auto;
-  opacity: 1;
-  text-align: left;
-  letter-spacing: 0px;
-  color: #222222;
-  text-align: center;
-  border: none;
-`
 
 const Style = styled.div<{ active: boolean }>`
   width: 100vw;
@@ -47,17 +18,6 @@ const Style = styled.div<{ active: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  div.message {
-    position: fixed;
-    width: 100%;
-    top: max(${px2vw(110, 1920)}, 64px);
-    z-index: 100;
-    font: bold ${px2vw(36, 1920)} / ${px2vw(70, 1920)} Lexend;
-    text-align: center;
-    box-shadow: 0 ${px2vw(30, 1920)} ${px2vw(120, 1920)} rgb(0 0 0 / 25%);
-    color: #383838;
-    background-color: #2ad4d9;
-  }
   h2 {
     margin-top: ${px2vw(128, 1920)};
     background: #2ad4d9 0% 0% no-repeat padding-box;
@@ -213,9 +173,6 @@ const Style = styled.div<{ active: boolean }>`
     div.email {
       transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
     }
-    div.message {
-      top: 40px;
-    }
     div.available {
       font-size: ${px2vw(10, 320)};
       line-height: ${px2vw(16, 320)};
@@ -362,26 +319,8 @@ const Style = styled.div<{ active: boolean }>`
 export const Section1 = observer(() => {
   const store = useStore()
 
-  const [email, setEmail] = React.useState('')
-  const [active, setActive] = React.useState(false)
-  const [message, setMessage] = React.useState(null)
-
-  React.useEffect(() => {
-    let timeoutID
-    if (message) {
-      timeoutID = setTimeout(() => {
-        setMessage(null)
-      }, 1000)
-    }
-    return () => {
-      timeoutID && clearTimeout(timeoutID)
-    }
-  }, [message])
-
-  const inputElement = React.useRef(null)
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }} active={active}>
-      {message && <div className='message'>{message}</div>}
+    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }} active={false}>
       <h2>
         Zecrey Protocol
         <Img src={'/section1/circle.svg'} />

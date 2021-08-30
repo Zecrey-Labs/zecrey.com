@@ -2,7 +2,7 @@
  * Copyright (C) 2020-present, Zecrey-Labs
  */
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/store'
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
-import { px2vw } from '@/utils'
+import { px2vw, validateEmail } from '@/utils'
 import { DOCS_URL, DOWNLOAD_URL } from '@/constant'
 
 const Style = styled.div`
@@ -48,7 +48,7 @@ const Style = styled.div`
         top: -${px2vw(32, 1920)};
       }
       > div.subsection {
-        margin-right: ${px2vw(103, 1920)};
+        margin-right: ${px2vw(191, 1920)};
         display: flex;
         flex-direction: column;
         padding-bottom: ${px2vw(10, 1920)};
@@ -65,6 +65,9 @@ const Style = styled.div`
           color: gray;
           cursor: not-allowed;
         }
+      }
+      div.email-subscribe {
+        position: relative;
       }
     }
     div.section2 {
@@ -149,6 +152,10 @@ const Style = styled.div`
             }
           }
         }
+        div.email-subscribe {
+          position: relative;
+          height: ${px2vw(17, 320)};
+        }
       }
       div.row2 {
         font-family: Lexend;
@@ -163,9 +170,115 @@ const Style = styled.div`
     }
   }
 `
+const Message = styled.div`
+  position: fixed;
+  width: 100%;
+  top: max(${px2vw(110, 1920)}, 64px);
+  z-index: 100;
+  font: bold ${px2vw(36, 1920)} / ${px2vw(70, 1920)} Lexend;
+  text-align: center;
+  box-shadow: 0 ${px2vw(30, 1920)} ${px2vw(120, 1920)} rgb(0 0 0 / 25%);
+  color: #383838;
+  background-color: #2ad4d9;
+  @media (max-width: 760px) {
+    top: 40px;
+  }
+`
+const EmailSubscribe = styled.div<{ ac: boolean }>`
+  position: absolute;
+  bottom: ${px2vw(32, 1920)};
+  display: flex;
+  label {
+    font-family: Lexend;
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${px2vw(24, 1920)};
+    color: #e4e4e4;
+    margin-right: ${px2vw(13, 1920)};
+  }
+  input {
+    width: ${px2vw(250, 1920)};
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: ${px2vw(18, 1920)};
+    color: #e4e4e4;
+    margin-right: ${px2vw(13, 1920)};
+    outline: none;
+  }
+  input::placeholder {
+    opacity: 0.5;
+  }
+  input:focus {
+    border-color: #fff;
+  }
+  button {
+    opacity: ${props => (props.ac ? 1 : 0)};
+    width: ${px2vw(80, 1920)};
+    height: ${px2vw(25, 1920)};
+    border: none;
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    border-radius: ${px2vw(37, 1920)};
+    font-family: Lexend;
+    font-style: normal;
+    font-weight: 600;
+    font-size: ${px2vw(16, 1920)};
+    letter-spacing: 0.29px;
+    color: #000000;
+    transform: translateX(${props => (props.ac ? '0' : '-30%')});
+    transition: all 120ms ease-out;
+  }
+  @media (max-width: 760px) {
+    align-items: center;
+    width: 100%;
+    input {
+      flex: 1;
+    }
+    button {
+      width: auto;
+      height: auto;
+    }
+  }
+`
 
 export const Footer = observer(() => {
   const store = useStore()
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = React.useState(null)
+
+  React.useEffect(() => {
+    let timeoutID
+    if (message) {
+      timeoutID = setTimeout(() => {
+        setMessage(null)
+      }, 1000)
+    }
+    return () => {
+      timeoutID && clearTimeout(timeoutID)
+    }
+  }, [message])
+
+  const subscribe = async () => {
+    if (validateEmail(email)) {
+      try {
+        const response = await fetch('/api/subscribe?address=' + email)
+        const result = await response.json()
+        if (result.message === 'subscribed') setEmail('')
+        setMessage(
+          result.message === 'subscribed'
+            ? 'Subscribe Successfully'
+            : result.error
+        )
+      } catch (error) {
+        setMessage('Failed to subscribe')
+      }
+    } else {
+      setMessage('Invalid Email')
+    }
+  }
 
   return (
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
@@ -186,6 +299,18 @@ export const Footer = observer(() => {
             <a href='https://docs.zecrey.com/' target='_blank'>
               Document
             </a>
+          </div>
+          <div className='email-subscribe'>
+            <EmailSubscribe ac={email ? true : false}>
+              <label>Subscribe:</label>
+              <input
+                type='text'
+                placeholder='Send us your email address'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <button onClick={subscribe}>Okay</button>
+            </EmailSubscribe>
           </div>
         </div>
         <div className='section2'>
@@ -251,11 +376,24 @@ export const Footer = observer(() => {
               </a>
             </div>
           </div>
+          <div className='email-subscribe'>
+            <EmailSubscribe ac={email ? true : false}>
+              <label>Subscribe:</label>
+              <input
+                type='text'
+                placeholder='email address'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <button onClick={subscribe}>Okay</button>
+            </EmailSubscribe>
+          </div>
         </div>
         <div className='row2'>
           Copyright © 2021 Zecrey. All rights reserved.
         </div>
       </div>
+      {message && <Message className='message'>{message}</Message>}
     </Style>
   )
 })
