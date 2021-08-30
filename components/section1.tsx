@@ -183,7 +183,7 @@ const Style = styled.div<{ active: boolean }>`
     &:hover {
       color: #0b0b0b;
       background: #2ad4d9;
-      border: 1px solid #2ad4d9;
+      border: ${px2vw(2, 1862)} solid #2ad4d9;
     }
   }
   > .links a:last-child {
