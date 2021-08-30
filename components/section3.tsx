@@ -9,6 +9,7 @@ import { desktopPx2vw, px2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Img from '@/components/img'
+import { GetStarted } from '@/components/getStarted'
 
 const Style = styled.div`
   position: relative;
@@ -173,6 +174,7 @@ export const Section3 = observer(() => {
         between digital assets with complete privacy. Keep account balance and
         transaction amount confidential.
       </p>
+      <GetStarted />
       <video autoPlay muted loop src={'/section3/video3.mp4'} />
       <Image1>
         <Image

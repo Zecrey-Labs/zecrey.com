@@ -9,6 +9,7 @@ import { desktopPx2vw, px2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Img from '@/components/img'
+import { GetStarted } from '@/components/getStarted'
 
 const Style = styled.div`
   display: flex;
@@ -167,6 +168,7 @@ export const Section2 = observer(() => {
           programmability. It is difficult and expensive for users to achieve
           complete digital asset privacy.
         </p>
+        <GetStarted />
       </div>
       <div className='arrow'>
         <ArrowLeft>
