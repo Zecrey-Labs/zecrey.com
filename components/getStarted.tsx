@@ -21,6 +21,7 @@ const Styled = styled.div`
   &:hover {
     border: none;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    box-shadow: 0 0 ${desktopPx2vw(40)} #00b6ba;
     color: black;
     > img.hover {
       display: inline-block;
@@ -43,7 +44,7 @@ const Styled = styled.div`
     height: ${desktopPx2vw(30)};
     font-family: Lexend;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: ${desktopPx2vw(24)};
     line-height: ${desktopPx2vw(30)};
     letter-spacing: ${desktopPx2vw(0.289412)};

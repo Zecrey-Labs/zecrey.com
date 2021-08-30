@@ -118,6 +118,9 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
       color: #000000;
       border: none;
       margin-left: ${px2vw(35, 1920)};
+      &:hover {
+        box-shadow: 0 0 ${desktopPx2vw(40)} #00b6ba;
+      }
     }
     nav {
       display: flex;
