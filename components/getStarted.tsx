@@ -5,6 +5,8 @@
 import styled, { css } from 'styled-components'
 import Img from '@/components/img'
 import { desktopPx2vw } from '@/utils'
+import { useCallback } from 'react'
+import { DOWNLOAD_URL } from '@/constant'
 
 const Styled = styled.div`
   cursor: pointer;
@@ -52,8 +54,12 @@ const Styled = styled.div`
 `
 
 export const GetStarted = () => {
+  const onClick = useCallback(() => {
+    window.open(DOWNLOAD_URL)
+  }, [])
+
   return (
-    <Styled>
+    <Styled onClick={onClick}>
       <Img className='normal' src='/download.svg' />
       <Img className='hover' src='/download2.svg' />
       <span>Get Started</span>
