@@ -157,7 +157,7 @@ export const Section3 = observer(() => {
       <div className='badge'>
         <div className='left'>
           <h3>Privacy Transfer</h3>
-          <span>UZecrey Wallet Application</span>
+          <span>Zecrey Wallet Application</span>
         </div>
         <div className='right'>
           <Img className='icon' src={'/section3/dollar.svg'} alt='' />
