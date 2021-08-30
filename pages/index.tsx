@@ -18,6 +18,7 @@ import {
   Footer
 } from '@/components'
 import { useStore } from '@/store'
+import { Section0 } from '@/components/section0'
 
 const Style = styled.div``
 
@@ -37,6 +38,7 @@ const Home = observer(function Home() {
       <Background />
       <Header />
       <Section1 />
+      <Section0 />
       <Section2 />
       <Section3 />
       <Section4 />
