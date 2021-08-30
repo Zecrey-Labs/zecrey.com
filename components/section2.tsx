@@ -20,7 +20,7 @@ const Style = styled.div`
   height: ${desktopPx2vw(1161)};
   > div.left {
     position: relative;
-    > video {
+    > img.transfer {
       position: absolute;
       left: ${desktopPx2vw(230)};
       top: ${desktopPx2vw(160)};
@@ -145,7 +145,7 @@ export const Section2 = observer(() => {
             layout='fill'
           />
         </Image1>
-        <video autoPlay muted loop src={'/section2/video2.mp4'} />
+        <Img className='transfer' src='/section2/transfer.png' />
       </div>
       <div className='right'>
         <div className='badge'>

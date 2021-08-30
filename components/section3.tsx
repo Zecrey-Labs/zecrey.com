@@ -79,7 +79,7 @@ const Style = styled.div`
     letter-spacing: 0.217059px;
     color: #dadada;
   }
-  > video {
+  > img.transfer {
     z-index: 5;
     position: absolute;
     height: ${desktopPx2vw(823)};
@@ -175,7 +175,7 @@ export const Section3 = observer(() => {
         transaction amount confidential.
       </p>
       <GetStarted />
-      <video autoPlay muted loop src={'/section3/video3.mp4'} />
+      <Img className='transfer' src='/section3/transfer.png' />
       <Image1>
         <Image
           src='/section3/image6.png'
