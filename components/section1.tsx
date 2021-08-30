@@ -83,7 +83,6 @@ const Style = styled.div<{ active: boolean }>`
     letter-spacing: 0;
     color: #e4e4e4;
     text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
-    text-transform: uppercase;
     font: normal normal bold ${px2vw(100, 1920)} / ${px2vw(120, 1920)} Lexend;
     @media (max-width: 999px) {
       font: normal normal bold 52px/63px Lexend;
@@ -371,9 +370,9 @@ export const Section1 = observer(() => {
         <Img src={'/section1/circle.svg'} />
       </h2>
       <div className='banner'>
-        Bringing privacy
+        Bringing Cross-chain
         <br />
-        to digital assets
+        Privacy to Digital Assets
       </div>
       <div className={`email ${active ? 'active' : ''}`}>
         <InputEmail
