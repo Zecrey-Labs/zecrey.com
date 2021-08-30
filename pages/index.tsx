@@ -18,6 +18,7 @@ import {
 } from '@/components'
 import { useStore } from '@/store'
 import { Section0 } from '@/components/section0'
+import { Section6 } from '@/components/Section6'
 
 const Style = styled.div``
 
@@ -40,6 +41,7 @@ const Home = observer(function Home() {
       <Section0 />
       <Section2 />
       <Section3 />
+      <Section6 />
       <Section4 />
       <Section5 />
       <Section7 />
