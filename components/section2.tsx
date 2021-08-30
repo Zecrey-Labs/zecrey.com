@@ -113,14 +113,6 @@ const Image1 = styled.div`
   height: ${desktopPx2vw(1161)};
 `
 
-const BigImage = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(609)};
-  height: ${desktopPx2vw(477)};
-  right: ${desktopPx2vw(237)};
-  bottom: ${desktopPx2vw(24)};
-`
-
 const ArrowLeft = styled.div`
   position: absolute;
   width: ${desktopPx2vw(259)};
@@ -175,14 +167,6 @@ export const Section2 = observer(() => {
           programmability. It is difficult and expensive for users to achieve
           complete digital asset privacy.
         </p>
-        <BigImage>
-          <Image
-            src='/section2/image5.png'
-            className='big-image'
-            alt='big-image'
-            layout='fill'
-          />
-        </BigImage>
       </div>
       <div className='arrow'>
         <ArrowLeft>
