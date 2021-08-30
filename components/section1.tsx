@@ -84,9 +84,22 @@ const Style = styled.div<{ active: boolean }>`
     color: #e4e4e4;
     text-shadow: 0px ${px2vw(3, 1920)} ${px2vw(12, 1920)} #00000040;
     font: normal normal bold ${px2vw(100, 1920)} / ${px2vw(120, 1920)} Lexend;
+    margin-bottom: ${px2vw(39)};
     @media (max-width: 999px) {
       font: normal normal bold 52px/63px Lexend;
     }
+  }
+  div.available {
+    font-size: ${px2vw(28, 1862)};
+    line-height: ${px2vw(33, 1862)};
+    text-align: center;
+    letter-spacing: 0.337647px;
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
   div.email {
     margin-top: ${px2vw(69, 1920)};
@@ -149,7 +162,7 @@ const Style = styled.div<{ active: boolean }>`
 
   > .links {
     display: flex;
-    margin: ${px2vw(64, 1437)} auto;
+    margin: ${px2vw(39, 1437)} auto;
   }
   > .links a {
     text-decoration: none;
@@ -157,8 +170,8 @@ const Style = styled.div<{ active: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ffffff;
-    border-radius: ${px2vw(5, 1437)};
+    border: ${px2vw(2, 1862)} solid #ffffff;
+    border-radius: ${px2vw(29.5, 1862)};
     font-family: Lexend;
     font-style: normal;
     font-weight: 500;
@@ -194,6 +207,7 @@ const Style = styled.div<{ active: boolean }>`
     position: relative;
     height: calc(100vh - 40px);
     box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
     h2,
     div.banner,
     div.email {
@@ -202,7 +216,10 @@ const Style = styled.div<{ active: boolean }>`
     div.message {
       top: 40px;
     }
-    transition: transform 0.2s ease-in-out;
+    div.available {
+      font-size: ${px2vw(10, 320)};
+      line-height: ${px2vw(16, 320)};
+    }
     h2 {
       margin-top: 0;
       width: ${px2vw(181, 320)};
@@ -374,60 +391,20 @@ export const Section1 = observer(() => {
         <br />
         Privacy to Digital Assets
       </div>
-      <div className={`email ${active ? 'active' : ''}`}>
-        <InputEmail
-          placeholder={active ? '' : 'Email me updates'}
-          ref={inputElement}
-          value={email}
-          onChange={e => {
-            setEmail(e.target.value)
-          }}
-          onFocus={() => {
-            setActive(true)
-            inputElement.current.select()
-          }}
-          onBlur={() => {
-            setTimeout(() => {
-              setActive(false)
-            }, 100)
-          }}
-        />
-        <Img src={'/section1/cute.svg'} />
-        <Button
-          onClick={async () => {
-            if (validateEmail(email)) {
-              try {
-                const response = await fetch('/api/subscribe?address=' + email)
-                const result = await response.json()
-                setMessage(
-                  result.message === 'subscribed'
-                    ? 'Subscribe Successfully'
-                    : result.error
-                )
-              } catch (error) {
-                setMessage('Failed to subscribe')
-              } finally {
-                setActive(false)
-              }
-            } else {
-              setMessage('Invalid Email')
-            }
-          }}>
-          Subscribe
-        </Button>
+      <div className='available'>
+        | Privacy-Wallet Application now available |
       </div>
       <div className='links'>
+        <a href={DOWNLOAD_URL} className='downloadapp' download='zecrey'>
+          Download
+        </a>
         <a
           href='https://docsend.com/view/ntcsmt7meu84gcqk'
           target='_blank'
           className='whitepaper'>
           White Paper
         </a>
-        <a href={DOWNLOAD_URL} className='downloadapp' download='zecrey'>
-          Download App
-        </a>
       </div>
-      <Img src={'/section1/appcoming.png'} alt='logo' />
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>
         <div className='triangle'></div>
