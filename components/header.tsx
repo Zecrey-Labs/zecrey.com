@@ -100,6 +100,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
       background: white;
     }
     a.download {
+      text-decoration: none;
       display: flex;
       justify-content: center;
       align-items: center;
