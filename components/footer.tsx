@@ -12,7 +12,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 import { px2vw } from '@/utils'
-import { DOWNLOAD_URL } from '@/constant'
+import { DOCS_URL, DOWNLOAD_URL } from '@/constant'
 
 const Style = styled.div`
   position: relative;
@@ -228,7 +228,7 @@ export const Footer = observer(() => {
                   download='zecrey'>
                   App
                 </a>
-                <a href='https://docs.zecrey.com/' target='_blank'>
+                <a href={DOCS_URL} target='_blank'>
                   Document
                 </a>
               </div>

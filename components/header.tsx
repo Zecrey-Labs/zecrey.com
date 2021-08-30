@@ -12,7 +12,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(fab)
 import Img from './img'
 import { desktopPx2vw, px2vw } from '@/utils'
-import { DOWNLOAD_URL } from '@/constant'
+import { DOCS_URL, DOWNLOAD_URL } from '@/constant'
 
 const Style = styled.div<{ theme: 'dark' | 'light' }>`
   width: 100vw;
@@ -146,6 +146,22 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
       transition: color 0.3s ease-out;
       cursor: pointer;
     }
+    a.docs {
+      font-family: Lexend;
+      font-style: normal;
+      font-weight: 300;
+      font-size: ${px2vw(26, 1862)};
+      line-height: ${px2vw(32, 1862)};
+      color: #ffffff;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    span.bar {
+      width: ${px2vw(1, 1862)};
+      height: ${px2vw(31, 1862)};
+      background: white;
+      margin-left: ${px2vw(23, 1862)};
+      margin-right: ${px2vw(23, 1862)};
+    }
   }
 
   div.right {
@@ -255,6 +271,10 @@ export const Header = observer(() => {
         </a>
       </div>
       <div className='right'>
+        <a target='_blank' className='docs' href={DOCS_URL} rel='noreferrer'>
+          Docs
+        </a>
+        <span className='bar' />
         <a href='https://twitter.com/zecreyprotocol' target='_blank'>
           <FontAwesomeIcon icon={['fab', 'twitter']} />
         </a>
