@@ -16,7 +16,7 @@ const BlockStyle = styled.div`
   > div.square {
     width: ${desktopPx2vw(166)};
     height: ${desktopPx2vw(167)};
-    background: #3a3a3a;
+    background: rgba(58, 58, 58, 0.6);
     mix-blend-mode: normal;
     border-radius: 20px;
     margin-bottom: ${desktopPx2vw(11)};
@@ -94,7 +94,7 @@ const Style = styled.div`
     margin-top: ${desktopPx2vw(200)};
     width: ${desktopPx2vw(1300)};
     height: ${desktopPx2vw(190)};
-    background: #4a4a4a;
+    background: rgba(51, 51, 51, 0.5);
     mix-blend-mode: normal;
     border-radius: ${desktopPx2vw(20)};
     > ul {
