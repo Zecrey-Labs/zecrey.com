@@ -5,9 +5,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStore } from '@/store'
-import { desktopPx2vw } from '@/utils'
+import { desktopPx2vw, px2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
+import Img from '@/components/img'
 
 const Style = styled.div`
   position: relative;
@@ -47,20 +48,7 @@ const Style = styled.div`
       }
     }
     > div.right {
-      margin-left: ${desktopPx2vw(17)};
-      border: #53f8ff solid ${desktopPx2vw(2)};
-      border-radius: ${desktopPx2vw(7.6)};
-      font-family: Lexend;
-      font-style: normal;
-      font-weight: bold;
-      font-size: ${desktopPx2vw(24)};
-      height: ${desktopPx2vw(30)};
-      width: ${desktopPx2vw(59)};
-      box-sizing: content-box;
-      color: #53f8ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-left: ${px2vw(23.5, 1862)};
     }
   }
   > h1 {
@@ -168,13 +156,17 @@ export const Section3 = observer(() => {
     <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
       <div className='badge'>
         <div className='left'>
-          <h3>Zecrey Protocol</h3>
-          <span>User Interface Version 1.0</span>
+          <h3>Privacy Transfer</h3>
+          <span>UZecrey Wallet Application</span>
         </div>
-        <div className='right'>1.0</div>
+        <div className='right'>
+          <Img className='icon' src={'/section3/dollar.svg'} alt='' />
+        </div>
       </div>
       <h1>
-        Fast and Stable. <br /> Cross-Chain, Private.
+        One-to-Many
+        <br />
+        High Efficiency.
       </h1>
       <p>
         Bridge different blockchain platforms to enable direct interactions

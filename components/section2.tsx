@@ -5,9 +5,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStore } from '@/store'
-import { desktopPx2vw } from '@/utils'
+import { desktopPx2vw, px2vw } from '@/utils'
 import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
+import Img from '@/components/img'
 
 const Style = styled.div`
   display: flex;
@@ -63,20 +64,7 @@ const Style = styled.div`
         }
       }
       > div.right {
-        margin-left: ${desktopPx2vw(17)};
-        border: #53f8ff solid ${desktopPx2vw(2)};
-        border-radius: ${desktopPx2vw(7.6)};
-        font-family: Lexend;
-        font-style: normal;
-        font-weight: bold;
-        font-size: ${desktopPx2vw(24)};
-        height: ${desktopPx2vw(30)};
-        width: ${desktopPx2vw(59)};
-        box-sizing: content-box;
-        color: #53f8ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: ${px2vw(23.5, 1862)};
       }
     }
     > h1 {
@@ -117,13 +105,6 @@ const Style = styled.div`
     left: ${desktopPx2vw(753)};
     top: ${desktopPx2vw(349)};
   }
-`
-
-const ToggleButton = styled.div`
-  position: relative;
-  width: ${desktopPx2vw(77)};
-  height: ${desktopPx2vw(62)};
-  margin-left: ${desktopPx2vw(28)};
 `
 
 const Image1 = styled.div`
@@ -177,12 +158,16 @@ export const Section2 = observer(() => {
         <div className='badge'>
           <div className='left'>
             <h3>Zecrey Protocol</h3>
-            <span>User Interface Version 1.0</span>
+            <span>Privacy Wallet Application</span>
           </div>
-          <div className='right'>1.0</div>
+          <div className='right'>
+            <Img className='icon' src={'/section2/yes.svg'} alt='' />
+          </div>
         </div>
         <h1>
-          Privacy Enable. <br /> One Simple Click.
+          One-Click Pricacy
+          <br />
+          No Trace.
         </h1>
         <p>
           Blockchains today are not protecting user privacy. Privacy protocols
@@ -190,15 +175,6 @@ export const Section2 = observer(() => {
           programmability. It is difficult and expensive for users to achieve
           complete digital asset privacy.
         </p>
-        <ToggleButton>
-          <Image
-            src='/section2/toggleButton.svg'
-            alt='toggle-button'
-            layout='fill'
-            objectFit='cover'
-            quality={100}
-          />
-        </ToggleButton>
         <BigImage>
           <Image
             src='/section2/image5.png'
