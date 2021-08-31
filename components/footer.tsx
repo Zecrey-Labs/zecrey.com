@@ -50,14 +50,17 @@ const Style = styled.div`
         display: flex;
         flex-direction: column;
         padding-bottom: ${px2vw(10, 1920)};
-        > a,
-        > span {
+        > a {
           margin-bottom: ${px2vw(20, 1920)};
           text-align: left;
           font: normal normal bold ${px2vw(28, 1920)} / ${px2vw(37, 1920)}
             Roboto;
           color: #e4e4e4;
           cursor: pointer;
+          &:hover {
+            text-decoration: none;
+            color: rgba(42, 212, 217, 1);
+          }
         }
         > span {
           color: gray;

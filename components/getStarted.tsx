@@ -14,6 +14,7 @@ const Styled = styled.div`
   height: ${desktopPx2vw(46)};
   border: ${desktopPx2vw(2)} solid #dadada;
   color: #dadada;
+  margin-left: ${desktopPx2vw(28)};
   > img.hover {
     display: none;
   }

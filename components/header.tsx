@@ -131,6 +131,10 @@ const Style = styled.div`
       line-height: ${px2vw(32, 1862)};
       color: #ffffff;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      &:hover {
+        text-decoration: none;
+        color: rgba(42, 212, 217, 1);
+      }
     }
     span.bar {
       width: ${px2vw(1, 1862)};
