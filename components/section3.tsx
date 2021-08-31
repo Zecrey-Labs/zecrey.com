@@ -11,169 +11,119 @@ import { GetStarted } from '@/components/getStarted'
 import { SideContentStyle } from '@/components/style'
 
 const Style = styled.div`
+  display: flex;
+  margin-top: ${desktopPx2vw(267)};
+  padding-bottom: ${desktopPx2vw(163)};
   position: relative;
-  padding-top: ${desktopPx2vw(711)};
-  margin-top: ${desktopPx2vw(-50)};
-  padding-left: ${desktopPx2vw(198)};
-  padding-bottom: ${desktopPx2vw(380)};
-  > img.transfer {
-    z-index: 5;
+  flex-direction: row;
+  height: ${desktopPx2vw(1161)};
+  > div.left {
+    position: relative;
+    > img.transfer {
+      position: absolute;
+      left: ${desktopPx2vw(230)};
+      top: ${desktopPx2vw(160)};
+      height: ${desktopPx2vw(823)};
+      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+    }
+  }
+  > div.right {
+    flex: 1;
+    padding-top: ${desktopPx2vw(302)};
+    padding-left: ${desktopPx2vw(201)};
+    padding-right: ${desktopPx2vw(200)};
+  }
+  > div.arrow {
+    z-index: -1;
+    opacity: 0.2;
     position: absolute;
-    height: ${desktopPx2vw(823)};
-    top: ${desktopPx2vw(315)};
-    right: ${desktopPx2vw(433)};
-    border-radius: ${desktopPx2vw(12)};
-    box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+    width: ${desktopPx2vw(1920 - 753 - 787)};
+    height: ${desktopPx2vw(3969 - 554 - 3169)};
+    left: ${desktopPx2vw(753)};
+    top: ${desktopPx2vw(349)};
   }
 `
 
 const Image1 = styled.div`
-  position: absolute;
-  z-index: -1;
-  width: ${desktopPx2vw(871)};
-  height: ${desktopPx2vw(214)};
-  top: ${desktopPx2vw(596)};
-  right: ${desktopPx2vw(1094)};
-  opacity: 0.1;
-`
-const Image2 = styled.div`
-  position: absolute;
-  z-index: 4;
-  width: ${desktopPx2vw(493.75)};
-  height: ${desktopPx2vw(822)};
-  top: ${desktopPx2vw(52)};
-  right: ${desktopPx2vw(239)};
-  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-  border-radius: ${desktopPx2vw(12)};
+  position: relative;
+  width: ${desktopPx2vw(857)};
+  height: ${desktopPx2vw(1161)};
 `
 
-const Image3 = styled.div`
+const ArrowLeft = styled.div`
   position: absolute;
-  z-index: 3;
-  width: ${desktopPx2vw(493)};
-  height: ${desktopPx2vw(822)};
-  top: ${desktopPx2vw(580)};
-  right: ${desktopPx2vw(121)};
-  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-  border-radius: ${desktopPx2vw(12)};
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  left: 0;
+  top: 0;
 `
 
-const Image4 = styled.div`
+const ArrowRight = styled.div`
   position: absolute;
-  z-index: 2;
-  width: ${desktopPx2vw(294)};
-  height: ${desktopPx2vw(294)};
-  top: ${desktopPx2vw(987)};
-  right: ${desktopPx2vw(812)};
-`
-
-const Image5 = styled.div`
-  position: absolute;
-  z-index: -1;
-  width: ${desktopPx2vw(463)};
-  height: ${desktopPx2vw(114)};
-  top: ${desktopPx2vw(620 + 372 + 174.5)};
-  left: ${desktopPx2vw(114 - 174.5)};
-  transform: rotateZ(90deg);
-  opacity: 0.06;
-`
-
-const Image6 = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(336)};
-  height: ${desktopPx2vw(82)};
-  top: ${desktopPx2vw(280)};
-  right: ${desktopPx2vw(1256)};
-  transform: rotateZ(90deg);
-  opacity: 0.06;
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  right: 0;
+  bottom: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 export const Section3 = () => {
   return (
     <Style>
-      <SideContentStyle>
-        <div className='badge'>
-          <div className='left'>
-            <h3>Privacy Transfer</h3>
-            <span>Zecrey Wallet Application</span>
+      <div className='left'>
+        <Image1>
+          <Image
+            src='/section2/image1.png'
+            className='image1'
+            alt='image1'
+            layout='fill'
+          />
+        </Image1>
+        <Img className='transfer' src='/section2/transfer.png' />
+      </div>
+      <div className='right'>
+        <SideContentStyle>
+          <div className='badge'>
+            <div className='left'>
+              <h3>Zecrey Protocol</h3>
+              <span>Privacy Wallet Application</span>
+            </div>
+            <div className='right'>
+              <Img className='icon' src={'/section2/yes.svg'} alt='' />
+            </div>
           </div>
-          <div className='right'>
-            <Img className='icon' src={'/section3/dollar.svg'} alt='' />
-          </div>
-        </div>
-        <h1>
-          One-to-Many
-          <br />
-          High Efficiency.
-        </h1>
-        <p>
-          Bridge different blockchain platforms to enable direct interactions
-          between digital assets with complete privacy. Keep account balance and
-          transaction amount confidential.
-        </p>
-        <GetStarted />
-      </SideContentStyle>
-      <Img className='transfer' src='/section3/transfer.png' />
-      <Image1>
-        <Image
-          src='/section3/image6.png'
-          className='image1'
-          alt='image1'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image1>
-      <Image2>
-        <Image
-          src='/section3/image2.png'
-          className='image2'
-          alt='image2'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image2>
-      <Image3>
-        <Image
-          src='/section3/image3.png'
-          className='image3'
-          alt='image3'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image3>
-      <Image4>
-        <Image
-          src='/section3/image4.svg'
-          className='image4'
-          alt='image4'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image4>
-      <Image5>
-        <Image
-          src='/section3/image5.png'
-          className='image5'
-          alt='image5'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image5>
-      <Image6>
-        <Image
-          src='/section3/image6.png'
-          className='image6'
-          alt='image6'
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </Image6>
+          <h1>
+            One-Click Pricacy
+            <br />
+            No Trace.
+          </h1>
+          <p>
+            Blockchains today are not protecting user privacy. Privacy protocols
+            have enabled private cash transactions, but these systems lack
+            programmability. It is difficult and expensive for users to achieve
+            complete digital asset privacy.
+          </p>
+          <GetStarted />
+        </SideContentStyle>
+      </div>
+      <div className='arrow'>
+        <ArrowLeft>
+          <Image
+            src='/section2/arrow.svg'
+            className='arrow-left'
+            alt='arrow-left'
+            layout='fill'
+          />
+        </ArrowLeft>
+        <ArrowRight>
+          <Image
+            src='/section2/arrow.svg'
+            className='arrow-right'
+            alt='arrow-right'
+            layout='fill'
+          />
+        </ArrowRight>
+      </div>
     </Style>
   )
 }

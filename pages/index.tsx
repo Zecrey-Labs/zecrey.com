@@ -3,38 +3,34 @@
  */
 
 import React from 'react'
-import styled from 'styled-components'
 import {
   Header,
   Section1,
-  Section2,
   Section3,
   Section4,
-  Section5,
+  Section6,
   Section7,
+  Section8,
   Background,
   Footer
 } from '@/components'
-import { Section0 } from '@/components/section0'
-import { Section6 } from '@/components/Section6'
+import { Section2 } from '@/components/section2'
+import { Section5 } from '@/components/section5'
 
-const Style = styled.div``
-
-const Home = function Home() {
+export default function Home() {
   return (
-    <Style>
+    <>
       <Background />
       <Header />
       <Section1 />
-      <Section0 />
       <Section2 />
       <Section3 />
-      <Section6 />
       <Section4 />
       <Section5 />
+      <Section6 />
       <Section7 />
+      <Section8 />
       <Footer />
-    </Style>
+    </>
   )
 }
-export default Home
