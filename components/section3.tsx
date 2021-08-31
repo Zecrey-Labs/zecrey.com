@@ -98,10 +98,9 @@ export const Section3 = () => {
             No Trace.
           </h1>
           <p>
-            Blockchains today are not protecting user privacy. Privacy protocols
-            have enabled private cash transactions, but these systems lack
-            programmability. It is difficult and expensive for users to achieve
-            complete digital asset privacy.
+            Transaction details are significant information for both parties
+            that are not supposed to be exposed. Privacy transaction just needs
+            one click and gets stable protection with no trace.
           </p>
           <GetStarted />
         </SideContentStyle>
