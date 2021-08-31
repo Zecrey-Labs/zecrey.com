@@ -4,9 +4,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { useStore } from '@/store'
-import { desktopPx2vw, px2vw } from '@/utils'
-import { observer } from 'mobx-react-lite'
+import { desktopPx2vw } from '@/utils'
 import Image from 'next/image'
 import Img from '@/components/img'
 import { GetStarted } from '@/components/getStarted'
@@ -69,11 +67,9 @@ const ArrowRight = styled.div`
   transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
-export const Section2 = observer(() => {
-  const store = useStore()
-
+export const Section2 = () => {
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+    <Style>
       <div className='left'>
         <Image1>
           <Image
@@ -130,4 +126,4 @@ export const Section2 = observer(() => {
       </div>
     </Style>
   )
-})
+}

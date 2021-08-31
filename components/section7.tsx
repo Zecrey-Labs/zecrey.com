@@ -4,8 +4,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import Img from './img'
 import { px2vw } from '@/utils'
 
@@ -197,8 +195,7 @@ const Style = styled.div`
   }
 `
 
-export const Section7 = observer(() => {
-  const store = useStore()
+export const Section7 = () => {
   return (
     <Style>
       <h2>Partners</h2>
@@ -216,4 +213,4 @@ export const Section7 = observer(() => {
       </div>
     </Style>
   )
-})
+}

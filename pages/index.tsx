@@ -4,7 +4,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
 import {
   Header,
   Section1,
@@ -16,23 +15,12 @@ import {
   Background,
   Footer
 } from '@/components'
-import { useStore } from '@/store'
 import { Section0 } from '@/components/section0'
 import { Section6 } from '@/components/Section6'
 
 const Style = styled.div``
 
-const Home = observer(function Home() {
-  const store = useStore()
-
-  React.useEffect(() => {
-    if (store.anchor1Appear === true && store.anchor2Appear === false) {
-      store.setTheme('light')
-    } else {
-      store.setTheme('dark')
-    }
-  }, [store.anchor1Appear, store.anchor2Appear])
-
+const Home = function Home() {
   return (
     <Style>
       <Background />
@@ -48,5 +36,5 @@ const Home = observer(function Home() {
       <Footer />
     </Style>
   )
-})
+}
 export default Home

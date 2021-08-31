@@ -4,9 +4,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { useStore } from '@/store'
 import { desktopPx2vw } from '@/utils'
-import { observer } from 'mobx-react-lite'
 import Image from 'next/image'
 import Img from '@/components/img'
 import { GetStarted } from '@/components/getStarted'
@@ -90,10 +88,9 @@ const Image6 = styled.div`
   opacity: 0.06;
 `
 
-export const Section3 = observer(() => {
-  const store = useStore()
+export const Section3 = () => {
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+    <Style>
       <SideContentStyle>
         <div className='badge'>
           <div className='left'>
@@ -179,4 +176,4 @@ export const Section3 = observer(() => {
       </Image6>
     </Style>
   )
-})
+}

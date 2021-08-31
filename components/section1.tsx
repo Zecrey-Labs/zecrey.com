@@ -4,13 +4,11 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import Img from './img'
 import { px2vw } from '@/utils'
 import { DOWNLOAD_URL } from '@/constant'
 
-const Style = styled.div<{ active: boolean }>`
+const Style = styled.div`
   width: 100vw;
   min-height: calc(100vh - ${px2vw(200, 1920)});
   overflow: hidden;
@@ -171,7 +169,7 @@ const Style = styled.div<{ active: boolean }>`
     h2,
     div.banner,
     div.email {
-      transform: ${({ active }) => (active ? 'translateY(-40px)' : 'none')};
+      transform: none;
     }
     div.available {
       font-size: ${px2vw(10, 320)};
@@ -217,7 +215,7 @@ const Style = styled.div<{ active: boolean }>`
         height: ${px2vw(20, 320)};
         display: block;
         transition: opacity 0.2s ease;
-        opacity: ${({ active }) => (active ? '1' : '0')};
+        opacity: 0;
         transform: none;
         display: block;
         position: relative;
@@ -316,11 +314,9 @@ const Style = styled.div<{ active: boolean }>`
   }
 `
 
-export const Section1 = observer(() => {
-  const store = useStore()
-
+export const Section1 = () => {
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }} active={false}>
+    <Style>
       <h2>
         Zecrey Protocol
         <Img src={'/section1/circle.svg'} />
@@ -350,4 +346,4 @@ export const Section1 = observer(() => {
       </div>
     </Style>
   )
-})
+}

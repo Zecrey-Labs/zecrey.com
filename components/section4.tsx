@@ -4,7 +4,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
 import { desktopPx2vw } from '@/utils'
 import Image from 'next/image'
 
@@ -248,7 +247,7 @@ const Image4 = styled.div`
   height: ${desktopPx2vw(65)};
 `
 
-export const Section4 = observer(() => {
+export const Section4 = () => {
   return (
     <Style>
       <h2>Privacy for a smart contract world</h2>
@@ -364,4 +363,4 @@ export const Section4 = observer(() => {
       </div>
     </Style>
   )
-})
+}

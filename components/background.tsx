@@ -4,18 +4,15 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import Img from './img'
 
-const Style = styled.div<{ theme: 'dark' | 'light' }>`
+const Style = styled.div`
   z-index: -1;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: fixed;
-  background-color: ${({ theme }) =>
-    theme === 'dark' ? 'rgb(34, 34, 34)' : 'rgb(241, 241, 241)'};
+  background-color: rgb(34, 34, 34);
 
   @keyframes blue-routine {
     0% {
@@ -80,23 +77,16 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   }
 
   @media (max-width: 760px) {
-    background-color: ${({ theme }) =>
-      theme === 'dark' ? 'rgb(34, 34, 34)' : 'white'};
+    background-color: rgb(34, 34, 34);
   }
 `
 
-export const Background = observer(() => {
-  const store = useStore()
-
+export const Background = () => {
   return (
-    <Style theme={store.theme}>
-      {store.theme === 'dark' && (
-        <>
-          <div className='dark'></div>
-          <Img src='/section1/blue.png' alt='' className='blue' />
-          <Img src='/section1/pink.png' alt='' className='pink' />
-        </>
-      )}
+    <Style>
+      <div className='dark'></div>
+      <Img src='/section1/blue.png' alt='' className='blue' />
+      <Img src='/section1/pink.png' alt='' className='pink' />
     </Style>
   )
-})
+}

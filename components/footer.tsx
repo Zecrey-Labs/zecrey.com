@@ -4,8 +4,6 @@
 
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import Img from './img'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -244,8 +242,7 @@ const EmailSubscribe = styled.div<{ ac: boolean }>`
   }
 `
 
-export const Footer = observer(() => {
-  const store = useStore()
+export const Footer = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = React.useState(null)
 
@@ -281,7 +278,7 @@ export const Footer = observer(() => {
   }
 
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+    <Style>
       <Img className='wave' src='/footer/wave.svg' />
       <div className='content desktop'>
         <div className='section1'>
@@ -396,4 +393,4 @@ export const Footer = observer(() => {
       {message && <Message className='message'>{message}</Message>}
     </Style>
   )
-})
+}

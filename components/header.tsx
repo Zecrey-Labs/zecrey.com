@@ -4,8 +4,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -14,7 +12,7 @@ import Img from './img'
 import { desktopPx2vw, px2vw } from '@/utils'
 import { DOCS_URL, DOWNLOAD_URL } from '@/constant'
 
-const Style = styled.div<{ theme: 'dark' | 'light' }>`
+const Style = styled.div`
   width: 100vw;
   height: ${px2vw(110, 1920)};
   min-height: 64px;
@@ -54,31 +52,6 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
         color: #cdcdcd;
         &:hover {
           color: rgb(37, 206, 212);
-        }
-      }
-    }
-  }
-  &.light {
-    background-color: rgba(239, 239, 239, 0.7);
-    img.dark {
-      display: none;
-    }
-    img.light {
-      display: normal;
-    }
-    div.left {
-      nav ul li {
-        color: #222222;
-        &:hover {
-          color: #00acb1;
-        }
-      }
-    }
-    div.right {
-      svg {
-        color: #383838;
-        &:hover {
-          color: rgb(0, 162, 168);
         }
       }
     }
@@ -189,10 +162,6 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
     height: 40px;
     min-height: auto;
     box-shadow: none;
-    &.light {
-      background-color: white;
-      border-bottom: 1px solid #eaeaea;
-    }
     &.dark {
       background-color: #2c2c2c;
     }
@@ -223,7 +192,7 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
         transition: transform 0.2s ease-in-out;
         z-index: -1;
         width: 100%;
-        background: ${({ theme }) => (theme === 'dark' ? '#2C2C2C' : 'white')};
+        background: #2c2c2c;
         display: block;
         ul {
           top: 0;
@@ -240,12 +209,8 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
             font-weight: 500;
             font-size: 12px;
             display: block;
-            color: ${({ theme }) => (theme === 'dark' ? 'white' : 'black')};
-            border-bottom: 1px solid
-              ${({ theme }) =>
-                theme === 'dark'
-                  ? 'rgba(255,255,255,0.5)'
-                  : 'rgba(10,10,10,0.5)'};
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             &:last-of-type {
               border-bottom: none;
             }
@@ -260,12 +225,9 @@ const Style = styled.div<{ theme: 'dark' | 'light' }>`
   }
 `
 
-export const Header = observer(() => {
-  const store = useStore()
-  const [active, setActive] = React.useState(false)
-
+export const Header = () => {
   return (
-    <Style theme={store.theme} className={store.theme}>
+    <Style className='dark'>
       <div className='left'>
         <Img className='dark' src={'/logo1.svg'} alt='logo' />
         <Img className='light' src={'/logo2.svg'} alt='logo' />
@@ -297,4 +259,4 @@ export const Header = observer(() => {
       </div>
     </Style>
   )
-})
+}

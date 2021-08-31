@@ -4,8 +4,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react-lite'
-import { useStore } from '@/store'
 import Img from './img'
 import { px2vw } from '@/utils'
 
@@ -244,27 +242,9 @@ const Style = styled.div`
   }
 `
 
-export const Section5 = observer(() => {
-  const store = useStore()
-  const anchor2 = React.useRef(null)
-  React.useEffect(() => {
-    if (
-      'IntersectionObserver' in window &&
-      'IntersectionObserverEntry' in window &&
-      'intersectionRatio' in window.IntersectionObserverEntry.prototype
-    ) {
-      let observer1 = new IntersectionObserver(entries => {
-        if (entries[0].boundingClientRect.y <= window.innerHeight) {
-          store.setAnchor2Appear(true)
-        } else {
-          store.setAnchor2Appear(false)
-        }
-      })
-      observer1.observe(anchor2.current)
-    }
-  }, [])
+export const Section5 = () => {
   return (
-    <Style style={{ opacity: store.theme === 'dark' ? 1 : 0 }}>
+    <Style style={{ opacity: 1 }}>
       <h2>Why Zecrey?</h2>
       <div className='content'>
         <div className='block'>
@@ -297,7 +277,6 @@ export const Section5 = observer(() => {
           </div>
         </div>
       </div>
-      <div ref={anchor2} className='anchor' />
     </Style>
   )
-})
+}
