@@ -172,6 +172,15 @@ const Style = styled.div`
     div.right {
       margin: 0;
       font-size: ${px2vw(16, 320)};
+      > a.docs {
+        font-size: ${px2vw(14, 320)};
+        line-height: ${px2vw(16, 320)};
+      }
+      span.bar {
+        height: ${px2vw(14, 320)};
+        margin-left: ${px2vw(10, 320)};
+        margin-right: ${px2vw(10, 320)};
+      }
     }
     div.left {
       height: 40px;
