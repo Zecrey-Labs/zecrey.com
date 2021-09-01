@@ -11,13 +11,14 @@ export const BlockStyle = styled.div`
     height: ${desktopPx2vw(140)};
     background: rgba(58, 58, 58, 0.6);
     mix-blend-mode: normal;
-    border-radius: 20px;
+    border-radius: ${desktopPx2vw(20)};
     margin-bottom: ${desktopPx2vw(11)};
     display: flex;
     justify-content: center;
     align-items: center;
   }
   > div.text {
+    display: block;
     width: 100%;
     height: ${desktopPx2vw(52)};
     display: flex;

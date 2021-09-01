@@ -19,7 +19,9 @@ const Block = ({ text, children }) => (
   <BlockStyle>
     <div className='square'>{children}</div>
     <div className='text'>
-      <span>{text}</span>
+      {text.map((i, index) => (
+        <span key={index}>{i}</span>
+      ))}
     </div>
   </BlockStyle>
 )
