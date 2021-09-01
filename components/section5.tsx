@@ -12,12 +12,10 @@ import { desktopPx2vw } from '@/utils'
 
 const Style = styled.div`
   display: flex;
-  margin-top: ${desktopPx2vw(267)};
   margin-left: ${desktopPx2vw(138)};
-  padding-bottom: ${desktopPx2vw(163)};
+  height: ${desktopPx2vw(831)};
   position: relative;
   flex-direction: row;
-  height: ${desktopPx2vw(1161)};
   > div.left {
     width: ${desktopPx2vw(819)};
     position: relative;
@@ -45,21 +43,70 @@ const Style = styled.div`
     }
   }
   > div.right {
-    flex: 1;
+    padding-top: ${desktopPx2vw(214)};
     padding-left: ${desktopPx2vw(181)};
   }
+`
+const Image1 = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(329)};
+  height: ${desktopPx2vw(213)};
+  right: ${desktopPx2vw(697)};
+  top: ${desktopPx2vw(281)};
+  z-index: -1;
+  opacity: 0.15;
+`
+const Image2 = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(158)};
+  height: ${desktopPx2vw(158)};
+  right: ${desktopPx2vw(839)};
+  top: ${desktopPx2vw(609)};
+`
+const Image3 = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(124)};
+  height: ${desktopPx2vw(124)};
+  right: ${desktopPx2vw(883)};
+  top: ${desktopPx2vw(536)};
+  z-index: -1;
+  opacity: 0.4;
 `
 
 export const Section5 = () => {
   return (
     <Style>
+      <Image1>
+        <Image
+          src='/section5/arrows.svg'
+          className='arrows'
+          alt='arrows'
+          layout='fill'
+        />
+      </Image1>
+      <Image2>
+        <Image
+          src='/section5/dollar-coin.svg'
+          className='dollar'
+          alt='dollar'
+          layout='fill'
+        />
+      </Image2>
+      <Image3>
+        <Image
+          src='/section5/dollar-coin.svg'
+          className='dollar'
+          alt='dollar'
+          layout='fill'
+        />
+      </Image3>
       <div className='left'>
         <div className='image1'>
-          <Image src='/section6/swap1.png' alt='image1' layout='fill' />
+          <Image src='/screenshots/swap1.png' alt='image1' layout='fill' />
         </div>
         <div className='image2'>
           <Image
-            src='/section6/swap2.png'
+            src='/screenshots/swap2.png'
             className='image2'
             alt='image1'
             layout='fill'
@@ -67,7 +114,7 @@ export const Section5 = () => {
         </div>
         <div className='image3'>
           <Image
-            src='/section6/swap3.png'
+            src='/screenshots/swap3.png'
             className='image3'
             alt='image1'
             layout='fill'
@@ -82,7 +129,7 @@ export const Section5 = () => {
               <span>Zecrey Wallet Application</span>
             </div>
             <div className='right'>
-              <Img className='icon' src='/section6/icon4.svg' alg='' />
+              <Img className='icon' src='/section5/icon.svg' alg='' />
             </div>
           </div>
           <h1>

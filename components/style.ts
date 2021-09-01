@@ -8,37 +8,37 @@ import { desktopPx2vw, px2vw } from '@/utils'
 export const SideContentStyle = styled.div`
   > div.badge {
     padding-left: ${desktopPx2vw(28)};
-    padding-bottom: ${desktopPx2vw(30)};
+    padding-bottom: ${desktopPx2vw(35)};
     display: flex;
     flex-direction: row;
     align-items: center;
     > div.left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       h3 {
         font-family: Lexend;
         font-style: normal;
         font-weight: 600;
         font-size: ${desktopPx2vw(16)};
         line-height: ${desktopPx2vw(20)};
-        text-align: center;
+        text-align: left;
         color: #e3e3e3;
       }
       span {
         font-family: Lexend;
         font-style: normal;
         font-weight: normal;
-        font-size: ${desktopPx2vw(10.5)};
+        font-size: ${desktopPx2vw(12)};
         line-height: ${desktopPx2vw(13)};
-        text-align: center;
         color: #ffffff;
         mix-blend-mode: normal;
         opacity: 0.35;
       }
     }
     > div.right {
-      margin-left: ${px2vw(23.5, 1862)};
+      margin-left: ${px2vw(20, 1920)};
+      img {
+        width: ${px2vw(32)};
+        height: ${px2vw(32)};
+      }
     }
   }
   > h1 {
@@ -62,7 +62,7 @@ export const SideContentStyle = styled.div`
     width: ${desktopPx2vw(616)};
     font-family: Lexend;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: ${desktopPx2vw(18)};
     line-height: ${desktopPx2vw(24)};
     letter-spacing: 0.217059px;

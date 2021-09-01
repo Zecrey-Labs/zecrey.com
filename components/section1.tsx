@@ -4,13 +4,14 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import Image from 'next/image'
 import Img from './img'
 import { px2vw } from '@/utils'
 import { DOWNLOAD_URL } from '@/constant'
 
 const Style = styled.div`
   width: 100vw;
-  min-height: calc(100vh - ${px2vw(200, 1920)});
+  min-height: calc(100vh - ${px2vw(110, 1920)});
   overflow: hidden;
   color: white;
   display: flex;
@@ -120,7 +121,7 @@ const Style = styled.div`
 
   > .links {
     display: flex;
-    margin: ${px2vw(39, 1437)} auto;
+    margin: ${px2vw(39, 1437)} auto 0 auto;
   }
   > .links a {
     text-decoration: none;
@@ -158,6 +159,22 @@ const Style = styled.div`
   }
   div.nextSectionGuide {
     display: none;
+  }
+  div.nextSectionGuideDesktop {
+    margin-top: ${px2vw(299, 1920)};
+    font-family: Lexend;
+    font-weight: bold;
+    font-size: ${px2vw(16)};
+    text-align: center;
+    color: #ffffff;
+    span {
+    }
+    .image-wrap.triangle {
+      position: relative;
+      width: ${px2vw(20)};
+      height: ${px2vw(14)};
+      margin: ${px2vw(9)} auto ${px2vw(238)} auto;
+    }
   }
 
   @media (max-width: 760px) {
@@ -306,6 +323,9 @@ const Style = styled.div`
         }
       }
     }
+    div.nextSectionGuideDesktop {
+      display: none;
+    }
   }
   @media (max-height: 500px) {
     div.nextSectionGuide {
@@ -339,6 +359,15 @@ export const Section1 = () => {
           className='whitepaper'>
           White Paper
         </a>
+      </div>
+      <div className='nextSectionGuideDesktop'>
+        <p>Learn more</p>
+        <div className='image-wrap triangle'>
+          <Image
+            src='/section1/triangle.svg'
+            alt='triangle'
+            layout='fill'></Image>
+        </div>
       </div>
       <div className='nextSectionGuide'>
         <p>Slide to View More</p>

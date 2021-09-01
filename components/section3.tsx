@@ -12,8 +12,8 @@ import { SideContentStyle } from '@/components/style'
 
 const Style = styled.div`
   display: flex;
-  margin-top: ${desktopPx2vw(267)};
-  padding-bottom: ${desktopPx2vw(163)};
+  margin-top: ${desktopPx2vw(285)};
+  margin-bottom: ${desktopPx2vw(186)};
   position: relative;
   flex-direction: row;
   height: ${desktopPx2vw(1161)};
@@ -29,18 +29,18 @@ const Style = styled.div`
   }
   > div.right {
     flex: 1;
-    padding-top: ${desktopPx2vw(302)};
-    padding-left: ${desktopPx2vw(201)};
+    padding-top: ${desktopPx2vw(343)};
+    padding-left: ${desktopPx2vw(156)};
     padding-right: ${desktopPx2vw(200)};
   }
-  > div.arrow {
+  > div.image-wrap.eye-slash {
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.09;
     position: absolute;
-    width: ${desktopPx2vw(1920 - 753 - 787)};
-    height: ${desktopPx2vw(3969 - 554 - 3169)};
-    left: ${desktopPx2vw(753)};
-    top: ${desktopPx2vw(349)};
+    width: ${desktopPx2vw(410)};
+    height: ${desktopPx2vw(317)};
+    left: ${desktopPx2vw(695)};
+    top: ${desktopPx2vw(602)};
   }
 `
 
@@ -49,37 +49,36 @@ const Image1 = styled.div`
   width: ${desktopPx2vw(857)};
   height: ${desktopPx2vw(1161)};
 `
-
-const ArrowLeft = styled.div`
+const Image2 = styled.div`
   position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  left: 0;
-  top: 0;
-`
-
-const ArrowRight = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  right: 0;
-  bottom: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: ${desktopPx2vw(115)};
+  height: ${desktopPx2vw(445)};
+  bottom: ${desktopPx2vw(-290)};
+  left: ${desktopPx2vw(541)};
 `
 
 export const Section3 = () => {
   return (
     <Style>
       <div className='left'>
+        <Image2>
+          <Image
+            src='/section3/zecrey.svg'
+            className='zecrey'
+            alt='zecrey'
+            layout='fill'
+            quality={100}
+          />
+        </Image2>
         <Image1>
           <Image
-            src='/section2/image1.png'
+            src='/section3/image11.png'
             className='image1'
             alt='image1'
             layout='fill'
           />
         </Image1>
-        <Img className='transfer' src='/section2/transfer.png' />
+        <Img className='transfer' src='/screenshots/privacy-transfer.png' />
       </div>
       <div className='right'>
         <SideContentStyle>
@@ -89,7 +88,7 @@ export const Section3 = () => {
               <span>Privacy Wallet Application</span>
             </div>
             <div className='right'>
-              <Img className='icon' src={'/section2/yes.svg'} alt='' />
+              <Img className='icon' src={'/section3/yes.svg'} alt='' />
             </div>
           </div>
           <h1>
@@ -105,23 +104,8 @@ export const Section3 = () => {
           <GetStarted />
         </SideContentStyle>
       </div>
-      <div className='arrow'>
-        <ArrowLeft>
-          <Image
-            src='/section2/arrow.svg'
-            className='arrow-left'
-            alt='arrow-left'
-            layout='fill'
-          />
-        </ArrowLeft>
-        <ArrowRight>
-          <Image
-            src='/section2/arrow.svg'
-            className='arrow-right'
-            alt='arrow-right'
-            layout='fill'
-          />
-        </ArrowRight>
+      <div className='image-wrap eye-slash'>
+        <Image src='/section3/eye-slash.svg' alt='eye-slash' layout='fill' />
       </div>
     </Style>
   )

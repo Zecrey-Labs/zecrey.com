@@ -18,7 +18,7 @@ const ZecreyHead = () => (
     <link rel='shortcut icon' href='/favicon.svg' />
     <link rel='preconnect' href='https://fonts.gstatic.com' />
     <link
-      href='https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700&display=swap'
+      href='https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;700;800&display=swap'
       rel='stylesheet'
     />
     <link

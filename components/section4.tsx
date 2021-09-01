@@ -12,18 +12,26 @@ import { SideContentStyle } from '@/components/style'
 
 const Style = styled.div`
   position: relative;
-  padding-top: ${desktopPx2vw(711)};
-  margin-top: ${desktopPx2vw(-50)};
-  padding-left: ${desktopPx2vw(198)};
-  padding-bottom: ${desktopPx2vw(380)};
-  > img.transfer {
-    z-index: 5;
+  padding-top: ${desktopPx2vw(363)};
+  padding-left: ${desktopPx2vw(182)};
+  padding-bottom: ${desktopPx2vw(561)};
+`
+
+const BasicCard = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(494)};
+  height: ${desktopPx2vw(823)};
+  div.blur-bg {
     position: absolute;
-    height: ${desktopPx2vw(823)};
-    top: ${desktopPx2vw(315)};
-    right: ${desktopPx2vw(433)};
-    border-radius: ${desktopPx2vw(12)};
-    box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
+    width: 100%;
+    height: 100%;
+    background: #363636;
+    border-radius: ${desktopPx2vw(10)};
+    filter: blur(${desktopPx2vw(111)});
+  }
+  div:last-child {
+    position: absolute;
+    border-radius: ${desktopPx2vw(10)};
   }
 `
 
@@ -32,60 +40,44 @@ const Image1 = styled.div`
   z-index: -1;
   width: ${desktopPx2vw(871)};
   height: ${desktopPx2vw(214)};
-  top: ${desktopPx2vw(596)};
+  top: ${desktopPx2vw(236)};
   right: ${desktopPx2vw(1094)};
   opacity: 0.1;
 `
-const Image2 = styled.div`
-  position: absolute;
+const Image2 = styled(BasicCard)`
   z-index: 4;
-  width: ${desktopPx2vw(493.75)};
-  height: ${desktopPx2vw(822)};
-  top: ${desktopPx2vw(52)};
-  right: ${desktopPx2vw(239)};
-  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-  border-radius: ${desktopPx2vw(12)};
+  top: ${desktopPx2vw(0)};
+  right: ${desktopPx2vw(256)};
 `
 
-const Image3 = styled.div`
-  position: absolute;
+const Image3 = styled(BasicCard)`
   z-index: 3;
-  width: ${desktopPx2vw(493)};
-  height: ${desktopPx2vw(822)};
-  top: ${desktopPx2vw(580)};
-  right: ${desktopPx2vw(121)};
-  box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
-  border-radius: ${desktopPx2vw(12)};
+  top: ${desktopPx2vw(278)};
+  right: ${desktopPx2vw(137)};
 `
 
 const Image4 = styled.div`
   position: absolute;
   z-index: 2;
-  width: ${desktopPx2vw(294)};
-  height: ${desktopPx2vw(294)};
-  top: ${desktopPx2vw(987)};
-  right: ${desktopPx2vw(812)};
+  width: ${desktopPx2vw(303)};
+  height: ${desktopPx2vw(303)};
+  top: ${desktopPx2vw(668)};
+  left: ${desktopPx2vw(764)};
 `
 
 const Image5 = styled.div`
   position: absolute;
   z-index: -1;
-  width: ${desktopPx2vw(463)};
-  height: ${desktopPx2vw(114)};
-  top: ${desktopPx2vw(620 + 372 + 174.5)};
-  left: ${desktopPx2vw(114 - 174.5)};
-  transform: rotateZ(90deg);
-  opacity: 0.06;
+  width: ${desktopPx2vw(133)};
+  height: ${desktopPx2vw(514)};
+  top: ${desktopPx2vw(739)};
+  left: ${desktopPx2vw(87)};
 `
 
-const Image6 = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(336)};
-  height: ${desktopPx2vw(82)};
-  top: ${desktopPx2vw(280)};
-  right: ${desktopPx2vw(1256)};
-  transform: rotateZ(90deg);
-  opacity: 0.06;
+const Image6 = styled(BasicCard)`
+  z-index: 5;
+  top: ${desktopPx2vw(160)};
+  right: ${desktopPx2vw(449)};
 `
 
 export const Section4 = () => {
@@ -98,7 +90,7 @@ export const Section4 = () => {
             <span>Zecrey Wallet Application</span>
           </div>
           <div className='right'>
-            <Img className='icon' src={'/section3/dollar.svg'} alt='' />
+            <Img className='icon' src={'/section4/dollar.svg'} alt='' />
           </div>
         </div>
         <h1>
@@ -113,32 +105,32 @@ export const Section4 = () => {
         </p>
         <GetStarted />
       </SideContentStyle>
-      <Img className='transfer' src='/section3/transfer.png' />
       <Image1>
         <Image
-          src='/section3/image6.png'
+          src='/section4/zecrey.png'
           className='image1'
           alt='image1'
           layout='fill'
-          objectFit='cover'
           quality={100}
         />
       </Image1>
       <Image2>
+        <div className='blur-bg'></div>
         <Image
-          src='/section3/image2.png'
-          className='image2'
-          alt='image2'
+          src='/screenshots/l2-wallet.png'
+          className='l2-wallet'
+          alt='l2-wallet'
           layout='fill'
           objectFit='cover'
           quality={100}
         />
       </Image2>
       <Image3>
+        <div className='blur-bg'></div>
         <Image
-          src='/section3/image3.png'
-          className='image3'
-          alt='image3'
+          src='/screenshots/l1-wallet.png'
+          className='l1-wallet'
+          alt='l1-wallet'
           layout='fill'
           objectFit='cover'
           quality={100}
@@ -146,9 +138,9 @@ export const Section4 = () => {
       </Image3>
       <Image4>
         <Image
-          src='/section3/image4.svg'
-          className='image4'
-          alt='image4'
+          src='/section4/check-alt.svg'
+          className='check-alt'
+          alt='check-alt'
           layout='fill'
           objectFit='cover'
           quality={100}
@@ -156,21 +148,20 @@ export const Section4 = () => {
       </Image4>
       <Image5>
         <Image
-          src='/section3/image5.png'
-          className='image5'
-          alt='image5'
+          src='/section3/zecrey.svg'
+          className='zecrey'
+          alt='zecrey'
           layout='fill'
-          objectFit='cover'
           quality={100}
         />
       </Image5>
       <Image6>
+        <div className='blur-bg'></div>
         <Image
-          src='/section3/image6.png'
-          className='image6'
-          alt='image6'
+          src='/screenshots/l2-transfer.png'
+          className='l2-transfer'
+          alt='l2-transfer'
           layout='fill'
-          objectFit='cover'
           quality={100}
         />
       </Image6>

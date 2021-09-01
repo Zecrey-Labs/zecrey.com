@@ -13,8 +13,8 @@ const BlockStyle = styled.div`
   flex-direction: column;
   align-items: center;
   > div.square {
-    width: ${desktopPx2vw(166)};
-    height: ${desktopPx2vw(167)};
+    width: ${desktopPx2vw(140)};
+    height: ${desktopPx2vw(140)};
     background: rgba(58, 58, 58, 0.6);
     mix-blend-mode: normal;
     border-radius: 20px;
@@ -25,9 +25,9 @@ const BlockStyle = styled.div`
   }
   > div.text {
     width: 100%;
-    height: ${desktopPx2vw(62)};
+    height: ${desktopPx2vw(52)};
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 
     span {
@@ -39,6 +39,9 @@ const BlockStyle = styled.div`
       text-align: center;
       color: white;
     }
+    span:only-child {
+      padding-top: ${desktopPx2vw(12)};
+    }
   }
 `
 
@@ -46,7 +49,9 @@ const Block = ({ text, children }) => (
   <BlockStyle>
     <div className='square'>{children}</div>
     <div className='text'>
-      <span>{text}</span>
+      {text.map((i, index) => (
+        <span key={index}>{i}</span>
+      ))}
     </div>
   </BlockStyle>
 )
@@ -57,7 +62,7 @@ const Style = styled.div`
   overflow: hidden;
   position: relative;
   align-items: center;
-  padding-top: ${desktopPx2vw(273)};
+  padding-top: ${desktopPx2vw(330)};
   padding-bottom: ${desktopPx2vw(179)};
   display: flex;
   flex-direction: column;
@@ -79,7 +84,7 @@ const Style = styled.div`
   }
 
   > p {
-    margin-top: ${desktopPx2vw(120)};
+    margin-top: ${desktopPx2vw(79)};
     font-family: Lexend;
     font-style: normal;
     font-weight: normal;
@@ -90,14 +95,15 @@ const Style = styled.div`
     max-width: ${desktopPx2vw(1182)};
   }
   > div.feature {
-    margin-top: ${desktopPx2vw(200)};
-    width: ${desktopPx2vw(1300)};
-    height: ${desktopPx2vw(190)};
+    box-sizing: border-box;
+    width: ${desktopPx2vw(1099)};
+    height: ${desktopPx2vw(160)};
+    margin-top: ${desktopPx2vw(173)};
     background: rgba(51, 51, 51, 0.5);
     mix-blend-mode: normal;
     border-radius: ${desktopPx2vw(20)};
     > ul {
-      top: -${desktopPx2vw(80)};
+      top: -${desktopPx2vw(72)};
       position: relative;
       display: flex;
       flex-direction: row;
@@ -115,23 +121,21 @@ const Style = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: ${desktopPx2vw(159)};
+    margin-top: ${desktopPx2vw(150)};
     > div.left {
+      width: ${desktopPx2vw(413)};
+      margin-right: ${desktopPx2vw(153)};
       h2 {
-        margin-top: ${desktopPx2vw(60)};
+        margin-top: ${desktopPx2vw(242)};
         font-family: Lexend;
         font-style: normal;
         font-weight: 800;
         font-size: ${desktopPx2vw(36)};
         line-height: ${desktopPx2vw(45)};
         color: #ffffff;
-        padding-left: ${desktopPx2vw(28)};
-        border-left: ${desktopPx2vw(5)} solid rgba(255, 255, 255, 0.3);
         max-width: ${desktopPx2vw(404)};
       }
       p {
-        max-width: ${desktopPx2vw(445)};
-        margin-left: ${desktopPx2vw(33)};
         margin-top: ${desktopPx2vw(33)};
         font-family: Lexend;
         font-style: normal;
@@ -141,12 +145,11 @@ const Style = styled.div`
         color: #dadada;
       }
       div.button {
-        margin-left: ${desktopPx2vw(33)};
         margin-top: ${desktopPx2vw(33)};
         width: ${desktopPx2vw(277)};
         height: ${desktopPx2vw(48)};
         border: ${desktopPx2vw(3)} solid #01abb2;
-        border-radius: ${desktopPx2vw(24)};
+        border-radius: ${desktopPx2vw(48)};
         position: relative;
         display: flex;
         flex-direction: row;
@@ -216,35 +219,35 @@ const Style = styled.div`
 
 const ArrowStyle = styled.div`
   position: relative;
-  width: ${desktopPx2vw(133)};
-  height: ${desktopPx2vw(55)};
+  width: ${desktopPx2vw(112)};
+  height: ${desktopPx2vw(46)};
 `
 
 const ScreenshotStyle = styled.div`
   position: relative;
-  width: ${desktopPx2vw(500)};
-  height: ${desktopPx2vw(523)};
+  width: ${desktopPx2vw(494)};
+  height: ${desktopPx2vw(823)};
 `
 
 const Image1 = styled.div`
   position: relative;
-  width: ${desktopPx2vw(80)};
-  height: ${desktopPx2vw(80)};
+  width: ${desktopPx2vw(67)};
+  height: ${desktopPx2vw(67)};
 `
 const Image2 = styled.div`
   position: relative;
-  width: ${desktopPx2vw(73)};
-  height: ${desktopPx2vw(98)};
+  width: ${desktopPx2vw(62)};
+  height: ${desktopPx2vw(84)};
 `
 const Image3 = styled.div`
   position: relative;
-  width: ${desktopPx2vw(88)};
-  height: ${desktopPx2vw(88)};
+  width: ${desktopPx2vw(74)};
+  height: ${desktopPx2vw(74)};
 `
 const Image4 = styled.div`
   position: relative;
-  width: ${desktopPx2vw(108)};
-  height: ${desktopPx2vw(65)};
+  width: ${desktopPx2vw(91)};
+  height: ${desktopPx2vw(55)};
 `
 
 export const Section6 = () => {
@@ -260,10 +263,10 @@ export const Section6 = () => {
       <div className='feature'>
         <ul>
           <li>
-            <Block text='Most Privacy Protocols'>
+            <Block text={['Most', 'Privacy Protocols']}>
               <Image1>
                 <Image
-                  src='/section4/image1.svg'
+                  src='/section6/image1.svg'
                   alt='Most Privacy Protocols'
                   layout='fill'
                   objectFit='cover'
@@ -275,7 +278,7 @@ export const Section6 = () => {
           <li>
             <ArrowStyle>
               <Image
-                src='/section4/arrow.svg'
+                src='/section6/arrow.svg'
                 alt='arrow'
                 layout='fill'
                 objectFit='cover'
@@ -284,10 +287,10 @@ export const Section6 = () => {
             </ArrowStyle>
           </li>
           <li>
-            <Block text='Not Generalized'>
+            <Block text={['Not Generalized']}>
               <Image2>
                 <Image
-                  src='/section4/image2.svg'
+                  src='/section6/image2.svg'
                   alt='Not Generalized'
                   layout='fill'
                   objectFit='cover'
@@ -297,10 +300,10 @@ export const Section6 = () => {
             </Block>
           </li>
           <li>
-            <Block text='High Cost'>
+            <Block text={['High Cost']}>
               <Image3>
                 <Image
-                  src='/section4/image3.svg'
+                  src='/section6/image3.svg'
                   alt='High Cost'
                   layout='fill'
                   objectFit='cover'
@@ -310,10 +313,10 @@ export const Section6 = () => {
             </Block>
           </li>
           <li>
-            <Block text='Inefficient'>
+            <Block text={['Inefficient']}>
               <Image4>
                 <Image
-                  src='/section4/image4.svg'
+                  src='/section6/image4.svg'
                   alt='Inefficient'
                   layout='fill'
                   objectFit='cover'
@@ -337,14 +340,14 @@ export const Section6 = () => {
               <span className='outer' />
             </div>
             <span>Zecrey Mainnet</span>
-            <img
+            {/* <img
               className='triangle'
               src='/section4/triangle.svg'
               alt='triangle'
-            />
+            /> */}
             <img
               className='pointer'
-              src='/section4/pointer.svg'
+              src='/section6/pointer.svg'
               alt='pointer'
             />
           </div>
@@ -352,7 +355,7 @@ export const Section6 = () => {
         <div className='right'>
           <ScreenshotStyle>
             <Image
-              src='/section4/screenshot.png'
+              src='/screenshots/l2-wallet.png'
               alt='screenshot'
               layout='fill'
               objectFit='cover'

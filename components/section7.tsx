@@ -248,10 +248,10 @@ export const Section7 = () => {
       <h2>Why Zecrey?</h2>
       <div className='content'>
         <div className='block'>
-          <Img className='image1' src='/section5/image1.svg' alt='' />
-          <Img className='image2' src='/section5/image2.svg' alt='' />
+          <Img className='image1' src='/section7/image1.svg' alt='' />
+          <Img className='image2' src='/section7/image2.svg' alt='' />
           <div className='bg1'></div>
-          <Img className='image3' src='/section5/image3.svg' alt='' />
+          <Img className='image3' src='/section7/image3.svg' alt='' />
         </div>
         <div className='textList'>
           <div className='text'>
