@@ -92,7 +92,7 @@ export const Section3 = () => {
             </div>
           </div>
           <h1>
-            One-Click Pricacy
+            One-Click Privacy
             <br />
             No Trace.
           </h1>

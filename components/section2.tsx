@@ -40,6 +40,7 @@ const Styled = styled.div`
   iframe {
     width: ${desktopPx2vw(1686)};
     height: ${desktopPx2vw(902)};
+    max-height: calc(100vh - ${desktopPx2vw(220)});
   }
 `
 
