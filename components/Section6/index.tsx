@@ -37,10 +37,10 @@ export const Section6 = () => {
       <div className='feature'>
         <ul>
           <li>
-            <Block text='Most Privacy Protocols'>
+            <Block text={['Most', 'Privacy Protocols']}>
               <Image1>
                 <Image
-                  src='/section4/image1.svg'
+                  src='/section6/image1.svg'
                   alt='Most Privacy Protocols'
                   layout='fill'
                   objectFit='cover'
@@ -52,7 +52,7 @@ export const Section6 = () => {
           <li>
             <ArrowStyle>
               <Image
-                src='/section4/arrow.svg'
+                src='/section6/arrow.svg'
                 alt='arrow'
                 layout='fill'
                 objectFit='cover'
@@ -61,10 +61,10 @@ export const Section6 = () => {
             </ArrowStyle>
           </li>
           <li>
-            <Block text='Not Generalized'>
+            <Block text={['Not Generalized']}>
               <Image2>
                 <Image
-                  src='/section4/image2.svg'
+                  src='/section6/image2.svg'
                   alt='Not Generalized'
                   layout='fill'
                   objectFit='cover'
@@ -74,10 +74,10 @@ export const Section6 = () => {
             </Block>
           </li>
           <li>
-            <Block text='High Cost'>
+            <Block text={['High Cost']}>
               <Image3>
                 <Image
-                  src='/section4/image3.svg'
+                  src='/section6/image3.svg'
                   alt='High Cost'
                   layout='fill'
                   objectFit='cover'
@@ -87,10 +87,10 @@ export const Section6 = () => {
             </Block>
           </li>
           <li>
-            <Block text='Inefficient'>
+            <Block text={['Inefficient']}>
               <Image4>
                 <Image
-                  src='/section4/image4.svg'
+                  src='/section6/image4.svg'
                   alt='Inefficient'
                   layout='fill'
                   objectFit='cover'
@@ -114,14 +114,14 @@ export const Section6 = () => {
               <span className='outer' />
             </div>
             <span>Zecrey Mainnet</span>
-            <img
+            {/* <img
               className='triangle'
               src='/section4/triangle.svg'
               alt='triangle'
-            />
+            /> */}
             <img
               className='pointer'
-              src='/section4/pointer.svg'
+              src='/section6/pointer.svg'
               alt='pointer'
             />
           </div>
@@ -129,7 +129,7 @@ export const Section6 = () => {
         <div className='right'>
           <ScreenshotStyle>
             <Image
-              src='/section4/screenshot.png'
+              src='/screenshots/l2-wallet.png'
               alt='screenshot'
               layout='fill'
               objectFit='cover'
