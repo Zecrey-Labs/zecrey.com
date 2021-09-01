@@ -17,8 +17,8 @@ export const SideContentStyle = styled.div`
         font-family: Lexend;
         font-style: normal;
         font-weight: 600;
-        font-size: ${desktopPx2vw(16)};
-        line-height: ${desktopPx2vw(20)};
+        font-size: ${desktopPx2vw(18)};
+        line-height: ${desktopPx2vw(22)};
         text-align: left;
         color: #e3e3e3;
       }
