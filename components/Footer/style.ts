@@ -26,27 +26,28 @@ export const Style = styled.div`
     padding-top: ${px2vw(296, 1920)};
     position: relative;
     div.section1 {
+      height: ${px2vw(86)};
       z-index: 1;
       border-bottom: 1px solid rgb(228, 228, 228);
       display: flex;
-      flex-direction: row;
+      align-items: center;
+      padding-bottom: ${px2vw(40)};
       img {
         width: ${px2vw(267, 1920)};
         height: ${px2vw(109, 1920)};
         margin-left: ${px2vw(16, 1920)};
         margin-right: ${px2vw(130, 1920)};
         position: relative;
-        top: -${px2vw(32, 1920)};
       }
       > div.subsection {
         margin-right: ${px2vw(191, 1920)};
         display: flex;
         flex-direction: column;
-        padding-bottom: ${px2vw(10, 1920)};
         > a {
-          margin-bottom: ${px2vw(20, 1920)};
+          height: ${px2vw(30)};
+          margin-bottom: ${px2vw(26, 1920)};
           text-align: left;
-          font: normal normal bold ${px2vw(28, 1920)} / ${px2vw(37, 1920)}
+          font: normal normal bold ${px2vw(24, 1920)} / ${px2vw(30, 1920)}
             Roboto;
           color: #e4e4e4;
           cursor: pointer;
@@ -55,6 +56,9 @@ export const Style = styled.div`
             color: rgba(42, 212, 217, 1);
           }
         }
+        > a:last-child {
+          margin: 0;
+        }
         > span {
           color: gray;
           cursor: not-allowed;
@@ -62,6 +66,8 @@ export const Style = styled.div`
       }
       div.email-subscribe {
         position: relative;
+        flex: 1;
+        height: 100%;
       }
     }
     div.section2 {
@@ -100,20 +106,25 @@ export const Style = styled.div`
           span {
             font-family: sans-serif;
             font-size: 21px;
+            font-weight: 300;
             line-height: 25px;
             text-decoration-line: underline;
             color: #e4e4e4;
           }
         }
         > span.bar {
+          display: inline-block;
           width: ${desktopPx2vw(1)};
           height: ${desktopPx2vw(20)};
           margin: 0 ${desktopPx2vw(21)};
           background-color: #e4e4e4;
+          vertical-align: text-bottom;
+          margin-bottom: ${desktopPx2vw(2)};
         }
         > div.copyright {
           display: inline-block;
           font-family: sans-serif;
+          font-weight: 300;
           font-size: 21px;
           line-height: 25px;
           color: #e4e4e4;
@@ -212,7 +223,7 @@ export const Message = styled.div`
 `
 export const EmailSubscribe = styled.div<{ ac: boolean }>`
   position: absolute;
-  bottom: ${px2vw(32, 1920)};
+  bottom: 0;
   display: flex;
   label {
     font-family: Lexend;

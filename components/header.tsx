@@ -11,6 +11,7 @@ library.add(fab)
 import Img from './img'
 import { desktopPx2vw, px2vw } from '@/utils'
 import { DOCS_URL, DOWNLOAD_URL } from '@/constant'
+import Image from 'next/image'
 
 const Style = styled.div`
   width: 100vw;
@@ -127,7 +128,7 @@ const Style = styled.div`
     a.docs {
       font-family: Lexend;
       font-style: normal;
-      font-weight: 300;
+      font-weight: 500;
       font-size: ${px2vw(26, 1862)};
       line-height: ${px2vw(32, 1862)};
       color: #ffffff;
@@ -141,8 +142,8 @@ const Style = styled.div`
       width: ${px2vw(1, 1862)};
       height: ${px2vw(31, 1862)};
       background: white;
-      margin-left: ${px2vw(23, 1862)};
-      margin-right: ${px2vw(23, 1862)};
+      margin-left: ${px2vw(16, 1862)};
+      margin-right: ${px2vw(27, 1862)};
     }
   }
 

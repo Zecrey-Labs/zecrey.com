@@ -62,10 +62,7 @@ export const Footer = () => {
               href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632673207&Signature=xP%2BvTHtSvIv8SbIgA6udJ0y4zug%3D'
               className='downloadapp'
               download='zecrey'>
-              App
-            </a>
-            <a href='https://docs.zecrey.com/' target='_blank'>
-              Document
+              Privacy Wallet App
             </a>
           </div>
           <div className='email-subscribe'>
