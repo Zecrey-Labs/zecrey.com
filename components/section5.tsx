@@ -48,6 +48,55 @@ const Style = styled.div`
     flex: 1;
     padding-left: ${desktopPx2vw(181)};
   }
+  > div.arrow {
+    z-index: -1;
+    opacity: 0.2;
+    position: absolute;
+    width: ${desktopPx2vw(1920 - 753 - 787)};
+    height: ${desktopPx2vw(3969 - 554 - 3169)};
+    left: ${desktopPx2vw(716)};
+    top: ${desktopPx2vw(60)};
+  }
+  > div.dollar {
+    position: absolute;
+    z-index: -1;
+    mix-blend-mode: normal;
+    left: ${desktopPx2vw(772)};
+    top: ${desktopPx2vw(897 - 361)};
+    width: ${desktopPx2vw(124)};
+    height: ${desktopPx2vw(124)};
+    > div.dollar1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: ${desktopPx2vw(124)};
+      height: ${desktopPx2vw(124)};
+    }
+    > div.dollar2 {
+      position: absolute;
+      left: ${desktopPx2vw(10)};
+      top: ${desktopPx2vw(73)};
+      width: ${desktopPx2vw(158)};
+      height: ${desktopPx2vw(158)};
+    }
+  }
+`
+
+const ArrowLeft = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  left: 0;
+  top: 0;
+`
+
+const ArrowRight = styled.div`
+  position: absolute;
+  width: ${desktopPx2vw(259)};
+  height: ${desktopPx2vw(164)};
+  right: 0;
+  bottom: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 export const Section5 = () => {
@@ -97,6 +146,32 @@ export const Section5 = () => {
           </p>
           <GetStarted />
         </SideContentStyle>
+      </div>
+      <div className='arrow'>
+        <ArrowLeft>
+          <Image
+            src='/section6/arrow.svg'
+            className='arrow-left'
+            alt='arrow-left'
+            layout='fill'
+          />
+        </ArrowLeft>
+        <ArrowRight>
+          <Image
+            src='/section6/arrow.svg'
+            className='arrow-right'
+            alt='arrow-right'
+            layout='fill'
+          />
+        </ArrowRight>
+      </div>
+      <div className='dollar'>
+        <div className='dollar1'>
+          <Image src='/section6/dollar1.svg' alt='dollar' layout='fill' />
+        </div>
+        <div className='dollar2'>
+          <Image src='/section6/dollar2.svg' alt='dollar' layout='fill' />
+        </div>
       </div>
     </Style>
   )

@@ -33,14 +33,14 @@ const Style = styled.div`
     padding-left: ${desktopPx2vw(201)};
     padding-right: ${desktopPx2vw(200)};
   }
-  > div.arrow {
-    z-index: -1;
-    opacity: 0.2;
+  > div.eye.icon {
     position: absolute;
-    width: ${desktopPx2vw(1920 - 753 - 787)};
-    height: ${desktopPx2vw(3969 - 554 - 3169)};
-    left: ${desktopPx2vw(753)};
-    top: ${desktopPx2vw(349)};
+    z-index: -1;
+    mix-blend-mode: normal;
+    width: ${desktopPx2vw(410)};
+    height: ${desktopPx2vw(317)};
+    left: ${desktopPx2vw(695)};
+    top: ${desktopPx2vw(602)};
   }
 `
 
@@ -48,23 +48,6 @@ const Image1 = styled.div`
   position: relative;
   width: ${desktopPx2vw(857)};
   height: ${desktopPx2vw(1161)};
-`
-
-const ArrowLeft = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  left: 0;
-  top: 0;
-`
-
-const ArrowRight = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  right: 0;
-  bottom: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 export const Section3 = () => {
@@ -93,7 +76,7 @@ export const Section3 = () => {
             </div>
           </div>
           <h1>
-            One-Click Pricacy
+            One-Click Privacy
             <br />
             No Trace.
           </h1>
@@ -105,23 +88,8 @@ export const Section3 = () => {
           <GetStarted />
         </SideContentStyle>
       </div>
-      <div className='arrow'>
-        <ArrowLeft>
-          <Image
-            src='/section2/arrow.svg'
-            className='arrow-left'
-            alt='arrow-left'
-            layout='fill'
-          />
-        </ArrowLeft>
-        <ArrowRight>
-          <Image
-            src='/section2/arrow.svg'
-            className='arrow-right'
-            alt='arrow-right'
-            layout='fill'
-          />
-        </ArrowRight>
+      <div className='eye icon'>
+        <Image src='/section2/eye.svg' alt='eye' layout='fill' />
       </div>
     </Style>
   )
