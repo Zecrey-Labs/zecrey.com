@@ -219,6 +219,7 @@ const Style = styled.div`
 
 const ArrowStyle = styled.div`
   position: relative;
+  margin-top: ${desktopPx2vw(21)};
   width: ${desktopPx2vw(112)};
   height: ${desktopPx2vw(46)};
 `
