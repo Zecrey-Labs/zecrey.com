@@ -19,7 +19,7 @@ const Block = ({ text, children }) => (
   <BlockStyle>
     <div className='square'>{children}</div>
     <div className='text'>
-      {text.map((i, index) => (
+      {text.map((i: string, index: number) => (
         <span key={index}>{i}</span>
       ))}
     </div>
@@ -116,11 +116,7 @@ export const Section6 = () => {
               <span className='outer' />
             </div>
             <span>Zecrey Mainnet</span>
-            {/* <img
-              className='triangle'
-              src='/section4/triangle.svg'
-              alt='triangle'
-            /> */}
+            <div className='triangle'></div>
             <img
               className='pointer'
               src='/section6/pointer.svg'

@@ -160,15 +160,15 @@ export const Style = styled.div`
             &.medium {
               z-index: 2;
               position: absolute;
-              width: ${desktopPx2vw(15)};
-              height: ${desktopPx2vw(15)};
+              width: ${desktopPx2vw(17)};
+              height: ${desktopPx2vw(17)};
               background: rgba(1, 171, 178, 0.2);
             }
             &.outer {
               z-index: 1;
-              width: ${desktopPx2vw(28)};
-              height: ${desktopPx2vw(28)};
-              filter: blur(${desktopPx2vw(7)});
+              width: ${desktopPx2vw(24)};
+              height: ${desktopPx2vw(24)};
+              filter: blur(${desktopPx2vw(10)});
             }
           }
         }
@@ -181,12 +181,14 @@ export const Style = styled.div`
           line-height: ${desktopPx2vw(26)};
           color: #ffffff;
         }
-        > img.triangle {
-          display: inline-block;
-          padding-left: ${desktopPx2vw(17)};
-          width: ${desktopPx2vw(11)};
-          height: ${desktopPx2vw(11)};
-          color: #ffffff;
+        > div.triangle {
+          position: absolute;
+          right: ${desktopPx2vw(18)};
+          width: 0;
+          height: 0;
+          border-top: ${desktopPx2vw(11)} solid #fff;
+          border-left: ${desktopPx2vw(5)} solid transparent;
+          border-right: ${desktopPx2vw(5)} solid transparent;
         }
         > img.pointer {
           position: absolute;
