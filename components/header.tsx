@@ -91,6 +91,7 @@ const Style = styled.div`
       color: #000000;
       border: none;
       margin-left: ${px2vw(35, 1920)};
+      transition: all 400ms ease-out;
       &:hover {
         box-shadow: 0 0 ${desktopPx2vw(40)} #00b6ba;
       }

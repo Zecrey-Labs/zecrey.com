@@ -15,6 +15,7 @@ const Styled = styled.div`
   border: ${desktopPx2vw(2)} solid #dadada;
   color: #dadada;
   margin-left: ${desktopPx2vw(28)};
+  transition: box-shadow 400ms ease-out;
   > img.hover {
     display: none;
   }

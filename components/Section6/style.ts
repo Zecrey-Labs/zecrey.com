@@ -130,7 +130,7 @@ export const Style = styled.div`
       }
       div.button {
         margin-top: ${desktopPx2vw(33)};
-        width: ${desktopPx2vw(277)};
+        width: ${desktopPx2vw(271)};
         height: ${desktopPx2vw(48)};
         border: ${desktopPx2vw(3)} solid #01abb2;
         border-radius: ${desktopPx2vw(48)};
@@ -142,8 +142,8 @@ export const Style = styled.div`
           position: relative;
           margin: 0 ${desktopPx2vw(15)};
           display: inline-block;
-          width: ${desktopPx2vw(28)};
-          height: ${desktopPx2vw(28)};
+          width: ${desktopPx2vw(24)};
+          height: ${desktopPx2vw(24)};
           display: flex;
           justify-content: center;
           align-items: center;
@@ -168,7 +168,7 @@ export const Style = styled.div`
               z-index: 1;
               width: ${desktopPx2vw(24)};
               height: ${desktopPx2vw(24)};
-              filter: blur(${desktopPx2vw(10)});
+              filter: blur(${desktopPx2vw(12)});
             }
           }
         }
@@ -193,7 +193,7 @@ export const Style = styled.div`
         > img.pointer {
           position: absolute;
           top: ${desktopPx2vw(38)};
-          right: ${desktopPx2vw(12)};
+          right: ${desktopPx2vw(11)};
           width: ${desktopPx2vw(24)};
         }
       }
