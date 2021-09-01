@@ -41,6 +41,7 @@ const Styled = styled.div`
     width: ${desktopPx2vw(1686)};
     height: ${desktopPx2vw(902)};
     max-height: calc(100vh - ${desktopPx2vw(220)});
+    max-width: calc(186.91vh - ${desktopPx2vw(411)});
   }
 `
 
