@@ -20,11 +20,6 @@ const Style = styled.div`
   > div.left {
     position: relative;
     > img.transfer {
-      position: absolute;
-      left: ${desktopPx2vw(230)};
-      top: ${desktopPx2vw(160)};
-      height: ${desktopPx2vw(823)};
-      box-shadow: 0 0 ${desktopPx2vw(40)} rgb(36, 36, 36);
     }
   }
   > div.right {
@@ -56,6 +51,26 @@ const Image2 = styled.div`
   bottom: ${desktopPx2vw(-290)};
   left: ${desktopPx2vw(541)};
 `
+const Image3 = styled.div`
+  position: absolute;
+  left: ${desktopPx2vw(230)};
+  top: ${desktopPx2vw(160)};
+  width: ${desktopPx2vw(499)};
+  height: ${desktopPx2vw(832)};
+  & .transfer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  & .blur-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #363636;
+    filter: blur(92.8035px);
+  }
+`
 
 export const Section3 = () => {
   return (
@@ -78,7 +93,10 @@ export const Section3 = () => {
             layout='fill'
           />
         </Image1>
-        <Img className='transfer' src='/screenshots/privacy-transfer.png' />
+        <Image3>
+          <div className='blur-bg'></div>
+          <Img className='transfer' src='/screenshots/privacy-transfer.png' />
+        </Image3>
       </div>
       <div className='right'>
         <SideContentStyle>

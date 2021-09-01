@@ -27,6 +27,13 @@ const Style = styled.div`
         left: ${desktopPx2vw(170)};
         top: 0;
         z-index: 1;
+        & .blur-bg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #363636;
+          filter: blur(93px);
+        }
       }
       &.image2 {
         width: ${desktopPx2vw(441)};
@@ -80,22 +87,6 @@ const Style = styled.div`
   }
 `
 
-const ArrowLeft = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  left: 0;
-  top: 0;
-`
-
-const ArrowRight = styled.div`
-  position: absolute;
-  width: ${desktopPx2vw(259)};
-  height: ${desktopPx2vw(164)};
-  right: 0;
-  bottom: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-`
 const Image1 = styled.div`
   position: absolute;
   width: ${desktopPx2vw(329)};
@@ -151,6 +142,7 @@ export const Section5 = () => {
       </Image3>
       <div className='left'>
         <div className='image1'>
+          <div className='blur-bg'></div>
           <Image src='/screenshots/swap1.png' alt='image1' layout='fill' />
         </div>
         <div className='image2'>

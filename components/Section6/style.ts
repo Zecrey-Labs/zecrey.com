@@ -212,6 +212,13 @@ export const ScreenshotStyle = styled.div`
   position: relative;
   width: ${desktopPx2vw(494)};
   height: ${desktopPx2vw(823)};
+  & .blur-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #363636;
+    filter: blur(111.45px);
+  }
 `
 export const Image1 = styled.div`
   position: relative;
