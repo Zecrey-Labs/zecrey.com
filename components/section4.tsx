@@ -27,7 +27,7 @@ const BasicCard = styled.div`
     height: 100%;
     background: #363636;
     border-radius: ${desktopPx2vw(10)};
-    filter: blur(${desktopPx2vw(111)});
+    filter: blur(111px);
   }
   div:last-child {
     position: absolute;

@@ -17,6 +17,7 @@ const Style = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: ${px2vw(191)};
   h2 {
     margin-top: ${px2vw(128, 1920)};
     background: #2ad4d9 0% 0% no-repeat padding-box;
@@ -161,7 +162,8 @@ const Style = styled.div`
     display: none;
   }
   div.nextSectionGuideDesktop {
-    margin-top: ${px2vw(299, 1920)};
+    position: absolute;
+    bottom: ${px2vw(47)};
     font-family: Lexend;
     font-weight: bold;
     font-size: ${px2vw(16)};
@@ -173,7 +175,16 @@ const Style = styled.div`
       position: relative;
       width: ${px2vw(20)};
       height: ${px2vw(14)};
-      margin: ${px2vw(9)} auto ${px2vw(238)} auto;
+      margin: ${px2vw(9)} auto 0 auto;
+      animation: slideshow 0.5s ease-out alternate infinite;
+    }
+    @keyframes slideshow {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(${px2vw(5)});
+      }
     }
   }
 
