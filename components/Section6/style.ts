@@ -103,7 +103,7 @@ export const Style = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: ${desktopPx2vw(159)};
     width: ${desktopPx2vw(1161)};
     > div.left {

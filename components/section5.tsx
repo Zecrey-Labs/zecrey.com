@@ -194,14 +194,6 @@ export const Section5 = () => {
           <GetStarted />
         </SideContentStyle>
       </div>
-      <div className='dollar'>
-        <div className='dollar1'>
-          <Image src='/section6/dollar1.svg' alt='dollar' layout='fill' />
-        </div>
-        <div className='dollar2'>
-          <Image src='/section6/dollar2.svg' alt='dollar' layout='fill' />
-        </div>
-      </div>
     </Style>
   )
 }
