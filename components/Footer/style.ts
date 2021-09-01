@@ -31,12 +31,12 @@ export const Style = styled.div`
       border-bottom: 1px solid rgb(228, 228, 228);
       display: flex;
       align-items: center;
-      padding-bottom: ${px2vw(40)};
+      padding-bottom: ${px2vw(50)};
       img {
         width: ${px2vw(267, 1920)};
         height: ${px2vw(109, 1920)};
-        margin-left: ${px2vw(16, 1920)};
-        margin-right: ${px2vw(130, 1920)};
+        margin-left: ${px2vw(25, 1920)};
+        margin-right: ${px2vw(96, 1920)};
         position: relative;
       }
       > div.subsection {
@@ -45,7 +45,7 @@ export const Style = styled.div`
         flex-direction: column;
         > a {
           height: ${px2vw(30)};
-          margin-bottom: ${px2vw(26, 1920)};
+          margin-bottom: ${px2vw(25, 1920)};
           text-align: left;
           font: normal normal bold ${px2vw(24, 1920)} / ${px2vw(30, 1920)}
             Roboto;
@@ -76,15 +76,22 @@ export const Style = styled.div`
       justify-content: space-between;
       background-color: rgb(34, 34, 34);
       align-items: center;
-      padding: ${px2vw(30, 1920)} 0;
+      padding: ${px2vw(30, 1920)} 0 ${px2vw(78)} 0;
       div.subsection1 {
         display: flex;
         align-items: center;
         font-size: ${px2vw(30, 1920)};
-        svg {
+        padding-left: ${px2vw(28)};
+        a {
           font-size: ${px2vw(38, 1920)};
           color: #00acb1;
-          margin: 0 ${px2vw(17, 1920)};
+          margin-right: ${px2vw(33, 1920)};
+        }
+        a.twitter {
+          transform: translateY(-${px2vw(1)});
+        }
+        a.discord {
+          transform: translateY(${px2vw(2)});
         }
       }
       > div.subsection2 {

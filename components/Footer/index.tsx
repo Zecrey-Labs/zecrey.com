@@ -80,19 +80,31 @@ export const Footer = () => {
         </div>
         <div className='section2'>
           <div className='subsection1'>
-            <a href='https://twitter.com/zecreyprotocol' target='_blank'>
+            <a
+              className='twitter'
+              href='https://twitter.com/zecreyprotocol'
+              target='_blank'>
               <FontAwesomeIcon icon={['fab', 'twitter']} />
             </a>
-            <a href='https://medium.com/@zecrey' target='_blank'>
+            <a
+              className='medium'
+              href='https://medium.com/@zecrey'
+              target='_blank'>
               <FontAwesomeIcon icon={['fab', 'medium']} />
             </a>
-            <a href='https://github.com/Zecrey-Labs' target='_blank'>
+            <a
+              className='github'
+              href='https://github.com/Zecrey-Labs'
+              target='_blank'>
               <FontAwesomeIcon icon={['fab', 'github']} />
             </a>
-            <a href='https://t.me/zecrey' target='_blank'>
+            <a className='telegram' href='https://t.me/zecrey' target='_blank'>
               <FontAwesomeIcon icon={['fab', 'telegram']} />
             </a>
-            <a href='https://discord.com/invite/U98ghQsJE5' target='_blank'>
+            <a
+              className='discord'
+              href='https://discord.com/invite/U98ghQsJE5'
+              target='_blank'>
               <FontAwesomeIcon icon={['fab', 'discord']} />
             </a>
           </div>

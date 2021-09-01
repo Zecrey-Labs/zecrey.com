@@ -110,7 +110,7 @@ export const Style = styled.div`
       width: ${desktopPx2vw(413)};
       margin-right: ${desktopPx2vw(153)};
       h2 {
-        margin-top: ${desktopPx2vw(242)};
+        margin-top: ${desktopPx2vw(99)};
         font-family: Lexend;
         font-style: normal;
         font-weight: 800;
@@ -210,15 +210,8 @@ export const ArrowStyle = styled.div`
 `
 export const ScreenshotStyle = styled.div`
   position: relative;
-  width: ${desktopPx2vw(494)};
-  height: ${desktopPx2vw(823)};
-  & .blur-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #363636;
-    filter: blur(111.45px);
-  }
+  width: ${desktopPx2vw(500)};
+  height: ${desktopPx2vw(523)};
 `
 export const Image1 = styled.div`
   position: relative;

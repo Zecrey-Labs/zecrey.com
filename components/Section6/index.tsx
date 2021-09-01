@@ -126,9 +126,8 @@ export const Section6 = () => {
         </div>
         <div className='right'>
           <ScreenshotStyle>
-            <div className='blur-bg'></div>
             <Image
-              src='/screenshots/l2-wallet.png'
+              src='/screenshots/l2-wallet-fadeout.png'
               alt='screenshot'
               layout='fill'
               objectFit='cover'
