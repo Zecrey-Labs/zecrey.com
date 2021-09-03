@@ -96,7 +96,7 @@ export const Style = styled.div`
       }
       > div.subsection2 {
         text-align: right;
-        font: normal normal normal ${px2vw(20, 1920)} / ${px2vw(27, 1920)}
+        font: normal normal normal ${px2vw(16, 1920)} / ${px2vw(27, 1920)}
           Leelawadee UI;
         color: #e4e4e4;
         > div.contact {
@@ -105,14 +105,14 @@ export const Style = styled.div`
             font-family: Lexend;
             font-style: normal;
             font-weight: 600;
-            font-size: 24px;
+            font-size: ${px2vw(16, 1920)};
             line-height: 30px;
             color: #e4e4e4;
             margin-right: ${desktopPx2vw(6)};
           }
           span {
             font-family: sans-serif;
-            font-size: 21px;
+            font-size: ${px2vw(16, 1920)};
             font-weight: 300;
             line-height: 25px;
             text-decoration-line: underline;
@@ -122,17 +122,16 @@ export const Style = styled.div`
         > span.bar {
           display: inline-block;
           width: ${desktopPx2vw(1)};
-          height: ${desktopPx2vw(20)};
+          height: ${desktopPx2vw(18)};
           margin: 0 ${desktopPx2vw(21)};
           background-color: #e4e4e4;
           vertical-align: text-bottom;
-          margin-bottom: ${desktopPx2vw(2)};
         }
         > div.copyright {
           display: inline-block;
           font-family: sans-serif;
           font-weight: 300;
-          font-size: 21px;
+          font-size: ${px2vw(16, 1920)};
           line-height: 25px;
           color: #e4e4e4;
         }
