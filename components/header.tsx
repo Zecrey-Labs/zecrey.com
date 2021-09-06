@@ -247,7 +247,11 @@ export const Header = () => {
         <Img className='dark' src={'/logo1.svg'} alt='logo' />
         <Img className='light' src={'/logo2.svg'} alt='logo' />
         <span className='bar' />
-        <a className='download' href={DOWNLOAD_URL} rel='noreferrer'>
+        <a
+          className='download'
+          href={DOWNLOAD_URL}
+          rel='noreferrer'
+          target='_blank'>
           Download
         </a>
       </div>

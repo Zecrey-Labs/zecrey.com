@@ -59,9 +59,10 @@ export const Footer = () => {
               White paper
             </a>
             <a
-              href='https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Zecrey%20Testnet%20Chrome%20Extension.zip?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1632673207&Signature=xP%2BvTHtSvIv8SbIgA6udJ0y4zug%3D'
+              href={DOWNLOAD_URL}
               className='downloadapp'
-              download='zecrey'>
+              target='_blank'
+              rel='noreferrer'>
               Privacy Wallet App
             </a>
           </div>
@@ -134,12 +135,13 @@ export const Footer = () => {
                 <a
                   href={DOWNLOAD_URL}
                   className='downloadapp'
-                  download='zecrey'>
+                  target='_blank'
+                  rel='noreferrer'>
                   App
                 </a>
-                <a href={DOCS_URL} target='_blank'>
+                {/* <a href={DOCS_URL} target='_blank'>
                   Document
-                </a>
+                </a> */}
               </div>
             </div>
             <div className='right'>

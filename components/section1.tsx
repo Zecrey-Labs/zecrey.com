@@ -361,7 +361,11 @@ export const Section1 = () => {
         | Privacy-Wallet Application now available |
       </div>
       <div className='links'>
-        <a href={DOWNLOAD_URL} className='downloadapp' download='zecrey'>
+        <a
+          href={DOWNLOAD_URL}
+          className='downloadapp'
+          target='_blank'
+          rel='noreferrer'>
           Download
         </a>
         <a

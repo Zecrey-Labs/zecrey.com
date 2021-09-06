@@ -10,5 +10,5 @@ export const META = {
 }
 
 export const DOWNLOAD_URL =
-  'https://zecrey.obs.ap-southeast-3.myhuaweicloud.com/Zecrey%20Testnet%20Chrome%20Extension.zip'
+  'https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi/related?hl=zh-CN&authuser=2'
 export const DOCS_URL = 'https://docs.zecrey.com/'
