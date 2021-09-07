@@ -4,6 +4,7 @@
 
 import styled from 'styled-components'
 import { desktopPx2vw } from '@/utils'
+import { useMemo } from 'react'
 
 const Styled = styled.div`
   display: flex;
@@ -50,16 +51,34 @@ const url =
   'https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Meet.Zecrey%202021%201080p.mp4?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1661313910&Signature=k4Mico/8UGIgXTVvxhG5YuKaJLo%3D'
 
 export const Section2 = () => {
+  const isChinese = useMemo<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const language = navigator.language
+      return language.substr(0, 2) === 'zh'
+    }
+    return true
+  }, [])
+
   return (
     <Styled>
       <h1>Feature Introduction</h1>
       <h2>know about Zecrey in 3 minutes</h2>
-      <video
-        src={url}
-        playsInline={false}
-        controls={true}
-        poster='/poster.png'
-      />
+      {isChinese ? (
+        <video
+          src={url}
+          playsInline={false}
+          controls={true}
+          poster='/poster.png'
+        />
+      ) : (
+        <iframe
+          src='https://www.youtube.com/embed/XSnlcXcO9QQ'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
+      )}
     </Styled>
   )
 }
