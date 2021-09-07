@@ -54,7 +54,11 @@ export const Section2 = () => {
   const isChinese = useMemo<boolean>(() => {
     if (typeof window !== 'undefined') {
       const language = navigator.language
-      return language.substr(0, 2) === 'zh'
+      if (language !== undefined) {
+        return language.substr(0, 2) === 'zh'
+      } else {
+        return true
+      }
     }
     return true
   }, [])
