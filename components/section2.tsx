@@ -37,7 +37,8 @@ const Styled = styled.div`
     opacity: 0.5;
     margin-bottom: ${desktopPx2vw(72)};
   }
-  iframe {
+  iframe,
+  video {
     width: ${desktopPx2vw(1686)};
     height: ${desktopPx2vw(902)};
     max-height: calc(100vh - ${desktopPx2vw(220)});
@@ -45,17 +46,19 @@ const Styled = styled.div`
   }
 `
 
+const url =
+  'https://zecrey.obs.ap-southeast-3.myhuaweicloud.com:443/Meet.Zecrey%202021%201080p.mp4?AccessKeyId=BEEB9AHVC2WCDCOIOETF&Expires=1661313910&Signature=k4Mico/8UGIgXTVvxhG5YuKaJLo%3D'
+
 export const Section2 = () => {
   return (
     <Styled>
       <h1>Feature Introduction</h1>
       <h2>know about Zecrey in 3 minutes</h2>
-      <iframe
-        src='https://www.youtube.com/embed/XSnlcXcO9QQ'
-        title='YouTube video player'
-        frameBorder='0'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
+      <video
+        src={url}
+        playsInline={false}
+        controls={true}
+        poster='/poster.png'
       />
     </Styled>
   )
