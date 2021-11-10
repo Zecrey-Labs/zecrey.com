@@ -10,5 +10,5 @@ export const META = {
 }
 
 export const DOWNLOAD_URL =
-  'https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi/related?hl=zh-CN&authuser=2'
+  'https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
 export const DOCS_URL = 'https://docs.zecrey.com/'
