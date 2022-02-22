@@ -1,205 +1,65 @@
-/* reset.css */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-menu,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section {
-  display: block;
-}
-/* HTML5 hidden-attribute fix for newer browsers */
-*[hidden] {
-  display: none;
-}
-body {
-  line-height: 1;
-}
-menu,
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-size: 0.16rem;
-  overflow-x: hidden;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lexend:wght@400;500;600;700&display=swap');
 
 html {
-  scroll-behavior: smooth;
-  font-family: 'Source Sans Pro', Helvetica;
+  font-size: calc(125vw / 256);
 }
+@media (max-width: 1920px) {
+  html {
+    font-size: calc(110vw / 192);
+  }
+}
+/* @media (max-width: 1680px) {
+  html {
+    font-size: calc(100vw / 168);
+  }
+} */
+@media (max-width: 1440px) {
+  html {
+    font-size: calc(100vw / 144);
+  }
+}
+@media (max-width: 960px) {
+  html {
+    font-size: calc(100vw / 96);
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 a {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
+
+div,
+span,
+p {
+  cursor: default;
+}
+
 button {
-  width: 1.6rem;
-  height: 0.5rem;
-  background: white;
-  border: 0.02rem solid white;
-  opacity: 1;
-  border-radius: 0.04rem;
-  font-size: 0.2rem;
-  outline: none;
   cursor: pointer;
 }
 button:disabled {
-  background-color: rgb(238, 238, 238) !important;
-  border-color: rgb(204, 204, 204) !important;
-  color: rgb(204, 204, 204) !important;
-  cursor: not-allowed !important;
-}
-button.primary {
-  background-color: #1238de;
-  border-color: #1238de;
-  color: white;
-}
-button.ghost {
-  border: 0.02rem solid white;
-  background: rgba(0, 0, 0, 0);
-  color: white;
+  cursor: not-allowed;
 }
 
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: gray;
-}
-
-body::-webkit-scrollbar {
-  width: 2px;
-  background-color: gray;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #1c1d1f;
-}
-
-body > a:first-of-type {
-  display: none;
-}
-
-@font-face {
-  font-family: 'Leelawadee UI';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Leelawadee UI'), url('../public/fonts/LeelawUI.ttf') format('truetype');
+button,
+a,
+input,
+textarea {
+  outline: none;
 }
