@@ -1,5 +1,5 @@
 import React from 'react'
-import Pulldown from '/components/infopulldown/Pulldown'
+import Pulldown from '@/components/infopulldown/Pulldown'
 
 function infopulldown() {
   return (
