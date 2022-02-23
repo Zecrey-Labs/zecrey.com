@@ -8,6 +8,9 @@ const Wrap = styled.div<{ dark: boolean }>`
   min-height: 100vh;
   background: ${props => (props.dark ? '#2b2b2b' : '#F2F2F2')};
   z-index: 10;
+  .content {
+    padding: 4rem 0;
+  }
 `
 
 const Layout = (props: { children: ReactNode | undefined }) => {
