@@ -8,6 +8,7 @@ html {
     font-size: calc(110vw / 192);
   }
 }
+
 /* @media (max-width: 1680px) {
   html {
     font-size: calc(100vw / 168);
