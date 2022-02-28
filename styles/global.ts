@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from 'styled-theming'
+// import theme from 'styled-theming'
 
 export const highlight = theme('mode', {
   light: '#01abb2',
