@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-// import Lottie, { LottiePlayer } from 'lottie-web'
+import Lottie, { LottiePlayer } from 'lottie-web'
 import classNames from 'classnames'
 import ImgBox from '../common/ImgBox'
 import { CenterFlex } from '../../styles/global'

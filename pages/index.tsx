@@ -2,14 +2,23 @@
  * Copyright (C) 2020-present, Zecrey-Labs
  */
 
+import Bottom from '@/components/bottom/Bottom'
+import BubbleCard from '@/components/BubbleCard/BubbleCard'
 import CardWrap from '@/components/card-wrap'
 import { FunctionalIcons } from '@/components/card-wrap/CardContents'
 import Icon from '@/components/common/Icon'
+import Communtity from '@/components/Communtity/Communtity'
+import Landing from '@/components/landing'
 import Layout from '@/components/layout'
+import WalletDownload from '@/components/Walletdownload/WalletDownload'
+import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
+import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
 
 export default function Home() {
   return (
     <Layout>
+      <Landing />
+      <BubbleCard />
       <CardWrap
         title='Multifunctional Support'
         backgroundIcon={{
@@ -47,6 +56,11 @@ export default function Home() {
         ]}>
         <FunctionalIcons />
       </CardWrap>
+      <WalletDownload />
+      <ZecreyWebApp />
+      <ZecreyMobile />
+      <Communtity />
+      <Bottom />
     </Layout>
   )
 }
