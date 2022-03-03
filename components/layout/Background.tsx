@@ -34,8 +34,8 @@ const Background = () => {
     lottie.loadAnimation({
       container: dom.current,
       renderer: 'svg',
-      loop: false, // todo: stop for now
-      autoplay: false, // todo: stop for now
+      loop: true, // todo: stop for now
+      autoplay: true, // todo: stop for now
       animationData: Dark,
       rendererSettings: {
         preserveAspectRatio: 'xMaxYMid slice'
