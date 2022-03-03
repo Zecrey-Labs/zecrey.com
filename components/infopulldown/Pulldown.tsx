@@ -134,9 +134,8 @@ function Pulldown() {
          </div>
        </Wrap>
     </>
+
   )
 }
 
 export default Pulldown
-
-
