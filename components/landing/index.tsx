@@ -12,6 +12,7 @@ const Wrap = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(43, 43, 43, 1);
+  margin-bottom: 7.8rem;
   animation: backgroundFadeOut 1.7s cubic-bezier(0.44, 0.01, 0.23, 0.97) 2.5s
     forwards;
   @keyframes backgroundFadeOut {
@@ -201,7 +202,6 @@ const Landing = () => {
   useEffect(() => {
     setTimeout(() => {
       let body = document.querySelector('body')
-      console.log(body)
       body.classList.add('enable-scroll')
     }, 5 * 1000)
   }, [])

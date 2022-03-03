@@ -10,15 +10,16 @@ import Icon from '@/components/common/Icon'
 import Communtity from '@/components/Communtity/Communtity'
 import Landing from '@/components/landing'
 import Layout from '@/components/layout'
+import Partners from '@/components/Partners/Partners'
 import WalletDownload from '@/components/Walletdownload/WalletDownload'
 import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
 import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
+import Multifunctional from './multifunctional'
 
 export default function Home() {
   return (
     <Layout>
       <Landing />
-      <BubbleCard />
       <CardWrap
         title='Multifunctional Support'
         backgroundIcon={{
@@ -30,7 +31,7 @@ export default function Home() {
           'Zecrey supports an all-in-one private wallet which helps the users to manage their assets in multiple blockchains.',
           'As an layer 2 privacy cross-chain protocol based on zk-rollup, Zecrey brings cross-chain privacy to the public chain ecology, with the core characteristics of universal cross-chain bridge, high security cross-chain swap and efficient privacy.'
         ]}>
-        <FunctionalIcons />
+        <BubbleCard />
       </CardWrap>
       <CardWrap
         title='Multif-chain Support'
@@ -59,6 +60,7 @@ export default function Home() {
       <WalletDownload />
       <ZecreyWebApp />
       <ZecreyMobile />
+      <Partners />
       <Communtity />
       <Bottom />
     </Layout>

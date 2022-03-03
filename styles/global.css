@@ -270,6 +270,9 @@ textarea {
   outline: none;
 }
 
+html {
+  scroll-behavior: auto;
+}
 body {
   overflow: hidden;
 }

@@ -5,7 +5,7 @@
 import '@/styles/global.css'
 import Head from 'next/head'
 import { META } from '@/constant'
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.css'
 
 const App = ({ Component, pageProps }) => {
   return (
