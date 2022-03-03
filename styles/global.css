@@ -148,8 +148,8 @@ a:hover {
   text-decoration: underline;
 }
 button {
-  width: 1.6rem;
-  height: 0.5rem;
+  /* width: 1.6rem;
+  height: 0.5rem; */
   background: white;
   border: 0.02rem solid white;
   opacity: 1;
@@ -158,12 +158,12 @@ button {
   outline: none;
   cursor: pointer;
 }
-button:disabled {
+/* button:disabled {
   background-color: rgb(238, 238, 238) !important;
   border-color: rgb(204, 204, 204) !important;
   color: rgb(204, 204, 204) !important;
   cursor: not-allowed !important;
-}
+} */
 button.primary {
   background-color: #1238de;
   border-color: #1238de;
