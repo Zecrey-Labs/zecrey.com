@@ -6,12 +6,13 @@ import Icon from '../common/Icon'
 const Wrap = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vh - 11.8rem);
-  min-height: 74rem;
+  height: calc(100vh - 7.8rem);
+  min-height: 60rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(43, 43, 43, 1);
+  margin-top: -4rem;
   margin-bottom: 7.8rem;
   animation: backgroundFadeOut 1.7s cubic-bezier(0.44, 0.01, 0.23, 0.97) 2.5s
     forwards;
@@ -246,7 +247,7 @@ const Typing = (props: { str: string }) => {
       if (count >= props.str.length) {
         clearInterval(timer)
       }
-    }, 170)
+    }, 160)
     return () => {
       if (timer) clearInterval(timer)
     }
