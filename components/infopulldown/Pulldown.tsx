@@ -6,9 +6,7 @@ const Wrap = styled.div`
   .info{
     width: 7.8rem;
     height: 3rem;
-    background: #2AD4D8;
     mix-blend-mode: normal;
-    opacity: 0.1;
     border-radius: 1rem;
     font-family: Lexend;
     font-style: normal;
@@ -17,6 +15,14 @@ const Wrap = styled.div`
     line-height: 3rem;
     color: #FFFFFF;
     text-align: center;
+    position: absolute;
+    top: 2.3rem;
+    left: 71.9rem;
+  }
+  .info img{
+    width: 1.1rem;
+    height: 0.7rem;
+    margin-left: 0.6rem;
   }
   .info:hover{
     background: #555665;
@@ -30,21 +36,21 @@ const Wrap = styled.div`
     opacity: 0.95;
     border: 0.1rem solid rgba(255, 255, 255, 0.05);
     border-radius: 1rem; 
+    margin-top: 20rem;
+    z-index: 1000;
+    position: absolute;
+    top: -14rem;
+    left: 71.9rem;
   }
-  /* .overview{
-    margin-top: 0.6rem;
-  } */
   .menu ul{
     margin-top: 0.6rem;
   }
   .menu ul li{
     width: 12.8rem;
     height: 3rem;
-    /* background: #2AD4D8; */
     border-radius: 0.5rem;
     color: #FFFFFF;
     line-height: 3rem;
-    /* margin: auto; */
     margin-left: 0.4rem;
     text-indent:1.5rem;
     font-family: IBM Plex Sans;

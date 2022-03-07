@@ -3,18 +3,25 @@ import styled from 'styled-components';
 
 const Wrap = styled.div`
   .bottom{
-    width: 144rem;
+    /* width: 144rem; */
     height: 30.5rem;
     background: rgba(42, 42, 42, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(2.71828rem);
+    position: relative;
+    margin: 0 auto;
+  }
+  .bottom-center{
+    width: 116rem;
+    height: 30.5rem;
+    margin: 0 auto;
     position: relative;
   }
   .skink{
     width: 20.9rem;
     height: 7.9rem;
     position: absolute;
-    left: 14rem;
+    left: 0rem;
     top: 7.6rem;
   }
   .skink img{
@@ -32,7 +39,7 @@ const Wrap = styled.div`
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
-    line-height: 2.7rem;
+    line-height: 1.7rem;
     color: #E4E4E4;
   }
   .apps{
@@ -40,7 +47,7 @@ const Wrap = styled.div`
     height: 10.6rem;
     position: absolute;
     top: 6rem;
-    left: 57.5rem;
+    left: 43.5rem;
   }
   /* .apps ul{
     display:flex;  
@@ -54,27 +61,27 @@ const Wrap = styled.div`
     height: 7.8rem;
     position: absolute;
     top: 6rem;
-    left: 77.8rem;
+    left: 63.8rem;
   }
   .development{
     min-width: 11.1rem;
     height: 7.8rem;
     position: absolute;
     top: 6rem;
-    left: 101.8rem;
+    left: 87.8rem;
   }
   .papers{
     min-width: 7.9rem;
     height: 7.8rem;
     position: absolute;
     top: 6rem;
-    left: 122.1rem;
+    left: 108.1rem;
   }
   .underline{
     width: 116rem;
     height: 0.1rem;
     position: absolute;
-    left: 14rem;
+    left: 0rem;
     top: 20.7rem;
     mix-blend-mode: normal;
     opacity: 0.2;
@@ -86,7 +93,7 @@ const Wrap = styled.div`
     height: 18rem;
     position: absolute;
     top: 21.8rem;
-    left: 14rem;
+    left: 0rem;
   }
   .zecrey-protocol p{
     font-family: IBM Plex Sans;
@@ -99,7 +106,7 @@ const Wrap = styled.div`
   .privacypolicy{
     position: absolute;
     top: 21.8rem;
-    left: 71.4rem;
+    left: 56.4rem;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: 600;
@@ -111,7 +118,7 @@ const Wrap = styled.div`
     width: 0.1rem;
     height: 1.7rem;
     position: absolute;
-    left: 81.7rem;
+    left: 66.7rem;
     top: 21.9rem;
     border: 0.1 solid #FFFFFF;
     background: #FFFFFF;
@@ -119,7 +126,7 @@ const Wrap = styled.div`
   .contact{
     position: absolute;
     top: 21.8rem;
-    left: 83rem;
+    left: 68rem;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: 600;
@@ -140,7 +147,7 @@ const Wrap = styled.div`
     width: 0.1rem;
     height: 1.7rem;
     position: absolute;
-    left: 100.5rem;
+    left: 85.9rem;
     top: 21.9rem;
     border: 0.1 solid #FFFFFF;
     background: #FFFFFF;
@@ -148,7 +155,7 @@ const Wrap = styled.div`
   .copyright{
     position: absolute;
     top: 21.8rem;
-    left: 101.7rem;
+    left: 87.1rem;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: normal;
@@ -164,6 +171,7 @@ function bottom() {
     <>
       <Wrap>
         <div className='bottom'>
+        <div className='bottom-center'>
           <div className='skink'>
             <img src="/Bottom/skink.png" alt="" />
           </div>
@@ -212,13 +220,13 @@ function bottom() {
           <div className='papers'>
             <ul>
               <li>
-                <p  className='head-li'>Development</p>
+                <p  className='head-li'>Papers</p>
               </li> 
               <li>
-                <p>GitHub</p>
+                <p>White Paper</p>
               </li>
               <li>
-                <p>Medium</p>
+                <p>Docs</p>
               </li>
             </ul>
           </div>
@@ -233,6 +241,7 @@ function bottom() {
             <div className='vertical2'></div>
             <span className='copyright'>Copyright @ 2022 Zecrey.All rights reserved.</span>
           </div>
+        </div>
         </div>
       </Wrap>
     </>

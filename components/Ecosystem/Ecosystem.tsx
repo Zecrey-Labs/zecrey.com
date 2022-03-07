@@ -17,22 +17,21 @@ const Wrap = styled.div`
     width: 13.6rem;
     height: 15.5rem;
     position: absolute;
-    left: 58.2%;
-    right: 31.17%;
-    top: 40.98%;
-    bottom: 21.22%;
+    left: 74.5rem;
+    top: 16.8rem;
   }
   .wire{
     width: 96.6rem;
     height: 25.6rem;
     position: absolute;
-    left: 19.6rem;
-    right: -0.94%;
+    left: 32.6rem;
     top: 34.5rem;
-    bottom: -46.59%;
     mix-blend-mode: normal;
     opacity: 0.5;
     overflow: hidden;
+  }
+  .wire img{
+    width: 100%;
   }
   .dot{
     width: 0.6rem;
@@ -44,56 +43,42 @@ const Wrap = styled.div`
 
   .one-dot{
     position: absolute;
-    left: 37.58%;
-    right: 61.95%;
-    top: 89.22%;
-    bottom: 7.32%;
+    left: 48.1rem;
+    top: 37.4rem;
   }
   .two-dot{
     position: absolute;
-    left: 44.84%;
-    right: 54.69%;
-    top: 86.07%;
-    bottom: 11.46%;
+    left: 57.4rem;
+    top: 35.7rem;
   }
   .three-dot{
     position: absolute;
-    left: 52.27%;
-    right: 47.27%;
-    top: 83.88%;
-    bottom: 13.66%;
+    left: 66.9rem;
+    top: 34.8rem;
   }
   .four-dot{
     width: 1.2rem;
     height: 1.2rem;
     position: absolute;
-    left: 62.73%;
-    right: 36.33%;
-    top: 82.50%;
-    bottom: 14.39%;
+    left: 80.3rem;
+    top: 33.9rem;
     background: #2AD4D8;
     border: 0.3rem solid rgba(42, 212, 216, 0.4605);
   }
   .five-dot{
     position: absolute;
-    left: 73.67%;
-    right: 25.86%;
-    top: 84.60%;
-    bottom: 13.66%;
+    left: 94.3rem;
+    top: 34.8rem;
   }
   .six-dot{
     position: absolute;
-    left: 81.09%;
-    right: 18.44%;
-    top: 86.50%;
-    bottom: 11.22%;
+    left: 103.8rem;
+    top: 35.8rem;
   }
   .seven-dot{
     position: absolute;
-    left: 88.36%;
-    right: 11.17%;
-    top: 89.71%;
-    bottom: 6.83%;
+    left: 113.1rem;
+    top: 37.6rem;
   }
   .ellipsis{
     width: 0.4rem;
@@ -101,45 +86,33 @@ const Wrap = styled.div`
   }
   .ellipsis-1{
     position: absolute;
-    left: 52.55%;
-    right: 47.34%;
-    top: 67.8%;
-    bottom: 17.32%;
+    left: 67rem;
+    top: 27.8rem;
   }
   .ellipsis-2{
     position: absolute;
-    left: 74%;
-    right: 25.94%;
-    top: 67.8%;
-    bottom: 17.32%;
+    left: 94.4rem;
+    top: 27.8rem;
   }
   .ellipsis-3{
     position: absolute;
-    left: 45.15%;
-    right: 54.77%;
-    top: 70.49%;
-    bottom: 14.63%;
+    left: 57.5rem;
+    top: 28.9rem;
   }
   .ellipsis-4{
     position: absolute;
-    left: 81.40%;
-    right: 18.52%;
-    top: 70.49%;
-    bottom: 14.63%;
+    left: 103.9rem;
+    top: 28.9rem;
   }
   .ellipsis-5{
     position: absolute;
-    left: 37.90%;
-    right: 62.03%;
-    top: 73.50%;
-    bottom: 10.49%;
+    left: 48.2rem;
+    top: 30.6rem;
   }
   .ellipsis-6{
     position: absolute;
-    left: 88.68%;
-    right: 11.25%;
-    top: 74.63%;
-    bottom: 10.49%;
+    left: 113.2rem;
+    top: 30.6rem;
   }
   .headline{
     font-family: Zing Rust Demo;
@@ -158,9 +131,8 @@ const Wrap = styled.div`
     width: 12.9rem;
     height: 2rem;
     position: absolute;
-    left: 32.59%;
-    right: 57.97%;
-    top: calc(50% - 3rem/2 + 8.8rem);
+    left: 43rem;
+    top: 28.3rem;
     font-size: 1.4rem;
     line-height: 2rem;
     letter-spacing: 0.0168824rem;
@@ -169,9 +141,8 @@ const Wrap = styled.div`
     width: 10.1rem;
     height: 1.7rem;
     position: absolute;
-    left: 41.30%;
-    right: 51.72%;
-    top: calc(50% - 2rem/2 + 6.55rem);
+    left: 53.7rem;
+    top: 26.2rem;
     font-size: 1.2rem;
     line-height: 1.7rem;
     letter-spacing: 0.0144706rem;
@@ -182,9 +153,8 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.7rem;
     position: absolute;
-    left: 49.61%;
-    right: 44.69%;
-    top: calc(50% - 1.7rem/2 + 5.75rem);
+    left: 63.5rem;
+    top: 25.4rem;
     font-size: 1.2rem;
     line-height: 1.7rem;
     letter-spacing: 0.0144706rem;
@@ -195,9 +165,8 @@ const Wrap = styled.div`
     width: 9.7rem;
     height: 1.7rem;
     position: absolute;
-    left: 70.86%;
-    right: 23.12%;
-    top: calc(50% - 1.7rem/2 + 5.65rem);
+    left: 90.7rem;
+    top: 25.3rem;
     font-size: 1.2rem;
     line-height: 1.7rem;
     letter-spacing: 0.0144706rem;
@@ -208,9 +177,8 @@ const Wrap = styled.div`
     width: 7.5rem;
     height: 1.7rem;
     position: absolute;
-    left: 79.14%;
-    right: 16.56%;
-    top: calc(50% - 1.7rem/2 + 6.75rem);
+    left: 101.3rem;
+    top: 26.4rem;
     font-size: 1.2rem;
     line-height: 1%.7rem;
     letter-spacing: 0.0144706rem;
@@ -221,10 +189,8 @@ const Wrap = styled.div`
     width: 10.9rem;
     height: 2rem;
     position: absolute;
-    height: 2rem;
-    left: 85.08%;
-    right: 7.97%;
-    top: calc(50% - 2rem/2 + 8.8rem);
+    left: 108.9rem;
+    top: 28.3rem;
     font-size: 1.4rem;
     line-height: 2rem;
     letter-spacing: 0.0168824rem;
@@ -243,7 +209,7 @@ const Wrap = styled.div`
     height: 1.5rem;
     position: absolute;
     left: 47.6rem;
-    top: 25.8rem;
+    top: 26.2rem;
   }
   .icon-2{
     width: 1.7rem;
@@ -286,7 +252,7 @@ const Wrap = styled.div`
     height: 2rem;
     position: absolute;
     left: 112.4rem;
-    top: 26rem;
+    top: 25.6rem;
   }
   .module1:hover .dot{
     background: #2AD4D8;
@@ -312,7 +278,6 @@ function Ecosystem() {
   return (
     <>
       <Wrap>
-         <div className='multilayer'>
            <div className='lizard'>
               <Image 
                 src='/Ecosystem/lizard.png'
@@ -433,7 +398,6 @@ function Ecosystem() {
            </div>
 
            <div className='four-dot dot'></div>
-         </div>
       </Wrap>
     </>
   )

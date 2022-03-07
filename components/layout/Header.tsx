@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { CenterFlex, FlatBtn, highlight } from '../../styles/global'
 import ImgBox from '../common/ImgBox'
 import { useCallback } from 'react'
+import Pulldown from '@/components/infopulldown/Pulldown'
 
 const Container = styled.div`
   width: 100%;
@@ -28,7 +29,6 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
   justify-content: flex-start;
   padding: 0 6.3rem;
   height: 7.8rem;
-
   .link {
     margin-right: 7.3rem;
     height: 100%;
@@ -134,6 +134,7 @@ const Header = () => {
               </FlatBtn>
             </div>
           ))}
+          <Pulldown/>
         </Nav>
         <Download>
           <CenterFlex>

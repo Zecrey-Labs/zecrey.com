@@ -15,11 +15,15 @@ import WalletDownload from '@/components/Walletdownload/WalletDownload'
 import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
 import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
 import Multifunctional from './multifunctional'
+import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
+import Ecosystem from '@/components/Ecosystem/Ecosystem'
+import Privacy from '@/components/Privacy/Privacy'
 
 export default function Home() {
   return (
     <Layout>
       <Landing />
+      <Privacy/>
       <CardWrap
         title='Multifunctional Support'
         backgroundIcon={{
@@ -43,7 +47,8 @@ export default function Home() {
         text={[
           `Zecrey was an early adopter of multi-chain networks. In Zecrey's multi-chain ecosystem, you can experience features such as multi-chain wallets, aggregated assets, and cross-chain bridges, which will greatly improve your application efficiency in the decentralized world. At present, the zecrey multi-chain ecosystem supports five blockchains. In the future, more blockchains will join the zecrey multi-chain ecosystem.`
         ]}>
-        <FunctionalIcons />
+        {/* <FunctionalIcons /> */}
+        <Multichainbrand/>
       </CardWrap>
       <CardWrap
         title='Multi-layer Ecosystem'
@@ -55,12 +60,25 @@ export default function Home() {
         text={[
           `The Zecrey protocol supports Layer1 and Layer2 networks, which determines that Zecrey will have a complete and rich network ecosystem in the future. In addition, Zecrey's Layer2 network will build a rich payment scene, which will include all aspects of future life.`
         ]}>
-        <FunctionalIcons />
+        {/* <FunctionalIcons /> */}
+        <Ecosystem/>
       </CardWrap>
       <WalletDownload />
       <ZecreyWebApp />
       <ZecreyMobile />
-      <Partners />
+      <CardWrap
+        title='Partners'
+        backgroundIcon={{
+          svg: <Icon name='boxes' />, // todo: repace with svg element
+          size: { width: '39.5rem', height: '35.2rem' },
+          positon: { left: '-4.3rem', bottom: '-10rem' }
+        }}
+        text={[
+          `During the development of the project, each partner has given Zecrey generous help, which is a huge step for the advancement of the project. In the future, Zecrey will maintain a good relationship with them.`
+        ]}>
+        <Partners />
+      </CardWrap>
+      {/* <Partners /> */}
       <Communtity />
       <Bottom />
     </Layout>

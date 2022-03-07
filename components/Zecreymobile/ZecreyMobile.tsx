@@ -12,19 +12,19 @@ const Wrap = styled.div`
     backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
     overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 4rem;
   }
   .mobile{
-    width: 8.3rem;
-    height: 1.7rem;
+    min-width: 11rem;
+    height: 2rem;
     position: absolute;
-    left: 4.69%;
-    right: 88.83%;
-    top: 10.41%;
-    bottom: 86.25%;
+    left: 6rem;
+    top: 5.3rem;
     border: 0.1rem solid #2AD4D8;
     border-radius: 0.5rem;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 2rem;
     font-family: Adobe Gothic Std;
     font-style: normal;
     font-weight: bold;
@@ -32,26 +32,27 @@ const Wrap = styled.div`
     color: #2AD4D8;
   }
   .zecreymobile{
+    height: 1.4rem;
     position: absolute;
-    height: 14px;
-    left: 4.69%;
-    right: 88.91%;
-    /* top: calc(50% - 14px/2 + 38.5px); */
+    left: 6rem;
     top: 28.6rem;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.144706px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.0144706rem;
     color: #F1F1F1;
   }
   .mobilephone{
     width: 1.8rem;
     height: 1.8rem;
     position: absolute;
-    left: 11.8rem;
-    top: 28rem;
+    left: 14.8rem;
+    top: 28.3rem;
+  }
+  .mobilephone-img{
+    width: 100%;
   }
   .anywhere{
     width: 26rem;

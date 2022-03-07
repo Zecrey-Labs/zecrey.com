@@ -12,6 +12,8 @@ const Wrap = styled.div`
     backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
     position: relative;
+    margin: 0 auto;
+    margin-bottom: 4rem;
   }
   .headline{
     width: 21.8rem;
@@ -77,8 +79,8 @@ const Wrap = styled.div`
     transform:translate3d(0rem 0 0 10rem);
   }
   .software-background:hover{
-    background: #FFFFFF;
-    opacity: 0.1;
+    background: rgba(83, 82, 82, 0.753);
+    /* opacity: 0.1; */
   }
   .software-li{
     width: 6.7rem;
@@ -206,13 +208,13 @@ function Communtity(props) {
             {data.map((item) => (
               // onMouseEnter
               <div className='software-background' onMouseEnter={()=>btn(item.type,item.yangshi)} key={item.id}>
-              <ul className='software-ul'>
-                <li className='software-li'>
-                  <img src={item.image} alt="" />
-                </li>
-                <p className='software-p'>{item.title}</p>
-              </ul>
-            </div>
+                <ul className='software-ul'>
+                  <li className='software-li'>
+                    <img src={item.image} alt="" />
+                  </li>
+                  <p className='software-p'>{item.title}</p>
+                </ul>
+              </div>
             ))}
           </div>
           <Card mktype={mktype} ys={ys}/>

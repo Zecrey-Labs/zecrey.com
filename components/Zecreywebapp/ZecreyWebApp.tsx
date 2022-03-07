@@ -12,25 +12,24 @@ const Wrap = styled.div`
     backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
     overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 4rem;
   }
   .webapp{
-    width: 9.5rem;
-    height: 1.7rem;
+    min-width: 12rem;
+    height: 2rem;
     position: absolute;
-    left: 4.69%;
-    right: 87.89%;
-    top: 10.41%;
-    bottom: 86.25%;
+    left: 6rem;
+    top: 5.3rem;
     border: 0.1rem solid #2AD4D8;
     border-radius: 0.5rem;
     font-family: Adobe Gothic Std;
     font-style: normal;
     font-weight: bold;
     font-size: 1.1rem;
-    line-height: 2.2rem;
+    line-height: 2rem;
     color: #2AD4D8;
     text-align: center;
-    line-height: 1.4rem;
   }
   .backgroundbox{
     width: 68.489rem;
@@ -58,25 +57,26 @@ const Wrap = styled.div`
   }
   .application{
     position: absolute;
-    height: 14px;
+    height: 1.4rem;
     left: 91.3rem;
-    right: 17.81%;
-    /* top: calc(50% - 14px/2 + 38.5px); */
     top: 28.6rem;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.144706px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.0144706rem;
     color: #F1F1F1;
   }
   .butteryhatch{
     width: 1.8rem;
     height: 1.8rem;
     position: absolute;
-    left: 100.8rem;
-    top: 28rem;
+    left: 105.8rem;
+    top: 28.3rem;
+  }
+  .butteryhatch-img{
+    width: 100%;
   }
   .crypto{
     width: 25.9rem;
