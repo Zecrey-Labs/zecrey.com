@@ -12,19 +12,21 @@ const Wrap = styled.div`
     backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
     overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 4rem;
   }
   .extensionwallet{
-    width: 9.7rem;
-    height: 1.7rem;
+    min-width: 12.7rem;
+    height: 2rem;
     border: 0.1rem solid #2AD4D8;
     border-radius: 0.5rem;
     position: absolute;
     left: 6rem;
-    right: 0%;
     top: 4rem;
-    bottom: 0%;
+  }
+  .extensionwallet p{
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 2rem;
     font-family: Adobe Gothic Std;
     font-style: normal;
     font-weight: bold;
@@ -34,9 +36,8 @@ const Wrap = styled.div`
   .privacy{
     position: absolute;
     height: 1.4rem;
-    left: 4.69%;
-    right: 83.91%;
-    top: calc(50% - 1.4rem/2 + 3.85rem);
+    left: 6rem;
+    top: 28.6rem;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
@@ -52,7 +53,10 @@ const Wrap = styled.div`
     width: 1.8rem;
     height: 1.8rem;
     left: 21.4rem;
-    top: 28.3rem;
+    top: 27.9rem;
+  }
+  .smallcircle img{
+    width: 100%;
   }
   .oneclick{
     width: 28.4rem;
@@ -163,9 +167,10 @@ const Wrap = styled.div`
     height: 1.041rem;
     position: absolute;
     left: 26.77rem;
-    right: -2.06%;
-    top: 1.2rem;
-    bottom: 25.79%;
+    top: 0.5rem;
+  }
+  .plussign img{
+    width: 100%;
   }
   .theheadsearch{
     width: 80rem;
@@ -221,8 +226,11 @@ const Wrap = styled.div`
     height: 1.336rem;
     position: absolute;
     right: 0.795rem;
-    top: 0.2rem;
+    top: 0rem;
     box-sizing: border-box;
+  }
+  .star img{
+    width: 100%;
   }
   .skink{
     width: 1.6rem;
@@ -276,7 +284,7 @@ function WalletDownload() {
        <Wrap>
          <div className='outermostlayer'>
            <div className='extensionwallet'>
-             Extension Wallet
+             <p>Extension Wallet</p>
            </div>
            <span className='privacy'>
              Privacy Wallet Extension
@@ -321,7 +329,7 @@ function WalletDownload() {
                  </div>
                  <div className='advance'>
                    <Image 
-                     src='/walletdownload/advance.png'
+                     src='/walletdownload/rollback.png'
                      className='advance-img'
                      alt='zecrey'
                      layout='fill'

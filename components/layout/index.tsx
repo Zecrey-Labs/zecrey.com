@@ -7,9 +7,10 @@ const Wrap = styled.div<{ dark: boolean }>`
   min-width: 144rem;
   min-height: 100vh;
   background: ${props => (props.dark ? '#2b2b2b' : '#F2F2F2')};
+  position: relative;
   z-index: 10;
   .content {
-    padding: 4rem 0;
+    /* padding: 4rem 0; */
   }
 `
 

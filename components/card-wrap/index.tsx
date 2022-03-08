@@ -30,6 +30,18 @@ const Title = styled.div`
   background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: move 1.2s linear;
+  @keyframes move{
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 `
 const BackgoundIcon = styled.div<{
   size: { width: string; height: string }
@@ -42,14 +54,37 @@ const BackgoundIcon = styled.div<{
   bottom: ${props => props.position.bottom};
   z-index: -10;
   color: rgba(255, 255, 255, 0.05);
+  animation: move 1.2s linear 0.3s;
+  @keyframes move{
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 `
 const Text = styled.div`
-  width: 80rem;
+  width: 81.9rem;
   p {
     font-family: IBM Plex Sans;
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #ffffff;
+    animation: move 1.2s linear;
+  }
+
+  @keyframes move{
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 `
 const Content = styled.div``

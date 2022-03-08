@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Hei from "./hei"
 
 const Wrap = styled.div`
-  .max{
+  /* .max{
     width: 128rem;
     height: 41rem;
     background: rgba(56, 56, 56, 0.5);
@@ -11,7 +11,7 @@ const Wrap = styled.div`
     box-sizing: border-box;
     backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
-  }
+  } */
   .background{
     width: 81.9rem;
     min-height: 12.5rem;
@@ -21,19 +21,30 @@ const Wrap = styled.div`
     position: absolute;  
     top: 19.6rem;
     left: 38.5rem;
+    animation: move 1.2s linear 0.2s;
   }
+  @keyframes move{
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .hover-background{
     width: 10rem;
     height: 12.5rem;
     mix-blend-mode: normal;
-    /* opacity: 0.1; */
     border-radius: 1rem;
     overflow: hidden;
   }
   .hover-background:hover{
-     background: #FFFFFF;
-     opacity: 0.1;
-     color: #FFFFFF;
+    background: rgba(83, 82, 82, 0.753);
+    /* opacity: 0.1; */
+    color: #FFFFFF;
   }
   .picture{
     width: 7rem;
@@ -60,10 +71,35 @@ const Wrap = styled.div`
     letter-spacing: 0.0144706rem;
     color: #FFFFFF;
   }
+  .privacy{
+    min-width: 26rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 35rem;
+    left: 100.7rem;
+  }
+  .privacy-img img{
+    width: 1.4rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+  }
+  .privacy-word{
+    min-width: 19.4rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 0rem;
+    left: 1.9rem;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #2AD4D8;
+  }
 `
 
 function BubbleCard(props) {
-  // const [conceal, setconceal] = useState(true);
   const [mktype, setMktype] = useState<any>(); // Module display
   const [ys, setYs] = useState<any>(); // Module display
   let data = [{
@@ -123,7 +159,7 @@ function BubbleCard(props) {
   return (
     <>
       <Wrap>
-        <div className='max'>
+        {/* <div className='max'> */}
           <Hei mktype={mktype} ys={ys}/>
             <div className='background'>
               {data.map((item) => (
@@ -138,6 +174,12 @@ function BubbleCard(props) {
                 </div>
               ))}
           </div>
+        {/* </div> */}
+        <div className='privacy'>
+          <div className='privacy-img'>
+            <img src="/Bubblecard/safety.png" alt="" />
+          </div>
+          <span className='privacy-word'>How Zecrey protects user privacy?</span>
         </div>
       </Wrap>
     </>

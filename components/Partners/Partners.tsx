@@ -5,8 +5,8 @@ const Wrap = styled.div`
   .partners{
     width: 128rem;
     height: 41rem;
-    background: rgba(56, 56, 56, 0.5);
-    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+    /* background: rgba(56, 56, 56, 0.5);
+    border: 0.1rem solid rgba(255, 255, 255, 0.1); */
     box-sizing: border-box;
     backdrop-filter: blur(27.1828px);
     border-radius: 1rem;
@@ -91,7 +91,7 @@ function Partners() {
   return (
     <>
       <Wrap>
-        <div className='partners'>
+        {/* <div className='partners'> */}
           <div>
             <ul className='partner'>
               <li className='partner1 peer'>
@@ -127,7 +127,7 @@ function Partners() {
               </li>
             </ul>
           </div>
-        </div>
+        {/* </div> */}
       </Wrap>
     </>
   )
