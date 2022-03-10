@@ -206,8 +206,12 @@ function Communtity(props) {
           </div>
           <div className='software'>
             {data.map((item) => (
-              // onMouseEnter
-              <div className='software-background' onMouseEnter={()=>btn(item.type,item.yangshi)} key={item.id}>
+              // onMouseEnter  onMouseLeave
+              <div className='software-background' 
+                onMouseEnter={()=>btn(item.type,item.yangshi)}
+                onMouseLeave={()=>btn(item,item)}
+                key={item.id}
+              >
                 <ul className='software-ul'>
                   <li className='software-li'>
                     <img src={item.image} alt="" />

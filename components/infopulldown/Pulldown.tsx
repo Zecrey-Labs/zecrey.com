@@ -16,8 +16,8 @@ const Wrap = styled.div`
     color: #FFFFFF;
     text-align: center;
     position: absolute;
-    top: 2.3rem;
-    left: 71.9rem;
+    top: 2.4rem;
+    left: 42.2rem;
   }
   .info img{
     width: 1.1rem;
@@ -40,7 +40,7 @@ const Wrap = styled.div`
     z-index: 1000;
     position: absolute;
     top: -14rem;
-    left: 71.9rem;
+    left: 42.2rem;
   }
   .menu ul{
     margin-top: 0.6rem;
