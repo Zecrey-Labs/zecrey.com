@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Box = styled.div`
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 128rem;
   height: 41rem;
   background: rgba(56, 56, 56, 0.5);
@@ -31,7 +31,7 @@ const Title = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: move 1.2s linear;
-  @keyframes move{
+  @keyframes move {
     0% {
       transform: translateY(1.3rem);
       opacity: 0;
@@ -41,17 +41,21 @@ const Title = styled.div`
       opacity: 1;
     }
   }
-
 `
 const BackgoundIcon = styled.div<{
   size: { width: string; height: string }
   position: { left: string; bottom: string }
 }>`
+  width: 37.8rem;
+  height: 26.5rem;
+  overflow: hidden;
   position: absolute;
-  width: ${props => props.size.width};
-  height: ${props => props.size.height};
-  left: ${props => props.position.left};
-  bottom: ${props => props.position.bottom};
+  /* width: ${props => props.size.width};
+  height: ${props => props.size.height}; */
+  /* left: ${props => props.position.left};
+  bottom: ${props => props.position.bottom}; */
+  left: -0.01rem;
+  bottom: 0rem;
   z-index: -10;
   color: rgba(255, 255, 255, 0.05);
   animation: move 1.2s linear 0.3s;
@@ -76,7 +80,7 @@ const Text = styled.div`
     animation: move 1.2s linear;
   }
 
-  @keyframes move{
+  @keyframes move {
     0% {
       transform: translateY(1.3rem);
       opacity: 0;

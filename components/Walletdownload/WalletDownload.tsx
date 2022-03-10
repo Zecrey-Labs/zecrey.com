@@ -226,7 +226,7 @@ const Wrap = styled.div`
     height: 1.336rem;
     position: absolute;
     right: 0.795rem;
-    top: 0rem;
+    top: -0.4rem;
     box-sizing: border-box;
   }
   .star img{

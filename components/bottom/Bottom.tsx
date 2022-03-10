@@ -89,8 +89,7 @@ const Wrap = styled.div`
     background: #FFFFFF;
   }
   .zecrey-protocol{
-    width: 10.2rem;
-    height: 18rem;
+    min-width: 10.2rem;
     position: absolute;
     top: 21.8rem;
     left: 0rem;
@@ -220,7 +219,7 @@ function bottom() {
           <div className='papers'>
             <ul>
               <li>
-                <p  className='head-li'>Papers</p>
+                <p className='head-li'>Papers</p>
               </li> 
               <li>
                 <p>White Paper</p>
