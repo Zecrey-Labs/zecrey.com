@@ -224,7 +224,12 @@ const Landing = () => {
           high-efficiency privacy, bringing a reliable cross-chain solution to
           blockchain ecosystems.
         </Text2>
-        <Video src='/Zecrey_3D.webm' autoPlay loop muted></Video>
+        <Video
+          src='/Zecrey_3D.webm'
+          autoPlay
+          loop
+          muted
+          poster='/Zecrey_3D_poster.png'></Video>
       </div>
       <Bottom>
         <div>Learn More</div>
@@ -247,7 +252,7 @@ const Typing = (props: { str: string }) => {
       if (count >= props.str.length) {
         clearInterval(timer)
       }
-    }, 160)
+    }, 80)
     return () => {
       if (timer) clearInterval(timer)
     }

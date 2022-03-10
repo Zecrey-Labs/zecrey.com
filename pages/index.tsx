@@ -5,7 +5,6 @@
 import Bottom from '@/components/bottom/Bottom'
 import BubbleCard from '@/components/BubbleCard/BubbleCard'
 import CardWrap from '@/components/card-wrap'
-import { FunctionalIcons } from '@/components/card-wrap/CardContents'
 import Icon from '@/components/common/Icon'
 import Communtity from '@/components/Communtity/Communtity'
 import Landing from '@/components/landing'
@@ -14,7 +13,6 @@ import Partners from '@/components/Partners/Partners'
 import WalletDownload from '@/components/Walletdownload/WalletDownload'
 import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
 import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
-import Multifunctional from './multifunctional'
 import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
 import Ecosystem from '@/components/Ecosystem/Ecosystem'
 import Privacy from '@/components/Privacy/Privacy'
@@ -23,7 +21,7 @@ export default function Home() {
   return (
     <Layout>
       <Landing />
-      <Privacy/>
+      <Privacy />
       <CardWrap
         title='Multifunctional Support'
         backgroundIcon={{
@@ -48,7 +46,7 @@ export default function Home() {
           `Zecrey was an early adopter of multi-chain networks. In Zecrey's multi-chain ecosystem, you can experience features such as multi-chain wallets, aggregated assets, and cross-chain bridges, which will greatly improve your application efficiency in the decentralized world. At present, the zecrey multi-chain ecosystem supports five blockchains. In the future, more blockchains will join the zecrey multi-chain ecosystem.`
         ]}>
         {/* <FunctionalIcons /> */}
-        <Multichainbrand/>
+        <Multichainbrand />
       </CardWrap>
       <CardWrap
         title='Multi-layer Ecosystem'
@@ -61,7 +59,7 @@ export default function Home() {
           `The Zecrey protocol supports Layer1 and Layer2 networks, which determines that Zecrey will have a complete and rich network ecosystem in the future. In addition, Zecrey's Layer2 network will build a rich payment scene, which will include all aspects of future life.`
         ]}>
         {/* <FunctionalIcons /> */}
-        <Ecosystem/>
+        <Ecosystem />
       </CardWrap>
       <WalletDownload />
       <ZecreyWebApp />
