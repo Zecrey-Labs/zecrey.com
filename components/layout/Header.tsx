@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { CenterFlex, FlatBtn, highlight } from '../../styles/global'
 import ImgBox from '../common/ImgBox'
 import { useCallback } from 'react'
-import Pulldown from '@/components/infopulldown/Pulldown'
 
 const Container = styled.div`
   width: 100%;
@@ -96,7 +95,8 @@ const Download = styled(CenterFlex)`
 const navList = [
   { label: 'Home', url: 'https://www.zecrey.com/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
-  { label: 'Explorer', url: '/' }
+  { label: 'Explorer', url: '/' },
+  { label: 'Info', url: '/' }
 ]
 
 const Header = () => {
@@ -136,7 +136,6 @@ const Header = () => {
               </FlatBtn>
             </div>
           ))}
-          <Pulldown/>
         </Nav>
         <Download>
           <CenterFlex>

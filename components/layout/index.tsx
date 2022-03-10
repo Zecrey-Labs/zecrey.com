@@ -4,7 +4,7 @@ import Background from './Background'
 import Header from './Header'
 
 const Wrap = styled.div<{ dark: boolean }>`
-  min-width: 144rem;
+  min-width: 96rem;
   min-height: 100vh;
   background: ${props => (props.dark ? '#2b2b2b' : '#F2F2F2')};
   /* position: relative; */

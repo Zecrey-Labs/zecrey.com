@@ -42,6 +42,9 @@ const Wrap = styled.div`
     line-height: 1.7rem;
     color: #e4e4e4;
   }
+  li {
+    margin-bottom: 1.2rem;
+  }
   .apps {
     min-width: 9.2rem;
     height: 10.6rem;

@@ -133,11 +133,10 @@ table {
 
 body {
   /* font-size: 0.16rem; */
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 html {
-  scroll-behavior: smooth;
   font-family: 'Source Sans Pro', Helvetica;
 }
 a {

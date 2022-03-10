@@ -16,6 +16,7 @@ import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
 import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
 import Ecosystem from '@/components/Ecosystem/Ecosystem'
 import Privacy from '@/components/Privacy/Privacy'
+import Item from '@/components/Ecosystem/Item'
 
 export default function Home() {
   return (
@@ -25,40 +26,35 @@ export default function Home() {
       <CardWrap
         title='Multifunctional Support'
         backgroundIcon={{
-          svg: <Icon name='boxes' />, // todo: repace with svg element
-          size: { width: '39.5rem', height: '35.2rem' },
-          positon: { left: '-4.3rem', bottom: '-10rem' }
+          svg: <Icon name='boxes' />,
+          size: { width: '35.2rem', height: '25.2rem' }
         }}
         text={[
-          'Zecrey supports an all-in-one private wallet which helps the users to manage their assets in multiple blockchains.',
-          'As an layer 2 privacy cross-chain protocol based on zk-rollup, Zecrey brings cross-chain privacy to the public chain ecology, with the core characteristics of universal cross-chain bridge, high security cross-chain swap and efficient privacy.'
+          'Zecrey wallet is an all-in-one wallet that can manage multi-chain assets from various blockchains. Cross-chain bridge with privacy protection is the core function of Zecrey, which contains the "Deposit- Withdraw" module.',
+          'As a layer 2 protocol based on zk-rollup, Zecrey gathers several functoins like transfer, swap and lock&unlock, etc. These functions show high efficiency on zk-rollup.'
         ]}>
         <BubbleCard />
       </CardWrap>
       <CardWrap
         title='Multif-chain Support'
         backgroundIcon={{
-          svg: <Icon name='boxes' />, // todo: repace with svg element
-          size: { width: '39.5rem', height: '35.2rem' },
-          positon: { left: '-4.3rem', bottom: '-10rem' }
+          svg: <Icon name='multi-chain' />,
+          size: { width: '32.7rem', height: '21.6rem' }
         }}
         text={[
-          `Zecrey was an early adopter of multi-chain networks. In Zecrey's multi-chain ecosystem, you can experience features such as multi-chain wallets, aggregated assets, and cross-chain bridges, which will greatly improve your application efficiency in the decentralized world. At present, the zecrey multi-chain ecosystem supports five blockchains. In the future, more blockchains will join the zecrey multi-chain ecosystem.`
+          `Zecrey is an early adopter of integrated multi-chain networks. In Zecrey multi-chain ecosystem, you can experience features such as multi-chain wallets, assets aggregation and cross-chain bridges, which will greatly improve assets utilization efficiency in the crypto world. At present, the Zecrey multi-chain ecosystem supports five blockchains. In the future, more blockchains will join the Zecrey multi-chain ecosystem.`
         ]}>
-        {/* <FunctionalIcons /> */}
         <Multichainbrand />
       </CardWrap>
       <CardWrap
         title='Multi-layer Ecosystem'
         backgroundIcon={{
-          svg: <Icon name='boxes' />, // todo: repace with svg element
-          size: { width: '39.5rem', height: '35.2rem' },
-          positon: { left: '-4.3rem', bottom: '-10rem' }
+          svg: <Icon name='planet' />,
+          size: { width: '33.3rem', height: '21.1rem' }
         }}
         text={[
-          `The Zecrey protocol supports Layer1 and Layer2 networks, which determines that Zecrey will have a complete and rich network ecosystem in the future. In addition, Zecrey's Layer2 network will build a rich payment scene, which will include all aspects of future life.`
+          `Zecrey protocol supports Layer 1 and Layer 2 networks, which determines that Zecrey will have an integrated network structure and prosperous ecosystem in the future. Whether the management and aggregation of multi-chain assets, or the access of NFTs and the integration of blockchain games, even DEX/OTC services, these will all be realized in Zecrey ecosystem. In addition, Zecrey Layer 2 will build an abundant payment scene, which will cover most aspects of future life.`
         ]}>
-        {/* <FunctionalIcons /> */}
         <Ecosystem />
       </CardWrap>
       <WalletDownload />
@@ -67,16 +63,14 @@ export default function Home() {
       <CardWrap
         title='Partners'
         backgroundIcon={{
-          svg: <Icon name='boxes' />, // todo: repace with svg element
-          size: { width: '39.5rem', height: '35.2rem' },
-          positon: { left: '-4.3rem', bottom: '-10rem' }
+          svg: <Icon name='users' />, // todo: repace with svg element
+          size: { width: '31.3rem', height: '24rem' }
         }}
         text={[
           `During the development of the project, each partner has given Zecrey generous help, which is a huge step for the advancement of the project. In the future, Zecrey will maintain a good relationship with them.`
         ]}>
         <Partners />
       </CardWrap>
-      {/* <Partners /> */}
       <Communtity />
       <Bottom />
     </Layout>
