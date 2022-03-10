@@ -19,7 +19,6 @@ const Wrap = styled.div`
     background: rgba(56, 56, 56, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
-    backdrop-filter: blur(2.71828rem);
     border-radius: 1rem;
     margin: 0 auto;
     margin-bottom: 4rem;
@@ -113,13 +112,10 @@ function Privacy() {
   return (
     <>
       <Wrap>
-        {/* <div className='Whitelizard'>
-          <img src="/privacy/WhiteLizard.png" alt="" />
-        </div> */}
         <div className='privacy'>
-        <div className='Whitelizard'>
+         <div className='Whitelizard'>
           <img src="/privacy/WhiteLizard.png" alt="" />
-        </div>
+         </div>
          <div className='Pri'>
            <img src="/privacy/privacy.png" alt="" />
          </div>

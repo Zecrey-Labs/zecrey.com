@@ -58,7 +58,7 @@ const CubesWrap = styled(CenterFlex)<{ dark: boolean }>`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  // z-index: -10;
+  /* z-index: -10; */
   opacity: ${props => (props.dark ? 1 : 0)};
   .cubes {
     transform: translateY(10%);

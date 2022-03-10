@@ -11,6 +11,7 @@ const Container = styled.div`
   height: 7.8rem;
   border-bottom: 0.1rem solid #4e4e4e;
   background: rgba(56, 56, 56, 0.8);
+  /* position: relative; */
   &.header-container {
     border-bottom: 0.1rem solid#DADADA;
     background: #e7e7e7;
@@ -29,6 +30,7 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
   justify-content: flex-start;
   padding: 0 6.3rem;
   height: 7.8rem;
+  position: relative;
   .link {
     margin-right: 7.3rem;
     height: 100%;

@@ -3,19 +3,9 @@ import styled from 'styled-components';
 import Hei from "./hei"
 
 const Wrap = styled.div`
-  /* .max{
-    width: 128rem;
-    height: 41rem;
-    background: rgba(56, 56, 56, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
-    backdrop-filter: blur(2.71828rem);
-    border-radius: 1rem;
-  } */
   .background{
     width: 81.9rem;
     min-height: 12.5rem;
-    /* background: rgba(56, 56, 56, 0.5); */
     display:flex; 
     justify-content: space-between;  
     position: absolute;  
@@ -68,7 +58,7 @@ const Wrap = styled.div`
     font-weight: 500;
     font-size: 1.2rem;
     text-align: center;
-    letter-spacing: 0.0144706rem;
+    /* letter-spacing: 0.0144706rem; */
     color: #FFFFFF;
   }
   .privacy{
@@ -163,8 +153,13 @@ function BubbleCard(props) {
           <Hei mktype={mktype} ys={ys}/>
             <div className='background'>
               {data.map((item) => (
-                // onMouseEnter  cut-in incident
-                <div onClick={()=>btn(item.type,item.yangshi)} className='hover-background' key={item.id}>
+                // onMouseEnter  onMouseLeave
+                <div 
+                  onMouseEnter={()=>btn(item.type,item.yangshi)} 
+                  onMouseLeave={()=>btn(item,item)}
+                  className='hover-background' 
+                  key={item.id}
+                >
                   <ul>
                     <li className='picture'>
                       <img src={item.image} alt="" />

@@ -3,6 +3,32 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 const Wrap = styled.div`
+  .smallPicture{
+    width: 1.1rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 14.5rem;
+    left: 40.1rem;
+  }
+  .Zecrey-eco{
+    min-width: 12.1rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 14.5rem;
+    left: 41.8rem;
+  }
+  .Zecrey-eco p{
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.0144706rem;
+    color: #2AD4D8;
+  }
+  .smallPicture img{
+    width: 100%;
+  }
   .multilayer{
     width: 128rem;
     height: 41rem;
@@ -128,7 +154,7 @@ const Wrap = styled.div`
     color: #2AD4D8;
   }
   .multl{
-    width: 12.9rem;
+    min-width: 12.9rem;
     height: 2rem;
     position: absolute;
     left: 43rem;
@@ -138,7 +164,7 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
   }
   .zecreyapp{
-    width: 10.1rem;
+    min-width: 10.1rem;
     height: 1.7rem;
     position: absolute;
     left: 53.7rem;
@@ -150,7 +176,7 @@ const Wrap = styled.div`
     opacity: 0.6;
   }
   .cexlotc{
-    width: 9.3rem;
+    min-width: 9.3rem;
     height: 1.7rem;
     position: absolute;
     left: 63.5rem;
@@ -162,7 +188,7 @@ const Wrap = styled.div`
     opacity: 0.4;
   }
   .prlvate{
-    width: 9.7rem;
+    min-width: 9.7rem;
     height: 1.7rem;
     position: absolute;
     left: 90.7rem;
@@ -174,19 +200,19 @@ const Wrap = styled.div`
     opacity: 0.4;
   }
   .nft{
-    width: 7.5rem;
+    min-width: 7.5rem;
     height: 1.7rem;
     position: absolute;
     left: 101.3rem;
     top: 26.4rem;
     font-size: 1.2rem;
-    line-height: 1%.7rem;
+    line-height: 1.7rem;
     letter-spacing: 0.0144706rem;
     mix-blend-mode: normal;
     opacity: 0.6;
   }
   .prlvacy{
-    width: 10.9rem;
+    min-width: 10.9rem;
     height: 2rem;
     position: absolute;
     left: 108.9rem;
@@ -278,6 +304,18 @@ function Ecosystem() {
   return (
     <>
       <Wrap>
+           <div className='smallPicture'>
+             {/* <img src="/Ecosystem/smallpicture.png" alt="" /> */}
+             <Image 
+                src='/Ecosystem/smallpicture.png'
+                className='smallPicture-img'
+                alt='zecrey'
+                layout='fill'
+              />
+           </div>
+           <span className='Zecrey-eco' >
+            <p>View Zecrey-Eco Map</p>
+           </span>
            <div className='lizard'>
               <Image 
                 src='/Ecosystem/lizard.png'
@@ -289,11 +327,11 @@ function Ecosystem() {
            <div className='wire'>
               <img src="/Ecosystem/wire.png" alt="" />
            </div>
-           {/* 小模块 */}
+           {/* Small module */}
            <div className='module1'>
-              {/* 小点 */}
+              {/* dot  */}
              <div className='one-dot dot'></div>
-             {/* 竖 省略号 */}
+             {/* vertical  ellipsis */}
              <div className='ellipsis-1 ellipsis'>
                <Image 
                  src='/Ecosystem/ellipsis.svg'
@@ -302,11 +340,11 @@ function Ecosystem() {
                  layout='fill'
                />
              </div>
-             {/* 文字 */}
+             {/* title */}
              <div className='multl headline'>
                <span>Multi-chain Wallet</span>
              </div>
-             {/* 小图标 */}
+             {/* small icon */}
              <div className='icon-1'>
                <img src="/Ecosystem/icon1.svg" alt="" />
              </div>

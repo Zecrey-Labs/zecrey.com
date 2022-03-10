@@ -14,40 +14,38 @@ const Wrap = styled.div`
     border-radius: 1rem;
     overflow: hidden;
   }
+  .introduce{
+    width: 33.8rem;
+    height: 4.8rem;
+    margin: 2rem 0 0 2rem;
+    overflow: hidden;
+  }
+  .introduce p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #F1F1F1;
+  }
   .card{
     width: 36.5rem;
     height: 8.5rem;
     background: #000000;
     mix-blend-mode: normal;
-    opacity: 0.85;
+    /* opacity: 0.85; */
     border-radius: 1rem;
     overflow: hidden;
-  }
-  .introduce{
-    width: 33.8rem;
-    margin: 2rem 0 0 2rem;
-  }
-  .introduce p{
-    font-family: IBM Plex Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    letter-spacing: 0.0144706rem;
-    color: #F1F1F1;
   }
   .intr{
     width: 33.8rem;
     height: 4.8rem;
-    margin: 1rem 0 0 2rem;
+    /* background: #2AD2D6; */
+    margin: 1.8rem 0 0 2rem;
   }
   .intr p{
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
-    line-height: 1.6rem;
-    letter-spacing: 0.0144706rem;
+    line-height: 1.4rem;
     color: #F1F1F1;
   }
   .button{
@@ -80,7 +78,7 @@ const Wrap = styled.div`
   }
   .second{
     position: absolute;
-    top: 5.1rem;
+    top: 10.1rem;
     left: 37rem;
   }
   .thirdly{
@@ -91,7 +89,7 @@ const Wrap = styled.div`
   .fourthly{
     position: absolute;
     top: 5.1rem;
-    left: 59rem;
+    left: 61rem;
   }
   .fifth{
     position: absolute;
@@ -117,12 +115,13 @@ function BubbleCard(props) {
   useEffect(()=>{
     console.log("样式",ys);
   },[ys])
+
   return (
-    <div >
+    <>
       <Wrap>
         <div className={`maximum ${ys}`}>
           {mktype === true?(
-              <div className='card-button'>
+            <div className='card-button'>
               <ul>
                 <li className='introduce'>
                   <p>Through simple, secure, and scalable technology, NEAR empowers millions to invent and explore new experiences. Business, creativity, and community are being reimagined.</p>
@@ -135,14 +134,16 @@ function BubbleCard(props) {
           ):null}
           {mktype === false?(
             <div className='card'>
-            <li className='intr'>
-              <p>Through simple, secure, and scalable technology, NEAR empowers millions to invent and explore new experiences. Business, creativity, and community are being reimagined.</p>
-            </li>
+              <ul>
+                <li className='intr'>
+                  <p>Through simple, secure, and scalable technology, NEAR empowers millions to invent and explore new experiences. Business, creativity, and community are being reimagined.</p>
+                </li>
+              </ul>
             </div>
           ):null}
         </div>
       </Wrap>
-    </div>
+    </>
   )
 }
 

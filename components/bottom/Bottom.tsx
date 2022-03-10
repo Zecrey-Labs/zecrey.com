@@ -6,8 +6,8 @@ const Wrap = styled.div`
     /* width: 144rem; */
     height: 30.5rem;
     background: rgba(42, 42, 42, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2.71828rem);
+    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+    /* backdrop-filter: blur(2.71828rem); */
     position: relative;
     margin: 0 auto;
   }
