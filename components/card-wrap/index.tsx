@@ -52,6 +52,9 @@ const IconWrap = styled.div`
 const BackgoundIcon = styled.div<{
   size: { width: string; height: string }
 }>`
+  width: 37.8rem;
+  height: 26.5rem;
+  overflow: hidden;
   position: absolute;
   width: ${props => props.size.width};
   height: ${props => props.size.height};
