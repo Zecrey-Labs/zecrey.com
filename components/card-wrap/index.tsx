@@ -135,8 +135,6 @@ const CardWrap = (props: {
         if (domTop > 0 && height - domTop >= domHeight / 5) {
           setVisible(true)
           document.removeEventListener('scroll', handleScroll)
-        } else {
-          // setVisible(false)
         }
       }
     }

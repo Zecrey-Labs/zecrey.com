@@ -16,7 +16,6 @@ import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
 import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
 import Ecosystem from '@/components/Ecosystem/Ecosystem'
 import Privacy from '@/components/Privacy/Privacy'
-import Item from '@/components/Ecosystem/Item'
 
 export default function Home() {
   return (
