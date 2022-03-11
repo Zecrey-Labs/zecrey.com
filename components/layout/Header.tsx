@@ -95,7 +95,7 @@ const Download = styled(CenterFlex)`
 const navList = [
   { label: 'Home', url: 'https://www.zecrey.com/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
-  { label: 'Explorer', url: '/' },
+  { label: 'Explorer', url: 'https://www.google.com.hk/' },
   { label: 'Info', url: '/' }
 ]
 

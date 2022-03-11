@@ -180,26 +180,54 @@ function bottom() {
             <div className='apps'>
               <ul>
                 <li>
-                  <p className='head-li'>Apps</p>
+                  <p className='head-li'>
+                    <a
+                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
+                      target='blank'>
+                      Apps
+                    </a>
+                  </p>
                 </li>
                 <li>
-                  <p>Privacy Wallet</p>
+                  <p>
+                    <a
+                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
+                      target='blank'>
+                      Privacy Wallet
+                    </a>
+                  </p>
                 </li>
                 <li>
-                  <p>Web App</p>
+                  <p>
+                    <a
+                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
+                      target='blank'>
+                      Web App
+                    </a>
+                  </p>
                 </li>
                 <li>
-                  <p>Zecrey Mobile</p>
+                  <p>
+                    <a href=''>Zecrey Mobile</a>
+                  </p>
                 </li>
               </ul>
             </div>
             <div className='explorer'>
               <ul>
                 <li>
-                  <p className='head-li'>Explorer</p>
+                  <p className='head-li'>
+                    <a href='https://www.google.com.hk/' target='blank'>
+                      Explorer
+                    </a>
+                  </p>
                 </li>
                 <li>
-                  <p>Blockchain Explorer</p>
+                  <p>
+                    <a href='https://zecrey.medium.com/' target='blank'>
+                      Blockchain Explorer
+                    </a>
+                  </p>
                 </li>
                 <li>
                   <p>Info Explorer</p>
@@ -212,7 +240,11 @@ function bottom() {
                   <p className='head-li'>Development</p>
                 </li>
                 <li>
-                  <p>GitHub</p>
+                  <p>
+                    <a href='https://github.com/Zecrey-Labs' target='blank'>
+                      GitHub
+                    </a>
+                  </p>
                 </li>
                 <li>
                   <p>Medium</p>
@@ -225,10 +257,20 @@ function bottom() {
                   <p className='head-li'>Papers</p>
                 </li>
                 <li>
-                  <p>White Paper</p>
+                  <p>
+                    <a
+                      href='https://docsend.com/view/ntcsmt7meu84gcqk'
+                      target='blank'>
+                      White Paper
+                    </a>
+                  </p>
                 </li>
                 <li>
-                  <p>Docs</p>
+                  <p>
+                    <a href='https://docs.zecrey.com/' target='blank'>
+                      Docs
+                    </a>
+                  </p>
                 </li>
               </ul>
             </div>

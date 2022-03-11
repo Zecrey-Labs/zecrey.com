@@ -144,7 +144,7 @@ function Privacy() {
             <span className='join'>Join Community {'>'}</span>
             <div className='player'>
               <video
-                src='/video/WalletLntroduction.webm'
+                src='/video/video.mp4'
                 style={{ width: '55rem', height: '30.9rem' }}
                 controls // control panel
               ></video>
