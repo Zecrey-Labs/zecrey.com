@@ -792,7 +792,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1399'
@@ -810,7 +810,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='12.5'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1399)'>
@@ -876,7 +876,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1371'
@@ -894,7 +894,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='12.5'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1371)'>
@@ -970,7 +970,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1320'
@@ -988,7 +988,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='11.7075'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1320)'>
@@ -1053,7 +1053,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1335'
@@ -1071,7 +1071,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='11.7075'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1335)'>
@@ -1124,7 +1124,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1386'
@@ -1142,7 +1142,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='12.5'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1386)'>
@@ -1178,7 +1178,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='#F1F1F1'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1346'
@@ -1196,7 +1196,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='11.7075'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1346)'>
@@ -1260,7 +1260,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
             fill='black'
             fillOpacity='0.15'
             stroke='white'
-            stroke-width='3'
+            strokeWidth='3'
           />
           <mask
             id='mask0_3_1362'
@@ -1278,7 +1278,7 @@ const Icon = (props: { name: string; id?: string; className?: string }) => {
               rx='12.5'
               fill='white'
               stroke='white'
-              stroke-width='3'
+              strokeWidth='3'
             />
           </mask>
           <g mask='url(#mask0_3_1362)'>
