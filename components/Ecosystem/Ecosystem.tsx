@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Icon from '../common/Icon'
 import Item from './Item'
 import ImgBox from '../common/ImgBox'
+import Modal from '../modal'
 
 const Wrap = styled.div`
   position: absolute;
@@ -92,26 +93,29 @@ const items: {
 
 const Ecosystem = () => {
   return (
-    <Wrap>
-      <ImgBox
-        className='dashed'
-        src='/Ecosystem/wire.png'
-        alt='bg'
-        width={955}
-        height={66}
-      />
-      {items.map((i, index) => (
-        <Item key={index} {...i} />
-      ))}
-      <LogoDot />
-      <ImgBox
-        className='logo'
-        src='/Ecosystem/lizard.png'
-        alt='logo'
-        width={136}
-        height={155}
-      />
-    </Wrap>
+    <>
+      <Modal />
+      <Wrap>
+        <ImgBox
+          className='dashed'
+          src='/Ecosystem/wire.png'
+          alt='bg'
+          width={955}
+          height={66}
+        />
+        {items.map((i, index) => (
+          <Item key={index} {...i} />
+        ))}
+        <LogoDot />
+        <ImgBox
+          className='logo'
+          src='/Ecosystem/lizard.png'
+          alt='logo'
+          width={136}
+          height={155}
+        />
+      </Wrap>
+    </>
   )
 }
 

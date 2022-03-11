@@ -57,7 +57,7 @@ const Multichainbrand = () => {
         ))}
       </CenterFlex>
       <CornerLink href=''>
-        <Icon name='shield-check' />
+        <Icon name='spinner' />
         <span>How Zecrey Multi-chain support works?</span>
       </CornerLink>
     </Wrap>
