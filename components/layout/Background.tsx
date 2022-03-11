@@ -10,7 +10,7 @@ const Wrap = styled.div`
   position: fixed;
   width: 100%;
   height: 100vh;
-  margin-top: -8rem;
+  margin-top: -0.2rem;
   pointer-events: none;
 `
 const Div = styled.div`
@@ -34,8 +34,8 @@ const Background = () => {
     lottie.loadAnimation({
       container: dom.current,
       renderer: 'svg',
-      loop: true, // todo: stop for now
-      autoplay: true, // todo: stop for now
+      loop: false, // todo: stop for now
+      autoplay: false, // todo: stop for now
       animationData: Dark,
       rendererSettings: {
         preserveAspectRatio: 'xMaxYMid slice'

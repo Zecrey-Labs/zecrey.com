@@ -6,10 +6,13 @@ import ImgBox from '../common/ImgBox'
 import { useCallback } from 'react'
 
 const Container = styled.div`
+  position: fixed;
   width: 100%;
   height: 7.8rem;
   border-bottom: 0.1rem solid #4e4e4e;
   background: rgba(56, 56, 56, 0.8);
+  z-index: 1000;
+  backdrop-filter: blur(2rem);
   /* position: relative; */
   &.header-container {
     border-bottom: 0.1rem solid#DADADA;

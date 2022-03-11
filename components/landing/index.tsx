@@ -121,6 +121,9 @@ const Text = styled.div`
   background: linear-gradient(90deg, #29e9f0 0%, #f5b6ff 99.86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fadeUp2 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 1s forwards;
+  transform: translateY(1.3rem);
+  opacity: 0;
   span.muted {
     opacity: 0;
   }
@@ -216,7 +219,8 @@ const Landing = () => {
         </Box>
         <Label>Zecrey Protocal</Label>
         <Text>
-          <Typing str='Bringing Cross-chain Privacy to Digital Assets.' />
+          Bringing Cross-chain Privacy to Digital Assets.
+          {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
         </Text>
         <Text2>
           Zecrey is a zk-rollup-based layer 2 privacy protocol featuring
