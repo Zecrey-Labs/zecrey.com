@@ -10,7 +10,7 @@ const Wrap = styled.div<{ dark: boolean }>`
   /* position: relative; */
   /* z-index: 10; */
   .content {
-    padding-top: 4rem;
+    padding-top: 11.8rem;
   }
 `
 
