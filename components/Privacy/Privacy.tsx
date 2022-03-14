@@ -45,7 +45,7 @@ const Wrap = styled.div`
     width: 55rem;
     height: 9.5rem;
     position: absolute;
-    top: 26.5rem;
+    top: 23.5rem;
     left: 6rem;
   }
   .text p {
@@ -56,6 +56,7 @@ const Wrap = styled.div`
     line-height: 1.6rem;
     letter-spacing: 0.0144706rem;
     color: #ffffff;
+    margin-top: 20px;
   }
   .whitepaper {
     width: 9.3rem;

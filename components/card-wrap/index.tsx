@@ -86,6 +86,9 @@ const Text = styled.div`
     color: #ffffff;
     transform: translateY(1.3rem);
     opacity: 0;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
   }
   .visible & {
     p {
