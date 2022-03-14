@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'styled-components';
-import Image from 'next/image';
+import styled from 'styled-components'
+import Image from 'next/image'
 
 const Wrap = styled.div`
-  .outermostlayer{
+  .outermostlayer {
     width: 128rem;
     height: 50.9rem;
     background: rgba(56, 56, 56, 0.5);
@@ -15,13 +15,13 @@ const Wrap = styled.div`
     margin: 0 auto;
     margin-bottom: 4rem;
   }
-  .mobile{
+  .mobile {
     min-width: 11rem;
     height: 2rem;
     position: absolute;
     left: 6rem;
     top: 5.3rem;
-    border: 0.1rem solid #2AD4D8;
+    border: 0.1rem solid #2ad4d8;
     border-radius: 0.5rem;
     text-align: center;
     line-height: 2rem;
@@ -29,9 +29,9 @@ const Wrap = styled.div`
     font-style: normal;
     font-weight: bold;
     font-size: 1.1rem;
-    color: #2AD4D8;
+    color: #2ad4d8;
   }
-  .zecreymobile{
+  .zecreymobile {
     height: 1.4rem;
     position: absolute;
     left: 6rem;
@@ -42,19 +42,19 @@ const Wrap = styled.div`
     font-size: 1.2rem;
     line-height: 1.4rem;
     letter-spacing: 0.0144706rem;
-    color: #F1F1F1;
+    color: #f1f1f1;
   }
-  .mobilephone{
+  .mobilephone {
     width: 1.8rem;
     height: 1.8rem;
     position: absolute;
     left: 14.8rem;
     top: 28.3rem;
   }
-  .mobilephone-img{
+  .mobilephone-img {
     width: 100%;
   }
-  .anywhere{
+  .anywhere {
     width: 26rem;
     height: 6.6rem;
     position: absolute;
@@ -68,17 +68,17 @@ const Wrap = styled.div`
     font-size: 2.6rem;
     line-height: 3.2rem;
     letter-spacing: 0.0313529rem;
-    color: #2AD4D8;
+    color: #2ad4d8;
   }
-  .comingsoon{
+  .comingsoon {
     width: 12.7rem;
     height: 2.6rem;
     position: absolute;
     left: 4.69%;
     right: 85.39%;
     top: 78.39%;
-    bottom: 16.5%; 
-    border: 0.1rem solid #FFFFFF;
+    bottom: 16.5%;
+    border: 0.1rem solid #ffffff;
     border-radius: 1.3rem;
     font-family: Lexend;
     font-style: normal;
@@ -86,45 +86,19 @@ const Wrap = styled.div`
     font-size: 1.4rem;
     line-height: 2.6rem;
     letter-spacing: 0.0168824rem;
-    color: #F1F1F1;
+    color: #f1f1f1;
     text-align: center;
   }
-  .iphone{
-    width: 49.063rem;
+  .iphone {
+    width: 55.463rem;
     height: 42.231rem;
     position: absolute;
-    left: 78.769rem;
-    top: 8.669rem;
-    right: 0.46%;
-    bottom: 0.23%;
+    left: 59.2rem;
+    top: 12.8rem;
     z-index: 10;
-    /* background: rgba(0, 0, 0, 0.0001);
-    box-shadow: inset 0px 0px 3px 1px rgba(255, 255, 255, 0.25);
-    border-radius: 6.6rem; */
   }
-  .boxframe{
-    width: 41.2rem;
-    height: 32.8rem;
-    position: absolute;
-    left: 53.36%;
-    right: 14.45%;
-    top: 44.2%;
-    bottom: -8.64%;
-    border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%); */
-    border-radius: 1.5rem;
-  }
-  .boxframe-two{
-    width: 41.2rem;
-    height: 32.8rem;
-    position: absolute;
-    left: 46.25%;
-    right: 21.56%;
-    top: 63.46%;
-    bottom: -27.9%;
-    border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0001) 100%); */
-    border-radius: 15px;
+  .iphone img {
+    width: 100%;
   }
 `
 
@@ -132,39 +106,24 @@ function ZecreyMobile() {
   return (
     <>
       <Wrap>
-         <div className='outermostlayer'>
-           <div className='mobile'>
-             Zecrey Mobile
-           </div>
-           <div className='zecreymobile'>
-             Zecrey Mobile
-           </div>
-           <div className='mobilephone'>
-            <Image 
-                src='/zecreymobile/mobilephone.png'
-                className='mobilephone-img'
-                alt='zecrey'
-                layout='fill'
+        <div className='outermostlayer'>
+          <div className='mobile'>Zecrey Mobile</div>
+          <div className='zecreymobile'>Zecrey Mobile</div>
+          <div className='mobilephone'>
+            <Image
+              src='/zecreymobile/mobilephone.png'
+              className='mobilephone-img'
+              alt='zecrey'
+              layout='fill'
             />
-           </div>
-           <div className='anywhere'>
-             Anywhere,anytime in your pocket.
-           </div>
-           <div className='comingsoon'>
-             Coming Soon
-           </div>
-           <div className='iphone'>
-             <Image 
-                src='/zecreymobile/iPhone.png'
-                className='iphone-img'
-                alt='zecrey'
-                layout='fill'
-              />
-           </div>
-           <div className='boxframe'></div>
-           <div className='boxframe-two'></div>
-         </div>
-      </Wrap>   
+          </div>
+          <div className='anywhere'>Anywhere,anytime in your pocket.</div>
+          <div className='comingsoon'>Coming Soon</div>
+          <div className='iphone'>
+            <img src='/zecreymobile/cellphone .png' alt='' />
+          </div>
+        </div>
+      </Wrap>
     </>
   )
 }

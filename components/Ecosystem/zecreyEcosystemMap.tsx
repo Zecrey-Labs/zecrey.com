@@ -34,6 +34,7 @@ const Wrap = styled.div`
   }
   .picture img {
     width: 100%;
+    height: 64rem;
     margin-top: 1.5rem;
   }
   .button-close {
@@ -64,7 +65,7 @@ function ZecreyEcosystemMap(props: { close: () => void }) {
             <p>Zecrey Ecosystem Map</p>
           </div>
           <div className='picture'>
-            <img src='/Ecosystem/ecosystemMap.png' alt='' />
+            <img src='/Ecosystem/ecosystem.png' alt='' />
           </div>
           <FlatBtn className='button-close' onClick={props.close}>
             Close
