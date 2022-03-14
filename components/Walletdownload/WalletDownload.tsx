@@ -95,7 +95,6 @@ const Wrap = styled.div`
   .rightpicture {
     width: 80rem;
     height: 44.2rem;
-    background: #202124;
     position: absolute;
     top: 6.7rem;
     left: 42.8rem;
