@@ -98,8 +98,8 @@ const Download = styled(CenterFlex)`
 const navList = [
   { label: 'Home', url: 'https://www.zecrey.com/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
-  { label: 'Explorer', url: 'https://www.google.com.hk/' },
-  { label: 'Info', url: '/' }
+  { label: 'Explorer', url: 'https://explorer.zecrey.com/' },
+  { label: 'Info', url: 'https://info.zecrey.com/' }
 ]
 
 const Header = () => {
