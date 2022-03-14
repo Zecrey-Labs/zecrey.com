@@ -91,6 +91,11 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
     color: #ffffff;
     text-align: center;
+    &:hover {
+      background: #ffffff;
+      box-sizing: border-box;
+      color: #2a2a2a;
+    }
   }
   .rightpicture {
     width: 80rem;
