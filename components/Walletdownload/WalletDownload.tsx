@@ -70,7 +70,9 @@ const Wrap = styled.div`
     font-size: 2.6rem;
     line-height: 3.2rem;
     letter-spacing: 0.0313529rem;
-    color: rgba(0, 182, 186, 1);
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    color: transparent;
+    -webkit-background-clip: text;
   }
   .download {
     width: 10.7rem;

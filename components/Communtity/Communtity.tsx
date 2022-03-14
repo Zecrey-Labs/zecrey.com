@@ -31,7 +31,9 @@ const Wrap = styled.div`
     font-size: 2.4rem;
     line-height: 3rem;
     letter-spacing: 0.0289412rem;
-    color: rgba(0, 182, 186, 1);
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .introduce {
     width: 99.2rem;

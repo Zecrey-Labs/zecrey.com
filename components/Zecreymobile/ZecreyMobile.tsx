@@ -68,7 +68,9 @@ const Wrap = styled.div`
     font-size: 2.6rem;
     line-height: 3.2rem;
     letter-spacing: 0.0313529rem;
-    color: #2ad4d8;
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .comingsoon {
     width: 12.7rem;
