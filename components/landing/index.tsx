@@ -177,14 +177,14 @@ const Bottom = styled.div`
   div {
     font-family: Lexend;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     color: #ffffff;
   }
   svg {
     display: block;
-    width: 1.4rem;
-    height: 1.95rem;
+    width: 18px;
+    height: 18px;
     margin: 0.5rem auto 1rem auto;
     color: #ffffff;
     animation: move 1.8s linear 5s infinite;
