@@ -180,19 +180,14 @@ function bottom() {
             <div className='apps'>
               <ul>
                 <li>
-                  <p className='head-li'>
-                    <a
-                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
-                      target='blank'>
-                      Apps
-                    </a>
-                  </p>
+                  <p className='head-li'>Apps</p>
                 </li>
                 <li>
                   <p>
                     <a
                       href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
-                      target='blank'>
+                      target='_blank'
+                      rel='noreferrer'>
                       Privacy Wallet
                     </a>
                   </p>
@@ -200,15 +195,25 @@ function bottom() {
                 <li>
                   <p>
                     <a
-                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
-                      target='blank'>
+                      href=''
+                      target='_blank'
+                      rel='noreferrer'
+                      aria-disabled
+                      style={{ cursor: 'not-allowed' }}>
                       Web App
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href=''>Zecrey Mobile</a>
+                    <a
+                      href=''
+                      target='_blank'
+                      rel='noreferrer'
+                      aria-disabled
+                      style={{ cursor: 'not-allowed' }}>
+                      Zecrey Mobile
+                    </a>
                   </p>
                 </li>
               </ul>
@@ -216,21 +221,27 @@ function bottom() {
             <div className='explorer'>
               <ul>
                 <li>
-                  <p className='head-li'>
-                    <a href='https://www.google.com.hk/' target='blank'>
-                      Explorer
-                    </a>
-                  </p>
+                  <p className='head-li'>Explorer</p>
                 </li>
                 <li>
                   <p>
-                    <a href='https://zecrey.medium.com/' target='blank'>
+                    <a
+                      href='https://explorer.zecrey.com/'
+                      target='_blank'
+                      rel='noreferrer'>
                       Blockchain Explorer
                     </a>
                   </p>
                 </li>
                 <li>
-                  <p>Info Explorer</p>
+                  <p>
+                    <a
+                      href='https://info.zecrey.com/'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Info Explorer
+                    </a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -241,13 +252,23 @@ function bottom() {
                 </li>
                 <li>
                   <p>
-                    <a href='https://github.com/Zecrey-Labs' target='blank'>
+                    <a
+                      href='https://github.com/Zecrey-Labs'
+                      target='_blank'
+                      rel='noreferrer'>
                       GitHub
                     </a>
                   </p>
                 </li>
                 <li>
-                  <p>Medium</p>
+                  <p>
+                    <a
+                      href='https://zecrey.medium.com/'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Medium
+                    </a>
+                  </p>
                 </li>
               </ul>
             </div>
@@ -260,14 +281,18 @@ function bottom() {
                   <p>
                     <a
                       href='https://docsend.com/view/ntcsmt7meu84gcqk'
-                      target='blank'>
+                      target='_blank'
+                      rel='noreferrer'>
                       White Paper
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href='https://docs.zecrey.com/' target='blank'>
+                    <a
+                      href='https://docs.zecrey.com/'
+                      target='_blank'
+                      rel='noreferrer'>
                       Docs
                     </a>
                   </p>
