@@ -1,5 +1,6 @@
 import { CenterFlex } from '@/styles/global'
-import React, { ReactNode, useState } from 'react'
+import classNames from 'classnames'
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import BubbleButton from '../bubble-button'
 import Icon from '../common/Icon'
@@ -19,6 +20,7 @@ const Wrap = styled.div`
     margin-bottom: 4rem;
   }
   .headline {
+    opacity: 0;
     width: 21.8rem;
     height: 3rem;
     position: absolute;
@@ -36,6 +38,7 @@ const Wrap = styled.div`
     -webkit-text-fill-color: transparent;
   }
   .introduce {
+    opacity: 0;
     width: 99.2rem;
     height: 8.6rem;
     position: absolute;
@@ -60,6 +63,7 @@ const Wrap = styled.div`
     right: 35%;
     top: 58.05%;
     bottom: -51.67%;
+    opacity: 0;
     /* background: rgba(255, 255, 255, 0.05); */
   }
   .circle img {
@@ -77,16 +81,53 @@ const Wrap = styled.div`
     text-align: center;
     margin-top: 1.5rem;
   }
+  &.visible {
+    .headline {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+    .introduce {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+    .circle {
+      animation: move3 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.3s forwards;
+    }
+  }
+  @keyframes move22 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes move3 {
+    0% {
+      transform: translateY(0.6rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 `
 const Media = styled(CenterFlex)`
   position: absolute;
   bottom: 5.7rem;
   left: 50%;
   transform: translateX(-50%);
+  .visible & {
+    .bubble-button {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.3s forwards;
+    }
+  }
   .bubble-button {
     width: 13rem;
     height: 13rem;
     margin-right: 3.5rem;
+    opacity: 0;
     &:last-child {
       margin-right: 0;
     }
@@ -140,9 +181,28 @@ const items: {
 ]
 
 const Communtity = () => {
+  const [visible, setVisible] = useState(false)
+  const dom = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    let handleScroll = e => {
+      if (dom.current && dom.current.getBoundingClientRect()) {
+        let domTop = dom.current.getBoundingClientRect().top
+        let domHeight = dom.current.getBoundingClientRect().height
+        let height = window.innerHeight
+        if (domTop > 0 && height - domTop >= domHeight / 5) {
+          setVisible(true)
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <Wrap>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='communtity'>
           <div className='headline'>
             <p>Join Communtity</p>

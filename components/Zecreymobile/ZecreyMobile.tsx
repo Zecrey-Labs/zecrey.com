@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import classNames from 'classnames'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -21,6 +22,7 @@ const Wrap = styled.div`
       position: absolute;
       left: 6rem;
       top: 28.6rem;
+      opacity: 0;
       .zecreymobile {
         font-family: Helvetica;
         font-style: normal;
@@ -38,6 +40,7 @@ const Wrap = styled.div`
     }
   }
   .mobile {
+    opacity: 0;
     min-width: 11rem;
     height: 2rem;
     position: absolute;
@@ -54,6 +57,7 @@ const Wrap = styled.div`
     color: #2ad4d8;
   }
   .anywhere {
+    opacity: 0;
     width: 26rem;
     height: 6.6rem;
     position: absolute;
@@ -89,6 +93,7 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
     color: #f1f1f1;
     text-align: center;
+    opacity: 0;
   }
   .iphone {
     width: 55.463rem;
@@ -97,16 +102,57 @@ const Wrap = styled.div`
     left: 59.2rem;
     top: 12.8rem;
     z-index: 10;
+    opacity: 0;
   }
   .iphone img {
     width: 100%;
   }
+  &.visible {
+    .mobile,
+    .iphone {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+    .img-span,
+    .anywhere,
+    .comingsoon {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+  }
+  @keyframes move22 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 `
 
 function ZecreyMobile() {
+  const [visible, setVisible] = useState(false)
+  const dom = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    let handleScroll = e => {
+      if (dom.current && dom.current.getBoundingClientRect()) {
+        let domTop = dom.current.getBoundingClientRect().top
+        let domHeight = dom.current.getBoundingClientRect().height
+        let height = window.innerHeight
+        if (domTop > 0 && height - domTop >= domHeight / 5) {
+          setVisible(true)
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <Wrap>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
           <div className='mobile'>Zecrey Mobile</div>
           <div className='img-span'>

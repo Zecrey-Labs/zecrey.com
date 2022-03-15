@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import classNames from 'classnames'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -21,6 +22,7 @@ const Wrap = styled.div`
       top: 28.6rem;
       display: flex;
       align-items: center;
+      opacity: 0;
       .application {
         font-family: Helvetica;
         font-style: normal;
@@ -52,6 +54,7 @@ const Wrap = styled.div`
     line-height: 2rem;
     color: #2ad4d8;
     text-align: center;
+    opacity: 0;
   }
   .backgroundbox {
     min-width: 81.489rem;
@@ -59,12 +62,14 @@ const Wrap = styled.div`
     position: absolute;
     top: 12.853rem;
     left: -2.285rem;
+    opacity: 0;
   }
   .backgroundimage-img {
     width: 68.489rem;
     height: 47.379rem;
   }
   .crypto {
+    opacity: 0;
     width: 25.9rem;
     height: 6.6rem;
     position: absolute;
@@ -99,13 +104,54 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
     color: #f1f1f1;
     text-align: center;
+    opacity: 0;
+  }
+  &.visible {
+    .webapp {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+    .backgroundbox,
+    .img-span,
+    .crypto,
+    .launchapp {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+  }
+  @keyframes move22 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 `
 
 function ZecreyWebApp() {
+  const [visible, setVisible] = useState(false)
+  const dom = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    let handleScroll = e => {
+      if (dom.current && dom.current.getBoundingClientRect()) {
+        let domTop = dom.current.getBoundingClientRect().top
+        let domHeight = dom.current.getBoundingClientRect().height
+        let height = window.innerHeight
+        if (domTop > 0 && height - domTop >= domHeight / 5) {
+          setVisible(true)
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <Wrap>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
           <div className='webapp'>Zecrey Web App</div>
           <div className='backgroundbox'>

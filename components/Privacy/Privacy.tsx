@@ -1,4 +1,5 @@
-import React from 'react'
+import classNames from 'classnames'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
@@ -26,6 +27,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 10.799rem;
     left: 5.8rem;
+    opacity: 0;
   }
   .Pri img {
     width: 100%;
@@ -46,6 +48,7 @@ const Wrap = styled.div`
     letter-spacing: 0.0144706rem;
     color: #ffffff;
     margin-top: 20px;
+    opacity: 0;
   }
   .whitepaper {
     width: 9.3rem;
@@ -60,6 +63,7 @@ const Wrap = styled.div`
     line-height: 1.8rem;
     letter-spacing: 0.0168824rem;
     color: #2ad4d8;
+    opacity: 0;
   }
   .join {
     width: 12rem;
@@ -74,6 +78,7 @@ const Wrap = styled.div`
     line-height: 1.8rem;
     letter-spacing: 0.0168824rem;
     color: #2ad4d8;
+    opacity: 0;
   }
   .player {
     width: 55rem;
@@ -83,7 +88,7 @@ const Wrap = styled.div`
     top: 10rem;
     background: #000000;
     mix-blend-mode: normal;
-    opacity: 0.6;
+    opacity: 0;
     border: 0.103125rem solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
   }
@@ -102,13 +107,69 @@ const Wrap = styled.div`
     line-height: 1.8rem;
     letter-spacing: 0.0168824rem;
     color: #2ad4d8;
+    opacity: 0;
+  }
+  &.visible {
+    .Pri {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+    .text p {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+    .whitepaper,
+    .join,
+    .meet p {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.3s forwards;
+    }
+    .player {
+      animation: move33 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+  }
+  @keyframes move22 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes move33 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0.6;
+    }
   }
 `
 
 function Privacy() {
+  const [visible, setVisible] = useState(false)
+  const dom = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    let handleScroll = e => {
+      if (dom.current && dom.current.getBoundingClientRect()) {
+        let domTop = dom.current.getBoundingClientRect().top
+        let domHeight = dom.current.getBoundingClientRect().height
+        let height = window.innerHeight
+        if (domTop > 0 && height - domTop >= domHeight / 5) {
+          setVisible(true)
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <Wrap>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='wrap'>
           <div className='privacy'>
             <div className='Pri'>
