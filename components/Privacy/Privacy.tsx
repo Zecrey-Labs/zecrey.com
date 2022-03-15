@@ -9,17 +9,6 @@ const Wrap = styled.div`
     margin: 0 auto;
     margin-bottom: 4rem;
   }
-  .Whitelizard {
-    width: 6.471rem;
-    height: 7.094rem;
-    position: absolute;
-    top: -3rem;
-    left: 114.482rem;
-    z-index: 10;
-  }
-  .Whitelizard img {
-    width: 100%;
-  }
   .privacy {
     position: absolute;
     width: 100%;
@@ -121,9 +110,6 @@ function Privacy() {
     <>
       <Wrap>
         <div className='wrap'>
-          <div className='Whitelizard'>
-            <img src='/privacy/WhiteLizard.png' alt='' />
-          </div>
           <div className='privacy'>
             <div className='Pri'>
               <img src='/privacy/privacy.png' alt='' />
