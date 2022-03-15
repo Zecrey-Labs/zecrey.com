@@ -203,6 +203,10 @@ body > a:first-of-type {
   src: local('Leelawadee UI'),
     url('../public/fonts/LeelawUI.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Zing Rust';
+  src: url(../public/fonts/ZingRustDemo-Base.otf);
+}
 
 html {
   font-size: calc(125vw / 256);
