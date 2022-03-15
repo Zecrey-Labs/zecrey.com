@@ -8,10 +8,14 @@ const Wrap = styled.div`
   width: 10rem;
   height: 12rem;
   border-radius: 1rem;
+  transition: all 0.5s;
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     .tip-wrap {
       display: block;
+    }
+    svg {
+      transform: scale(1.1);
     }
   }
 `
@@ -48,7 +52,7 @@ const Link = styled.a`
   font-weight: 500;
   font-size: 1.4rem;
   svg {
-    widht: 0.6rem;
+    width: 0.6rem;
     height: 1rem;
     color: inherit;
   }
@@ -66,15 +70,20 @@ const Trigger = styled(CenterFlex)<{
   flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
+  &:hover label {
+    color: white;
+  }
   .icon-wrap {
     display: flex;
     align-items: center;
     pointer-events: none;
-    height: 10rem;
+    margin-bottom: 11px;
+    margin-top: 10px;
     svg {
       width: ${props => props.size?.width || '7rem'};
       height: ${props => props.size?.height || '7rem'};
       color: #f1f1f1;
+      transition: all 0.5s;
     }
   }
   label {
@@ -82,7 +91,7 @@ const Trigger = styled(CenterFlex)<{
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.5rem;
-    color: #fff;
+    color: #f1f1f1;
     text-align: center;
     text-transform: capitalize;
     pointer-events: none;
