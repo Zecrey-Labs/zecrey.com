@@ -12,7 +12,7 @@ const Container = styled.div`
   border-bottom: 0.1rem solid #4e4e4e;
   background: rgba(56, 56, 56, 0.8);
   z-index: 1000;
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(50px);
   /* position: relative; */
   &.header-container {
     border-bottom: 0.1rem solid#DADADA;
