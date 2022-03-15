@@ -14,6 +14,28 @@ const Wrap = styled.div`
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 4rem;
+    .img-span {
+      position: absolute;
+      height: 1.4rem;
+      left: 91.3rem;
+      top: 28.6rem;
+      display: flex;
+      align-items: center;
+      .application {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.0144706rem;
+        color: #f1f1f1;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+      }
+    }
   }
   .webapp {
     min-width: 12rem;
@@ -41,29 +63,6 @@ const Wrap = styled.div`
   .backgroundimage-img {
     width: 68.489rem;
     height: 47.379rem;
-  }
-  .application {
-    position: absolute;
-    height: 1.4rem;
-    left: 91.3rem;
-    top: 28.6rem;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.0144706rem;
-    color: #f1f1f1;
-  }
-  .butteryhatch {
-    width: 1.8rem;
-    height: 1.8rem;
-    position: absolute;
-    left: 105.8rem;
-    top: 28.3rem;
-  }
-  .butteryhatch-img {
-    width: 100%;
   }
   .crypto {
     width: 25.9rem;
@@ -117,14 +116,9 @@ function ZecreyWebApp() {
               layout='fill'
             />
           </div>
-          <div className='application'>Zecrey Web Application</div>
-          <div className='butteryhatch'>
-            <Image
-              src='/Zecreywebapp/butteryhatch.png'
-              className='butteryhatch-img'
-              alt='zecrey'
-              layout='fill'
-            />
+          <div className='img-span'>
+            <div className='application'>Zecrey Web Application</div>
+            <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
           </div>
           <div className='crypto'>Crypto Experience Much than more.</div>
           <div className='launchapp'>Launch App</div>

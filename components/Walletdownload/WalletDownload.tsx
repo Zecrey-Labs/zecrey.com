@@ -14,6 +14,28 @@ const Wrap = styled.div`
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 4rem;
+    .img-span {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      height: 1.4rem;
+      left: 6rem;
+      top: 28.6rem;
+      .privacy {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.0144706rem;
+        color: #f1f1f1;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+      }
+    }
   }
   .extensionwallet {
     min-width: 12.7rem;
@@ -32,29 +54,6 @@ const Wrap = styled.div`
     font-weight: bold;
     font-size: 1.1rem;
     color: #2ad4d8;
-  }
-  .privacy {
-    position: absolute;
-    height: 1.4rem;
-    left: 6rem;
-    top: 28.6rem;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.0144706rem;
-    color: #f1f1f1;
-  }
-  .smallcircle {
-    width: 1.8rem;
-    height: 1.8rem;
-    position: absolute;
-    left: 21.4rem;
-    top: 27.9rem;
-  }
-  .smallcircle img {
-    width: 100%;
   }
   .oneclick {
     width: 28.4rem;
@@ -120,8 +119,8 @@ function WalletDownload() {
           <div className='extensionwallet'>
             <p>Extension Wallet</p>
           </div>
-          <span className='privacy'>Privacy Wallet Extension</span>
-          <div className='smallcircle'>
+          <div className='img-span'>
+            <span className='privacy'>Privacy Wallet Extension</span>
             <img src='/walletdownload/smallcircle.png' alt='' />
           </div>
           <div className='oneclick'>Privacy does matter Just one-click.</div>

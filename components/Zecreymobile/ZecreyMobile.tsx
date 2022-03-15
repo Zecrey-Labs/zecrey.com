@@ -14,6 +14,28 @@ const Wrap = styled.div`
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 4rem;
+    .img-span {
+      display: flex;
+      align-items: center;
+      height: 1.4rem;
+      position: absolute;
+      left: 6rem;
+      top: 28.6rem;
+      .zecreymobile {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.0144706rem;
+        color: #f1f1f1;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+      }
+    }
   }
   .mobile {
     min-width: 11rem;
@@ -30,29 +52,6 @@ const Wrap = styled.div`
     font-weight: bold;
     font-size: 1.1rem;
     color: #2ad4d8;
-  }
-  .zecreymobile {
-    height: 1.4rem;
-    position: absolute;
-    left: 6rem;
-    top: 28.6rem;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.0144706rem;
-    color: #f1f1f1;
-  }
-  .mobilephone {
-    width: 1.8rem;
-    height: 1.8rem;
-    position: absolute;
-    left: 14.8rem;
-    top: 28.3rem;
-  }
-  .mobilephone-img {
-    width: 100%;
   }
   .anywhere {
     width: 26rem;
@@ -110,14 +109,9 @@ function ZecreyMobile() {
       <Wrap>
         <div className='outermostlayer'>
           <div className='mobile'>Zecrey Mobile</div>
-          <div className='zecreymobile'>Zecrey Mobile</div>
-          <div className='mobilephone'>
-            <Image
-              src='/zecreymobile/mobilephone.png'
-              className='mobilephone-img'
-              alt='zecrey'
-              layout='fill'
-            />
+          <div className='img-span'>
+            <div className='zecreymobile'>Zecrey Mobile</div>
+            <img src='/zecreymobile/mobilephone.png' alt='zecrey' />
           </div>
           <div className='anywhere'>Anywhere,anytime in your pocket.</div>
           <div className='comingsoon'>Coming Soon</div>
