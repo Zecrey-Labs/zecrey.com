@@ -41,12 +41,12 @@ const Wrap = styled.div`
     position: absolute;
     left: 11.25%;
     right: 11.25%;
-    top: 28.05%;
+    top: 21.95%;
     bottom: 55.37%;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: 14px;
     line-height: 2.1rem;
     text-align: center;
     letter-spacing: 0.0192941rem;
