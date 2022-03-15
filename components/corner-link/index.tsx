@@ -5,7 +5,7 @@ const Link = styled.a`
   position: absolute;
   color: #2ad4d8;
   right: 0;
-  bottom: 0;
+  bottom: -15px;
   cursor: pointer;
   &:hover {
     span {
