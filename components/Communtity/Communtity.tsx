@@ -145,36 +145,32 @@ const items: {
   {
     label: 'twitter',
     icon: <Icon name='twitter' />,
-    tip:
-      'Understand the latest progress of the project and browse the technical details of the project in depth.',
-    linkLabel: 'View',
+    tip: 'Twitter：Follow @zecreyprotocol for latest annoucements.',
+    linkLabel: 'Join',
     link: 'https://twitter.com/zecreyprotocol',
     size: { width: '6.7rem', height: '5.4rem' }
   },
   {
     label: 'telegram',
     icon: <Icon name='telegram' />,
-    tip:
-      'Understand the latest progress of the project and browse the technical details of the project in depth.',
-    linkLabel: 'View',
+    tip: 'Telegram：Join Zecrey community for discussion.',
+    linkLabel: 'Join',
     link: 'https://t.me/zecrey',
     size: { width: '6.7rem', height: '5.6rem' }
   },
   {
     label: 'medium',
     icon: <Icon name='medium' />,
-    tip:
-      'Understand the latest progress of the project and browse the technical details of the project in depth.',
-    linkLabel: 'View',
+    tip: 'Medium： Learn Zecrey news, progress and technological paper.',
+    linkLabel: 'Join',
     link: 'https://medium.com/@zecrey',
     size: { width: '5.6rem', height: '5.6rem' }
   },
   {
     label: 'discord',
     icon: <Icon name='discord' />,
-    tip:
-      'Understand the latest progress of the project and browse the technical details of the project in depth.',
-    linkLabel: 'View',
+    tip: 'Discord：Chat with Zecrey members, surf in the privacy world.',
+    linkLabel: 'Join',
     link: 'https://discord.com/invite/U98ghQsJE5',
     size: { width: '5.6rem', height: '6.4rem' }
   }
