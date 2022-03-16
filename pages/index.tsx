@@ -70,7 +70,7 @@ export default function Home() {
         ]}>
         <Partners />
       </CardWrap>
-      <Communtity />
+      <Communtity id='join' />
       <Bottom />
     </Layout>
   )

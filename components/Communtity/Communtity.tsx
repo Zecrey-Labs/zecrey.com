@@ -176,7 +176,7 @@ const items: {
   }
 ]
 
-const Communtity = () => {
+const Communtity = (props: { id: string }) => {
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -198,7 +198,7 @@ const Communtity = () => {
   }, [])
   return (
     <>
-      <Wrap ref={dom} className={classNames({ visible })}>
+      <Wrap ref={dom} className={classNames({ visible })} id={props.id}>
         <div className='communtity'>
           <div className='headline'>
             <p>Join Communtity</p>

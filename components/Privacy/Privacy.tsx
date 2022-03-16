@@ -246,8 +246,15 @@ function Privacy() {
                 cross-chain asset swap.
               </p>
             </div>
-            <span className='whitepaper'>White Paper {'>'}</span>
-            <span className='join'>Join Community {'>'}</span>
+            <a
+              className='whitepaper'
+              href='https://docsend.com/view/ntcsmt7meu84gcqk'
+              target='_blank'>
+              White Paper {'>'}
+            </a>
+            <a className='join' href='#join'>
+              Join Community {'>'}
+            </a>
             <div className='player'>
               <img src='/video/video.webp' alt='' />
               <div className='mask'>
