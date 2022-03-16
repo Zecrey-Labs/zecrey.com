@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
+import Icon from '../common/Icon'
 
 const Wrap = styled.div`
   .wrap {
@@ -190,10 +191,29 @@ const Wrap = styled.div`
           line-height: 22px;
           color: #2ad4d9;
         }
-        img {
+        div {
           position: absolute;
-          right: 14px;
-          cursor: pointer;
+          top: -4px;
+          right: 16px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+          &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+            svg {
+              path {
+                opacity: 1;
+                fill: white;
+              }
+            }
+          }
         }
       }
       video {
@@ -275,11 +295,9 @@ function Privacy() {
             <div className='video'>
               <div className='meet1'>
                 <p>Meet Zecrey:Wallet Introduction(2021)</p>
-                <img
-                  src='/video/close.svg'
-                  alt=''
-                  onClick={() => setVideo(false)}
-                />
+                <div onClick={() => setVideo(false)}>
+                  <Icon name='close' />
+                </div>
               </div>
               <video
                 src='/video/video.mp4'
