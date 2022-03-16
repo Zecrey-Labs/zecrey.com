@@ -198,6 +198,7 @@ const Wrap = styled.div`
       }
       video {
         margin-top: 35px;
+        object-fit: fill;
       }
     }
   }
