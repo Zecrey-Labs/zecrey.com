@@ -7,7 +7,7 @@ const Wrap = styled.div`
     height: 30.5rem;
     background: rgba(42, 42, 42, 0.5);
     border: 0.1rem solid rgba(255, 255, 255, 0.1);
-    /* backdrop-filter: blur(2.71828rem); */
+    backdrop-filter: blur(50px);
     position: relative;
     margin: 0 auto;
   }
