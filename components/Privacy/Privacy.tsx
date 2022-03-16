@@ -91,6 +91,31 @@ const Wrap = styled.div`
     opacity: 0;
     border: 0.103125rem solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
+    img {
+      width: 55rem;
+      height: 30.9rem;
+      border-radius: 10px;
+    }
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 22;
+      width: 55rem;
+      height: 30.9rem;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1.03125px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 11.6rem;
+        height: 11.6rem;
+        cursor: pointer;
+      }
+    }
   }
   .meet {
     min-width: 27.6rem;
@@ -110,7 +135,8 @@ const Wrap = styled.div`
     opacity: 0;
   }
   &.visible {
-    .Pri {
+    .Pri,
+    .player {
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
     }
     .text p {
@@ -120,9 +146,6 @@ const Wrap = styled.div`
     .join,
     .meet p {
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.3s forwards;
-    }
-    .player {
-      animation: move33 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
     }
   }
   @keyframes move22 {
@@ -135,14 +158,47 @@ const Wrap = styled.div`
       opacity: 1;
     }
   }
-  @keyframes move33 {
-    0% {
-      transform: translateY(1.3rem);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 0.6;
+  .video-mask {
+    position: fixed;
+    z-index: 2224;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    background: rgba(0, 0, 0, 0.3);
+    .video {
+      background: rgba(56, 56, 56, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      width: 1256px;
+      height: 705px;
+      margin: 25px auto;
+      padding: 9px 25px 30px;
+      position: relative;
+      .meet1 {
+        width: 100%;
+        position: absolute;
+        top: 9px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-family: 'Lexend';
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 22px;
+          color: #2ad4d9;
+        }
+        img {
+          position: absolute;
+          right: 14px;
+          cursor: pointer;
+        }
+      }
+      video {
+        margin-top: 35px;
+      }
     }
   }
 `
@@ -167,6 +223,7 @@ function Privacy() {
       document.removeEventListener('scroll', handleScroll)
     }
   }, [])
+  const [video, setVideo] = useState(false)
   return (
     <>
       <Wrap ref={dom} className={classNames({ visible })}>
@@ -191,17 +248,39 @@ function Privacy() {
             <span className='whitepaper'>White Paper {'>'}</span>
             <span className='join'>Join Community {'>'}</span>
             <div className='player'>
-              <video
-                src='/video/video.mp4'
-                style={{ width: '55rem', height: '30.9rem' }}
-                controls // control panel
-              ></video>
+              <img src='/video/video.webp' alt='' />
+              <div className='mask'>
+                <img
+                  src='/video/play.svg'
+                  alt=''
+                  onClick={() => setVideo(true)}
+                />
+              </div>
             </div>
             <div className='meet'>
               <p>Meet Zecrey:Wallet Introduction(2021)</p>
             </div>
           </div>
         </div>
+        {video ? (
+          <div className='video-mask'>
+            <div className='video'>
+              <div className='meet1'>
+                <p>Meet Zecrey:Wallet Introduction(2021)</p>
+                <img
+                  src='/video/close.svg'
+                  alt=''
+                  onClick={() => setVideo(false)}
+                />
+              </div>
+              <video
+                src='/video/video.mp4'
+                style={{ width: '1205px', height: '631px' }}
+                controls // control panel
+                autoPlay></video>
+            </div>
+          </div>
+        ) : null}
       </Wrap>
     </>
   )

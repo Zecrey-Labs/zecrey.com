@@ -101,6 +101,7 @@ const Wrap = styled.div`
       background: #ffffff;
       box-sizing: border-box;
       color: #2a2a2a;
+      cursor: pointer;
     }
   }
   .rightpicture {
@@ -172,11 +173,10 @@ function WalletDownload() {
           <div className='oneclick'>Privacy does matter Just one-click.</div>
           <div className='download'>Download</div>
           <div className='rightpicture'>
-            <Image
-              src='/walletdownload/largeIcon.png'
+            <img
+              src='/walletdownload/largeIcon.webp'
               className='cross'
               alt='zecrey'
-              layout='fill'
             />
           </div>
         </div>

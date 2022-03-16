@@ -65,8 +65,8 @@ const Wrap = styled.div`
     opacity: 0;
   }
   .backgroundimage-img {
-    width: 68.489rem;
-    height: 47.379rem;
+    width: 100%;
+    height: 100%;
   }
   .crypto {
     opacity: 0;
@@ -155,11 +155,10 @@ function ZecreyWebApp() {
         <div className='outermostlayer'>
           <div className='webapp'>Zecrey Web App</div>
           <div className='backgroundbox'>
-            <Image
-              src='/Zecreywebapp/WebApp.png'
+            <img
+              src='/Zecreywebapp/WebApp.webp'
               className='backgroundimage-img'
               alt='zecrey'
-              layout='fill'
             />
           </div>
           <div className='img-span'>

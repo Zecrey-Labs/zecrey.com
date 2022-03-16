@@ -162,7 +162,7 @@ function ZecreyMobile() {
           <div className='anywhere'>Anywhere,anytime in your pocket.</div>
           <div className='comingsoon'>Coming Soon</div>
           <div className='iphone'>
-            <img src='/zecreymobile/cellphone .png' alt='' />
+            <img src='/zecreymobile/cellphone.webp' alt='' />
           </div>
         </div>
       </Wrap>
