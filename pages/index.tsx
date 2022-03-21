@@ -29,8 +29,7 @@ export default function Home() {
           size: { width: '35.2rem', height: '25.2rem' }
         }}
         text={[
-          'Zecrey wallet is an all-in-one wallet that can manage multi-chain assets from various blockchains. Cross-chain bridge with privacy protection is the core function of Zecrey, which contains the "Deposit- Withdraw" module.',
-          'As a layer 2 protocol based on zk-rollup, Zecrey gathers several functoins like transfer, swap and lock&unlock, etc. These functions show high efficiency on zk-rollup.'
+          'Not just a wallet. With Zecrey you can transfer, swap, stake, and much more across different blockchains with a high level of privacy and transaction speed thanks to a layer-2 architecture based on zk-rollup.'
         ]}>
         <BubbleCard />
       </CardWrap>

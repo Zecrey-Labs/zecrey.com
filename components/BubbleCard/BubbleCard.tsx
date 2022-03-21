@@ -35,7 +35,7 @@ const items: {
       'Besides usual transfer, Zecrey develops a unique one-to-many transfer function with privacy protection, which improves capital efficiency and has high security.'
   },
   {
-    label: 'defi',
+    label: 'deFi',
     icon: <Icon name='defi' />
   },
   {
