@@ -59,17 +59,7 @@ export default function Home() {
       <WalletDownload />
       <ZecreyWebApp />
       <ZecreyMobile />
-      <CardWrap
-        title='Partners'
-        backgroundIcon={{
-          svg: <Icon name='users' />, // todo: repace with svg element
-          size: { width: '31.3rem', height: '24rem' }
-        }}
-        text={[
-          `During the development of the project, each partner has given Zecrey generous help, which is a huge step for the advancement of the project. In the future, Zecrey will maintain a good relationship with them.`
-        ]}>
-        <Partners />
-      </CardWrap>
+      <Partners />
       <Communtity id='join' />
       <Bottom />
     </Layout>

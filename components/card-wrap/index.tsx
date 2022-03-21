@@ -148,7 +148,7 @@ const CardWrap = (props: {
   }, [])
 
   return (
-    <Box ref={dom} className={classNames({ visible })}>
+    <Box ref={dom} className={classNames('show', { visible })}>
       <IconWrap>
         <BackgoundIcon size={props.backgroundIcon.size}>
           {props.backgroundIcon.svg}
