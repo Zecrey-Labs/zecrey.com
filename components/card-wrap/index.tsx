@@ -30,6 +30,7 @@ const Title = styled.div`
   font-size: 2.4rem;
   line-height: 3rem;
   width: 20rem;
+  margin-left: 19px;
   background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +79,7 @@ const BackgoundIcon = styled.div<{
   }
 `
 const Text = styled.div`
-  width: 81.9rem;
+  width: 79rem;
   p {
     font-family: IBM Plex Sans;
     font-size: 1.4rem;

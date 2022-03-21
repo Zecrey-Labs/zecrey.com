@@ -9,7 +9,7 @@ const Wrap = styled(CenterFlex)`
   position: relative;
   height: 100%;
   .items-wrap {
-    width: 83.5rem;
+    width: 80rem;
     justify-content: space-between;
   }
 `

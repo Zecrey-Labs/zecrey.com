@@ -130,7 +130,7 @@ const Text = styled.div`
 `
 const Text2 = styled.div`
   position: absolute;
-  width: 45.6rem;
+  width: 56.6rem;
   top: 31.2rem;
   left: 6rem;
   font-family: IBM Plex Sans;

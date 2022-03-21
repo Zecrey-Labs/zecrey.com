@@ -3,11 +3,20 @@ import { ReactNode } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
 
-const Wrap = styled.div`
+const Wrap = styled.div<{
+  size?: {
+    width: string
+    height: string
+    marginLeft?: string
+    marginRight?: string
+  }
+}>`
   position: relative;
   width: 10rem;
   height: 12rem;
   border-radius: 1rem;
+  margin-left: ${props => props.size?.marginLeft || 0};
+  margin-right: ${props => props.size?.marginRight || 0};
   transition: all 0.6s;
   &:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -129,10 +138,15 @@ const BubbleButton = (props: {
   tip?: string
   linkLabel?: string
   link?: string
-  size?: { width: string; height: string }
+  size?: {
+    width: string
+    height: string
+    marginLeft?: string
+    marginRight?: string
+  }
 }) => {
   return (
-    <Wrap className='bubble-button'>
+    <Wrap className='bubble-button' size={props.size}>
       {props.tip && (
         <TipWrap className='tip-wrap'>
           <Tip className='tip'>{props.tip}</Tip>

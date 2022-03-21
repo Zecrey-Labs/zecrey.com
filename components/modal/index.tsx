@@ -8,7 +8,7 @@ import ZecreyEcosystemMap from '../Ecosystem/zecreyEcosystemMap'
 const Wrap = styled.div`
   position: absolute;
   top: 0;
-  left: calc(100% - 81.9rem);
+  left: calc(100% - 79rem);
 `
 const Trigger = styled(FlatBtn)`
   cursor: pointer;

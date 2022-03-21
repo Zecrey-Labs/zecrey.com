@@ -17,17 +17,22 @@ const Wrap = styled(CenterFlex)`
 const items: {
   label: string
   icon: ReactNode
-  size?: { width: string; height: string }
+  size?: {
+    width: string
+    height: string
+    marginLeft?: string
+    marginRight?: string
+  }
 }[] = [
   {
     label: 'ethereum',
     icon: <Icon name='ethereum' />,
-    size: { width: '4rem', height: '6rem' }
+    size: { width: '4rem', height: '6rem', marginLeft: '24px' }
   },
   {
     label: 'polygon',
     icon: <Icon name='polygon' />,
-    size: { width: '6rem', height: '5.5rem' }
+    size: { width: '6rem', height: '6rem' }
   },
   {
     label: 'BNB Chain',
@@ -37,12 +42,12 @@ const items: {
   {
     label: 'NEAR',
     icon: <Icon name='near' />,
-    size: { width: '5rem', height: '5rem' }
+    size: { width: '5rem', height: '6rem' }
   },
   {
     label: 'avalanche',
     icon: <Icon name='avalanche' />,
-    size: { width: '6rem', height: '6rem' }
+    size: { width: '6rem', height: '6rem', marginRight: '15px' }
   }
 ]
 

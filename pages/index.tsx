@@ -40,7 +40,7 @@ export default function Home() {
           size: { width: '32.7rem', height: '21.6rem' }
         }}
         text={[
-          `Zecrey is an early adopter of integrated multi-chain networks. In Zecrey multi-chain ecosystem, you can experience features such as multi-chain wallets, assets aggregation and cross-chain bridges, which will greatly improve assets utilization efficiency in the crypto world. At present, the Zecrey multi-chain ecosystem supports five blockchains. In the future, more blockchains will join the Zecrey multi-chain ecosystem.`
+          `You have at your finger tips the ability to view, manage and aggregate all your digital assets across various blockchains with Zecrey's wallet. Gone are the days where you need to go through different websites and wallets to see all of your digital assets.`
         ]}>
         <Multichainbrand />
       </CardWrap>
@@ -51,7 +51,7 @@ export default function Home() {
           size: { width: '33.3rem', height: '21.1rem' }
         }}
         text={[
-          `Zecrey protocol supports Layer 1 and Layer 2 networks, which determines that Zecrey will have an integrated network structure and prosperous ecosystem in the future. Whether the management and aggregation of multi-chain assets, or the access of NFTs and the integration of blockchain games, even DEX/OTC services, these will all be realized in Zecrey ecosystem. In addition, Zecrey Layer 2 will build an abundant payment scene, which will cover most aspects of future life.`
+          `Supporting both Layer 1 & 2 Networks, users taking advantage of Zecrey's robust ecosystem will have all of their bases covered. Managing & aggregating multi-chain assets, NFTs, Blockchain games, DEX/OTC services, and Payment solutions are just a few clicks away.`
         ]}>
         <Ecosystem />
       </CardWrap>
