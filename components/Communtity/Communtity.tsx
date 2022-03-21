@@ -45,11 +45,11 @@ const Wrap = styled.div`
   }
   .introduce {
     opacity: 0;
-    width: 99.2rem;
+    width: 89rem;
     height: 8.6rem;
     position: absolute;
-    left: 11.25%;
-    right: 11.25%;
+    left: 50%;
+    margin-left: -44.5rem;
     top: 21.95%;
     bottom: 55.37%;
     font-family: IBM Plex Sans;
@@ -212,12 +212,12 @@ const Communtity = (props: { id: string }) => {
           </div>
           <div className='introduce'>
             <p>
-              Zecrey is committed to promoting the globalization of projects. To
-              this end, we have established communities on different platforms.
-              In the community, you can communicate with zecrey users all over
-              the world, get the latest progress of the project progress,
-              understand the technical principles, and even discuss the
-              technical details with the development team.
+              Zecrey team is dedicated to globalization development of the
+              project. In our communities, developers and users are at liberty
+              to communicate with each other about Zecrey, acquire the latest
+              progress of the project, get knowledge of the technology
+              background, and even discuss the technical details with the
+              development team.
             </p>
           </div>
           <div className='circle'>
