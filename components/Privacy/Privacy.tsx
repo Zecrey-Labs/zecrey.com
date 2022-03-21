@@ -7,7 +7,7 @@ const Wrap = styled.div`
   .wrap {
     position: relative;
     width: 128rem;
-    height: 50.9rem;
+    height: 509px;
     margin: 0 auto;
     margin-bottom: 4rem;
   }
@@ -32,12 +32,13 @@ const Wrap = styled.div`
   }
   .Pri img {
     width: 100%;
+    margin-top: -10px;
   }
   .text {
     width: 55rem;
     height: 9.5rem;
     position: absolute;
-    top: 23.5rem;
+    top: 21.5rem;
     left: 6rem;
   }
   .text p {
@@ -55,7 +56,7 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.8rem;
     position: absolute;
-    top: 37.9rem;
+    top: 43.9rem;
     left: 6rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -70,7 +71,7 @@ const Wrap = styled.div`
     width: 12rem;
     height: 1.8rem;
     position: absolute;
-    top: 37.9rem;
+    top: 43.9rem;
     left: 19.2rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -83,7 +84,7 @@ const Wrap = styled.div`
   }
   .player {
     width: 55rem;
-    height: 30.9rem;
+    height: 309px;
     position: absolute;
     left: 67rem;
     top: 10rem;
@@ -94,7 +95,7 @@ const Wrap = styled.div`
     border-radius: 1rem;
     img {
       width: 55rem;
-      height: 30.9rem;
+      height: 100%;
       border-radius: 10px;
     }
     .mask {
@@ -103,7 +104,7 @@ const Wrap = styled.div`
       left: 0;
       z-index: 22;
       width: 55rem;
-      height: 30.9rem;
+      height: 100%;
       background: rgba(0, 0, 0, 0.6);
       border: 1.03125px solid rgba(255, 255, 255, 0.3);
       border-radius: 10px;
@@ -122,7 +123,7 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 42.1rem;
+    top: 45rem;
     left: 80.7rem;
   }
   .meet p {
@@ -255,15 +256,21 @@ function Privacy() {
             </div>
             <div className='text'>
               <p>
-                Zecrey is an ayer 2 privacy protocol based on zk-rollup, which
-                can bring cross-chain privacy to the multi-public chain ecology,
-                and can solve the two major problems of privacy and isolation in
-                the blockchain today.{' '}
+                Zecrey is a zk-rollup based Layer 2 protocol bringing crosschain
+                support and privacy to your digital assets. The two major
+                problems facing the blockchain community: Lack of Privacy &
+                Isolation in a diverse multi-chain ecosystem.
               </p>
               <p>
-                Zecrey privacy cross-chain solution has two core
-                functionalities: privacy cross-chain bridge and privacy
-                cross-chain asset swap.
+                Zecrey protocol addresses this with two core functionalities:
+                Cross-chain Bridge & DEX-Based Asset Swap where your
+                transactions are not privy to the public eye.
+              </p>{' '}
+              <p>
+                Zecrey provides a reliable and safe crosschain solution, with
+                its security rooted in Layer 1s. And Zecrey is also a
+                well-designed product aggregating assets and liquidity with a
+                user-friendly wallet as an entrance to multiple blockchains.
               </p>
             </div>
             <a
