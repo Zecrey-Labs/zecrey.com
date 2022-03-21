@@ -59,7 +59,7 @@ const Wrap = styled.div`
     color: #2ad4d8;
   }
   .oneclick {
-    width: 28.4rem;
+    width: 29.4rem;
     height: 6.6rem;
     position: absolute;
     height: 6.6rem;
@@ -170,7 +170,7 @@ function WalletDownload() {
             <span className='privacy'>Privacy Wallet Extension</span>
             <img src='/walletdownload/smallcircle.png' alt='' />
           </div>
-          <div className='oneclick'>Privacy does matter Just one-click.</div>
+          <div className='oneclick'>Your Privacy Matters with One-Click</div>
           <div className='download'>Download</div>
           <div className='rightpicture'>
             <img

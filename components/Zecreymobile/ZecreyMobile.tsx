@@ -113,9 +113,11 @@ const Wrap = styled.div`
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
     }
     .img-span,
-    .anywhere,
-    .comingsoon {
+    .anywhere {
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+    .comingsoon {
+      animation: move24 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
     }
   }
   @keyframes move22 {
@@ -126,6 +128,16 @@ const Wrap = styled.div`
     100% {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+  @keyframes move24 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0.5;
     }
   }
 `
@@ -159,7 +171,7 @@ function ZecreyMobile() {
             <div className='zecreymobile'>Zecrey Mobile</div>
             <img src='/zecreymobile/mobilephone.png' alt='zecrey' />
           </div>
-          <div className='anywhere'>Anywhere,anytime in your pocket.</div>
+          <div className='anywhere'>Abilities at Your Fingertips</div>
           <div className='comingsoon'>Coming Soon</div>
           <div className='iphone'>
             <img src='/zecreymobile/cellphone.webp' alt='' />

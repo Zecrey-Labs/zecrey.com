@@ -18,7 +18,7 @@ const Wrap = styled.div`
     .img-span {
       position: absolute;
       height: 1.4rem;
-      left: 91.3rem;
+      left: 87.3rem;
       top: 28.6rem;
       display: flex;
       align-items: center;
@@ -70,10 +70,10 @@ const Wrap = styled.div`
   }
   .crypto {
     opacity: 0;
-    width: 25.9rem;
+    width: 32.9rem;
     height: 6.6rem;
     position: absolute;
-    left: 71.33%;
+    left: 68.33%;
     right: 8.44%;
     top: calc(50% - 6.6rem / 2 + 8.95rem);
     font-family: Lexend;
@@ -90,7 +90,7 @@ const Wrap = styled.div`
     width: 11.6rem;
     height: 2.6rem;
     position: absolute;
-    left: 71.33%;
+    left: 68.5%;
     right: 19.61%;
     top: 78.39%;
     bottom: 16.5%;
@@ -112,9 +112,11 @@ const Wrap = styled.div`
     }
     .backgroundbox,
     .img-span,
-    .crypto,
-    .launchapp {
+    .crypto {
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+    .launchapp {
+      animation: move24 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
     }
   }
   @keyframes move22 {
@@ -125,6 +127,16 @@ const Wrap = styled.div`
     100% {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+  @keyframes move24 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0.5;
     }
   }
 `
@@ -165,8 +177,10 @@ function ZecreyWebApp() {
             <div className='application'>Zecrey Web Application</div>
             <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
           </div>
-          <div className='crypto'>Crypto Experience Much than more.</div>
-          <div className='launchapp'>Launch App</div>
+          <div className='crypto'>
+            Streamlined Experience Simple, Yet Robust
+          </div>
+          <div className='launchapp'>Coming Soon</div>
         </div>
       </Wrap>
     </>
