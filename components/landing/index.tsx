@@ -219,14 +219,15 @@ const Landing = () => {
         </Box>
         <Label>Zecrey Protocal</Label>
         <Text>
-          Bringing Cross-chain Privacy to Digital Assets.
+          A turn-key solution for Cross-chain and privacy
           {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
         </Text>
         <Text2>
-          Zecrey is a zk-rollup-based layer 2 privacy protocol featuring
-          generalized cross-chain bridge, high-security cross-chain swap and
-          high-efficiency privacy, bringing a reliable cross-chain solution to
-          blockchain ecosystems.
+          A turn-key, Layer 2 privacy solution for cross-chain transactions and
+          asset management based on Zero-knowledge (zk) Roll-Ups. With Zecrey’s
+          L2 protocol you can easily manage, swap and bridge assets across
+          multiple chains, all while knowing your transactions are private and
+          protected from malicious arbitrageurs.
         </Text2>
         <Video
           src='/Zecrey_3D.webm'

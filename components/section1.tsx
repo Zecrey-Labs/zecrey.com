@@ -353,9 +353,9 @@ export const Section1 = () => {
         <Img src={'/section1/circle.svg'} />
       </h2>
       <div className='banner'>
-        Bringing Cross-chain
+        A turn-key solution for
         <br />
-        Privacy to Digital Assets
+        Cross-chain and privacy
       </div>
       <div className='available'>
         | Privacy-Wallet Application now available |
