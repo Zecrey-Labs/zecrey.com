@@ -18,6 +18,12 @@ const Wrap = styled.div`
     position: relative;
     margin: 0 auto;
     margin-bottom: 4rem;
+    .jump {
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      top: -177px;
+    }
   }
   .headline {
     opacity: 0;
@@ -145,7 +151,7 @@ const items: {
   {
     label: 'twitter',
     icon: <Icon name='twitter' />,
-    tip: 'Twitter：Follow @zecreyprotocol for latest annoucements.',
+    tip: 'Follow @zecreyprotocol for latest annoucements.',
     linkLabel: 'Join',
     link: 'https://twitter.com/zecreyprotocol',
     size: { width: '6.7rem', height: '5.4rem' }
@@ -153,7 +159,7 @@ const items: {
   {
     label: 'telegram',
     icon: <Icon name='telegram' />,
-    tip: 'Telegram：Join Zecrey community for discussion.',
+    tip: 'Join Zecrey community for discussion.',
     linkLabel: 'Join',
     link: 'https://t.me/zecrey',
     size: { width: '6.7rem', height: '5.6rem' }
@@ -161,7 +167,7 @@ const items: {
   {
     label: 'medium',
     icon: <Icon name='medium' />,
-    tip: 'Medium： Learn Zecrey news, progress and technological paper.',
+    tip: 'Learn Zecrey news, progress and technological paper.',
     linkLabel: 'Join',
     link: 'https://medium.com/@zecrey',
     size: { width: '5.6rem', height: '5.6rem' }
@@ -169,7 +175,7 @@ const items: {
   {
     label: 'discord',
     icon: <Icon name='discord' />,
-    tip: 'Discord：Chat with Zecrey members, surf in the privacy world.',
+    tip: 'Chat with Zecrey members, surf in the privacy world.',
     linkLabel: 'Join',
     link: 'https://discord.com/invite/U98ghQsJE5',
     size: { width: '5.6rem', height: '6.4rem' }
@@ -198,10 +204,11 @@ const Communtity = (props: { id: string }) => {
   }, [])
   return (
     <>
-      <Wrap ref={dom} className={classNames({ visible })} id={props.id}>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='communtity'>
+          <div className='jump' id={props.id}></div>
           <div className='headline'>
-            <p>Join Communtity</p>
+            <p>Join Community</p>
           </div>
           <div className='introduce'>
             <p>

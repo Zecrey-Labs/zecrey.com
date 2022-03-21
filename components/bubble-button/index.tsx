@@ -85,7 +85,7 @@ const Trigger = styled(CenterFlex)<{
       color: white;
     }
     svg {
-      transform: translateY(-5px);
+      transform: scale(1.1);
     }
   }
   .icon-wrap {
