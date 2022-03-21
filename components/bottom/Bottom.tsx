@@ -30,6 +30,7 @@ const Wrap = styled.div`
   }
   .head-li {
     color: #2ad2d6;
+    font-weight: 800;
   }
   .apps li,
   .explorer li,
