@@ -68,7 +68,7 @@ const Wrap = styled.div`
     font-family: Lexend;
     font-style: normal;
     font-weight: 800;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     line-height: 3.2rem;
     letter-spacing: 0.0313529rem;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
