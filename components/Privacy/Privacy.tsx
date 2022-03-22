@@ -56,7 +56,7 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.8rem;
     position: absolute;
-    top: 43.9rem;
+    top: 398px;
     left: 6rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -71,7 +71,7 @@ const Wrap = styled.div`
     width: 12rem;
     height: 1.8rem;
     position: absolute;
-    top: 43.9rem;
+    top: 398px;
     left: 19.2rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -123,7 +123,7 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 45rem;
+    top: 410px;
     left: 80.7rem;
   }
   .meet p {
