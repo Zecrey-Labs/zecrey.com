@@ -7,7 +7,7 @@ const Wrap = styled.div`
   .wrap {
     position: relative;
     width: 128rem;
-    height: 509px;
+    height: 50.9rem;
     margin: 0 auto;
     margin-bottom: 4rem;
   }
@@ -56,7 +56,7 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.8rem;
     position: absolute;
-    top: 398px;
+    top: 37.4rem;
     left: 6rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -71,7 +71,7 @@ const Wrap = styled.div`
     width: 12rem;
     height: 1.8rem;
     position: absolute;
-    top: 398px;
+    top: 37.4rem;
     left: 19.2rem;
     font-family: IBM Plex Sans;
     font-style: normal;
@@ -84,7 +84,7 @@ const Wrap = styled.div`
   }
   .player {
     width: 55rem;
-    height: 309px;
+    height: 30.9rem;
     position: absolute;
     left: 67rem;
     top: 10rem;
@@ -123,7 +123,7 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 410px;
+    top: 42rem;
     left: 80.7rem;
   }
   .meet p {
@@ -266,12 +266,6 @@ function Privacy() {
                 Cross-chain Bridge & DEX-Based Asset Swap where your
                 transactions are not privy to the public eye.
               </p>{' '}
-              <p>
-                Zecrey provides a reliable and safe crosschain solution, with
-                its security rooted in Layer 1s. And Zecrey is also a
-                well-designed product aggregating assets and liquidity with a
-                user-friendly wallet as an entrance to multiple blockchains.
-              </p>
             </div>
             <a
               className='whitepaper'
