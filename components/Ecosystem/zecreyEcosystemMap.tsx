@@ -3,6 +3,13 @@ import styled from 'styled-components'
 import { FlatBtn } from '@/styles/global'
 
 const Wrap = styled.div`
+  position: fixed;
+  z-index: 2224;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.3);
   .ecosystemmap {
     position: fixed;
     top: 50%;
@@ -15,7 +22,7 @@ const Wrap = styled.div`
     opacity: 0.95;
     border: 0.1rem solid rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
-    z-index: 100;
+    z-index: 1000;
   }
   .map {
     width: 21.6rem;
@@ -53,13 +60,16 @@ const Wrap = styled.div`
     text-align: center;
     color: #2ad4d9;
     cursor: pointer;
+    &:hover {
+      background: #01a2b3;
+      color: white;
+    }
   }
 `
 function ZecreyEcosystemMap(props: { close: () => void }) {
   return (
     <>
       <Wrap>
-        {/* <div className='ecosystemmap' hidden={dropdown}> */}
         <div className='ecosystemmap'>
           <div className='map'>
             <p>Zecrey Ecosystem Map</p>
