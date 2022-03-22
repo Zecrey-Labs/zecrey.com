@@ -23,7 +23,7 @@ export default function Home() {
       <Landing />
       <Privacy />
       <CardWrap
-        title='Multifunctional Support'
+        title='Multiple Purposes'
         backgroundIcon={{
           svg: <Icon name='boxes' />,
           size: { width: '35.2rem', height: '25.2rem' }
@@ -34,7 +34,7 @@ export default function Home() {
         <BubbleCard />
       </CardWrap>
       <CardWrap
-        title='Multif-chain Support'
+        title='Central Hub for your Digital Assets'
         backgroundIcon={{
           svg: <Icon name='multi-chain' />,
           size: { width: '32.7rem', height: '21.6rem' }

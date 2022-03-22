@@ -178,7 +178,7 @@ function ZecreyWebApp() {
             <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
           </div>
           <div className='crypto'>
-            Streamlined Experience Simple, Yet Robust
+            Streamlined Crypto Experience Simple, Yet Robust
           </div>
           <div className='launchapp'>Coming Soon</div>
         </div>

@@ -26,41 +26,42 @@ const items: {
     label: 'swap',
     icon: <Icon name='swap' />,
     tip:
-      'Make an exchange in Zecrey native AMM DEX and add liquidity of a token-pair. Tokens burned for gas fee can be selected among mainstream tokens like ETH, REY, BNB, etc.'
+      'Make a swap and add liquidity in Zecrey native private AMM DEX. Any assets on Layer 2 could be used as gas fee.'
   },
   {
     label: 'transfer',
     icon: <Icon name='transfer' />,
     tip:
-      'Besides usual transfer, Zecrey develops a unique one-to-many transfer function with privacy protection, which improves capital efficiency and has high security.'
+      'Besides usual transfer, Zecrey develops a unique one-to-many transfer feature with privacy protection, which improves capital efficiency and has high security.'
   },
   {
     label: 'deFi',
-    icon: <Icon name='defi' />
+    icon: <Icon name='defi' />,
+    tip: 'Stake and Farm to earn rewards.'
   },
   {
     label: 'Lock/Unlock',
     icon: <Icon name='lock' />,
     tip:
-      'Gain interest with your idle funds by helping balance assets among different layer 1 blockchains. The locked funds will generate rewards with time. '
+      'Gain rewards by providing liquidity to bridges among different layer 1 blockchains. Unlock assets to Layer 2 with one click.'
   },
   {
     label: 'withdraw',
     icon: <Icon name='withdraw' />,
     tip:
-      'Take assets from layer 2 back to any layer 1 that Zecrey supports. Thereby, aggregated assets are distributed to layer 1 blockchains.'
+      'Quickly move assets to any Layer 1 to complete the cross-chain function with high security level.'
   },
   {
     label: 'deposit',
     icon: <Icon name='deposit' />,
     tip:
-      'Put layer 1 assets into layer 2 for cross-chain transactions. Assets deposited to layer 2 are aggregated and only sorted by token types.'
+      'Move assets from different Layer 1s to Zecrey Layer 2 to aggregate assets and enjoy privacy protection.'
   },
   {
     label: 'NFT Manage',
     icon: <Icon name='nft' />,
     tip:
-      'View the NFT collections of a wallet address, set a NFT as account avatar and gain rewards from NFT staking in Zecrey.'
+      'Easy way to manage your NFT collections within one interface and use them as account avatar.'
   }
 ]
 
