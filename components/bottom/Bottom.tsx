@@ -138,7 +138,7 @@ const Wrap = styled.div`
     color: #e4e4e4;
   }
   .com {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;

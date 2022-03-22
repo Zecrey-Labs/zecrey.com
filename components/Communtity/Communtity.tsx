@@ -77,7 +77,7 @@ const Wrap = styled.div`
     width: 38.398rem;
   }
   .software-p {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;

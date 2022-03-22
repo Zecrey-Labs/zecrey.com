@@ -207,6 +207,10 @@ body > a:first-of-type {
   font-family: 'Zing Rust';
   src: url(../public/fonts/ZingRustDemo-Base.otf);
 }
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(../public/fonts/Source-Sans-Pro-Regular-2.otf);
+}
 
 html {
   font-size: calc(125vw / 256);

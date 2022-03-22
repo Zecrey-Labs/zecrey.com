@@ -119,6 +119,7 @@ const Trigger = styled(CenterFlex)<{
     text-align: center;
     text-transform: capitalize;
     pointer-events: none;
+    letter-spacing: 1px;
   }
   &::before {
     content: '';
