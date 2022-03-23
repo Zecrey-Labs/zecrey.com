@@ -126,7 +126,7 @@ const navList = [
   { label: 'Home', url: '/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
   { label: 'Explorer', url: 'https://explorer.zecrey.com/' },
-  { label: 'Info', url: 'https://info.zecrey.com/' }
+  { label: 'Info', url: 'https://info.zecrey.com/', disabled: true }
 ]
 
 const Header = () => {
