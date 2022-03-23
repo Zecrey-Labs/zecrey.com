@@ -64,7 +64,7 @@ const Style = styled.div`
   padding: ${px2vw(90, 1437)} ${px2vw(201, 1437)} ${px2vw(200, 1437)}
     ${px2vw(201, 1437)};
   h2 {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: bold;
     font-size: ${px2vw(48, 1437)};
@@ -78,7 +78,7 @@ const Style = styled.div`
     -webkit-text-fill-color: transparent;
   }
   p {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 500;
     font-size: ${px2vw(24, 1437)};
@@ -135,7 +135,7 @@ const Style = styled.div`
   @media (max-width: 760px) {
     padding: ${px2vw(10, 320)} ${px2vw(45, 320)} 0 ${px2vw(50, 320)};
     h2 {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: bold;
       font-size: ${px2vw(26, 320)};
@@ -145,7 +145,7 @@ const Style = styled.div`
       margin-bottom: ${px2vw(10, 320)};
     }
     p {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-size: ${px2vw(10, 320)};
       line-height: ${px2vw(12, 320)};
       text-align: center;

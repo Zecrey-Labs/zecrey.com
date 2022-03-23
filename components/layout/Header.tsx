@@ -77,6 +77,7 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
       top: 2.4rem;
       left: 27.4rem;
       display: none;
+      z-index: -1;
     }
     .hover1 {
       background: rgba(255, 255, 255, 0.1);
@@ -87,6 +88,7 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
       top: 2.4rem;
       left: 40.4rem;
       display: none;
+      z-index: -1;
     }
   }
 `
@@ -107,7 +109,7 @@ const Download = styled(CenterFlex)`
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
     border: 0.2rem solid rgba(42, 212, 217, 0.15);
     border-radius: 3.5rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: bold;
     font-size: 1.8rem;
     color: #000;

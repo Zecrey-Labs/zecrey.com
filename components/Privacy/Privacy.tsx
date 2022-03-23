@@ -42,7 +42,7 @@ const Wrap = styled.div`
     left: 6rem;
   }
   .text p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
@@ -56,9 +56,9 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.8rem;
     position: absolute;
-    top: 37.4rem;
+    top: 41.4rem;
     left: 6rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
@@ -71,9 +71,9 @@ const Wrap = styled.div`
     width: 12rem;
     height: 1.8rem;
     position: absolute;
-    top: 37.4rem;
+    top: 41.4rem;
     left: 19.2rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
@@ -88,11 +88,7 @@ const Wrap = styled.div`
     position: absolute;
     left: 67rem;
     top: 10rem;
-    background: #000000;
-    mix-blend-mode: normal;
     opacity: 0;
-    border: 0.103125rem solid rgba(255, 255, 255, 0.3);
-    border-radius: 1rem;
     img {
       width: 55rem;
       height: 100%;
@@ -127,7 +123,7 @@ const Wrap = styled.div`
     left: 80.7rem;
   }
   .meet p {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -259,12 +255,16 @@ function Privacy() {
                 Zecrey is a zk-rollup based Layer 2 protocol bringing crosschain
                 support and privacy to your digital assets. The two major
                 problems facing the blockchain community: Lack of Privacy &
-                Isolation in a diverse multi-chain ecosystem.
+                Isolation in a diverse multi-chain ecosystem. Zecrey protocol
+                addresses this with two core functionalities: Cross-chain Bridge
+                & DEX-Based Asset Swap where your transactions are not privy to
+                the public eye.
               </p>
               <p>
-                Zecrey protocol addresses this with two core functionalities:
-                Cross-chain Bridge & DEX-Based Asset Swap where your
-                transactions are not privy to the public eye.
+                Zecrey provides a reliable and safe crosschain solution, with
+                its security rooted in Layer 1s. And Zecrey is also a
+                well-designed product aggregating assets and liquidity with a
+                user-friendly wallet as an entrance to multiple blockchains.
               </p>{' '}
             </div>
             <a

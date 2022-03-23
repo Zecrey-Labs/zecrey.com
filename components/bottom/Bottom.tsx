@@ -36,7 +36,7 @@ const Wrap = styled.div`
   .explorer li,
   .development li,
   .papers li {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
@@ -99,7 +99,7 @@ const Wrap = styled.div`
     left: 0rem;
   }
   .zecrey-protocol p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -110,7 +110,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 56.4rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -130,7 +130,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 68rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -159,7 +159,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 87.1rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;

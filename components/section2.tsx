@@ -11,7 +11,7 @@ const Styled = styled.div`
   flex-direction: column;
   align-items: center;
   h1 {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-size: ${desktopPx2vw(60)};
     font-style: normal;
     font-weight: 800;
@@ -26,7 +26,7 @@ const Styled = styled.div`
     margin-bottom: ${desktopPx2vw(22)};
   }
   h2 {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-size: ${desktopPx2vw(28)};
     font-style: normal;
     font-weight: 600;

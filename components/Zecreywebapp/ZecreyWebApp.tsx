@@ -76,7 +76,7 @@ const Wrap = styled.div`
     left: 68.33%;
     right: 8.44%;
     top: calc(50% - 6.6rem / 2 + 8.95rem);
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
     font-size: 2.4rem;
@@ -96,7 +96,7 @@ const Wrap = styled.div`
     bottom: 16.5%;
     border: 1px solid #ffffff;
     border-radius: 1.3rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -178,7 +178,7 @@ function ZecreyWebApp() {
             <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
           </div>
           <div className='crypto'>
-            Streamlined Crypto Experience Simple, Yet Robust
+            Streamlined Experience Simple, Yet Robust
           </div>
           <div className='launchapp'>Coming Soon</div>
         </div>

@@ -211,7 +211,14 @@ body > a:first-of-type {
   font-family: 'Source Sans Pro';
   src: url(../public/fonts/Source-Sans-Pro-Regular-2.otf);
 }
-
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(../public/fonts/IBMPlexSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Lexend';
+  src: url(../public/fonts/Lexend-Regular.ttf);
+}
 html {
   font-size: calc(125vw / 256);
 }

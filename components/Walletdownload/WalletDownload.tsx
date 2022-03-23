@@ -66,7 +66,7 @@ const Wrap = styled.div`
     left: 4.69%;
     right: 73.12%;
     top: calc(50% - 6.6rem / 2 + 8.95rem);
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
     font-size: 21px;
@@ -88,7 +88,7 @@ const Wrap = styled.div`
     border: 0.1rem solid #ffffff;
     box-sizing: border-box;
     border-radius: 1.3rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;

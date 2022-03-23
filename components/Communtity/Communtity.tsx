@@ -33,7 +33,7 @@ const Wrap = styled.div`
     left: 41.48%;
     right: 41.48%;
     top: calc(50% - 3rem / 2 - 16rem);
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: bold;
     font-size: 2.4rem;
@@ -52,7 +52,7 @@ const Wrap = styled.div`
     margin-left: -44.5rem;
     top: 21.95%;
     bottom: 55.37%;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

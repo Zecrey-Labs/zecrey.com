@@ -28,7 +28,7 @@ const Wrap = styled.div`
     width: 21.6rem;
     height: 2.3rem;
     margin: 0.9rem 0 0 52.2rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: 800;
     font-size: 1.8rem;
     line-height: 2.2rem;
@@ -52,7 +52,7 @@ const Wrap = styled.div`
     box-sizing: border-box;
     border-radius: 1.8rem;
     margin: 0 auto;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: bold;
     font-size: 1.6rem;

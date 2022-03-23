@@ -86,7 +86,7 @@ const Label = styled.div`
   height: 1.8rem;
   border: 0.1rem solid #2ad4d8;
   border-radius: 0.5rem;
-  font-family: Lexend;
+  font-family: 'Lexend';
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -112,7 +112,7 @@ const Text = styled.div`
   width: 47.4rem;
   top: 21.2rem;
   left: 6rem;
-  font-family: Lexend;
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: bold;
   font-size: 3.6rem;
@@ -133,7 +133,7 @@ const Text2 = styled.div`
   width: 56.6rem;
   top: 31.2rem;
   left: 6rem;
-  font-family: IBM Plex Sans;
+  font-family: 'IBM Plex Sans';
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.014rem;
@@ -175,7 +175,7 @@ const Bottom = styled.div`
   opacity: 0;
   animation: fadeIn 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 5s forwards;
   div {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
