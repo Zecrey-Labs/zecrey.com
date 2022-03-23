@@ -76,7 +76,7 @@ const BubbleCard = () => {
       </CenterFlex>
       <CornerLink href='https://zecrey.medium.com/how-does-zecrey-protocol-protect-account-privacy-6291d897406b'>
         <Icon name='shield-check' />
-        <span>How does Zecrey protect user's privacy?</span>
+        <span>How does Zecrey protect user privacy?</span>
       </CornerLink>
     </Wrap>
   )

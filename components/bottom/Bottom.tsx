@@ -196,7 +196,6 @@ function bottom() {
                 <li>
                   <p>
                     <a
-                      href=''
                       target='_blank'
                       rel='noreferrer'
                       aria-disabled
@@ -208,7 +207,6 @@ function bottom() {
                 <li>
                   <p>
                     <a
-                      href=''
                       target='_blank'
                       rel='noreferrer'
                       aria-disabled
