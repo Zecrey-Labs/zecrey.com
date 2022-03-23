@@ -234,7 +234,8 @@ const Landing = () => {
           autoPlay
           loop
           muted
-          poster='/Zecrey_3D_poster.png'></Video>
+          poster='/Zecrey_3D_poster.png'
+          onContextMenu={e => e.preventDefault()}></Video>
       </div>
       <Bottom>
         <div>Learn More</div>

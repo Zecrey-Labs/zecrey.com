@@ -304,7 +304,8 @@ function Privacy() {
                 src='/video/video.mp4'
                 style={{ width: '1205px', height: '631px' }}
                 controls // control panel
-                autoPlay></video>
+                autoPlay
+                onContextMenu={e => e.preventDefault()}></video>
             </div>
           </div>
         ) : null}
