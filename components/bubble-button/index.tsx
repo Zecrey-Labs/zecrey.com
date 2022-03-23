@@ -89,6 +89,7 @@ const Trigger = styled(CenterFlex)<{
   flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
+  cursor: pointer;
   &:hover {
     label {
       color: white;
