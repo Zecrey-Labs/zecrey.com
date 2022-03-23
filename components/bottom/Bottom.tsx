@@ -189,7 +189,7 @@ function bottom() {
                       href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
                       target='_blank'
                       rel='noreferrer'>
-                      Privacy Wallet
+                      Extension Wallet
                     </a>
                   </p>
                 </li>

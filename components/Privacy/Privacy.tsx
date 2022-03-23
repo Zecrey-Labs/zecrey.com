@@ -56,7 +56,7 @@ const Wrap = styled.div`
     width: 9.3rem;
     height: 1.8rem;
     position: absolute;
-    top: 41.4rem;
+    top: 40rem;
     left: 6rem;
     font-family: 'IBM Plex Sans';
     font-style: normal;
@@ -71,7 +71,7 @@ const Wrap = styled.div`
     width: 12rem;
     height: 1.8rem;
     position: absolute;
-    top: 41.4rem;
+    top: 40rem;
     left: 19.2rem;
     font-family: 'IBM Plex Sans';
     font-style: normal;

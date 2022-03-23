@@ -61,9 +61,9 @@ const Multichainbrand = () => {
           </BubbleButton>
         ))}
       </CenterFlex>
-      <CornerLink href=''>
+      <CornerLink href='https://zecrey.medium.com/introduction-to-the-usage-of-zecrey-multi-chain-l1-wallet-48dd2b5ad132'>
         <Icon name='spinner' />
-        <span>How Zecrey Multi-chain support works?</span>
+        <span>How to use Zecrey Multi-chain Wallet?</span>
       </CornerLink>
     </Wrap>
   )

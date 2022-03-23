@@ -17,7 +17,7 @@ const Wrap = styled.div<{
   border-radius: 1rem;
   margin-left: ${props => props.size?.marginLeft || 0};
   margin-right: ${props => props.size?.marginRight || 0};
-  transition: all 0.6s;
+  transition: all 0.5s;
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     .tip-wrap {
@@ -39,7 +39,7 @@ const TipWrap = styled.div`
   margin-left: -18.25rem;
   padding: 2rem;
   border-radius: 1rem;
-  transition: all 0.6s 0.2s;
+  transition: all 0.6s 0.1s;
   background: rgba(0, 0, 0, 0);
   visibility: hidden;
 `

@@ -100,7 +100,7 @@ const Wrap = styled.div`
     height: 42.231rem;
     position: absolute;
     left: 59.2rem;
-    top: 12.8rem;
+    top: 8.8rem;
     z-index: 10;
     opacity: 0;
   }

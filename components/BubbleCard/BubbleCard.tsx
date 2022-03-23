@@ -26,7 +26,7 @@ const items: {
     label: 'swap',
     icon: <Icon name='swap' />,
     tip:
-      'Create a Swap transaction in a private AMM DEX. Option to add liquidity as staking for rewards. ( Any assets on Layer 2 can be used as gas fee. )'
+      'Create a Swap transaction in a private AMM DEX. Option to add liquidity as staking for rewards. Any assets on Layer 2 can be used as gas fee.'
   },
   {
     label: 'transfer',
@@ -48,7 +48,7 @@ const items: {
   {
     label: 'withdraw',
     icon: <Icon name='withdraw' />,
-    tip: 'Securely reposition your digital assets from Layer 2 to 1.'
+    tip: 'Securely reposition your digital assets from Layer 2 to Layer 1.'
   },
   {
     label: 'deposit',
@@ -74,9 +74,9 @@ const BubbleCard = () => {
           </BubbleButton>
         ))}
       </CenterFlex>
-      <CornerLink href=''>
+      <CornerLink href='https://zecrey.medium.com/how-does-zecrey-protocol-protect-account-privacy-6291d897406b'>
         <Icon name='shield-check' />
-        <span>How Zecrey protects user privacy?</span>
+        <span>How does Zecrey protect user's privacy?</span>
       </CornerLink>
     </Wrap>
   )
