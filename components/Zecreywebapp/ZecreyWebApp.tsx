@@ -156,7 +156,7 @@ function ZecreyWebApp() {
     <>
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
-          <img src='/ZecreyWebApp/WebApp.svg' alt='' className='webapp' />
+          <img src='/Zecreywebapp/WebApp.svg' alt='' className='webapp' />
           <div className='backgroundbox'>
             <img
               src='/Zecreywebapp/WebApp.webp'
