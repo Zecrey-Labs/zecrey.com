@@ -163,7 +163,7 @@ const Style = styled.div`
   @media (max-width: 760px) {
     padding: 0 ${px2vw(20, 320)} 0 ${px2vw(32, 320)};
     h2 {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: bold;
       font-size: ${px2vw(26, 320)};
@@ -218,7 +218,7 @@ const Style = styled.div`
         div.text {
           margin-bottom: ${px2vw(29, 320)};
           h3 {
-            font-family: Lexend;
+            font-family: 'Lexend';
             font-style: normal;
             font-weight: 800;
             font-size: ${px2vw(16, 320)};

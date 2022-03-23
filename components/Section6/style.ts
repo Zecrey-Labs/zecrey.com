@@ -26,7 +26,7 @@ export const BlockStyle = styled.div`
     align-items: center;
 
     span {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: 600;
       font-size: ${desktopPx2vw(21)};
@@ -52,7 +52,7 @@ export const Style = styled.div`
   align-items: center;
 
   > h2 {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
     max-width: ${desktopPx2vw(869)};
@@ -68,7 +68,7 @@ export const Style = styled.div`
 
   > p {
     margin-top: ${desktopPx2vw(79)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: normal;
     font-size: ${desktopPx2vw(24)};
@@ -111,7 +111,7 @@ export const Style = styled.div`
       margin-right: ${desktopPx2vw(153)};
       h2 {
         margin-top: ${desktopPx2vw(99)};
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-style: normal;
         font-weight: 800;
         font-size: ${desktopPx2vw(36)};
@@ -121,7 +121,7 @@ export const Style = styled.div`
       }
       p {
         margin-top: ${desktopPx2vw(33)};
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-style: normal;
         font-weight: normal;
         font-size: ${desktopPx2vw(24)};
@@ -174,7 +174,7 @@ export const Style = styled.div`
         }
         > span {
           padding-left: ${desktopPx2vw(5)};
-          font-family: Lexend;
+          font-family: 'Lexend';
           font-style: normal;
           font-weight: 600;
           font-size: ${desktopPx2vw(21)};

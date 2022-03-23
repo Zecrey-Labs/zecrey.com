@@ -132,7 +132,7 @@ const Style = styled.div`
     justify-content: center;
     border: ${px2vw(2, 1862)} solid #ffffff;
     border-radius: ${px2vw(29.5, 1862)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 500;
     font-size: ${px2vw(16, 1437)};
@@ -164,7 +164,7 @@ const Style = styled.div`
   div.nextSectionGuideDesktop {
     position: absolute;
     bottom: ${px2vw(47)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: bold;
     font-size: ${px2vw(16)};
     text-align: center;
@@ -213,7 +213,7 @@ const Style = styled.div`
       line-height: ${px2vw(16, 320)};
     }
     div.banner {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: bold;
       font-size: ${px2vw(22, 320)};
@@ -250,7 +250,7 @@ const Style = styled.div`
         margin: ${px2vw(11, 320)} auto 0;
         background: #2ad4d9;
         border-radius: ${px2vw(5, 320)};
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-style: normal;
         font-weight: 800;
         font-size: ${px2vw(12, 320)};
@@ -283,7 +283,7 @@ const Style = styled.div`
       justify-content: center;
       border: 1px solid #ffffff;
       border-radius: ${px2vw(5, 320)};
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: 500;
       font-size: ${px2vw(10, 320)};
@@ -308,7 +308,7 @@ const Style = styled.div`
       align-items: center;
       justify-content: center;
       p {
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-size: ${px2vw(12, 320)};
         font-weight: bold;
       }
@@ -353,9 +353,9 @@ export const Section1 = () => {
         <Img src={'/section1/circle.svg'} />
       </h2>
       <div className='banner'>
-        Bringing Cross-chain
+        A turn-key solution for
         <br />
-        Privacy to Digital Assets
+        Cross-chain and privacy
       </div>
       <div className='available'>
         | Privacy-Wallet Application now available |

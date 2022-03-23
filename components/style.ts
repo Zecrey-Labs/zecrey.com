@@ -14,7 +14,7 @@ export const SideContentStyle = styled.div`
     align-items: center;
     > div.left {
       h3 {
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-style: normal;
         font-weight: 600;
         font-size: ${desktopPx2vw(18)};
@@ -23,7 +23,7 @@ export const SideContentStyle = styled.div`
         color: #e3e3e3;
       }
       span {
-        font-family: Lexend;
+        font-family: 'Lexend';
         font-style: normal;
         font-weight: normal;
         font-size: ${desktopPx2vw(12)};
@@ -44,7 +44,7 @@ export const SideContentStyle = styled.div`
   > h1 {
     margin-left: ${desktopPx2vw(28)};
     margin-bottom: ${desktopPx2vw(41)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
     font-size: ${desktopPx2vw(60)};
@@ -60,7 +60,7 @@ export const SideContentStyle = styled.div`
     padding-left: ${desktopPx2vw(23)};
     margin-bottom: ${desktopPx2vw(50)};
     width: ${desktopPx2vw(616)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 300;
     font-size: ${desktopPx2vw(18)};

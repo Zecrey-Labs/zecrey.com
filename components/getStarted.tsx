@@ -46,7 +46,7 @@ const Styled = styled.div`
   }
   span {
     height: ${desktopPx2vw(30)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 500;
     font-size: ${desktopPx2vw(24)};

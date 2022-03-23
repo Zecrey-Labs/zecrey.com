@@ -82,7 +82,7 @@ const Style = styled.div`
       border-radius: ${px2vw(35, 1920)};
       width: ${desktopPx2vw(170)};
       height: ${desktopPx2vw(47)};
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: bold;
       font-size: ${px2vw(24, 1920)};
@@ -126,7 +126,7 @@ const Style = styled.div`
       cursor: pointer;
     }
     a.docs {
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: 500;
       font-size: ${px2vw(26, 1862)};
@@ -219,7 +219,7 @@ const Style = styled.div`
             height: 33px;
             line-height: 15px;
             padding: 7px 0 10px 0;
-            font-family: Lexend;
+            font-family: 'Lexend';
             font-style: normal;
             font-weight: 500;
             font-size: 12px;
