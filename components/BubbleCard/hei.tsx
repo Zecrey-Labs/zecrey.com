@@ -41,7 +41,7 @@ const Wrap = styled.div`
     margin: 1.8rem 0 0 2rem;
   }
   .intr p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 1.2rem;
@@ -56,7 +56,7 @@ const Wrap = styled.div`
     margin-top: 0.7rem;
   }
   .button p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;

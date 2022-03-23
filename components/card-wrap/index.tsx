@@ -24,17 +24,21 @@ const Box = styled.div`
 `
 const Title = styled.div`
   display: inline-block;
-  font-family: Lexend;
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 3rem;
-  width: 20rem;
+  width: 24rem;
+  margin-left: 19px;
   background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateY(1.3rem);
   opacity: 0;
+  &.title {
+    width: 21rem;
+  }
   .visible & {
     animation: move1 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
   }
@@ -78,14 +82,17 @@ const BackgoundIcon = styled.div<{
   }
 `
 const Text = styled.div`
-  width: 81.9rem;
+  width: 79rem;
   p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #ffffff;
     transform: translateY(1.3rem);
     opacity: 0;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
   }
   .visible & {
     p {
@@ -145,14 +152,19 @@ const CardWrap = (props: {
   }, [])
 
   return (
-    <Box ref={dom} className={classNames({ visible })}>
+    <Box ref={dom} className={classNames('show', { visible })}>
       <IconWrap>
         <BackgoundIcon size={props.backgroundIcon.size}>
           {props.backgroundIcon.svg}
         </BackgoundIcon>
       </IconWrap>
       <div className='text-wrap'>
-        <Title>{props.title}</Title>
+        <Title
+          className={classNames(
+            props.title === 'Multiple Purposes' ? 'title' : ''
+          )}>
+          {props.title}
+        </Title>
         <Text>
           {props.text.map((i, index) => (
             <p key={index}>{i}</p>

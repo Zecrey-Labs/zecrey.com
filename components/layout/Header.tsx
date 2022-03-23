@@ -12,7 +12,7 @@ const Container = styled.div`
   border-bottom: 0.1rem solid #4e4e4e;
   background: rgba(56, 56, 56, 0.8);
   z-index: 1000;
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(50px);
   /* position: relative; */
   &.header-container {
     border-bottom: 0.1rem solid#DADADA;
@@ -38,14 +38,18 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
     height: 100%;
     border-top: 0.6rem solid transparent;
     border-bottom: 0.6rem solid transparent;
-
     &:last-child {
       margin-right: 0;
+    }
+    &:hover .hover,
+    &:hover .hover1 {
+      display: block;
+      cursor: pointer;
     }
 
     ${FlatBtn} {
       height: 100%;
-      font-family: Lexend;
+      font-family: 'Lexend';
       font-style: normal;
       font-weight: 500;
       font-size: 1.6rem;
@@ -56,12 +60,35 @@ const Nav = styled(CenterFlex)<{ dark: boolean }>`
     }
 
     &.ac {
-      border-bottom-color: ${props => (props.dark ? highlight : '#01ABB2')};
+      border-bottom-color: ${props => (props.dark ? '#2AD4D9' : '#01ABB2')};
 
       ${FlatBtn} {
         font-weight: 800;
-        color: ${props => (props.dark ? highlight : '#01ABB2')};
+        color: ${props => (props.dark ? '#2AD4D9' : '#01ABB2')};
       }
+    }
+
+    .hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      width: 9.5rem;
+      height: 3rem;
+      position: absolute;
+      top: 2.4rem;
+      left: 27.4rem;
+      display: none;
+      z-index: -1;
+    }
+    .hover1 {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      width: 7.8rem;
+      height: 3rem;
+      position: absolute;
+      top: 2.4rem;
+      left: 40.4rem;
+      display: none;
+      z-index: -1;
     }
   }
 `
@@ -82,7 +109,7 @@ const Download = styled(CenterFlex)`
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
     border: 0.2rem solid rgba(42, 212, 217, 0.15);
     border-radius: 3.5rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: bold;
     font-size: 1.8rem;
     color: #000;
@@ -96,7 +123,7 @@ const Download = styled(CenterFlex)`
 `
 
 const navList = [
-  { label: 'Home', url: 'https://www.zecrey.com/' },
+  { label: 'Home', url: '/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
   { label: 'Explorer', url: 'https://explorer.zecrey.com/' },
   { label: 'Info', url: 'https://info.zecrey.com/' }
@@ -130,13 +157,21 @@ const Header = () => {
                 ac: i.url === '/'
               })}>
               <FlatBtn
-                className=''
                 onClick={() =>
                   i.url === '/' ? router.push('/') : window.open(i.url)
                 }
                 disabled={i.disabled}>
                 {i.label}
               </FlatBtn>
+              <div
+                className={classNames(
+                  {
+                    hover: i.label === 'Explorer'
+                  },
+                  {
+                    hover1: i.label === 'Info'
+                  }
+                )}></div>
             </div>
           ))}
         </Nav>

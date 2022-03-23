@@ -86,7 +86,7 @@ const Label = styled.div`
   height: 1.8rem;
   border: 0.1rem solid #2ad4d8;
   border-radius: 0.5rem;
-  font-family: Lexend;
+  font-family: 'Lexend';
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -112,7 +112,7 @@ const Text = styled.div`
   width: 47.4rem;
   top: 21.2rem;
   left: 6rem;
-  font-family: Lexend;
+  font-family: 'Lexend';
   font-style: normal;
   font-weight: bold;
   font-size: 3.6rem;
@@ -130,10 +130,10 @@ const Text = styled.div`
 `
 const Text2 = styled.div`
   position: absolute;
-  width: 45.6rem;
+  width: 56.6rem;
   top: 31.2rem;
   left: 6rem;
-  font-family: IBM Plex Sans;
+  font-family: 'IBM Plex Sans';
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.014rem;
@@ -175,16 +175,16 @@ const Bottom = styled.div`
   opacity: 0;
   animation: fadeIn 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 5s forwards;
   div {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     color: #ffffff;
   }
   svg {
     display: block;
-    width: 1.4rem;
-    height: 1.95rem;
+    width: 18px;
+    height: 18px;
     margin: 0.5rem auto 1rem auto;
     color: #ffffff;
     animation: move 1.8s linear 5s infinite;
@@ -219,21 +219,23 @@ const Landing = () => {
         </Box>
         <Label>Zecrey Protocal</Label>
         <Text>
-          Bringing Cross-chain Privacy to Digital Assets.
+          A turn-key solution for Cross-chain and privacy
           {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
         </Text>
         <Text2>
-          Zecrey is a zk-rollup-based layer 2 privacy protocol featuring
-          generalized cross-chain bridge, high-security cross-chain swap and
-          high-efficiency privacy, bringing a reliable cross-chain solution to
-          blockchain ecosystems.
+          A turn-key, Layer 2 privacy solution for cross-chain transactions and
+          asset management based on Zero-knowledge (zk) Roll-Ups. With Zecrey’s
+          L2 protocol you can easily manage, swap and bridge assets across
+          multiple chains, all while knowing your transactions are private and
+          protected from malicious arbitrageurs.
         </Text2>
         <Video
           src='/Zecrey_3D.webm'
           autoPlay
           loop
           muted
-          poster='/Zecrey_3D_poster.png'></Video>
+          poster='/Zecrey_3D_poster.png'
+          onContextMenu={e => e.preventDefault()}></Video>
       </div>
       <Bottom>
         <div>Learn More</div>

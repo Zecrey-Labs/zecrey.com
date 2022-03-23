@@ -102,7 +102,7 @@ export const Style = styled.div`
         > div.contact {
           display: inline-block;
           em {
-            font-family: Lexend;
+            font-family: 'Lexend';
             font-style: normal;
             font-weight: 600;
             font-size: ${px2vw(16, 1920)};
@@ -167,7 +167,7 @@ export const Style = styled.div`
               > a,
               > span {
                 display: block;
-                font-family: Lexend;
+                font-family: 'Lexend';
                 font-style: normal;
                 font-weight: 800;
                 font-size: ${px2vw(12, 320)};
@@ -201,7 +201,7 @@ export const Style = styled.div`
         }
       }
       div.row2 {
-        font-family: Lexend;
+        font-family: 'Lexend';
         text-align: center;
         font-size: ${px2vw(9, 320)};
         line-height: ${px2vw(11, 320)};
@@ -232,7 +232,7 @@ export const EmailSubscribe = styled.div<{ ac: boolean }>`
   bottom: 0;
   display: flex;
   label {
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: bold;
     font-size: ${px2vw(24, 1920)};
@@ -244,7 +244,7 @@ export const EmailSubscribe = styled.div<{ ac: boolean }>`
     border: none;
     background: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: ${px2vw(18, 1920)};
@@ -265,7 +265,7 @@ export const EmailSubscribe = styled.div<{ ac: boolean }>`
     border: none;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
     border-radius: ${px2vw(37, 1920)};
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: ${px2vw(16, 1920)};

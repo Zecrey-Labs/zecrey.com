@@ -7,7 +7,7 @@ const Wrap = styled.div`
     height: 30.5rem;
     background: rgba(42, 42, 42, 0.5);
     border: 0.1rem solid rgba(255, 255, 255, 0.1);
-    /* backdrop-filter: blur(2.71828rem); */
+    backdrop-filter: blur(50px);
     position: relative;
     margin: 0 auto;
   }
@@ -30,12 +30,13 @@ const Wrap = styled.div`
   }
   .head-li {
     color: #2ad2d6;
+    font-weight: 800;
   }
   .apps li,
   .explorer li,
   .development li,
   .papers li {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
@@ -98,7 +99,7 @@ const Wrap = styled.div`
     left: 0rem;
   }
   .zecrey-protocol p {
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -109,7 +110,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 56.4rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -129,7 +130,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 68rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -137,7 +138,7 @@ const Wrap = styled.div`
     color: #e4e4e4;
   }
   .com {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;
@@ -158,7 +159,7 @@ const Wrap = styled.div`
     position: absolute;
     top: 21.8rem;
     left: 87.1rem;
-    font-family: IBM Plex Sans;
+    font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;
@@ -188,14 +189,13 @@ function bottom() {
                       href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
                       target='_blank'
                       rel='noreferrer'>
-                      Privacy Wallet
+                      Extension Wallet
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
                     <a
-                      href=''
                       target='_blank'
                       rel='noreferrer'
                       aria-disabled
@@ -207,7 +207,6 @@ function bottom() {
                 <li>
                   <p>
                     <a
-                      href=''
                       target='_blank'
                       rel='noreferrer'
                       aria-disabled

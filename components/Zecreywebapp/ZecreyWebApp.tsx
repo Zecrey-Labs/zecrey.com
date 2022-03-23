@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import classNames from 'classnames'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -14,6 +15,29 @@ const Wrap = styled.div`
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 4rem;
+    .img-span {
+      position: absolute;
+      height: 1.4rem;
+      left: 87.3rem;
+      top: 28.6rem;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      .application {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.0144706rem;
+        color: #f1f1f1;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+      }
+    }
   }
   .webapp {
     min-width: 12rem;
@@ -30,6 +54,7 @@ const Wrap = styled.div`
     line-height: 2rem;
     color: #2ad4d8;
     text-align: center;
+    opacity: 0;
   }
   .backgroundbox {
     min-width: 81.489rem;
@@ -37,60 +62,41 @@ const Wrap = styled.div`
     position: absolute;
     top: 12.853rem;
     left: -2.285rem;
+    opacity: 0;
   }
   .backgroundimage-img {
-    width: 68.489rem;
-    height: 47.379rem;
-  }
-  .application {
-    position: absolute;
-    height: 1.4rem;
-    left: 91.3rem;
-    top: 28.6rem;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.0144706rem;
-    color: #f1f1f1;
-  }
-  .butteryhatch {
-    width: 1.8rem;
-    height: 1.8rem;
-    position: absolute;
-    left: 105.8rem;
-    top: 28.3rem;
-  }
-  .butteryhatch-img {
     width: 100%;
+    height: 100%;
   }
   .crypto {
-    width: 25.9rem;
+    opacity: 0;
+    width: 32.9rem;
     height: 6.6rem;
     position: absolute;
-    left: 71.33%;
+    left: 68.33%;
     right: 8.44%;
     top: calc(50% - 6.6rem / 2 + 8.95rem);
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     line-height: 3.2rem;
     letter-spacing: 0.0313529rem;
-    color: #2ad4d8;
+    background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .launchapp {
     width: 11.6rem;
     height: 2.6rem;
     position: absolute;
-    left: 71.33%;
+    left: 68.5%;
     right: 19.61%;
     top: 78.39%;
     bottom: 16.5%;
     border: 1px solid #ffffff;
     border-radius: 1.3rem;
-    font-family: Lexend;
+    font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
@@ -98,34 +104,83 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
     color: #f1f1f1;
     text-align: center;
+    opacity: 0;
+  }
+  &.visible {
+    .webapp {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
+    }
+    .backgroundbox,
+    .img-span,
+    .crypto {
+      animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+    .launchapp {
+      animation: move24 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
+    }
+  }
+  @keyframes move22 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes move24 {
+    0% {
+      transform: translateY(1.3rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0.5;
+    }
   }
 `
 
 function ZecreyWebApp() {
+  const [visible, setVisible] = useState(false)
+  const dom = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    let handleScroll = e => {
+      if (dom.current && dom.current.getBoundingClientRect()) {
+        let domTop = dom.current.getBoundingClientRect().top
+        let domHeight = dom.current.getBoundingClientRect().height
+        let height = window.innerHeight
+        if (domTop > 0 && height - domTop >= domHeight / 5) {
+          setVisible(true)
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
-      <Wrap>
+      <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
           <div className='webapp'>Zecrey Web App</div>
           <div className='backgroundbox'>
-            <Image
-              src='/Zecreywebapp/WebApp.png'
+            <img
+              src='/Zecreywebapp/WebApp.webp'
               className='backgroundimage-img'
               alt='zecrey'
-              layout='fill'
             />
           </div>
-          <div className='application'>Zecrey Web Application</div>
-          <div className='butteryhatch'>
-            <Image
-              src='/Zecreywebapp/butteryhatch.png'
-              className='butteryhatch-img'
-              alt='zecrey'
-              layout='fill'
-            />
+          <div className='img-span'>
+            <div className='application'>Zecrey Web Application</div>
+            <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
           </div>
-          <div className='crypto'>Crypto Experience Much than more.</div>
-          <div className='launchapp'>Launch App</div>
+          <div className='crypto'>
+            Streamlined Experience Simple, Yet Robust
+          </div>
+          <div className='launchapp'>Coming Soon</div>
         </div>
       </Wrap>
     </>

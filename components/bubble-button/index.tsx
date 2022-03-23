@@ -3,28 +3,45 @@ import { ReactNode } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
 
-const Wrap = styled.div`
+const Wrap = styled.div<{
+  size?: {
+    width: string
+    height: string
+    marginLeft?: string
+    marginRight?: string
+  }
+}>`
   position: relative;
   width: 10rem;
   height: 12rem;
   border-radius: 1rem;
+  margin-left: ${props => props.size?.marginLeft || 0};
+  margin-right: ${props => props.size?.marginRight || 0};
+  transition: all 0.5s;
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     .tip-wrap {
-      display: block;
+      background: rgba(0, 0, 0, 0.85);
+      transform: translateY(-5px);
+      visibility: visible;
+      .tip,
+      .link {
+        opacity: 1;
+      }
     }
   }
 `
 const TipWrap = styled.div`
   position: absolute;
-  display: none;
   width: 36.5rem;
   left: 50%;
-  bottom: 13.5rem;
-  transform: translateX(-50%);
+  bottom: 13rem;
+  margin-left: -18.25rem;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.85);
   border-radius: 1rem;
+  transition: all 0.6s 0.1s;
+  background: rgba(0, 0, 0, 0);
+  visibility: hidden;
 `
 const Tip = styled.div`
   font-family: 'IBM Plex Sans';
@@ -32,6 +49,8 @@ const Tip = styled.div`
   font-size: 1.2rem;
   line-height: 1.6rem;
   color: #f1f1f1;
+  transition: all 0.6s;
+  opacity: 0;
 `
 const Link = styled.a`
   display: block;
@@ -47,10 +66,14 @@ const Link = styled.a`
   font-family: 'IBM Plex Sans';
   font-weight: 500;
   font-size: 1.4rem;
+  opacity: 0;
+  transition: all 0.6s;
   svg {
-    widht: 0.6rem;
+    width: 0.6rem;
     height: 1rem;
     color: inherit;
+    margin-top: 12px;
+    margin-left: 5px;
   }
   &:hover {
     text-decoration: none;
@@ -66,15 +89,26 @@ const Trigger = styled(CenterFlex)<{
   flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    label {
+      color: white;
+    }
+    svg {
+      transform: scale(1.1);
+    }
+  }
   .icon-wrap {
     display: flex;
     align-items: center;
     pointer-events: none;
-    height: 10rem;
+    margin-bottom: 11px;
+    margin-top: 10px;
     svg {
       width: ${props => props.size?.width || '7rem'};
       height: ${props => props.size?.height || '7rem'};
       color: #f1f1f1;
+      transition: all 0.6s;
     }
   }
   label {
@@ -82,10 +116,11 @@ const Trigger = styled(CenterFlex)<{
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.5rem;
-    color: #fff;
+    color: #f1f1f1;
     text-align: center;
     text-transform: capitalize;
     pointer-events: none;
+    letter-spacing: 1px;
   }
   &::before {
     content: '';
@@ -105,15 +140,24 @@ const BubbleButton = (props: {
   tip?: string
   linkLabel?: string
   link?: string
-  size?: { width: string; height: string }
+  size?: {
+    width: string
+    height: string
+    marginLeft?: string
+    marginRight?: string
+  }
 }) => {
   return (
-    <Wrap className='bubble-button'>
+    <Wrap className='bubble-button' size={props.size}>
       {props.tip && (
         <TipWrap className='tip-wrap'>
-          <Tip>{props.tip}</Tip>
+          <Tip className='tip'>{props.tip}</Tip>
           {props.link && props.linkLabel && (
-            <Link href={props.link} target='_blank' rel='noreferrer'>
+            <Link
+              href={props.link}
+              target='_blank'
+              rel='noreferrer'
+              className='link'>
               {props.linkLabel} <Icon name='dart-2' />
             </Link>
           )}

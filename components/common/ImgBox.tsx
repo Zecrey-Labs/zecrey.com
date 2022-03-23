@@ -24,7 +24,7 @@ const ImgBox = (props: Props) => {
       width={props.width || 40}
       height={props.height || 40}>
       {props.src ? (
-        <Image src={props.src} alt={props.alt} layout='fill' />
+        <img src={props.src} alt={props.alt} width='100%' height='100%' />
       ) : null}
     </Wrap>
   )
