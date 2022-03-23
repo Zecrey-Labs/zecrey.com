@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -147,9 +148,10 @@ function ZecreyWebApp() {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 100)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
   return (
