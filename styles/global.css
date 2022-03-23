@@ -233,7 +233,7 @@ html {
     font-size: calc(100vw / 168);
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1432px) {
   html {
     font-size: calc(100vw / 144);
   }

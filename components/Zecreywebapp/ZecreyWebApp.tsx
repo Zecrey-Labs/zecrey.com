@@ -40,20 +40,11 @@ const Wrap = styled.div`
     }
   }
   .webapp {
-    min-width: 12rem;
+    width: 10.5rem;
     height: 2rem;
     position: absolute;
     left: 6rem;
     top: 5.3rem;
-    border: 0.1rem solid #2ad4d8;
-    border-radius: 0.5rem;
-    font-family: Adobe Gothic Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.1rem;
-    line-height: 2rem;
-    color: #2ad4d8;
-    text-align: center;
     opacity: 0;
   }
   .backgroundbox {
@@ -165,7 +156,7 @@ function ZecreyWebApp() {
     <>
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
-          <div className='webapp'>Zecrey Web App</div>
+          <img src='/ZecreyWebApp/WebApp.svg' alt='' className='webapp' />
           <div className='backgroundbox'>
             <img
               src='/Zecreywebapp/WebApp.webp'
