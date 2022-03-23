@@ -23,17 +23,6 @@ export default function Home() {
       <Landing />
       <Privacy />
       <CardWrap
-        title='Multiple Purposes'
-        backgroundIcon={{
-          svg: <Icon name='boxes' />,
-          size: { width: '35.2rem', height: '25.2rem' }
-        }}
-        text={[
-          'Not just a wallet. With Zecrey you can transfer, swap, stake, and much more across different blockchains with a high level of privacy and transaction speed thanks to a layer-2 architecture based on zk-rollup.'
-        ]}>
-        <BubbleCard />
-      </CardWrap>
-      <CardWrap
         title='Central Hub for your Digital Assets'
         backgroundIcon={{
           svg: <Icon name='multi-chain' />,
@@ -45,7 +34,18 @@ export default function Home() {
         <Multichainbrand />
       </CardWrap>
       <CardWrap
-        title='Multi-layer Ecosystem'
+        title={`Multiple Purposes`}
+        backgroundIcon={{
+          svg: <Icon name='boxes' />,
+          size: { width: '35.2rem', height: '25.2rem' }
+        }}
+        text={[
+          'Not just a wallet. With Zecrey you can transfer, swap, stake, and much more across different blockchains with a high level of privacy and transaction speed thanks to a layer-2 architecture based on zk-rollup.'
+        ]}>
+        <BubbleCard />
+      </CardWrap>
+      <CardWrap
+        title='Multi-Layer Ecosystem'
         backgroundIcon={{
           svg: <Icon name='planet' />,
           size: { width: '33.3rem', height: '21.1rem' }
