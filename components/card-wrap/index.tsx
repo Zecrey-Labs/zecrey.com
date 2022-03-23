@@ -146,7 +146,7 @@ const CardWrap = (props: {
         }
       }
     }
-    const debouncedScrollEventHandler = debounce(handleScroll, 100)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
     document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
       document.removeEventListener('scroll', debouncedScrollEventHandler)
