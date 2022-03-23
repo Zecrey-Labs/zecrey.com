@@ -26,42 +26,41 @@ const items: {
     label: 'swap',
     icon: <Icon name='swap' />,
     tip:
-      'Make a swap and add liquidity in Zecrey native private AMM DEX. Any assets on Layer 2 could be used as gas fee.'
+      'Create a Swap transaction in a private AMM DEX. Option to add liquidity as staking for rewards. ( Any assets on Layer 2 can be used as gas fee. )'
   },
   {
     label: 'transfer',
     icon: <Icon name='transfer' />,
     tip:
-      'Besides usual transfer, Zecrey develops a unique one-to-many transfer feature with privacy protection, which improves capital efficiency and has high security.'
+      'Conduct transfers to multiple accounts in a single encrypted transaction with a high level of privacy and security.'
   },
   {
     label: 'deFi',
     icon: <Icon name='defi' />,
-    tip: 'Stake and Farm to earn rewards.'
+    tip: 'Earn rewards through Staking and Farming.'
   },
   {
-    label: 'Lock/Unlock',
+    label: 'Lock&Unlock',
     icon: <Icon name='lock' />,
     tip:
-      'Gain rewards by providing liquidity to bridges among different layer 1 blockchains. Unlock assets to Layer 2 with one click.'
+      'Get rewarded by providing liquidity to bridges amongst various Layer 1 blockchains. Unlock assets with a few clicks.'
   },
   {
     label: 'withdraw',
     icon: <Icon name='withdraw' />,
-    tip:
-      'Quickly move assets to any Layer 1 to complete the cross-chain function with high security level.'
+    tip: 'Securely reposition your digital assets from Layer 2 to 1.'
   },
   {
     label: 'deposit',
     icon: <Icon name='deposit' />,
     tip:
-      'Move assets from different Layer 1s to Zecrey Layer 2 to aggregate assets and enjoy privacy protection.'
+      "Migrate digital assets from Layer 1 to Zecrey's Layer 2 to aggregate assets and benefit from lightining fast transactions, privacy features and much more while still retaining ownership of your digital assets."
   },
   {
-    label: 'NFT Manage',
+    label: 'NFT',
     icon: <Icon name='nft' />,
     tip:
-      'Easy way to manage your NFT collections within one interface and use them as account avatar.'
+      'Manage your myriad collection of NFTs in one easy to use interface. Can be set as an avatar for your account.'
   }
 ]
 
