@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
@@ -236,9 +237,10 @@ function Privacy() {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
   const [video, setVideo] = useState(false)
