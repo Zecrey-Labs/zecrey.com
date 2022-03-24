@@ -53,12 +53,6 @@ const Wrap = styled.div`
     top: 6rem;
     left: 43.5rem;
   }
-  /* .apps ul{
-    display:flex;  
-    flex-wrap: wrap;
-    flex-direction: column; 
-    align-content: space-between;
-  } */
 
   .explorer {
     min-width: 12.9rem;
@@ -235,9 +229,10 @@ function bottom() {
                 <li>
                   <p>
                     <a
-                      href='https://info.zecrey.com/'
                       target='_blank'
-                      rel='noreferrer'>
+                      rel='noreferrer'
+                      aria-disabled
+                      style={{ cursor: 'not-allowed' }}>
                       Info Explorer
                     </a>
                   </p>

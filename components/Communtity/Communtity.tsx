@@ -1,5 +1,6 @@
 import { CenterFlex } from '@/styles/global'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import BubbleButton from '../bubble-button'
@@ -197,9 +198,10 @@ const Communtity = (props: { id: string }) => {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
   return (

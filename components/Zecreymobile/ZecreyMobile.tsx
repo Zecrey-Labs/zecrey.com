@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -41,20 +42,11 @@ const Wrap = styled.div`
   }
   .mobile {
     opacity: 0;
-    min-width: 11rem;
+    width: 9.3rem;
     height: 2rem;
     position: absolute;
     left: 6rem;
     top: 5.3rem;
-    border: 0.1rem solid #2ad4d8;
-    border-radius: 0.5rem;
-    text-align: center;
-    line-height: 2rem;
-    font-family: Adobe Gothic Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2ad4d8;
   }
   .anywhere {
     opacity: 0;
@@ -157,16 +149,17 @@ function ZecreyMobile() {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
   return (
     <>
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
-          <div className='mobile'>Zecrey Mobile</div>
+          <img src='/zecreymobile/mobile.svg' alt='' className='mobile' />
           <div className='img-span'>
             <div className='zecreymobile'>Zecrey Mobile</div>
             <img src='/zecreymobile/mobilephone.png' alt='zecrey' />

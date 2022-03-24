@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -40,23 +41,12 @@ const Wrap = styled.div`
     }
   }
   .extensionwallet {
-    min-width: 12.7rem;
+    width: 10.5rem;
     height: 2rem;
-    border: 0.1rem solid #2ad4d8;
-    border-radius: 0.5rem;
     position: absolute;
     left: 6rem;
-    top: 4rem;
+    top: 5.3rem;
     opacity: 0;
-  }
-  .extensionwallet p {
-    text-align: center;
-    line-height: 2rem;
-    font-family: Adobe Gothic Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2ad4d8;
   }
   .oneclick {
     width: 29.4rem;
@@ -154,18 +144,21 @@ function WalletDownload() {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
   return (
     <>
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
-          <div className='extensionwallet'>
-            <p>Extension Wallet</p>
-          </div>
+          <img
+            src='/walletdownload/Extension.svg'
+            alt=''
+            className='extensionwallet'
+          />
           <div className='img-span'>
             <span className='privacy'>Privacy Wallet Extension</span>
             <img src='/walletdownload/smallcircle.png' alt='' />

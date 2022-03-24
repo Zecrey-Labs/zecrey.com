@@ -1,5 +1,6 @@
 import { CenterFlex } from '@/styles/global'
 import classNames from 'classnames'
+import { debounce } from 'lodash'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
@@ -145,9 +146,10 @@ const CardWrap = (props: {
         }
       }
     }
-    document.addEventListener('scroll', handleScroll)
+    const debouncedScrollEventHandler = debounce(handleScroll, 50)
+    document.addEventListener('scroll', debouncedScrollEventHandler)
     return () => {
-      document.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('scroll', debouncedScrollEventHandler)
     }
   }, [])
 

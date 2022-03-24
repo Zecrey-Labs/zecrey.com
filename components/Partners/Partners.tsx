@@ -62,6 +62,10 @@ const Wrap = styled.div`
       cursor: default;
       opacity: 0;
     }
+    &:last-child img {
+      height: 7.2rem;
+      margin-top: 1.1rem;
+    }
   }
 
   .partner11 {
@@ -192,7 +196,7 @@ function Partners() {
                 <img src='/Partners/spark.svg' alt='' />
               </li>
               <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/24.svg' alt='' />
+                <img src='/Partners/mulana.png' alt='' />
               </li>
             </ul>
           </div>
