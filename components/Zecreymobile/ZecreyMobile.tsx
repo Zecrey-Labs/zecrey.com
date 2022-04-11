@@ -6,6 +6,7 @@ import { debounce } from 'lodash'
 
 const Wrap = styled.div`
   .outermostlayer {
+    position: relative;
     width: 128rem;
     height: 50.9rem;
     background: rgba(56, 56, 56, 0.5);
