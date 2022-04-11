@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
+import { isSafari } from 'react-device-detect'
 
 const Wrap = styled.div`
   position: relative;
@@ -152,6 +153,23 @@ const Text2 = styled.div`
     }
   }
 `
+const Img = styled.img`
+  position: absolute;
+  top: 0;
+  right: -4.5rem;
+  width: 83.7rem;
+  height: 58.6rem;
+  opacity: 0;
+  animation: imgFadeIn 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 5s forwards;
+  @keyframes imgFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`
 const Video = styled.video`
   position: absolute;
   top: 0;
@@ -229,13 +247,18 @@ const Landing = () => {
           multiple chains, all while knowing your transactions are private and
           protected from malicious arbitrageurs.
         </Text2>
-        <Video
-          src='/Zecrey_3D.webm'
-          autoPlay
-          loop
-          muted
-          poster='/Zecrey_3D_poster.png'
-          onContextMenu={e => e.preventDefault()}></Video>
+        {isSafari ? (
+          <Img src='/Zecrey_3D_poster.png' alt='Zecrey_3D_poster' />
+        ) : (
+          <Video
+            src='/Zecrey_3D.webm'
+            autoPlay
+            loop
+            muted
+            poster='/Zecrey_3D_poster.png'
+            onContextMenu={e => e.preventDefault()}
+          />
+        )}
       </div>
       <Bottom>
         <div>Learn More</div>
