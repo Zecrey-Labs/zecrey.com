@@ -298,7 +298,13 @@ function bottom() {
               <p>Zecrey Protocol</p>
             </div>
             <div>
-              <p className='privacypolicy'>Privacy Policy</p>
+              <a
+                className='privacypolicy'
+                href='https://www.privacypolicies.com/live/612448fc-ff4e-4dd2-a4a2-85e0d8076a71'
+                target='_blank'
+                rel='noreferrer'>
+                Privacy Policy
+              </a>
               <div className='vertical'></div>
               <span className='contact'>
                 Contact: <span className='com'>bd@zecrey.com</span>
