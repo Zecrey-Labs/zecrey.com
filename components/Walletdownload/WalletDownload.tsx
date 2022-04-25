@@ -156,7 +156,7 @@ function WalletDownload() {
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
           <img
-            src='/walletdownload/Extension.svg'
+            src='/walletdownload/extension.svg'
             alt=''
             className='extensionwallet'
           />
