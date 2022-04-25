@@ -306,7 +306,7 @@ function Privacy() {
                 </div>
               </div>
               <video
-                // src='/video/video.mp4'
+                src='/video/video.mp4'
                 style={{ width: '1205px', height: '631px' }}
                 controls // control panel
                 autoPlay
