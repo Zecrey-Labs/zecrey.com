@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { CenterFlex } from '@/styles/global'
 
 const Wrap = styled.div`
   .bottom {
@@ -103,7 +104,7 @@ const Wrap = styled.div`
   .privacypolicy {
     position: absolute;
     top: 21.8rem;
-    left: 56.4rem;
+    left: 40.4rem;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 600;
@@ -303,7 +304,7 @@ function bottom() {
                 href='https://www.privacypolicies.com/live/612448fc-ff4e-4dd2-a4a2-85e0d8076a71'
                 target='_blank'
                 rel='noreferrer'>
-                Privacy Policy
+                Privacy Policies, Terms and Conditions
               </a>
               <div className='vertical'></div>
               <span className='contact'>
