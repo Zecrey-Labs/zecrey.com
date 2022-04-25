@@ -27,7 +27,7 @@ const Wrap = styled.div`
     width: 54.9rem;
     height: 12.7rem;
     position: absolute;
-    top: 10.799rem;
+    top: 10.099rem;
     left: 5.8rem;
     opacity: 0;
   }
@@ -88,7 +88,7 @@ const Wrap = styled.div`
     height: 30.9rem;
     position: absolute;
     left: 67rem;
-    top: 10rem;
+    top: 9rem;
     opacity: 0;
     img {
       width: 55rem;
