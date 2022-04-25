@@ -16,6 +16,7 @@ import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
 import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
 import Ecosystem from '@/components/Ecosystem/Ecosystem'
 import Privacy from '@/components/Privacy/Privacy'
+import RoadMap from '@/components/roadmap'
 
 export default function Home() {
   return (
@@ -59,6 +60,17 @@ export default function Home() {
       <ZecreyWebApp />
       <ZecreyMobile />
       <Partners />
+      <CardWrap
+        title='Roadmap'
+        backgroundIcon={{
+          svg: <Icon name='roadmap' />,
+          size: { width: '29rem', height: '25.3rem' }
+        }}
+        text={[
+          `The Zecrey roadmap indicates our major milestones, including a summary of Zecrey development, a set of functionalities to be delivered.`
+        ]}>
+        <RoadMap />
+      </CardWrap>
       <Communtity id='join' />
       <Bottom />
     </Layout>
