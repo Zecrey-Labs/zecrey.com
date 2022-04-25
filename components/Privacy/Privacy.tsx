@@ -165,6 +165,9 @@ const Wrap = styled.div`
     right: 0%;
     bottom: 0%;
     background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .video {
       background: rgba(56, 56, 56, 0.95);
       border: 1px solid rgba(255, 255, 255, 0.05);
@@ -279,7 +282,7 @@ function Privacy() {
               Join Community {'>'}
             </a>
             <div className='player'>
-              <img src='/video/video.webp' alt='' />
+              <img src='/video/cover.png' alt='' />
               <div className='mask'>
                 <img
                   src='/video/play.svg'
@@ -303,7 +306,7 @@ function Privacy() {
                 </div>
               </div>
               <video
-                src='/video/video.mp4'
+                // src='/video/video.mp4'
                 style={{ width: '1205px', height: '631px' }}
                 controls // control panel
                 autoPlay

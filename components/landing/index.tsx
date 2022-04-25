@@ -189,33 +189,33 @@ const Video = styled.video`
 `
 const Bottom = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 4rem;
   opacity: 0;
   animation: fadeIn 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 5s forwards;
   div {
     font-family: 'Lexend';
     font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     color: #ffffff;
   }
   svg {
     display: block;
-    width: 18px;
-    height: 18px;
-    margin: 0.5rem auto 1rem auto;
+    width: 1.3rem;
+    height: 0.8rem;
+    margin: 0.8rem auto 1rem auto;
     color: #ffffff;
-    animation: move 1.8s linear 5s infinite;
+    animation: move 1.8s ease-out 5s infinite;
   }
   @keyframes move {
     0% {
-      transform: translateY(-10%);
+      transform: translateY(-15%);
     }
     50% {
-      transform: translateY(20%);
+      transform: translateY(35%);
     }
     100% {
-      transform: translateY(-10%);
+      transform: translateY(-15%);
     }
   }
 `
