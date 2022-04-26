@@ -120,7 +120,7 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 42rem;
+    top: 43rem;
     left: 80.7rem;
   }
   .meet p {
@@ -292,7 +292,7 @@ function Privacy() {
               </div>
             </div>
             <div className='meet'>
-              <p>Meet Zecrey:Wallet Introduction(2021)</p>
+              <p>Introducing the Zecrey Protocol</p>
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ function Privacy() {
           <div className='video-mask'>
             <div className='video'>
               <div className='meet1'>
-                <p>Meet Zecrey:Wallet Introduction(2021)</p>
+                <p>Introducing the Zecrey Protocol</p>
                 <div onClick={() => setVideo(false)}>
                   <Icon name='close' />
                 </div>
