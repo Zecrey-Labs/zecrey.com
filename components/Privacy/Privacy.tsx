@@ -3,6 +3,7 @@ import { debounce } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
+import { VideoModal } from '../video-modal'
 
 const Wrap = styled.div`
   .wrap {
@@ -120,10 +121,11 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 43rem;
-    left: 80.7rem;
+    top: 42.2rem;
+    left: 67rem;
   }
   .meet p {
+    width: 55rem;
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 600;
@@ -132,6 +134,7 @@ const Wrap = styled.div`
     letter-spacing: 0.0168824rem;
     color: #2ad4d8;
     opacity: 0;
+    text-align: center;
   }
   &.visible {
     .Pri,
@@ -155,72 +158,6 @@ const Wrap = styled.div`
     100% {
       transform: translateY(0);
       opacity: 1;
-    }
-  }
-  .video-mask {
-    position: fixed;
-    z-index: 2224;
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .video {
-      background: rgba(56, 56, 56, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      width: 1256px;
-      height: 705px;
-      margin: 25px auto;
-      padding: 9px 25px 30px;
-      position: relative;
-      .meet1 {
-        width: 100%;
-        position: absolute;
-        top: 9px;
-        left: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        p {
-          font-family: 'Lexend';
-          font-weight: 800;
-          font-size: 18px;
-          line-height: 22px;
-          color: #2ad4d9;
-        }
-        div {
-          position: absolute;
-          top: -4px;
-          right: 16px;
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          svg {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-          }
-          &:hover {
-            background: rgba(255, 255, 255, 0.15);
-            cursor: pointer;
-            svg {
-              path {
-                opacity: 1;
-                fill: white;
-              }
-            }
-          }
-        }
-      }
-      video {
-        margin-top: 35px;
-        object-fit: fill;
-      }
     }
   }
 `
@@ -297,22 +234,11 @@ function Privacy() {
           </div>
         </div>
         {video ? (
-          <div className='video-mask'>
-            <div className='video'>
-              <div className='meet1'>
-                <p>Introducing the Zecrey Protocol</p>
-                <div onClick={() => setVideo(false)}>
-                  <Icon name='close' />
-                </div>
-              </div>
-              <video
-                src='/video/video.mp4'
-                style={{ width: '1205px', height: '631px' }}
-                controls // control panel
-                autoPlay
-                onContextMenu={e => e.preventDefault()}></video>
-            </div>
-          </div>
+          <VideoModal
+            label='Introducing the Zecrey Protocol'
+            src='/video/video.mp4'
+            close={() => setVideo(false)}
+          />
         ) : null}
       </Wrap>
     </>

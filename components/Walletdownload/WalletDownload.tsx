@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
+import { VideoModal } from '../video-modal'
+import Icon from '../common/Icon'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -23,7 +25,7 @@ const Wrap = styled.div`
       position: absolute;
       height: 1.4rem;
       left: 6rem;
-      top: 28.6rem;
+      top: 26.5rem;
       opacity: 0;
       .privacy {
         font-family: Helvetica;
@@ -56,7 +58,7 @@ const Wrap = styled.div`
     height: 6.6rem;
     left: 4.69%;
     right: 73.12%;
-    top: calc(50% - 6.6rem / 2 + 8.95rem);
+    top: 29rem;
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
@@ -74,7 +76,7 @@ const Wrap = styled.div`
     position: absolute;
     left: 4.69%;
     right: 86.95%;
-    top: 78.39%;
+    top: 36.2rem;
     bottom: 16.5%;
     border: 0.1rem solid #ffffff;
     box-sizing: border-box;
@@ -128,10 +130,31 @@ const Wrap = styled.div`
       opacity: 1;
     }
   }
+  button.video {
+    position: absolute;
+    border: none;
+    background: none;
+    padding: 0;
+    left: 6rem;
+    bottom: 5rem;
+    color: #2ad4d8;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      color: inherit;
+      margin-right: 0.5rem;
+      vertical-align: text-bottom;
+    }
+  }
 `
 
 function WalletDownload() {
   const [visible, setVisible] = useState(false)
+  const [video, setVideo] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
     let handleScroll = e => {
@@ -156,7 +179,7 @@ function WalletDownload() {
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='outermostlayer'>
           <img
-            src='/walletdownload/extension.svg'
+            src='/walletdownload/Extension.svg'
             alt=''
             className='extensionwallet'
           />
@@ -164,8 +187,13 @@ function WalletDownload() {
             <span className='privacy'>Privacy Wallet Extension</span>
             <img src='/walletdownload/smallcircle.png' alt='' />
           </div>
-          <div className='oneclick'>Your Privacy Matters with One-Click</div>
+          <div className='oneclick'>
+            Your Privacy Matters <br /> with One-Click
+          </div>
           <div className='download'>Download</div>
+          <button className='video' onClick={() => setVideo(true)}>
+            <Icon name='play' /> Watch the video introduction
+          </button>
           <div className='rightpicture'>
             <img
               src='/walletdownload/largeIcon.webp'
@@ -174,6 +202,13 @@ function WalletDownload() {
             />
           </div>
         </div>
+        {video && (
+          <VideoModal
+            label='Introduction'
+            src='/video/wallet-video.mp4'
+            close={() => setVideo(false)}
+          />
+        )}
       </Wrap>
     </>
   )
