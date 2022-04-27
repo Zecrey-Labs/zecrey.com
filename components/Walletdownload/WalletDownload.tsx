@@ -116,7 +116,8 @@ const Wrap = styled.div`
     }
     .img-span,
     .oneclick,
-    .download {
+    .download,
+    button.video {
       animation: move22 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 0.2s forwards;
     }
   }
