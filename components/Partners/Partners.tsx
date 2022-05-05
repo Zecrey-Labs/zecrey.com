@@ -190,7 +190,11 @@ function Partners() {
                 <img src='/Partners/21.svg' alt='' />
               </li>
               <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/22.svg' alt='' />
+                <img
+                  src='/Partners/stratified.png'
+                  alt=''
+                  style={{ width: '13.6rem', height: '3.6rem' }}
+                />
               </li>
               <li className={classnames(isShow ? 'none' : '')}>
                 <img src='/Partners/spark.svg' alt='' />
