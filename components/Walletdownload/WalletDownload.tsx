@@ -143,6 +143,7 @@ const Wrap = styled.div`
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.6rem;
+    opacity: 0;
     svg {
       width: 1.6rem;
       height: 1.6rem;

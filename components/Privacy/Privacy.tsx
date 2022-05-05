@@ -121,7 +121,7 @@ const Wrap = styled.div`
     min-width: 27.6rem;
     height: 1.8rem;
     position: absolute;
-    top: 42.2rem;
+    top: 41.7rem;
     left: 67rem;
   }
   .meet p {
