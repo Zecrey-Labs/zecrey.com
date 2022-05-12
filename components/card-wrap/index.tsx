@@ -2,7 +2,7 @@ import { CenterFlex } from '@/styles/global'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
 import { ReactNode, useEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
+import styled, { CSSProperties } from 'styled-components'
 
 const Box = styled.div`
   position: relative;
@@ -128,6 +128,7 @@ const CardWrap = (props: {
     svg: ReactNode // svg element
     size: { width: string; height: string }
   }
+  styles?: CSSProperties
   text: string[]
   children?: ReactNode // sub component
 }) => {
@@ -154,7 +155,10 @@ const CardWrap = (props: {
   }, [])
 
   return (
-    <Box ref={dom} className={classNames('show', { visible })}>
+    <Box
+      ref={dom}
+      className={classNames('content-box', 'show', { visible })}
+      style={props.styles}>
       <IconWrap>
         <BackgoundIcon size={props.backgroundIcon.size}>
           {props.backgroundIcon.svg}

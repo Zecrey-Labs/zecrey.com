@@ -2,7 +2,6 @@ import classNames from 'classnames'
 import { debounce } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import Icon from '../common/Icon'
 import { VideoModal } from '../video-modal'
 
 const Wrap = styled.div`

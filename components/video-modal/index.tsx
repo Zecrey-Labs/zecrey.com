@@ -12,36 +12,33 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   .video {
     background: rgba(56, 56, 56, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    width: 1256px;
-    height: 705px;
+    max-width: 125.6rem;
+    max-height: 75.5rem;
+    width: ${125600 / 1440}vw;
+    height: calc(${67781 / 1440}vw + 7.5rem);
     margin: 25px auto;
-    padding: 9px 25px 30px;
+    padding-bottom: 3rem;
     position: relative;
     .meet1 {
       width: 100%;
-      position: absolute;
-      top: 9px;
-      left: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       p {
         font-family: 'Lexend';
         font-weight: 800;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 1.8rem;
+        line-height: 4.5rem;
         color: #2ad4d9;
       }
       div {
         position: absolute;
-        top: -4px;
-        right: 16px;
-        width: 32px;
-        height: 32px;
+        top: 0.4rem;
+        right: 1.6rem;
+        width: 3.2rem;
+        height: 3.2rem;
         border-radius: 50%;
         svg {
           position: absolute;
@@ -62,8 +59,9 @@ const Wrap = styled.div`
       }
     }
     video {
-      margin-top: 35px;
       object-fit: fill;
+      width: ${120500 / 1440}vw;
+      height: ${67781 / 1440}vw;
     }
   }
 `
@@ -84,7 +82,6 @@ export const VideoModal = (props: {
         </div>
         <video
           src={props.src}
-          style={{ width: '1205px', height: '631px' }}
           controls
           autoPlay
           onContextMenu={e => e.preventDefault()}></video>

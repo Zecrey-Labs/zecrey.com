@@ -131,6 +131,11 @@ table {
   border-spacing: 0;
 }
 
+#__next {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 body {
   /* font-size: 0.16rem; */
   overflow-x: auto;

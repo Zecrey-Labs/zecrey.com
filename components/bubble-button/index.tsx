@@ -1,5 +1,5 @@
 import { CenterFlex } from '@/styles/global'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useMemo, useRef } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
 
@@ -147,10 +147,32 @@ const BubbleButton = (props: {
     marginRight?: string
   }
 }) => {
+  const dom = useRef<HTMLDivElement>(null)
+
+  // useEffect(() => {}, [])
+
+  useEffect(() => {
+    if (dom.current) {
+      let diff =
+        dom.current.getBoundingClientRect().right -
+        document.querySelector('.content-box').getBoundingClientRect().right
+      if (diff > 0) {
+        dom.current.style.marginLeft = `calc(-18.25rem - ${diff}px)`
+      }
+    }
+    const handler = e => {
+      console.log(dom.current.getBoundingClientRect().right)
+    }
+    document.addEventListener('resize', handler)
+    return () => {
+      document.removeEventListener('resize', handler)
+    }
+  }, [])
+
   return (
     <Wrap className='bubble-button' size={props.size}>
       {props.tip && (
-        <TipWrap className='tip-wrap'>
+        <TipWrap ref={dom} className='tip-wrap'>
           <Tip className='tip'>{props.tip}</Tip>
           {props.link && props.linkLabel && (
             <Link

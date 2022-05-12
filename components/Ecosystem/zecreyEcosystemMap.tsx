@@ -4,19 +4,22 @@ import { FlatBtn } from '@/styles/global'
 
 const Wrap = styled.div`
   position: fixed;
+  min-width: ${125600 / 1440}vw;
   z-index: 2224;
   left: 0%;
   top: 0%;
   right: 0%;
   bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.3);
+  text-align: center;
   .ecosystemmap {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 125.6rem;
-    height: 76.9rem;
+    max-width: 125.6rem;
+    max-height: 76.9rem;
+    width: ${125600 / 1440}vw;
+    height: auto;
     background: #383838;
     mix-blend-mode: normal;
     opacity: 0.95;
@@ -25,9 +28,9 @@ const Wrap = styled.div`
     z-index: 1000;
   }
   .map {
-    width: 21.6rem;
-    height: 2.3rem;
-    margin: 0.9rem 0 0 52.2rem;
+    width: 100%;
+    height: 4.5rem;
+    padding-top: 0.9rem;
     font-family: 'Lexend';
     font-weight: 800;
     font-size: 1.8rem;
@@ -35,14 +38,15 @@ const Wrap = styled.div`
     color: #2ad4d9;
   }
   .picture {
-    width: 121.1rem;
-    height: 68.2rem;
+    max-width: 120.6rem;
+    max-height: 63rem;
+    width: ${120600 / 1440}vw;
+    height: ${63000 / 1440}vw;
     margin: 0 auto;
   }
   .picture img {
     width: 100%;
-    height: 64rem;
-    margin-top: 1.5rem;
+    height: 100%;
   }
   .button-close {
     display: block;
@@ -51,7 +55,7 @@ const Wrap = styled.div`
     border: 0.1rem solid #2ad4d9;
     box-sizing: border-box;
     border-radius: 1.8rem;
-    margin: 0 auto;
+    margin: 3rem auto;
     font-family: 'Lexend';
     font-style: normal;
     font-weight: bold;

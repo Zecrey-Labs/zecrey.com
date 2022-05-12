@@ -17,6 +17,7 @@ const Wrap = styled.div`
   margin-bottom: 7.8rem;
   animation: backgroundFadeOut 1.7s cubic-bezier(0.44, 0.01, 0.23, 0.97) 2.5s
     forwards;
+  overflow: hidden;
   @keyframes backgroundFadeOut {
     0% {
       background: rgba(43, 43, 43, 1);
