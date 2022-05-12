@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { FlatBtn } from '@/styles/global'
+import classNames from 'classnames'
 
 const Wrap = styled.div`
   position: fixed;
@@ -69,24 +70,54 @@ const Wrap = styled.div`
       color: white;
     }
   }
+  &.scroll {
+    display: block;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .ecosystemmap {
+      margin: 3rem auto;
+    }
+  }
 `
+
 function ZecreyEcosystemMap(props: { close: () => void }) {
+  const wrap = useRef<HTMLDivElement>(null)
+  const modal = useRef<HTMLDivElement>(null)
+
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    const handler = () => {
+      if (!modal.current || !wrap.current) return
+      if (modal.current.clientHeight > wrap.current.clientHeight) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    }
+    handler()
+    window.addEventListener('resize', handler)
+    return () => {
+      window.removeEventListener('resize', handler)
+    }
+  }, [])
+
   return (
-    <>
-      <Wrap>
-        <div className='ecosystemmap'>
-          <div className='map'>
-            <p>Zecrey Ecosystem Map</p>
-          </div>
-          <div className='picture'>
-            <img src='/Ecosystem/ecosystem.png' alt='' />
-          </div>
-          <FlatBtn className='button-close' onClick={props.close}>
-            Close
-          </FlatBtn>
+    <Wrap className={classNames({ scroll })} ref={wrap}>
+      <div className='ecosystemmap' ref={modal}>
+        <div className='map'>
+          <p>Zecrey Ecosystem Map</p>
         </div>
-      </Wrap>
-    </>
+        <div className='picture'>
+          <img src='/Ecosystem/ecosystem.png' alt='' />
+        </div>
+        <FlatBtn className='button-close' onClick={props.close}>
+          Close
+        </FlatBtn>
+      </div>
+    </Wrap>
   )
 }
 

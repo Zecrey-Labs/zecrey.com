@@ -1,3 +1,5 @@
+import classNames from 'classnames'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
 
@@ -19,6 +21,7 @@ const Wrap = styled.div`
     border-radius: 10px;
     max-width: 125.6rem;
     max-height: 75.5rem;
+    min-height: min-content;
     width: ${125600 / 1440}vw;
     height: calc(${67781 / 1440}vw + 7.5rem);
     margin: 25px auto;
@@ -66,6 +69,13 @@ const Wrap = styled.div`
       height: ${67781 / 1440}vw;
     }
   }
+  &.scroll {
+    display: block;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 `
 
 export const VideoModal = (props: {
@@ -73,9 +83,30 @@ export const VideoModal = (props: {
   src: string
   close: () => void
 }) => {
+  const wrap = useRef<HTMLDivElement>(null)
+  const modal = useRef<HTMLDivElement>(null)
+
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    const handler = () => {
+      if (!modal.current || !wrap.current) return
+      if (modal.current.clientHeight > wrap.current.clientHeight) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    }
+    handler()
+    window.addEventListener('resize', handler)
+    return () => {
+      window.removeEventListener('resize', handler)
+    }
+  }, [])
+
   return (
-    <Wrap className='video-mask'>
-      <div className='video'>
+    <Wrap className={classNames('video-mask', { scroll })} ref={wrap}>
+      <div className='video' ref={modal}>
         <div className='meet1'>
           <p>{props.label}</p>
           <div onClick={props.close}>

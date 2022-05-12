@@ -152,20 +152,20 @@ const BubbleButton = (props: {
   // useEffect(() => {}, [])
 
   useEffect(() => {
-    if (dom.current) {
-      let diff =
-        dom.current.getBoundingClientRect().right -
-        document.querySelector('.content-box').getBoundingClientRect().right
-      if (diff > 0) {
-        dom.current.style.marginLeft = `calc(-18.25rem - ${diff}px)`
+    const handler = () => {
+      if (dom.current) {
+        let diff =
+          dom.current.getBoundingClientRect().right -
+          document.querySelector('.content-box').getBoundingClientRect().right
+        if (diff > 0) {
+          dom.current.style.marginLeft = `calc(-18.25rem - ${diff}px)`
+        }
       }
     }
-    const handler = e => {
-      console.log(dom.current.getBoundingClientRect().right)
-    }
-    document.addEventListener('resize', handler)
+    handler()
+    window.addEventListener('resize', handler)
     return () => {
-      document.removeEventListener('resize', handler)
+      window.removeEventListener('resize', handler)
     }
   }, [])
 
