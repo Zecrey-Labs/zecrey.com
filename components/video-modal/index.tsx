@@ -60,6 +60,8 @@ const Wrap = styled.div`
     }
     video {
       object-fit: fill;
+      max-width: 120.6rem;
+      max-height: ${(120.6 * 1080) / 1920}rem;
       width: ${120500 / 1440}vw;
       height: ${67781 / 1440}vw;
     }
