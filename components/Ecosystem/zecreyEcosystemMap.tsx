@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { FlatBtn } from '@/styles/global'
 import classNames from 'classnames'
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ width: number; height: number }>`
   position: fixed;
   min-width: ${125600 / 1440}vw;
   z-index: 2224;
@@ -19,8 +19,8 @@ const Wrap = styled.div`
   .ecosystemmap {
     max-width: 125.6rem;
     max-height: 76.9rem;
-    width: ${125600 / 1440}vw;
-    height: auto;
+    width: ${props => props.width}px;
+    height: ${props => props.height}px;
     background: #383838;
     mix-blend-mode: normal;
     opacity: 0.95;
@@ -39,11 +39,13 @@ const Wrap = styled.div`
     color: #2ad4d9;
   }
   .picture {
-    max-width: 120.6rem;
-    max-height: 63rem;
-    width: ${120600 / 1440}vw;
-    height: ${63000 / 1440}vw;
+    width: calc(100% - 5rem);
+    height: calc(100% - 13.9rem);
     margin: 0 auto;
+    background: url(/Ecosystem/ecosystem.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .picture img {
     width: 100%;
@@ -87,6 +89,7 @@ function ZecreyEcosystemMap(props: { close: () => void }) {
   const modal = useRef<HTMLDivElement>(null)
 
   const [scroll, setScroll] = useState(false)
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
     const handler = () => {
@@ -96,6 +99,12 @@ function ZecreyEcosystemMap(props: { close: () => void }) {
       } else {
         setScroll(false)
       }
+      // w/h = 1256/863
+      let width = Math.min(
+        window.innerWidth * 0.8722,
+        (window.innerHeight * 0.9 * 1256) / 863
+      )
+      setWidth(width)
     }
     handler()
     window.addEventListener('resize', handler)
@@ -105,13 +114,17 @@ function ZecreyEcosystemMap(props: { close: () => void }) {
   }, [])
 
   return (
-    <Wrap className={classNames({ scroll })} ref={wrap}>
+    <Wrap
+      className={classNames({ scroll })}
+      ref={wrap}
+      width={width}
+      height={(width * 863) / 1256}>
       <div className='ecosystemmap' ref={modal}>
         <div className='map'>
           <p>Zecrey Ecosystem Map</p>
         </div>
         <div className='picture'>
-          <img src='/Ecosystem/ecosystem.png' alt='' />
+          {/* <img src='/Ecosystem/ecosystem.png' alt='' /> */}
         </div>
         <FlatBtn className='button-close' onClick={props.close}>
           Close

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import Icon from '../common/Icon'
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ width: number; height: number }>`
   position: fixed;
   z-index: 2224;
   left: 0%;
@@ -19,11 +19,10 @@ const Wrap = styled.div`
     background: rgba(56, 56, 56, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    max-width: 125.6rem;
-    max-height: 75.5rem;
-    min-height: min-content;
-    width: ${125600 / 1440}vw;
-    height: calc(${67781 / 1440}vw + 7.5rem);
+    // max-width: 125.6rem;
+    // max-height: 75.5rem;
+    width: ${props => props.width}px;
+    height: ${props => props.height}px;
     margin: 25px auto;
     padding-bottom: 3rem;
     position: relative;
@@ -63,10 +62,8 @@ const Wrap = styled.div`
     }
     video {
       object-fit: fill;
-      max-width: 120.6rem;
-      max-height: ${(120.6 * 1080) / 1920}rem;
-      width: ${120500 / 1440}vw;
-      height: ${67781 / 1440}vw;
+      width: calc(100% - 5rem);
+      height: calc(100% - 3.5rem);
     }
   }
   &.scroll {
@@ -87,6 +84,7 @@ export const VideoModal = (props: {
   const modal = useRef<HTMLDivElement>(null)
 
   const [scroll, setScroll] = useState(false)
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
     const handler = () => {
@@ -96,6 +94,12 @@ export const VideoModal = (props: {
       } else {
         setScroll(false)
       }
+      // w/h = 1256/769
+      let width = Math.min(
+        window.innerWidth * 0.8722,
+        (window.innerHeight * 0.9 * 1256) / 769
+      )
+      setWidth(width)
     }
     handler()
     window.addEventListener('resize', handler)
@@ -105,7 +109,11 @@ export const VideoModal = (props: {
   }, [])
 
   return (
-    <Wrap className={classNames('video-mask', { scroll })} ref={wrap}>
+    <Wrap
+      className={classNames('video-mask', { scroll })}
+      ref={wrap}
+      width={width}
+      height={(width * 769) / 1256}>
       <div className='video' ref={modal}>
         <div className='meet1'>
           <p>{props.label}</p>
