@@ -139,12 +139,12 @@ function ZecreyMobile() {
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    let handleScroll = e => {
-      if (dom.current && dom.current.getBoundingClientRect()) {
+    let handleScroll = () => {
+      if (dom.current) {
         let domTop = dom.current.getBoundingClientRect().top
         let domHeight = dom.current.getBoundingClientRect().height
         let height = window.innerHeight
-        if (domTop > 0 && height - domTop >= domHeight / 5) {
+        if (height - domTop >= domHeight / 5) {
           setVisible(true)
           document.removeEventListener('scroll', handleScroll)
         }
