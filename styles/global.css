@@ -132,8 +132,7 @@ table {
 }
 
 #__next {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 body {

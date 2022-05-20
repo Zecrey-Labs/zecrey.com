@@ -149,14 +149,12 @@ const BubbleButton = (props: {
 }) => {
   const dom = useRef<HTMLDivElement>(null)
 
-  // useEffect(() => {}, [])
-
   useEffect(() => {
     const handler = () => {
       if (dom.current) {
         let diff =
           dom.current.getBoundingClientRect().right -
-          document.querySelector('.content-box').getBoundingClientRect().right
+          document.querySelector('#__next').getBoundingClientRect().right
         if (diff > 0) {
           dom.current.style.marginLeft = `calc(-18.25rem - ${diff}px)`
         }
