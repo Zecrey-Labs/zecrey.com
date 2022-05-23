@@ -165,10 +165,10 @@ const Img = styled.div`
     content: '';
     display: block;
     position: absolute;
-    width: 0.12rem;
-    height: 2.6rem;
+    width: 0.24rem;
+    height: 2.8rem;
     background: #fff;
-    right: 1.2rem;
+    right: 1.1rem;
     bottom: 1.8rem;
     opacity: 0.2;
     animation: shine 1.2s forwards infinite;
