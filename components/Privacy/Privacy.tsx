@@ -24,18 +24,6 @@ const Wrap = styled.div`
     z-index: 100;
     backdrop-filter: blur(2.7rem);
   }
-  .Pri {
-    width: 54.9rem;
-    height: 12.7rem;
-    position: absolute;
-    top: 10.099rem;
-    left: 5.8rem;
-    opacity: 0;
-  }
-  .Pri img {
-    width: 100%;
-    margin-top: -10px;
-  }
   .text {
     width: 55rem;
     height: 9.5rem;
@@ -161,6 +149,41 @@ const Wrap = styled.div`
     }
   }
 `
+const Img = styled.div`
+  position: relative;
+  width: 54.9rem;
+  height: 12.7rem;
+  position: absolute;
+  top: 10.099rem;
+  left: 5.8rem;
+  opacity: 0;
+  img {
+    width: 100%;
+    margin-top: -10px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.12rem;
+    height: 2.6rem;
+    background: #fff;
+    right: 1.2rem;
+    bottom: 1.8rem;
+    opacity: 0.2;
+    animation: shine 1.2s forwards infinite;
+    animation-timing-function: steps(2, jump-none);
+    pointer-events: none;
+  }
+  @keyframes shine {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`
 
 function Privacy() {
   const [visible, setVisible] = useState(false)
@@ -189,9 +212,9 @@ function Privacy() {
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='wrap'>
           <div className='privacy'>
-            <div className='Pri'>
+            <Img className='Pri'>
               <img src='/privacy/privacy.png' alt='' />
-            </div>
+            </Img>
             <div className='text'>
               <p>
                 Zecrey is a zk-rollup based Layer 2 protocol bringing crosschain
