@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { CenterFlex, FlatBtn, highlight } from '../../styles/global'
 import ImgBox from '../common/ImgBox'
 import { useCallback } from 'react'
+import { DOWNLOAD_URL, EXPLORER_URL } from '@/constant'
 
 const Container = styled.div`
   position: fixed;
@@ -125,7 +126,7 @@ const Download = styled(CenterFlex)`
 const navList = [
   { label: 'Home', url: '/' },
   { label: 'App', url: 'https://www.zecrey.com/', disabled: true },
-  { label: 'Explorer', url: 'https://explorer.zecrey.com/' },
+  { label: 'Explorer', url: EXPLORER_URL },
   { label: 'Info', url: 'https://info.zecrey.com/', disabled: true }
 ]
 
@@ -133,9 +134,7 @@ const Header = () => {
   const router = useRouter()
 
   const onClickDownload = useCallback(() => {
-    window.open(
-      'https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
-    )
+    window.open(DOWNLOAD_URL)
   }, [])
 
   return (

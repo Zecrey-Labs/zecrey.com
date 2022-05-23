@@ -1,3 +1,4 @@
+import { WHITE_PAPER_URL } from '@/constant'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
 import React, { useEffect, useRef, useState } from 'react'
@@ -208,10 +209,7 @@ function Privacy() {
                 user-friendly wallet as an entrance to multiple blockchains.
               </p>{' '}
             </div>
-            <a
-              className='whitepaper'
-              href='https://docsend.com/view/ntcsmt7meu84gcqk'
-              target='_blank'>
+            <a className='whitepaper' href={WHITE_PAPER_URL} target='_blank'>
               White Paper {'>'}
             </a>
             <a className='join' href='#join'>

@@ -1,10 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CenterFlex } from '@/styles/global'
+import {
+  DOCS_URL,
+  DOWNLOAD_URL,
+  EXPLORER_URL,
+  GITHUB_URL,
+  MEDIUM_URL,
+  PRIVACY_URL,
+  WHITE_PAPER_URL
+} from '@/constant'
 
 const Wrap = styled.div`
   .bottom {
-    /* width: 144rem; */
     height: 30.5rem;
     background: rgba(42, 42, 42, 0.5);
     border: 0.1rem solid rgba(255, 255, 255, 0.1);
@@ -180,10 +187,7 @@ function bottom() {
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={DOWNLOAD_URL} target='_blank' rel='noreferrer'>
                       Extension Wallet
                     </a>
                   </p>
@@ -219,10 +223,7 @@ function bottom() {
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://explorer.zecrey.com/'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={EXPLORER_URL} target='_blank' rel='noreferrer'>
                       Blockchain Explorer
                     </a>
                   </p>
@@ -247,20 +248,14 @@ function bottom() {
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://github.com/Zecrey-Labs'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={GITHUB_URL} target='_blank' rel='noreferrer'>
                       GitHub
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://zecrey.medium.com/'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={MEDIUM_URL} target='_blank' rel='noreferrer'>
                       Medium
                     </a>
                   </p>
@@ -274,20 +269,14 @@ function bottom() {
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://docsend.com/view/ntcsmt7meu84gcqk'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={WHITE_PAPER_URL} target='_blank' rel='noreferrer'>
                       White Paper
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a
-                      href='https://docs.zecrey.com/'
-                      target='_blank'
-                      rel='noreferrer'>
+                    <a href={DOCS_URL} target='_blank' rel='noreferrer'>
                       Docs
                     </a>
                   </p>
@@ -301,7 +290,7 @@ function bottom() {
             <div>
               <a
                 className='privacypolicy'
-                href='https://www.privacypolicies.com/live/612448fc-ff4e-4dd2-a4a2-85e0d8076a71'
+                href={PRIVACY_URL}
                 target='_blank'
                 rel='noreferrer'>
                 Privacy Policies, Terms and Conditions
