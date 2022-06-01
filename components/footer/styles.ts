@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { vw } from "../../styles/global";
+import styled from 'styled-components'
+import { vw } from '../../styles/global'
 
 export const DesktopWrap = styled.div<{ dark: boolean }>`
+  position: relative;
   width: 100%;
   height: 30.5rem;
   border-top: 0.1rem solid
-    ${(props) =>
-      props.dark ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"};
-  background-color: ${(props) =>
-    props.dark ? "rgba(42, 42, 42, 0.5)" : "rgba(200, 200, 200, 0.15)"};
+    ${props => (props.dark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)')};
+  background-color: ${props =>
+    props.dark ? 'rgba(42, 42, 42, 0.5)' : 'rgba(200, 200, 200, 0.15)'};
   margin-top: 4rem;
   .wrap {
     width: 116rem;
@@ -17,8 +17,8 @@ export const DesktopWrap = styled.div<{ dark: boolean }>`
   .sub-wrap-1 {
     padding: 6rem 0 4rem 0;
     border-bottom: 0.1rem solid
-      ${(props) =>
-        props.dark ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)"};
+      ${props =>
+        props.dark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)'};
     margin-bottom: 1rem;
     svg.brand {
       width: 20.9rem;
@@ -40,18 +40,18 @@ export const DesktopWrap = styled.div<{ dark: boolean }>`
           font-weight: 800;
           font-size: 1.6rem;
           line-height: 2rem;
-          color: ${(props) => (props.dark ? "#2ad2d6" : "#01ABB2")};
+          color: ${props => (props.dark ? '#2ad2d6' : '#01ABB2')};
           margin-bottom: 1.2rem;
           white-space: nowrap;
         }
         a {
           display: block;
           margin-bottom: 1rem;
-          font-family: "IBM Plex Sans";
+          font-family: 'IBM Plex Sans';
           font-weight: 500;
           font-size: 1.4rem;
           line-height: 1.8rem;
-          color: ${(props) => (props.dark ? "#e4e4e4" : "#848484")};
+          color: ${props => (props.dark ? '#e4e4e4' : '#848484')};
           white-space: nowrap;
           &.disabled {
             pointer-events: none;
@@ -61,11 +61,11 @@ export const DesktopWrap = styled.div<{ dark: boolean }>`
     }
   }
   .sub-wrap-2 {
-    font-family: "IBM Plex Sans";
+    font-family: 'IBM Plex Sans';
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: ${(props) => (props.dark ? "#e4e4e4" : "#848484")};
+    color: ${props => (props.dark ? '#e4e4e4' : '#848484')};
     .contact span {
       font-weight: 400;
       text-decoration-line: underline;
@@ -74,17 +74,17 @@ export const DesktopWrap = styled.div<{ dark: boolean }>`
       width: 0.1rem;
       height: 1.7rem;
       margin: 0 1.2rem;
-      background: ${(props) => (props.dark ? "#fff" : "#5a5a5a")};
+      background: ${props => (props.dark ? '#fff' : '#5a5a5a')};
     }
   }
-`;
+`
 
 export const MobileWrap = styled.div<{ dark: boolean }>`
   width: 100vw;
   height: ${vw(360)};
-  background: ${(props) => (props.dark ? "rgba(42, 42, 42, 0.5)" : "")};
+  background: ${props => (props.dark ? 'rgba(42, 42, 42, 0.5)' : '')};
   border-top: 0.5px solid
-    ${(props) => (props.dark ? "rgba(255, 255, 255, 0.1)" : "")};
+    ${props => (props.dark ? 'rgba(255, 255, 255, 0.1)' : '')};
   margin-top: ${vw(20)};
   backdrop-filter: blur(${vw(50)});
   .wrap {
@@ -94,7 +94,7 @@ export const MobileWrap = styled.div<{ dark: boolean }>`
   .sub-wrap-1 {
     padding-top: ${vw(25)};
     border-bottom: ${vw(0.5)} solid
-      ${(props) => (props.dark ? "rgba(255, 255, 255, 0.1)" : "")};
+      ${props => (props.dark ? 'rgba(255, 255, 255, 0.1)' : '')};
     .links {
       display: inline-block;
       width: ${vw(110)};
@@ -105,21 +105,21 @@ export const MobileWrap = styled.div<{ dark: boolean }>`
       }
       label {
         display: block;
-        font-family: "Lexend";
+        font-family: 'Lexend';
         font-weight: 800;
         font-size: ${vw(12)};
         line-height: ${vw(15)};
-        color: ${(props) => (props.dark ? "#2ad2d6" : "")};
+        color: ${props => (props.dark ? '#2ad2d6' : '')};
         padding-bottom: ${vw(10)};
       }
       a.link,
       span {
         display: block;
-        font-family: "IBM Plex Sans";
+        font-family: 'IBM Plex Sans';
         font-weight: 500;
         font-size: ${vw(10)};
         line-height: ${vw(13)};
-        color: ${(props) => (props.dark ? "#e4e4e4" : "")};
+        color: ${props => (props.dark ? '#e4e4e4' : '')};
         padding-bottom: ${vw(5)};
         &.disabled {
           opacity: 0.5;
@@ -159,4 +159,4 @@ export const MobileWrap = styled.div<{ dark: boolean }>`
       }
     }
   }
-`;
+`
