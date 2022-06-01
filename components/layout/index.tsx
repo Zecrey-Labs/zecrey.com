@@ -1,7 +1,10 @@
+import { vw } from '@/styles/global'
 import { ReactNode } from 'react'
 import styled from 'styled-components'
-import Background from './Background'
-import Header from './Header'
+import dynamic from 'next/dynamic'
+
+const Background = dynamic(() => import('./Background'), { ssr: false })
+const Header = dynamic(() => import('./Header'), { ssr: false })
 
 const Wrap = styled.div<{ dark: boolean }>`
   min-width: 128rem;
@@ -11,6 +14,13 @@ const Wrap = styled.div<{ dark: boolean }>`
   /* z-index: 10; */
   .content {
     padding-top: 11.8rem;
+  }
+  @media (max-width: 780px) {
+    min-width: 100vw;
+    overflow-x: hidden;
+    .content {
+      padding-top: ${vw(50)};
+    }
   }
 `
 
