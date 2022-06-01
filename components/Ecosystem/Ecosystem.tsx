@@ -67,7 +67,7 @@ const Ecosystem = () => {
   const isMobile = useMediaQuery({ maxWidth: 780 })
   return (
     <>
-      <Modal />
+      {!isMobile && <Modal />}
       <Wrap>
         {isMobile ? (
           <Wire className='dashed' />

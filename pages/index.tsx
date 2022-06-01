@@ -10,7 +10,6 @@ import Partners from '@/components/Partners/Partners'
 import WalletDownload from '@/components/Walletdownload/WalletDownload'
 import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
 import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
-import Privacy from '@/components/Privacy/Privacy'
 import RoadMap from '@/components/roadmap'
 import dynamic from 'next/dynamic'
 
@@ -26,6 +25,9 @@ const MultiLayerEcosystem = dynamic(
   () => import('@/components/multi-layer-ecosystem'),
   { ssr: false }
 )
+const Privacy = dynamic(() => import('@/components/Privacy/Privacy'), {
+  ssr: false
+})
 
 export default function Home() {
   return (
