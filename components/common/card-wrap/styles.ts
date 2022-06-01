@@ -69,8 +69,6 @@ export const IconWrap = styled.div`
 export const BackgoundIcon = styled.div<{
   size: { width: string; height: string }
 }>`
-  width: 37.8rem;
-  height: 26.5rem;
   overflow: hidden;
   position: absolute;
   width: ${props => props.size.width};
@@ -92,6 +90,11 @@ export const BackgoundIcon = styled.div<{
       transform: translateY(0);
       opacity: 1;
     }
+  }
+  @media (max-width: 780px) {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
   }
 `
 export const Text = styled.div`
@@ -146,10 +149,12 @@ export const Content = styled(CenterFlex)`
 `
 
 export const MobileWrap = styled.div`
+  position: relative;
   width: ${vw(290)};
   padding: ${vw(30)} ${vw(20)} ${vw(60)} ${vw(20)};
   border: ${vw(0.5)} solid rgba(255, 255, 255, 0.1);
   border-radius: ${vw(10)};
   background: rgba(56, 56, 56, 0.5);
   margin: 0 auto ${vw(20)} auto;
+  overflow: hidden;
 `

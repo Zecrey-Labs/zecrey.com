@@ -14,7 +14,7 @@ import {
 } from './styles'
 
 const CardWrap = (props: {
-  title: string
+  title: ReactNode
   backgroundIcon: {
     svg: ReactNode // svg element
     size: { width: string; height: string }
@@ -31,7 +31,7 @@ const CardWrap = (props: {
 export default CardWrap
 
 const Desktop = (props: {
-  title: string
+  title: ReactNode
   backgroundIcon: {
     svg: ReactNode // svg element
     size: { width: string; height: string }
@@ -91,7 +91,7 @@ const Desktop = (props: {
 }
 
 const Mobile = (props: {
-  title: string
+  title: ReactNode
   backgroundIcon: {
     svg: ReactNode // svg element
     size: { width: string; height: string }
@@ -102,13 +102,11 @@ const Mobile = (props: {
 }) => {
   return (
     <MobileWrap className='content-box-mobile'>
-      <IconWrap>
-        <BackgoundIcon size={props.backgroundIcon.size}>
-          {props.backgroundIcon.svg}
-        </BackgoundIcon>
-      </IconWrap>
+      <BackgoundIcon size={props.backgroundIcon.size}>
+        {props.backgroundIcon.svg}
+      </BackgoundIcon>
       <Title className='title'>{props.title}</Title>
-      <div className='content'>{props.children}</div>
+      <div className='content-box-body'>{props.children}</div>
       <Text>
         {props.text.map((i, index) => (
           <p key={index}>{i}</p>

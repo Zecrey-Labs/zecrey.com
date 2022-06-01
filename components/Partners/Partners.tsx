@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import CardWrap from '../card-wrap'
+import CardWrap from '../common/card-wrap'
 import Icon from '../common/Icon'
 
 const Wrap = styled.div`

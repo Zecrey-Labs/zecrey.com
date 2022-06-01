@@ -1,19 +1,11 @@
 import { CenterFlex } from '@/styles/global'
 import React, { ReactNode } from 'react'
-import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
 import BubbleButton from '../bubble-button'
 import Icon from '../common/Icon'
 import CornerLink from '../corner-link'
+import { MobileWrap, Wrap } from './styles'
 
-const Wrap = styled(CenterFlex)`
-  width: 81.9rem;
-  position: relative;
-  height: 100%;
-  .item-wrap {
-    width: 77.5rem;
-    justify-content: space-between;
-  }
-`
 const items: {
   label: string
   icon: ReactNode
@@ -52,6 +44,13 @@ const items: {
 ]
 
 const Multichainbrand = () => {
+  const isMobile = useMediaQuery({ maxWidth: 780 })
+  return isMobile ? <Mobile /> : <Desktop />
+}
+
+export default Multichainbrand
+
+const Desktop = () => {
   return (
     <Wrap>
       <CenterFlex className='item-wrap'>
@@ -69,4 +68,6 @@ const Multichainbrand = () => {
   )
 }
 
-export default Multichainbrand
+const Mobile = () => {
+  return <MobileWrap>{items.map((i, index) => i.icon)}</MobileWrap>
+}
