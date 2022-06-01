@@ -6,7 +6,6 @@ import BubbleCard from '@/components/BubbleCard/BubbleCard'
 import CardWrap from '@/components/card-wrap'
 import Icon from '@/components/common/Icon'
 import Communtity from '@/components/Communtity/Communtity'
-import Landing from '@/components/landing'
 import Layout from '@/components/layout'
 import Partners from '@/components/Partners/Partners'
 import WalletDownload from '@/components/Walletdownload/WalletDownload'
@@ -18,6 +17,7 @@ import Privacy from '@/components/Privacy/Privacy'
 import RoadMap from '@/components/roadmap'
 import dynamic from 'next/dynamic'
 
+const Landing = dynamic(() => import('@/components/landing'), { ssr: false })
 const Footer = dynamic(() => import('@/components/footer'), { ssr: false })
 
 export default function Home() {
