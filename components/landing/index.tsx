@@ -100,6 +100,10 @@ const Typing = (props: { str: string }) => {
 }
 
 const Mobile = () => {
+  useEffect(() => {
+    let body = document.querySelector('body')
+    body.classList.add('enable-scroll')
+  }, [])
   return (
     <MobileWrap className='landing-mobile'>
       <Box>
