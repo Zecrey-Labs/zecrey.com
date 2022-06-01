@@ -6,7 +6,7 @@ import ImgBox from '../common/ImgBox'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { DOWNLOAD_URL, EXPLORER_URL } from '@/constant'
 import Bars from '../../assets/icons/bars.svg'
-import { MEDIA } from '../bottom/config'
+import { MEDIA } from '../footer/config'
 import { useMediaQuery } from 'react-responsive'
 
 const Container = styled.div`

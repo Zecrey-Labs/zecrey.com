@@ -2,7 +2,6 @@
  * Copyright (C) 2020-present, Zecrey-Labs
  */
 
-import Bottom from '@/components/bottom/Bottom'
 import BubbleCard from '@/components/BubbleCard/BubbleCard'
 import CardWrap from '@/components/card-wrap'
 import Icon from '@/components/common/Icon'
@@ -17,6 +16,9 @@ import Multichainbrand from '@/components/multichainbrand/Multichainbrand'
 import Ecosystem from '@/components/Ecosystem/Ecosystem'
 import Privacy from '@/components/Privacy/Privacy'
 import RoadMap from '@/components/roadmap'
+import dynamic from 'next/dynamic'
+
+const Footer = dynamic(() => import('@/components/footer'), { ssr: false })
 
 export default function Home() {
   return (
@@ -73,7 +75,7 @@ export default function Home() {
         <RoadMap />
       </CardWrap>
       <Communtity id='join' />
-      <Bottom />
+      <Footer dark={true} />
     </Layout>
   )
 }
