@@ -6,10 +6,11 @@ import Icon from '../common/Icon'
 import { MobileWrap, Wrap } from './styles'
 import { useMediaQuery } from 'react-responsive'
 import ImgBox from '../common/ImgBox'
+import { isMobile } from 'react-device-detect'
 
 const WalletDownload = () => {
-  const isMobile = useMediaQuery({ maxWidth: 780 })
-  return isMobile ? <Mobile /> : <Desktop />
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop />
 }
 
 export default WalletDownload
@@ -84,6 +85,7 @@ function Desktop() {
 
 const Mobile = () => {
   const [video, setVideo] = useState(false)
+  const dom = useRef<HTMLVideoElement>(null)
   return (
     <MobileWrap>
       <label className='title-1'>
@@ -98,7 +100,11 @@ const Mobile = () => {
         rel='noreferrer'>
         Download
       </a>
-      <button className='video' onClick={() => setVideo(true)}>
+      <button
+        className='video'
+        onClick={() => {
+          isMobile ? dom.current.play() : setVideo(true)
+        }}>
         <Icon name='play' /> Watch the video introduction
       </button>
       {video && (
@@ -107,6 +113,14 @@ const Mobile = () => {
           src='/video/wallet-video.mp4'
           close={() => setVideo(false)}
         />
+      )}
+      {isMobile && (
+        <video
+          className='video-on-mobile'
+          ref={dom}
+          src='/video/wallet-video.mp4'
+          controls
+          onContextMenu={e => e.preventDefault()}></video>
       )}
     </MobileWrap>
   )
