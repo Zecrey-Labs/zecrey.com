@@ -23,11 +23,11 @@ export const Wrap = styled.div`
     position: relative;
     width: 100%;
     height: ${vw(336)};
-    .dashed {
+    .ecosystem-icon {
+      position: absolute;
+      width: ${vw(273)};
+      height: ${vw(398)};
       top: ${vw(-49)};
-      bottom: unset;
-      left: ${vw(0)};
-      transform: none;
     }
     .logo {
       width: ${vw(125)};

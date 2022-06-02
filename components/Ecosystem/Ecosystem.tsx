@@ -6,6 +6,7 @@ import Modal from '../modal'
 import { LogoDot, Wrap } from './styles'
 import { useMediaQuery } from 'react-responsive'
 import Wire from './wire.svg'
+import EcosystemIcon from './ecosystem.svg'
 
 const items: {
   name: string
@@ -69,9 +70,7 @@ const Ecosystem = () => {
     <>
       {!isMobile && <Modal />}
       <Wrap>
-        {isMobile ? (
-          <Wire className='dashed' />
-        ) : (
+        {!isMobile && (
           <ImgBox
             className='dashed'
             src='/Ecosystem/wire.png'
@@ -80,9 +79,11 @@ const Ecosystem = () => {
             height={66}
           />
         )}
-        {items.map((i, index) => (
-          <Item key={index} {...i} index={index} />
-        ))}
+        {isMobile ? (
+          <EcosystemIcon className='ecosystem-icon' />
+        ) : (
+          items.map((i, index) => <Item key={index} {...i} index={index} />)
+        )}
         {!isMobile && <LogoDot />}
         <ImgBox
           className='logo'
