@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Icon from '../common/Icon'
 import { isSafari } from 'react-device-detect'
 import {
@@ -100,13 +100,30 @@ const Typing = (props: { str: string }) => {
 }
 
 const Mobile = () => {
+  const [longer, setLonger] = useState(false)
+  const wrap = useRef<HTMLDivElement>(null)
+  const dom = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     let body = document.querySelector('body')
     body.classList.add('enable-scroll')
+    let handleResize = () => {
+      let [wrapTop, wrapHeight, domTop] = [
+        wrap.current.getBoundingClientRect().top,
+        wrap.current.getBoundingClientRect().height,
+        dom.current.getBoundingClientRect().top
+      ]
+      setLonger(domTop < wrapTop || wrapHeight > window.innerHeight)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
+
   return (
-    <MobileWrap className='landing-mobile'>
-      <Box>
+    <MobileWrap ref={wrap} className={classNames('landing-mobile', { longer })}>
+      <Box ref={dom}>
         <Text>A turn-key solution for Cross-chain and privacy</Text>
         <Text2>
           A turn-key, L2 privacy solution for cross-chain transactions and asset

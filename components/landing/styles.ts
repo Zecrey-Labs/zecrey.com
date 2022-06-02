@@ -283,6 +283,10 @@ export const Bottom = styled.div`
       height: ${vw(7)};
       margin-top: ${vw(7)};
     }
+    .longer & {
+      bottom: unset;
+      top: ${vw(490)};
+    }
   }
 `
 export const MobileWrap = styled.div`
@@ -290,4 +294,7 @@ export const MobileWrap = styled.div`
   align-items: center;
   height: calc(100vh - ${vw(100)});
   margin-bottom: ${vw(50)};
+  &.longer {
+    height: ${vw(440)};
+  }
 `
