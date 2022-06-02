@@ -5,11 +5,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { VideoModal } from '../video-modal'
 import { Img, Wrap } from './styles'
+import { isMobile } from 'react-device-detect'
 
 function Privacy() {
-  const isMobile = useMediaQuery({ maxWidth: 780 })
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
+  const videoDom = useRef<HTMLVideoElement>(null)
+
   useEffect(() => {
     let handleScroll = () => {
       if (dom.current) {
@@ -35,7 +38,7 @@ function Privacy() {
       <Wrap ref={dom} className={classNames({ visible })}>
         <div className='wrap'>
           <div className='privacy'>
-            {isMobile ? (
+            {isMobileView ? (
               <label className='title'>What's Zecrey?</label>
             ) : (
               <Img className='Pri'>
@@ -48,7 +51,9 @@ function Privacy() {
                 <img
                   src='/video/play.svg'
                   alt=''
-                  onClick={() => setVideo(true)}
+                  onClick={() => {
+                    isMobile ? videoDom.current.play() : setVideo(true)
+                  }}
                 />
               </div>
             </div>
@@ -87,6 +92,14 @@ function Privacy() {
             close={() => setVideo(false)}
           />
         ) : null}
+        {isMobile && (
+          <video
+            className='video-on-mobile'
+            ref={videoDom}
+            src='/video/video.mp4'
+            controls
+            onContextMenu={e => e.preventDefault()}></video>
+        )}
       </Wrap>
     </>
   )

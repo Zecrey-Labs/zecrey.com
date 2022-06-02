@@ -243,6 +243,11 @@ export const Wrap = styled.div`
         opacity: 1;
       }
     }
+    video.video-on-mobile {
+      position: absolute;
+      z-index: -100;
+      pointer-events: none;
+    }
   }
 `
 export const Img = styled.div`
