@@ -69,5 +69,5 @@ const Desktop = () => {
 }
 
 const Mobile = () => {
-  return <MobileWrap>{items.map((i, index) => i.icon)}</MobileWrap>
+  return <MobileWrap>{items.map(i => i.icon)}</MobileWrap>
 }
