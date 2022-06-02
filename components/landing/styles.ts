@@ -86,13 +86,15 @@ export const Box = styled.div`
     overflow: visible;
     margin-bottom: ${vw(154)};
     svg {
+      opacity: 1;
       &.dots {
         width: ${vw(122)};
         height: ${vw(99)};
       }
       &.logo {
-        width: ${vw(69)};
-        height: ${vw(74)};
+        width: ${vw(72)};
+        height: ${vw(58)};
+        border-radius: 0 0 ${vw(10)} 0;
       }
     }
   }

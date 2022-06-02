@@ -14,6 +14,8 @@ import {
   Wrap
 } from './styles'
 import { useMediaQuery } from 'react-responsive'
+import Logo from './logo-mobile.svg'
+import Dots from './dots-mobile.svg'
 
 const Landing = () => {
   const isMobile = useMediaQuery({ maxWidth: 780 })
@@ -129,8 +131,8 @@ const Mobile = () => {
           A turn-key, L2 privacy solution for cross-chain transactions and asset
           management based on Zero-knowledge (zk) Roll-Ups.
         </Text2>
-        <Icon className='dots' name='dots' />
-        <Icon className='logo' name='logo' />
+        <Dots className='dots' />
+        <Logo className='logo' />
         <Img src='/Zecrey_3D_poster.png' alt='Zecrey_3D_poster' />
       </Box>
       <Bottom>
