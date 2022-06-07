@@ -10,7 +10,7 @@ import { Brands, BrandsWrap } from './styles'
 const Wrap = styled.div`
   &.isShow {
     .show {
-      height: 66rem;
+      height: 62rem;
       transition: all 0.7s;
       li {
         transition: opacity 0.7s;
@@ -259,98 +259,6 @@ function Partners() {
             </>
           )}
         </Brands>
-        {/* <div>
-            <ul className='partner'>
-              <li>
-                <img src='/Partners/binance.png' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/spartan.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/shima.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/labs.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/captical.svg' alt='' />
-              </li>
-              <li className='left1'>
-                <img src='/Partners/you.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/amber.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/maplebl.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/cmtd.svg' alt='' />
-              </li>
-              <li className='left2'>
-                <img src='/Partners/avatvr.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/sevenx.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/bubit.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/snz.svg' alt='' />
-              </li>
-              <li className='left3'>
-                <img src='/Partners/DoraHacksVentures.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/crasolum.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/block0.svg' alt='' />
-              </li>
-              <li
-                className={classnames(isShow ? 'partner11' : 'partner11 none')}>
-                <div onClick={() => setIsShow(false)}>
-                  <span>View More</span>
-                  <img src='/Partners/arrow.svg' alt='' />
-                </div>
-              </li>
-
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/looprlnc.svg' alt='' />
-              </li>
-              <li className={classnames('left4', isShow ? 'none' : '')}>
-                <img src='/Partners/cmccgloba.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/cypherpunn.svg' alt='' />
-              </li>
-
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/stake.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/20.svg' alt='' />
-              </li>
-              <li className={classnames('left5', isShow ? 'none' : '')}>
-                <img src='/Partners/21.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img
-                  src='/Partners/stratified.png'
-                  alt=''
-                  style={{ width: '13.6rem', height: '3.6rem' }}
-                />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/spark.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/mulana.png' alt='' />
-              </li>
-            </ul>
-          </div> */}
       </CardWrap>
     </Wrap>
   )

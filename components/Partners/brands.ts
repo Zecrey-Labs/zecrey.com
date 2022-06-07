@@ -75,7 +75,7 @@ export const brands = [
     src: 'snz.svg',
     width: '6.4rem',
     height: '3.5rem',
-    classnames: ['']
+    classnames: ['center']
   },
   {
     src: 'DoraHacksVentures.svg',

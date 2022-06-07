@@ -1,9 +1,10 @@
-import { CenterFlex, FlatBtn, highlight } from '@/styles/global'
+import { CenterFlex, FlatBtn } from '@/styles/global'
 import styled from 'styled-components'
 
 export const Brands = styled.div`
   width: 83.7rem;
   height: 100%;
+  margin-top: -7rem;
 `
 export const BrandsWrap = styled(CenterFlex)`
   justify-content: space-between;
@@ -21,9 +22,19 @@ export const BrandsWrap = styled(CenterFlex)`
     &.right {
       // justify-content: flex-end;
     }
+    &.center {
+      justify-content: center;
+    }
   }
   .lower img {
     margin-bottom: -1.3rem;
+  }
+  img {
+    opacity: 0.85;
+    transition: opacity 120ms ease-out;
+  }
+  img:hover {
+    opacity: 1;
   }
   ${FlatBtn} {
     width: 11.6rem;
