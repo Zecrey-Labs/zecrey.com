@@ -95,6 +95,9 @@ const Box = styled.div<{ width: string }>`
       opacity: 1;
     }
   }
+  &.muted:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
 `
 
 const card = [
@@ -123,7 +126,7 @@ const RoadMap = () => {
         {card.map((i, index) => (
           <Box
             key={index}
-            className={classNames({ ac: index === 1 })}
+            className={classNames({ ac: index === 1, muted: index === 0 })}
             width={i.width}>
             <label>{i.label}</label>
             <span>
