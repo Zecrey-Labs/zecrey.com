@@ -42,10 +42,10 @@ export const brands = [
     classnames: ['']
   },
   {
-    src: 'maplebl.svg',
-    width: '14.3rem',
-    height: '2.5rem',
-    classnames: ['']
+    src: 'snz.svg',
+    width: '6.4rem',
+    height: '3.5rem',
+    classnames: ['center']
   },
   {
     src: 'cmtd.svg',
@@ -72,10 +72,10 @@ export const brands = [
     classnames: ['']
   },
   {
-    src: 'snz.svg',
-    width: '6.4rem',
-    height: '3.5rem',
-    classnames: ['center']
+    src: 'maplebl.svg',
+    width: '14.3rem',
+    height: '2.5rem',
+    classnames: ['']
   },
   {
     src: 'DoraHacksVentures.svg',

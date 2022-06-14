@@ -25,7 +25,7 @@ const Wrap = styled.div`
       position: absolute;
       height: 1.4rem;
       left: 6rem;
-      top: 26.5rem;
+      top: 25rem;
       opacity: 0;
       .privacy {
         font-family: Helvetica;
@@ -58,7 +58,7 @@ const Wrap = styled.div`
     height: 6.6rem;
     left: 4.69%;
     right: 73.12%;
-    top: 29rem;
+    top: 27.5rem;
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 800;
