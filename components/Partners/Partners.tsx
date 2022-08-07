@@ -1,8 +1,11 @@
+import { vw } from '@/styles/global'
 import classnames from 'classnames'
 import React, { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import CardWrap from '../common/card-wrap'
 import Icon from '../common/Icon'
+import { MobileWrap } from './styles'
 
 const Wrap = styled.div`
   &.is-show {
@@ -103,7 +106,13 @@ const Wrap = styled.div`
   }
 `
 
-function Partners() {
+const Partners = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop />
+}
+export default Partners
+
+function Desktop() {
   const [isShow, setIsShow] = useState<boolean>(true)
   return (
     <>
@@ -169,7 +178,6 @@ function Partners() {
                   <img src='/Partners/arrow.svg' alt='' />
                 </div>
               </li>
-
               <li className={classnames(isShow ? 'none' : '')}>
                 <img src='/Partners/looprlnc.svg' alt='' />
               </li>
@@ -210,4 +218,131 @@ function Partners() {
   )
 }
 
-export default Partners
+const Mobile = () => {
+  const [isShow, setIsShow] = useState<boolean>(false)
+  return (
+    <MobileWrap>
+      <label className='title-1'>Backers</label>
+      <div className='grid'>
+        <div className='grid-1'>
+          <img src='/Partners/binance.svg' alt='' />
+        </div>
+        <div className='grid-2'>
+          <img src='/Partners/spartan.svg' alt='' />
+        </div>
+      </div>
+      <div className='grid'>
+        <div className='grid-1'>
+          <img src='/Partners/captical.svg' alt='' style={{ height: vw(25) }} />
+        </div>
+        <div className='grid-2'>
+          <img src='/Partners/shima.svg' alt='' style={{ height: vw(51) }} />
+        </div>
+      </div>
+      <div className='grid'>
+        <div className='grid-1'>
+          <img src='/Partners/you.svg' alt='' />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/amber.svg' alt='' style={{ height: vw(14) }} />
+        </div>
+      </div>
+      <div className='grid'>
+        <div className='grid-1'>
+          <img src='/Partners/avatvr.svg' alt='' style={{ height: vw(15) }} />
+        </div>
+        <div className='grid-2'>
+          <img src='/Partners/maplebl.svg' alt='' style={{ height: vw(23) }} />
+        </div>
+      </div>
+      {isShow ? null : (
+        <button onClick={() => setIsShow(true)}>
+          view more
+          <img src='/Partners/arrow.svg' alt='' />
+        </button>
+      )}
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1'>
+          <img src='/Partners/cmtd.svg' alt='' style={{ height: vw(24) }} />
+        </div>
+        <div className='grid-2'>
+          <img src='/Partners/sevenx.svg' alt='' style={{ height: vw(23) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1'>
+          <img
+            src='/Partners/cmccgloba.svg'
+            alt=''
+            style={{ height: vw(16) }}
+          />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/bubit.svg' alt='' style={{ height: vw(25) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img src='/Partners/looprlnc.svg' alt='' style={{ height: vw(25) }} />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/crasolum.svg' alt='' style={{ height: vw(18) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img
+            src='/Partners/DoraHacksVentures.svg'
+            alt=''
+            style={{ height: vw(33) }}
+          />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/block0.svg' alt='' style={{ height: vw(21) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img
+            src='/Partners/cypherpunn.svg'
+            alt=''
+            style={{ height: vw(25) }}
+          />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/pluto.svg' alt='' style={{ height: vw(21) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img src='/Partners/stake.svg' alt='' />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/snz.svg' alt='' style={{ height: vw(25) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img src='/Partners/labs.svg' alt='' />
+        </div>
+        <div className='grid-2'>
+          <img src='/Partners/20.svg' alt='' style={{ height: vw(21) }} />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img src='/Partners/21.svg' alt='' style={{ height: vw(22) }} />
+        </div>
+        <div className='grid-2 center'>
+          <img src='/Partners/spark.svg' alt='' />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1 center'>
+          <img src='/Partners/mulana.png' alt='' style={{ height: vw(39) }} />
+        </div>
+        <div className='grid-2 center'></div>
+      </div>
+    </MobileWrap>
+  )
+}
