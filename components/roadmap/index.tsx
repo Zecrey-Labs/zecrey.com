@@ -1,5 +1,9 @@
 import classNames from 'classnames'
+import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
+import CardWrap from '../common/card-wrap'
+import Icon from '../common/Icon'
+import { MobileWrap } from './styles'
 
 const Wrap = styled.div`
   position: relative;
@@ -117,30 +121,45 @@ const card = [
 ]
 
 const RoadMap = () => {
-  return (
-    <Wrap>
-      <BoxGroup>
-        {card.map((i, index) => (
-          <Box
-            key={index}
-            className={classNames({ ac: index === 1 })}
-            width={i.width}>
-            <label>{i.label}</label>
-            <span>
-              {i.span.map((el, index) => (
-                <i key={index}>{el}</i>
-              ))}{' '}
-            </span>
-          </Box>
-        ))}
-      </BoxGroup>
-      <Line />
-      <Flag />
-    </Wrap>
-  )
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop />
 }
 
 export default RoadMap
+
+const Desktop = () => {
+  return (
+    <CardWrap
+      title='Roadmap'
+      backgroundIcon={{
+        svg: <Icon name='roadmap' />,
+        size: { width: '29rem', height: '25.3rem' }
+      }}
+      text={[
+        `The Zecrey roadmap indicates our major milestones, including a summary of Zecrey development, a set of functionalities to be delivered.`
+      ]}>
+      <Wrap>
+        <BoxGroup>
+          {card.map((i, index) => (
+            <Box
+              key={index}
+              className={classNames({ ac: index === 1 })}
+              width={i.width}>
+              <label>{i.label}</label>
+              <span>
+                {i.span.map((el, index) => (
+                  <i key={index}>{el}</i>
+                ))}{' '}
+              </span>
+            </Box>
+          ))}
+        </BoxGroup>
+        <Line />
+        <Flag />
+      </Wrap>
+    </CardWrap>
+  )
+}
 
 const Line = () => (
   <svg
@@ -188,3 +207,25 @@ const Flag = () => (
     />
   </svg>
 )
+
+const Mobile = () => {
+  return (
+    <MobileWrap>
+      <label className='title-1'>Road Map</label>
+      <div className='map'>
+        <Line />
+        <Flag />
+        {card.map((i, index) => (
+          <div key={index} className={classNames(`card_${index + 1}`)}>
+            <label>{i.label}</label>
+            <span>{i.span}</span>
+          </div>
+        ))}
+      </div>
+      <label className='title-2'>
+        The Zecrey roadmap indicates our major milestones, including a summary
+        of Zecrey development, a set of functionalities to be delivered.
+      </label>
+    </MobileWrap>
+  )
+}

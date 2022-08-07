@@ -5,7 +5,6 @@ import ImgBox from '../common/ImgBox'
 import Modal from '../modal'
 import { LogoDot, Wrap } from './styles'
 import { useMediaQuery } from 'react-responsive'
-import Wire from './wire.svg'
 import EcosystemIcon from './ecosystem.svg'
 
 const items: {

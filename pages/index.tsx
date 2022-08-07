@@ -44,7 +44,7 @@ export default function Home() {
       <ZecreyWebApp />
       <ZecreyMobile />
       <Partners />
-      <CardWrap
+      {/* <CardWrap
         title='Roadmap'
         backgroundIcon={{
           svg: <Icon name='roadmap' />,
@@ -53,8 +53,8 @@ export default function Home() {
         text={[
           `The Zecrey roadmap indicates our major milestones, including a summary of Zecrey development, a set of functionalities to be delivered.`
         ]}>
-        <RoadMap />
-      </CardWrap>
+      </CardWrap> */}
+      <RoadMap />
       <Communtity id='join' />
       <Footer dark={true} />
     </Layout>
