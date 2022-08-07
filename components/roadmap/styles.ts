@@ -91,17 +91,17 @@ export const MobileWrap = styled.div`
       left: ${vw(9)};
       top: ${vw(145)};
     }
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: ${vw(10)};
-      height: ${vw(5)};
-      border-radius: ${vw(20)};
-      background-color: #2ad4d8;
-      left: ${vw(5)};
-      top: ${vw(162)};
-    }
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   width: ${vw(10)};
+    //   height: ${vw(5)};
+    //   border-radius: ${vw(20)};
+    //   background-color: #2ad4d8;
+    //   left: ${vw(5)};
+    //   top: ${vw(162)};
+    // }
   }
   label.title-2 {
     display: block;

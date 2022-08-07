@@ -258,13 +258,13 @@ const Mobile = () => {
       </label>
       <div className='grid'>
         <div className='grid-1'>
-          <a href={items[0].link}>
+          <a href={items[0].link} target='_blank'>
             {items[0].icon}
             <span>{items[0].label}</span>
           </a>
         </div>
         <div className='grid-2'>
-          <a href={items[1].link}>
+          <a href={items[1].link} target='_blank'>
             {items[1].icon}
             <span>{items[1].label}</span>
           </a>
@@ -272,13 +272,13 @@ const Mobile = () => {
       </div>
       <div className='grid'>
         <div className='grid-1'>
-          <a href={items[2].link}>
+          <a href={items[2].link} target='_blank'>
             {items[2].icon}
             <span>{items[2].label}</span>
           </a>
         </div>
         <div className='grid-2'>
-          <a href={items[3].link}>
+          <a href={items[3].link} target='_blank'>
             {items[3].icon}
             <span>{items[3].label}</span>
           </a>

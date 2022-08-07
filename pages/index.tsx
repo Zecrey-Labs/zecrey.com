@@ -2,14 +2,7 @@
  * Copyright (C) 2020-present, Zecrey-Labs
  */
 
-import CardWrap from '@/components/common/card-wrap'
-import Icon from '@/components/common/Icon'
-import Communtity from '@/components/Communtity/Communtity'
 import Layout from '@/components/layout'
-import Partners from '@/components/Partners/Partners'
-import ZecreyMobile from '@/components/Zecreymobile/ZecreyMobile'
-import ZecreyWebApp from '@/components/Zecreywebapp/ZecreyWebApp'
-import RoadMap from '@/components/roadmap'
 import dynamic from 'next/dynamic'
 
 const Landing = dynamic(() => import('@/components/landing'), { ssr: false })
@@ -30,6 +23,21 @@ const WalletDownload = dynamic(
   () => import('@/components/Walletdownload/WalletDownload'),
   { ssr: false }
 )
+const Communtity = dynamic(() => import('@/components/Communtity/Communtity'), {
+  ssr: false
+})
+const Partners = dynamic(() => import('@/components/Partners/Partners'), {
+  ssr: false
+})
+const ZecreyMobile = dynamic(
+  () => import('@/components/Zecreymobile/ZecreyMobile'),
+  { ssr: false }
+)
+const ZecreyWebApp = dynamic(
+  () => import('@/components/Zecreywebapp/ZecreyWebApp'),
+  { ssr: false }
+)
+const RoadMap = dynamic(() => import('@/components/roadmap'), { ssr: false })
 const Footer = dynamic(() => import('@/components/footer'), { ssr: false })
 
 export default function Home() {

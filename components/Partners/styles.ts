@@ -10,6 +10,7 @@ export const MobileWrap = styled.div`
   background: rgba(56, 56, 56, 0.5);
   margin: 0 auto ${vw(20)} auto;
   overflow: hidden;
+  text-align: center;
   label.title-1 {
     display: block;
     font-family: 'Lexend';
@@ -53,6 +54,19 @@ export const MobileWrap = styled.div`
       img {
         height: ${vw(28)};
       }
+    }
+  }
+  button {
+    background: none;
+    border: none;
+    color: #2ad4d9;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: ${vw(12)};
+    img {
+      width: ${vw(10)};
+      height: ${vw(10)};
+      margin-left: ${vw(5)};
     }
   }
 `

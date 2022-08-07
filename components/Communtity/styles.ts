@@ -62,6 +62,7 @@ export const MobileWrap = styled.div`
         justify-content: center;
         flex-direction: column;
         text-decoration: none;
+        cursor: pointer;
         svg {
           width: ${vw(36)};
           color: #fff;

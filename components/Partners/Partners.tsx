@@ -257,7 +257,7 @@ const Mobile = () => {
       </div>
       {isShow ? null : (
         <button onClick={() => setIsShow(true)}>
-          view more
+          View More
           <img src='/Partners/arrow.svg' alt='' />
         </button>
       )}
