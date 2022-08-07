@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
+import { useMediaQuery } from 'react-responsive'
+import { MobileWrap } from './styles'
+import ImgBox from '../common/ImgBox'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -134,7 +137,14 @@ const Wrap = styled.div`
   }
 `
 
-function ZecreyWebApp() {
+const ZecreyWebApp = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop />
+}
+
+export default ZecreyWebApp
+
+function Desktop() {
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -181,4 +191,17 @@ function ZecreyWebApp() {
   )
 }
 
-export default ZecreyWebApp
+const Mobile = () => {
+  return (
+    <MobileWrap className='ttt'>
+      <label className='title-1'>
+        Streamlined Experience
+        <br />
+        Simple, Yet Robust
+      </label>
+      <label className='title-2'>Zecrey Web App</label>
+      <ImgBox src='/Zecreywebapp/MacBook Pro.png' alt='Extension' />
+      <button disabled>Coming soon</button>
+    </MobileWrap>
+  )
+}
