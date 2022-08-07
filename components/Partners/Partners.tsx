@@ -1,16 +1,17 @@
-import { vw } from '@/styles/global'
+import { vw, CenterFlex, FlatBtn } from '@/styles/global'
 import classnames from 'classnames'
 import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import CardWrap from '../common/card-wrap'
 import Icon from '../common/Icon'
-import { MobileWrap } from './styles'
+import { MobileWrap, Brands, BrandsWrap } from './styles'
+import { brands } from './brands'
 
 const Wrap = styled.div`
-  &.is-show {
+  &.isShow {
     .show {
-      height: 54.5rem;
+      height: 62rem;
       transition: all 0.7s;
       li {
         transition: opacity 0.7s;
@@ -113,111 +114,162 @@ const Partners = () => {
 export default Partners
 
 function Desktop() {
-  const [isShow, setIsShow] = useState<boolean>(true)
-  return (
-    <>
-      <Wrap className={classnames(isShow ? '' : 'is-show')}>
-        <CardWrap
-          title='Backers'
-          backgroundIcon={{
-            svg: <Icon name='users' />, // todo: repace with svg element
-            size: { width: '31.3rem', height: '24rem' }
-          }}
-          text={[]}>
-          <div>
-            <ul className='partner'>
-              <li>
-                <img src='/Partners/spartan.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/shima.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/labs.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/captical.svg' alt='' />
-              </li>
-              <li className='left1'>
-                <img src='/Partners/you.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/amber.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/maplebl.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/cmtd.svg' alt='' />
-              </li>
-              <li className='left2'>
-                <img src='/Partners/avatvr.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/sevenx.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/bubit.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/snz.svg' alt='' />
-              </li>
-              <li className='left3'>
-                <img src='/Partners/DoraHacksVentures.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/crasolum.svg' alt='' />
-              </li>
-              <li>
-                <img src='/Partners/block0.svg' alt='' />
-              </li>
-              <li
-                className={classnames(isShow ? 'partner11' : 'partner11 none')}>
-                <div onClick={() => setIsShow(false)}>
-                  <span>View More</span>
-                  <img src='/Partners/arrow.svg' alt='' />
-                </div>
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/looprlnc.svg' alt='' />
-              </li>
-              <li className={classnames('left4', isShow ? 'none' : '')}>
-                <img src='/Partners/cmccgloba.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/cypherpunn.svg' alt='' />
-              </li>
+  const [isShow, setIsShow] = useState<boolean>(false)
 
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/stake.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/20.svg' alt='' />
-              </li>
-              <li className={classnames('left5', isShow ? 'none' : '')}>
-                <img src='/Partners/21.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
+  return (
+    <Wrap className={classnames({ isShow })}>
+      <CardWrap
+        title='Backers'
+        backgroundIcon={{
+          svg: <Icon name='users' />,
+          size: { width: '31.3rem', height: '24rem' }
+        }}
+        text={[]}>
+        <Brands className='brands'>
+          <BrandsWrap className='brands-wrap'>
+            {brands.slice(0, 4).map((i, index) => (
+              <CenterFlex
+                key={index}
+                className={classnames(...i.classnames, {
+                  left: index === 0,
+                  right: index === 3
+                })}>
                 <img
-                  src='/Partners/stratified.png'
+                  src={`/Partners/${i.src}`}
                   alt=''
-                  style={{ width: '13.6rem', height: '3.6rem' }}
+                  style={{ width: i.width, height: i.height }}
                 />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/spark.svg' alt='' />
-              </li>
-              <li className={classnames(isShow ? 'none' : '')}>
-                <img src='/Partners/mulana.png' alt='' />
-              </li>
-            </ul>
-          </div>
-        </CardWrap>
-      </Wrap>
-    </>
+              </CenterFlex>
+            ))}
+          </BrandsWrap>
+          <BrandsWrap className='brands-wrap'>
+            {brands.slice(4, 8).map((i, index) => (
+              <CenterFlex
+                key={index}
+                className={classnames(...i.classnames, {
+                  left: index === 0,
+                  right: index === 3
+                })}>
+                <img
+                  src={`/Partners/${i.src}`}
+                  alt=''
+                  style={{ width: i.width, height: i.height }}
+                />
+              </CenterFlex>
+            ))}
+          </BrandsWrap>
+          <BrandsWrap className='brands-wrap'>
+            {brands.slice(8, 12).map((i, index) => (
+              <CenterFlex
+                key={index}
+                className={classnames(...i.classnames, {
+                  left: index === 0,
+                  right: index === 3
+                })}>
+                <img
+                  src={`/Partners/${i.src}`}
+                  alt=''
+                  style={{ width: i.width, height: i.height }}
+                />
+              </CenterFlex>
+            ))}
+          </BrandsWrap>
+          {!isShow && (
+            <BrandsWrap className='brands-wrap'>
+              {brands.slice(12, 15).map((i, index) => (
+                <CenterFlex
+                  key={index}
+                  className={classnames(...i.classnames, {
+                    left: index === 0,
+                    right: index === 3
+                  })}>
+                  <img
+                    src={`/Partners/${i.src}`}
+                    alt=''
+                    style={{ width: i.width, height: i.height }}
+                  />
+                </CenterFlex>
+              ))}
+              <CenterFlex>
+                <FlatBtn onClick={() => setIsShow(true)}>
+                  View More <Icon name='dart-2' />
+                </FlatBtn>
+              </CenterFlex>
+            </BrandsWrap>
+          )}
+          {isShow && (
+            <>
+              <BrandsWrap className='brands-wrap'>
+                {brands.slice(12, 16).map((i, index) => (
+                  <CenterFlex
+                    key={index}
+                    className={classnames(...i.classnames, {
+                      left: index === 0,
+                      right: index === 3
+                    })}>
+                    <img
+                      src={`/Partners/${i.src}`}
+                      alt=''
+                      style={{ width: i.width, height: i.height }}
+                    />
+                  </CenterFlex>
+                ))}
+              </BrandsWrap>
+              <BrandsWrap className='brands-wrap'>
+                {brands.slice(16, 20).map((i, index) => (
+                  <CenterFlex
+                    key={index}
+                    className={classnames(...i.classnames, {
+                      left: index === 0,
+                      right: index === 3
+                    })}>
+                    <img
+                      src={`/Partners/${i.src}`}
+                      alt=''
+                      style={{ width: i.width, height: i.height }}
+                    />
+                  </CenterFlex>
+                ))}
+              </BrandsWrap>
+              <BrandsWrap className='brands-wrap'>
+                {brands.slice(20, 24).map((i, index) => (
+                  <CenterFlex
+                    key={index}
+                    className={classnames(...i.classnames, {
+                      left: index === 0,
+                      right: index === 3
+                    })}>
+                    <img
+                      src={`/Partners/${i.src}`}
+                      alt=''
+                      style={{ width: i.width, height: i.height }}
+                    />
+                  </CenterFlex>
+                ))}
+              </BrandsWrap>
+              <BrandsWrap className='brands-wrap'>
+                {brands.slice(24, 28).map((i, index) => (
+                  <CenterFlex
+                    key={index}
+                    className={classnames(...i.classnames, {
+                      left: index === 0,
+                      right: index === 3
+                    })}>
+                    <img
+                      src={`/Partners/${i.src}`}
+                      alt=''
+                      style={{ width: i.width, height: i.height }}
+                    />
+                  </CenterFlex>
+                ))}
+              </BrandsWrap>
+            </>
+          )}
+        </Brands>
+      </CardWrap>
+    </Wrap>
   )
 }
-
 const Mobile = () => {
   const [isShow, setIsShow] = useState<boolean>(false)
   return (

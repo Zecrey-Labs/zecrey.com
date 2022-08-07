@@ -99,6 +99,9 @@ const Box = styled.div<{ width: string }>`
       opacity: 1;
     }
   }
+  &.muted:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
 `
 
 const card = [
