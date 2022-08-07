@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
+import { useMediaQuery } from 'react-responsive'
+import { MobileWrap } from './styles'
+import ImgBox from '../common/ImgBox'
 
 const Wrap = styled.div`
   .outermostlayer {
@@ -135,7 +137,14 @@ const Wrap = styled.div`
   }
 `
 
-function ZecreyMobile() {
+const ZecreyMobile = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop />
+}
+
+export default ZecreyMobile
+
+function Desktop() {
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -176,4 +185,17 @@ function ZecreyMobile() {
   )
 }
 
-export default ZecreyMobile
+export const Mobile = () => {
+  return (
+    <MobileWrap>
+      <label className='title-1'>
+        Abilities at Your
+        <br />
+        Fingertips
+      </label>
+      <label className='title-2'>Zecrey Mobile</label>
+      <ImgBox src='/zecreymobile/mobile-mobile.png' alt='Extension' />
+      <button disabled>Coming soon</button>
+    </MobileWrap>
+  )
+}

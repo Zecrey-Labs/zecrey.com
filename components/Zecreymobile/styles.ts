@@ -32,9 +32,10 @@ export const MobileWrap = styled.div`
     text-align: center;
   }
   .img-box {
-    width: ${vw(281)};
-    height: ${vw(297)};
-    margin-right: ${vw(-221)};
+    width: ${vw(185)};
+    height: ${vw(382)};
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: ${vw(35)};
   }
   button {
