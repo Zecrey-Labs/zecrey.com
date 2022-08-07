@@ -6,7 +6,6 @@ import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import BubbleButton from '../bubble-button'
 import Icon from '../common/Icon'
-import Card from './card'
 import { MobileWrap } from './styles'
 
 const Wrap = styled.div`
