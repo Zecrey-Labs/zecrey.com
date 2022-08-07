@@ -1,10 +1,7 @@
-import { CenterFlex } from '@/styles/global'
-import classNames from 'classnames'
-import { debounce } from 'lodash'
-import { ReactNode, useEffect, useRef, useState } from 'react'
-import styled, { CSSProperties } from 'styled-components'
+import { CenterFlex, vw } from '@/styles/global'
+import styled from 'styled-components'
 
-const Box = styled.div`
+export const Box = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@ const Box = styled.div`
     justify-content: space-between;
   }
 `
-const Title = styled.div`
+export const Title = styled.div`
   display: inline-block;
   font-family: 'Lexend';
   font-style: normal;
@@ -43,8 +40,23 @@ const Title = styled.div`
   .visible & {
     animation: move1 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
   }
+  @media (max-width: 780px) {
+    animation: none;
+    transform: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    &.title {
+      width: 100%;
+      font-size: ${vw(18)};
+      line-height: ${vw(22.5)};
+      padding-bottom: ${vw(30)};
+      margin: 0;
+    }
+  }
 `
-const IconWrap = styled.div`
+export const IconWrap = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -54,11 +66,9 @@ const IconWrap = styled.div`
   border-radius: 1rem;
   z-index: -10;
 `
-const BackgoundIcon = styled.div<{
+export const BackgoundIcon = styled.div<{
   size: { width: string; height: string }
 }>`
-  width: 37.8rem;
-  height: 26.5rem;
   overflow: hidden;
   position: absolute;
   width: ${props => props.size.width};
@@ -81,8 +91,13 @@ const BackgoundIcon = styled.div<{
       opacity: 1;
     }
   }
+  @media (max-width: 780px) {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+  }
 `
-const Text = styled.div`
+export const Text = styled.div`
   width: 79rem;
   p {
     font-family: 'IBM Plex Sans';
@@ -100,7 +115,6 @@ const Text = styled.div`
       animation: move1 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) forwards;
     }
   }
-
   @keyframes move1 {
     0% {
       transform: translateY(1.3rem);
@@ -111,8 +125,20 @@ const Text = styled.div`
       opacity: 1;
     }
   }
+  @media (max-width: 780px) {
+    width: 100%;
+    p {
+      width: 100%;
+      transform: translateY(0);
+      opacity: 1;
+      animation: none;
+      font-size: ${vw(10)};
+      line-height: ${vw(13)};
+      text-align: center;
+    }
+  }
 `
-const Content = styled(CenterFlex)`
+export const Content = styled(CenterFlex)`
   flex: 1;
   justify-content: flex-end;
   transform: translateY(1.3rem);
@@ -122,64 +148,13 @@ const Content = styled(CenterFlex)`
   }
 `
 
-const CardWrap = (props: {
-  title: string
-  backgroundIcon: {
-    svg: ReactNode // svg element
-    size: { width: string; height: string }
-  }
-  styles?: CSSProperties
-  text: string[]
-  children?: ReactNode // sub component
-}) => {
-  const [visible, setVisible] = useState(false)
-  const dom = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    let handleScroll = () => {
-      if (dom.current) {
-        let domTop = dom.current.getBoundingClientRect().top
-        let domHeight = dom.current.getBoundingClientRect().height
-        let height = window.innerHeight
-        if (height - domTop >= domHeight / 5) {
-          setVisible(true)
-          document.removeEventListener('scroll', handleScroll)
-        }
-      }
-    }
-    const debouncedScrollEventHandler = debounce(handleScroll, 50)
-    document.addEventListener('scroll', debouncedScrollEventHandler)
-    return () => {
-      document.removeEventListener('scroll', debouncedScrollEventHandler)
-    }
-  }, [])
-
-  return (
-    <Box
-      ref={dom}
-      className={classNames('content-box', 'show', { visible })}
-      style={props.styles}>
-      <IconWrap>
-        <BackgoundIcon size={props.backgroundIcon.size}>
-          {props.backgroundIcon.svg}
-        </BackgoundIcon>
-      </IconWrap>
-      <div className='text-wrap'>
-        <Title
-          className={classNames(
-            props.title === 'Multiple Purposes' ? 'title' : ''
-          )}>
-          {props.title}
-        </Title>
-        <Text>
-          {props.text.map((i, index) => (
-            <p key={index}>{i}</p>
-          ))}
-        </Text>
-      </div>
-      <Content>{props.children}</Content>
-    </Box>
-  )
-}
-
-export default CardWrap
+export const MobileWrap = styled.div`
+  position: relative;
+  width: ${vw(290)};
+  padding: ${vw(30)} ${vw(20)} ${vw(60)} ${vw(20)};
+  border: ${vw(0.5)} solid rgba(255, 255, 255, 0.1);
+  border-radius: ${vw(10)};
+  background: rgba(56, 56, 56, 0.5);
+  margin: 0 auto ${vw(20)} auto;
+  overflow: hidden;
+`

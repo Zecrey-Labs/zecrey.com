@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import ImgBox from '../common/ImgBox'
 import { CenterFlex } from '../../styles/global'
 import Dark from './dark.json'
+import { useMediaQuery } from 'react-responsive'
 
 const Wrap = styled.div`
   position: fixed;
@@ -22,6 +23,13 @@ const Div = styled.div`
 `
 
 const Background = () => {
+  const isMobile = useMediaQuery({ maxWidth: 780 })
+  return isMobile ? <Mobile /> : <Desktop />
+}
+
+export default Background
+
+const Desktop = () => {
   const [lottie, setLottie] = useState<LottiePlayer | null>(null)
   const dom = useRef<HTMLDivElement>(null)
 
@@ -50,8 +58,6 @@ const Background = () => {
     </Wrap>
   )
 }
-
-export default Background
 
 const CubesWrap = styled(CenterFlex)<{ dark: boolean }>`
   position: absolute;
@@ -112,5 +118,29 @@ const Cubes = (props: {
         alt='background'
       />
     </CubesWrap>
+  )
+}
+
+const MobileBG = styled(CenterFlex)`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  top: 0;
+  .img-box {
+    width: 100vw;
+    height: ${73800 / 529}vw;
+  }
+`
+
+const Mobile = () => {
+  return (
+    <MobileBG>
+      <ImgBox
+        className='mobile-cubes'
+        src='/mobile/mobile-bg.png'
+        alt='background'
+      />
+    </MobileBG>
   )
 }

@@ -1,18 +1,10 @@
-import { CenterFlex } from '@/styles/global'
+import { BetweenFlex, CenterFlex } from '@/styles/global'
 import React, { ReactNode } from 'react'
-import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
 import BubbleButton from '../bubble-button'
 import Icon from '../common/Icon'
 import CornerLink from '../corner-link'
-
-const Wrap = styled(CenterFlex)`
-  position: relative;
-  height: 100%;
-  .items-wrap {
-    width: 80rem;
-    justify-content: space-between;
-  }
-`
+import { ItemWrap, MobileWrap, Wrap } from './styles'
 
 const items: {
   label: string
@@ -65,6 +57,13 @@ const items: {
 ]
 
 const BubbleCard = () => {
+  const isMobile = useMediaQuery({ maxWidth: 780 })
+  return isMobile ? <Mobile /> : <Desktop />
+}
+
+export default BubbleCard
+
+const Desktop = () => {
   return (
     <Wrap>
       <CenterFlex className='items-wrap'>
@@ -82,4 +81,28 @@ const BubbleCard = () => {
   )
 }
 
-export default BubbleCard
+const Mobile = () => {
+  return (
+    <MobileWrap>
+      <BetweenFlex>
+        {items.slice(0, 4).map((i, index) => (
+          <Item key={index} icon={i.icon} label={i.label} />
+        ))}
+      </BetweenFlex>
+      <BetweenFlex>
+        {items.slice(4, 7).map((i, index) => (
+          <Item key={index} icon={i.icon} label={i.label} />
+        ))}
+      </BetweenFlex>
+    </MobileWrap>
+  )
+}
+
+const Item = (props: { icon: ReactNode; label: string }) => {
+  return (
+    <ItemWrap>
+      {props.icon}
+      <label>{props.label}</label>
+    </ItemWrap>
+  )
+}

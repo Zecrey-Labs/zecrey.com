@@ -2,10 +2,11 @@ import { CenterFlex } from '@/styles/global'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import styled from 'styled-components'
 import BubbleButton from '../bubble-button'
 import Icon from '../common/Icon'
-import Card from './card'
+import { MobileWrap } from './styles'
 
 const Wrap = styled.div`
   .communtity {
@@ -184,6 +185,13 @@ const items: {
 ]
 
 const Communtity = (props: { id: string }) => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 })
+  return isMobileView ? <Mobile /> : <Desktop id={props.id} />
+}
+
+export default Communtity
+
+const Desktop = (props: { id: string }) => {
   const [visible, setVisible] = useState(false)
   const dom = useRef<HTMLDivElement>(null)
   useEffect(() => {
@@ -238,4 +246,43 @@ const Communtity = (props: { id: string }) => {
   )
 }
 
-export default Communtity
+const Mobile = () => {
+  return (
+    <MobileWrap>
+      <label className='title-1'>Join Communtity</label>
+      <label className='title-2'>
+        Zecrey team is dedicated to globalization
+        <br />
+        development of the project.
+      </label>
+      <div className='grid'>
+        <div className='grid-1'>
+          <a href={items[0].link} target='_blank'>
+            {items[0].icon}
+            <span>{items[0].label}</span>
+          </a>
+        </div>
+        <div className='grid-2'>
+          <a href={items[1].link} target='_blank'>
+            {items[1].icon}
+            <span>{items[1].label}</span>
+          </a>
+        </div>
+      </div>
+      <div className='grid'>
+        <div className='grid-1'>
+          <a href={items[2].link} target='_blank'>
+            {items[2].icon}
+            <span>{items[2].label}</span>
+          </a>
+        </div>
+        <div className='grid-2'>
+          <a href={items[3].link} target='_blank'>
+            {items[3].icon}
+            <span>{items[3].label}</span>
+          </a>
+        </div>
+      </div>
+    </MobileWrap>
+  )
+}

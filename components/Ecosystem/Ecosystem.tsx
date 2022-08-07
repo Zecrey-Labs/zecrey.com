@@ -1,39 +1,11 @@
 import React, { ReactNode } from 'react'
-import styled from 'styled-components'
 import Icon from '../common/Icon'
 import Item from './Item'
 import ImgBox from '../common/ImgBox'
 import Modal from '../modal'
-
-const Wrap = styled.div`
-  position: absolute;
-  bottom: 0;
-  margin-right: -9.2rem;
-  margin-bottom: -6rem;
-  height: 24rem;
-  width: 96.6rem;
-  .dashed {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .logo {
-    position: absolute;
-    bottom: 8.7rem;
-    left: 42rem;
-  }
-`
-const LogoDot = styled.div`
-  position: absolute;
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  bottom: 5.9rem;
-  left: 47.7rem;
-  background: #2ad4d8;
-  box-shadow: 0 0 0 0.3rem rgba(42, 212, 216, 0.4605);
-`
+import { LogoDot, Wrap } from './styles'
+import { useMediaQuery } from 'react-responsive'
+import EcosystemIcon from './ecosystem.svg'
 
 const items: {
   name: string
@@ -92,21 +64,26 @@ const items: {
 ]
 
 const Ecosystem = () => {
+  const isMobile = useMediaQuery({ maxWidth: 780 })
   return (
     <>
-      <Modal />
+      {!isMobile && <Modal />}
       <Wrap>
-        <ImgBox
-          className='dashed'
-          src='/Ecosystem/wire.png'
-          alt='bg'
-          width={955}
-          height={66}
-        />
-        {items.map((i, index) => (
-          <Item key={index} {...i} />
-        ))}
-        <LogoDot />
+        {!isMobile && (
+          <ImgBox
+            className='dashed'
+            src='/Ecosystem/wire.png'
+            alt='bg'
+            width={955}
+            height={66}
+          />
+        )}
+        {isMobile ? (
+          <EcosystemIcon className='ecosystem-icon' />
+        ) : (
+          items.map((i, index) => <Item key={index} {...i} index={index} />)
+        )}
+        {!isMobile && <LogoDot />}
         <ImgBox
           className='logo'
           src='/Ecosystem/lizard.png'

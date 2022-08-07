@@ -297,3 +297,7 @@ body {
 body.enable-scroll {
   overflow-y: scroll;
 }
+
+svg {
+  overflow: visible;
+}
