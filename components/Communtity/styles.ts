@@ -59,10 +59,11 @@ export const MobileWrap = styled.div`
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         text-decoration: none;
         cursor: pointer;
+        padding: ${vw(38)} 0 ${vw(15)} 0;
         svg {
           width: ${vw(36)};
           color: #fff;
@@ -72,7 +73,6 @@ export const MobileWrap = styled.div`
           font-size: ${vw(12)};
           color: #fff;
           text-transform: capitalize;
-          padding-top: ${vw(28)};
         }
       }
     }
