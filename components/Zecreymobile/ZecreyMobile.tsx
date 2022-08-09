@@ -193,7 +193,10 @@ export const Mobile = () => {
         <br />
         Fingertips
       </label>
-      <label className='title-2'>Zecrey Mobile</label>
+      <label className='title-2'>
+        <img src='/zecreymobile/mobilephone.png' alt='zecrey' />
+        Zecrey Mobile
+      </label>
       <ImgBox src='/zecreymobile/mobile-mobile.png' alt='Extension' />
       <button disabled>Coming soon</button>
     </MobileWrap>

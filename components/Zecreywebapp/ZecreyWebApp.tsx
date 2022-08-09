@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
 import classNames from 'classnames'
 import { debounce } from 'lodash'
 import { useMediaQuery } from 'react-responsive'
@@ -199,7 +198,10 @@ const Mobile = () => {
         <br />
         Simple, Yet Robust
       </label>
-      <label className='title-2'>Zecrey Web App</label>
+      <label className='title-2'>
+        <img src='/Zecreywebapp/butteryhatch.png' alt='zecrey' />
+        Zecrey Web App
+      </label>
       <ImgBox src='/Zecreywebapp/MacBook Pro.png' alt='Extension' />
       <button disabled>Coming soon</button>
     </MobileWrap>

@@ -91,7 +91,10 @@ const Mobile = () => {
       <label className='title-1'>
         Your Privacy Matters <br /> with One-Click
       </label>
-      <label className='title-2'>Privacy Wallet Extension</label>
+      <label className='title-2'>
+        <img src='/walletdownload/smallcircle.png' alt='' />
+        Privacy Wallet Extension
+      </label>
       <ImgBox src='/walletdownload/largeIcon.webp' alt='Extension' />
       <a
         className='download'

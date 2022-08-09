@@ -22,7 +22,9 @@ export const MobileWrap = styled.div`
     -webkit-text-fill-color: transparent;
   }
   label.title-2 {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Helvetica';
     font-weight: 700;
     font-size: ${vw(12)};
@@ -30,6 +32,11 @@ export const MobileWrap = styled.div`
     color: #f1f1f1;
     padding: ${vw(25)} 0;
     text-align: center;
+    img {
+      width: ${vw(18)};
+      height: ${vw(18)};
+      margin-right: ${vw(6)};
+    }
   }
   .img-box {
     width: ${vw(185)};
