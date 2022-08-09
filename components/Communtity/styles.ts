@@ -48,6 +48,7 @@ export const MobileWrap = styled.div`
     }
     .grid-1,
     .grid-2 {
+      position: relative;
       height: 0;
       padding-bottom: 100%;
       position: relative;
@@ -57,22 +58,26 @@ export const MobileWrap = styled.div`
         position: absolute;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
         text-decoration: none;
         cursor: pointer;
         padding: 30% 0 12% 0;
         svg {
+          position: absolute;
           width: ${vw(36)};
           color: #fff;
+          top: 30%;
+          left: 50%;
+          transform: translateX(-50%);
         }
         span {
+          position: absolute;
           font-family: 'Lexend';
           font-size: ${vw(12)};
           color: #fff;
           text-transform: capitalize;
+          bottom: 12%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
