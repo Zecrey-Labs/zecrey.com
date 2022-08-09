@@ -5,6 +5,7 @@
 export const META = {
   content: 'Zecrey',
   description: 'Zecrey',
+  companyFullName: 'Zecrey Labs',
   title: 'Zecrey'
 }
 
