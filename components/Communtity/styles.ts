@@ -63,7 +63,7 @@ export const MobileWrap = styled.div`
         flex-direction: column;
         text-decoration: none;
         cursor: pointer;
-        padding: ${vw(38)} 0 ${vw(15)} 0;
+        padding: 30% 0 12% 0;
         svg {
           width: ${vw(36)};
           color: #fff;
