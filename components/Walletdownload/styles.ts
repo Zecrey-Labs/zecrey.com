@@ -151,7 +151,7 @@ export const Wrap = styled.div`
 
 export const MobileWrap = styled.div`
   position: relative;
-  width: ${vw(290)};
+  width: ${vw(300)};
   padding: ${vw(30)} ${vw(20)};
   border: ${vw(0.5)} solid rgba(255, 255, 255, 0.1);
   border-radius: ${vw(10)};

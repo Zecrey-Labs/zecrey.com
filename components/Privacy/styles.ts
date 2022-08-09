@@ -146,12 +146,12 @@ export const Wrap = styled.div`
   }
   @media (max-width: 780px) {
     .wrap {
-      width: ${vw(290)};
+      width: ${vw(300)};
       height: auto;
     }
     .privacy {
       position: relative;
-      width: ${vw(290)};
+      width: ${vw(300)};
       height: auto;
       padding: ${vw(30)} ${vw(20)} ${vw(25)} ${vw(20)};
       border: ${vw(0.5)} solid rgba(255, 255, 255, 0.1);

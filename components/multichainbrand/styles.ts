@@ -16,6 +16,8 @@ export const MobileWrap = styled(BetweenFlex)`
   margin: ${vw(20)} auto ${vw(40)} auto;
   padding-left: ${vw(5)};
   svg {
+    width: ${vw(27)};
+    height: ${vw(27)};
     max-width: ${vw(27)};
     max-height: ${vw(27)};
   }

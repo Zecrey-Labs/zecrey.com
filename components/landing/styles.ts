@@ -219,6 +219,7 @@ export const Img = styled.img`
     height: ${vw(243)};
     top: ${vw(160)};
     left: ${vw(-60)};
+    transform: scale(1.1);
   }
 `
 export const Video = styled.video`
