@@ -13,7 +13,6 @@ const ZecreyHead = () => (
     <meta name='keywords' content={META.content} />
     <meta name='description' content={META.description} />
     <meta name='copyright' content='LambdaCal, Inc' />
-    <meta name='author' content={META.companyFullName} />
     <meta name='Robots' content='all' />
     <link rel='shortcut icon' href='/favicon.svg' />
     <link rel='preconnect' href='https://fonts.gstatic.com' />
