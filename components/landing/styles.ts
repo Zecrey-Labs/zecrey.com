@@ -84,7 +84,7 @@ export const Box = styled.div`
     border-radius: ${vw(10)};
     padding: ${vw(25)};
     overflow: visible;
-    margin-bottom: 70%;
+    margin-bottom: 70%; // ${vw(154)};
     svg {
       opacity: 1;
       &.dots {

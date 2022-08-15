@@ -255,11 +255,13 @@ function Desktop() {
                       left: index === 0,
                       right: index === 3
                     })}>
-                    <img
-                      src={`/Partners/${i.src}`}
-                      alt=''
-                      style={{ width: i.width, height: i.height }}
-                    />
+                    {!i.src ? null : (
+                      <img
+                        src={`/Partners/${i.src}`}
+                        alt=''
+                        style={{ width: i.width, height: i.height }}
+                      />
+                    )}
                   </CenterFlex>
                 ))}
               </BrandsWrap>
@@ -362,7 +364,11 @@ const Mobile = () => {
           />
         </div>
         <div className='grid-2 center'>
-          <img src='/Partners/pluto.svg' alt='' style={{ height: vw(21) }} />
+          <img
+            src='/Partners/stratified.png'
+            alt=''
+            style={{ height: vw(21) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
@@ -393,7 +399,9 @@ const Mobile = () => {
         <div className='grid-1 center'>
           <img src='/Partners/mulana.png' alt='' style={{ height: vw(39) }} />
         </div>
-        <div className='grid-2 center'></div>
+        <div className='grid-2 center'>
+          <img src='/Partners/gate.io.svg' alt='' style={{ height: vw(39) }} />
+        </div>
       </div>
     </MobileWrap>
   )

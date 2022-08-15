@@ -148,5 +148,29 @@ export const brands = [
     width: '11rem',
     height: '6.6rem',
     classnames: ['lower']
+  },
+  {
+    src: 'gate.io.svg',
+    width: '11rem',
+    height: '3.9rem',
+    classnames: ['']
+  },
+  {
+    src: '',
+    width: '11rem',
+    height: '3.9rem',
+    classnames: ['']
+  },
+  {
+    src: '',
+    width: '11rem',
+    height: '3.9rem',
+    classnames: ['']
+  },
+  {
+    src: '',
+    width: '11rem',
+    height: '3.9rem',
+    classnames: ['']
   }
 ]
