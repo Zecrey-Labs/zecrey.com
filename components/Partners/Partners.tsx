@@ -290,15 +290,23 @@ const Mobile = () => {
           <img src='/Partners/captical.svg' alt='' style={{ height: vw(25) }} />
         </div>
         <div className='grid-2'>
-          <img src='/Partners/shima.svg' alt='' style={{ height: vw(51) }} />
+          <img
+            src='/Partners/shima.svg'
+            alt=''
+            style={{ height: vw(51), marginRight: vw(14) }}
+          />
         </div>
       </div>
       <div className='grid'>
         <div className='grid-1'>
           <img src='/Partners/you.svg' alt='' />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/amber.svg' alt='' style={{ height: vw(14) }} />
+        <div className='grid-2'>
+          <img
+            src='/Partners/amber.svg'
+            alt=''
+            style={{ height: vw(14), marginRight: vw(14) }}
+          />
         </div>
       </div>
       <div className='grid'>
@@ -328,79 +336,123 @@ const Mobile = () => {
           <img
             src='/Partners/cmccgloba.svg'
             alt=''
-            style={{ height: vw(16) }}
+            style={{ height: vw(16), marginLeft: vw(6) }}
           />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/bubit.svg' alt='' style={{ height: vw(25) }} />
+        <div className='grid-2'>
+          <img
+            src='/Partners/bubit.svg'
+            alt=''
+            style={{ height: vw(25), marginRight: vw(23) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
-          <img src='/Partners/looprlnc.svg' alt='' style={{ height: vw(25) }} />
+        <div className='grid-1'>
+          <img
+            src='/Partners/looprlnc.svg'
+            alt=''
+            style={{ height: vw(25), marginLeft: vw(11) }}
+          />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/crasolum.svg' alt='' style={{ height: vw(18) }} />
+        <div className='grid-2'>
+          <img
+            src='/Partners/crasolum.svg'
+            alt=''
+            style={{ height: vw(18), marginRight: vw(10) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
+        <div className='grid-1'>
           <img
             src='/Partners/DoraHacksVentures.svg'
             alt=''
-            style={{ height: vw(33) }}
+            style={{ height: vw(33), marginLeft: vw(10) }}
           />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/block0.svg' alt='' style={{ height: vw(21) }} />
+        <div className='grid-2'>
+          <img
+            src='/Partners/block0.svg'
+            alt=''
+            style={{ height: vw(21), marginRight: vw(21) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
+        <div className='grid-1'>
           <img
             src='/Partners/cypherpunn.svg'
             alt=''
-            style={{ height: vw(25) }}
+            style={{ height: vw(30), marginLeft: vw(7) }}
           />
         </div>
-        <div className='grid-2 center'>
+        <div className='grid-2'>
           <img
             src='/Partners/stratified.png'
             alt=''
-            style={{ height: vw(21) }}
+            style={{ height: vw(27), marginRight: vw(14) }}
           />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
-          <img src='/Partners/stake.svg' alt='' />
-        </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/snz.svg' alt='' style={{ height: vw(25) }} />
-        </div>
-      </div>
-      <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
-          <img src='/Partners/labs.svg' alt='' />
+        <div className='grid-1'>
+          <img
+            src='/Partners/stake.svg'
+            alt=''
+            style={{ marginLeft: vw(24) }}
+          />
         </div>
         <div className='grid-2'>
-          <img src='/Partners/20.svg' alt='' style={{ height: vw(21) }} />
+          <img
+            src='/Partners/snz.svg'
+            alt=''
+            style={{ height: vw(25), marginRight: vw(35) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
-          <img src='/Partners/21.svg' alt='' style={{ height: vw(22) }} />
+        <div className='grid-1'>
+          <img src='/Partners/labs.svg' alt='' style={{ marginLeft: vw(24) }} />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/spark.svg' alt='' />
+        <div className='grid-2'>
+          <img
+            src='/Partners/20.svg'
+            alt=''
+            style={{ height: vw(21), marginRight: vw(8) }}
+          />
         </div>
       </div>
       <div className={classnames('grid', { hide: !isShow })}>
-        <div className='grid-1 center'>
-          <img src='/Partners/mulana.png' alt='' style={{ height: vw(39) }} />
+        <div className='grid-1'>
+          <img
+            src='/Partners/21.svg'
+            alt=''
+            style={{ height: vw(22), marginLeft: vw(12) }}
+          />
         </div>
-        <div className='grid-2 center'>
-          <img src='/Partners/gate.io.svg' alt='' style={{ height: vw(39) }} />
+        <div className='grid-2'>
+          <img
+            src='/Partners/spark.svg'
+            alt=''
+            style={{ marginRight: vw(12) }}
+          />
+        </div>
+      </div>
+      <div className={classnames('grid', { hide: !isShow })}>
+        <div className='grid-1'>
+          <img
+            src='/Partners/mulana.png'
+            alt=''
+            style={{ height: vw(39), marginLeft: vw(19) }}
+          />
+        </div>
+        <div className='grid-2'>
+          <img
+            src='/Partners/gate.io.svg'
+            alt=''
+            style={{ height: vw(39), marginRight: vw(12) }}
+          />
         </div>
       </div>
     </MobileWrap>

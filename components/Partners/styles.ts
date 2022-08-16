@@ -36,22 +36,15 @@ export const MobileWrap = styled.div`
     .grid-1 {
       grid-column: 1;
       grid-row: 1;
-      &.center {
-        flex: 1;
-        padding-right: ${vw(20)};
-      }
+      text-align: left;
     }
     .grid-2 {
       grid-column: 2;
       grid-row: 1;
-      &.center {
-        flex: 1;
-        padding-left: ${vw(20)};
-      }
+      text-align: right;
     }
     .grid-1,
     .grid-2 {
-      text-align: center;
       img {
         height: ${vw(28)};
       }

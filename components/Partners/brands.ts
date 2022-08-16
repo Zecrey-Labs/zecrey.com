@@ -151,8 +151,8 @@ export const brands = [
   },
   {
     src: 'gate.io.svg',
-    width: '14rem',
-    height: '6rem',
+    width: '10.5rem',
+    height: '4rem',
     classnames: ['']
   },
   {

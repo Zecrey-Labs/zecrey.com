@@ -96,6 +96,8 @@ export const ItemWrap = styled(CenterFlex)<{
     .dot {
       width: 0.6rem;
       height: 0.6rem;
+      min-width: 0.6rem;
+      min-height: 0.6rem;
       border-radius: 50%;
       box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.5);
       background: #fff;
