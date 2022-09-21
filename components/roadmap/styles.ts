@@ -1,5 +1,94 @@
-import { vw } from '@/styles/global'
-import styled from 'styled-components'
+import { vw } from "styles/globals";
+import styled from "styled-components";
+
+export const Wrap = styled.div<{ padding?: string }>`
+  position: relative;
+  width: auto;
+  height: 100%;
+  padding: 6rem 0 7rem 0;
+  svg.line {
+    display: block;
+    width: 83rem;
+    height: 0.3rem;
+    margin-right: -0.9rem;
+  }
+  svg.flag {
+    position: absolute;
+    width: 2rem;
+    height: 2.3rem;
+    right: 60rem;
+    bottom: 7rem;
+  }
+`;
+
+export const BoxGroup = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 83.7rem;
+  margin-bottom: 3.5rem;
+`;
+
+export const Box = styled.div<{ width: string }>`
+  width: ${(props) => props.width};
+  padding: 1.4rem 2.3rem 0 2.5rem;
+  border-radius: 1rem;
+  transition: all 120ms ease-out;
+  label {
+    display: block;
+    padding-bottom: 0.7rem;
+    font-family: IBM Plex sans;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    color: #fff;
+    opacity: 0.3;
+    transition: all 120ms ease-out;
+    cursor: default;
+  }
+  span {
+    display: block;
+    height: 6rem;
+    font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #e9e9e9;
+    transition: all 120ms ease-out;
+    cursor: default;
+    opacity: 0.4;
+    i {
+      display: block;
+    }
+  }
+  &.ac {
+    label,
+    span {
+      color: #2ad4d8;
+      opacity: 1;
+    }
+    label {
+      font-size: 3.6rem;
+      line-height: 5.2rem;
+    }
+    span {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    label,
+    span {
+      opacity: 1;
+    }
+  }
+  &.muted:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+`;
 
 export const MobileWrap = styled.div`
   position: relative;
@@ -12,7 +101,7 @@ export const MobileWrap = styled.div`
   overflow: hidden;
   label.title-1 {
     display: block;
-    font-family: 'Lexend';
+    font-family: "Lexend";
     font-weight: 700;
     font-size: ${vw(18)};
     line-height: ${vw(22.5)};
@@ -31,13 +120,13 @@ export const MobileWrap = styled.div`
       margin-left: ${vw(50)};
       label {
         display: block;
-        font-family: 'Lexend';
+        font-family: Zing Rust;
         font-style: italic;
         font-weight: 700;
         color: #fff;
       }
       span {
-        font-family: 'IBM Plex Sans';
+        font-family: "IBM Plex Sans";
         font-weight: 500;
         font-size: ${vw(12)};
         color: #e9e9e9;
@@ -62,6 +151,7 @@ export const MobileWrap = styled.div`
           font-weight: 700;
           color: #2ad4d8;
           font-size: ${vw(14)};
+          margin-top: ${vw(-4)};
         }
       }
       &.card_3 {
@@ -88,30 +178,19 @@ export const MobileWrap = styled.div`
     }
     svg.flag {
       position: absolute;
-      width: ${vw(16)};
-      height: ${vw(22)};
-      left: ${vw(9)};
-      top: ${vw(145)};
-    }
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: ${vw(10)};
-      height: ${vw(5)};
-      border-radius: ${vw(20)};
-      background-color: #2ad4d8;
+      width: ${vw(20)};
+      height: ${vw(23)};
       left: ${vw(5)};
-      top: ${vw(165)};
+      top: ${vw(150)};
     }
   }
   label.title-2 {
     display: block;
-    font-family: 'IBM Plex Sans';
+    font-family: "IBM Plex Sans";
     font-size: ${vw(10)};
     line-height: ${vw(13)};
     color: #f1f1f1;
     padding: ${vw(25)} 0;
     text-align: center;
   }
-`
+`;

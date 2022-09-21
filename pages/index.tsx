@@ -1,60 +1,38 @@
-/*!
- * Copyright (C) 2020-present, Zecrey-Labs
- */
+import Communtity from "components/community";
+import Ecosystem from "components/ecosystem";
+import Extension from "components/extension";
+import Landing from "components/landing";
+import Layout from "components/layout";
+import MobileApp from "components/mobile";
+import MultiChains from "components/multi-chains";
+import MultiPurpose from "components/multi-purpose";
+import Backers from "components/backers";
+import RoadMap from "components/roadmap";
+import WebApp from "components/web-app";
+import Layer2 from "components/layer2";
+import Legend from "components/legend";
+import Zero from "components/zero";
+import Scenarios from "components/application-scenarios";
 
-import Layout from '@/components/layout'
-import dynamic from 'next/dynamic'
-
-const Landing = dynamic(() => import('@/components/landing'), { ssr: false })
-const Privacy = dynamic(() => import('@/components/Privacy/Privacy'), {
-  ssr: false
-})
-const CentralHub = dynamic(() => import('@/components/central-hub'), {
-  ssr: false
-})
-const MultiPurpose = dynamic(() => import('@/components/multi-purpose'), {
-  ssr: false
-})
-const MultiLayerEcosystem = dynamic(
-  () => import('@/components/multi-layer-ecosystem'),
-  { ssr: false }
-)
-const WalletDownload = dynamic(
-  () => import('@/components/Walletdownload/WalletDownload'),
-  { ssr: false }
-)
-const Communtity = dynamic(() => import('@/components/Communtity/Communtity'), {
-  ssr: false
-})
-const Partners = dynamic(() => import('@/components/Partners/Partners'), {
-  ssr: false
-})
-const ZecreyMobile = dynamic(
-  () => import('@/components/Zecreymobile/ZecreyMobile'),
-  { ssr: false }
-)
-const ZecreyWebApp = dynamic(
-  () => import('@/components/Zecreywebapp/ZecreyWebApp'),
-  { ssr: false }
-)
-const RoadMap = dynamic(() => import('@/components/roadmap'), { ssr: false })
-const Footer = dynamic(() => import('@/components/footer'), { ssr: false })
-
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Landing />
-      <Privacy />
-      <CentralHub />
+      <Layer2 />
+      <Legend />
+      <Zero />
+      <Scenarios />
+      <MultiChains />
       <MultiPurpose />
-      <MultiLayerEcosystem />
-      <WalletDownload />
-      <ZecreyWebApp />
-      <ZecreyMobile />
-      <Partners />
+      <Ecosystem />
+      <Extension />
+      <WebApp />
+      <MobileApp />
       <RoadMap />
-      <Communtity id='join' />
-      <Footer dark={true} />
+      <Backers />
+      <Communtity />
     </Layout>
-  )
-}
+  );
+};
+
+export default Home;

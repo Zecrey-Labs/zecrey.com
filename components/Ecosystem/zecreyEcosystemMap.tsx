@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
-import { FlatBtn } from '@/styles/global'
-import classNames from 'classnames'
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { FlatBtn } from "styles/globals";
+import classNames from "classnames";
 
 const Wrap = styled.div<{ width: number; height: number }>`
   position: fixed;
@@ -19,11 +19,9 @@ const Wrap = styled.div<{ width: number; height: number }>`
   .ecosystemmap {
     max-width: 125.6rem;
     max-height: 76.9rem;
-    width: ${props => props.width}px;
-    height: ${props => props.height}px;
-    background: #383838;
-    mix-blend-mode: normal;
-    opacity: 0.95;
+    width: ${(props) => props.width}px;
+    height: ${(props) => props.height}px;
+    background: rgba(56, 56, 56, 0.95);
     border: 0.1rem solid rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
     z-index: 1000;
@@ -32,7 +30,7 @@ const Wrap = styled.div<{ width: number; height: number }>`
     width: 100%;
     height: 4.5rem;
     padding-top: 0.9rem;
-    font-family: 'Lexend';
+    font-family: "Lexend";
     font-weight: 800;
     font-size: 1.8rem;
     line-height: 2.2rem;
@@ -42,7 +40,7 @@ const Wrap = styled.div<{ width: number; height: number }>`
     width: calc(100% - 5rem);
     height: calc(100% - 13.9rem);
     margin: 0 auto;
-    background: url(/Ecosystem/ecosystem.png);
+    background: url(/static/image/ecosystem.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +57,7 @@ const Wrap = styled.div<{ width: number; height: number }>`
     box-sizing: border-box;
     border-radius: 1.8rem;
     margin: 3rem auto;
-    font-family: 'Lexend';
+    font-family: "Lexend";
     font-style: normal;
     font-weight: bold;
     font-size: 1.6rem;
@@ -82,56 +80,55 @@ const Wrap = styled.div<{ width: number; height: number }>`
       margin: 3rem auto;
     }
   }
-`
+`;
 
-function ZecreyEcosystemMap(props: { close: () => void }) {
-  const wrap = useRef<HTMLDivElement>(null)
-  const modal = useRef<HTMLDivElement>(null)
+const ZecreyEcosystemMap = (props: { close: () => void }) => {
+  const wrap = useRef<HTMLDivElement>(null);
+  const modal = useRef<HTMLDivElement>(null);
 
-  const [scroll, setScroll] = useState(false)
-  const [width, setWidth] = useState(0)
+  const [scroll, setScroll] = useState(false);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     const handler = () => {
-      if (!modal.current || !wrap.current) return
+      if (!modal.current || !wrap.current) return;
       if (modal.current.clientHeight > wrap.current.clientHeight) {
-        setScroll(true)
+        setScroll(true);
       } else {
-        setScroll(false)
+        setScroll(false);
       }
       // w/h = 1256/863
       let width = Math.min(
         window.innerWidth * 0.8722,
         (window.innerHeight * 0.9 * 1256) / 863
-      )
-      setWidth(width)
-    }
-    handler()
-    window.addEventListener('resize', handler)
+      );
+      setWidth(width);
+    };
+    handler();
+    window.addEventListener("resize", handler);
     return () => {
-      window.removeEventListener('resize', handler)
-    }
-  }, [])
+      window.removeEventListener("resize", handler);
+    };
+  }, []);
 
   return (
     <Wrap
       className={classNames({ scroll })}
       ref={wrap}
       width={width}
-      height={(width * 863) / 1256}>
-      <div className='ecosystemmap' ref={modal}>
-        <div className='map'>
-          <p>Zecrey Ecosystem Map</p>
-        </div>
-        <div className='picture'>
+      height={(width * 863) / 1256}
+    >
+      <div className="ecosystemmap" ref={modal}>
+        <div className="map">Zecrey Ecosystem Map</div>
+        <div className="picture">
           {/* <img src='/Ecosystem/ecosystem.png' alt='' /> */}
         </div>
-        <FlatBtn className='button-close' onClick={props.close}>
+        <FlatBtn className="button-close" onClick={props.close}>
           Close
         </FlatBtn>
       </div>
     </Wrap>
-  )
-}
+  );
+};
 
-export default ZecreyEcosystemMap
+export default ZecreyEcosystemMap;

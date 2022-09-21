@@ -1,21 +1,21 @@
-/*!
- * Copyright (C) 2020-present, Zecrey-Labs
- */
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
 
-import '@/styles/global.css'
-import Head from 'next/head'
-import { META } from '@/constant'
-
-const App = ({ Component, pageProps }) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{META.title}</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Zecrey</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="charset" content="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Zecrey" />
+        <link rel="shortcut icon" href="/favicon.svg"></link>
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default App
+export default MyApp;

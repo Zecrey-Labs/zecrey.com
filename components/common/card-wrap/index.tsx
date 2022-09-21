@@ -1,117 +1,50 @@
-import classNames from 'classnames'
-import { debounce } from 'lodash'
-import { ReactNode, useEffect, useRef, useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
-import { CSSProperties } from 'styled-components'
-import {
-  BackgoundIcon,
-  Box,
-  Content,
-  IconWrap,
-  MobileWrap,
-  Text,
-  Title
-} from './styles'
+import classNames from "classnames";
+import { debounce } from "lodash";
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { CardWrap, MobileWrap } from "./styles";
 
-const CardWrap = (props: {
-  title: ReactNode
-  backgroundIcon: {
-    svg: ReactNode // svg element
-    size: { width: string; height: string }
-  }
-  styles?: CSSProperties
-  text: string[]
-  children?: ReactNode // sub component
-}) => {
-  const isMobile = useMediaQuery({ maxWidth: 780 })
-  useEffect(() => console.log('is mobile: ', isMobile), [isMobile])
-  return isMobile ? <Mobile {...props} /> : <Desktop {...props} />
-}
+const Card = (props: { children?: ReactNode }) => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 });
+  return isMobileView ? (
+    <Mobile>{props.children}</Mobile>
+  ) : (
+    <Desktop>{props.children}</Desktop>
+  );
+};
 
-export default CardWrap
+export default Card;
 
-const Desktop = (props: {
-  title: ReactNode
-  backgroundIcon: {
-    svg: ReactNode // svg element
-    size: { width: string; height: string }
-  }
-  styles?: CSSProperties
-  text: string[]
-  children?: ReactNode // sub component
-}) => {
-  const [visible, setVisible] = useState(false)
-  const dom = useRef<HTMLDivElement>(null)
+const Desktop = (props: { children?: ReactNode }) => {
+  const [visible, setVisible] = useState(false);
+  const dom = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let handleScroll = () => {
       if (dom.current) {
-        let domTop = dom.current.getBoundingClientRect().top
-        let domHeight = dom.current.getBoundingClientRect().height
-        let height = window.innerHeight
+        let domTop = dom.current.getBoundingClientRect().top;
+        let domHeight = dom.current.getBoundingClientRect().height;
+        let height = window.innerHeight;
         if (height - domTop >= domHeight / 5) {
-          setVisible(true)
-          document.removeEventListener('scroll', handleScroll)
+          setVisible(true);
+          document.removeEventListener("scroll", handleScroll);
         }
       }
-    }
-    const debouncedScrollEventHandler = debounce(handleScroll, 50)
-    document.addEventListener('scroll', debouncedScrollEventHandler)
+    };
+    const debouncedScrollEventHandler = debounce(handleScroll, 50);
+    document.addEventListener("scroll", debouncedScrollEventHandler);
     return () => {
-      document.removeEventListener('scroll', debouncedScrollEventHandler)
-    }
-  }, [])
+      document.removeEventListener("scroll", debouncedScrollEventHandler);
+    };
+  }, []);
 
   return (
-    <Box
-      ref={dom}
-      className={classNames('content-box', 'show', { visible })}
-      style={props.styles}>
-      <IconWrap>
-        <BackgoundIcon size={props.backgroundIcon.size}>
-          {props.backgroundIcon.svg}
-        </BackgoundIcon>
-      </IconWrap>
-      <div className='text-wrap'>
-        <Title
-          className={classNames(
-            props.title === 'Multiple Purposes' ? 'title' : ''
-          )}>
-          {props.title}
-        </Title>
-        <Text>
-          {props.text.map((i, index) => (
-            <p key={index}>{i}</p>
-          ))}
-        </Text>
-      </div>
-      <Content>{props.children}</Content>
-    </Box>
-  )
-}
+    <CardWrap ref={dom} className={classNames({ visible })}>
+      {props.children}
+    </CardWrap>
+  );
+};
 
-const Mobile = (props: {
-  title: ReactNode
-  backgroundIcon: {
-    svg: ReactNode // svg element
-    size: { width: string; height: string }
-  }
-  styles?: CSSProperties
-  text: string[]
-  children?: ReactNode
-}) => {
-  return (
-    <MobileWrap className='content-box-mobile'>
-      <BackgoundIcon size={props.backgroundIcon.size}>
-        {props.backgroundIcon.svg}
-      </BackgoundIcon>
-      <Title className='title'>{props.title}</Title>
-      <div className='content-box-body'>{props.children}</div>
-      <Text>
-        {props.text.map((i, index) => (
-          <p key={index}>{i}</p>
-        ))}
-      </Text>
-    </MobileWrap>
-  )
-}
+const Mobile = (props: { children?: ReactNode }) => {
+  return <MobileWrap>{props.children}</MobileWrap>;
+};

@@ -1,5 +1,6 @@
-import { vw } from '@/styles/global'
-import styled from 'styled-components'
+import { vw } from "styles/globals";
+import styled from "styled-components";
+
 export const Wrap = styled.div`
   position: relative;
   width: 100%;
@@ -28,7 +29,7 @@ export const Wrap = styled.div`
     height: 58.6rem;
     z-index: 100;
   }
-`
+`;
 export const Box = styled.div`
   position: relative;
   width: 10.5rem;
@@ -98,7 +99,7 @@ export const Box = styled.div`
       }
     }
   }
-`
+`;
 export const Label = styled.div`
   position: absolute;
   top: 18rem;
@@ -107,7 +108,7 @@ export const Label = styled.div`
   height: 1.8rem;
   border: 0.1rem solid #2ad4d8;
   border-radius: 0.5rem;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -127,13 +128,13 @@ export const Label = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 export const Text = styled.div`
   position: absolute;
   width: 47.4rem;
   top: 21.2rem;
   left: 6rem;
-  font-family: 'Lexend';
+  font-family: "Lexend";
   font-style: normal;
   font-weight: bold;
   font-size: 3.6rem;
@@ -159,13 +160,13 @@ export const Text = styled.div`
     top: unset;
     left: unset;
   }
-`
+`;
 export const Text2 = styled.div`
   position: absolute;
   width: 56.6rem;
   top: 31.2rem;
   left: 6rem;
-  font-family: 'IBM Plex Sans';
+  font-family: "IBM Plex Sans";
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.014rem;
@@ -195,7 +196,7 @@ export const Text2 = styled.div`
     left: unset;
     padding-top: ${vw(15)};
   }
-`
+`;
 export const Img = styled.img`
   position: absolute;
   top: 0;
@@ -221,7 +222,7 @@ export const Img = styled.img`
     left: ${vw(-60)};
     transform: scale(1.1);
   }
-`
+`;
 export const Video = styled.video`
   position: absolute;
   top: 0;
@@ -238,14 +239,14 @@ export const Video = styled.video`
       opacity: 1;
     }
   }
-`
+`;
 export const Bottom = styled.div`
   position: absolute;
   bottom: 4rem;
   opacity: 0;
   animation: fadeIn 1.2s cubic-bezier(0.44, 0.01, 0.23, 0.97) 5s forwards;
   div {
-    font-family: 'Lexend';
+    font-family: "Lexend";
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 2rem;
@@ -291,7 +292,7 @@ export const Bottom = styled.div`
       top: ${vw(490)};
     }
   }
-`
+`;
 export const MobileWrap = styled.div`
   display: flex;
   align-items: center;
@@ -300,4 +301,4 @@ export const MobileWrap = styled.div`
   &.longer {
     height: ${vw(440)};
   }
-`
+`;
