@@ -58,6 +58,7 @@ html {
   scroll-behavior: auto;
 }
 body {
+  background: #2b2b2b;
   overflow: hidden;
 }
 body.enable-scroll {

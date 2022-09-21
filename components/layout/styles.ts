@@ -4,7 +4,6 @@ import { CenterFlex, vw } from "styles/globals";
 export const Wrap = styled.div`
   min-width: 128rem;
   min-height: 100vh;
-  background: #2b2b2b;
   .content {
     padding-top: 11.8rem;
   }

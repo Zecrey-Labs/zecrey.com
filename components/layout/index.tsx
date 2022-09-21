@@ -9,10 +9,12 @@ const Layout = (props: { children: ReactNode | undefined }) => {
     <Wrap className="layout">
       <Header />
       <BG />
-      <Container className="layout-container">{props.children}</Container>
+      <Container className="layout-container">
+        {props.children}
+        <Footer />
+      </Container>
       <div id="account-ctrl-renderer" />
       <div id="modal-renderer" />
-      <Footer />
     </Wrap>
   );
 };
