@@ -1,5 +1,4 @@
 import Communtity from "components/community";
-import Ecosystem from "components/ecosystem";
 import Extension from "components/extension";
 import Landing from "components/landing";
 import Layout from "components/layout";
@@ -13,6 +12,7 @@ import Layer2 from "components/layer2";
 import Legend from "components/legend";
 import Zero from "components/zero";
 import Scenarios from "components/application-scenarios";
+import Ecosystem from "components/multi-ecosystem";
 
 const Home = () => {
   return (
