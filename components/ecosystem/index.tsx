@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import Itm from "./Item";
+import Itm from "components/ecosystem/Item";
 import { LogoDot, MobileLogo, Wrap } from "./styles";
 import { useMediaQuery } from "react-responsive";
 import ImgBox from "components/common/img";
