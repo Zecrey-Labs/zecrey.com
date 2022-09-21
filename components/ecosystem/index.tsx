@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import Item from "./Item";
+import Itm from "./Item";
 import { LogoDot, MobileLogo, Wrap } from "./styles";
 import { useMediaQuery } from "react-responsive";
 import ImgBox from "components/common/img";
@@ -109,7 +109,7 @@ const Desktop = () => {
               height={66}
             />
             {items.map((i, index) => (
-              <Item key={index} {...i} index={index} />
+              <Itm key={index} {...i} index={index} />
             ))}
             <LogoDot />
             <ImgBox

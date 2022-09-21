@@ -5,7 +5,7 @@ import { ItemWrap, MobileItemWrap } from "./styles";
 import Dashed from "icons/dashed.svg";
 import DashedHighlight from "icons/dashed-highlight.svg";
 
-const Item = (props: {
+const Itm = (props: {
   name: string;
   icon: ReactNode;
   opacity?: number;
@@ -18,7 +18,7 @@ const Item = (props: {
   return isMobile ? <Mobile {...props} /> : <Desktop {...props} />;
 };
 
-export default Item;
+export default Itm;
 
 const Desktop = (props: {
   name: string;
