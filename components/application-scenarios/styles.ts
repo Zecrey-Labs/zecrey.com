@@ -6,6 +6,7 @@ export const Wrap = styled.div`
   min-width: 84rem;
   height: 41rem;
   margin-top: -7.4rem;
+  margin-right: -4rem;
   overflow: hidden;
   .items-wrap {
     margin-bottom: 3rem;
