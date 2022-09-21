@@ -1,6 +1,7 @@
 import { CenterFlex, vw } from "styles/globals";
 import styled from "styled-components";
 
+/* */
 export const Wrap = styled.div`
   position: relative;
   height: 27.5rem;

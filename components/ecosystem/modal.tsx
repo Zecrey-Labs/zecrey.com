@@ -28,6 +28,7 @@ const Trigger = styled(FlatBtn)`
   }
 `;
 
+/* */
 const Modal = () => {
   const [show, setShow] = useState(false);
 

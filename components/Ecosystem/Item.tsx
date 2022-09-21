@@ -5,6 +5,7 @@ import { ItemWrap, MobileItemWrap } from "./styles";
 import Dashed from "icons/dashed.svg";
 import DashedHighlight from "icons/dashed-highlight.svg";
 
+/* */
 const Itm = (props: {
   name: string;
   icon: ReactNode;
