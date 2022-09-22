@@ -89,7 +89,7 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
           <BubbleButton className="user" label="" tip="Creator">
             <User className="user" />
           </BubbleButton>
-          <BubbleButton className="user" label="" tip="Creator">
+          <BubbleButton className="user" label="" tip="User">
             <User className="user" />
           </BubbleButton>
         </CenterFlex>
@@ -116,7 +116,7 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
           <BubbleButton className="user" label="" tip="Creator">
             <User className="user" />
           </BubbleButton>
-          <BubbleButton className="user" label="" tip="Creator">
+          <BubbleButton className="user" label="" tip="User">
             <User className="user" />
           </BubbleButton>
         </CenterFlex>
