@@ -7,6 +7,7 @@ import About from "./about";
 import Developer from "./developer";
 import Private from "./private";
 import { Wrap } from "./styles";
+import BG from "icons/zero.svg";
 
 const items = [
   {
@@ -35,6 +36,9 @@ const Desktop = () => {
     <Card>
       <Wrap>
         <div className="left">
+          <div className="bg move13to0">
+            <BG />
+          </div>
           <div className="title move13to0">
             <MainTitle>Zecrey</MainTitle>
             <span>ZERO</span>

@@ -6,6 +6,7 @@ import About from "./about";
 import Developer from "./developer";
 import NftMarket from "./nft-market";
 import { Span, Wrap } from "./styles";
+import BG from "icons/legend.svg";
 
 const items = [
   {
@@ -34,6 +35,9 @@ const Desktop = () => {
     <Card>
       <Wrap>
         <div className="left">
+          <div className="bg move13to0">
+            <BG />
+          </div>
           <div className="title move13to0">
             <MainTitle>Zecrey</MainTitle>
             <span>LEGEND</span>

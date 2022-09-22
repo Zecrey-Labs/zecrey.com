@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   display: flex;
+  overflow: hidden;
   .left {
     width: 31.25%;
     overflow: hidden;
@@ -24,7 +25,16 @@ export const Wrap = styled.div`
         padding-top: 0.2rem;
       }
     }
-    svg {
+    .bg {
+      animation-delay: 0.2s !important;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      svg {
+        width: 36.1rem;
+        height: 30.8rem;
+      }
     }
   }
   .right {
