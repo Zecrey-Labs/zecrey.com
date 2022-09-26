@@ -31,14 +31,18 @@ export const Wrap = styled.div`
 `;
 
 export const ItemCard = styled(CenterFlex)`
-  position: relative;
   flex-direction: column;
   width: 40.5rem;
   background: rgba(255, 255, 255, 0.05);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   padding: 5rem 0;
+  transition: border 120ms ease-out;
   &:first-child {
     margin-right: 3rem;
+  }
+  &:hover {
+    border-color: #2ad4d9;
   }
   .icon {
     width: 10rem;
@@ -89,19 +93,6 @@ export const ItemCard = styled(CenterFlex)`
       background: rgba(255, 255, 255, 0.1);
       border-color: #2ad4d9;
     }
-  }
-  .fake-border {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border: 0.1rem solid rgba(255, 255, 255, 0.1);
-    border-radius: 1.5rem;
-    transition: border 120ms ease-out;
-  }
-  button:hover + .fake-border {
-    border-color: #2ad4d9;
   }
 `;
 
@@ -156,6 +147,7 @@ export const ContentWrap = styled.div<{ ac: boolean }>`
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.05);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   opacity: ${(props) => (props.ac ? 1 : 0)};
   transition: opacity 1s cubic-bezier(0.44, 0.01, 0.23, 0.97);
@@ -196,6 +188,12 @@ export const ContentWrap = styled.div<{ ac: boolean }>`
     font-size: 1.6rem;
     line-height: 2rem;
     color: #f5f5f5;
+  }
+  .tip-wrap {
+    pointer-events: none;
+  }
+  .trigger::before {
+    display: none;
   }
 `;
 

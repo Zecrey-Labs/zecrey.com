@@ -12,7 +12,7 @@ import Chats from "icons/chats.svg";
 import NFTs from "icons/items.svg";
 import { ItemCard, MobileItemCard, Wrap } from "./styles";
 import { NftEngine, PrivatePayment } from "./descriptions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 
 const items = [
@@ -72,7 +72,6 @@ const Desktop = () => {
                 <div className="name">{i.name}</div>
                 <div className="sub">{i.sub}</div>
                 <button onClick={() => trigger(index)}>Learn More</button>
-                <div className="fake-border"></div>
               </ItemCard>
             ))}
           </CenterFlex>
