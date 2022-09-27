@@ -47,6 +47,10 @@ export const AnimWrap = styled.div`
     height: 50rem;
     top: 0;
     left: 0;
+    svg image {
+      transform: scale(1.15);
+      transform-origin: center;
+    }
   }
 `;
 
