@@ -37,7 +37,7 @@ const Desktop = () => {
     <Card>
       <Wrap>
         <div className="left">
-          <Animation data={data} />
+          <Animation data={data} delay />
           <div className="title move13to0">
             <MainTitle>Zecrey</MainTitle>
             <span>ZERO</span>
