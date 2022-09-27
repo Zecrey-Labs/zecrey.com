@@ -25,22 +25,28 @@ export const Wrap = styled.div`
         padding-top: 0.2rem;
       }
     }
-    .bg {
-      animation-delay: 0.2s !important;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      overflow: hidden;
-      svg {
-        width: 36.2rem;
-        height: 30.7rem;
-      }
-    }
   }
   .right {
     flex: 1;
     padding-top: 7.4rem;
     padding-right: 4rem;
+  }
+`;
+
+export const AnimWrap = styled.div`
+  position: absolute;
+  width: 50rem;
+  height: 36rem;
+  bottom: 0;
+  left: -8rem;
+  overflow: hidden;
+  animation-delay: 0.2s !important;
+  .renderer {
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    top: 0;
+    left: 0;
   }
 `;
 
