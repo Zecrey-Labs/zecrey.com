@@ -7,7 +7,7 @@ const About = () => {
   return (
     <AboutWrap>
       <TextWrap>
-        <div className="main">In Math We Trust.</div>
+        <div className="main">High Efficiency Private Payment Solution.</div>
         <div className="sub">
           Zero utilizes cutting edge Sigma and zk-Snark technology to enable
           secure, fast and cheap transactions with privacy protection.

@@ -16,11 +16,11 @@ const items = [
     img: <Private />,
   },
   {
-    label: "About",
+    label: "About Zero",
     img: <About />,
   },
   {
-    label: "Developer",
+    label: "Broad Adoption",
     img: <Developer />,
   },
 ];

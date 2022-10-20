@@ -11,11 +11,11 @@ import data from "./data.json";
 
 const items = [
   {
-    label: "NFT Market",
+    label: "NFT Marketplace",
     img: <NftMarket />,
   },
   {
-    label: "About",
+    label: "About Legend",
     img: <About />,
   },
   {
