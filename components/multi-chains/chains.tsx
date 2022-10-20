@@ -32,7 +32,7 @@ const items: {
     size: { width: "6rem", height: "6rem" },
   },
   {
-    label: "BSC Chain",
+    label: "BNB Chain",
     icon: <BSC name="bsc" />,
     size: { width: "5.2rem", height: "6rem" },
   },

@@ -7,7 +7,7 @@ import CornerLink from "components/common/corner-link";
 import Swap from "icons/swap.svg";
 import Transfer from "icons/transfer.svg";
 import DeFi from "icons/defi.svg";
-import Lock from "icons/lock.svg";
+// import Lock from "icons/lock.svg";
 import Withdraw from "icons/withdraw.svg";
 import Deposit from "icons/deposit.svg";
 import NFT from "icons/nft.svg";
@@ -36,11 +36,11 @@ const items: {
     icon: <DeFi name="defi" />,
     tip: "Earn rewards through Staking and Farming.",
   },
-  {
-    label: "Lock&Unlock",
-    icon: <Lock name="lock" />,
-    tip: "Get rewarded by providing liquidity to bridges amongst various Layer 1 blockchains. Unlock assets with a few clicks.",
-  },
+  // {
+  //   label: "Lock&Unlock",
+  //   icon: <Lock name="lock" />,
+  //   tip: "Get rewarded by providing liquidity to bridges amongst various Layer 1 blockchains. Unlock assets with a few clicks.",
+  // },
   {
     label: "withdraw",
     icon: <Withdraw name="withdraw" />,
