@@ -36,7 +36,7 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
     <Content
       label="Private Payment"
       close={props.close}
-      text="Zecrey Zero will provide a multi-terminal collaborative privacy payment system. With Zecrey Zero as the core, we create different user terminals, such as Zecrey Mobile and Zecrey Web App. This means you can experience powerful privacy features wherever you are."
+      text="Zecrey Zero enables privacy features where users can conduct private transfer and swap transactions. With Zecrey Mobile App and Zecrey Web App, you can experience powerful privacy features wherever you are."
       ac={props.ac}
     >
       <PaymentChart>
@@ -79,9 +79,9 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
 export const NftEngine = (props: { ac: boolean; close: () => void }) => {
   return (
     <Content
-      label="NFT Engine"
+      label="NFT Marketplace powered by zkRollup"
       close={props.close}
-      text="The NFT engine is one of the core elements in Zecrey Legend. Not only creators or artists, we will build a platform dedicated to creating NFTs for every ordinary user. Proud to say that the NFT engine will create a multi-terminal experience . Whether you are using a PC or mobile device to create, explore, and purchase or sell, you will have an efficient experience."
+      text="Users can operate NFTs in low gas (even zero gas) in Zecrey Legend and withdraw the layer 2 NFT to the underlying layer 1 network. NFT transactions on Zecrey NFT Marketplace are advantageous with faster speed, low even no gas fee and the sound security shared with BNB chain. And royalty can be set by NFT artists to incentivize the creative genius."
       ac={props.ac}
     >
       <EngineChart>
