@@ -136,9 +136,9 @@ export const Text = styled.div`
   left: 6rem;
   font-family: "Lexend";
   font-style: normal;
-  font-weight: bold;
-  font-size: 3.6rem;
-  line-height: 4.5rem;
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
   letter-spacing: 0.04rem;
   background: linear-gradient(90deg, #29e9f0 0%, #f5b6ff 99.86%);
   -webkit-background-clip: text;
@@ -163,13 +163,13 @@ export const Text = styled.div`
 `;
 export const Text2 = styled.div`
   position: absolute;
-  width: 56.6rem;
-  top: 31.2rem;
+  width: 59rem;
+  top: 33rem;
   left: 6rem;
   font-family: "IBM Plex Sans";
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.014rem;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.02rem;
   color: #ffffff;
   transform: translateY(1.3rem);
   opacity: 0;

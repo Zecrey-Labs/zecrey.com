@@ -43,15 +43,16 @@ const Desktop = () => {
         </Box>
         <Label>Zecrey Protocol</Label>
         <Text>
-          A turn-key solution for Cross-chain and privacy
+          ZKRollup based
+          <br /> Layer 2 protocol featuring
+          <br /> privacy and scalability.
           {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
         </Text>
         <Text2>
-          A turn-key, Layer 2 privacy solution for cross-chain transactions and
-          asset management based on Zero-knowledge (zk) Roll-Ups. With Zecrey’s
-          L2 protocol you can easily manage, swap and bridge assets across
-          multiple chains, all while knowing your transactions are private and
-          protected from malicious arbitrageurs.
+          Zecrey aims to lower the entry barriers of blockchain by making it
+          available for
+          <br /> business and consumer use, while increasing privacy and
+          security.
         </Text2>
         {isSafari ? (
           <Img src="/static/Zecrey_3D_poster.png" alt="Zecrey_3D_poster" />
@@ -128,10 +129,13 @@ const Mobile = () => {
   return (
     <MobileWrap ref={wrap} className={classNames("landing-mobile", { longer })}>
       <Box ref={dom}>
-        <Text>A turn-key solution for Cross-chain and privacy</Text>
+        <Text>
+          ZKRollup based Layer 2 protocol featuring privacy and scalability.
+        </Text>
         <Text2>
-          A turn-key, L2 privacy solution for cross-chain transactions and asset
-          management based on Zero-knowledge (zk) Roll-Ups.
+          Zecrey aims to lower the entry barriers of blockchain by making it
+          available for business and consumer use, while increasing privacy and
+          security.
         </Text2>
         <MDots className="dots" />
         <MLogo className="logo" />
