@@ -15,15 +15,23 @@ const card = [
   },
   {
     label: "2022 Q2",
-    span: ["Layer-2 Mainnet", "Zecrey App Chain Testnet"],
-    width: "22rem",
+    span: ["NFT Marketplace", "Development on BNB Chain"],
+    width: "18rem",
   },
   {
     label: "2022 Q3",
-    span: ["Zecrey App Chain Mainnet Private Payment Integration"],
-    width: "20.9rem",
+    span: [
+      "ZKBNB Open Source Release",
+      "Legend Testnet",
+      "NFT Marketplace Release",
+    ],
+    width: "24.9rem",
   },
-  { label: "2022 Q4", span: ["App Chain Ecosystem"], width: "17rem" },
+  {
+    label: "2022 Q4",
+    span: ["Game-SDK Release", "Legend Mainnet"],
+    width: "17rem",
+  },
 ];
 
 const RoadMap = () => {
@@ -51,7 +59,7 @@ const Desktop = () => {
             {card.map((i, index) => (
               <Box
                 key={index}
-                className={classNames({ ac: index === 1 })}
+                className={classNames({ ac: index === 2 })}
                 width={i.width}
               >
                 <label>{i.label}</label>
