@@ -24,7 +24,7 @@ export const Wrap = styled.div`
         margin-top: 1.3rem;
       }
       &.sub2 {
-        margin-top: 2rem;
+        margin-top: 2.2rem;
         margin-bottom: 3rem;
       }
     }

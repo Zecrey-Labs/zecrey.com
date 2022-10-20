@@ -12,8 +12,8 @@ const items = [
     name: "LEGEND",
     sub: "NFT Engine for Web 3",
     text: [
-      "The First zkRollup solution on BNB Chain & NFT Engine of Web3 Games.",
-      "Thanks to efficient architecture design, the NFT Market based on Zecrey Legend has become faster than ever.",
+      "The first zkRollup L2 scaling solution on the BNB chain and NFT engine of Web3 games.",
+      "It offers instant trading, massive scalability, and low gas fees for minting and trading NFTs without compromising security.",
     ],
   },
   {
@@ -21,8 +21,7 @@ const items = [
     name: "ZERO",
     sub: "Efficient, Secure and Privacy",
     text: [
-      "The First zkRollup solution on BNB Chain & NFT Engine of Web3 Games.",
-      "Thanks to efficient architecture design, the NFT Market based on Zecrey Legend has become faster than ever.",
+      "A lightweight, privacy-driven, and portable payment solution, and it provides users with a simple and intuitive interface that allows users to be able to conduct private transfer and swap transactions with ease of access.",
     ],
   },
 ];
@@ -42,17 +41,17 @@ const Desktop = () => {
           <Icon />
         </div>
         <div className="right">
-          <MainTitle className="move13to0">
-            zkRollup based Layer-2 Network.
-          </MainTitle>
+          <MainTitle className="move13to0">What is Zecrey?</MainTitle>
           <div className="sub sub1 move13to0">
-            As a Layer-2 network based on the zkRollup, we are committed to
-            finding safe, efficient and low-cost solutions, and continuously
-            optimizing the user experience.
+            Zecrey is a layer 2 scaling protocol based on zkRollup technology to
+            safeguard users&#39; ownership of their assets and ensure that the
+            security of the system is as strong as the underlying mainchain.
+            Now, we are proud to introduce two different L2s: Zecrey Zero &
+            Zecrey Legend.
           </div>
           <div className="sub sub2 move13to0">
-            Now, we are proud to introduce two different Layer-2 networks, which
-            will bring a whole new blockchain experience to everyone.
+            Now, we are proud to introduce two different L2s: Zecrey Zero &
+            Zecrey Legend.
           </div>
           <Layers className="move13to0">
             {items.map((i, index) => (
