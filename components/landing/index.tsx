@@ -40,7 +40,7 @@ const Desktop = () => {
           <Icon className='dots' name='dots' />
           <Icon className='logo' name='logo' />
         </Box>
-        <Label>Zecrey Protocal</Label>
+        <Label>Zecrey Protocol</Label>
         <Text>
           A turn-key solution for Cross-chain and privacy
           {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
