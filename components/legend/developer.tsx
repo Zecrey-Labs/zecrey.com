@@ -5,10 +5,10 @@ const Developer = () => {
   return (
     <DeveloperWarp>
       <TextWrap>
-        <div className="main">Designed for Developers.</div>
+        <div className="main">Powerful SDK components for Web3 games.</div>
         <div className="sub">
           Simple and easy to use API/SDK, developers could integrate NFT into
-          its own system in minutes.
+          Web3 Games in minutes.
         </div>
         <a href="#" target="_blank" rel="noreferrer">
           Learn More
