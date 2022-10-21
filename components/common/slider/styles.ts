@@ -20,10 +20,12 @@ export const Labels = styled(CenterFlex)`
     letter-spacing: 0.02rem;
     color: #fff;
     opacity: 0.5;
-    transition: opacity 120ms ease-out,
+    border-radius: 1rem;
+    transition: opacity 120ms ease-out, background 120ms ease-out,
       color 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
     &:hover {
       opacity: 1;
+      background: rgba(255, 255, 255, 0.05);
     }
     &.ac {
       opacity: 1;

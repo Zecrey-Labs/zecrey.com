@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { ContentWrap, EngineChart, PaymentChart } from "./styles";
 import Close from "icons/close.svg";
 import Phone from "icons/phone.svg";
@@ -16,6 +16,7 @@ const Content = (props: {
   label: string;
   close: () => void;
   text: string;
+  textStyles?: CSSProperties;
   children?: ReactNode;
   ac: boolean;
 }) => {
@@ -26,7 +27,9 @@ const Content = (props: {
       </button>
       <div className="header">{props.label}</div>
       {props.children}
-      <div className="text">{props.text}</div>
+      <div className="text" style={props.textStyles || {}}>
+        {props.text}
+      </div>
     </ContentWrap>
   );
 };
@@ -82,6 +85,7 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
       label="NFT Marketplace powered by zkRollup"
       close={props.close}
       text="Users can operate NFTs in low gas (even zero gas) in Zecrey Legend and withdraw the layer 2 NFT to the underlying layer 1 network. NFT transactions on Zecrey NFT Marketplace are advantageous with faster speed, low even no gas fee and the sound security shared with BNB chain. And royalty can be set by NFT artists to incentivize the creative genius."
+      textStyles={{ fontSize: "1.4rem", width: "73rem" }}
       ac={props.ac}
     >
       <EngineChart>

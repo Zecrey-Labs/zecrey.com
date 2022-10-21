@@ -11,6 +11,7 @@ export const DesktopWrap = styled.div<{ dark: boolean }>`
   background-color: ${(props) =>
     props.dark ? "rgba(42, 42, 42, 0.5)" : "rgba(200, 200, 200, 0.15)"};
   margin-top: 1rem;
+  backdrop-filter: blur(2.7rem);
   .wrap {
     width: 116rem;
     margin: 0 auto;
