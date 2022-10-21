@@ -27,7 +27,7 @@ const items = [
 
 const Zero = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
-  return isMobileView ? <Mobile /> : <Desktop />;
+  return isMobileView ? null /*<Mobile /> */ : <Desktop />;
 };
 
 export default Zero;
