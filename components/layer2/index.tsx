@@ -21,7 +21,8 @@ const items = [
     name: "ZERO",
     sub: "Efficient, Secure and Privacy",
     text: [
-      "A lightweight, privacy-driven, and portable payment solution, and it provides users with a simple and intuitive interface that allows users to be able to conduct private transfer and swap transactions with ease of access.",
+      "A lightweight, privacy-driven, and portable payment solution.",
+      "And it provides users with a simple and intuitive interface that allows users to be able to conduct private transfer and swap transactions with ease of access.",
     ],
   },
 ];

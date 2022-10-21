@@ -52,7 +52,7 @@ export const Box = styled.div<{ width: string }>`
     height: 6rem;
     font-family: IBM Plex Sans;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #e9e9e9;
@@ -61,6 +61,7 @@ export const Box = styled.div<{ width: string }>`
     opacity: 0.4;
     i {
       display: block;
+      font-style: normal;
     }
   }
   &.ac {
