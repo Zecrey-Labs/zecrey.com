@@ -87,10 +87,12 @@ export const TextWrap = styled.div`
     color: #f5f5f5;
     margin: 1.6rem 0 2rem 0;
   }
-  a {
+  a,
+  button {
     display: inline-block;
     width: auto;
     padding: 0 1.5rem;
+    background: none;
     border: 0.1rem solid #19cacf;
     border-radius: 1.8rem;
     font-family: "IBM Plex Sans";
