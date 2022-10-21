@@ -43,10 +43,10 @@ const Desktop = () => {
         <FlatBtn className="video move13to0" onClick={() => setVideo(true)}>
           <Play name="play" /> Watch the video introduction
         </FlatBtn>
-        <div className="img-wrap">
+        <div className="img-wrap move13to0">
           <ImgBox
             src="/static/image/extension.webp"
-            className="extension-image move13to0"
+            className="extension-image"
             alt="zecrey"
             width={800}
             height={520}
