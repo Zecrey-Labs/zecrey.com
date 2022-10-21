@@ -74,7 +74,7 @@ const Desktop = () => {
             <ImgBox
               src="/static/wallet_logo.png"
               alt="Zecrey Wallet"
-              width={154}
+              width={145}
               height={33}
             />
           </CenterFlex>
