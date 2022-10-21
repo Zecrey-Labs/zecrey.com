@@ -43,7 +43,7 @@ const Desktop = () => {
         </Box>
         <Label>Zecrey Protocol</Label>
         <Text>
-          ZKRollup based
+          zkRollup based
           <br /> Layer 2 protocol featuring
           <br /> privacy and scalability.
           {/* <Typing str='Bringing Cross-chain Privacy to Digital Assets.' /> */}
@@ -130,7 +130,7 @@ const Mobile = () => {
     <MobileWrap ref={wrap} className={classNames("landing-mobile", { longer })}>
       <Box ref={dom}>
         <Text>
-          ZKRollup based Layer 2 protocol featuring privacy and scalability.
+          zkRollup based Layer 2 protocol featuring privacy and scalability.
         </Text>
         <Text2>
           Zecrey aims to lower the entry barriers of blockchain by making it

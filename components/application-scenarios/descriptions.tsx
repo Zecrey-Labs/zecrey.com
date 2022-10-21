@@ -40,6 +40,7 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
       label="Private Payment"
       close={props.close}
       text="Zecrey Zero enables privacy features where users can conduct private transfer and swap transactions. With Zecrey Mobile App and Zecrey Web App, you can experience powerful privacy features wherever you are."
+      textStyles={{ width: "73rem", paddingLeft: "1rem" }}
       ac={props.ac}
     >
       <PaymentChart>

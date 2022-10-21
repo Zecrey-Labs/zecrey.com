@@ -21,7 +21,7 @@ const card = [
   {
     label: "2022 Q3",
     span: [
-      "ZKBNB Open Source Release",
+      "zkBNB Open Source Release",
       "Legend Testnet",
       "NFT Marketplace Release",
     ],

@@ -16,7 +16,7 @@ export const Wrap = styled.div<{ padding?: string }>`
     position: absolute;
     width: 2rem;
     height: 2.3rem;
-    right: 37rem;
+    right: 40.4rem;
     bottom: 7rem;
   }
 `;
@@ -76,6 +76,7 @@ export const Box = styled.div<{ width: string }>`
     }
     span {
       font-size: 1.4rem;
+      font-weight: 700;
       line-height: 1.8rem;
     }
   }
