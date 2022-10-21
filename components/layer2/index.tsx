@@ -10,7 +10,7 @@ const items = [
   {
     logo_url: "/static/image/legend-logo.png",
     name: "LEGEND",
-    sub: "NFT Engine for Web 3",
+    sub: "NFT Engine for Web 3 Games",
     text: [
       "The first zkRollup L2 scaling solution on the BNB chain and NFT engine of Web3 games.",
       "It offers instant trading, massive scalability, and low gas fees for minting and trading NFTs without compromising security.",
