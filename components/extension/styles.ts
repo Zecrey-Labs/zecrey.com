@@ -5,6 +5,7 @@ export const Wrap = styled.div`
   padding-top: 4rem;
   padding-left: 6rem;
   padding-bottom: 5rem;
+  overflow: hidden;
   svg.extension-wallet {
     display: block;
     width: 9.7rem;
@@ -67,10 +68,13 @@ export const Wrap = styled.div`
       vertical-align: text-bottom;
     }
   }
-  .extension-image {
+  .img-wrap {
     position: absolute;
+    width: 80rem;
+    height: 44.2rem;
     left: 33.43%;
     bottom: 0;
+    overflow: hidden;
   }
 `;
 
