@@ -65,6 +65,7 @@ export const Box = styled.div<{ width: string }>`
     }
   }
   &.ac {
+    height: 13rem;
     label,
     span {
       color: #2ad4d8;
@@ -73,11 +74,13 @@ export const Box = styled.div<{ width: string }>`
     label {
       font-size: 3.6rem;
       line-height: 5.2rem;
+      margin-top: -1rem;
     }
     span {
       font-size: 1.4rem;
       font-weight: 700;
       line-height: 1.8rem;
+      text-shadow: 0 0 #2ad4d8;
     }
   }
   &:hover {
