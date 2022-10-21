@@ -14,7 +14,7 @@ const Developer = () => {
           Zecrey Zero enables privacy features, driving broad adoption in more
           business scenarios.
         </div>
-        <button>Learn More</button>
+        <button disabled>Learn More</button>
         {/* <a href="#" target="_blank" rel="noreferrer">
           Learn More
         </a> */}

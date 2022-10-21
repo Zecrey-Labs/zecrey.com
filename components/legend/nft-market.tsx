@@ -13,7 +13,7 @@ const NftMarket = () => {
           based on the Zecrey Legend system, you can create, buy, and sell
           different NFTs.
         </div>
-        <button>Explore {">"}</button>
+        <button disabled>Explore {">"}</button>
         {/* <a
           href="https://nft-marketplace-frontend-delta.vercel.app/"
           target="_blank"

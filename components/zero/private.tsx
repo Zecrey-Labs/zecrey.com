@@ -11,7 +11,7 @@ const Private = () => {
           All transactions are private on Zero by default. Zero conceals each
           transaction amount to protect your privacy.
         </div>
-        <button>Learn More</button>
+        <button disabled>Learn More</button>
         {/* <a href="#" target="_blank" rel="noreferrer">
           Learn More
         </a> */}
