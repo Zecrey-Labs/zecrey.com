@@ -47,8 +47,6 @@ const Desktop = () => {
             Zecrey is a layer 2 scaling protocol based on zkRollup technology to
             safeguard users&#39; ownership of their assets and ensure that the
             security of the system is as strong as the underlying mainchain.
-            Now, we are proud to introduce two different L2s: Zecrey Zero &
-            Zecrey Legend.
           </div>
           <div className="sub sub2 move13to0">
             Now, we are proud to introduce two different L2s: Zecrey Zero &
