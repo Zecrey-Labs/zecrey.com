@@ -22,7 +22,7 @@ export const MobileWrap = styled.div`
     padding: 0 ${vw(10)};
     margin-bottom: ${vw(20)};
     &:last-child {
-      padding: 0 ${vw(40)};
+      padding: 0 ${vw(65)};
       margin-bottom: ${vw(34)};
     }
   }

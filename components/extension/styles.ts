@@ -109,7 +109,7 @@ export const MobileWrap = styled.div`
   }
   .img-box {
     width: ${vw(535)};
-    height: ${vw(296)};
+    height: ${vw(348)};
     margin-left: ${vw(-290)};
     margin-bottom: ${vw(25)};
   }
