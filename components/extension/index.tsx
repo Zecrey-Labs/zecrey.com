@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { MobileWrap, Wrap } from "./styles";
 import { useMediaQuery } from "react-responsive";
-import { isMobile } from "react-device-detect";
 import ImgBox from "components/common/img";
 import Play from "icons/play.svg";
 import Wallet from "icons/wallet-alt.svg";
@@ -66,7 +65,7 @@ const Desktop = () => {
 
 const Mobile = () => {
   const [video, setVideo] = useState(false);
-  const dom = useRef<HTMLVideoElement>(null);
+
   return (
     <MobileWrap>
       <CenterFlex>
@@ -87,12 +86,7 @@ const Mobile = () => {
       >
         Download
       </a>
-      <button
-        className="video"
-        onClick={() => {
-          isMobile ? dom.current?.play() : setVideo(true);
-        }}
-      >
+      <button className="video" onClick={() => setVideo(true)}>
         <Play name="play" /> Watch the video introduction
       </button>
       {video && (
@@ -102,15 +96,16 @@ const Mobile = () => {
           close={() => setVideo(false)}
         />
       )}
-      {isMobile && (
+      {/* {isMobile && video && (
         <video
           className="video-on-mobile"
           ref={dom}
           src="/video/wallet-video.mp4"
           controls
           onContextMenu={(e) => e.preventDefault()}
+          autoPlay
         ></video>
-      )}
+      )} */}
     </MobileWrap>
   );
 };

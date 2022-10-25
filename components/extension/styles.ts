@@ -139,10 +139,4 @@ export const MobileWrap = styled.div`
       margin-right: ${vw(5)};
     }
   }
-  video.video-on-mobile {
-    position: absolute;
-    z-index: -100;
-    pointer-events: none;
-    bottom: 0;
-  }
 `;
