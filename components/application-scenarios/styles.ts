@@ -190,7 +190,7 @@ export const ContentWrap = styled.div<{ ac: boolean }>`
     color: #f5f5f5;
   }
   .tip-wrap {
-    pointer-events: none;
+    pointer-events: none !important;
   }
   .trigger::before {
     display: none;
@@ -201,7 +201,7 @@ const Chart = styled(CenterFlex)`
   width: 80rem;
   margin: 0 auto;
   .bubble-button {
-    background: none;
+    background: none !important;
     .trigger {
       padding: 0;
       background: rgba(0, 0, 0, 0.2);
@@ -228,11 +228,11 @@ const Chart = styled(CenterFlex)`
       height: 4rem;
     }
     .tip-wrap {
-      width: auto;
-      bottom: calc(100% + 1rem);
-      left: unset;
-      right: 50%;
-      transform: translateX(50%);
+      width: auto !important;
+      bottom: calc(100% + 1rem) !important;
+      left: unset !important;
+      right: 50% !important;
+      transform: translateX(50%) !important;
     }
   }
 `;
