@@ -121,8 +121,8 @@ export const brands = [
   },
   {
     src: "20.svg",
-    width: 0,
-    height: 0,
+    width: 132,
+    height: 24,
     classnames: [""],
   },
   {
