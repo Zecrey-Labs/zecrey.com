@@ -40,7 +40,7 @@ const Wrap = styled.div<{ width: number; height: number }>`
     width: calc(100% - 5rem);
     height: calc(100% - 13.9rem);
     margin: 0 auto;
-    background: url(/static/image/ecosystem.png);
+    background: url(https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666857298/ecosystem.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,7 +121,7 @@ const ZecreyEcosystemMap = (props: { close: () => void }) => {
       <div className="ecosystemmap" ref={modal}>
         <div className="map">Zecrey Ecosystem Map</div>
         <div className="picture">
-          {/* <img src='/Ecosystem/ecosystem.png' alt='' /> */}
+          {/* <img src='https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666857298/ecosystem.png' alt='' /> */}
         </div>
         <FlatBtn className="button-close" onClick={props.close}>
           Close
