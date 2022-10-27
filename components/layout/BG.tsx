@@ -14,7 +14,7 @@ const Desktop = () => {
     <BGWrap className="bg-wrap">
       <ImgBox
         className="bg bg_2"
-        src="https://res.cloudinary.com/drntjojig/image/upload/q_40/v1666850954/bg_2.webp"
+        src="https://res.cloudinary.com/drntjojig/image/upload/c_scale,q_1:420,w_500/v1666850954/bg_2.webp"
         alt="bg_2"
       />
       <div
