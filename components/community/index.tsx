@@ -65,7 +65,7 @@ const Desktop = () => {
       <Wrap>
         <ImgBox
           className="earth-bg move06to0"
-          src="/static/image/earth.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/v1666854837/earth.png"
           alt="bg"
           width={384}
           height={172}

@@ -44,7 +44,7 @@ const Desktop = () => {
         </FlatBtn>
         <div className="img-wrap move13to0">
           <ImgBox
-            src="/static/image/extension.webp"
+            src="https://res.cloudinary.com/drntjojig/image/upload/v1666854414/extension.webp"
             className="extension-image"
             alt="zecrey"
             width={800}
@@ -77,7 +77,10 @@ const Mobile = () => {
         <Wallet />
         Privacy Wallet Extension
       </label>
-      <ImgBox src="/static/image/extension.webp" alt="Extension" />
+      <ImgBox
+        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854414/extension.webp"
+        alt="Extension"
+      />
       <a
         className="download"
         href="https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi"

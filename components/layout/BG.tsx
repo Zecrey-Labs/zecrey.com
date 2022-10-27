@@ -32,7 +32,7 @@ const Mobile = () => {
     <MobileBG>
       <ImgBox
         className="mobile-cubes"
-        src="/static/image/mobile-bg.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854838/mobile-bg.png"
         alt="background"
       />
     </MobileBG>

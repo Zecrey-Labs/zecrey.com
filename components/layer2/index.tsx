@@ -8,7 +8,8 @@ import ImgBox from "components/common/img";
 
 const items = [
   {
-    logo_url: "/static/image/legend-logo.png",
+    logo_url:
+      "https://res.cloudinary.com/drntjojig/image/upload/v1666854837/legend-logo.png",
     name: "LEGEND",
     sub: "NFT Engine for Web 3 Games",
     text: [
@@ -17,7 +18,8 @@ const items = [
     ],
   },
   {
-    logo_url: "/static/image/zero-logo.png",
+    logo_url:
+      "https://res.cloudinary.com/drntjojig/image/upload/v1666854838/zero-logo.png",
     name: "ZERO",
     sub: "Efficient, Secure and Privacy",
     text: [

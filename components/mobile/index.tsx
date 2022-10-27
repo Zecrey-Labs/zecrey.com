@@ -29,7 +29,7 @@ const Desktop = () => {
         </MainTitle>
         <FlatBtn className="coming-soon move13to0">Coming Soon</FlatBtn>
         <ImgBox
-          src="/static/image/mobile-app.webp"
+          src="https://res.cloudinary.com/drntjojig/image/upload/v1666854445/mobile-app.webp"
           className="move13to0"
           alt=""
           width={558}
@@ -53,7 +53,10 @@ export const Mobile = () => {
       <label className="title-2">
         <MobileAlt /> Zecrey Mobile
       </label>
-      <ImgBox src="/static/image/mobile-app-mobile.png" alt="Extension" />
+      <ImgBox
+        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854445/mobile-app-mobile.png"
+        alt="Extension"
+      />
       <button disabled>Coming soon</button>
     </MobileWrap>
   );
