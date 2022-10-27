@@ -23,15 +23,16 @@ export const Wrap = styled.div<{ padding?: string }>`
 
 export const BoxGroup = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   width: 83.7rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 `;
 
-export const Box = styled.div<{ width: string }>`
+export const Box = styled.div<{ width: string; paddingBottem?: string }>`
   width: ${(props) => props.width};
   padding: 1.4rem 2.3rem 0 2.5rem;
+  padding-bottom: ${(props) => props.paddingBottem || 0};
   border-radius: 1rem;
   transition: all 120ms ease-out;
   label {
@@ -65,7 +66,7 @@ export const Box = styled.div<{ width: string }>`
     }
   }
   &.ac {
-    transform: translateY(0.5rem);
+    transform: translateY(-1rem);
     label,
     span {
       color: #2ad4d8;
