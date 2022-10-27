@@ -34,7 +34,7 @@ const Desktop = () => {
       <Wrap className="header">
         <Brand className="brand" onClick={() => router.push("/")}>
           <ImgBox
-            src="/static/zecrey-logo-dark.png"
+            src="https://res.cloudinary.com/drntjojig/image/upload/v1666853253/zecrey-logo-dark.png"
             alt="logo"
             width={131}
             height={47}
@@ -72,7 +72,7 @@ const Desktop = () => {
         <Download>
           <CenterFlex>
             <ImgBox
-              src="/static/wallet_logo.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/v1666853252/wallet_logo.png"
               alt="Zecrey Wallet"
               width={145}
               height={33}
@@ -122,7 +122,10 @@ const Mobile = () => {
     <MobileWrap ref={wrap}>
       <BetweenFlex className="header">
         <FlatBtn className="brand" onClick={() => router.push("/")}>
-          <ImgBox src="/static/zecrey-logo-dark.png" alt="logo" />
+          <ImgBox
+            src="https://res.cloudinary.com/drntjojig/image/upload/v1666853253/zecrey-logo-dark.png"
+            alt="logo"
+          />
         </FlatBtn>
         <FlatBtn
           className={classNames("ctrl", { ac })}

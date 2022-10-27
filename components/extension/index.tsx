@@ -55,7 +55,7 @@ const Desktop = () => {
       {video && (
         <VideoModal
           label="Introduction"
-          src="/video/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
           close={() => setVideo(false)}
         />
       )}
@@ -92,7 +92,7 @@ const Mobile = () => {
       {video && (
         <VideoModal
           label="Introduction"
-          src="/video/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
           close={() => setVideo(false)}
         />
       )}
@@ -100,7 +100,7 @@ const Mobile = () => {
         <video
           className="video-on-mobile"
           ref={dom}
-          src="/video/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
           controls
           onContextMenu={(e) => e.preventDefault()}
           autoPlay

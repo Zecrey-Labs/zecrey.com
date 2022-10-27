@@ -55,14 +55,17 @@ const Desktop = () => {
           security.
         </Text2>
         {isSafari ? (
-          <Img src="/static/Zecrey_3D_poster.png" alt="Zecrey_3D_poster" />
+          <Img
+            src="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
+            alt="Zecrey_3D_poster"
+          />
         ) : (
           <Video
-            src="/static/Zecrey_3D.webm"
+            src="https://res.cloudinary.com/drntjojig/video/upload/v1666852991/Zecrey_3D.webm"
             autoPlay
             loop
             muted
-            poster="/static/Zecrey_3D_poster.png"
+            poster="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
             onContextMenu={(e) => e.preventDefault()}
           />
         )}
@@ -139,7 +142,10 @@ const Mobile = () => {
         </Text2>
         <MDots className="dots" />
         <MLogo className="logo" />
-        <Img src="/static/Zecrey_3D_poster.png" alt="Zecrey_3D_poster" />
+        <Img
+          src="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
+          alt="Zecrey_3D_poster"
+        />
       </Box>
       <Bottom>
         <div>Learn More</div>
