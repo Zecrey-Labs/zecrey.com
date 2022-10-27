@@ -10,27 +10,23 @@ import Card from "components/common/card-wrap";
 const card = [
   {
     label: "2022 Q1",
-    span: ["Contract Auditing Layer-1 Mainnet NFTs"],
-    width: "15rem",
+    span: ["Contract Auditing", "Layer-1 & Zero Testnet", "Layer-1 Mainnet"],
+    width: "17.5rem",
   },
   {
     label: "2022 Q2",
     span: ["NFT Marketplace", "Development on BNB Chain"],
-    width: "18rem",
+    width: "20rem",
   },
   {
     label: "2022 Q3",
-    span: [
-      "zkBNB Open Source Release",
-      "Legend Testnet",
-      "NFT Marketplace Release",
-    ],
-    width: "24.9rem",
+    span: ["zkBNB Open Source Release", "Legend Testnet Development"],
+    width: "21rem",
   },
   {
     label: "2022 Q4",
     span: ["Game-SDK Release", "Legend Mainnet"],
-    width: "17rem",
+    width: "19.9rem",
   },
 ];
 
@@ -59,7 +55,7 @@ const Desktop = () => {
             {card.map((i, index) => (
               <Box
                 key={index}
-                className={classNames({ ac: index === 2 })}
+                className={classNames({ ac: index === 3 })}
                 width={i.width}
               >
                 <label>{i.label}</label>

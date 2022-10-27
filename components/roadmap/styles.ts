@@ -16,7 +16,7 @@ export const Wrap = styled.div<{ padding?: string }>`
     position: absolute;
     width: 2rem;
     height: 2.3rem;
-    right: 40.4rem;
+    right: 15.5rem;
     bottom: 7rem;
   }
 `;
@@ -65,7 +65,7 @@ export const Box = styled.div<{ width: string }>`
     }
   }
   &.ac {
-    height: 13rem;
+    transform: translateY(0.5rem);
     label,
     span {
       color: #2ad4d8;
@@ -74,7 +74,6 @@ export const Box = styled.div<{ width: string }>`
     label {
       font-size: 3.6rem;
       line-height: 5.2rem;
-      margin-top: -1rem;
     }
     span {
       font-size: 1.4rem;
@@ -149,14 +148,21 @@ export const MobileWrap = styled.div`
       &.card_2 {
         label {
           font-size: ${vw(24)};
-          line-height: ${vw(52)};
+          line-height: ${vw(34)};
         }
         opacity: 0.6;
       }
       &.card_3 {
         label {
-          font-size: ${vw(36)};
+          font-size: ${vw(24)};
           line-height: ${vw(34)};
+        }
+        opacity: 0.6;
+      }
+      &.card_4 {
+        label {
+          font-size: ${vw(36)};
+          line-height: ${vw(52)};
           color: #2ad4d8;
         }
         span {
@@ -165,13 +171,6 @@ export const MobileWrap = styled.div`
           font-size: ${vw(14)};
           margin-top: ${vw(-4)};
         }
-      }
-      &.card_4 {
-        label {
-          font-size: ${vw(24)};
-          line-height: ${vw(34)};
-        }
-        opacity: 0.6;
       }
     }
     svg.line {
@@ -186,7 +185,7 @@ export const MobileWrap = styled.div`
       width: ${vw(20)};
       height: ${vw(23)};
       left: ${vw(5)};
-      top: ${vw(300)};
+      top: ${vw(415)};
     }
   }
   label.title-2 {
