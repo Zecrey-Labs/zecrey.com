@@ -1,8 +1,10 @@
-import Communtity from "components/community";
-import Extension from "components/extension";
-import Layout from "components/layout";
 import dynamic from "next/dynamic";
 
+const Communtity = dynamic(() => import("components/community"), {
+  ssr: false,
+});
+const Extension = dynamic(() => import("components/extension"), { ssr: false });
+const Layout = dynamic(() => import("components/layout"), { ssr: false });
 const Landing = dynamic(() => import("components/landing"), { ssr: false });
 const MobileApp = dynamic(() => import("components/mobile"), { ssr: false });
 const MultiChains = dynamic(() => import("components/multi-chains"), {
