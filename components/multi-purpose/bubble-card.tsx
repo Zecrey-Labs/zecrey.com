@@ -32,9 +32,9 @@ const items: {
     tip: "Conduct transfers to multiple accounts in a single encrypted transaction with a high level of privacy and security.",
   },
   {
-    label: "deFi",
-    icon: <DeFi name="defi" />,
-    tip: "Earn rewards through Staking and Farming.",
+    label: "Stake",
+    icon: <DeFi name="stake" />,
+    tip: "Stake to earn rewards.",
   },
   // {
   //   label: "Lock&Unlock",
