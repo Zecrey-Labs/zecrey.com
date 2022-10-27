@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import Header from "./header";
 import { Container, Wrap } from "./styles";
 import dynamic from "next/dynamic";
+import BG from "./BG";
 
-const BG = dynamic(() => import("./BG"), { ssr: false });
 const Footer = dynamic(() => import("./footer"), { ssr: false });
 
 const Layout = (props: { children: ReactNode | undefined }) => {
