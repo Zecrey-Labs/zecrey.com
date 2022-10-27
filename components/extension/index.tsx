@@ -80,6 +80,7 @@ const Mobile = () => {
       <ImgBox
         src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854414/extension.webp"
         alt="Extension"
+        priority
       />
       <a
         className="download"

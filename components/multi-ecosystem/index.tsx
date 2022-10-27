@@ -107,6 +107,7 @@ const Desktop = () => {
               alt="bg"
               width={955}
               height={66}
+              priority
             />
             {items.map((i, index) => (
               <Itm key={index} {...i} index={index} />
@@ -118,6 +119,7 @@ const Desktop = () => {
               alt="logo"
               width={136}
               height={155}
+              priority
             />
           </div>
         </Wrap>

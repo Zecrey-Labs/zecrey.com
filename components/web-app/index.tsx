@@ -25,6 +25,7 @@ function Desktop() {
           alt="zecrey"
           width={814}
           height={473}
+          priority
         />
         <div className="content-wrap">
           <CenterFlex className="title  move13to0">

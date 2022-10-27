@@ -9,6 +9,7 @@ interface Props {
   className?: string;
   fit?: "contain" | "cover";
   bg?: boolean;
+  priority?: boolean;
 }
 const ImgBox = (props: Props) => {
   return (
@@ -24,6 +25,7 @@ const ImgBox = (props: Props) => {
           alt={props.alt}
           layout="fill"
           objectFit={props.fit || "cover"}
+          priority={props.priority}
         />
       )}
     </Wrap>

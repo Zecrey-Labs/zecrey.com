@@ -34,6 +34,7 @@ const Desktop = () => {
           alt=""
           width={558}
           height={743}
+          priority
         />
       </Wrap>
     </Card>
