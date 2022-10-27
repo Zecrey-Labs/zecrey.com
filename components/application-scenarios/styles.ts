@@ -238,18 +238,6 @@ const Chart = styled(CenterFlex)`
 `;
 
 export const PaymentChart = styled(Chart)`
-  svg.phone {
-    width: 2.7rem;
-    height: 4rem;
-  }
-  svg.chats {
-    width: 5.4rem;
-    height: 4.2rem;
-  }
-  svg.desktop {
-    width: 3.8rem;
-    height: 3.4rem;
-  }
   .features {
     flex-direction: column;
     min-width: 18.5rem;
@@ -282,22 +270,6 @@ export const PaymentChart = styled(Chart)`
 `;
 
 export const EngineChart = styled(Chart)`
-  svg.phone {
-    width: 2.7rem;
-    height: 4rem;
-  }
-  svg.nfts {
-    width: 5.4rem;
-    height: 4.2rem;
-  }
-  svg.desktop {
-    width: 3.8rem;
-    height: 3.4rem;
-  }
-  svg.user {
-    width: 1.6rem;
-    height: 1.8rem;
-  }
   &.mobile,
   &.web {
     width: 8rem;

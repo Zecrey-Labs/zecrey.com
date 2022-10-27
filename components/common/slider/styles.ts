@@ -8,8 +8,8 @@ export const Labels = styled(CenterFlex)`
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   background: rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
   button {
     flex: 1;
     display: block;

@@ -20,7 +20,7 @@ export const Wrap = styled.div<{
     background: rgba(255, 255, 255, 0.1);
     .tip-wrap {
       background: rgba(0, 0, 0, 0.85);
-      transform: translateY(-5px);
+      transform: translateY(-0.5rem);
       visibility: visible;
       .tip,
       .link {
@@ -70,8 +70,8 @@ export const Link = styled.a`
     width: 0.6rem;
     height: 1rem;
     color: inherit;
-    margin-top: 12px;
-    margin-left: 5px;
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
   }
   &:hover {
     text-decoration: none;
@@ -100,8 +100,8 @@ export const Trigger = styled(CenterFlex)<{
     display: flex;
     align-items: center;
     pointer-events: none;
-    margin-bottom: 11px;
-    margin-top: 10px;
+    margin-bottom: 1.1rem;
+    margin-top: 1rem;
     svg {
       width: ${(props) => props.size?.width || "7rem"};
       height: ${(props) => props.size?.height || "7rem"};
@@ -118,7 +118,7 @@ export const Trigger = styled(CenterFlex)<{
     text-align: center;
     text-transform: capitalize;
     pointer-events: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
   }
   &::before {
     content: "";

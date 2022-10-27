@@ -8,7 +8,7 @@ export const Container = styled.div`
   border-bottom: 0.1rem solid #4e4e4e;
   background: rgba(56, 56, 56, 0.8);
   z-index: 1000;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(5rem);
   /* position: relative; */
   &.header-container {
     border-bottom: 0.1rem solid#DADADA;
@@ -77,7 +77,7 @@ export const Nav = styled(CenterFlex)<{ dark: boolean }>`
     }
     .hover1 {
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
+      border-radius: 1rem;
       width: 7.8rem;
       height: 3rem;
       position: absolute;
@@ -170,7 +170,7 @@ export const MobileWrap = styled.div`
     background: rgba(56, 56, 56, 0.3);
     border: ${vw(0.5)} solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(${vw(50)});
-    border-radius: 0px 0px ${vw(10)} ${vw(10)};
+    border-radius: 0 0 ${vw(10)} ${vw(10)};
     padding: ${vw(64)} ${vw(35)} 0 ${vw(35)};
     z-index: -100;
     transform: translateY(-100vh);

@@ -44,7 +44,12 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
       ac={props.ac}
     >
       <PaymentChart>
-        <BubbleButton className="mobile" label="" tip="Zecrey Mobile">
+        <BubbleButton
+          className="mobile"
+          label=""
+          tip="Zecrey Mobile"
+          size={{ width: "2.7rem", height: "4rem" }}
+        >
           <Phone className="phone" />
         </BubbleButton>
         <CenterFlex className="features">
@@ -58,7 +63,15 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
             <span>Privacy Transfer</span>
           </div>
         </CenterFlex>
-        <BubbleButton className="payment" label="" tip="Private Payment">
+        <BubbleButton
+          className="payment"
+          label=""
+          tip="Private Payment"
+          size={{
+            width: "5.4rem",
+            height: "4.2rem",
+          }}
+        >
           <Chats className="chats" />
         </BubbleButton>
         <CenterFlex className="features">
@@ -72,7 +85,15 @@ export const PrivatePayment = (props: { ac: boolean; close: () => void }) => {
             <span>Defi</span>
           </div>
         </CenterFlex>
-        <BubbleButton className="web" label="" tip="Zecrey Web">
+        <BubbleButton
+          className="web"
+          label=""
+          tip="Zecrey Web"
+          size={{
+            width: "3.8rem",
+            height: "3.4rem",
+          }}
+        >
           <Desktop className="desktop" />
         </BubbleButton>
       </PaymentChart>
@@ -91,10 +112,20 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
     >
       <EngineChart>
         <CenterFlex className="users">
-          <BubbleButton className="user" label="" tip="Creator">
+          <BubbleButton
+            className="user"
+            label=""
+            tip="Creator"
+            size={{ width: "1.6rem", height: "1.8rem" }}
+          >
             <User className="user" />
           </BubbleButton>
-          <BubbleButton className="user" label="" tip="User">
+          <BubbleButton
+            className="user"
+            label=""
+            tip="User"
+            size={{ width: "1.6rem", height: "1.8rem" }}
+          >
             <User className="user" />
           </BubbleButton>
         </CenterFlex>
@@ -102,15 +133,36 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
           <Dashed3 className="dashed-3" />
           <Dashed3 className="dashed-3" />
         </CenterFlex>
-        <BubbleButton className="mobile" label="" tip="Zecrey Mobile">
+        <BubbleButton
+          className="mobile"
+          label=""
+          tip="Zecrey Mobile"
+          size={{ width: "2.7rem", height: "4rem" }}
+        >
           <Phone className="phone" />
         </BubbleButton>
         <Dashed2 className="dashed-2" />
-        <BubbleButton className="engine" label="" tip="NFT Engine">
+        <BubbleButton
+          className="engine"
+          label=""
+          tip="NFT Engine"
+          size={{
+            width: "5.4rem",
+            height: "4.2rem",
+          }}
+        >
           <NFTs className="nfts" />
         </BubbleButton>
         <Dashed2 className="dashed-2" />
-        <BubbleButton className="web" label="" tip="Zecrey Web">
+        <BubbleButton
+          className="web"
+          label=""
+          tip="Zecrey Web"
+          size={{
+            width: "3.8rem",
+            height: "3.4rem",
+          }}
+        >
           <Desktop className="desktop" />
         </BubbleButton>
         <CenterFlex className="dash3 right">
@@ -118,10 +170,20 @@ export const NftEngine = (props: { ac: boolean; close: () => void }) => {
           <Dashed3 className="dashed-3" />
         </CenterFlex>
         <CenterFlex className="users">
-          <BubbleButton className="user" label="" tip="Creator">
+          <BubbleButton
+            className="user"
+            label=""
+            tip="Creator"
+            size={{ width: "1.6rem", height: "1.8rem" }}
+          >
             <User className="user" />
           </BubbleButton>
-          <BubbleButton className="user" label="" tip="User">
+          <BubbleButton
+            className="user"
+            label=""
+            tip="User"
+            size={{ width: "1.6rem", height: "1.8rem" }}
+          >
             <User className="user" />
           </BubbleButton>
         </CenterFlex>

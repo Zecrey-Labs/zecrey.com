@@ -62,7 +62,7 @@ export const ItemWrap = styled(CenterFlex)<{
       font-family: "Zing Rust";
       font-size: ${(props) => (props.smaller ? "1.2rem" : "1.4rem")};
       line-height: 2rem;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.06rem;
       color: #e3e3e3;
       padding-top: 0.6rem;
       padding-bottom: ${(props) => (props.smaller ? 0.9 : 0.3)}rem;
