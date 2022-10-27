@@ -21,7 +21,7 @@ const Desktop = () => {
         <BetweenFlex className="sub-wrap-1">
           <CenterFlex className="brand-wrap">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1666853253/zecrey-logo-dark.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666853253/zecrey-logo-dark.png"
               alt="zecrey"
               className="brand"
               width={209}

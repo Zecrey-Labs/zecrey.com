@@ -56,16 +56,16 @@ const Desktop = () => {
         </Text2>
         {isSafari ? (
           <Img
-            src="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
+            src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666853125/Zecrey_3D_poster.webp"
             alt="Zecrey_3D_poster"
           />
         ) : (
           <Video
-            src="https://res.cloudinary.com/drntjojig/video/upload/v1666852991/Zecrey_3D.webm"
+            src="https://res.cloudinary.com/drntjojig/video/upload/q_auto:eco/v1666852991/Zecrey_3D.webm"
             autoPlay
             loop
             muted
-            poster="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
+            poster="https://res.cloudinary.com/drntjojig/image/upload/c_scale,h_649,q_auto:low/v1666853125/Zecrey_3D_poster.png"
             onContextMenu={(e) => e.preventDefault()}
           />
         )}
@@ -143,7 +143,7 @@ const Mobile = () => {
         <MDots className="dots" />
         <MLogo className="logo" />
         <Img
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1666853125/Zecrey_3D_poster.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666853125/Zecrey_3D_poster.webp"
           alt="Zecrey_3D_poster"
         />
       </Box>

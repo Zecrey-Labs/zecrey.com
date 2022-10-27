@@ -20,7 +20,7 @@ function Desktop() {
       <Wrap>
         <ZecreyWebApp className="web-app move13to0" />
         <ImgBox
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1666854446/web-app.webp"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854446/web-app.webp"
           className="web-app move13to0"
           alt="zecrey"
           width={814}
@@ -54,7 +54,7 @@ const Mobile = () => {
         <Icon /> Zecrey Web App
       </label>
       <ImgBox
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854445/web-app-mobile.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854445/web-app-mobile.png"
         alt="Extension"
       />
       <button disabled>Coming soon</button>

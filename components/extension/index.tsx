@@ -44,7 +44,7 @@ const Desktop = () => {
         </FlatBtn>
         <div className="img-wrap move13to0">
           <ImgBox
-            src="https://res.cloudinary.com/drntjojig/image/upload/v1666854414/extension.webp"
+            src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854414/extension.webp"
             className="extension-image"
             alt="zecrey"
             width={800}
@@ -55,7 +55,7 @@ const Desktop = () => {
       {video && (
         <VideoModal
           label="Introduction"
-          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/q_auto:eco/v1666852947/wallet-video.mp4"
           close={() => setVideo(false)}
         />
       )}
@@ -78,7 +78,7 @@ const Mobile = () => {
         Privacy Wallet Extension
       </label>
       <ImgBox
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854414/extension.webp"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854414/extension.webp"
         alt="Extension"
       />
       <a
@@ -95,7 +95,7 @@ const Mobile = () => {
       {video && (
         <VideoModal
           label="Introduction"
-          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/q_auto:eco/v1666852947/wallet-video.mp4"
           close={() => setVideo(false)}
         />
       )}
@@ -103,7 +103,7 @@ const Mobile = () => {
         <video
           className="video-on-mobile"
           ref={dom}
-          src="https://res.cloudinary.com/drntjojig/video/upload/v1666852947/wallet-video.mp4"
+          src="https://res.cloudinary.com/drntjojig/video/upload/q_auto:eco/v1666852947/wallet-video.mp4"
           controls
           onContextMenu={(e) => e.preventDefault()}
           autoPlay

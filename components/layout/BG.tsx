@@ -14,13 +14,13 @@ const Desktop = () => {
     <BGWrap className="bg-wrap">
       <ImgBox
         className="bg bg_2"
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1666850954/bg_2.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_40/v1666850954/bg_2.webp"
         alt="bg_2"
       />
       <div
         className="bg bg_1"
         style={{
-          backgroundImage: `url(${"https://res.cloudinary.com/drntjojig/image/upload/v1666850953/bg_1.png"})`,
+          backgroundImage: `url(${"https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666850953/bg_1.webp"})`,
         }}
       />
     </BGWrap>
@@ -32,7 +32,7 @@ const Mobile = () => {
     <MobileBG>
       <ImgBox
         className="mobile-cubes"
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1666854838/mobile-bg.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854838/mobile-bg.png"
         alt="background"
       />
     </MobileBG>

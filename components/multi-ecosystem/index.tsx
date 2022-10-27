@@ -103,7 +103,7 @@ const Desktop = () => {
           <div className="items-wrap">
             <ImgBox
               className="dashed"
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1666854837/ecosystem-wire.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854837/ecosystem-wire.png"
               alt="bg"
               width={955}
               height={66}
@@ -114,7 +114,7 @@ const Desktop = () => {
             <LogoDot />
             <ImgBox
               className="logo"
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1666854837/ecosystem-zecrey.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854837/ecosystem-zecrey.png"
               alt="logo"
               width={136}
               height={155}
@@ -143,7 +143,7 @@ const Mobile = () => {
       <MobileLogo className="mobile-logo">
         <ImgBox
           className="logo"
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1666854837/ecosystem-zecrey.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854837/ecosystem-zecrey.png"
           alt="logo"
         />
       </MobileLogo>
