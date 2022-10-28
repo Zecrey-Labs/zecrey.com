@@ -18,7 +18,10 @@ const About = () => {
         </div>
       </TextWrap>
       {isMobileView ? (
-        <ImgBox src="/static/image/legend-about-mobile.svg" alt="" />
+        <ImgBox
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/legend-about-mobile.svg"
+          alt=""
+        />
       ) : (
         <Img className="img" />
       )}

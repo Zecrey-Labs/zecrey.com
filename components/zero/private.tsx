@@ -25,7 +25,10 @@ const Private = () => {
         </a> */}
       </TextWrap>
       {isMobileView ? (
-        <ImgBox src="/static/image/zero-private-bg-mobile.svg" alt="" />
+        <ImgBox
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/zero-private-bg-mobile.svg"
+          alt=""
+        />
       ) : (
         <Img className="img" />
       )}

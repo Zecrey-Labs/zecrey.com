@@ -25,7 +25,10 @@ const Developer = () => {
         </a> */}
       </TextWrap>
       {isMobileView ? (
-        <ImgBox src="/static/image/legend-developer-bg-mobile.svg" alt="" />
+        <ImgBox
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/legend-developer-bg-mobile.svg"
+          alt=""
+        />
       ) : (
         <Img className="img" />
       )}

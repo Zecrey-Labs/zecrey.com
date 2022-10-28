@@ -128,7 +128,10 @@ const Mobile = () => {
       )}
       {type === "payment" && (
         <PaymentMobile>
-          <ImgBox src="/static/image/payment-chart.svg" alt="" />
+          <ImgBox
+            src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/payment-chart.svg"
+            alt=""
+          />
           <p>
             Zecrey Zero will provide a multi-terminal collaborative privacy
             payment system. With Zecrey Zero as the core, we create different
@@ -143,7 +146,10 @@ const Mobile = () => {
       )}
       {type === "engine" && (
         <EngineMobile>
-          <ImgBox src="/static/image/engine-chart.svg" alt="" />
+          <ImgBox
+            src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/engine-chart.svg"
+            alt=""
+          />
           <p>
             Users can operate NFTs in low gas (even zero gas) in Zecrey Legend
             and withdraw the layer 2 NFT to the underlying layer 1 network.

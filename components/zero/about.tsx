@@ -38,7 +38,10 @@ const About = () => {
         </a>
       </TextWrap>
       {isMobileView ? (
-        <ImgBox src="/static/image/zero-about-bg-mobile.svg" alt="" />
+        <ImgBox
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937278/zero-about-bg-mobile.svg"
+          alt=""
+        />
       ) : (
         <Img className="img" />
       )}
