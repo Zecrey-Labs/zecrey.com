@@ -1,11 +1,16 @@
 import { TextWrap } from "components/legend/styles";
 import Img from "icons/zero-developer-bg.svg";
 import { DeveloperWrap } from "./styles";
+import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
+import ImgBox from "components/common/img";
 
 const Developer = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 });
+
   return (
-    <DeveloperWrap>
-      <TextWrap>
+    <DeveloperWrap className={classNames({ mobile: isMobileView })}>
+      <TextWrap className={classNames({ mobile: isMobileView })}>
         <div className="main">
           Privacy payment integration
           <br /> within minutes.
@@ -19,7 +24,11 @@ const Developer = () => {
           Learn More
         </a> */}
       </TextWrap>
-      <Img className="img" />
+      {isMobileView ? (
+        <ImgBox src="/static/image/legend-developer-bg-mobile.svg" alt="" />
+      ) : (
+        <Img className="img" />
+      )}
     </DeveloperWrap>
   );
 };

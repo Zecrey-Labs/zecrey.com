@@ -1,5 +1,6 @@
 import { ContentCard, TextWrap } from "components/legend/styles";
 import styled from "styled-components";
+import { vw } from "styles/globals";
 
 export const Wrap = styled.div`
   display: flex;
@@ -57,6 +58,21 @@ export const PrivateWrap = styled(ContentCard)`
     right: 3.8rem;
     z-index: -10;
   }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(202)} 0 0 ${vw(20)} !important;
+      .sub {
+        width: ${vw(230)};
+      }
+    }
+    .img-box {
+      position: absolute;
+      width: ${vw(264)};
+      height: ${vw(300)};
+      top: 0;
+      left: 0;
+    }
+  }
 `;
 
 export const AboutWrap = styled(ContentCard)`
@@ -72,6 +88,21 @@ export const AboutWrap = styled(ContentCard)`
     right: 0;
     z-index: -10;
   }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(25)} 0 0 ${vw(20)} !important;
+      .sub {
+        width: ${vw(230)} !important;
+      }
+    }
+    .img-box {
+      position: absolute;
+      width: ${vw(270)};
+      height: ${vw(252)};
+      top: ${vw(51)};
+      left: 0;
+    }
+  }
 `;
 
 export const DeveloperWrap = styled(ContentCard)`
@@ -86,5 +117,20 @@ export const DeveloperWrap = styled(ContentCard)`
     top: 2rem;
     left: 0;
     z-index: -10;
+  }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(197)} 0 0 ${vw(20)} !important;
+      .sub {
+        width: ${vw(230)} !important;
+      }
+    }
+    .img-box {
+      position: absolute;
+      width: ${vw(250)};
+      height: ${vw(206)};
+      top: 0;
+      left: ${vw(20)};
+    }
   }
 `;

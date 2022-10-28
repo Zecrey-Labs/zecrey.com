@@ -1,14 +1,16 @@
 import Card from "components/common/card-wrap";
-import Slider from "components/common/slider";
-import { Span } from "components/legend/styles";
+import Slider, { MobileSlider } from "components/common/slider";
 import { useMediaQuery } from "react-responsive";
-import { CenterFlex, MainTitle, MobileWrap } from "styles/globals";
+import { CenterFlex, FlatBtn, MainTitle, MobileWrap } from "styles/globals";
 import About from "./about";
 import Developer from "./developer";
 import Private from "./private";
 import { Wrap } from "./styles";
 import data from "./data.json";
 import Animation from "components/legend/animation";
+import { useState } from "react";
+import { MobileStyles, MoreText } from "components/legend/styles";
+import ImgBox from "components/common/img";
 
 const items = [
   {
@@ -27,7 +29,7 @@ const items = [
 
 const Zero = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
-  return isMobileView ? null /*<Mobile /> */ : <Desktop />;
+  return isMobileView ? <Mobile /> : <Desktop />;
 };
 
 export default Zero;
@@ -51,13 +53,47 @@ const Desktop = () => {
   );
 };
 
+const m_items = [
+  {
+    label: "Privacy",
+    img: <Private />,
+  },
+  {
+    label: "About",
+    img: <About />,
+  },
+  {
+    label: "Developer",
+    img: <Developer />,
+  },
+];
+
 const Mobile = () => {
+  const [ac, setAc] = useState(false);
   return (
-    <MobileWrap>
-      <CenterFlex>
-        <MainTitle>Zecrey</MainTitle>
-        <Span>ZERO</Span>
+    <MobileStyles>
+      <CenterFlex className="label">
+        <ImgBox
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854837/zero-logo.png"
+          alt="logo"
+        />
+        <span>ZERO</span>
       </CenterFlex>
-    </MobileWrap>
+      <MoreText ac={ac}>
+        <p className="top">
+          A lightweight, privacy-driven, and portable payment solution.
+        </p>
+        {!ac ? (
+          <FlatBtn onClick={() => setAc(true)}>more</FlatBtn>
+        ) : (
+          <p className="bottom">
+            And it provides users with a simple and intuitive interface that
+            allows users to be able to conduct private transfer and swap
+            transactions with ease of access.
+          </p>
+        )}
+      </MoreText>
+      <MobileSlider items={m_items} />
+    </MobileStyles>
   );
 };

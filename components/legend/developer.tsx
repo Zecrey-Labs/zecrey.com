@@ -6,6 +6,7 @@ import ImgBox from "components/common/img";
 
 const Developer = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
+
   return (
     <DeveloperWarp className={classNames({ mobile: isMobileView })}>
       <TextWrap className={classNames({ mobile: isMobileView })}>
