@@ -1,8 +1,14 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  // Html,
+  // Head,
+  // Main,
+  // NextScript,
+  DocumentContext,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocutent extends Document {
-  static async getInitialProps(ctx: any) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -28,21 +34,21 @@ export default class MyDocutent extends Document {
     }
   }
 
-  render() {
-    return (
-      <Html>
-        <Head>
-          <meta name="charset" content="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="description" content="Zecrey" />
-          <meta name="Robots" content="all" />
-          <link rel="shortcut icon" href="/favicon.svg"></link>
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+  // render() {
+  //   return (
+  //     <Html>
+  //       <Head>
+  //         <meta name="charset" content="utf-8" />
+  //         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  //         <meta name="description" content="Zecrey" />
+  //         <meta name="Robots" content="all" />
+  //         <link rel="shortcut icon" href="/favicon.svg"></link>
+  //       </Head>
+  //       <body>
+  //         <Main />
+  //         <NextScript />
+  //       </body>
+  //     </Html>
+  //   );
+  // }
 }
