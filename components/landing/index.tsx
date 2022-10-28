@@ -6,7 +6,6 @@ import {
   Box,
   Img,
   Label,
-  LogoMobile,
   MobileWrap,
   Text,
   Text2,
