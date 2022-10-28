@@ -1,12 +1,7 @@
 import Card from "components/common/card-wrap";
 import CardLayout from "components/common/card-wrap/card-layout";
 import { useMediaQuery } from "react-responsive";
-import {
-  CenterFlex,
-  MainTitle,
-  MobileBGIcon,
-  MobileWrap,
-} from "styles/globals";
+import { CenterFlex, MainTitle } from "styles/globals";
 import Icon from "icons/scenarios.svg";
 import Chats from "icons/chats.svg";
 import NFTs from "icons/items.svg";
@@ -150,7 +145,7 @@ const Mobile = () => {
             src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666937277/engine-chart.svg"
             alt=""
           />
-          <p>
+          <p style={{ width: "91%" }}>
             Users can operate NFTs in low gas (even zero gas) in Zecrey Legend
             and withdraw the layer 2 NFT to the underlying layer 1 network.
           </p>
