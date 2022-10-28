@@ -19,6 +19,9 @@ export const Wrap = styled.div`
 export const Container = styled.div`
   padding-top: 7.8rem;
   overflow: hidden;
+  &.mobile {
+    padding-top: ${vw(50)};
+  }
 `;
 
 export const BGWrap = styled.div`

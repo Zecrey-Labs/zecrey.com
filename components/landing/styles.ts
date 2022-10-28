@@ -84,8 +84,7 @@ export const Box = styled.div`
     margin: 0 auto;
     border-radius: ${vw(10)};
     padding: ${vw(25)};
-    overflow: visible;
-    margin-bottom: 70%; // ${vw(154)};
+    transform: translateY(${vw(-100)});
     svg {
       opacity: 1;
       &.dots {
@@ -213,15 +212,6 @@ export const Img = styled.img`
       opacity: 1;
     }
   }
-  @media (max-width: 780px) {
-    animation: none;
-    opacity: 1;
-    width: ${vw(382)};
-    height: ${vw(243)};
-    top: ${vw(160)};
-    left: ${vw(-60)};
-    transform: scale(1.1);
-  }
 `;
 export const Video = styled.video`
   position: absolute;
@@ -294,11 +284,20 @@ export const Bottom = styled.div`
   }
 `;
 export const MobileWrap = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   height: calc(100vh - ${vw(100)});
   margin-bottom: ${vw(50)};
   &.longer {
     height: ${vw(440)};
+  }
+  .img-box.mobile-bg-logo {
+    position: absolute;
+    width: ${vw(320)};
+    height: ${vw(243)};
+    left: 0;
+    top: 50%;
+    transform: translateY(calc(-50% + ${vw(60)}));
   }
 `;

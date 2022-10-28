@@ -6,6 +6,7 @@ import {
   Box,
   Img,
   Label,
+  LogoMobile,
   MobileWrap,
   Text,
   Text2,
@@ -18,6 +19,7 @@ import Logo from "icons/logo.svg";
 import MDots from "icons/dots-mobile.svg";
 import MLogo from "icons/logo-mobile.svg";
 import Dart from "icons/dart.svg";
+import ImgBox from "components/common/img";
 
 const Landing = () => {
   const isMobile = useMediaQuery({ maxWidth: 780 });
@@ -142,11 +144,21 @@ const Mobile = () => {
         </Text2>
         <MDots className="dots" />
         <MLogo className="logo" />
-        <Img
+        {/* <Img
           src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666853125/Zecrey_3D_poster.webp"
           alt="Zecrey_3D_poster"
-        />
+        /> */}
       </Box>
+      {/* <Img
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666853125/Zecrey_3D_poster.webp"
+        alt="Zecrey_3D_poster"
+      /> */}
+      <ImgBox
+        className="mobile-bg-logo"
+        src="https://res.cloudinary.com/drntjojig/image/upload/v1666939807/bg-logo.png"
+        fit="contain"
+        alt=""
+      />
       <Bottom>
         <div>Learn More</div>
         <Dart name="dart" />
