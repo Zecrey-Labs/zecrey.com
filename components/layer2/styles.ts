@@ -127,59 +127,22 @@ export const LayerItem = styled.div`
   }
 `;
 
-export const MobileLayerItem = styled.div`
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: ${vw(1)} solid rgba(255, 255, 255, 0.1);
-  border-radius: ${vw(15)};
-  padding: ${vw(20)} ${vw(12)};
-  &:first-child {
-    margin-top: ${vw(40)};
-    margin-bottom: ${vw(20)};
+export const MobileStyles = styled.div`
+  padding-top: ${vw(24)};
+  padding-bottom: ${vw(148)};
+  p {
+    font-family: "IBM Plex Sans";
+    font-size: ${vw(10)};
+    line-height: ${vw(13)};
+    margin-top: 0;
+    margin-bottom: ${vw(15)};
+    color: #fff;
   }
-  .info {
-    display: flex;
-    align-items: center;
-    .img-box {
-      width: ${vw(55)};
-      min-width: ${vw(55)};
-      height: ${vw(55)};
-      min-height: ${vw(55)};
-    }
-    .name {
-      padding-left: ${vw(10)};
-      label {
-        display: block;
-        font-family: IBM Plex Sans;
-        font-weight: 700;
-        font-size: ${vw(18)};
-        line-height: ${vw(23)};
-        letter-spacing: ${vw(0.2)};
-        color: #fff;
-      }
-      span {
-        font-family: Source Sans Pro;
-        font-size: ${vw(14)};
-        line-height: ${vw(18)};
-        color: #f5f5f5;
-        opacity: 0.6;
-        white-space: nowrap;
-      }
-    }
-  }
-  .desc {
-    border-top: ${vw(1)} solid rgba(255, 255, 255, 0.1);
-    margin-top: ${vw(15)};
-    padding-top: ${vw(15)};
-    .text {
-      font-family: "Source Sans Pro";
-      font-size: ${vw(12)};
-      line-height: ${vw(15)};
-      color: #f5f5f5;
-      &:first-child {
-        margin-bottom: ${vw(20)};
-      }
-    }
+  .img-box {
+    position: absolute;
+    width: ${vw(300)};
+    height: ${vw(193)};
+    right: 0;
+    bottom: 0;
   }
 `;

@@ -1,7 +1,7 @@
 import Card from "components/common/card-wrap";
 import { useMediaQuery } from "react-responsive";
 import { CenterFlex, MainTitle, MobileWrap } from "styles/globals";
-import { LayerItem, Layers, MobileLayerItem, Wrap } from "./styles";
+import { LayerItem, Layers, MobileStyles, Wrap } from "./styles";
 import Icon from "icons/layer2.svg";
 import Dart from "icons/dart-alt.svg";
 import ImgBox from "components/common/img";
@@ -92,32 +92,20 @@ const Mobile = () => {
   return (
     <MobileWrap>
       <CenterFlex style={{ textAlign: "center" }}>
-        <MainTitle>
-          zkRollup based
-          <br />
-          Layer-2 Network
-        </MainTitle>
+        <MainTitle>What&#39;s Zecrey?</MainTitle>
       </CenterFlex>
-      <div>
-        {items.map((i, index) => (
-          <MobileLayerItem key={index}>
-            <div className="info">
-              <ImgBox src={i.logo_url} alt={i.name} width={55} height={55} />
-              <div className="name">
-                <label>{i.name}</label>
-                <span>{i.sub}</span>
-              </div>
-            </div>
-            <div className="desc">
-              {i.text.map((el, idx) => (
-                <div key={idx} className="text">
-                  {el}
-                </div>
-              ))}
-            </div>
-          </MobileLayerItem>
-        ))}
-      </div>
+      <MobileStyles>
+        <p>
+          Zecrey is a layer 2 scaling protocol based on zkRollup technology to
+          safeguard users&#39; ownership of their assets and ensure that the
+          security of the system is as strong as the underlying mainchain.
+        </p>
+        <p>
+          Now, we are proud to introduce two different L2s: Zecrey Zero & Zecrey
+          Legend.
+        </p>
+        <ImgBox src="/static/zecrey-layers.svg" alt="layers" fit="contain" />
+      </MobileStyles>
     </MobileWrap>
   );
 };
