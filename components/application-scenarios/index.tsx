@@ -163,9 +163,6 @@ const Mobile = () => {
           <button onClick={() => setType("")}>{"<"}</button>
         </EngineMobile>
       )}
-      <MobileBGIcon width={123} height={126}>
-        <Icon />
-      </MobileBGIcon>
     </MobileStyles>
   );
 };

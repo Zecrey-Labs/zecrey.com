@@ -41,6 +41,7 @@ export const Media = styled(CenterFlex)`
 export const MobileWrap = styled.div`
   padding: ${vw(30)} ${vw(20)};
   position: relative;
+  backdrop-filter: blur(${vw(27)});
   label.title-1 {
     display: block;
     font-family: "Lexend";

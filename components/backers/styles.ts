@@ -107,6 +107,7 @@ export const MobileWrap = styled.div`
   margin: 0 auto ${vw(20)} auto;
   overflow: hidden;
   text-align: center;
+  backdrop-filter: blur(${vw(27)});
   label.title-1 {
     display: block;
     font-family: "Lexend";

@@ -99,8 +99,8 @@ export const TextWrap = styled.div`
       color: #2ad4d9;
     }
     .sub {
-      font-size: ${vw(12)};
-      line-height: ${vw(15)};
+      font-size: ${vw(10)};
+      line-height: ${vw(13)};
       margin: ${vw(8)} 0 0 0;
     }
     a,
@@ -275,8 +275,8 @@ export const MobileStyles = styled(MobileWrap)`
 
 export const MoreText = styled.div<{ ac: boolean }>`
   width: 100%;
-  height: ${(props) => (props.ac ? vw(160) : vw(110))};
   padding: ${vw(20)};
+  padding-bottom: ${(props) => (props.ac ? vw(20) : vw(15))};
   margin-bottom: ${vw(10)};
   background: rgba(255, 255, 255, 0.05);
   border-radius: ${vw(10)};
@@ -290,8 +290,8 @@ export const MoreText = styled.div<{ ac: boolean }>`
   }
   p {
     font-family: "IBM Plex Sans";
-    font-size: ${vw(12)};
-    line-height: ${vw(16)};
+    font-size: ${vw(10)};
+    line-height: ${vw(13)};
     color: #fff;
     &.top {
       margin-top: 0;

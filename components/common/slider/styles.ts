@@ -44,8 +44,7 @@ export const Labels = styled(CenterFlex)`
       width: calc(33.33% - ${vw(10)});
       border-radius: ${vw(7)};
       transition: none;
-      font-size: ${vw(12)};
-      letter-spacing: ${vw(0.14)};
+      font-size: ${vw(10)};
       &.ac {
         background: #2ad4d8;
       }
