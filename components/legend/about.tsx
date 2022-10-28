@@ -1,10 +1,15 @@
 import { AboutWrap, TextWrap } from "./styles";
 import Img from "icons/legend-about.svg";
+import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
+import ImgBox from "components/common/img";
 
 const About = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 });
+
   return (
-    <AboutWrap>
-      <TextWrap>
+    <AboutWrap className={classNames({ mobile: isMobileView })}>
+      <TextWrap className={classNames({ mobile: isMobileView })}>
         <div className="main">Secure, Instant, Reliable.</div>
         <div className="sub">
           Highly Scalable NFT Platform Legend is the first zkRollup based NFT
@@ -12,7 +17,11 @@ const About = () => {
           thousands of TPS.
         </div>
       </TextWrap>
-      <Img className="img" />
+      {isMobileView ? (
+        <ImgBox src="/static/image/legend-about-mobile.svg" alt="" />
+      ) : (
+        <Img className="img" />
+      )}
     </AboutWrap>
   );
 };

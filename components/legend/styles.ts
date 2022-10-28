@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { vw } from "styles/globals";
+import { MobileWrap, vw } from "styles/globals";
 
 export const Wrap = styled.div`
   display: flex;
@@ -54,21 +54,6 @@ export const AnimWrap = styled.div`
   }
 `;
 
-export const Span = styled.span`
-  display: inline-block;
-  margin-left: ${vw(6)};
-  border: 0.1rem solid #2ad4d8;
-  border-radius: ${vw(5)};
-  padding: 0 ${vw(4)};
-  font-family: "Lexend";
-  font-weight: 700;
-  font-size: ${vw(14)};
-  line-height: ${vw(18)};
-  letter-spacing: ${vw(0.2)};
-  color: #2ad4d8;
-  padding-top: ${vw(2)};
-`;
-
 export const TextWrap = styled.div`
   .main {
     font-family: "Source Sans Pro";
@@ -107,6 +92,22 @@ export const TextWrap = styled.div`
       color: #2b2b2b;
     }
   }
+  &.mobile {
+    .main {
+      font-size: ${vw(16)};
+      line-height: ${vw(20)};
+      color: #2ad4d9;
+    }
+    .sub {
+      font-size: ${vw(12)};
+      line-height: ${vw(15)};
+      margin: ${vw(8)} 0 0 0;
+    }
+    a,
+    button {
+      display: none;
+    }
+  }
 `;
 
 export const ContentCard = styled.div`
@@ -117,6 +118,13 @@ export const ContentCard = styled.div`
   border-bottom: none;
   border-radius: 1.5rem 1.5rem 0 0;
   overflow: hidden;
+  &.mobile {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: ${vw(1)} solid rgba(255, 255, 255, 0.05);
+    border-radius: ${vw(10)};
+  }
 `;
 
 export const NftMarketWrap = styled(ContentCard)`
@@ -146,6 +154,37 @@ export const NftMarketWrap = styled(ContentCard)`
       right: 0;
     }
   }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(167)} 0 0 ${vw(20)};
+      .main {
+        width: ${vw(163)};
+      }
+      .sub {
+        width: ${vw(230)};
+      }
+    }
+    svg.img {
+      &.img-1 {
+        width: ${vw(145)};
+        height: ${vw(145)};
+        top: ${vw(20)};
+        right: ${vw(75)};
+      }
+      &.img-2 {
+        width: ${vw(120)};
+        height: ${vw(120)};
+        top: ${vw(-29)};
+        right: ${vw(2)};
+      }
+      &.img-3 {
+        width: ${vw(105)};
+        height: ${vw(105)};
+        bottom: ${vw(110)};
+        right: ${vw(-30)};
+      }
+    }
+  }
 `;
 
 export const AboutWrap = styled(ContentCard)`
@@ -161,6 +200,21 @@ export const AboutWrap = styled(ContentCard)`
     left: 0;
     z-index: -10;
   }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(25)} 0 0 ${vw(20)};
+      .sub {
+        width: ${vw(230)};
+      }
+    }
+    .img-box {
+      position: absolute;
+      width: ${vw(270)};
+      height: ${vw(300)};
+      top: 0;
+      left: 0;
+    }
+  }
 `;
 
 export const DeveloperWarp = styled(ContentCard)`
@@ -175,5 +229,77 @@ export const DeveloperWarp = styled(ContentCard)`
     bottom: 0;
     right: 0;
     z-index: -10;
+  }
+  &.mobile {
+    ${TextWrap} {
+      padding: ${vw(197)} 0 0 ${vw(20)};
+      .main {
+        width: ${vw(200)};
+      }
+      .sub {
+        width: ${vw(230)};
+      }
+    }
+    .img-box {
+      position: absolute;
+      width: ${vw(250)};
+      height: ${vw(206)};
+      top: 0;
+      left: ${vw(20)};
+    }
+  }
+`;
+
+export const MobileStyles = styled(MobileWrap)`
+  padding-left: ${vw(15)};
+  padding-right: ${vw(15)};
+  padding-bottom: ${vw(20)};
+  .label {
+    margin-top: ${vw(-10)};
+    margin-bottom: ${vw(15)};
+    .img-box {
+      width: ${vw(42)};
+      height: ${vw(42)};
+    }
+    span {
+      font-family: "IBM Plex Sans";
+      font-weight: 700;
+      font-size: ${vw(18)};
+      line-height: ${vw(23)};
+      letter-spacing: ${vw(0.22)};
+      color: #fff;
+      padding-left: ${vw(10)};
+    }
+  }
+`;
+
+export const MoreText = styled.div<{ ac: boolean }>`
+  width: 100%;
+  height: ${(props) => (props.ac ? vw(160) : vw(110))};
+  padding: ${vw(20)};
+  margin-bottom: ${vw(10)};
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: ${vw(10)};
+  button {
+    display: block;
+    font-family: "IBM Plex Sans";
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    color: #2ad4d8;
+    margin: 0 auto;
+  }
+  p {
+    font-family: "IBM Plex Sans";
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    color: #fff;
+    &.top {
+      margin-top: 0;
+      margin-bottom: ${vw(10)};
+    }
+    &.bottom {
+      margin-top: ${vw(16)};
+      margin-bottom: 0;
+    }
   }
 `;

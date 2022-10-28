@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { CenterFlex } from "styles/globals";
+import { CenterFlex, vw } from "styles/globals";
 
 export const Labels = styled(CenterFlex)`
   position: relative;
+  justify-content: space-between;
   width: 84rem;
   height: 4.8rem;
   margin-bottom: 1.5rem;
@@ -11,8 +12,8 @@ export const Labels = styled(CenterFlex)`
   border: 0.1rem solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   button {
-    flex: 1;
     display: block;
+    width: calc(33.33% - 1rem);
     height: 100%;
     font-family: "IBM Plex Sans";
     font-weight: 700;
@@ -32,6 +33,22 @@ export const Labels = styled(CenterFlex)`
       color: #2b2b2b;
     }
   }
+  &.mobile {
+    width: 100%;
+    height: ${vw(32)};
+    border-width: ${vw(1)};
+    border-radius: ${vw(10)};
+    padding: ${vw(4)};
+    margin-bottom: ${vw(10)};
+    button {
+      width: calc(33.33% - ${vw(10)});
+      border-radius: ${vw(7)};
+      transition: none;
+      &.ac {
+        background: #2ad4d8;
+      }
+    }
+  }
 `;
 
 export const Indicator = styled.div<{ index: number }>`
@@ -43,6 +60,9 @@ export const Indicator = styled.div<{ index: number }>`
   border-radius: 1rem;
   z-index: -1;
   transition: left 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+  &.mobile {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`
@@ -61,6 +81,18 @@ export const Content = styled.div`
     &.be-right {
       transform: translateX(64rem);
       opacity: 0;
+    }
+  }
+  &.mobile {
+    height: ${vw(300)};
+    .content-wrap {
+      width: 100%;
+      height: 100%;
+      transition: none;
+      &.be-left,
+      &.be-right {
+        display: none;
+      }
     }
   }
 `;

@@ -2,11 +2,15 @@ import { NftMarketWrap, TextWrap } from "./styles";
 import Img1 from "icons/NFT-1.svg";
 import Img2 from "icons/NFT-2.svg";
 import Img3 from "icons/NFT-3.svg";
+import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
 
 const NftMarket = () => {
+  const isMobileView = useMediaQuery({ maxWidth: 780 });
+
   return (
-    <NftMarketWrap>
-      <TextWrap>
+    <NftMarketWrap className={classNames({ mobile: isMobileView })}>
+      <TextWrap className={classNames({ mobile: isMobileView })}>
         <div className="main">Create and own thousands of NFTs</div>
         <div className="sub">
           There are thousands of NFTs to explore, and in the NFT Marketplace
