@@ -156,7 +156,7 @@ export const NftMarketWrap = styled(ContentCard)`
   }
   &.mobile {
     ${TextWrap} {
-      padding: ${vw(167)} 0 0 ${vw(20)};
+      padding: ${vw(184)} 0 0 ${vw(20)};
       .main {
         width: ${vw(163)};
       }
