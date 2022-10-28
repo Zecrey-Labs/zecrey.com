@@ -103,7 +103,7 @@ export const MobileItemCard = styled(CenterFlex)`
   background: rgba(255, 255, 255, 0.05);
   border: ${vw(1)} solid rgba(255, 255, 255, 0.1);
   border-radius: ${vw(15)};
-  padding: ${vw(30)} 0;
+  padding: ${vw(30)} 0 ${vw(25)} 0;
   margin-top: ${vw(15)};
   &:first-child {
     margin-top: ${vw(19)};
@@ -143,6 +143,7 @@ export const MobileItemCard = styled(CenterFlex)`
   }
   button {
     height: ${vw(26)};
+    min-height: ${vw(26)};
     padding: 0 ${vw(16)};
     background: rgba(255, 255, 255, 0.05);
     border: ${vw(1)} solid rgba(255, 255, 255, 0.2);
