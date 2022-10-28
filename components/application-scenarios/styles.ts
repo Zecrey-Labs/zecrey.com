@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CenterFlex, vw } from "styles/globals";
+import { CenterFlex, MainTitle, MobileWrap, vw } from "styles/globals";
 
 export const Wrap = styled.div`
   padding: 5rem 0;
@@ -98,19 +98,21 @@ export const ItemCard = styled(CenterFlex)`
 
 export const MobileItemCard = styled(CenterFlex)`
   flex-direction: column;
-  width: ${vw(260)};
+  width: 100%;
+  height: ${vw(240)};
   background: rgba(255, 255, 255, 0.05);
+  border: ${vw(1)} solid rgba(255, 255, 255, 0.1);
   border-radius: ${vw(15)};
-  padding: ${vw(40)} 0;
+  padding: ${vw(30)} 0;
   margin-top: ${vw(15)};
   &:first-child {
-    margin-top: ${vw(50)};
+    margin-top: ${vw(19)};
   }
   .icon {
-    width: ${vw(100)};
-    min-width: ${vw(100)};
-    height: ${vw(100)};
-    min-height: ${vw(100)};
+    width: ${vw(80)};
+    min-width: ${vw(80)};
+    height: ${vw(80)};
+    min-height: ${vw(80)};
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.25);
     svg.chats {
@@ -128,15 +130,29 @@ export const MobileItemCard = styled(CenterFlex)`
     font-size: ${vw(16)};
     line-height: ${vw(21)};
     color: #2ad4d9;
-    padding: ${vw(10)} 0;
+    padding: ${vw(15)} 0 ${vw(4)} 0;
   }
   .sub {
     width: 90%;
     text-align: center;
     font-family: "Source Sans Pro";
-    font-size: ${vw(14)};
-    line-height: ${vw(18)};
+    font-size: ${vw(12)};
+    line-height: ${vw(15)};
     color: #c1c1c1;
+    padding-bottom: ${vw(24)};
+  }
+  button {
+    height: ${vw(26)};
+    padding: 0 ${vw(16)};
+    background: rgba(255, 255, 255, 0.05);
+    border: ${vw(1)} solid rgba(255, 255, 255, 0.2);
+    border-radius: ${vw(18)};
+    font-family: "IBM Plex Sans";
+    font-weight: 500;
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    letter-spacing: ${vw(0.14)};
+    color: #fff;
   }
 `;
 
@@ -304,5 +320,66 @@ export const EngineChart = styled(Chart)`
     &.right {
       transform: rotateY(180deg);
     }
+  }
+`;
+
+export const MobileStyles = styled(MobileWrap)`
+  padding: ${vw(20)} ${vw(15)};
+  ${MainTitle} {
+    text-align: center;
+  }
+`;
+
+export const PaymentMobile = styled.div`
+  height: ${vw(494)};
+  background: rgba(255, 255, 255, 0.05);
+  border: ${vw(1)} solid rgba(255, 255, 255, 0.1);
+  border-radius: ${vw(15)};
+  margin-top: ${vw(20)};
+  .img-box {
+    width: ${vw(218)};
+    height: ${vw(243)};
+    margin: ${vw(25)} auto;
+  }
+  p {
+    width: ${vw(236)};
+    font-family: "Source Sans Pro";
+    font-size: ${vw(12)};
+    line-height: ${vw(15)};
+    text-align: center;
+    color: #f5f5f5;
+    margin: 0 auto ${vw(15)} auto;
+  }
+  button {
+    display: block;
+    margin: ${vw(30)} auto 0 auto;
+    height: ${vw(26)};
+    padding: 0 ${vw(16)};
+    background: rgba(255, 255, 255, 0.05);
+    border: ${vw(1)} solid rgba(255, 255, 255, 0.2);
+    border-radius: ${vw(18)};
+    font-family: "IBM Plex Sans";
+    font-weight: 500;
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    letter-spacing: ${vw(0.14)};
+    color: #fff;
+  }
+`;
+
+export const EngineMobile = styled(PaymentMobile)`
+  .img-box {
+    width: ${vw(215)};
+    height: ${vw(286)};
+    margin-bottom: ${vw(11)};
+  }
+  p {
+    width: ${vw(250)};
+    font-size: ${vw(10)};
+    line-height: ${vw(13)};
+    margin: 0 auto ${vw(13)} auto;
+  }
+  button {
+    margin-top: 0;
   }
 `;
