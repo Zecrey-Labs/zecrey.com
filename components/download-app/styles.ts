@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { CenterFlex, vw } from "styles/globals";
 
 export const BannerWrap = styled(CenterFlex)`
-  width: 144rem;
+  width: 128rem;
   height: 17.5rem;
   background: rgba(56, 56, 56, 0.5);
   border: 0.1rem solid rgba(255, 255, 255, 0.1);
@@ -77,5 +77,158 @@ export const MobileBanner = styled(CenterFlex)`
     font-size: ${vw(10)};
     line-height: ${vw(13)};
     color: #2b2b2b;
+  }
+`;
+
+export const Wrap = styled.div`
+  width: 128rem;
+  margin: 2rem auto 7rem auto;
+  padding: 4rem 4rem 0 4rem;
+  background: rgba(56, 56, 56, 0.5);
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1.3rem);
+  border-radius: 1rem;
+  .labels {
+    width: 100%;
+    transform: none;
+    animation: none;
+  }
+  .contents {
+    height: 53rem;
+    .content-wrap {
+      width: 100%;
+      height: 53rem;
+    }
+  }
+`;
+
+export const Card = styled.div`
+  width: 100%;
+  height: 53rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1.5rem 1.5rem 0 0;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.1);
+`;
+
+export const Info = styled.div<{ top: string; left: string }>`
+  padding-top: ${(props) => props.top};
+  padding-left: ${(props) => props.left};
+  .title {
+    .main {
+      font-family: "IBM Plex Sans";
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      color: #f1f1f1;
+      i {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        color: #f7821b;
+        padding-left: 0.6rem;
+      }
+    }
+    .sub {
+      font-family: "IBM Plex Sans";
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      color: #f1f1f1;
+      opacity: 0.5;
+      padding-top: 0.9rem;
+      padding-bottom: 4.6rem;
+    }
+  }
+  .divider {
+    width: 35.5rem;
+    height: 0.1rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .details {
+    height: 17.4rem;
+    padding-top: 3.9rem;
+    span {
+      display: block;
+      font-family: "Source Sans Pro";
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: #f5f5f5;
+    }
+  }
+  .logos {
+    padding-top: 3.5rem;
+    .img-box {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 2rem;
+    }
+  }
+`;
+
+export const AndroidWrap = styled.div`
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  .img-box.app {
+    position: absolute;
+    bottom: 0;
+    left: 13.7rem;
+  }
+  .qr-button {
+    position: absolute;
+    width: 4.2rem;
+    height: 4.2rem;
+    top: 2.1rem;
+    right: 2.1rem;
+    border-radius: 0.8rem;
+    background: none;
+    transition: all 120ms ease-out;
+    cursor: pointer;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      color: #fff;
+      opacity: 0.5;
+      transition: opacity 120ms ease-out;
+      pointer-events: none;
+    }
+    .hover-up {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 0.8rem;
+      right: 0;
+      top: 5rem;
+      padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+      transition: opacity 200ms ease-out;
+      .qr {
+        width: 7.6rem;
+        height: 7.6rem;
+      }
+      .text {
+        padding-top: 0.7rem;
+        font-family: "IBM Plex Sans";
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        text-align: center;
+        color: #f1f1f1;
+      }
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      svg,
+      .hover-up {
+        opacity: 1;
+      }
+    }
+  }
+`;
+export const ExtensionWrap = styled(AndroidWrap)`
+  .img-box.app {
+    left: -14.7rem;
+    bottom: -3.8rem;
   }
 `;

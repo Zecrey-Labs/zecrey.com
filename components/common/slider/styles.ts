@@ -78,10 +78,12 @@ export const Content = styled.div`
     &.be-left {
       transform: translateX(-64rem);
       opacity: 0;
+      pointer-events: none;
     }
     &.be-right {
       transform: translateX(64rem);
       opacity: 0;
+      pointer-events: none;
     }
   }
   &.mobile {
