@@ -48,9 +48,12 @@ const Android = () => {
         <CenterFlex className="qr-button">
           <QR />
           <div className="hover-up">
-            <div className="qr">
-              <APKLink />
-            </div>
+            <ImgBox
+              src="https://res.cloudinary.com/drntjojig/image/upload/v1667474134/qr.png"
+              alt=""
+              width={76}
+              height={76}
+            />
             <div className="text">
               Scan to <br />
               Download

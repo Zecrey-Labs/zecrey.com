@@ -201,15 +201,15 @@ export const AndroidWrap = styled.div`
       border-radius: 0.8rem;
       right: 0;
       top: 5rem;
-      padding: 0.4rem 0.4rem 0.8rem 0.4rem;
+      padding: 1.2rem 1.2rem 0.8rem 1.2rem;
       transition: opacity 200ms ease-out;
       .qr {
-        width: 9.2rem;
-        height: 9.2rem;
-        svg {
-          width: 100%;
-          height: 100%;
-        }
+        width: 7.6rem;
+        height: 7.6rem;
+        // svg {
+        //   width: 100%;
+        //   height: 100%;
+        // }
       }
       .text {
         padding-top: 0.7rem;
