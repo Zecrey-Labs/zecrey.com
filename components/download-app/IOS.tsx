@@ -9,8 +9,8 @@ const IOS = () => {
           className="app"
           src="https://res.cloudinary.com/drntjojig/image/upload/v1667448063/iPhone_13_Pro_Silver.png"
           alt=""
-          width={330}
-          height={466}
+          width={322}
+          height={432}
         />
         <Info top="10.9rem" left="60.4rem">
           <div className="title">
