@@ -1,6 +1,7 @@
 import ImgBox from "components/common/img";
 import { AndroidWrap, Card, Info } from "./styles";
 import QR from "icons/QR.svg";
+import APKLink from "./apk_link.svg";
 import { CenterFlex } from "styles/globals";
 
 const Android = () => {
@@ -47,7 +48,9 @@ const Android = () => {
         <CenterFlex className="qr-button">
           <QR />
           <div className="hover-up">
-            <div className="qr"></div>
+            <div className="qr">
+              <APKLink />
+            </div>
             <div className="text">
               Scan to <br />
               Download
