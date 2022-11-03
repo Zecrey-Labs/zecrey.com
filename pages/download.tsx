@@ -1,5 +1,5 @@
 import DownloadApp from "components/download-app";
-import Banner from "components/download-app/banner";
+import Banner from "components/download-app/Banner";
 import Layout from "components/layout";
 
 const Page = () => {
