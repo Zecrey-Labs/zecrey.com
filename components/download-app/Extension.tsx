@@ -7,7 +7,7 @@ const Extension = () => {
       <ExtensionWrap className="android">
         <ImgBox
           className="app"
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1666854414/extension.webp"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854414/extension.webp"
           alt=""
           width={719}
           height={468}
@@ -29,7 +29,7 @@ const Extension = () => {
           <div className="divider" />
           <div className="logos">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667448420/Download_Button_for_Google_Chrome.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448420/Download_Button_for_Google_Chrome.png"
               alt=""
               width={190}
               height={50}

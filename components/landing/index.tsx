@@ -155,7 +155,7 @@ const Mobile = () => {
       /> */}
       <ImgBox
         className="mobile-bg-logo"
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1666939807/bg-logo.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666939807/bg-logo.png"
         fit="contain"
         alt=""
       />

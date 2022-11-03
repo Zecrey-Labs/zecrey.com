@@ -57,7 +57,7 @@ const Mobile = () => {
       </MainTitle>
       <div className="title-2">Easily manage two-layers assets, even NFTs.</div>
       <ImgBox
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1667450678/mobile-app-all.png"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667450678/mobile-app-all.png"
         alt=""
         fit="contain"
       />

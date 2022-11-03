@@ -7,7 +7,7 @@ const IOS = () => {
       <AndroidWrap className="android">
         <ImgBox
           className="app"
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1667448063/iPhone_13_Pro_Silver.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448063/iPhone_13_Pro_Silver.png"
           alt=""
           width={322}
           height={432}
@@ -31,7 +31,7 @@ const IOS = () => {
           <div className="divider" />
           <div className="logos">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667448193/App_Store_Badge_US_Black.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448193/App_Store_Badge_US_Black.png"
               alt=""
               width={120}
               height={40}

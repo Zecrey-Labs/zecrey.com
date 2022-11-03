@@ -15,7 +15,7 @@ const Desktop = () => {
     <BannerWrap className="banner-desktop">
       <div className="logo">
         <ImgBox
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1667442039/logo.svg"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667442039/logo.svg"
           alt=""
           width={74}
           height={80}
@@ -26,7 +26,7 @@ const Desktop = () => {
           <span>Zecrey Wallet</span>
           <div className="beta">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667442285/BETA.svg"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667442285/BETA.svg"
               alt=""
               width={25}
               height={8}
@@ -43,7 +43,7 @@ const Mobile = () => {
   return (
     <MobileBanner className="banner-mobile">
       <ImgBox
-        src="https://res.cloudinary.com/drntjojig/image/upload/v1667443048/logo-icon.svg"
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667443048/logo-icon.svg"
         alt=""
       />
       <div className="text">Zecrey Mobile now available!</div>

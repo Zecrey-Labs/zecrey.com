@@ -9,7 +9,7 @@ const Android = () => {
       <AndroidWrap className="android">
         <ImgBox
           className="app"
-          src="https://res.cloudinary.com/drntjojig/image/upload/v1667444771/android.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667444771/android.png"
           alt=""
           width={330}
           height={466}
@@ -31,13 +31,13 @@ const Android = () => {
           <div className="divider" />
           <div className="logos">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667447413/Google_Play_Badge_US.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
               alt=""
               width={135}
               height={40}
             />
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667447508/apk-file.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
               alt=""
               width={137}
               height={41}
