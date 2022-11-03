@@ -100,6 +100,7 @@ export const Download = styled(CenterFlex)`
   }
 
   ${FlatBtn} {
+    position: relative;
     width: 17rem;
     height: 4rem;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
@@ -110,6 +111,29 @@ export const Download = styled(CenterFlex)`
     font-size: 1.8rem;
     color: #000;
     background-clip: padding-box;
+    span {
+      z-index: 100;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #2ad4d9;
+      border-radius: 2.1rem;
+      filter: blur(6.7957px);
+      top: 0;
+      left: 0;
+      z-index: -10;
+      opacity: 0;
+      transition: opacity 120ms ease-out;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
     &.download {
       background: linear-gradient(180deg, #00b6ba 0%, #01abb2 100%);
       border: 0.2rem solid #00969c;

@@ -80,7 +80,7 @@ const Desktop = () => {
           </CenterFlex>
           <div className="divider" />
           <FlatBtn onClick={onClickDownload} className="">
-            Download
+            <span>Download</span>
           </FlatBtn>
         </Download>
       </Wrap>
