@@ -8,6 +8,7 @@ const Page = () => {
     let body = document.querySelector("body");
     if (body) body.classList.add("enable-scroll");
   }, []);
+
   return (
     <Layout>
       <Banner />

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CenterFlex, vw } from "styles/globals";
+import { CenterFlex, MobileWrap, vw } from "styles/globals";
 
 export const BannerWrap = styled(CenterFlex)`
   width: 128rem;
@@ -226,9 +226,53 @@ export const AndroidWrap = styled.div`
     }
   }
 `;
+
 export const ExtensionWrap = styled(AndroidWrap)`
   .img-box.app {
     left: -14.7rem;
     bottom: -3.8rem;
+  }
+`;
+
+export const MobileBox = styled(MobileWrap)`
+  margin-top: ${vw(20)};
+  padding: ${vw(20)} ${vw(25)} ${vw(30)} ${vw(25)};
+  .title-1 {
+    width: 100%;
+  }
+  .title-2 {
+    padding: ${vw(15)} 0 ${vw(25)} 0;
+    font-family: "IBM Plex Sans";
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    opacity: 0.6;
+    color: #f1f1f1;
+  }
+  .img-box {
+    width: ${vw(210)};
+    height: ${vw(303)};
+    margin: 0 auto ${vw(20)} auto;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: ${vw(1)} solid #2ad4d8;
+    background: none;
+    border-radius: ${vw(10)};
+    width: 100%;
+    height: ${vw(36)};
+    font-family: "Lexend";
+    font-weight: 600;
+    font-size: ${vw(12)};
+    letter-spacing: ${vw(0.14)};
+    color: #2ad4d8;
+    svg {
+      height: ${vw(13)};
+      margin-right: ${vw(5)};
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 `;

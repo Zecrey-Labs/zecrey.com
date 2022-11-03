@@ -1,9 +1,17 @@
+import ImgBox from "components/common/img";
 import Slider from "components/common/slider";
+import { useEffect, useMemo } from "react";
+import { isIOS, isSafari } from "react-device-detect";
 import { useMediaQuery } from "react-responsive";
+import { MainTitle, vw } from "styles/globals";
 import Android from "./Android";
 import Extension from "./Extension";
 import IOS from "./IOS";
-import { Wrap } from "./styles";
+import { MobileBox, Wrap } from "./styles";
+import GooglePlay from "icons/googleplay.svg";
+import Andr from "icons/android.svg";
+import Apple from "icons/apple.svg";
+import { useRouter } from "next/router";
 
 export const DownloadApp = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
@@ -36,5 +44,40 @@ const Desktop = () => {
 };
 
 const Mobile = () => {
-  return <></>;
+  const router = useRouter();
+  const { os } = router.query;
+  const ios = useMemo(() => (os ? os === "iOS" : isSafari || isIOS), [os]);
+
+  return (
+    <MobileBox>
+      <MainTitle className="title-1">
+        Zecrey Mobile(Beta)
+        <br />
+        for {ios ? "iOS" : "Android"}
+      </MainTitle>
+      <div className="title-2">Easily manage two-layers assets, even NFTs.</div>
+      <ImgBox
+        src="https://res.cloudinary.com/drntjojig/image/upload/v1667450678/mobile-app-all.png"
+        alt=""
+        fit="contain"
+      />
+      {ios ? (
+        <button disabled>
+          <Apple />
+          Download from App Store
+        </button>
+      ) : (
+        <>
+          <button>
+            <GooglePlay />
+            Google Play Download
+          </button>
+          <button style={{ marginTop: vw(10) }}>
+            <Andr />
+            Android APK Download
+          </button>
+        </>
+      )}
+    </MobileBox>
+  );
 };
