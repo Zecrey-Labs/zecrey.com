@@ -29,8 +29,9 @@ export default Landing;
 
 const Desktop = () => {
   useEffect(() => {
+    let body = document.querySelector("body");
+    if (body) body.classList.remove("enable-scroll");
     setTimeout(() => {
-      let body = document.querySelector("body");
       if (body) body.classList.add("enable-scroll");
     }, 5 * 1000);
   }, []);
