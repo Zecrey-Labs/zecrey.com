@@ -2,6 +2,7 @@ import ImgBox from "components/common/img";
 import { useMediaQuery } from "react-responsive";
 import { CenterFlex } from "styles/globals";
 import { BannerWrap, MobileBanner } from "./styles";
+import Beta from "icons/beta.svg";
 
 export const Banner = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
@@ -24,14 +25,7 @@ const Desktop = () => {
       <div className="title">
         <CenterFlex className="main">
           <span>Zecrey Wallet</span>
-          <div className="beta">
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667442285/BETA.svg"
-              alt=""
-              width={25}
-              height={8}
-            />
-          </div>
+          <Beta />
         </CenterFlex>
         <div className="sub">Download for Mobile/Extension</div>
       </div>

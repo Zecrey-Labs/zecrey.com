@@ -30,11 +30,10 @@ export const BannerWrap = styled(CenterFlex)`
       font-size: 2.4rem;
       line-height: 3.1rem;
       color: #2ad4d9;
-      .beta {
-        border: 0.1rem solid #2ad4d8;
-        border-radius: 0.5rem;
-        padding: 0.4rem 0.6rem;
+      svg {
         margin-left: 0.8rem;
+        width: 3.8rem;
+        height: 1.7rem;
       }
     }
     .sub {
@@ -248,10 +247,18 @@ export const MobileBox = styled(MobileWrap)`
     opacity: 0.6;
     color: #f1f1f1;
   }
-  .img-box {
-    width: ${vw(210)};
-    height: ${vw(303)};
-    margin: 0 auto ${vw(20)} auto;
+  .image-wrap {
+    width: ${vw(270)};
+    padding: ${vw(30)} ${vw(30)} 0 ${vw(30)};
+    margin-left: ${vw(-10)};
+    background: rgba(255, 255, 255, 0.05);
+    border: ${vw(1)} solid rgba(255, 255, 255, 0.1);
+    border-radius: ${vw(15)};
+    margin-bottom: ${vw(20)};
+    .img-box {
+      width: ${vw(210)};
+      height: ${vw(303)};
+    }
   }
   button {
     display: flex;
