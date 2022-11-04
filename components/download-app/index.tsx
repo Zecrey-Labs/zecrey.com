@@ -47,7 +47,7 @@ const Desktop = () => {
 const Mobile = () => {
   const router = useRouter();
   const { os } = router.query;
-  const ios = useMemo(() => (os ? os === "iOS" : isSafari || isIOS), [os]);
+  const ios = useMemo(() => (os ? os === "ios" : isSafari || isIOS), [os]);
 
   return (
     <MobileBox>
