@@ -239,7 +239,8 @@ export const MobileBox = styled(MobileWrap)`
       height: ${vw(303)};
     }
   }
-  button {
+  button,
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
