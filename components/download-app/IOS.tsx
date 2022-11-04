@@ -30,12 +30,14 @@ const IOS = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448193/App_Store_Badge_US_Black.png"
-              alt=""
-              width={120}
-              height={40}
-            />
+            <a className="disabled">
+              <ImgBox
+                src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448193/App_Store_Badge_US_Black.png"
+                alt=""
+                width={120}
+                height={40}
+              />
+            </a>
           </div>
         </Info>
       </AndroidWrap>

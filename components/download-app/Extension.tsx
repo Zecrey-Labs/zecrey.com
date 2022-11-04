@@ -1,4 +1,5 @@
 import ImgBox from "components/common/img";
+import { DOWNLOAD_URL } from "config";
 import { ExtensionWrap, Card, Info } from "./styles";
 
 const Extension = () => {
@@ -28,12 +29,14 @@ const Extension = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448420/Download_Button_for_Google_Chrome.png"
-              alt=""
-              width={190}
-              height={50}
-            />
+            <a href={DOWNLOAD_URL} target="_blank" rel="noreferrer">
+              <ImgBox
+                src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448420/Download_Button_for_Google_Chrome.png"
+                alt=""
+                width={190}
+                height={50}
+              />
+            </a>
           </div>
         </Info>
       </ExtensionWrap>

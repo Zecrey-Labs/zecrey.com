@@ -158,10 +158,18 @@ export const Info = styled.div<{ top: string; left: string }>`
   }
   .logos {
     padding-top: 3.5rem;
+    a {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 2rem;
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
     .img-box {
+      pointer-events: none;
       display: inline-block;
       vertical-align: top;
-      margin-right: 2rem;
     }
   }
 `;

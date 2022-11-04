@@ -99,8 +99,12 @@ export const Download = styled(CenterFlex)`
     background: #999;
   }
 
-  ${FlatBtn} {
+  a {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     width: 17rem;
     height: 4rem;
     background: linear-gradient(135deg, #00b6ba 0%, #53f8ff 100%);
@@ -112,6 +116,7 @@ export const Download = styled(CenterFlex)`
     color: #000;
     background-clip: padding-box;
     span {
+      pointer-events: none;
       z-index: 100;
     }
     &::before {

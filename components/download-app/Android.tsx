@@ -1,7 +1,6 @@
 import ImgBox from "components/common/img";
 import { AndroidWrap, Card, Info } from "./styles";
 import QR from "icons/QR.svg";
-import APKLink from "./apk_link.svg";
 import { CenterFlex } from "styles/globals";
 
 const Android = () => {
@@ -31,25 +30,29 @@ const Android = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
-              alt=""
-              width={135}
-              height={40}
-            />
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
-              alt=""
-              width={137}
-              height={41}
-            />
+            <a aria-disabled className="disabled">
+              <ImgBox
+                src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
+                alt=""
+                width={135}
+                height={40}
+              />
+            </a>
+            <a href="https://dsmkna22gzqmg.cloudfront.net/app-production-release-0.0.1.apk">
+              <ImgBox
+                src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
+                alt=""
+                width={137}
+                height={41}
+              />
+            </a>
           </div>
         </Info>
         <CenterFlex className="qr-button">
           <QR />
           <div className="hover-up">
             <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/v1667474134/qr.png"
+              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667530266/qrcode.png"
               alt=""
               width={76}
               height={76}

@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import { Brand, Container, Download, MobileWrap, Nav, Wrap } from "./styles";
 import ImgBox from "components/common/img";
 import { APP_URL, DOWNLOAD_URL, EXPLORER_URL, INFO_URL, MEDIA } from "config";
+import Link from "next/link";
 
 const navList = [
   { label: "Home", url: "/" },
@@ -24,10 +25,12 @@ export default Header;
 
 const Desktop = () => {
   const router = useRouter();
+  console.log(router);
 
-  const onClickDownload = useCallback(() => {
-    window.open(DOWNLOAD_URL);
-  }, []);
+  // const onClickDownload = useCallback(() => {
+  //   // window.open(DOWNLOAD_URL);
+  //   window.open(router + "/download");
+  // }, [router]);
 
   return (
     <Container className="">
@@ -79,9 +82,9 @@ const Desktop = () => {
             />
           </CenterFlex>
           <div className="divider" />
-          <FlatBtn onClick={onClickDownload} className="">
+          <a href={"/download"} target="_blank" rel="noreferrer">
             <span>Download</span>
-          </FlatBtn>
+          </a>
         </Download>
       </Wrap>
     </Container>
