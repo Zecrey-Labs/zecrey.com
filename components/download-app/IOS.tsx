@@ -7,10 +7,11 @@ const IOS = () => {
       <AndroidWrap className="android">
         <ImgBox
           className="app"
-          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448063/iPhone_13_Pro_Silver.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667549086/iPhone_13_Pro_Silver.png"
           alt=""
-          width={322}
-          height={432}
+          width={330}
+          height={468}
+          fit="contain"
         />
         <Info top="10.9rem" left="60.4rem">
           <div className="title">

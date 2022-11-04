@@ -59,7 +59,11 @@ const Mobile = () => {
       <div className="title-2">Easily manage two-layers assets, even NFTs.</div>
       <div className="image-wrap">
         <ImgBox
-          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667450678/mobile-app-all.png"
+          src={
+            ios
+              ? "https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667549086/iPhone_13_Pro_Silver.png"
+              : "https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667450678/mobile-app-all.png"
+          }
           alt=""
           fit="contain"
         />

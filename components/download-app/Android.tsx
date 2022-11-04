@@ -11,10 +11,11 @@ const Android = () => {
       <AndroidWrap className="android">
         <ImgBox
           className="app"
-          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667444771/android.png"
+          src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667450678/mobile-app-all.png"
           alt=""
           width={330}
           height={466}
+          fit="contain"
         />
         <Info top="10.9rem" left="60.4rem">
           <div className="title">
