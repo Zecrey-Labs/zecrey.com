@@ -1,12 +1,12 @@
 import ImgBox from "components/common/img";
 import { useMediaQuery } from "react-responsive";
 import { CenterFlex } from "styles/globals";
-import { BannerWrap, MobileBanner } from "./styles";
+import { BannerWrap } from "./styles";
 import Beta from "icons/beta.svg";
 
 export const Banner = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
-  return isMobileView ? <Mobile /> : <Desktop />;
+  return isMobileView ? null : <Desktop />;
 };
 
 export default Banner;
@@ -30,18 +30,5 @@ const Desktop = () => {
         <div className="sub">Download for Mobile/Extension</div>
       </div>
     </BannerWrap>
-  );
-};
-
-const Mobile = () => {
-  return (
-    <MobileBanner className="banner-mobile">
-      <ImgBox
-        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667443048/logo-icon.svg"
-        alt=""
-      />
-      <div className="text">Zecrey Mobile now available!</div>
-      <button>Check</button>
-    </MobileBanner>
   );
 };

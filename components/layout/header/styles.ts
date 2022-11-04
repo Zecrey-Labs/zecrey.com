@@ -258,3 +258,40 @@ export const MobileWrap = styled.div`
     }
   }
 `;
+
+export const MobileBanner = styled(CenterFlex)`
+  position: fixed;
+  width: 100%;
+  top: ${vw(50)};
+  left: 0;
+  z-index: 100;
+  height: ${vw(40)};
+  border-bottom: ${vw(1)} solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(${vw(27)});
+  padding: 0 ${vw(20)};
+  .img-box {
+    width: ${vw(20)};
+    height: ${vw(20)};
+  }
+  .text {
+    flex: 1;
+    font-family: "IBM Plex Sans";
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    color: #fff;
+    padding: 0 ${vw(5)};
+  }
+  button {
+    width: ${vw(60)};
+    height: ${vw(20)};
+    border: none;
+    background: #2ad4d9;
+    border-radius: ${vw(35)};
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-size: ${vw(10)};
+    line-height: ${vw(13)};
+    color: #2b2b2b;
+  }
+`;

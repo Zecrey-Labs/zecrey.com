@@ -1,13 +1,20 @@
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import { BetweenFlex, CenterFlex, FlatBtn } from "styles/globals";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Bars from "icons/bars.svg";
 import { useMediaQuery } from "react-responsive";
-import { Brand, Container, Download, MobileWrap, Nav, Wrap } from "./styles";
+import {
+  Brand,
+  Container,
+  Download,
+  MobileBanner,
+  MobileWrap,
+  Nav,
+  Wrap,
+} from "./styles";
 import ImgBox from "components/common/img";
-import { APP_URL, DOWNLOAD_URL, EXPLORER_URL, INFO_URL, MEDIA } from "config";
-import Link from "next/link";
+import { APP_URL, EXPLORER_URL, INFO_URL, MEDIA } from "config";
 
 const navList = [
   { label: "Home", url: "/" },
@@ -25,12 +32,6 @@ export default Header;
 
 const Desktop = () => {
   const router = useRouter();
-  console.log(router);
-
-  // const onClickDownload = useCallback(() => {
-  //   // window.open(DOWNLOAD_URL);
-  //   window.open(router + "/download");
-  // }, [router]);
 
   return (
     <Container className="">
@@ -170,6 +171,20 @@ const Mobile = () => {
           ))}
         </CenterFlex>
       </div>
+      <MobileB />
     </MobileWrap>
+  );
+};
+
+const MobileB = () => {
+  return (
+    <MobileBanner className="banner-mobile">
+      <ImgBox
+        src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667443048/logo-icon.svg"
+        alt=""
+      />
+      <div className="text">Zecrey Mobile now available!</div>
+      <button>Check</button>
+    </MobileBanner>
   );
 };

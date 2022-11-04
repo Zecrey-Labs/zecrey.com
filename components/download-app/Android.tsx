@@ -2,6 +2,8 @@ import ImgBox from "components/common/img";
 import { AndroidWrap, Card, Info } from "./styles";
 import QR from "icons/QR.svg";
 import { CenterFlex } from "styles/globals";
+import QRCode from "react-qr-code";
+import { APK_URL } from "config";
 
 const Android = () => {
   return (
@@ -38,7 +40,7 @@ const Android = () => {
                 height={40}
               />
             </a>
-            <a href="https://dsmkna22gzqmg.cloudfront.net/app-production-release-0.0.1.apk">
+            <a href={APK_URL}>
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
                 alt=""
@@ -51,11 +53,11 @@ const Android = () => {
         <CenterFlex className="qr-button">
           <QR />
           <div className="hover-up">
-            <ImgBox
-              src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667530266/qrcode.png"
-              alt=""
-              width={76}
-              height={76}
+            <QRCode
+              size={256}
+              style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+              value={APK_URL}
+              viewBox={`0 0 256 256`}
             />
             <div className="text">
               Scan to <br />

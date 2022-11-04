@@ -5,6 +5,8 @@ import Discord from "icons/discord.svg";
 
 export const DOWNLOAD_URL =
   "https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi";
+export const APK_URL =
+  "https://dsmkna22gzqmg.cloudfront.net/Zecrey-v0.0.1-production-release.apk";
 export const DOCS_URL = "https://docs.zecrey.com/";
 export const WHITE_PAPER_URL = "https://docsend.com/view/ntcsmt7meu84gcqk";
 export const PRIVACY_URL =
