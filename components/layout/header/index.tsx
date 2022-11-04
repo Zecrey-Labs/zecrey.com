@@ -179,6 +179,7 @@ const Mobile = () => {
 const MobileB = () => {
   const router = useRouter();
 
+  if (router.pathname !== "/") return null;
   return (
     <MobileBanner className="banner-mobile">
       <ImgBox
