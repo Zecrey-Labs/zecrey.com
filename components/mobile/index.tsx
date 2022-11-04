@@ -6,6 +6,7 @@ import MobileIcon from "icons/mobile.svg";
 import MobileAlt from "icons/mobile-alt.svg";
 import ImgBox from "components/common/img";
 import { CenterFlex, FlatBtn, MainTitle } from "styles/globals";
+import { useRouter } from "next/router";
 
 const MobileApp = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
@@ -15,6 +16,8 @@ const MobileApp = () => {
 export default MobileApp;
 
 const Desktop = () => {
+  const router = useRouter();
+
   return (
     <Card>
       <Wrap>
@@ -27,7 +30,12 @@ const Desktop = () => {
           <br />
           Fingertips
         </MainTitle>
-        <FlatBtn className="coming-soon move13to0">Coming Soon</FlatBtn>
+        <FlatBtn
+          className="coming-soon move13to0"
+          onClick={() => router.push("/download")}
+        >
+          Download
+        </FlatBtn>
         <ImgBox
           src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854445/mobile-app.webp"
           className="move13to0"
@@ -42,6 +50,8 @@ const Desktop = () => {
 };
 
 export const Mobile = () => {
+  const router = useRouter();
+
   return (
     <MobileWrap>
       <CenterFlex>
@@ -58,7 +68,7 @@ export const Mobile = () => {
         src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854445/mobile-app-mobile.png"
         alt="Extension"
       />
-      <button disabled>Coming soon</button>
+      <button onClick={() => router.push("/download")}>Download</button>
     </MobileWrap>
   );
 };
