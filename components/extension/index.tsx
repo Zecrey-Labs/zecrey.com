@@ -20,29 +20,29 @@ const Desktop = () => {
   const [video, setVideo] = useState(false);
   return (
     <Card>
-      <Wrap>
-        <ExtensionWallet className="extension-wallet move13to0" />
-        <CenterFlex className="title move13to0">
+      <Wrap className="move13to0">
+        <ExtensionWallet className="extension-wallet" />
+        <CenterFlex className="title">
           Privacy Wallet Extension
           <Wallet />
         </CenterFlex>
-        <MainTitle className="move13to0">
+        <MainTitle className="">
           Your Privacy Matters
           <br />
           with One-Click
         </MainTitle>
         <a
-          className="download move13to0"
+          className="download"
           href="https://chrome.google.com/webstore/detail/zecrey/ojbpcbinjmochkhelkflddfnmcceomdi"
           target="_blank"
           rel="noreferrer"
         >
           Download
         </a>
-        <FlatBtn className="video move13to0" onClick={() => setVideo(true)}>
+        <FlatBtn className="video" onClick={() => setVideo(true)}>
           <Play name="play" /> Watch the video introduction
         </FlatBtn>
-        <div className="img-wrap move13to0">
+        <div className="img-wrap">
           <ImgBox
             src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854414/extension.webp"
             className="extension-image"

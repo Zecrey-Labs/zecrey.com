@@ -30,20 +30,27 @@ export const Wrap = styled.div`
     padding: 1rem 0 2rem 0;
     animation-delay: 0.2s !important;
   }
-  .coming-soon {
+  .download {
     display: block;
-    padding: 0 1.7rem;
+    width: 10.7rem;
     height: 2.6rem;
-    border: 1px solid #fff;
+    border: 0.1rem solid #fff;
     border-radius: 1.3rem;
-    font-family: "Lexend";
-    font-style: normal;
+    font-family: Lexend;
     font-weight: 600;
     font-size: 1.4rem;
+    line-height: 2.4rem;
     letter-spacing: 0.017rem;
-    color: #f1f1f1;
-    transform: translateY(1.3rem);
-    opacity: 0;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 5.5rem;
+    transition: all 120ms ease-out;
+    animation-delay: 0.2s !important;
+    &:hover {
+      background: #fff;
+      color: #2a2a2a;
+    }
   }
   .visible & {
     .coming-soon {

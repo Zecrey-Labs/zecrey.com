@@ -20,25 +20,22 @@ const Desktop = () => {
 
   return (
     <Card>
-      <Wrap>
-        <MobileIcon className="mobile-app move13to0" />
-        <CenterFlex className="title move13to0">
+      <Wrap className="move13to0">
+        <MobileIcon className="mobile-app" />
+        <CenterFlex className="title">
           Zecrey Mobile <MobileAlt />
         </CenterFlex>
-        <MainTitle className="move13to0">
+        <MainTitle className="">
           Abilities at Your
           <br />
           Fingertips
         </MainTitle>
-        <FlatBtn
-          className="coming-soon move13to0"
-          onClick={() => router.push("/download")}
-        >
+        <FlatBtn className="download" onClick={() => router.push("/download")}>
           Download
         </FlatBtn>
         <ImgBox
           src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1666854445/mobile-app.webp"
-          className="move13to0"
+          className=""
           alt=""
           width={558}
           height={743}
