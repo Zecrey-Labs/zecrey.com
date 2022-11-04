@@ -177,6 +177,8 @@ const Mobile = () => {
 };
 
 const MobileB = () => {
+  const router = useRouter();
+
   return (
     <MobileBanner className="banner-mobile">
       <ImgBox
@@ -184,7 +186,7 @@ const MobileB = () => {
         alt=""
       />
       <div className="text">Zecrey Mobile now available!</div>
-      <button>Check</button>
+      <button onClick={() => router.push("/download")}>Check</button>
     </MobileBanner>
   );
 };
