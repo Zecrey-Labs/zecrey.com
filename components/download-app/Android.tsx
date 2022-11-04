@@ -50,21 +50,23 @@ const Android = () => {
             </a>
           </div>
         </Info>
-        <CenterFlex className="qr-button">
-          <QR />
-          <div className="hover-up">
-            <QRCode
-              size={256}
-              style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-              value={APK_URL}
-              viewBox={`0 0 256 256`}
-            />
-            <div className="text">
-              Scan to <br />
-              Download
+        {global.window !== undefined && (
+          <CenterFlex className="qr-button">
+            <QR />
+            <div className="hover-up">
+              <QRCode
+                size={256}
+                style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                value={`${global.window.location.origin}/download?os=android`}
+                viewBox={`0 0 256 256`}
+              />
+              <div className="text">
+                Scan to <br />
+                Download
+              </div>
             </div>
-          </div>
-        </CenterFlex>
+          </CenterFlex>
+        )}
       </AndroidWrap>
     </Card>
   );
