@@ -12,6 +12,7 @@ import GooglePlay from "icons/googleplay.svg";
 import Andr from "icons/android.svg";
 import Apple from "icons/apple.svg";
 import { useRouter } from "next/router";
+import { APK_URL } from "config";
 
 export const DownloadApp = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
@@ -74,10 +75,10 @@ const Mobile = () => {
             <GooglePlay />
             Google Play Download
           </button>
-          <button style={{ marginTop: vw(10) }}>
+          <a href={APK_URL} style={{ marginTop: vw(10) }}>
             <Andr />
             Android APK Download
-          </button>
+          </a>
         </>
       )}
     </MobileBox>
