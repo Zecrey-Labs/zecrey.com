@@ -3,7 +3,7 @@ import { AndroidWrap, Card, Info } from "./styles";
 import QR from "icons/QR.svg";
 import { CenterFlex } from "styles/globals";
 import QRCode from "react-qr-code";
-import { APK_URL } from "config";
+import { APK_URL, GOOGLE_PLAY } from "config";
 
 const Android = () => {
   return (
@@ -33,7 +33,7 @@ const Android = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <a aria-disabled className="disabled">
+            <a href={GOOGLE_PLAY}>
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
                 alt=""
