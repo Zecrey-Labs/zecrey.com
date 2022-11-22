@@ -25,7 +25,9 @@ const IOS = () => {
           <div className="divider" />
           <div className="details">
             <span>Size: 31.4M</span>
-            <span>Version: Zecrey for iOS V 1.0 Beta</span>
+            <span>
+              Version: <i>unavailable for now</i>
+            </span>
             <span>OS: iOS 12.2</span>
             <span>Updated at: 10-31-2022</span>
           </div>
