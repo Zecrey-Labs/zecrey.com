@@ -40,6 +40,20 @@ export const BGWrap = styled.div`
       background-position: center;
       background-repeat: repeat-x;
     }
+    &.bg_2 {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  animation: backgroundFadeOut 100ms ease-out 2s forwards;
+  @keyframes backgroundFadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 

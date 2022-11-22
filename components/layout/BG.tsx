@@ -12,10 +12,16 @@ export default BG;
 const Desktop = () => {
   return (
     <BGWrap className="bg-wrap">
-      <ImgBox
+      {/* <ImgBox
         className="bg bg_2"
         src="https://res.cloudinary.com/drntjojig/image/upload/c_scale,q_1:420,w_500/v1666850954/bg_2.webp"
         alt="bg_2"
+      /> */}
+      <div
+        className="bg bg_2"
+        style={{
+          backgroundImage: `url(${"https://res.cloudinary.com/drntjojig/image/upload/c_scale,q_1:420,w_500/v1666850954/bg_2.webp"})`,
+        }}
       />
       <div
         className="bg bg_1"
