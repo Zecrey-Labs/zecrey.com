@@ -33,7 +33,10 @@ const Android = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <a href={GOOGLE_PLAY}>
+            <a
+              // href={GOOGLE_PLAY}
+              className="disabled"
+            >
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
                 alt=""

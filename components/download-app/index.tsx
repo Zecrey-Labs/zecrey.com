@@ -75,10 +75,14 @@ const Mobile = () => {
         </button>
       ) : (
         <>
-          <a href={GOOGLE_PLAY}>
+          <button disabled>
             <GooglePlay />
             Google Play Download
-          </a>
+          </button>
+          {/* <a href={GOOGLE_PLAY}>
+            <GooglePlay />
+            Google Play Download
+          </a> */}
           <a href={APK_URL} style={{ marginTop: vw(10) }}>
             <Andr />
             Android APK Download
