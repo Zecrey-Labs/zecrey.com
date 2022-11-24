@@ -24,6 +24,9 @@ const Zero = dynamic(() => import("components/zero"), { ssr: false });
 const Scenarios = dynamic(() => import("components/application-scenarios"), {
   ssr: false,
 });
+const GamePortal = dynamic(() => import("components/game-portal"), {
+  ssr: false,
+});
 const MultiChains = dynamic(() => import("components/multi-chains"), {
   ssr: false,
 });
@@ -50,6 +53,7 @@ const Home = () => {
       <Legend />
       <Zero />
       <Scenarios />
+      <GamePortal />
       <MultiChains />
       <MultiPurpose />
       <Ecosystem />
