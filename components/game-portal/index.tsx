@@ -61,12 +61,12 @@ const Desktop = () => {
       >
         <Wrap>
           <Portal
-            img="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1669281950/game-portal-1.png"
+            img="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1669284239/game-portal-1.png"
             title={<BlockchainWar />}
             subTitle={<Vote />}
           />
           <Portal
-            img="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1669281951/game-portal-2.png"
+            img="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1669284239/game-portal-2.png"
             title={<BlockchainWar />}
             subTitle={<Vote />}
           />
