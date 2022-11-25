@@ -3,35 +3,15 @@ import CardLayout from "components/common/card-wrap/card-layout";
 import { useMediaQuery } from "react-responsive";
 import { CenterFlex, MainTitle } from "styles/globals";
 import Icon from "icons/game-handler.svg";
-import Chats from "icons/chats.svg";
-import NFTs from "icons/items.svg";
-import {
-  EngineMobile,
-  MobileItemCard,
-  MobileStyles,
-  PaymentMobile,
-} from "../application-scenarios/styles";
-// import { NftEngine, PrivatePayment } from "./descriptions";
-import { ReactNode, useState } from "react";
+import LegendsOfValour from "./legends_of_valour.svg";
+import Find from "./find.svg";
+import { MobileStyles } from "../application-scenarios/styles";
+import { ReactNode } from "react";
 import ImgBox from "components/common/img";
 import { Link, PortalCard, Wrap } from "./styles";
-import CornerLink from "components/common/corner-link";
 import Sdk from "icons/sdk.svg";
 import BlockchainWar from "./blockchain_war.svg";
 import Vote from "./vote.svg";
-
-const items = [
-  {
-    icon: <Chats className="chats" />,
-    name: "Private Payment",
-    sub: "Multi-terminal private payment experience.",
-  },
-  {
-    icon: <NFTs className="nfts" />,
-    name: "NFT Engine",
-    sub: "For creators, but also for everyone.",
-  },
-];
 
 const GamePortal = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
@@ -67,8 +47,8 @@ const Desktop = () => {
           />
           <Portal
             img="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1669284239/game-portal-2.png"
-            title={<BlockchainWar />}
-            subTitle={<Vote />}
+            title={<LegendsOfValour />}
+            subTitle={<Find />}
           />
           <Link disabled>
             <Sdk name="sdk" />
@@ -113,8 +93,8 @@ const Mobile = () => {
         />
         <Portal
           img="https://res.cloudinary.com/drntjojig/image/upload/v1669281951/game-portal-2.png"
-          title={<BlockchainWar />}
-          subTitle={<Vote />}
+          title={<LegendsOfValour />}
+          subTitle={<Find />}
         />
       </Wrap>
     </MobileStyles>
