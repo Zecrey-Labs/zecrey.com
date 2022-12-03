@@ -16,7 +16,7 @@ export const PRIVACY_URL =
   "https://www.privacypolicies.com/live/612448fc-ff4e-4dd2-a4a2-85e0d8076a71";
 export const MEDIUM_URL = "https://zecrey.medium.com/";
 export const GITHUB_URL = "https://github.com/Zecrey-Labs";
-export const EXPLORER_URL = "https://explorer.zecrey.com/";
+export const EXPLORER_URL = "https://explorer.zecrey.com/legend/test";
 export const APP_URL = "https://app.zecrey.com/";
 export const INFO_URL = "https://info.zecrey.com/";
 

@@ -22,7 +22,10 @@ export const FOOTER_LINKS: {
   {
     label: "Explorer",
     link_items: [
-      { label: "Blockchain Explorer", url: "https://explorer.zecrey.com/" },
+      {
+        label: "Blockchain Explorer",
+        url: "https://explorer.zecrey.com/legend/test",
+      },
       { label: "Info Explorer" },
     ],
   },
