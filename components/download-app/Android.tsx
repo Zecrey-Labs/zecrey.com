@@ -27,9 +27,9 @@ const Android = () => {
           <div className="divider" />
           <div className="details">
             <span>Size: 59.7M</span>
-            <span>Version: Zecrey for Android V 1.0.2 Beta (100234)</span>
+            <span>Version: Zecrey for Android V 1.0.3 Beta (100304)</span>
             <span>OS: Android 6.0</span>
-            <span>Updated at: 11-29-2022</span>
+            <span>Updated at: 12-03-2022</span>
           </div>
           <div className="divider" />
           <div className="logos">
