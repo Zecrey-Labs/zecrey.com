@@ -1,6 +1,6 @@
 import ImgBox from "components/common/img";
 import Slider from "components/common/slider";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { isIOS, isSafari } from "react-device-detect";
 import { useMediaQuery } from "react-responsive";
 import { MainTitle, vw } from "styles/globals";
@@ -57,6 +57,12 @@ const Mobile = () => {
         for {ios ? "iOS" : "Android"}
       </MainTitle>
       <div className="title-2">Easily manage two-layers assets, even NFTs.</div>
+      {!ios && (
+        <div className="title-3">
+          (The Google Glay version is under review now, please download the apk
+          file.)
+        </div>
+      )}
       <div className="image-wrap">
         <ImgBox
           src={

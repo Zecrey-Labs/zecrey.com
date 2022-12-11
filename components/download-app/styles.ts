@@ -121,6 +121,10 @@ export const Info = styled.div<{ top: string; left: string }>`
       font-size: 1.4rem;
       line-height: 2.4rem;
       color: #f5f5f5;
+      &.muted {
+        font-style: italic;
+        color: #f7821b;
+      }
     }
   }
   .logos {
@@ -225,6 +229,15 @@ export const MobileBox = styled(MobileWrap)`
     line-height: ${vw(16)};
     opacity: 0.6;
     color: #f1f1f1;
+  }
+  .title-3 {
+    font-style: italic;
+    font-size: ${vw(12)};
+    line-height: ${vw(16)};
+    text-align: center;
+    color: #f7821b;
+    margin-top: ${vw(-16)};
+    margin-bottom: ${vw(24)};
   }
   .image-wrap {
     width: ${vw(270)};

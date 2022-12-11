@@ -25,11 +25,15 @@ const Android = () => {
             </div>
           </div>
           <div className="divider" />
-          <div className="details">
+          <div className="details" style={{ paddingTop: "2.3rem" }}>
             <span>Size: 59.7M</span>
             <span>Version: Zecrey for Android V 1.0.5 Beta (100501)</span>
             <span>OS: Android 6.0</span>
             <span>Updated at: 12-11-2022</span>
+            <span className="muted">
+              (The Google Glay version is under review now, please download the
+              apk file.)
+            </span>
           </div>
           <div className="divider" />
           <div className="logos">
