@@ -20,7 +20,7 @@ const Android = () => {
         <Info top="8.2rem" left="60.4rem">
           <div className="title">
             <div className="main">Zecrey Mobile(Beta) for Android</div>
-            <div className="sub">
+            <div className="sub" style={{ paddingBottom: "3.4rem" }}>
               Easily manage two-layers assets, even NFTs.
             </div>
           </div>
