@@ -29,7 +29,7 @@ const Extension = () => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <a href="#" className="disabled">
+            <a className="disabled">
               {/* <a href={DOWNLOAD_URL} target="_blank" rel="noreferrer"> */}
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448420/Download_Button_for_Google_Chrome.png"

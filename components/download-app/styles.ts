@@ -121,6 +121,13 @@ export const Info = styled.div<{ top: string; left: string }>`
       font-size: 1.4rem;
       line-height: 2.4rem;
       color: #f5f5f5;
+      &.faucet {
+        padding-top: 3.4rem;
+        a {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
       &.muted {
         font-style: italic;
         color: #f7821b;

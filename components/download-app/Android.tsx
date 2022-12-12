@@ -17,7 +17,7 @@ const Android = () => {
           height={466}
           fit="contain"
         />
-        <Info top="10.9rem" left="60.4rem">
+        <Info top="8.2rem" left="60.4rem">
           <div className="title">
             <div className="main">Zecrey Mobile(Beta) for Android</div>
             <div className="sub">
@@ -25,11 +25,24 @@ const Android = () => {
             </div>
           </div>
           <div className="divider" />
-          <div className="details" style={{ paddingTop: "2.3rem" }}>
+          <div
+            className="details"
+            style={{ paddingTop: "1.2rem", height: "20rem" }}
+          >
             <span>Size: 59.7M</span>
             <span>Version: Zecrey for Android V 1.0.5 Beta (100501)</span>
             <span>OS: Android 6.0</span>
             <span>Updated at: 12-11-2022</span>
+            <span className="faucet">
+              Claim testnet tokens via the:{" "}
+              <a
+                href={"https://testnet.bnbchain.org/faucet-smart"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                BNB Chain Testnet Faucet
+              </a>
+            </span>
             <span className="muted">
               (The Google Glay version is under review now, please download the
               apk file.)
@@ -38,7 +51,7 @@ const Android = () => {
           <div className="divider" />
           <div className="logos">
             {/* <a href={GOOGLE_PLAY} className="disabled"> */}
-            <a href="#" className="disabled">
+            <a className="disabled">
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
                 alt=""
