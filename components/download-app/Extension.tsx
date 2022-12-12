@@ -25,11 +25,12 @@ const Extension = () => {
             <span>Size: 31.4M</span>
             <span>Version: Zecrey Extension V 1.0 Beta</span>
             <span>OS: Google Chrome</span>
-            <span>Updated at: 10-31-2022</span>
+            <span>Updated at: -</span>
           </div>
           <div className="divider" />
           <div className="logos">
-            <a href={DOWNLOAD_URL} target="_blank" rel="noreferrer">
+            <a href="#" className="disabled">
+              {/* <a href={DOWNLOAD_URL} target="_blank" rel="noreferrer"> */}
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448420/Download_Button_for_Google_Chrome.png"
                 alt=""
