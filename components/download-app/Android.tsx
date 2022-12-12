@@ -27,7 +27,7 @@ const Android = () => {
           <div className="divider" />
           <div
             className="details"
-            style={{ paddingTop: "1.2rem", height: "20rem" }}
+            style={{ paddingTop: "1.2rem", height: "20.8rem" }}
           >
             <span>Size: 59.7M</span>
             <span>Version: Zecrey for Android V 1.0.5 Beta (100501)</span>
