@@ -43,15 +43,15 @@ const Android = () => {
                 BNB Chain Testnet Faucet
               </a>
             </span>
-            <span className="muted">
+            {/* <span className="muted">
               (The Google Glay version is under review now, please download the
               apk file.)
-            </span>
+            </span> */}
           </div>
           <div className="divider" />
           <div className="logos">
-            {/* <a href={GOOGLE_PLAY} className="disabled"> */}
-            <a className="disabled">
+            <a href={GOOGLE_PLAY}>
+              {/* <a className="disabled"> */}
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447413/Google_Play_Badge_US.png"
                 alt=""

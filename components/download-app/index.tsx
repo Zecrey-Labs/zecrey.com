@@ -57,12 +57,12 @@ const Mobile = () => {
         for {ios ? "iOS" : "Android"}
       </MainTitle>
       <div className="title-2">Easily manage two-layers assets, even NFTs.</div>
-      {!ios && (
+      {/* {!ios && (
         <div className="title-3">
           (The Google Glay version is under review now, please download the apk
           file.)
         </div>
-      )}
+      )} */}
       <div className="image-wrap">
         <ImgBox
           src={
@@ -81,14 +81,14 @@ const Mobile = () => {
         </button>
       ) : (
         <>
-          <button disabled>
+          {/* <button disabled>
             <GooglePlay />
             Google Play Download
-          </button>
-          {/* <a href={GOOGLE_PLAY}>
+          </button> */}
+          <a href={GOOGLE_PLAY}>
             <GooglePlay />
             Google Play Download
-          </a> */}
+          </a>
           <a href={APK_URL} style={{ marginTop: vw(10) }}>
             <Andr />
             Android APK Download
