@@ -16,7 +16,7 @@ export const Wrap = styled.div<{ padding?: string }>`
     position: absolute;
     width: 2rem;
     height: 2.3rem;
-    right: 15.5rem;
+    right: 38.5rem;
     bottom: 7rem;
   }
 `;
@@ -156,13 +156,6 @@ export const MobileWrap = styled.div`
       }
       &.card_3 {
         label {
-          font-size: ${vw(24)};
-          line-height: ${vw(34)};
-        }
-        opacity: 0.6;
-      }
-      &.card_4 {
-        label {
           font-size: ${vw(36)};
           line-height: ${vw(52)};
           color: #2ad4d8;
@@ -173,6 +166,13 @@ export const MobileWrap = styled.div`
           font-size: ${vw(14)};
           margin-top: ${vw(-4)};
         }
+      }
+      &.card_4 {
+        label {
+          font-size: ${vw(24)};
+          line-height: ${vw(34)};
+        }
+        opacity: 0.6;
       }
     }
     svg.line {
@@ -187,7 +187,7 @@ export const MobileWrap = styled.div`
       width: ${vw(20)};
       height: ${vw(23)};
       left: ${vw(5)};
-      top: ${vw(415)};
+      top: ${vw(300)};
     }
   }
   label.title-2 {
