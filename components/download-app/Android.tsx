@@ -30,9 +30,9 @@ const Android = () => {
             style={{ paddingTop: "1.2rem", height: "20.8rem" }}
           >
             <span>Size: 59.7M</span>
-            <span>Version: Zecrey for Android V 1.1.0 Beta (110001)</span>
+            <span>Version: Zecrey for Android V 1.1.1 Beta (110103)</span>
             <span>OS: Android 6.0</span>
-            <span>Updated at: 01-05-2023</span>
+            <span>Updated at: 01-15-2023</span>
             <span className="faucet">
               Claim testnet tokens via the:{" "}
               <a
