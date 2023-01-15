@@ -12,7 +12,7 @@ import GooglePlay from "icons/googleplay.svg";
 import Andr from "icons/android.svg";
 import Apple from "icons/apple.svg";
 import { useRouter } from "next/router";
-import { APK_URL, GOOGLE_PLAY } from "config";
+import { GOOGLE_PLAY } from "config";
 import { DateTime } from "luxon";
 
 const getApkInfo = async (): Promise<{
@@ -150,10 +150,12 @@ const Mobile = (props: {
             <GooglePlay />
             Google Play Download
           </a>
-          <a href={APK_URL} style={{ marginTop: vw(10) }}>
-            <Andr />
-            Android APK Download
-          </a>
+          {props.info?.url ? (
+            <a href={props.info.url} style={{ marginTop: vw(10) }}>
+              <Andr />
+              Android APK Download
+            </a>
+          ) : null}
         </>
       )}
     </MobileBox>

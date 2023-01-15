@@ -3,7 +3,7 @@ import { AndroidWrap, Card, Info } from "./styles";
 import QR from "icons/QR.svg";
 import { CenterFlex } from "styles/globals";
 import QRCode from "react-qr-code";
-import { APK_URL, GOOGLE_PLAY } from "config";
+import { GOOGLE_PLAY } from "config";
 
 const Android = (props: {
   info: {
