@@ -5,7 +5,14 @@ import { CenterFlex } from "styles/globals";
 import QRCode from "react-qr-code";
 import { APK_URL, GOOGLE_PLAY } from "config";
 
-const Android = () => {
+const Android = (props: {
+  info: {
+    url: string;
+    date: string;
+    version: string;
+    versionCode: number;
+  } | null;
+}) => {
   return (
     <Card>
       <AndroidWrap className="android">
@@ -30,9 +37,16 @@ const Android = () => {
             style={{ paddingTop: "1.2rem", height: "20.8rem" }}
           >
             <span>Size: 59.7M</span>
-            <span>Version: Zecrey for Android V 1.1.1 Beta (110103)</span>
+            {props.info?.version && props.info.versionCode ? (
+              <span>
+                Version: Zecrey for Android V {props.info.version} Beta (
+                {props.info.versionCode})
+              </span>
+            ) : null}
             <span>OS: Android 6.0</span>
-            <span>Updated at: 01-15-2023</span>
+            {props.info?.date ? (
+              <span>Updated at: {props.info?.date}</span>
+            ) : null}
             <span className="faucet">
               Claim testnet tokens via the:{" "}
               <a
@@ -59,14 +73,16 @@ const Android = () => {
                 height={40}
               />
             </a>
-            <a href={APK_URL}>
-              <ImgBox
-                src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
-                alt=""
-                width={137}
-                height={41}
-              />
-            </a>
+            {props.info?.url ? (
+              <a href={props.info?.url}>
+                <ImgBox
+                  src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
+                  alt=""
+                  width={137}
+                  height={41}
+                />
+              </a>
+            ) : null}
           </div>
         </Info>
         {global.window !== undefined && (

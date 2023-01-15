@@ -8,6 +8,14 @@ const nextConfig = {
     });
     return config;
   },
+  rewrites() {
+    return [
+      {
+        source: "/update/:path*",
+        destination: "https://test-legend-update.zecrey.com/:path*",
+      },
+    ];
+  },
   images: {
     domains: ["res.cloudinary.com"],
   },

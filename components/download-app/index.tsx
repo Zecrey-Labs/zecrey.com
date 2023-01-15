@@ -1,6 +1,6 @@
 import ImgBox from "components/common/img";
 import Slider from "components/common/slider";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { isIOS, isSafari } from "react-device-detect";
 import { useMediaQuery } from "react-responsive";
 import { MainTitle, vw } from "styles/globals";
@@ -13,18 +13,64 @@ import Andr from "icons/android.svg";
 import Apple from "icons/apple.svg";
 import { useRouter } from "next/router";
 import { APK_URL, GOOGLE_PLAY } from "config";
+import { DateTime } from "luxon";
+
+const getApkInfo = async (): Promise<{
+  url: string;
+  date: string;
+  version: string;
+  versionCode: number;
+} | null> => {
+  try {
+    const res = await fetch(
+      "/update/api/v1/appVersion/checkForUpdate?version=100204&platform=1&channel=Production",
+      { method: "post" }
+    );
+    const { downloadUrl, createTime, androidVersionCode } = await res.json();
+    const date =
+      createTime > 0
+        ? DateTime.fromMillis(createTime * 1000).toFormat("LL-dd-yyyy")
+        : "";
+    return {
+      url: downloadUrl,
+      date,
+      version: downloadUrl.split("-")[1].replace("v", ""),
+      versionCode: androidVersionCode,
+    };
+  } catch (err) {
+    return null;
+  }
+};
 
 export const DownloadApp = () => {
+  const [info, setInfo] = useState<{
+    url: string;
+    date: string;
+    version: string;
+    versionCode: number;
+  } | null>(null);
+
+  useEffect(() => {
+    getApkInfo().then((res) => setInfo(res));
+  }, []);
+
   const isMobileView = useMediaQuery({ maxWidth: 780 });
-  return isMobileView ? <Mobile /> : <Desktop />;
+  return isMobileView ? <Mobile info={info} /> : <Desktop info={info} />;
 };
 
 export default DownloadApp;
 
-const items = [
+const items = (
+  info: {
+    url: string;
+    date: string;
+    version: string;
+    versionCode: number;
+  } | null
+) => [
   {
     label: "Android",
-    img: <Android />,
+    img: <Android info={info} />,
   },
   {
     label: "iOS",
@@ -36,15 +82,30 @@ const items = [
   },
 ];
 
-const Desktop = () => {
+const Desktop = (props: {
+  info: {
+    url: string;
+    date: string;
+    version: string;
+    versionCode: number;
+  } | null;
+}) => {
+  const els = useMemo(() => items(props.info), [props.info]);
   return (
     <Wrap>
-      <Slider items={items} />
+      <Slider items={els} />
     </Wrap>
   );
 };
 
-const Mobile = () => {
+const Mobile = (props: {
+  info: {
+    url: string;
+    date: string;
+    version: string;
+    versionCode: number;
+  } | null;
+}) => {
   const router = useRouter();
   const { os } = router.query;
   const ios = useMemo(() => (os ? os === "ios" : isSafari || isIOS), [os]);

@@ -1333,6 +1333,11 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.185.tgz#c9843f5a40703a8f5edfd53358a58ae729816908"
   integrity sha512-evMDG1bC4rgQg4ku9tKpuMh5iBNEwNa3tf9zRHdP1qlv+1WUg44xat4IxCE14gIpZRGUUWAx2VhItCZc25NfMA==
 
+"@types/luxon@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.2.0.tgz#99901b4ab29a5fdffc88fff59b3b47fbfbe0557b"
+  integrity sha512-lGmaGFoaXHuOLXFvuju2bfvZRqxAqkHPx9Y9IQdQABrinJJshJwfNCKV+u7rR3kJbiqfTF/NhOkcxxAFrObyaA==
+
 "@types/node@18.7.18":
   version "18.7.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.18.tgz#633184f55c322e4fb08612307c274ee6d5ed3154"
@@ -2685,6 +2690,11 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+luxon@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.2.1.tgz#14f1af209188ad61212578ea7e3d518d18cee45f"
+  integrity sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==
 
 matchmediaquery@^0.3.0:
   version "0.3.1"
