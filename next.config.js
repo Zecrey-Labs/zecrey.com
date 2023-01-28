@@ -12,7 +12,7 @@ const nextConfig = {
     return [
       {
         source: "/update/:path*",
-        destination: "https://test-legend-update.zecrey.com/:path*",
+        destination: "https://test-legend-app.zecrey.com/:path*",
       },
     ];
   },
