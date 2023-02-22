@@ -1,8 +1,19 @@
-import RootLayout from "@/components/layout";
-import Screens from "@/components/screen/index";
-import Backers from "@/components/backers";
-import Roadmap from "@/components/roadmap";
-import Contact from "@/components/contact";
+import dynamic from "next/dynamic";
+const RootLayout = dynamic(() => import("@/components/layout"), {
+    ssr: false,
+});
+const Screens = dynamic(() => import("@/components/screen/index"), {
+    ssr: false,
+});
+const Backers = dynamic(() => import("@/components/backers"), {
+    ssr: false,
+});
+const Roadmap = dynamic(() => import("@/components/roadmap"), {
+    ssr: false,
+});
+const Contact = dynamic(() => import("@/components/contact"), {
+    ssr: false,
+});
 
 export default function Home() {
     return (

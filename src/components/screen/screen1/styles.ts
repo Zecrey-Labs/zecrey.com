@@ -4,6 +4,7 @@ export const Screen1Wrap = styled.div`
  padding-top: 130px;
  overflow: hidden;
  position: relative;
+ height: calc(100vh);
  .bg{
   position: absolute;
   left: 0;

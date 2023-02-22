@@ -27,14 +27,8 @@ const boxInfoArr = [
 ]
 
 export default function Screen1() {
-    const [screenHeight, setScreenHeight] = useState(0)
-
-    useEffect(() => {
-        setScreenHeight(Math.min(window.innerHeight, window.innerWidth))
-    }, [])
-
     return (
-        <Screen1Wrap style={{height: screenHeight + "px"}}>
+        <Screen1Wrap>
             <img className={'bg'} src={'/static/img/bg.png'}/>
             <ContainerCenter>
                 <SecIntroduce>
