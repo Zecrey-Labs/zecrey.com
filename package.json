@@ -1,6 +1,6 @@
 {
   "name": "zecrey-homepage",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,30 +8,21 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "license": "ISC",
   "dependencies": {
-    "luxon": "^3.2.1",
-    "next": "12.3.1",
+    "@next/font": "13.1.6",
+    "@types/node": "18.14.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.23.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.3.1",
-    "@types/lodash": "^4.14.185",
-    "@types/luxon": "^3.2.0",
-    "@types/node": "18.7.18",
-    "@types/react": "18.0.20",
-    "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",
     "classnames": "^2.3.2",
-    "eslint": "8.23.1",
-    "eslint-config-next": "12.3.1",
-    "lodash": "^4.17.21",
-    "lottie-web": "^5.9.6",
-    "react-device-detect": "^2.2.2",
-    "react-qr-code": "^2.0.8",
-    "react-responsive": "^9.0.0",
-    "styled-components": "^5.3.5",
-    "typescript": "4.8.3"
+    "styled-components": "^5.3.6"
   }
 }
