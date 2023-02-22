@@ -1,0 +1,11 @@
+body,div,dl,dt,dd,ul,ol,li,span,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,p,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, img{padding: 0px;margin: 0px;box-sizing: border-box;max-height: 100%;}
+html,
+body {
+  font-family: Lexend, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-style: normal;
+}
+img{
+  border: none;
+}
+
