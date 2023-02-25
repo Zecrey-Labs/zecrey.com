@@ -8,8 +8,12 @@ import {
     MEDIUM_URL,
     WHITE_PAPER_URL,
     DOCS_URL,
-    DOWNLOAD_URL
+    DOWNLOAD_URL,
+    MOBILE_WIDTH,
+    MAIN_ADDRESS
 } from "@/config";
+import {useMediaQuery} from "react-responsive";
+import MenuContact from "@/components/layout/contact";
 
 const linkArr = [
     {
@@ -68,16 +72,30 @@ const linkArr = [
                 url: DOCS_URL
             },
         ]
+    },
+    {
+        name: "Contact",
+        arr: [
+            {
+                name: MAIN_ADDRESS,
+                url: `mailto:${MAIN_ADDRESS}`
+            }
+        ]
     }
 ]
 
 export default function Footer() {
+    const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
 
     return (
         <FooterWrap>
-            <ContainerCenter>
+            <ContainerCenter className={'container'}>
                 <FooterContent>
-                    <Image priority={true} width={210} height={74} alt={''} src={"/static/img/logo.png"}/>
+                    {
+                        !isMobile &&
+                        <Image priority={true} width={210} height={74} alt={''} src={"/static/img/logo.png"}/>
+                    }
+
                     <FooterLink>
                         {linkArr.map((item, index) => (
                             <div className={'linkItem'} key={index}>
@@ -102,17 +120,22 @@ export default function Footer() {
                     </FooterLink>
                 </FooterContent>
                 <FooterLine/>
-                <FooterBottom>
-                    <div className={'l'}>Zecrey Protocol</div>
-                    <div className={'r'}>
-                        <span>Privacy Policy</span>
-                        <span className={'verticalLine'}>|</span>
-                        <span>Contact:</span>
-                        <a href={'bd@zecrey.com'} className={'s1'}>bd@zecrey.com</a>
-                        <span className={'verticalLine'}>|</span>
-                        <span className={'s1'}>Copyright © 2023 Zecrey. All rights reserved.</span>
-                    </div>
-                </FooterBottom>
+                {
+                    !isMobile ?
+                        <FooterBottom>
+                            <div className={'l'}>Zecrey Protocol</div>
+                            <div className={'r'}>
+                                <span>Privacy Policy</span>
+                                <span className={'verticalLine'}>|</span>
+                                <span>Contact: </span>
+                                <a href={`mailto:${MAIN_ADDRESS}`} className={'s1'}>{MAIN_ADDRESS}</a>
+                                <span className={'verticalLine'}>|</span>
+                                <span className={'s2'}>Copyright © 2023 Zecrey. All rights reserved.</span>
+                            </div>
+                        </FooterBottom>
+                        :
+                        <MenuContact/>
+                }
             </ContainerCenter>
         </FooterWrap>
     );

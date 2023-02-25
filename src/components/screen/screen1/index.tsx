@@ -1,16 +1,16 @@
 import {ContainerCenter} from "@/styles/globals";
 import {Screen1Wrap, SecIntroduce, SecCardWrap} from "./styles";
-import {useEffect, useState} from "react";
-import CardIntro from "@/components/card/cardIntro";
+import CardIntro from "@/components/card/intro/index";
 import Button from "@/components/button";
 import {WHITE_PAPER_URL} from "@/config";
+
 
 const boxInfoArr = [
     {
         ico: "/static/svg/ico1.svg",
         icoDark: "/static/svg/ico1Dark.svg",
         title: "Unified Web3<br /> Account Protocol",
-        description: "A Zero-knowledge based Cross-chain Account Protocol",
+        description: "Digital first marketing campaigns to drive awareness and customer acquisition."
     },
     {
         ico: "/static/svg/ico2.svg",
@@ -27,16 +27,18 @@ const boxInfoArr = [
 ]
 
 export default function Screen1() {
+
     return (
         <Screen1Wrap>
-            <img className={'bg'} src={'/static/img/bg.png'}/>
+            <img className={'bg com'} src={'/static/img/bg.png'}/>
+            <img className={'bg mob'} src={'/static/img/bg1.png'}/>
             <ContainerCenter>
                 <SecIntroduce>
                     <img className={'imgBox'} src={'/static/img/asset1.png'}/>
                     <h2>Unified Web3 Account Protocol</h2>
                     <p>A Zero-knowledge based Cross-chain Account Protocol</p>
                     <div className={'button'}>
-                        <Button href={WHITE_PAPER_URL} text={"Zecrey 2.0 Whitepaper"} />
+                        <Button href={WHITE_PAPER_URL} text={"Zecrey 2.0 Whitepaper"}/>
                     </div>
                 </SecIntroduce>
                 <SecCardWrap>

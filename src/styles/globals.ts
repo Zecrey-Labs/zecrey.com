@@ -8,9 +8,9 @@ export const vw = (val: number) => {
 export const ContainerCenter = styled.div`
   width: 1140px;
   margin: 0 auto;
-  @media (max-width: 1140px) {
+  @media (max-width: 960px) {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 50px;
   }
 `;
 

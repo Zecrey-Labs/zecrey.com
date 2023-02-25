@@ -18,4 +18,7 @@ export const CONTACT_TWITTER = "https://twitter.com/zecreyprotocol";
 export const CONTACT_TELERGRAM = "https://t.me/zecrey";
 export const CONTACT_DISCORD = "https://discord.com/invite/U98ghQsJE5";
 export const CONTACT_MEDIUM = "https://medium.com/@zecrey";
+export const MAIN_ADDRESS = "bd@zecrey.com";
+export const MOBILE_WIDTH = 960;
+
 

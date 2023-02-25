@@ -11,6 +11,11 @@ export const ButtonStyle = styled.div`
  border-radius: 28px;
  cursor: pointer;
  transition: all .4s;
+ @media (max-width: 960px) {
+  padding: 9px 18px;
+  border-radius: 19px;
+  font-size: 13px;
+ }
  a{
   text-decoration: none;
   color: #01ABB2;
@@ -20,7 +25,6 @@ export const ButtonStyle = styled.div`
   background: #01ABB2;
   border: 1px solid #01ABB2;
   backdrop-filter: blur(2.71828px);
-  border-radius: 28px;
   a{
    color: #fff;
   }

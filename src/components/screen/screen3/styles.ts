@@ -5,9 +5,6 @@ export const Screen3Wrap = styled.div`
  height: 650px;
  overflow: hidden;
 
- .container {
- }
-
  .bg {
   position: absolute;
   left: 0;
@@ -18,6 +15,11 @@ export const Screen3Wrap = styled.div`
   max-height: none;
  }
 
+ .container {
+  height: 100%;
+  position: relative;
+ }
+
  .content {
   display: flex;
   justify-content: space-between;
@@ -25,16 +27,45 @@ export const Screen3Wrap = styled.div`
   height: 100%;
   position: relative;
   z-index: 2;
+  min-height: 650px;
+ }
+
+ @media (max-width: 960px) {
+  height: auto;
+  .content {
+   padding: 0 0 40px;
+   min-height: auto;
+  }
  }
 `
 
-export const SecMember = styled.div`
- width: 400px;
- height: 264px;
+export const SecBg = styled.div`
+ overflow: hidden;
+ position: absolute;
+ right: 0;
+ top: 0;
+ width: 650px;
+ height: auto;
+ z-index: 1;
+ transform: translateX(150px);
+ transition: all .4s;
 
  img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  margin: 0 auto;
+ }
+
+ @media (max-width: 960px) {
+  overflow: visible;
+  position: relative;
+  width: auto;
+  transform: translateX(0);
+  margin: 0 -50px;
+  img {
+   width: 100%;
+   height: auto;
+  }
  }
 `
 
@@ -55,6 +86,27 @@ export const SecIntroduce = styled.div`
   line-height: 25px;
   color: #818181;
   margin-bottom: 25px;
+ }
+
+ @media (max-width: 960px) {
+  width: 100%;
+  .p1 {
+   font-size: 28px;
+   line-height: 32px;
+   text-align: center;
+   margin: 0 -10px 17px;
+  }
+
+  .p2 {
+   font-size: 12px;
+   line-height: 18px;
+   text-align: center;
+  }
+  .btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
  }
 `
 

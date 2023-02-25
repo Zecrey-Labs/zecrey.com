@@ -14,6 +14,19 @@ export const SecTitleStyle = styled.div`
   font-size: 16px;
   color: #818181;
  }
+
+ @media (max-width: 960px) {
+  padding-bottom: 20px;
+  .p1{
+   font-size: 21px;
+   line-height: 26px;
+   margin-bottom: 7px;
+  }
+  .p2{
+   font-size: 12px;
+   line-height: 15px;
+  }
+ }
 `
 
 

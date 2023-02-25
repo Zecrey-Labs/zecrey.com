@@ -6,9 +6,6 @@ export const Screen2Wrap = styled.div`
  overflow: hidden;
  background: #F7F7F7;
 
- .container {
- }
-
  .bg {
   position: absolute;
   left: 0;
@@ -19,6 +16,9 @@ export const Screen2Wrap = styled.div`
   max-height: none;
  }
 
+ .container{
+  height: 100%;
+ }
  .content {
   display: flex;
   justify-content: space-between;
@@ -27,15 +27,35 @@ export const Screen2Wrap = styled.div`
   position: relative;
   z-index: 2;
  }
+ 
+ @media (max-width: 960px) {
+  height: auto;
+  padding-bottom: 35px;
+  .bg {
+   width: 200%;
+  }
+  .content {
+   flex-wrap: wrap;
+   height: auto;
+  }
+ }
 `
 
 export const SecMember = styled.div`
- width: 400px;
- height: 264px;
+ width: 640px;
+ height: 650px;
+ transform: translateX(-120px);
+ transition: all .4s;
 
  img {
   width: 100%;
   height: 100%;
+ }
+ @media (max-width: 960px) {
+  width: auto;
+  height: auto;
+  transform: translateX(0);
+  margin: 0 -50px;
  }
 `
 
@@ -56,6 +76,22 @@ export const SecIntroduce = styled.div`
   line-height: 25px;
   color: #818181;
   margin-bottom: 25px;
+ }
+
+ @media (max-width: 960px) {
+  width: 100%;
+  p{
+   text-align: center;
+  }
+  .p1{
+   font-size: 28px;
+   margin-bottom: 20px;
+   line-height: 32px;
+  }
+  .p2{
+   font-size: 12px;
+   line-height: 18px;
+  }
  }
 `
 

@@ -5,7 +5,8 @@ export const Screen1Wrap = styled.div`
  overflow: hidden;
  position: relative;
  height: calc(100vh);
- .bg{
+
+ .bg {
   position: absolute;
   left: 0;
   top: 0;
@@ -13,12 +14,20 @@ export const Screen1Wrap = styled.div`
   height: 100%;
   z-index: 1;
  }
+
+ @media (max-width: 960px) {
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 `
 
 export const SecIntroduce = styled.div`
  margin-bottom: 80px;
  position: relative;
  z-index: 2;
+ padding: 0 20px;
 
  .imgBox {
   width: 110px;
@@ -33,6 +42,7 @@ export const SecIntroduce = styled.div`
   font-size: 56px;
   color: #1A1A1A;
   margin-bottom: 23px;
+
  }
 
  p {
@@ -41,9 +51,42 @@ export const SecIntroduce = styled.div`
   color: #4E4E4E;
  }
 
- .button{
+ .button {
   padding-top: 30px;
  }
+
+ @media (max-width: 960px) {
+  width: 100%;
+  margin-bottom: 56px;
+  transform: translateY(-35px);
+  .imgBox {
+   margin: 0 auto 10px;
+   transform: translateX(0);
+  }
+  h2 {
+   font-size: 28px;
+   margin-bottom: 10px;
+   text-align: center;
+  }
+
+  p {
+   text-align: center;
+   font-size: 14px;
+   line-height: 20px;
+  }
+  .button {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 35px;
+   >div{
+    padding: 9px 25px;
+   }
+  }
+ }
+
+
 `
 
 export const SecCardWrap = styled.div`
@@ -51,4 +94,7 @@ export const SecCardWrap = styled.div`
  justify-content: space-around;
  position: relative;
  z-index: 2;
+ @media (max-width: 960px) {
+  display: none;
+ }
 `

@@ -10,6 +10,13 @@ export const CardIntroStyle = styled.div`
  transition: all .5s;
  padding: 45px;
  cursor: pointer;
+
+ @media (max-width: 960px) {
+  height: auto;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 32px;
+ }
  
 
  img {

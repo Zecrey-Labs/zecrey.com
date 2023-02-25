@@ -11,7 +11,13 @@ const Backers = dynamic(() => import("@/components/backers"), {
 const Roadmap = dynamic(() => import("@/components/roadmap"), {
     ssr: false,
 });
+const News = dynamic(() => import("@/components/news"), {
+    ssr: false,
+});
 const Contact = dynamic(() => import("@/components/contact"), {
+    ssr: false,
+});
+const Ecosystem = dynamic(() => import("@/components/ecosystem"), {
     ssr: false,
 });
 
@@ -19,8 +25,10 @@ export default function Home() {
     return (
         <RootLayout>
             <Screens />
+            <Ecosystem />
             <Backers />
             <Roadmap />
+            <News />
             <Contact />
         </RootLayout>
     )

@@ -1,22 +1,62 @@
-import {APP_URL, EXPLORER_URL, INFO_URL} from "@/config";
+import {DOCS_URL, DOWNLOAD_URL, EXPLORER_URL, GOOGLE_PLAY, INFO_URL} from "@/config";
 import {ContainerCenter} from "@/styles/globals";
-import {HeaderLink, HeaderWrap, HeaderContent} from "@/components/layout/header/styles";
+import {
+    HeaderLink,
+    HeaderWrap,
+    HeaderContent,
+    HeaderSubMenu,
+    HeaderLinkMob,
+    MobMenuContent
+} from "@/components/layout/header/styles";
 import {useEffect, useState} from "react";
-import classNames from "classnames";
+import {useMediaQuery} from "react-responsive";
+import {MOBILE_WIDTH} from "@/config";
 import Image from "next/image";
-// import { useRouter } from "snext/router";
+import EleA from "@/components/elea";
+import MenuContact from "@/components/layout/contact";
 
 const navList = [
-    {label: "Home", url: "/"},
-    {label: "App", url: APP_URL, disabled: true},
-    {label: "Explorer", url: EXPLORER_URL},
-    {label: "Info", url: INFO_URL, disabled: true},
-    {label: "NFT"},
+    {label: "Docs", url: DOCS_URL},
+    {label: "Blog", url: ""},
+    {
+        label: "Ecosystem",
+        url: "",
+        sub: [
+            {
+                label: "Mobile",
+                url: GOOGLE_PLAY,
+            },
+            {
+                label: "Extension",
+                url: DOWNLOAD_URL,
+            },
+            {
+                label: "Explorer",
+                url: EXPLORER_URL,
+            },
+        ]
+    },
+    {
+        label: "Product",
+        url: "",
+        sub: [
+            {
+                label: "Zecrey 2.0",
+                url: "",
+            },
+            {
+                label: "Zecrey Legend",
+                url: "",
+            },
+        ]
+    },
 ];
 
 export default function Header() {
+    const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
     const [linkIndex, setLinkIndex] = useState(0);
     const [scrollTop, setScrollTop] = useState(0);
+    const [mobMenuOpen, setMobMenuOpen] = useState(false);
     const gradientStartDistance = 0;
     const gradientEndDistance = 600;
     const gradientBackground = {
@@ -49,37 +89,110 @@ export default function Header() {
     }, [])
 
     return (
-        <HeaderWrap
-            style={{
-                background: `rgba(255, 255, 255, ${getCurrentStyleNum(gradientBackground, scrollTop)})`,
-                border: `1px solid rgba(0, 0, 0, ${getCurrentStyleNum(gradientBorder, scrollTop)})`,
-                backdropFilter: `blur(${getCurrentStyleNum(backdropFilter, scrollTop)}px)`,
-            }}>
-            <ContainerCenter>
-                <HeaderContent>
-                    <Image priority={true} width={131} height={46} alt={''} src={"/static/img/logo.png"}/>
-                    <HeaderLink>
-                        {navList.map((item, index) => (
-                            <div
-                                className={classNames([{
-                                    active: index === linkIndex
-                                }])}
-                                key={index}
-                            >
-                                <a
-                                    href={item.disabled ? "" : item.url}
-                                    target="_blank"
-                                    style={{cursor: item.disabled ? "not-allowed" : "pointer"}}
-                                >
-                                    {item.label}
-                                </a>
-                                <span></span>
-                            </div>
-                        ))}
-                    </HeaderLink>
-                </HeaderContent>
+        <>
+            <HeaderWrap
+                style={{
+                    background: `rgba(255, 255, 255, ${getCurrentStyleNum(gradientBackground, scrollTop)})`,
+                    border: `1px solid rgba(0, 0, 0, ${getCurrentStyleNum(gradientBorder, scrollTop)})`,
+                    backdropFilter: `blur(${getCurrentStyleNum(backdropFilter, scrollTop)}px)`,
+                }}
+                className={`${isMobile && "headerWrapMobile"}`}
+            >
+                <ContainerCenter className={'headerContainer'}>
+                    <HeaderContent>
+                        <Image priority={true} width={131} height={46} alt={''} src={"/static/img/logo.png"}/>
+                        {
+                            !isMobile
+                                ?
+                                <HeaderLink>
+                                    {navList.map((item, index) => (
+                                        <div
+                                            className={`item ${item.sub && "itemSub"} ${index === linkIndex && "active"}`}
+                                            key={index}
+                                        >
+                                            <EleA
+                                                href={item.url}
+                                            >
+                                                {item.label}
+                                                {
+                                                    item.sub && <img className={'arrow arrowDefault'}
+                                                                     src={"/static/svg/arrowHover.svg"}/>
+                                                }
+                                                {
+                                                    item.sub &&
+                                                    <img className={'arrow arrowHover'} src={"/static/svg/arrow.svg"}/>
+                                                }
+                                            </EleA>
+                                            <span></span>
+                                            {
+                                                item.sub &&
+                                                <HeaderSubMenu className={'subMenuWrap'}>
+                                                    {
+                                                        item.sub.map((item, index) => (
+                                                            <EleA
+                                                                key={index}
+                                                                href={item.url}
+                                                            >
+                                                                {item.label}
+                                                            </EleA>
+                                                        ))
+                                                    }
+                                                </HeaderSubMenu>
+                                            }
+                                        </div>
+                                    ))}
+                                </HeaderLink>
+                                :
+                                <HeaderLinkMob onClick={() => {
+                                    setMobMenuOpen(!mobMenuOpen);
+                                }} className={`${mobMenuOpen && "open"}`}>
+                                    <div className={'subIco'}>
+                                        <Image priority={true} width={18} height={12} alt={''}
+                                               src={"/static/svg/mobMenuIco.svg"}/>
+                                    </div>
+                                </HeaderLinkMob>
+                        }
+                    </HeaderContent>
 
-            </ContainerCenter>
-        </HeaderWrap>
+                </ContainerCenter>
+            </HeaderWrap>
+            {
+                isMobile
+                &&
+                <MobMenuContent style={{
+                    height: mobMenuOpen ? "342px" : 0,
+                    border: mobMenuOpen ? "1px solid rgba(0,0,0,0.05)" : "0px solid rgba(0,0,0,0.05)"
+                }}>
+                  <ul>
+                      {navList.map((item, index) => (
+                          <li key={index}>
+                              <EleA
+                                  href={item.url}
+                              >
+                                  {item.label}
+                              </EleA>
+                              {
+                                  item.sub &&
+                                  <div className={'subMenuWrap'}>
+                                      {
+                                          item.sub.map((item, index) => (
+                                              <EleA
+                                                  key={index}
+                                                  href={item.url}
+                                              >
+                                                  {item.label}
+                                              </EleA>
+                                          ))
+                                      }
+                                  </div>
+                              }
+                          </li>
+                      ))}
+                  </ul>
+                  <MenuContact/>
+                </MobMenuContent>
+            }
+        </>
+
     );
 };
