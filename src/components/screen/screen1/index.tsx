@@ -30,7 +30,7 @@ export default function Screen1() {
 
     return (
         <Screen1Wrap>
-            <img className={'bg com'} src={'/static/img/bg.png'}/>
+            <img className={'bg com'} src={'/static/svg/bg_index.svg'}/>
             <img className={'bg mob'} src={'/static/img/bg1.png'}/>
             <ContainerCenter className={"container"}>
                 <SecIntroduce>
