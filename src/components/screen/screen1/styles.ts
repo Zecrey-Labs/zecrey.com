@@ -15,21 +15,7 @@ export const Screen1Wrap = styled.div`
   height: 100%;
   z-index: 1;
  }
-
- //@media (min-height: 1600px) {
- // display: flex;
- // justify-content: center;
- // align-items: center;
- // transform: translateY(-200px);
- //}
- //
- //@media (min-height: 1100px) {
- // display: flex;
- // justify-content: center;
- // align-items: center;
- // transform: translateY(-100px);
- //}
-
+ 
  @media (max-width: 1140px) {
   height: calc(100vh);
   display: flex;
@@ -53,19 +39,19 @@ export const SecIntroduce = styled.div`
   width: 110px;
   height: 108px;
   transform: translateX(-16px);
-  margin-bottom: 30px;
+  margin-bottom: 38px;
  }
 
  h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 51px;
+  font-size: 56px;
   color: #1A1A1A;
-  margin-bottom: 23px;
+  margin-bottom: 11px;
  }
 
  p {
-  font-size: 26px;
+  font-size: 28px;
   color: #4E4E4E;
   letter-spacing: 0;
  }

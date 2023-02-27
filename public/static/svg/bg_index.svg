@@ -1,4 +1,8 @@
-<svg width="1440" height="1130" viewBox="0 0 1440 1130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+    width="100%"
+    height="100%"
+    preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 1440 1130" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="mask0_262_14153" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="1130">
 <rect width="1440" height="1130" fill="url(#paint0_radial_262_14153)"/>
 </mask>
