@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const Screen1Wrap = styled.div`
  font-family: 'Lexend';
- padding-top: 130px;
  overflow: hidden;
  position: relative;
- height: calc(100vh);
  padding-bottom: 30px;
+ height: auto;
  
  .bg {
   position: absolute;
@@ -17,23 +16,19 @@ export const Screen1Wrap = styled.div`
   z-index: 1;
  }
 
- @media (min-height: 1600px) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-200px);
- }
-
- @media (min-height: 1100px) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100px);
- }
-
- @media (max-height: 920px) {
-   height: auto;
- }
+ //@media (min-height: 1600px) {
+ // display: flex;
+ // justify-content: center;
+ // align-items: center;
+ // transform: translateY(-200px);
+ //}
+ //
+ //@media (min-height: 1100px) {
+ // display: flex;
+ // justify-content: center;
+ // align-items: center;
+ // transform: translateY(-100px);
+ //}
 
  @media (max-width: 1140px) {
   height: calc(100vh);
@@ -48,6 +43,11 @@ export const SecIntroduce = styled.div`
  position: relative;
  z-index: 2;
  padding: 0 20px;
+ height: calc(100vh);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
 
  .imgBox {
   width: 110px;

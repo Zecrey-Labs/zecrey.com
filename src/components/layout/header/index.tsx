@@ -54,7 +54,7 @@ const navList = [
 
 export default function Header() {
     const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
-    const [linkIndex, setLinkIndex] = useState(0);
+    const [linkIndex, setLinkIndex] = useState(-1);
     const [scrollTop, setScrollTop] = useState(0);
     const [mobMenuOpen, setMobMenuOpen] = useState(false);
     const gradientStartDistance = 0;
