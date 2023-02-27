@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-let screen1Height = window.innerHeight;
 export const Screen1Wrap = styled.div`
  font-family: 'Lexend';
  padding-top: 130px;
  overflow: hidden;
  position: relative;
- height: ${screen1Height < 920 ? "auto" : "calc(100vh)"};
+ height: calc(100vh);
  padding-bottom: 30px;
-
+ 
  .bg {
   position: absolute;
   left: 0;
@@ -16,6 +15,24 @@ export const Screen1Wrap = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
+ }
+
+ @media (min-height: 1600px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-200px);
+ }
+
+ @media (min-height: 1100px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100px);
+ }
+
+ @media (max-height: 920px) {
+   height: auto;
  }
 
  @media (max-width: 1140px) {

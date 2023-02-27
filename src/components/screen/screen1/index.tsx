@@ -32,7 +32,7 @@ export default function Screen1() {
         <Screen1Wrap>
             <img className={'bg com'} src={'/static/img/bg.png'}/>
             <img className={'bg mob'} src={'/static/img/bg1.png'}/>
-            <ContainerCenter>
+            <ContainerCenter className={"container"}>
                 <SecIntroduce>
                     <img className={'imgBox'} src={'/static/img/asset1.png'}/>
                     <h2>Unified Web3 Account Protocol</h2>
