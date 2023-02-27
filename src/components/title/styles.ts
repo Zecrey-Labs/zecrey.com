@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const SecTitleStyle = styled.div`
+ font-family: 'Source Sans Pro';
  text-align: center;
  padding-bottom: 50px;
  .p1{
   font-weight: 700;
-  font-size: 42px;
+  font-size: 32px;
   color: #303030;
   margin-bottom: 10px;
  }
@@ -15,7 +16,7 @@ export const SecTitleStyle = styled.div`
   color: #818181;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding-bottom: 20px;
   .p1{
    font-size: 21px;

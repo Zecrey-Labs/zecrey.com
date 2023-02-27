@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Screen4Wrap = styled.div`
+ font-family: "Source Sans Pro";
  position: relative;
  overflow: hidden;
  background: #F7F7F7;
@@ -20,7 +21,8 @@ export const Screen4Wrap = styled.div`
   min-height: 650px;
  }
 
- @media (max-width: 960px) {
+ 
+ @media (max-width: 1140px) {
   height: auto;
   .content {
    padding: 0 0 40px;
@@ -44,7 +46,7 @@ export const SecBg = styled.div`
   margin: 0 auto;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   overflow: visible;
   position: relative;
   width: auto;
@@ -76,7 +78,14 @@ export const SecIntroduce = styled.div`
   margin-bottom: 25px;
  }
 
- @media (max-width: 960px) {
+ .btn{
+  >div{
+   padding: 8px 24px;
+  }
+ }
+
+
+ @media (max-width: 1140px) {
   width: 100%;
   .p1 {
    font-size: 28px;

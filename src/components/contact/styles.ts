@@ -8,12 +8,13 @@ export const ContactContentStyle = styled.div`
 `
 
 export const CardIntroStyle = styled.div`
+ font-family: 'Source Sans Pro';
  width: 262px;
  height: 280px;
  background: #F7F7F7;
  border-radius: 25px;
  cursor: pointer;
- padding: 60px 30px 0;
+ padding: 60px 40px 0;
  transition: all .5s;
  
  a{
@@ -35,7 +36,6 @@ export const CardIntroStyle = styled.div`
  }
 
  p {
-  font-family: 'Source Sans Pro';
   text-align: center;
  }
 

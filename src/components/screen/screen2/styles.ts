@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Screen2Wrap = styled.div`
+ font-family: "Source Sans Pro";
  position: relative;
  height: 650px;
  overflow: hidden;
@@ -28,7 +29,7 @@ export const Screen2Wrap = styled.div`
   z-index: 2;
  }
  
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   height: auto;
   padding-bottom: 35px;
   .bg {
@@ -51,7 +52,7 @@ export const SecMember = styled.div`
   width: 100%;
   height: 100%;
  }
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   width: auto;
   height: auto;
   transform: translateX(0);
@@ -78,7 +79,7 @@ export const SecIntroduce = styled.div`
   margin-bottom: 25px;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   width: 100%;
   p{
    text-align: center;

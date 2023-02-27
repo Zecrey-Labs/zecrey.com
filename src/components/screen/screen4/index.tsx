@@ -1,5 +1,6 @@
 import {ContainerCenter} from "@/styles/globals";
 import {Screen4Wrap, SecBg, SecIntroduce} from "./styles";
+import Button from "@/components/button";
 
 export default function Screen4() {
 
@@ -15,6 +16,9 @@ export default function Screen4() {
                         <p className={'p2'}>The first zkRollup L2 scaling solution on the BNB chain and NFT engine of
                             Web3 games.It offers instant trading, massive scalability, and low gas fees for minting and
                             trading NFTs without compromising security.</p>
+                        <div className={'btn'}>
+                            <Button text={"Learn More >"}/>
+                        </div>
                     </SecIntroduce>
                 </div>
             </ContainerCenter>

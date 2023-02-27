@@ -4,7 +4,7 @@ export const NewsContentStyle = styled.div`
  display: flex;
  justify-content: space-around;
  align-items: center;
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   display: block;
  }
 `
@@ -14,7 +14,10 @@ export const NewsContentBtnWrap = styled.div`
  justify-content: center;
  align-items: center;
  padding: 40px 0 60px;
- @media (max-width: 960px) {
+ >div{
+  padding: 8px 30px;
+ }
+ @media (max-width: 1140px) {
   padding: 10px 0 40px;
  }
 `

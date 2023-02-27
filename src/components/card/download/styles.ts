@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardIntroStyle = styled.div`
+ font-family: 'IBM Plex Sans';
  width: 360px;
  height: 370px;
  background: #F3F3F3;
@@ -79,7 +80,7 @@ export const CardIntroStyle = styled.div`
   }
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   width: 100%;
   height: 370px;
   margin-bottom: 25px;

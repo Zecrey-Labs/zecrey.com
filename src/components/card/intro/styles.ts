@@ -11,7 +11,7 @@ export const CardIntroStyle = styled.div`
  padding: 45px;
  cursor: pointer;
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   height: auto;
   width: 100%;
   margin-bottom: 25px;
@@ -32,11 +32,8 @@ export const CardIntroStyle = styled.div`
   display: none;
  }
 
- p {
-  font-family: 'Source Sans Pro';
- }
-
  p.title {
+  font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -46,6 +43,7 @@ export const CardIntroStyle = styled.div`
  }
 
  p.description {
+  font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 17px;
   letter-spacing: -0.2px;

@@ -12,16 +12,18 @@ export const BackersStyle = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 50px 0 0;
+  align-items: center;
+  justify-items: center;
 
   img {
    width: 137px;
-   height: 36px;
+   height: auto;
    float: left;
    margin: 0 auto 50px;
   }
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding: 50px 0 40px;
   .container {
    padding: 0 25px;

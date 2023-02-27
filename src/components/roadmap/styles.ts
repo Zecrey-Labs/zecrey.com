@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BackersStyle = styled.div`
  padding: 100px 0 0px;
+
  .content {
   width: 100%;
 
@@ -31,13 +32,14 @@ export const BackersStyle = styled.div`
    }
 
    .stage2 {
-    left: 43.1%;
-    top: 26.5%;
+    left: 43.4%;
+    top: 22.8%;
     align-items: flex-end;
 
     .p1 {
      color: #01ABB2 !important;
      opacity: 1;
+     font-size: 36px;
     }
 
     .p2 {
@@ -65,7 +67,7 @@ export const BackersStyle = styled.div`
  }
 
  .contentMob {
-  @media (max-width: 960px) {
+  @media (max-width: 1140px) {
    position: relative;
    margin: 30px 0 5px;
    .bgWrap {
@@ -74,7 +76,8 @@ export const BackersStyle = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    .bg{
+
+    .bg {
      width: 100%;
      height: 100%;
     }
@@ -87,6 +90,7 @@ export const BackersStyle = styled.div`
      height: 25px;
      border-radius: 13px;
      border: 2px solid #01ABB2 !important;
+
      > div {
       width: 13px;
       height: 13px;
@@ -97,19 +101,21 @@ export const BackersStyle = styled.div`
     }
    }
 
-   .stage{
+   .stage {
     position: relative;
     align-items: flex-start;
     padding-left: 52px;
     width: auto;
     margin-bottom: 54px;
-    .p1{
+
+    .p1 {
      font-size: 24px;
      line-height: 34px;
      letter-spacing: 0.289412px;
      text-align: left;
     }
-    .p2{
+
+    .p2 {
      font-size: 14px;
      line-height: 18px;
      letter-spacing: 0.144706px;
@@ -132,7 +138,7 @@ export const BackersStyle = styled.div`
   }
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding: 47px 0 0px;
  }
 
@@ -170,7 +176,7 @@ export const BackersStageStyle = styled.div`
  cursor: pointer;
 
  .p1 {
-  font-family: 'Zing Rust Demo';
+  font-family: "Zing Rust";
   font-style: italic;
   font-size: 24px;
   letter-spacing: 0.289412px;

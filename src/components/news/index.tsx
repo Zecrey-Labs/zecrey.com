@@ -17,27 +17,6 @@ const GET_ARTICLE_LIST = gql`
   }
 }`;
 
-const atclArr = [
-    {
-        ico: "/static/img/atcl.png",
-        title: "Zecrey’s Yearly Brief Summary 2022",
-        time: "2023-01-01",
-        url: "https://awesomenear.com/zecrey",
-    },
-    {
-        ico: "/static/img/atcl2.png",
-        title: "Zecrey Legend Testnet Phase 1 is now LIVE!",
-        time: "2023-01-01",
-        url: "https://awesomenear.com/zecrey",
-    },
-    {
-        ico: "/static/img/atcl3.png",
-        title: "Apply for Zecrey Legend Pre-Testnet Whitelist!",
-        time: "2023-01-01",
-        url: "https://awesomenear.com/zecrey",
-    },
-]
-
 export default function News() {
     const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
     const { data } = useQuery(GET_ARTICLE_LIST);

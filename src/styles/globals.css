@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lexend:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
+@font-face {
+  font-family: "Zing Rust";
+  src: url(/fonts/ZingRustDemo-Base.otf);
+}
+@font-face {
+  font-family: "BM Plex Sans";
+  src: url(/fonts/IBMPlexSans-Thin.ttf);
+}
+
+
 body, div, dl, dt, dd, ul, ol, li, span, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, p, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img {
   padding: 0px;
   margin: 0px;
@@ -36,7 +47,7 @@ a {
 
 .elips{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
 
-@media (max-width: 960px) {
+@media (max-width: 1140px) {
   .com {
     display: none;
   }

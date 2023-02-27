@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardIntroStyle = styled.div`
+ font-family: 'Source Sans Pro';
  width: 360px;
  a {
   text-decoration: none;
@@ -14,7 +15,6 @@ export const CardIntroStyle = styled.div`
  }
 
  p.title {
-  font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: #1A1A1A;
@@ -31,7 +31,7 @@ export const CardIntroStyle = styled.div`
  .line {
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   width: 100%;
   padding-bottom: 30px;
   img {

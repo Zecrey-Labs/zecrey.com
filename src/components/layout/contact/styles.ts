@@ -5,7 +5,7 @@ export const ContactContentStyle = styled.div`
  justify-content: center;
  align-items: center;
  padding: 0 0 50px;
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding: 20px 0 40px;
  }
 `

@@ -9,7 +9,7 @@ overflow: hidden;
  .container{
   padding: 0 30px;
  }
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
  }
  
 `
@@ -18,7 +18,7 @@ export const FooterContent = styled.div`
  justify-content: space-between;
  align-items: flex-start;
  padding-top: 80px;
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding-top: 40px;
   display: block;
  }
@@ -40,12 +40,13 @@ export const FooterLink = styled.div`
   .title {
    font-style: normal;
    font-weight: 800;
-   font-size: 16px;
+   font-size: 15px;
    color: #01ABB2;
   }
 
   .description {
    a {
+    font-family: 'IBM Plex Sans';
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
@@ -59,7 +60,7 @@ export const FooterLink = styled.div`
   }
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   transform: translateX(0px);
   flex-wrap: wrap;
   .linkItem {
@@ -78,13 +79,14 @@ export const FooterLine = styled.div`
  background: #000000;
  margin: 40px 0px 13px;
  transition: all .4s;
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   margin: 15px 0px 10px;
   opacity: 0.05;
  }
 `
 
 export const FooterBottom = styled.div`
+ font-family: 'IBM Plex Sans';
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -104,6 +106,7 @@ export const FooterBottom = styled.div`
   }
 
   .s1 {
+   font-family: 'Source Sans Pro';
    font-weight: 400;
    font-size: 14px;
    line-height: 18px;

@@ -20,6 +20,7 @@ const arrowHide = keyframes`
 `
 
 export const HeaderWrap = styled.div`
+ font-family: 'Lexend';
  position: fixed;
  left: 0;
  top: 0;
@@ -44,13 +45,13 @@ export const HeaderContent = styled.div`
  display: flex;
  justify-content: space-between;
  align-items: center;
- height: 122px;
+ height: 96px;
 
  > img {
   transition: all .4s;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   height: 50px;
   > img {
    width: 66px;
@@ -64,10 +65,11 @@ export const HeaderLink = styled.div`
   display: inline-block;
   position: relative;
   overflow: visible;
+  transform: translateY(0px);
 
   > a {
    font-style: normal;
-   font-weight: 600;
+   font-weight: 500;
    font-size: 16px;
    line-height: 24px;
    letter-spacing: -0.274286px;
@@ -86,7 +88,7 @@ export const HeaderLink = styled.div`
    height: 4px;
    position: absolute;
    left: 20px;
-   bottom: 8px;
+   bottom: 7px;
    background: #01ABB2;
    display: none;
   }
@@ -115,7 +117,7 @@ export const HeaderLink = styled.div`
 
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   height: 100%;
   text-align: right;
   .item {

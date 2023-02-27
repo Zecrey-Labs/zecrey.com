@@ -11,6 +11,6 @@ export function fmDate(time: string) {//时间戳转日期
     m = parseInt(m) < 10 ? ('0' + m) : m;
     let s = date.getSeconds().toString();
     s = parseInt(s) < 10 ? ('0' + s) : s;
-    return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
+    return y + '-' + MM + '-' + d;
 }
 

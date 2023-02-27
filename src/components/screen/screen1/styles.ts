@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
+let screen1Height = window.innerHeight;
 export const Screen1Wrap = styled.div`
+ font-family: 'Lexend';
  padding-top: 130px;
  overflow: hidden;
  position: relative;
- height: calc(100vh);
+ height: ${screen1Height < 920 ? "auto" : "calc(100vh)"};
+ padding-bottom: 30px;
 
  .bg {
   position: absolute;
@@ -15,7 +18,7 @@ export const Screen1Wrap = styled.div`
   z-index: 1;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   height: calc(100vh);
   display: flex;
   justify-content: center;
@@ -39,23 +42,26 @@ export const SecIntroduce = styled.div`
  h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 51px;
   color: #1A1A1A;
   margin-bottom: 23px;
-
  }
 
  p {
-  font-weight: 500;
-  font-size: 28px;
+  font-size: 26px;
   color: #4E4E4E;
+  letter-spacing: 0;
  }
 
  .button {
   padding-top: 30px;
+  a{
+   font-style: normal;
+   font-size: 18px;
+  }
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   width: 100%;
   margin-bottom: 56px;
   transform: translateY(-35px);
@@ -94,7 +100,7 @@ export const SecCardWrap = styled.div`
  justify-content: space-around;
  position: relative;
  z-index: 2;
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   display: none;
  }
 `

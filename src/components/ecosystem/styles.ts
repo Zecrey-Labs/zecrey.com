@@ -14,7 +14,7 @@ export const BackersStyle = styled.div`
   align-items: flex-start;
  }
 
- @media (max-width: 960px) {
+ @media (max-width: 1140px) {
   padding: 30px 0 60px;
   .content{
    flex-wrap: wrap;
