@@ -68,13 +68,17 @@ export const SecIntroduce = styled.div`
   width: 100%;
   margin-bottom: 56px;
   transform: translateY(-35px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   .imgBox {
    margin: 0 auto 10px;
    transform: translateX(0);
   }
   h2 {
    font-size: 28px;
-   margin-bottom: 10px;
+   margin: 0 -25px 10px;
    text-align: center;
   }
 
@@ -103,7 +107,17 @@ export const SecCardWrap = styled.div`
  justify-content: space-around;
  position: relative;
  z-index: 2;
+ >div:nth-of-type(2){
+  .title{
+   width: 300px;
+  }
+ }
  @media (max-width: 1140px) {
+  >div:nth-of-type(2){
+   .title{
+    width: auto;
+   }
+  }
   display: none;
  }
 `

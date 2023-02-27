@@ -12,13 +12,10 @@ export default function Screen4() {
                 </SecBg>
                 <div className={'content'}>
                     <SecIntroduce>
-                        <p className={'p1'}>Universal access to blockchain</p>
-                        <p className={'p2'}>The first zkRollup L2 scaling solution on the BNB chain and NFT engine of
-                            Web3 games.It offers instant trading, massive scalability, and low gas fees for minting and
-                            trading NFTs without compromising security.</p>
-                        <div className={'btn'}>
-                            <Button text={"Learn More >"}/>
-                        </div>
+                        <p className={'p1'}>Your Gateway to <br/>Blockchain Multiverse</p>
+                        <p className={'p2'}>Zecrey 2.0 is your secure and seamless gateway to the blockchain multiverse.
+                            Connect with millions of users and enjoy seamless secure interactions across all chains,
+                            without the need for multiple wallets or technical configurations.</p>
                     </SecIntroduce>
                 </div>
             </ContainerCenter>

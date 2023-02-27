@@ -1,5 +1,5 @@
 import {ContainerCenter} from "@/styles/globals";
-import {CardIntroStyle, ContactContentStyle} from "./styles";
+import {CardIntroStyle, ContactContentStyle, ContactWrap} from "./styles";
 import {CONTACT_DISCORD, CONTACT_MEDIUM, CONTACT_TELERGRAM, CONTACT_TWITTER, MOBILE_WIDTH} from "@/config";
 import {useMediaQuery} from "react-responsive";
 
@@ -15,23 +15,18 @@ export function ContactItem(props: Props) {
     const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
 
     return (
-        <>
-            {
-                !isMobile &&
-                <CardIntroStyle>
-                  <a target={"_blank"} href={props.url}>
-                    <img className={'light'} src={props.ico}/>
-                    <img className={'dark'} src={props.icoDark}/>
-                    <p className={'title'} dangerouslySetInnerHTML={{
-                        __html: props.title
-                    }}/>
-                    <p className={'description'}>
-                        {props.description}
-                    </p>
-                  </a>
-                </CardIntroStyle>
-            }
-        </>
+        <CardIntroStyle>
+            <a target={"_blank"} href={props.url}>
+                <img className={'light'} src={props.ico}/>
+                <img className={'dark'} src={props.icoDark}/>
+                <p className={'title'} dangerouslySetInnerHTML={{
+                    __html: props.title
+                }}/>
+                <p className={'description'}>
+                    {props.description}
+                </p>
+            </a>
+        </CardIntroStyle>
     );
 };
 
@@ -69,15 +64,17 @@ const contactArr = [
 export default function Contact() {
 
     return (
-        <ContainerCenter>
-            <ContactContentStyle>
-                {contactArr.map((item, index) => {
-                    return <ContactItem url={item.url} key={index} ico={item.ico} title={item.title}
-                                        description={item.description}
-                                        icoDark={item.icoDark}/>
-                })}
-            </ContactContentStyle>
+        <ContactWrap>
+            <ContainerCenter className={'container'}>
+                <ContactContentStyle>
+                    {contactArr.map((item, index) => {
+                        return <ContactItem url={item.url} key={index} ico={item.ico} title={item.title}
+                                            description={item.description}
+                                            icoDark={item.icoDark}/>
+                    })}
+                </ContactContentStyle>
 
-        </ContainerCenter>
+            </ContainerCenter>
+        </ContactWrap>
     );
 };

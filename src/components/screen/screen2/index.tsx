@@ -12,9 +12,9 @@ export default function Screen2() {
                     </SecMember>
                     <SecIntroduce>
                         <p className={'p1'}>Universal Web3<br/>Account Protocol</p>
-                        <p className={'p2'}>The first zkRollup L2 scaling solution on the BNB chain and NFT engine of
-                            Web3 games.It offers instant trading, massive scalability, and low gas fees for minting and
-                            trading NFTs without compromising security.</p>
+                        <p className={'p2'}>Benefit from a unified and standardized approach to managing your digital
+                            assets and identities across multiple blockchain networks.Enjoy enhanced security and
+                            interoperability features that are built into the Zecrey 2.0 protocol.</p>
                     </SecIntroduce>
                 </div>
             </ContainerCenter>

@@ -8,19 +8,19 @@ const downloadInfoArr = [
     {
         ico: "/static/svg/zecreyExtension.svg",
         title: "Zecrey Extension",
-        description: "Chat with Zecrey members, surf in the privacy world.",
+        description: "Serves as the entry point to Zecrey's ecosystem",
         url: DOWNLOAD_URL
     },
     {
         ico: "/static/svg/zecreyMobile.svg",
         title: "Zecrey Mobile",
-        description: "Chat with Zecrey members, surf in the privacy world.",
+        description: "Portable, user-friendly way to access Zecrey ecosystem",
         url: GOOGLE_PLAY
     },
     {
         ico: "/static/svg/zecreyExplorer.svg",
-        title: "Zecrey Legend",
-        description: "Chat with Zecrey members, surf in the privacy world.",
+        title: "Zecrey Explorer",
+        description: "Provides users with various web apps to access Zecrey's ecosystem",
         url: EXPLORER_URL
     }
 ]
@@ -30,7 +30,7 @@ export default function Ecosystem() {
     return (
         <BackersStyle>
             <ContainerCenter className={'container'}>
-                <SecTitle title={'Ecosystem'} description={'Follow us and join our community'} />
+                <SecTitle title={'Ecosystem'} description={'Zecrey Ecosystem'} />
                 <div className={'content'}>
                     {downloadInfoArr.map((item, index) => {
                         return <CardDownload url={item.url} key={index} index={index} ico={item.ico} title={item.title} description={item.description}

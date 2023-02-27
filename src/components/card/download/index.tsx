@@ -22,7 +22,7 @@ export default function CardDownload(props: Props) {
                 {props.description}
             </p>
             <div className={'btn'}>
-                <Button href={props.url} text={'Download'} />
+                <Button href={props.url} text={`${props.index === 2 ? 'Launch' : 'Download'}`} />
             </div>
         </CardIntroStyle>
     );

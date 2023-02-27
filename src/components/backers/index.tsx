@@ -7,7 +7,7 @@ export default function Backers() {
     return (
         <BackersStyle>
             <ContainerCenter className={'container'}>
-                <SecTitle title={'Backers'} description={'Follow us and join our community'} />
+                <SecTitle title={'Backers'} description={'Backers behind Zecrey'} />
                 <div className={'content'}>
                     <img src={'/static/img/backer/Binance_Labs.png'}/>
                     <img src={'/static/img/backer/spartan.png'}/>

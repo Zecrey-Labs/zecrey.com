@@ -45,6 +45,7 @@ export const CardIntroStyle = styled.div`
  }
 
  p.description {
+  font-family: 'Source Sans Pro';
   width: 260px;
   font-weight: 400;
   font-size: 14px;
@@ -85,5 +86,9 @@ export const CardIntroStyle = styled.div`
   height: 370px;
   margin-bottom: 25px;
   padding: 23px 0 0px;
+  p.description {
+   width: 100%;
+   padding: 0 10px;
+  }
  }
 `

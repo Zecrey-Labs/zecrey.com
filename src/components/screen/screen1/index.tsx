@@ -9,20 +9,20 @@ const boxInfoArr = [
     {
         ico: "/static/svg/ico1.svg",
         icoDark: "/static/svg/ico1Dark.svg",
-        title: "Unified Web3<br /> Account Protocol",
-        description: "Digital first marketing campaigns to drive awareness and customer acquisition."
+        title: "Universal Web3<br /> Account Protocol",
+        description: "Enjoy enhanced security and interoperability features that are built into the Zecrey 2.0 protocol."
     },
     {
         ico: "/static/svg/ico2.svg",
         icoDark: "/static/svg/ico2Dark.svg",
-        title: "A senseless full-chain<br/> interactive experience",
-        description: "Digital first marketing campaigns to drive awareness and customer acquisition.",
+        title: "Seamless Interoperability Across All Blockchains",
+        description: "Use your Zecrey 2.0 account to seamlessly interact with any blockchain network.",
     },
     {
         ico: "/static/svg/ico3.svg",
         icoDark: "/static/svg/ico3Dark.svg",
-        title: "Universal access to<br /> blockchain",
-        description: "Custom digital systems and tools to enhance business performance.",
+        title: "Your Gateway to Blockchain Multiverse",
+        description: "Zecrey 2.0 is your secure and seamless gateway to the blockchain multiverse.",
     }
 ]
 

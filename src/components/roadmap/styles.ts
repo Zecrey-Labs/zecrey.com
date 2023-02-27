@@ -127,6 +127,8 @@ export const BackersStyle = styled.div`
     .p1 {
      color: #01ABB2 !important;
      opacity: 1;
+     font-size: 36px;
+     margin-bottom: 8px;
     }
 
     .p2 {

@@ -5,6 +5,13 @@ export const NewsContentStyle = styled.div`
  justify-content: space-around;
  align-items: center;
  @media (max-width: 1140px) {
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  align-items: center;
+  justify-items: center;
+ }
+ @media (max-width: 767px) {
   display: block;
  }
 `
