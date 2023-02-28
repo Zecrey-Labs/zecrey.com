@@ -8,9 +8,10 @@ export const CardIntroStyle = styled.div`
  opacity: 0.9;
  border-radius: 15px;
  border: 1.5px solid #F3F3F3;
- padding: 32px 0 0;
+ padding: 22px 0 0;
  transition: all .5s;
-
+ overflow: hidden;
+ 
  img {
   margin: 0 auto 42px;
  }
@@ -41,7 +42,7 @@ export const CardIntroStyle = styled.div`
   font-weight: 600;
   font-size: 21px;
   color: #1A1A1A;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
  }
 
  p.description {
@@ -59,7 +60,7 @@ export const CardIntroStyle = styled.div`
   height: 2px;
   background: rgba(0, 0, 0, 0.15);
   width: 314px;
-  margin: 0 auto 28px;
+  margin: 0 auto 25px;
  }
  
  .btn{

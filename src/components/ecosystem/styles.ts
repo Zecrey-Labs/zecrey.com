@@ -7,11 +7,18 @@ export const BackersStyle = styled.div`
   padding: 0 15px;
  }
  
+  
  .content {
   padding-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  >div:nth-of-type(2){
+   .btn{
+    transform: translateY(13px);
+   }
+  }
+
  }
 
  @media (max-width: 1140px) and (min-width: 768px) {

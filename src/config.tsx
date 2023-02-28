@@ -19,6 +19,6 @@ export const CONTACT_TELERGRAM = "https://t.me/zecrey";
 export const CONTACT_DISCORD = "https://discord.com/invite/U98ghQsJE5";
 export const CONTACT_MEDIUM = "https://medium.com/@zecrey";
 export const MAIN_ADDRESS = "bd@zecrey.com";
-export const MOBILE_WIDTH = 960;
+export const MOBILE_WIDTH = 1140;
 
 

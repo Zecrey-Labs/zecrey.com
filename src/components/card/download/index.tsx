@@ -1,5 +1,7 @@
 import {CardIntroStyle} from "./styles";
 import Button from "@/components/button";
+import {useMediaQuery} from "react-responsive";
+import {MOBILE_WIDTH} from "@/config";
 
 interface Props {
     ico: string;
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export default function CardDownload(props: Props) {
+    const isMobile = useMediaQuery({maxWidth: MOBILE_WIDTH});
 
     return (
         <CardIntroStyle>
@@ -17,13 +20,21 @@ export default function CardDownload(props: Props) {
             <div className={'line'}></div>
             <p className={'title'} dangerouslySetInnerHTML={{
                 __html: props.title
-            }} />
+            }}/>
             <p className={'description'}>
                 {props.description}
             </p>
-            <div className={'btn'}>
-                <Button href={props.url} text={`${props.index === 2 ? 'Launch' : 'Download'}`} />
-            </div>
+            {
+                isMobile && props.url === ""
+                    ?
+                    null
+                    :
+                    <div className={'btn'}>
+                        <Button href={props.url} text={`${props.index === 2 ? 'Launch' : 'Download'}`}/>
+                    </div>
+
+            }
+
         </CardIntroStyle>
     );
 };
