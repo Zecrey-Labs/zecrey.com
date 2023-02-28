@@ -5,7 +5,7 @@ import {BackersDotStyle, BackersStageStyle, BackersStyle} from "./styles";
 const stepArr = [
     {
         time: "2022 Q3",
-        description: "Zecrey App Chain Mainnet<br />Private Payment Integration"
+        description: "- zkBNB Open Source Release <br />- Legend Testnet Development"
     },
     {
         time: "2022 Q4",

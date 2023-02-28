@@ -20,7 +20,7 @@ const linkArr = [
         name: "Apps",
         arr: [
             {
-                name: "Privacy Wallet",
+                name: "Zecrey Wallet",
                 url: DOWNLOAD_URL
             },
             {
