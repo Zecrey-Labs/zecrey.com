@@ -8,19 +8,19 @@ const downloadInfoArr = [
     {
         ico: "/static/svg/zecreyExtension.svg",
         title: "Zecrey Extension",
-        description: "Serves as the entry point to Zecrey's ecosystem",
+        description: "Serves as the entry point to Zecrey's ecosystem, providing users with a convenient gateway via web browsers such as Chrome, Brave, Edge, and others.",
         url: DOWNLOAD_URL
     },
     {
         ico: "/static/svg/zecreyMobile.svg",
         title: "Zecrey Mobile",
-        description: "Portable, user-friendly way to access Zecrey ecosystem",
+        description: "Portable, user-friendly way to access Zecrey ecosystem.",
         url: GOOGLE_PLAY
     },
     {
         ico: "/static/svg/zecreyExplorer.svg",
-        title: "Zecrey Explorer",
-        description: "Provides users with various web apps to access Zecrey's ecosystem",
+        title: "Zecrey Webapp",
+        description: "Works seamlessly with the extension and provides users with various web apps to access Zecrey's ecosystem.",
         url: EXPLORER_URL
     }
 ]

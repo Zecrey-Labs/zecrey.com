@@ -72,15 +72,6 @@ const linkArr = [
                 url: DOCS_URL
             },
         ]
-    },
-    {
-        name: "Contact",
-        arr: [
-            {
-                name: MAIN_ADDRESS,
-                url: `mailto:${MAIN_ADDRESS}`
-            }
-        ]
     }
 ]
 
