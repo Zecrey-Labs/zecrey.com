@@ -21,7 +21,7 @@ const downloadInfoArr = [
         ico: "/static/svg/zecreyExplorer.svg",
         title: "Zecrey Webapp",
         description: "Works seamlessly with the extension and provides users with various web apps to access Zecrey's ecosystem.",
-        url: EXPLORER_URL
+        url: ""
     }
 ]
 
