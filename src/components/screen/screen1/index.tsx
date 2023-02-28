@@ -3,6 +3,7 @@ import {Screen1Wrap, SecIntroduce, SecCardWrap} from "./styles";
 import CardIntro from "@/components/card/intro/index";
 import Button from "@/components/button";
 import {WHITE_PAPER_URL} from "@/config";
+import {useEffect} from "react";
 
 
 const boxInfoArr = [
@@ -28,13 +29,23 @@ const boxInfoArr = [
 
 export default function Screen1() {
 
+    useEffect(() => {
+        const arrImg1 = document.querySelectorAll('img[data-src]')
+        arrImg1.forEach((item: any) => {
+            item.setAttribute('src', item.getAttribute('data-src'));
+            item.onload = function () {
+                item.removeAttribute('data-src');
+            };
+        })
+    }, [])
+
     return (
         <Screen1Wrap>
-            <img className={'bg com'} src={'/static/svg/bg_index.svg'}/>
-            <img className={'bg mob'} src={'/static/img/bg1.png'}/>
+            <img className={'bg com'} data-src={'/static/svg/bg_index.svg'}/>
+            <img className={'bg mob'} data-src={'/static/img/bg1.png'}/>
             <ContainerCenter className={"container"}>
                 <SecIntroduce>
-                    <img className={'imgBox'} src={'/static/img/asset1.png'}/>
+                    <img className={'imgBox'} data-src={'/static/img/asset1.png'}/>
                     <h2>Unified Web3 Account Protocol</h2>
                     <p>A Zero-knowledge based Cross-chain Account Protocol</p>
                     <div className={'button'}>

@@ -27,6 +27,12 @@ body {
 img {
   border: none;
   display: block;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+img[data-src] {
+  opacity: 0;
 }
 
 li {
