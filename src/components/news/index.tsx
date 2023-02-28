@@ -2,8 +2,7 @@ import {ContainerCenter} from "@/styles/globals";
 import {NewsContentBtnWrap, NewsContentLine, NewsContentStyle} from "./styles";
 import CardNews from "@/components/card/news";
 import Button from "@/components/button";
-import {useMediaQuery} from "react-responsive";
-import {MOBILE_WIDTH} from "@/config";
+import {MEDIUM_URL} from "@/config";
 import {useQuery, gql} from "@apollo/client";
 import {fmDate} from "@/utils/inedx";
 
@@ -30,7 +29,7 @@ export default function News() {
                 })}
             </NewsContentStyle>
             <NewsContentBtnWrap>
-                <Button text={'More Posts >'}/>
+                <Button href={MEDIUM_URL} text={'More Posts >'}/>
             </NewsContentBtnWrap>
             <NewsContentLine/>
 

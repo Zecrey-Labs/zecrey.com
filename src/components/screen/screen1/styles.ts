@@ -108,16 +108,29 @@ export const SecCardWrap = styled.div`
  position: relative;
  z-index: 2;
  >div:nth-of-type(2){
+  img{
+   width: 57px;
+   height: 38px;
+  }
   .title{
    width: 300px;
   }
  }
+ >div:nth-of-type(3){
+  img{
+   width: 50px;
+   height: 49px;
+   margin-top: -8px;
+   margin-bottom: 20px;
+  }
+ }
+
  @media (max-width: 1140px) {
+  display: none;
   >div:nth-of-type(2){
    .title{
     width: auto;
    }
   }
-  display: none;
  }
 `
