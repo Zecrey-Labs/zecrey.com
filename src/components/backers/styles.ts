@@ -27,7 +27,7 @@ export const BackersStyle = styled.div`
  @media (max-width: 1140px) {
   padding: 50px 0 40px;
   .container {
-   padding: 0 25px;
+   padding: 0 10px;
   }
 
   .content {
