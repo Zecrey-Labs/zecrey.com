@@ -60,7 +60,7 @@ export const BackersStyle = styled.div`
 
    .stage3 {
     left: 74.5%;
-    top: 5%;
+    top: 8.5%;
    }
   }
 
