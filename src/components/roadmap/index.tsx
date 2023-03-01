@@ -5,7 +5,7 @@ import {BackersDotStyle, BackersStageStyle, BackersStyle} from "./styles";
 const stepArr = [
     {
         time: "2022 Q3",
-        description: "- zkBNB Open Source Release <br />- Legend Testnet Development"
+        description: "zkBNB Open Source Release <br />Legend Testnet Development"
     },
     {
         time: "2022 Q4",
@@ -17,7 +17,7 @@ const stepArr = [
     },
     {
         time: "2023 Q2",
-        description: "Zecrey Legend<br />Mainnet Launch"
+        description: "Zecrey Legend Mainnet Launch"
     },
 ]
 
@@ -26,7 +26,7 @@ export default function Roadmap() {
     return (
         <BackersStyle>
             <ContainerCenter>
-                <SecTitle title={'Roadmap'} description={'Follow us and join our community'} />
+                <SecTitle title={'Roadmap'} description={'Major milestones'} />
                 <div className={'content com'}>
                     <div className={'route'}>
                         <img className={'bg'} src={'/static/img/roudmapRoute.png'}/>
