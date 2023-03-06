@@ -150,12 +150,12 @@ const Mobile = (props: {
             <GooglePlay />
             Google Play Download
           </a>
-          {props.info?.url ? (
+          {/* {props.info?.url ? (
             <a href={props.info.url} style={{ marginTop: vw(10) }}>
               <Andr />
               Android APK Download
             </a>
-          ) : null}
+          ) : null} */}
         </>
       )}
     </MobileBox>

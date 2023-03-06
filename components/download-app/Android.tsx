@@ -73,7 +73,7 @@ const Android = (props: {
                 height={40}
               />
             </a>
-            {props.info?.url ? (
+            {/* {props.info?.url ? (
               <a href={props.info?.url}>
                 <ImgBox
                   src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667447508/apk-file.png"
@@ -82,10 +82,10 @@ const Android = (props: {
                   height={41}
                 />
               </a>
-            ) : null}
+            ) : null} */}
           </div>
         </Info>
-        {global.window !== undefined && (
+        {/* {global.window !== undefined && (
           <CenterFlex className="qr-button">
             <QR />
             <div className="hover-up">
@@ -101,7 +101,7 @@ const Android = (props: {
               </div>
             </div>
           </CenterFlex>
-        )}
+        )} */}
       </AndroidWrap>
     </Card>
   );
