@@ -1,3 +1,12 @@
+# zecrey.com
+The Repo is the official zecrey homepage (https://www.zecrey.com/).
+
+## Status
+- Not Online
+- Under development
+
+## Next.js doc
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
