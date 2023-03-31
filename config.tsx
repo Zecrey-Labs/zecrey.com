@@ -9,6 +9,7 @@ export const DOWNLOAD_URL =
 //   "https://dsmkna22gzqmg.cloudfront.net/Zecrey-v1.1.1-110103-production-release.apk";
 export const GOOGLE_PLAY =
   "https://play.google.com/store/apps/details?id=com.zecrey.app";
+export const APP_STORE = "https://apps.apple.com/us/app/zecrey/id6446452252";
 
 export const DOCS_URL = "https://docs.zecrey.com/";
 export const WHITE_PAPER_URL = "https://docsend.com/view/ntcsmt7meu84gcqk";

@@ -1,7 +1,16 @@
 import ImgBox from "components/common/img";
+import { APP_STORE } from "config";
 import { AndroidWrap, Card, Info } from "./styles";
 
-const IOS = () => {
+import { AppInfo } from './types';
+
+interface Props {
+  info: AppInfo | null;
+}
+
+const IOS = (props: Props) => {
+  const { info } = props;
+
   return (
     <Card>
       <AndroidWrap className="android">
@@ -16,7 +25,7 @@ const IOS = () => {
         <Info top="10.9rem" left="60.4rem">
           <div className="title">
             <div className="main">
-              Zecrey Mobile(Beta) for iOS<i>(unavailable)</i>
+              Zecrey Mobile(Beta) for iOS
             </div>
             <div className="sub">
               Easily manage two-layers assets, even NFTs.
@@ -24,16 +33,19 @@ const IOS = () => {
           </div>
           <div className="divider" />
           <div className="details">
-            <span>Size: 31.4M</span>
-            <span>
-              Version: <i>unavailable for now</i>
-            </span>
+            <span>Size: {info?.size}</span>
+            {info?.version && info.versionCode ? (
+              <span>
+                Version: Zecrey for Android V {info.version} Beta (
+                {info.versionCode})
+              </span>
+            ) : null}
             <span>OS: iOS 12.2</span>
-            <span>Updated at: -</span>
+            {info?.date && <span>Updated at: {info?.date}</span>}
           </div>
           <div className="divider" />
           <div className="logos">
-            <a className="disabled">
+            <a href={APP_STORE}>
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448193/App_Store_Badge_US_Black.png"
                 alt=""

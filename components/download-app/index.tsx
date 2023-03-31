@@ -3,39 +3,64 @@ import Slider from "components/common/slider";
 import { useEffect, useMemo, useState } from "react";
 import { isIOS, isSafari } from "react-device-detect";
 import { useMediaQuery } from "react-responsive";
-import { MainTitle, vw } from "styles/globals";
+import { MainTitle } from "styles/globals";
 import Android from "./Android";
 import Extension from "./Extension";
 import IOS from "./IOS";
 import { MobileBox, Wrap } from "./styles";
 import GooglePlay from "icons/googleplay.svg";
-import Andr from "icons/android.svg";
 import Apple from "icons/apple.svg";
 import { useRouter } from "next/router";
 import { GOOGLE_PLAY } from "config";
 import { DateTime } from "luxon";
+import { AppInfo } from "./types";
 
-const getApkInfo = async (): Promise<{
-  url: string;
-  date: string;
-  version: string;
-  versionCode: number;
-} | null> => {
+const getApkInfo = async (): Promise<AppInfo | null> => {
   try {
     const res = await fetch(
       "/update/api/v1/appVersion/checkForUpdate?version=100204&platform=1&channel=Production",
       { method: "post" }
     );
-    const { downloadUrl, createTime, androidVersionCode } = await res.json();
+
+    const { downloadUrl, createTime, size, androidVersionName, androidVersionCode } =
+      await res.json();
     const date =
       createTime > 0
         ? DateTime.fromMillis(createTime * 1000).toFormat("LL-dd-yyyy")
         : "";
+
     return {
       url: downloadUrl,
       date,
-      version: downloadUrl.split("-")[1].replace("v", ""),
+      version: androidVersionName,
       versionCode: androidVersionCode,
+      size: `${(size / (1024 * 1024)).toFixed(1)}Mb`,
+    };
+  } catch (err) {
+    return null;
+  }
+};
+
+const getIpaInfo = async (version: number = 1): Promise<AppInfo | null> => {
+  try {
+    const res = await fetch(
+      `/update/api/v1/appVersion/checkForUpdate?version=${version}&platform=2&channel=AppStore`,
+      { method: "post" }
+    );
+
+    const { downloadUrl, createTime, size, iosVersionName, iosVersionCode } =
+      await res.json();
+    const date =
+      createTime > 0
+        ? DateTime.fromMillis(createTime * 1000).toFormat("LL-dd-yyyy")
+        : "";
+
+    return {
+      url: downloadUrl,
+      date,
+      version: iosVersionName,
+      versionCode: iosVersionCode,
+      size: `${(size / (1024 * 1024)).toFixed(1)}Mb`,
     };
   } catch (err) {
     return null;
@@ -43,38 +68,33 @@ const getApkInfo = async (): Promise<{
 };
 
 export const DownloadApp = () => {
-  const [info, setInfo] = useState<{
-    url: string;
-    date: string;
-    version: string;
-    versionCode: number;
-  } | null>(null);
+  const [apkInfo, setApkInfo] = useState<AppInfo | null>(null);
+  const [ipaInfo, setIpaInfo] = useState<AppInfo | null>(null);
 
   useEffect(() => {
-    getApkInfo().then((res) => setInfo(res));
+    getApkInfo().then((res) => setApkInfo(res));
+    getIpaInfo().then((res) => setIpaInfo(res));
   }, []);
 
   const isMobileView = useMediaQuery({ maxWidth: 780 });
-  return isMobileView ? <Mobile info={info} /> : <Desktop info={info} />;
+
+  return isMobileView ? (
+    <Mobile apkInfo={apkInfo} ipaInfo={ipaInfo} />
+  ) : (
+    <Desktop apkInfo={apkInfo} ipaInfo={ipaInfo} />
+  );
 };
 
 export default DownloadApp;
 
-const items = (
-  info: {
-    url: string;
-    date: string;
-    version: string;
-    versionCode: number;
-  } | null
-) => [
+const items = (apkInfo: AppInfo | null, ipaInfo: AppInfo | null) => [
   {
     label: "Android",
-    img: <Android info={info} />,
+    img: <Android info={apkInfo} />,
   },
   {
     label: "iOS",
-    img: <IOS />,
+    img: <IOS info={ipaInfo} />,
   },
   {
     label: "Extension",
@@ -82,15 +102,17 @@ const items = (
   },
 ];
 
-const Desktop = (props: {
-  info: {
-    url: string;
-    date: string;
-    version: string;
-    versionCode: number;
-  } | null;
-}) => {
-  const els = useMemo(() => items(props.info), [props.info]);
+interface Props {
+  apkInfo: AppInfo | null;
+  ipaInfo: AppInfo | null;
+}
+
+const Desktop = (props: Props) => {
+  const els = useMemo(
+    () => items(props.apkInfo, props.ipaInfo),
+    [props.apkInfo, props.ipaInfo]
+  );
+
   return (
     <Wrap>
       <Slider items={els} />
@@ -98,14 +120,7 @@ const Desktop = (props: {
   );
 };
 
-const Mobile = (props: {
-  info: {
-    url: string;
-    date: string;
-    version: string;
-    versionCode: number;
-  } | null;
-}) => {
+const Mobile = (props: Props) => {
   const router = useRouter();
   const { os } = router.query;
   const ios = useMemo(() => (os ? os === "ios" : isSafari || isIOS), [os]);

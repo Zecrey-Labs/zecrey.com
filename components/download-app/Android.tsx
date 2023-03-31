@@ -4,15 +4,9 @@ import QR from "icons/QR.svg";
 import { CenterFlex } from "styles/globals";
 import QRCode from "react-qr-code";
 import { GOOGLE_PLAY } from "config";
+import { AppInfo } from './types';
 
-const Android = (props: {
-  info: {
-    url: string;
-    date: string;
-    version: string;
-    versionCode: number;
-  } | null;
-}) => {
+const Android = (props: { info: AppInfo | null }) => {
   return (
     <Card>
       <AndroidWrap className="android">
@@ -36,7 +30,7 @@ const Android = (props: {
             className="details"
             style={{ paddingTop: "1.2rem", height: "20.8rem" }}
           >
-            <span>Size: 59.7M</span>
+            <span>Size: {props.info?.size}</span>
             {props.info?.version && props.info.versionCode ? (
               <span>
                 Version: Zecrey for Android V {props.info.version} Beta (
