@@ -36,7 +36,7 @@ const IOS = (props: Props) => {
             <span>Size: {info?.size}</span>
             {info?.version && info.versionCode ? (
               <span>
-                Version: Zecrey for Android V {info.version} Beta (
+                Version: Zecrey for iOS V {info.version} Beta (
                 {info.versionCode})
               </span>
             ) : null}
