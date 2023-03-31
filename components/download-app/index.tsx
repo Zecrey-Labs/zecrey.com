@@ -15,10 +15,10 @@ import { GOOGLE_PLAY } from "config";
 import { DateTime } from "luxon";
 import { AppInfo } from "./types";
 
-const getApkInfo = async (): Promise<AppInfo | null> => {
+const getApkInfo = async (version: number = 1): Promise<AppInfo | null> => {
   try {
     const res = await fetch(
-      "/update/api/v1/appVersion/checkForUpdate?version=100204&platform=1&channel=Production",
+      `/update/api/v1/appVersion/checkForUpdate?version=${version}&platform=1&channel=GooglePlay`,
       { method: "post" }
     );
 
@@ -34,7 +34,7 @@ const getApkInfo = async (): Promise<AppInfo | null> => {
       date,
       version: androidVersionName,
       versionCode: androidVersionCode,
-      size: `${(size / (1024 * 1024)).toFixed(1)}Mb`,
+      size: `${((size || 42116086) / (1024 * 1024)).toFixed(1)}MB`,
     };
   } catch (err) {
     return null;
@@ -60,7 +60,7 @@ const getIpaInfo = async (version: number = 1): Promise<AppInfo | null> => {
       date,
       version: iosVersionName,
       versionCode: iosVersionCode,
-      size: `${(size / (1024 * 1024)).toFixed(1)}Mb`,
+      size: `${((size || 44244086) / (1024 * 1024)).toFixed(1)}MB`,
     };
   } catch (err) {
     return null;
