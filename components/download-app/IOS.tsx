@@ -45,7 +45,7 @@ const IOS = (props: Props) => {
           </div>
           <div className="divider" />
           <div className="logos">
-            <a href={APP_STORE}>
+            <a href={APP_STORE} target="_blank" rel="noreferrer">
               <ImgBox
                 src="https://res.cloudinary.com/drntjojig/image/upload/q_auto:eco/v1667448193/App_Store_Badge_US_Black.png"
                 alt=""
