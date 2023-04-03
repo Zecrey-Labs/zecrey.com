@@ -40,7 +40,7 @@ const IOS = (props: Props) => {
                 {info.versionCode})
               </span>
             ) : null}
-            <span>OS: iOS 12.2</span>
+            <span>OS: iOS 12.4</span>
             {info?.date && <span>Updated at: {info?.date}</span>}
           </div>
           <div className="divider" />
