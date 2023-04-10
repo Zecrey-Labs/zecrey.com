@@ -14,11 +14,11 @@ import {
   Wrap,
 } from "./styles";
 import ImgBox from "components/common/img";
-import { APP_URL, EXPLORER_URL, INFO_URL, MEDIA } from "config";
+import {EXPLORER_URL, INFO_URL, MEDIA, NFT_MARKET_URL} from "config";
 
 const navList = [
   { label: "Home", url: "/" },
-  { label: "App", url: APP_URL, disabled: true },
+  { label: "NFT", url: NFT_MARKET_URL},
   { label: "Explorer", url: EXPLORER_URL },
   { label: "Info", url: INFO_URL, disabled: true },
 ];
