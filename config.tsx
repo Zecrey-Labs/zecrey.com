@@ -19,6 +19,7 @@ export const MEDIUM_URL = "https://zecrey.medium.com/";
 export const GITHUB_URL = "https://github.com/Zecrey-Labs";
 export const EXPLORER_URL = "https://explorer.zecrey.com/legend/test";
 export const APP_URL = "https://app.zecrey.com/";
+export const NFT_MARKET_URL = "https://nftmarket.zecrey.com/";
 export const INFO_URL = "https://info.zecrey.com/";
 
 export const MEDIA = [
