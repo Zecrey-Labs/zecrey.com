@@ -33,6 +33,6 @@ export const MEDIA = [
   {
     type: "discord",
     icon: <Discord />,
-    url: "https://discord.com/invite/U98ghQsJE5",
+    url: "https://discord.com/invite/MdajwkVZE4",
   },
 ];
