@@ -47,7 +47,7 @@ const items: {
     icon: <Discord name="discord" />,
     tip: "Chat with Zecrey members, surf in the privacy world.",
     linkLabel: "Join",
-    link: "https://discord.com/invite/U98ghQsJE5",
+    link: "https://discord.com/invite/MdajwkVZE4",
     size: { width: "5.6rem", height: "6.4rem" },
   },
 ];
