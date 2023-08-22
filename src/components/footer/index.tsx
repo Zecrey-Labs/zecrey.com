@@ -131,7 +131,7 @@ export function Footer() {
   }, [])
 
   useEffect(() => {
-    let timer
+    let timer: any
     if (isScrolle) {
       timer = setInterval(() => {
         warper.current.scrollLeft >= childDomInit.current.scrollWidth
