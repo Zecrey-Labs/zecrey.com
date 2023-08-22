@@ -148,7 +148,7 @@ export function Footer() {
 
   return (
     <StyleFooter>
-      <div className="parent" ref={warper}>
+      <div className="parent" ref={warper} >
         <div className="child com" ref={childDomInit}>
           {backers.map((item: any, index) => (
             <img
