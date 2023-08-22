@@ -1,7 +1,7 @@
 "use client";
 // import { useRouter } from "next/router";
 import styled from "styled-components";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 const StyleHeader = styled.div`
  position: fixed;
@@ -619,6 +619,7 @@ const SubItem1 = () => {
 
 export const Header = () => {
   const [openMobMenu, setOpenMobMenu] = useState(false)
+  const [init, setInit] = useState(false)
 
   return (
     <StyleHeader>
@@ -645,7 +646,7 @@ export const Header = () => {
           }
         </div>
       </div>
-      <div className={`mob  ${openMobMenu ? 'mobOpen' : 'mobClose'}`}>
+      <div className={`mob  ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
         <img className={'logo'} src={"static/logo.png"}/>
         <div className={'productMob'}>
           <div className={'text'}>
@@ -686,7 +687,8 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`mobHeaderBtn ${openMobMenu ? 'open' : 'close'}`} onClick={() => {
+      <div className={`mobHeaderBtn ${openMobMenu ? 'open' : (init ?  'close' : '')}`} onClick={() => {
+        setInit(true)
         setOpenMobMenu(!openMobMenu)
       }}>
         <div className={'l1'}></div>
