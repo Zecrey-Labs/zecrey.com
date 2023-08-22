@@ -144,7 +144,7 @@ export function Footer() {
     }
   }, [isScrolle])
 
-  const hoverHandler = (flag) => setIsScrolle(flag)
+  const hoverHandler = (flag: any) => setIsScrolle(flag)
 
   return (
     <StyleFooter>
