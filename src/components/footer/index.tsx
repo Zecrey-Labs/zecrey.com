@@ -47,6 +47,7 @@ const StyleFooter = styled.div`
    img {
     width: .96rem;
     height: .31rem;
+    margin: 0px 0.025rem;
    }
   }
  }
