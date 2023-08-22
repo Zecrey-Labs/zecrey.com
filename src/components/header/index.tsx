@@ -270,7 +270,7 @@ const StyleHeader = styled.div`
    width: 100%;
    height: 100%;
    background: #171818;
-   z-index: 10;
+   z-index: 1;
    padding: 0.8rem 0.24rem 0;
    .logo {
     position: absolute;
@@ -347,7 +347,6 @@ const StyleHeader = styled.div`
    animation-iteration-count: 1;
    animation-timing-function: linear;
    animation-fill-mode: forwards;
-   
   }
   .mobHide{
    display: block;
@@ -356,7 +355,6 @@ const StyleHeader = styled.div`
    animation-iteration-count: 1;
    animation-timing-function: linear;
    animation-fill-mode: forwards;
-   
   }
   
   .mobHeaderBtn{
@@ -505,24 +503,34 @@ const StyleHeader = styled.div`
   0% {
    display: block;
    opacity: 0;
+   z-index: 10;
+   left: 0%;
   }
   100% {
    display: block;
    opacity: 1;
+   z-index: 10;
+   left: 0%;
   }
  }
  @keyframes aniMobMenuHide {
   0% {
    display: block;
    opacity: 1;
+   z-index: 10;
+   left: 0%;
   }
   99% {
    display: block;
    opacity: 0;
+   z-index: 10;
+   left: 0%;
   }
   100% {
+   left: -100%;
    display: none;
    opacity: 0;
+   z-index: -1;
   }
  }
 `;
@@ -646,7 +654,7 @@ export const Header = () => {
           }
         </div>
       </div>
-      <div className={`mob  ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
+      <div className={`mob ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
         <img className={'logo'} src={"static/logo.png"}/>
         <div className={'productMob'}>
           <div className={'text'}>
@@ -661,8 +669,8 @@ export const Header = () => {
             <div className={'title'}>Papers</div>
             <div>White Paper</div>
             <div>Docs</div>
-            <div className={'line'} />
           </div>
+          <div className={'line'} />
         </div>
         <div className={'communityMob'}>
           <div className={'text'}>
