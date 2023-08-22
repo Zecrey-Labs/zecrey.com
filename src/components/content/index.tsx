@@ -979,6 +979,9 @@ export const Content = () => {
               onMouseOut={() => {
                 setTextDescriptionStep(0)
               }}
+              onClick={() => {
+                setTextDescriptionStep(1)
+              }}
             >
               <img className={'img0'} src={'static/brandlight3.png'}/>
             </div>
@@ -989,6 +992,9 @@ export const Content = () => {
               }}
               onMouseOut={() => {
                 setTextDescriptionStep(0)
+              }}
+              onClick={() => {
+                setTextDescriptionStep(2)
               }}
             >
               <img className={'img1'} src={'static/Horizontalwhite1.png'}/>
@@ -1044,6 +1050,11 @@ export const Content = () => {
                 if (!setImgLoaded) return
                 setHoverDoor(false)
                 seetHoverOutDoor(true)
+              }}
+              onClick={() => {
+                if (!setImgLoaded) return
+                setHoverDoor(true)
+                seetHoverOutDoor(false)
               }}
             />
           </div>
