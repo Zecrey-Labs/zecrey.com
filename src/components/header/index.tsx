@@ -789,7 +789,9 @@ export const Header = () => {
           }
         </div>
       </div>
-      <div className={`mob ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
+      {
+        init &&
+        <div className={`mob ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
           <img className={'logo'} src={"static/logo.png"}/>
           <div className={'productMob'}>
             <div className={'text'}>
@@ -847,6 +849,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
+      }
       <div className={`mobHeaderBtn ${openMobMenu ? 'open' : (init ? 'close' : '')}`} onClick={() => {
         setInit(true)
         setOpenMobMenu(!openMobMenu)

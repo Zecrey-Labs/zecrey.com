@@ -409,6 +409,10 @@ const StyleContent = styled.div`
   }
 
  }
+ 
+ .doorMob{
+  display: none; 
+ }
 
  @keyframes aniRightOut {
   0% {
@@ -737,14 +741,18 @@ const StyleContent = styled.div`
   left: 0;
   top: 0;
   z-index: 2;
-  //min-height: 6.67rem;
-  //max-height: 6.67rem;
   display: block;
   overflow-y: scroll;
   overflow-x: hidden;
   .contentMain{
    padding: .8rem .24rem 0;
-   display: block;
+   //display: block;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   //justify-content: flex-start;
+   //align-items: center;
+
    .l{
     margin: 0 -.1rem;
     height: auto;
@@ -754,7 +762,7 @@ const StyleContent = styled.div`
       color: var(--zecrey-cyan);
       text-align: center;
       font-family: DINCond-Bold;
-      font-size: .36rem;
+      font-size: .31rem;
       font-weight: 500;
       line-height: 110%;
       text-transform: uppercase;
@@ -776,21 +784,24 @@ const StyleContent = styled.div`
      width: 100%;
      margin-bottom: -.25rem;
      max-height: none;
-     //height: 1rem;
+     height: .7rem;
      .navigation{
       display: none;
      }
      .text{
       text-align: center;
-      font-size: .12rem;
+      font-size: .1rem;
       line-height: 130%;
       width: 100%;
-      height: 1rem;
+      >div{
+       height: 1rem;
+      }
      }
     }
     .brandList{
      justify-content: center;
      align-items: center;
+     margin-top: -.2rem;
      .item{
       width: 1.08rem;
       height: .38rem;
@@ -811,21 +822,80 @@ const StyleContent = styled.div`
     height: auto;
     max-height: 4rem;
     margin:0 -.24rem;
+    display: none;
+    .door{
+     transform: scale(.45);
+     position: relative;
+     transform-origin: left top;
+     left: -.24rem;
+     bottom: 0;
+     margin-top: -.1rem;
+    }
+
+   }
+   .doorMob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    >img{
+     width: 80%;
+     height: auto;
+     display: block;
+     margin: 0 auto;
+    }
    }
   }
  }
- @media (max-width: 1080px){
-  .r{
-   .door{
-    transform: scale(.45);
-    position: relative;
-    transform-origin: left top;
-    left: -.24rem;
-    bottom: 0;
-    margin-top: -.1rem;
+ 
+ @media (max-width: 767px){
+  .contentMain{
+   .l{
+    .title{
+     p{
+      font-size: .36rem;
+     }
+     .icoStar{
+     }
+    }
+    .description_wrap{
+    }
+    .description{
+     height: 1.1rem;
+     .navigation{
+     }
+     .text{
+      text-align: center;
+      font-size: .12rem;
+      line-height: 130%;
+      width: 100%;
+      height: 1rem;
+     }
+    }
+    .brandList{
+     margin-top: 0;
+    }
    }
-  }  
+   .doorMob{
+    >img{
+     width: 100%;
+    }
+   }
+  }
  }
+
+ @media (max-width: 540px) and (min-width: 540px){
+  .contentMain{
+   .doorMob{
+    >img{
+     width: 72%;
+    }
+   }
+  }
+ }
+
 `;
 
 export interface iTokenPic {
@@ -852,7 +922,7 @@ const tokenArr: iTokenPic[] = [
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1443.svg',
+    url: 'static/tokens/Group1443.png',
     width: '1.01rem',
     height: '1.01rem',
     horizontal: 'left',
@@ -1031,8 +1101,8 @@ export const Content = () => {
             <div
               className={'cover'}
               onMouseOver={() => {
-                setTextDescriptionStep(2)
                 if (!setImgLoaded) return
+                setTextDescriptionStep(2)
                 setHoverDoor(true)
                 seetHoverOutDoor(false)
               }}
@@ -1049,6 +1119,16 @@ export const Content = () => {
               }}
             />
           </div>
+        </div>
+        <div className={'doorMob'}
+             onMouseOver={() => {
+               setTextDescriptionStep(2)
+             }}
+             onMouseOut={() => {
+               setTextDescriptionStep(0)
+             }}
+        >
+          <img data-src={'static/Group13213173401.png'}/>
         </div>
       </div>
     </StyleContent>
