@@ -822,6 +822,7 @@ const StyleContent = styled.div`
     transform-origin: left top;
     left: -.24rem;
     bottom: 0;
+    margin-top: -.1rem;
    }
   }  
  }
