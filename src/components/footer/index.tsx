@@ -156,8 +156,8 @@ export function Footer() {
           {backers.map((item: any, index) => (
             <img
               key={index}
-              onMouseOver={() => hoverHandler(false)}
-              onMouseLeave={() => hoverHandler(true)}
+              // onMouseOver={() => hoverHandler(false)}
+              // onMouseLeave={() => hoverHandler(true)}
               src={item}
             />
           ))}

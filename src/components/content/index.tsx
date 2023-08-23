@@ -38,7 +38,8 @@ const StyleContent = styled.div`
 
    .icoStar {
     position: absolute;
-    right: 0.72rem;
+    //right: 0.72rem;
+    left: 5.67rem;
     top: -0.15rem;
     width: .46rem;
     height: 1.11rem;
@@ -47,7 +48,7 @@ const StyleContent = styled.div`
 
   .description {
    width: 6.5rem;
-   height: 1rem;
+   height: 1.1rem;
    overflow-y: hidden;
    position: relative;
    padding-left: .23rem;
@@ -107,7 +108,7 @@ const StyleContent = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: .13rem;
-    background: url("/static/Rectangle321.svg") #38393A left top;
+    background: url("/static/Rectangle321.svg") left top;
     background-size: 100% 100%;
 
     img {
@@ -775,6 +776,7 @@ const StyleContent = styled.div`
      width: 100%;
      margin-bottom: -.25rem;
      max-height: none;
+     //height: 1rem;
      .navigation{
       display: none;
      }
@@ -849,7 +851,7 @@ const tokenArr: iTokenPic[] = [
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1443.png',
+    url: 'static/tokens/Group1443.svg',
     width: '1.01rem',
     height: '1.01rem',
     horizontal: 'left',
@@ -974,13 +976,13 @@ export const Content = () => {
             <div
               className={'item'}
               onMouseOver={() => {
-                setTextDescriptionStep(2)
+                setTextDescriptionStep(1)
               }}
               onMouseOut={() => {
                 setTextDescriptionStep(0)
               }}
               onClick={() => {
-                setTextDescriptionStep(2)
+                setTextDescriptionStep(1)
               }}
             >
               <img className={'img1'} src={'static/Horizontalwhite1.png'}/>
@@ -1028,12 +1030,14 @@ export const Content = () => {
             <div
               className={'cover'}
               onMouseOver={() => {
+                setTextDescriptionStep(2)
                 if (!setImgLoaded) return
                 setHoverDoor(true)
                 seetHoverOutDoor(false)
               }}
               onMouseOut={() => {
                 if (!setImgLoaded) return
+                setTextDescriptionStep(0)
                 setHoverDoor(false)
                 seetHoverOutDoor(true)
               }}

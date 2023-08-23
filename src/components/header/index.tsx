@@ -38,6 +38,9 @@ const StyleHeader = styled.div`
    margin-left: .94rem;
    cursor: pointer;
    position: relative;
+   &:hover{
+    color: var(--zecrey-cyan);
+   }
 
    .sub {
     display: none;
@@ -163,7 +166,7 @@ const StyleHeader = styled.div`
 
     .community {
      position: absolute;
-     left: 4.36rem;
+     left: 4.24rem;
      top: .52rem;
      color: var(--white, #FFF);
      font-family: Arial;
@@ -237,7 +240,10 @@ const StyleHeader = styled.div`
 
      a {
       max-height: 100%;
-      color: var(--white, #FFF);
+      color: var(--white);
+      &:hover{
+       color: var(--zecrey-cyan);
+      }
      }
     }
    }
