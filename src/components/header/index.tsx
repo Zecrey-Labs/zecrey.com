@@ -283,17 +283,27 @@ const StyleHeader = styled.div`
    display: none;
   }
 
+  .mobWrap{
+   height: auto;
+   max-height: 100%;
+   overflow-y: scroll;
+
+  }
   .mob {
    //display: none;
    position: fixed;
    left: 0;
    top: 0;
    width: 100%;
+   //height: 100%;
+   //min-height: 6.67rem;
+   //max-height: initial;
+   //height: auto;
    height: 100%;
+   overflow-y: scroll;
    background: #171818;
    z-index: 1;
    padding: 0.8rem 0.24rem 0;
-   min-height: 6.67rem;
 
    .logo {
     position: absolute;
@@ -366,10 +376,12 @@ const StyleHeader = styled.div`
     font-family: Arial;
     font-size: .14rem;
     font-weight: 400;
-    padding-left: .55rem;
-    position: absolute;
-    left: 0;
-    bottom: .1rem;
+    //padding-left: .55rem;
+    padding-left: .31rem;
+    padding-top: .9rem;
+    //position: absolute;
+    //left: 0;
+    //bottom: .1rem;
     width: 100%;
 
     > div {
@@ -772,63 +784,63 @@ export const Header = () => {
         </div>
       </div>
       <div className={`mob ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
-        <img className={'logo'} src={"static/logo.png"}/>
-        <div className={'productMob'}>
-          <div className={'text'}>
-            <div className={'title'}>Product</div>
-            {
-              ecoProductList.map((item, index) => (
-                <a
-                  key={index.toString()}
-                  style={{
-                    cursor: item.url === '' ? 'not-allowed' : 'pointer'
-                  }}
-                  href={item.url === '' ? undefined : item.url}
-                  target={'_blank'}
-                >
-                  {item.label}
-                </a>
-              ))
-            }
+          <img className={'logo'} src={"static/logo.png"}/>
+          <div className={'productMob'}>
+            <div className={'text'}>
+              <div className={'title'}>Product</div>
+              {
+                ecoProductList.map((item, index) => (
+                  <a
+                    key={index.toString()}
+                    style={{
+                      cursor: item.url === '' ? 'not-allowed' : 'pointer'
+                    }}
+                    href={item.url === '' ? undefined : item.url}
+                    target={'_blank'}
+                  >
+                    {item.label}
+                  </a>
+                ))
+              }
+            </div>
+            <div className={'line'}/>
           </div>
-          <div className={'line'}/>
+          <div className={'papersMob'}>
+            <div className={'text'}>
+              <div className={'title'}>Papers</div>
+              {
+                productList.map((item, index) => (
+                  <a key={index.toString()} href={item.url} target={'_blank'}>
+                    {item.label}
+                  </a>
+                ))
+              }
+            </div>
+            <div className={'line'}/>
+          </div>
+          <div className={'communityMob'}>
+            <div className={'text'}>
+              <div className={'title'}>Community</div>
+            </div>
+            <div className={'communityMobImg'}>
+              {
+                communityList.map((item, index) => (
+                  <a key={index.toString()} className={'communityMobImgItem'} href={item.href} target={'_blank'}>
+                    {item.ele()}
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+          <div className={'copyright'}>
+            <div>
+              Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
+            </div>
+            <div>
+              Copyright @ 2022 Zecrey. All rights reserved.
+            </div>
+          </div>
         </div>
-        <div className={'papersMob'}>
-          <div className={'text'}>
-            <div className={'title'}>Papers</div>
-            {
-              productList.map((item, index) => (
-                <a key={index.toString()} href={item.url} target={'_blank'}>
-                  {item.label}
-                </a>
-              ))
-            }
-          </div>
-          <div className={'line'}/>
-        </div>
-        <div className={'communityMob'}>
-          <div className={'text'}>
-            <div className={'title'}>Community</div>
-          </div>
-          <div className={'communityMobImg'}>
-            {
-              communityList.map((item, index) => (
-                <a key={index.toString()} className={'communityMobImgItem'} href={item.href} target={'_blank'}>
-                  {item.ele()}
-                </a>
-              ))
-            }
-          </div>
-        </div>
-        <div className={'copyright'}>
-          <div>
-            Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
-          </div>
-          <div>
-            Copyright @ 2022 Zecrey. All rights reserved.
-          </div>
-        </div>
-      </div>
       <div className={`mobHeaderBtn ${openMobMenu ? 'open' : (init ? 'close' : '')}`} onClick={() => {
         setInit(true)
         setOpenMobMenu(!openMobMenu)
