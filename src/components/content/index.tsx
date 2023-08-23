@@ -730,7 +730,17 @@ const StyleContent = styled.div`
  }
 
  @media (max-width: 1080px){
-  
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  //min-height: 6.67rem;
+  //max-height: 6.67rem;
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
   .contentMain{
    padding: .8rem .24rem 0;
    display: block;
@@ -797,44 +807,21 @@ const StyleContent = styled.div`
    }
    .r{
     height: auto;
+    max-height: 4rem;
     margin:0 -.24rem;
    }
   }
  }
  @media (max-width: 1080px){
-  .door{
-   transform: scale(.35);
-   left: -2.92rem;
-   top: -3.7rem;
-  }
-  }
-@media (max-width: 768px){
- .door{
-  transform: scale(.35);
-  left: -2.92rem;
-  top: -4.1rem;
- }
-}
- @media (max-width: 414px){
-  .door{
-   transform: scale(.5);
-   left: -2.87rem;
-   top: -2.1rem;
-  }
- }
- @media (max-width: 375px){
-  .door{
-   transform: scale(.45);
-   left: -2.89rem;
-   top: -2.63rem;
-  }
- }
- @media (max-width: 360px){
-  .door{
-   transform: scale(.45);
-   left: -2.89rem;
-   top: -2.33rem;
-  }
+  .r{
+   .door{
+    transform: scale(.45);
+    position: relative;
+    transform-origin: left top;
+    left: -.24rem;
+    bottom: 0;
+   }
+  }  
  }
 `;
 
@@ -924,9 +911,8 @@ export const Content = () => {
   const [imgLoaded, setImgLoaded] = useState(false)
 
   useEffect(() => {
-// img
+    // img
     const arrImg1 = document.querySelectorAll('img[data-src]')
-    console.log('___0', arrImg1)
     arrImg1.forEach((item: any) => {
       item.setAttribute('src', item.getAttribute('data-src'));
       item.onload = function () {

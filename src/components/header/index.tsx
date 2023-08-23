@@ -293,6 +293,7 @@ const StyleHeader = styled.div`
    background: #171818;
    z-index: 1;
    padding: 0.8rem 0.24rem 0;
+   min-height: 6.67rem;
 
    .logo {
     position: absolute;
