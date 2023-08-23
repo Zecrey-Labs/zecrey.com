@@ -128,7 +128,9 @@ export function Footer() {
     } else {
       setBackers(context)
     }
-    childDomCopy.current.innerHTML = childDomInit.current.innerHTML
+    setTimeout(() => {
+      childDomCopy.current.innerHTML = childDomInit.current.innerHTML
+    }, 1000)
   }, [])
 
   useEffect(() => {

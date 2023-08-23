@@ -27,7 +27,7 @@ const StyleHeader = styled.div`
  .navList {
   max-height: none;
 
-  a {
+  >a {
    max-height: none;
    font-family: Arial;
    font-style: normal;
@@ -75,7 +75,8 @@ const StyleHeader = styled.div`
      font-weight: 400;
      line-height: 2.2;
 
-     > div {
+     > div, >a {
+      display: block;
       cursor: pointer;
       color: var(--white, #FFF);
       margin-bottom: .1rem;
@@ -233,7 +234,7 @@ const StyleHeader = styled.div`
       width: 3.05rem;
      }
 
-     span {
+     a {
       max-height: 100%;
       color: var(--white, #FFF);
      }
@@ -360,7 +361,7 @@ const StyleHeader = styled.div`
     >div{
      margin-bottom: .08rem;
     }
-    span{
+    a{
      color: var(--white);
     }
    }
@@ -581,6 +582,11 @@ const navList: tNavList[] = [
   {label: "Join Community", url: "/", type: "btn"},
 ];
 
+const ecoProductList: tProductList[] = [
+  {label: "Kontos Protocol", url: "https://www.kontos.io/"},
+  {label: "zkLegend NFT Marketplace", url: ""},
+];
+
 const productList: tProductList[] = [
   {label: "White Paper", url: "https://docsend.com/view/ntcsmt7meu84gcqk"},
   {label: "Docs", url: "https://docs.zecrey.com/"},
@@ -636,8 +642,15 @@ const SubItem0 = () => {
       <img className={'logo'} src={"static/logo.png"}/>
       <div className={'text'}>
         <div className={'title'}>Product</div>
-        <div>Kontos Protocol</div>
-        <div>zkLegend NFT Marketplace</div>
+        {
+          ecoProductList.map((item, index) => (
+            <a style={{
+              cursor: item.url === '' ? 'not-allowed' : 'pointer'
+            }} href={item.url === '' ? false : item.url} disabled={item.url === ''} target={'_blank'}>
+              {item.label}
+            </a>
+          ))
+        }
       </div>
     </div>
   )
@@ -673,7 +686,7 @@ const SubItem1 = () => {
       </div>
       <div className={'copyright'}>
         <div className={'l'}>
-          Contact: <span>bd@zecrey.com</span>
+          Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
         </div>
         <div className={'r'}>
           Copyright @ 2022 Zecrey. All rights reserved.
@@ -718,8 +731,15 @@ export const Header = () => {
         <div className={'productMob'}>
           <div className={'text'}>
             <div className={'title'}>Product</div>
-            <div>Kontos Protocol</div>
-            <div>zkLegend NFT Marketplace</div>
+            {
+              ecoProductList.map((item, index) => (
+                <a style={{
+                  cursor: item.url === '' ? 'not-allowed' : 'pointer'
+                }} href={item.url === '' ? false : item.url} disabled={item.url === ''} target={'_blank'}>
+                  {item.label}
+                </a>
+              ))
+            }
           </div>
           <div className={'line'} />
         </div>
@@ -752,7 +772,7 @@ export const Header = () => {
         </div>
         <div className={'copyright'}>
           <div>
-            Contact: <span>bd@zecrey.com</span>
+            Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
           </div>
           <div>
             Copyright @ 2022 Zecrey. All rights reserved.
