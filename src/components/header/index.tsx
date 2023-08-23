@@ -1,7 +1,7 @@
 "use client";
 // import { useRouter } from "next/router";
 import styled from "styled-components";
-import {useState, useEffect} from "react";
+import {useState, useEffect, ReactNode} from "react";
 // import SubtractSvg from "../../svg/community/Subtract.svg"
 import config from "../../config"
 
@@ -597,7 +597,7 @@ interface tProductList {
 }
 
 interface tCommunityList {
-  ele: () => void;
+  ele: () => ReactNode;
   href: string;
 }
 
@@ -678,11 +678,11 @@ const SubItem0 = () => {
         {
           ecoProductList.map((item, index) => (
             <a
+              key={index.toString()}
               style={{
                 cursor: item.url === '' ? 'not-allowed' : 'pointer'
               }}
-              href={item.url === '' ? false : item.url}
-              disabled={item.url === ''}
+              href={item.url === '' ? undefined : item.url}
               target={'_blank'}
             >
               {item.label}
@@ -704,7 +704,11 @@ const SubItem1 = () => {
         <div className={'title'}>Product</div>
         {
           productList.map((item, index) => (
-            <a href={item.url} target={'_blank'}>
+            <a
+              key={index.toString()}
+              href={item.url}
+              target={'_blank'}
+            >
               {item.label}
             </a>
           ))
@@ -749,8 +753,7 @@ export const Header = () => {
               <a
                 key={index.toString()}
                 className={`${item.type ? item.type + " styleFlexCenter" : ''}`}
-                href={item.url === '' ? false : item.url}
-                disabled={item.url === ''}
+                href={item.url === '' ? undefined : item.url}
                 target={'_blank'}
               >
                 {item.label}
@@ -774,9 +777,14 @@ export const Header = () => {
             <div className={'title'}>Product</div>
             {
               ecoProductList.map((item, index) => (
-                <a style={{
-                  cursor: item.url === '' ? 'not-allowed' : 'pointer'
-                }} href={item.url === '' ? false : item.url} disabled={item.url === ''} target={'_blank'}>
+                <a
+                  key={index.toString()}
+                  style={{
+                    cursor: item.url === '' ? 'not-allowed' : 'pointer'
+                  }}
+                  href={item.url === '' ? undefined : item.url}
+                  target={'_blank'}
+                >
                   {item.label}
                 </a>
               ))
@@ -789,7 +797,7 @@ export const Header = () => {
             <div className={'title'}>Papers</div>
             {
               productList.map((item, index) => (
-                <a href={item.url} target={'_blank'}>
+                <a key={index.toString()} href={item.url} target={'_blank'}>
                   {item.label}
                 </a>
               ))
