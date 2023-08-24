@@ -180,6 +180,8 @@ const StyleContent = styled.div`
       display: block;
       background-size: 100% 100%;
       border-radius: 50%;
+      backdrop-filter: blur(.1rem);
+      -webkit-backdrop-filter: blur(.1rem);
      }
     }
 
@@ -1121,7 +1123,6 @@ export const Content = () => {
                           style={{
                             background: `url(${item.url})`,
                             backgroundSize: "100% 100%",
-                            backdropFilter: "blur(.1rem)"
                           }}
                           className={'img'}
                         />
