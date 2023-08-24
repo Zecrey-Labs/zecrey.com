@@ -62,6 +62,7 @@ const StyleHeader = styled.div`
      background: url("static/bg1.svg");
      background-size: 100% 100%;
      backdrop-filter: blur(.1rem);
+     -webkit-backdrop-filter: blur(.1rem);
     }
 
     .logo {
@@ -125,6 +126,7 @@ const StyleHeader = styled.div`
      background: url("static/bg2.svg");
      background-size: 100% 100%;
      backdrop-filter: blur(.1rem);
+     -webkit-backdrop-filter: blur(.1rem);
     }
 
     .logo {
