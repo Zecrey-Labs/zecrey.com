@@ -2,6 +2,7 @@
 // import { useRouter } from "next/router";
 import styled from "styled-components";
 import {useState, useEffect} from "react";
+import {url} from "inspector";
 
 const amplitude = 2
 
@@ -173,10 +174,12 @@ const StyleContent = styled.div`
       height: 100%;
      }
 
-     img {
+     .img {
       width: 100%;
       height: 100%;
       display: block;
+      background-size: 100% 100%;
+      border-radius: 50%;
      }
     }
 
@@ -283,7 +286,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(1) {
-      img {
+      .img {
        animation: swing1 7s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -292,7 +295,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(2) {
-      img {
+      .img {
        animation: swing2 5s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -301,7 +304,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(3) {
-      img {
+      .img {
        animation: swing3 4s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -310,7 +313,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(4) {
-      img {
+      .img {
        animation: swing4 9s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -319,7 +322,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(5) {
-      img {
+      .img {
        animation: swing5 7s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -328,7 +331,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(6) {
-      img {
+      .img {
        animation: swing6 10s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -337,7 +340,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(7) {
-      img {
+      .img {
        animation: swing7 12s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -346,7 +349,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(8) {
-      img {
+      .img {
        animation: swing8 8s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -355,7 +358,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(9) {
-      img {
+      .img {
        animation: swing9 9s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -364,7 +367,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(10) {
-      img {
+      .img {
        animation: swing10 6s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -373,7 +376,7 @@ const StyleContent = styled.div`
      }
 
      .ico:nth-of-type(11) {
-      img {
+      .img {
        animation: swing11 11s;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
@@ -409,9 +412,9 @@ const StyleContent = styled.div`
   }
 
  }
- 
- .doorMob{
-  display: none; 
+
+ .doorMob {
+  display: none;
  }
 
  @keyframes aniRightOut {
@@ -734,7 +737,7 @@ const StyleContent = styled.div`
   }
  }
 
- @media (max-width: 1080px){
+ @media (max-width: 1080px) {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -744,7 +747,7 @@ const StyleContent = styled.div`
   display: block;
   overflow-y: scroll;
   overflow-x: hidden;
-  .contentMain{
+  .contentMain {
    padding: .8rem .24rem 0;
    //display: block;
    display: flex;
@@ -753,12 +756,14 @@ const StyleContent = styled.div`
    //justify-content: flex-start;
    //align-items: center;
 
-   .l{
+   .l {
     margin: 0 -.1rem;
     height: auto;
-    .title{
+
+    .title {
      margin-bottom: .1rem;
-     p{
+
+     p {
       color: var(--zecrey-cyan);
       text-align: center;
       font-family: DINCond-Bold;
@@ -767,16 +772,19 @@ const StyleContent = styled.div`
       line-height: 110%;
       text-transform: uppercase;
      }
-     .icoStar{
+
+     .icoStar {
       display: none;
      }
     }
-    .description_wrap{
+
+    .description_wrap {
      height: .75rem;
      overflow: hidden;
      margin-bottom: .07rem;
     }
-    .description{
+
+    .description {
      color: var(--text);
      font-size: .12rem;
      padding: 0 .15rem 0;
@@ -785,45 +793,54 @@ const StyleContent = styled.div`
      margin-bottom: -.25rem;
      max-height: none;
      height: .7rem;
-     .navigation{
+
+     .navigation {
       display: none;
      }
-     .text{
+
+     .text {
       text-align: center;
       font-size: .1rem;
       line-height: 130%;
       width: 100%;
-      >div{
+
+      > div {
        height: 1rem;
       }
      }
     }
-    .brandList{
+
+    .brandList {
      justify-content: center;
      align-items: center;
      margin-top: -.2rem;
-     .item{
+
+     .item {
       width: 1.08rem;
       height: .38rem;
       margin: 0 .08rem;
       border-radius: .07rem;
-      .img0{
+
+      .img0 {
        width: .495rem;
        height: auto;
       }
-      .img1{
+
+      .img1 {
        width: .704rem;
        height: auto;
       }
      }
     }
    }
-   .r{
+
+   .r {
     height: auto;
     max-height: 4rem;
-    margin:0 -.24rem;
+    margin: 0 -.24rem;
     display: none;
-    .door{
+
+    .door {
      transform: scale(.45);
      position: relative;
      transform-origin: left top;
@@ -833,14 +850,16 @@ const StyleContent = styled.div`
     }
 
    }
-   .doorMob{
+
+   .doorMob {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex: 1;
     overflow: hidden;
-    >img{
+
+    > img {
      width: 80%;
      height: auto;
      display: block;
@@ -849,24 +868,29 @@ const StyleContent = styled.div`
    }
   }
  }
- 
- @media (max-width: 767px){
-  .contentMain{
-   .l{
-    .title{
-     p{
+
+ @media (max-width: 767px) {
+  .contentMain {
+   .l {
+    .title {
+     p {
       font-size: .36rem;
      }
-     .icoStar{
+
+     .icoStar {
      }
     }
-    .description_wrap{
+
+    .description_wrap {
     }
-    .description{
+
+    .description {
      height: 1.1rem;
-     .navigation{
+
+     .navigation {
      }
-     .text{
+
+     .text {
       text-align: center;
       font-size: .12rem;
       line-height: 130%;
@@ -874,22 +898,24 @@ const StyleContent = styled.div`
       height: 1rem;
      }
     }
-    .brandList{
+
+    .brandList {
      margin-top: 0;
     }
    }
-   .doorMob{
-    >img{
+
+   .doorMob {
+    > img {
      width: 100%;
     }
    }
   }
  }
 
- @media (max-width: 540px) and (min-width: 540px){
-  .contentMain{
-   .doorMob{
-    >img{
+ @media (max-width: 540px) and (min-width: 540px) {
+  .contentMain {
+   .doorMob {
+    > img {
      width: 72%;
     }
    }
@@ -910,67 +936,67 @@ export interface iTokenPic {
 
 const tokenArr: iTokenPic[] = [
   {
-    url: 'static/tokens/Group1449.png',
+    url: 'static/tokens/Group1449.svg',
     width: '.35rem',
     height: '.35rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1444.png',
+    url: 'static/tokens/Group1444.svg',
     width: '.55rem',
     height: '.55rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1443.png',
+    url: 'static/tokens/Group1443.svg',
     width: '1.01rem',
     height: '1.01rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1436.png',
+    url: 'static/tokens/Group1436.svg',
     width: '.53rem',
     height: '.53rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1437.png',
+    url: 'static/tokens/Group1437.svg',
     width: '.35rem',
     height: '.35rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1438.png',
+    url: 'static/tokens/Group1438.svg',
     width: '1.11rem',
     height: '1.11rem',
     horizontal: 'left',
   },
   {
-    url: 'static/tokens/Group1442.png',
+    url: 'static/tokens/Group1442.svg',
     width: '.8rem',
     height: '.8rem',
     horizontal: 'right',
   },
   {
-    url: 'static/tokens/Group1450.png',
+    url: 'static/tokens/Group1450.svg',
     width: '.35rem',
     height: '.35rem',
     horizontal: 'right',
   },
   {
-    url: 'static/tokens/Group1440.png',
+    url: 'static/tokens/Group1440.svg',
     width: '.61rem',
     height: '.61rem',
     horizontal: 'right',
   },
   {
-    url: 'static/tokens/Group1447.png',
+    url: 'static/tokens/Group1447.svg',
     width: '.51rem',
     height: '.51rem',
     horizontal: 'right',
   },
   {
-    url: 'static/tokens/Group1439.png',
+    url: 'static/tokens/Group1439.svg',
     width: '1.34rem',
     height: '1.34rem',
     horizontal: 'right',
@@ -1019,8 +1045,10 @@ export const Content = () => {
                   entity, we are dedicated to creating innovative solutions that make blockchain accessible and
                   user-friendly for all.
                 </div>
-                <div>With a focus on revolutionizing decentralized ecosystems, our flagship products, Kontos and zkLegend,
-                  exemplify our commitment to simplifying complex interactions, enhancing security, and enabling seamless
+                <div>With a focus on revolutionizing decentralized ecosystems, our flagship products, Kontos and
+                  zkLegend,
+                  exemplify our commitment to simplifying complex interactions, enhancing security, and enabling
+                  seamless
                   cross-chain experiences.
                 </div>
                 <div>With a vision to bring mass adoption to blockchain, Zecrey Labs aims to empower the next billion
@@ -1089,9 +1117,17 @@ export const Content = () => {
                       <div
                         className={`${item.horizontal}`}
                       >
-                        <img
-                          src={item.url}
+                        <div
+                          style={{
+                            background: `url(${item.url})`,
+                            backgroundSize: "100% 100%",
+                            backdropFilter: "blur(.1rem)"
+                          }}
+                          className={'img'}
                         />
+                        {/*<img*/}
+                        {/*  src={item.url}*/}
+                        {/*/>*/}
                       </div>
                     </div>
                   ))

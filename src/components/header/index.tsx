@@ -59,6 +59,9 @@ const StyleHeader = styled.div`
      height: 1.9rem;
      left: 0;
      bottom: 0;
+     background: url("static/bg1.svg");
+     background-size: 100% 100%;
+     backdrop-filter: blur(.1rem);
     }
 
     .logo {
@@ -119,6 +122,9 @@ const StyleHeader = styled.div`
      height: 2.35rem;
      left: 0;
      bottom: 0;
+     background: url("static/bg2.svg");
+     background-size: 100% 100%;
+     backdrop-filter: blur(.1rem);
     }
 
     .logo {
@@ -690,7 +696,7 @@ const communityList: tCommunityList[] = [
 const SubItem0 = () => {
   return (
     <div className={'sub'}>
-      <img className={'bg'} src={"static/bg1.svg"}/>
+      <div className={'bg'} />
       <img className={'logo'} src={"static/logo.png"}/>
       <div className={'text'}>
         <div className={'title'}>Product</div>
@@ -717,7 +723,7 @@ const SubItem0 = () => {
 const SubItem1 = () => {
   return (
     <div className={'sub1'}>
-      <img className={'bg'} src={"static/bg2.svg"}/>
+      <div className={'bg'} />
       <img className={'logo'} src={"static/logo.png"}/>
       <div className={'text'}>
         <div className={'title'}>Product</div>
