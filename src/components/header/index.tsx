@@ -631,7 +631,7 @@ interface tCommunityList {
 const navList: tNavList[] = [
   {label: "Ecosystem", url: ""},
   {label: "About", url: ""},
-  {label: "Join Community", url: "https://linktr.ee/zecrey", type: "btn"},
+  {label: "Join Community", url: "https://discord.com/invite/MdajwkVZE4", type: "btn"},
 ];
 
 const ecoProductList: tProductList[] = [
