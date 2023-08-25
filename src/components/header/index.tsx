@@ -631,7 +631,7 @@ interface tCommunityList {
 const navList: tNavList[] = [
   {label: "Ecosystem", url: ""},
   {label: "About", url: ""},
-  {label: "Join Community", url: "https://link3.to/kontos", type: "btn"},
+  {label: "Join Community", url: "https://linktr.ee/zecrey", type: "btn"},
 ];
 
 const ecoProductList: tProductList[] = [
@@ -671,7 +671,7 @@ const communityList: tCommunityList[] = [
               fill="white"/>
       </svg>
     ),
-    href: "https://kontosio.medium.com/"
+    href: "https://zecrey.medium.com"
   },
   {
     ele: () => (
@@ -691,7 +691,7 @@ const communityList: tCommunityList[] = [
           fill="white"/>
       </svg>
     ),
-    href: "https://twitter.com/kontosio"
+    href: "https://twitter.com/ZecreyLabs"
   },
 ]
 
@@ -758,7 +758,7 @@ const SubItem1 = () => {
           Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
         </div>
         <div className={'r'}>
-          Copyright @ 2022 Zecrey. All rights reserved.
+          Copyright © 2023 Zecrey. All rights reserved.
         </div>
       </div>
     </div>
@@ -853,7 +853,7 @@ export const Header = () => {
               Contact: <a href={'mailto:' + config.mail}>{config.mail}</a>
             </div>
             <div>
-              Copyright @ 2022 Zecrey. All rights reserved.
+              Copyright © 2023 Zecrey. All rights reserved.
             </div>
           </div>
         </div>
