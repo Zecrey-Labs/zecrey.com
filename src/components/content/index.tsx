@@ -145,6 +145,7 @@ const StyleContent = styled.div`
    height: 100%;
    left: 0;
    top: 0;
+   background: #2B2C2D;
 
    > img {
     width: 100%;
@@ -1094,7 +1095,7 @@ export const Content = () => {
           className={'r'}
         >
           <div className={'bg'}>
-            <img data-src={'static/bg.png'}/>
+            {/*<img data-src={'static/bg.png'}/>*/}
           </div>
           <div className={'door'}>
             <img className={'doorBg'} onLoad={() => {
