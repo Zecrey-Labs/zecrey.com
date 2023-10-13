@@ -157,9 +157,9 @@ export const PopUpError = (props: IProps) => {
           <p className={'p1'}>Unofficial!</p>
           <p className={'p2'}>The content you entered is NOT officially associated with Zecrey.</p>
           <p className={'p3'}>{text}</p>
-          <p className={'p4'}>Please don't trust this link and safeguard your assets and personal information. If you need to report fraud, please notify our team via our official Discord channel at <a>https://discord.com/invite/MdajwkVZE4</a> or Telegram at <a>https://t.me/zecrey.</a></p>
+          <p className={'p4'}>Please don&apos;t trust this link and safeguard your assets and personal information. If you need to report fraud, please notify our team via our official Discord channel at <a href={'https://discord.com/invite/MdajwkVZE4'}>https://discord.com/invite/MdajwkVZE4</a> or Telegram at <a href={'https://t.me/zecrey.'}>https://t.me/zecrey.</a></p>
           <p className={'p5'}>You can review the content and re-verify it</p>
-          <p className={'p4 p4_1'}>Twitter accounts can be verified by their handles which begin with"@"; Discord names can be verified by their username (NOT display name); Telegram users can be verified by their Telegram usernames which begin with"@", or username links (e.g. <a>https://t.me/zecreyprotocol</a>); please pay attention to capitalization, spaces, long and short lines, etc.</p>
+          <p className={'p4 p4_1'}>Twitter accounts can be verified by their handles which begin with&quot;@&quot;; Discord names can be verified by their username (NOT display name); Telegram users can be verified by their Telegram usernames which begin with&quot;@&quot;, or username links (e.g. <a href={'https://t.me/zecreyprotocol'}>https://t.me/zecreyprotocol</a>); please pay attention to capitalization, spaces, long and short lines, etc.</p>
         </div>
         <div className={'btn'} onClick={() => {
           setErrorShow(false)
