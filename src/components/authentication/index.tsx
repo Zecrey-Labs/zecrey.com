@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import {pattern, IPattern} from "../../pattern";
+import {IPattern, pattern} from "../../pattern";
 
 const StyleWraper = styled.div`
  width: 100%;
@@ -153,9 +153,9 @@ const StyleWraper = styled.div`
 
 interface IProps{
   text: string
-  setText: (string) => void
-  setShowTask: (boolean) => void
-  setMatch: (any) => void
+  setText: (arg0: string) => void
+  setShowTask: (arg0: boolean) => void
+  setMatch: (arg0: IPattern | false) => void
 }
 
 export const Authentication = (props: IProps) => {

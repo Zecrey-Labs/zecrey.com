@@ -5,14 +5,14 @@ import {useEffect, useState} from "react";
 import {load} from "../preload";
 import {Authentication} from "../../components/authentication/index";
 import {PopUpWaring} from "../../components/authentication/PopUpWaring";
-import {PopUpError} from "../../components/authentication/popUpError";
+import {PopUpError} from "../../components/authentication/PopUpError";
 import {IPattern} from "../../pattern";
 
 export default function AuthenticationIndex() {
   const [isReady, setIsReady] = useState(false);
   const [text, setText] = useState<string>('')
   const [showTask, setShowTask] = useState<boolean>(false)
-  const [match, setMatch] = useState<boolean | IPattern>(false)
+  const [match, setMatch] = useState<IPattern | false>(false)
 
 
   useEffect(() => {
@@ -41,7 +41,6 @@ export default function AuthenticationIndex() {
         showTask && !match &&
         <PopUpError text={text} match={match} setErrorShow={setShowTask} />
       }
-
       <Footer />
     </div>
   )
