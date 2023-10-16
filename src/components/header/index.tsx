@@ -4,6 +4,8 @@ import styled from "styled-components";
 import {useState, useEffect, ReactNode} from "react";
 // import SubtractSvg from "../../svg/community/Subtract.svg"
 import config from "../../config"
+import Link from 'next/link'
+
 
 const StyleHeader = styled.div`
  position: fixed;
@@ -23,6 +25,7 @@ const StyleHeader = styled.div`
  .logo {
   width: 2.62rem;
   height: .61254rem;
+  display: block;
  }
 
  .navList {
@@ -268,6 +271,7 @@ const StyleHeader = styled.div`
    font-style: normal;
    font-weight: 700;
    line-height: .47rem;
+   margin-left: .94rem;
   }
 
   a:hover {
@@ -629,6 +633,7 @@ interface tCommunityList {
 }
 
 const navList: tNavList[] = [
+  {label: "Authenticator", url: "/authentication", type: 'self'},
   {label: "Ecosystem", url: ""},
   {label: "About", url: ""},
   {label: "Join Community", url: "https://discord.com/invite/MdajwkVZE4", type: "btn"},
@@ -773,10 +778,20 @@ export const Header = () => {
   return (
     <StyleHeader>
       <div className={"styleCenter styleFlexCenterBetween"}>
-        <img className={'logo'} src={"static/logo.png"}/>
+        <Link className={'logo'} href="/">
+          <img className={'logo'} src={"static/logo.png"}/>
+        </Link>
         <div className={'navList styleFlexCenter'}>
           {
             navList.map((item: tNavList, index) => (
+              item?.type === 'self' ?
+                <Link
+                  key={index.toString()}
+                  href="/authentication"
+                >
+                  Authenticator
+                </Link>
+                :
               <a
                 key={index.toString()}
                 className={`${item.type ? item.type + " styleFlexCenter" : ''}`}
@@ -800,9 +815,12 @@ export const Header = () => {
       {
         init &&
         <div className={`mob ${openMobMenu ? 'mobOpen' : 'mobHide'}`}>
-          <img className={'logo'} src={"static/logo.png"}/>
+          <Link style={{display: 'block'}} className={'logo'} href="/">
+            <img style={{left: 0, top: 0}} className={'logo'} src={"static/logo.png"}/>
+          </Link>
           <div className={'productMob'}>
             <div className={'text'}>
+              <Link className={'title'} style={{color: '#fff'}} href="/authentication">Authenticator</Link>
               <div className={'title'}>Product</div>
               {
                 ecoProductList.map((item, index) => (
