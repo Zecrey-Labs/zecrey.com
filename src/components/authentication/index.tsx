@@ -8,11 +8,30 @@ const StyleWraper = styled.div`
  position: fixed;
  left: 0;
  top: 0;
- z-index: 2;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+ //z-index: 2;
+ .bgLine{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background:
+      url("static/authBg.svg") #2B2C2D left top;
+  background-repeat: repeat;/* 默认为 repeat */
+  background-size: 19.2rem 10.8rem;
+ }
+ .totalWrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-.5rem);
+ }
   .logo{
    width: .83rem;
    height: .88rem;
@@ -24,6 +43,7 @@ const StyleWraper = styled.div`
   text-align: center;
   font-weight: 500;
   margin-bottom: .5rem;
+  font-size: .64rem;
  }
  .search{
   display: flex;
@@ -45,7 +65,7 @@ const StyleWraper = styled.div`
    border: none;
    background: #fff;
    padding: .17rem .29rem;
-   color: #8898A0;
+   color: var(--background-1);
    font-family: Arial;
    margin-right: .08rem;
    border-radius: .08rem;
@@ -82,10 +102,11 @@ const StyleWraper = styled.div`
   color: var(--text);
   font-family: arial;
   font-size: .14rem;
-  font-weight: 400;
   p{
+   font-weight: 400;
    margin-bottom: .2rem;
    line-height: 1.4;
+   font-style: normal;
   }
  }
  .magnifyingGlassComp{
@@ -101,6 +122,15 @@ const StyleWraper = styled.div`
   }
   .magnifyingGlassMob{
    display: block;
+  }
+  .bgLine{
+   background:
+       url("static/authBg.svg") #2B2C2D left top;
+   background-repeat: repeat;/* 默认为 repeat */
+   background-size: 9.48rem auto;
+  }
+  .totalWrap{
+   transform: translateY(0);
   }
   .logo{
    width: .47rem;
@@ -168,32 +198,36 @@ export const Authentication = (props: IProps) => {
 
   return (
     <StyleWraper>
-      <img className={'logo'} src={"static/logo.svg"}/>
-      <p className={'title'}>ZECREY LABS OFFICIAL LINK AUTHENTICATOR</p>
-      <div className={'search'}>
-        <input value={text} onChange={(e) => {
-          setText(e.target.value)
-        }} placeholder={'Please enter the content to verify'} />
-        <div className={'btn'} onClick={() => {
-          const match = pattern.find((item) => (
-            item.rule.find((item1) => (
-              text.indexOf(item1) !== -1
+      <div className={'bgLine'} />
+      <div className={'totalWrap'}>
+        <img className={'logo'} src={"static/logo.svg"}/>
+        <p className={'title'}>ZECREY LABS OFFICIAL LINK AUTHENTICATOR</p>
+        <div className={'search'}>
+          <input value={text} onChange={(e) => {
+            setText(e.target.value)
+          }} placeholder={'Please enter the content to verify'} />
+          <div className={'btn'} onClick={() => {
+            if (text === '') return;
+            const match = pattern.find((item) => (
+              item.rule.find((item1) => (
+                text.indexOf(item1) !== -1
+              ))
             ))
-          ))
-          setMatch(match || false)
-          setShowTask(true)
-        }}>
-          <img className={'magnifyingGlass magnifyingGlassComp'} src={"static/magnifyingGlass.svg"}/>
-          <img className={'magnifyingGlass magnifyingGlassMob'} src={"static/magnifyingGlassMobile.svg"}/>
-          <img className={'start'} src={"static/icoStar.png"}/>
-          <span>
+            setMatch(match || false)
+            setShowTask(true)
+          }}>
+            <img className={'magnifyingGlass magnifyingGlassComp'} src={"static/magnifyingGlass.svg"}/>
+            <img className={'magnifyingGlass magnifyingGlassMob'} src={"static/magnifyingGlassMobile.svg"}/>
+            <img className={'start'} src={"static/icoStar.png"}/>
+            <span>
             Verify
           </span>
+          </div>
         </div>
-      </div>
-      <div className={'description'}>
-        <p>To prevent fraud, we have developed an authenticator tool for users to verify if a link, Twitter account, Telegram channel, Telegram group, Discord server or team member account is officially affiliated with Zecrey. The content that can be authenticated includes links, Twitter, Discord, Telegram, Medium, YouTube, and more.</p>
-        <p>We advise all users to stay vigilant and carefully verify sources before interacting or providing any personal information. Please rely only on our official Zecrey announcements and channels. Report any suspicious activity or misuse of the Zecrey name to our team.</p>
+        <div className={'description'}>
+          <p>To prevent fraud, we have developed an authenticator tool for users to verify if a link, Twitter account, Telegram channel, Telegram group, Discord server or team member account is officially affiliated with Zecrey. The content that can be authenticated includes links, Twitter, Discord, Telegram, Medium, YouTube, and more.</p>
+          <p>We advise all users to stay vigilant and carefully verify sources before interacting or providing any personal information. Please rely only on our official Zecrey announcements and channels. Report any suspicious activity or misuse of the Zecrey name to our team.</p>
+        </div>
       </div>
     </StyleWraper>
   );

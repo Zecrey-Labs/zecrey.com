@@ -52,6 +52,9 @@ const StyleWraper = styled.div`
     text-decoration-line: underline;
     cursor: pointer;
    }
+   a:hover{
+    color: var(--zecrey-cyan);
+   }
   }
   .p1{
    color: var(--red);
@@ -150,7 +153,9 @@ export const PopUpError = (props: IProps) => {
 
   return (
     <StyleWraper>
-      <div className={'bg'} />
+      <div className={'bg'} onClick={() => {
+        setErrorShow(false)
+      }} />
       <div className={'content'}>
         <div className={'main'}>
           <img className={'icoWarn'} src={"static/errorIco.svg"}/>

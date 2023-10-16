@@ -1,0 +1,30 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1542.5" y1="2.10295e-08" x2="1542.5" y2="1080" stroke="#323334"/>
+<line x1="1251.5" y1="2.10295e-08" x2="1251.5" y2="1080" stroke="#323334"/>
+<line x1="960.5" y1="2.10295e-08" x2="960.5" y2="1080" stroke="#323334"/>
+<line x1="669.5" y1="2.10295e-08" x2="669.5" y2="1080" stroke="#323334"/>
+<line x1="378.5" y1="2.10295e-08" x2="378.5" y2="1080" stroke="#323334"/>
+<line x1="87.5" y1="2.18557e-08" x2="87.5" y2="1080" stroke="#323334"/>
+<line x1="1833.5" y1="2.10295e-08" x2="1833.5" y2="1080" stroke="#323334"/>
+<line y1="185.5" x2="1920" y2="185.5" stroke="#323334"/>
+<line y1="362.5" x2="1920" y2="362.5" stroke="#323334"/>
+<line y1="539.5" x2="1920" y2="539.5" stroke="#323334"/>
+<line y1="716.5" x2="1920" y2="716.5" stroke="#323334"/>
+<line y1="893.5" x2="1920" y2="893.5" stroke="#323334"/>
+<rect x="1532" y="361" width="21" height="3" fill="#323334"/>
+<rect x="1541" y="373" width="21" height="3" transform="rotate(-90 1541 373)" fill="#323334"/>
+<rect x="1823" y="184" width="21" height="3" fill="#323334"/>
+<rect x="1832" y="196" width="21" height="3" transform="rotate(-90 1832 196)" fill="#323334"/>
+<rect x="1823" y="538" width="21" height="3" fill="#323334"/>
+<rect x="1832" y="550" width="21" height="3" transform="rotate(-90 1832 550)" fill="#323334"/>
+<rect x="1241" y="892" width="21" height="3" fill="#323334"/>
+<rect x="1250" y="904" width="21" height="3" transform="rotate(-90 1250 904)" fill="#323334"/>
+<rect x="659" y="184" width="21" height="3" fill="#323334"/>
+<rect x="668" y="196" width="21" height="3" transform="rotate(-90 668 196)" fill="#323334"/>
+<rect x="368" y="361" width="21" height="3" fill="#323334"/>
+<rect x="377" y="373" width="21" height="3" transform="rotate(-90 377 373)" fill="#323334"/>
+<rect x="77" y="715" width="21" height="3" fill="#323334"/>
+<rect x="86" y="727" width="21" height="3" transform="rotate(-90 86 727)" fill="#323334"/>
+<rect x="368" y="892" width="21" height="3" fill="#323334"/>
+<rect x="377" y="904" width="21" height="3" transform="rotate(-90 377 904)" fill="#323334"/>
+</svg>

@@ -6,7 +6,7 @@ const StyleFooter = styled.div`
  left: 0;
  bottom: 0;
  width: 100%;
- height: .8rem;
+ height: 80px;
  z-index: 2;
  background: var(--background-1);
 
@@ -35,19 +35,19 @@ const StyleFooter = styled.div`
  .child {
   img {
    background: transparent;
-   margin: 0 .05rem;
-   width: 2.04rem;
-   height: .66rem;
+   margin: 5px;
+   width: 204px;
+   height: 66px;
   }
  }
 
  @media (max-width: 1080px){
-  height: .38rem;
+  height: 38px;
   .child {
    img {
-    width: .96rem;
-    height: .31rem;
-    margin: 0px 0.025rem;
+    width: 96px;
+    height: 31px;
+    margin: 0 2.4px;
    }
   }
  }

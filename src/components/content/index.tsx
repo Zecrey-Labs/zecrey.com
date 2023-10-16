@@ -157,6 +157,8 @@ const StyleContent = styled.div`
    position: relative;
    width: 9.58rem;
    height: 9.43rem;
+   transform: translateY(-.2rem);
+
 
    .doorBg {
     position: absolute;
@@ -808,7 +810,7 @@ const StyleContent = styled.div`
       width: 100%;
 
       > div {
-       height: 1rem;
+       height: .8rem;
       }
      }
     }

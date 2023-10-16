@@ -122,7 +122,9 @@ export const PopUpWaring = (props: IProps) => {
 
   return (
     <StyleWraper>
-      <div className={'bg'} />
+      <div className={'bg'} onClick={() => {
+        setWarnShow(false)
+      }} />
       <div className={'content'}>
         <img className={'icoWarn'} src={"static/warningIco.svg"}/>
         <p className={'p1'}>Zecrey Official!</p>
