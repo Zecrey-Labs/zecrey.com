@@ -60,7 +60,7 @@ const StyleWraper = styled.div`
    color: var(--zecrey-cyan);
    text-align: center;
    font-family: Arial;
-   font-size: .14px;
+   font-size: .14rem;
    font-weight: 700;
    margin-bottom: .22rem;
   }

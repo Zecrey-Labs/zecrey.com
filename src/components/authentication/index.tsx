@@ -100,10 +100,10 @@ const StyleWraper = styled.div`
  .description{
   width: 9.66rem;
   color: var(--text);
-  font-family: arial;
   font-size: .14rem;
   p{
-   font-weight: 400;
+   font-family: Arial;
+   font-weight: normal;
    margin-bottom: .2rem;
    line-height: 1.4;
    font-style: normal;
@@ -176,6 +176,7 @@ const StyleWraper = styled.div`
    text-align: center;
    p{
     margin-bottom: .15rem;
+    font-family: Arial;
    }
   }
  }
@@ -207,6 +208,7 @@ export const Authentication = (props: IProps) => {
             setText(e.target.value)
           }} placeholder={'Please enter the content to verify'} />
           <div className={'btn'} onClick={() => {
+            console.log('___0', text)
             if (text === '') return;
             const match = pattern.find((item) => (
               item.rule.find((item1) => (

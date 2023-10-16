@@ -819,7 +819,7 @@ export const Header = () => {
           </Link>
           <div className={'productMob'}>
             <div className={'text'}>
-              <Link className={'title'} href="/authentication">Authenticator</Link>
+              <Link className={'title'} style={{color: '#fff'}} href="/authentication">Authenticator</Link>
               <div className={'title'}>Product</div>
               {
                 ecoProductList.map((item, index) => (
