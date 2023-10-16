@@ -30,7 +30,7 @@ const StyleWraper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translateY(-.5rem);
+  transform: translateY(-.25rem);
  }
   .logo{
    width: .83rem;

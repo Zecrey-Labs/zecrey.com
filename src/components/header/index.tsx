@@ -271,6 +271,7 @@ const StyleHeader = styled.div`
    font-style: normal;
    font-weight: 700;
    line-height: .47rem;
+   margin-left: .94rem;
   }
 
   a:hover {
