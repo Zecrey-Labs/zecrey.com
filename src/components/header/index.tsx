@@ -784,7 +784,12 @@ export const Header = () => {
           {
             navList.map((item: tNavList, index) => (
               item?.type === 'self' ?
-                <Link href="/authentication">Authenticator</Link>
+                <Link
+                  key={index.toString()}
+                  href="/authentication"
+                >
+                  Authenticator
+                </Link>
                 :
               <a
                 key={index.toString()}
