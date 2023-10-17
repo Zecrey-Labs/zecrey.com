@@ -13,7 +13,10 @@ const StyleContent = styled.div`
  left: 0;
  top: 0;
  z-index: 2;
-
+ .contentMain {
+  position: relative;
+  top: calc(3vh);
+ }
  .l, .r {
  }
 
@@ -753,6 +756,7 @@ const StyleContent = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   .contentMain {
+   top: calc(0vh);
    padding: .8rem .24rem 0;
    //display: block;
    display: flex;
