@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import {useState, useEffect} from "react";
 import {url} from "inspector";
+import {KONTOS_OFFICAL_WEBSITE} from "../../config";
 
 const amplitude = 2
 
@@ -1067,20 +1068,22 @@ export const Content = () => {
             </div>
           </div>
           <div className={'brandList'}>
-            <div
-              className={'item'}
-              onMouseOver={() => {
-                setTextDescriptionStep(1)
-              }}
-              onMouseOut={() => {
-                setTextDescriptionStep(0)
-              }}
-              onClick={() => {
-                setTextDescriptionStep(1)
-              }}
-            >
-              <img className={'img0'} src={'static/brandlight3.png'}/>
-            </div>
+            <a target={'_blank'} href={KONTOS_OFFICAL_WEBSITE}>
+              <div
+                className={'item'}
+                onMouseOver={() => {
+                  setTextDescriptionStep(1)
+                }}
+                onMouseOut={() => {
+                  setTextDescriptionStep(0)
+                }}
+                onClick={() => {
+                  setTextDescriptionStep(1)
+                }}
+              >
+                <img className={'img0'} src={'static/brandlight3.png'}/>
+              </div>
+            </a>
             <div
               className={'item'}
               onMouseOver={() => {
