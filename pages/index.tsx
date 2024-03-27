@@ -1,6 +1,6 @@
 // import Scenarios from "components/application-scenarios";
 // import Backers from "components/backers";
-// import Communtity from "components/community";
+// import Community from "components/community";
 // import Extension from "components/extension";
 // import Layout from "components/layout";
 // import Landing from "components/landing";
@@ -38,7 +38,7 @@ const WebApp = dynamic(() => import("components/web-app"), { ssr: false });
 const MobileApp = dynamic(() => import("components/mobile"), { ssr: false });
 const RoadMap = dynamic(() => import("components/roadmap"), { ssr: false });
 const Backers = dynamic(() => import("components/backers"), { ssr: false });
-const Communtity = dynamic(() => import("components/community"), {
+const Community = dynamic(() => import("components/community"), {
   ssr: false,
 });
 
@@ -58,7 +58,7 @@ const Home = () => {
       <MobileApp />
       <RoadMap />
       <Backers />
-      <Communtity />
+      <Community />
     </Layout>
   );
 };

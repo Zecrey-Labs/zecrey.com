@@ -52,12 +52,12 @@ const items: {
   },
 ];
 
-const Communtity = () => {
+const Community = () => {
   const isMobileView = useMediaQuery({ maxWidth: 780 });
   return isMobileView ? <Mobile /> : <Desktop />;
 };
 
-export default Communtity;
+export default Community;
 
 const Desktop = () => {
   return (
@@ -94,7 +94,7 @@ const Mobile = () => {
   return (
     <Card>
       <MobileWrap>
-        <label className="title-1">Join Communtity</label>
+        <label className="title-1">Join Community</label>
         <label className="title-2">
           Zecrey team is dedicated to globalization
           <br />
